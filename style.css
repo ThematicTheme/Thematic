@@ -1,0 +1,352 @@
+/*
+THEME NAME: Thematic
+THEME URI: http://themeshaper.com/
+DESCRIPTION: A development theme based on work in <a href="http://code.google.com/p/blueprintcss/"> The Blueprint CSS Framework</a>, and by <a href="http://www.pearsonified.com/">Chris Pearson</a>, <a href="http://andy.wordpress.com/">Andy Skelton</a>, <a href="http://www.plaintxt.org/">Scott Allan Wallick</a> and many, many others.
+VERSION: 0.2
+AUTHOR: Ian Stewart
+AUTHOR URI: http://themeshaper.com/
+*/
+
+@import url('library/styles/reset.css');
+@import url('library/styles/typography.css');
+
+/*  Set a grid with 18px line-height to fit 125px ad units  */
+body { background:url(images/125x18grid.jpg) repeat-y top center; }
+
+
+/* =Structure
+-------------------------------------------------------------- */
+
+/*  The Structure section controls the widths, floats and clearing
+    for the entire theme.   */
+
+body {
+    margin:0;
+}
+#header {
+    position:relative;
+}
+#branding {
+    width:950px;
+    margin:0 auto;
+}
+#access {
+    position:relative;
+    overflow:hidden;
+}
+#menu {
+    width:950px;
+    margin:0 auto;
+}
+#center {
+    width:950px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+}
+#container {
+    width:630px;
+    float:left;
+}
+#content {
+    overflow:hidden;
+}
+#primary {
+    width:310px;
+    float:right;
+    background:green;
+}
+#secondary {
+    clear:right;
+    width:310px;
+    float:right;
+    background:red;
+}
+#footer {    
+    clear:both;
+}
+#footer-columns {
+    width:950px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.footer-column {
+    width:310px;
+    float:left;
+    margin:0 10px 0 0;
+}
+#footer-column-three {
+    margin:0;
+}
+#site-info {
+    clear:both;
+    width:950px;
+    margin:0 auto;
+}
+
+/* =Global Elements
+-------------------------------------------------------------- */
+
+img#wpstats {
+    width:0px;
+    height:0px;
+    overflow:hidden
+}
+
+/* =Site Meta
+-------------------------------------------------------------- */
+
+#site-meta {
+    position:fixed;
+    width:100%;
+    z-index:1000;
+}
+#site-meta li {
+    display:inline;
+}
+#meta-panel {
+    background:#464646;
+}
+#meta-panel ul {
+    width:950px;
+    margin:0 auto;
+    padding:36px 0;
+    text-align:center;
+}
+#meta-anchor {
+    display:block;
+    margin:0 auto;
+    width:70px;
+    text-indent:-999em;
+    outline:0;
+    background:#464646;
+}
+#meta-panel a {
+    color:#999999;
+    text-decoration:none;
+}
+#meta-panel a:hover,#meta-panel a:focus {
+    color:#FFF;
+}
+.active {
+}
+
+/* =Header
+-------------------------------------------------------------- */
+
+#header {
+    padding:3em 0;
+}
+#blog-title {
+}
+#blog-description {
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+
+.skip-link {
+    display:none;
+}
+#nav {
+}
+#subnav {
+}
+#menu ul {
+    margin:0;
+    list-style:none;
+    clear:both;
+}
+#menu ul ul {
+    display:none;
+}
+#menu li {
+    display:inline;
+}
+#menu a {
+    display:block;
+    float:left;
+}
+.current_page_item a {
+    font-weight:bold;
+}
+
+/* =Content
+-------------------------------------------------------------- */
+
+#container .sidebar {
+    background:yellow;
+    margin:0 0 36px 0;
+}
+#content {
+}
+#content .sidebar {
+    background:silver;
+}
+.hentry {
+    padding:0 0 3em 0;
+}
+.page-title {
+}
+.entry-title {
+}
+.entry-content p {
+}
+.entry-content h1,.entry-content h2 {
+}
+.entry-content h3 {
+}
+.content-column, .entry-content .linkcat {
+	list-style:none;
+	float:left;
+}
+.entry-content .linkcat {
+}
+.content-column {
+} 
+.page-link {
+}
+.page .edit-link {
+    float:left;
+    clear:both;
+}
+/*div.entry-attachment,div.post div.entry-caption{margin:0 auto;text-align:center;}
+div.entry-attachment img,div.post div#nav-images div img{overflow:hidden;}
+body.attachment div#nav-images{clear:both;width:100%;}
+body.attachment div#nav-images div{padding:1em 0;width:50%;}
+body.attachment div#nav-images div.nav-previous{text-align:left;}
+body.attachment div#nav-images div.nav-next{text-align:right;}
+body.attachment div#comments{clear:both;}*/
+
+/* =Comments
+-------------------------------------------------------------- */
+
+#comments {
+}
+
+/* =Author Info
+-------------------------------------------------------------- */
+
+#author-info {
+    margin:18px 0 36px 0;
+}
+#author-info .avatar {
+    float:left;
+    margin:0 10px 10px 0;
+    padding:4px;
+    background:#EEE;
+    border:1px solid #CCC;
+}
+#author-email {
+}
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+#respond input {
+    width:100%;
+}
+#respond textarea {
+    width:100%;
+}
+
+
+/* =Navigation
+-------------------------------------------------------------- */
+
+.navigation {
+    overflow:hidden;
+    margin:0 0 36px 0;
+}
+.nav-previous {
+	float: left;
+	width:50%;
+}
+.nav-next {
+	float: right;
+	width:50%;
+	text-align:right;
+}
+#nav-above,#nav-below {
+	float:right;
+	width: 100%;
+}
+#nav-above {
+}
+#nav-below {
+}
+.home #nav-above, .single #nav-above {
+    display:none;
+}
+.paged #nav-above {
+    display:block;
+}
+
+/* =Images
+-------------------------------------------------------------- */
+
+/*  Remember the baseline   */
+
+.entry-content img { margin: 0 0 18px 0; max-width:100%; }
+
+img.alignleft,img.align-left {
+	float: left;
+	margin-right:20px;
+}
+img.alignright,img.align-right {
+	display: block;
+	float: right;
+	margin-left:20px;
+}
+img.center {
+	margin: 0 auto;
+	display: block;
+	float: none;
+	clear: both;
+}
+.wp-smiley {
+	max-height:11px;
+}
+
+/* =Sidebars
+-------------------------------------------------------------- */
+
+.sidebar h3 {
+}
+.sidebar ul {
+    margin:0;
+    list-style:none;
+}
+
+/* =Primary Sidebar
+-------------------------------------------------------------- */
+
+#primary-sidebar {
+}
+#primary-sidebar a {
+}
+#primary-sidebar ul.xoxo {
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#footer {
+}
+.footer-column {
+    background:orange;
+    margin-bottom:18px;
+}
+.footer-column ul.xoxo ul {
+}
+.footer-column h3 {
+}
+#site-info {
+}
+#site-info p {
+}
+
+
+
+
