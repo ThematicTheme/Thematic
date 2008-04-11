@@ -1,0 +1,49 @@
+/* -----------------------------------------------------------------------
+
+   A print stylesheet based on Blueprint.
+
+----------------------------------------------------------------------- */
+
+body {
+    line-height:1.5;
+    font-family:Georgia,serif;
+    color:#000;
+    background:none;
+    font-size:10pt;
+}
+div {
+    background:none;
+    width:100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-weight:bold;
+}
+code {
+    font:.9em "Courier New", Monaco, Courier, monospace;
+}
+img {
+    float:left;
+    margin:1.5em 1.5em 1.5em 0;
+}
+a img {
+    border:none;
+}
+blockquote {
+    margin:1.5em;
+    padding:1em;
+    font-style:italic;
+    font-size:.9em;
+}
+a:link, a:visited {
+    background:transparent;
+    font-weight:700;
+    text-decoration:underline;
+}
+a:link:after, a:visited:after {
+    content:" (" attr(href) ") ";
+    font-size:90%;
+}
+#header, #access, .navigation, .page-link, .entry-meta, .comment-meta, #trackbacks-list, #respond, .sidebar, #footer {
+    display:none;
+}
