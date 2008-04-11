@@ -1,0 +1,17 @@
+/*
+LAYOUT: One-Column 
+DESCRIPTION: One-column fluid layout with sidebars stacked in two columns below content
+*/
+div.sidebar {
+	float: left;
+	overflow: hidden;
+	padding: 10px 1.9%;
+	width: 46%;
+}
+div#primary {
+	clear: both;
+}
+div#footer {
+	clear: left;
+	width: 100%;
+}

@@ -1,0 +1,97 @@
+/* -------------------------------------------------------------- 
+   
+   Set some default typography based on Blueprint
+   * http://code.google.com/p/blueprintcss/
+  
+   Based on work by:
+   * Nathan Borror     [playgroundblues.com]
+   * Jeff Croft        [jeffcroft.com]
+   * Christian Metts   [mintchaos.com]
+   * Wilson Miner      [wilsonminer.com]
+   
+   Read more about using a baseline here:
+   * alistapart.com/articles/settingtypeontheweb
+  
+-------------------------------------------------------------- */   
+
+body {
+    font: 12px/18px Arial,sans-serif;
+    text-align:justify;
+    color:#000;
+}
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { 
+	font-weight:normal;
+	clear:both;
+}
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p {
+	margin: 0 0 18px 0;
+}
+ul, ol {
+	margin: 0 0 18px 1.5em;
+}
+ul {
+	list-style:disc;
+}
+ol {
+	list-style-type: decimal;
+}
+ol ol {
+	list-style:upper-alpha;
+}
+ol ol ol {
+	list-style:lower-roman;
+}
+ol ol ol ol {
+	list-style:lower-alpha;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom:0;
+}
+/*dl	{
+	margin: 0 0 1.5em 0;
+}
+dl dt {
+	font-weight: bold;
+	margin: 18px 0 0 0;
+}
+dd {
+	margin: 0 0 0 1.5em;
+}*/
+strong {
+	font-weight: bold;
+}
+cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 3em;
+}
+blockquote em, blockquote i, blockquote cite {
+	font-style:normal;
+}
+pre {
+	font:11px Monaco, monospace;
+	line-height:18px;
+	margin-bottom:18px;
+}
+code {
+	font:11px Monaco, monospace;
+}
+ins {
+	text-decoration:none;
+}
+
+/* Forms
+-------------------------------------------------------------- */
+
+input, textarea {
+    font: 12px/18px Arial,sans-serif;
+}
