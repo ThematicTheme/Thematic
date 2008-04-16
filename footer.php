@@ -5,13 +5,13 @@ foreach ($options as $value) {
     else { $$value['id'] = get_settings( $value['id'] ); }
     }
 ?>
-    </div><!-- #center -->
+    </div><!-- #main -->
 
 	<div id="footer">
-        <?php get_sidebar('footer-columns'); ?>
-        <div id="site-info">        
+        <?php get_sidebar('subsidiary'); ?>
+        <div id="siteinfo">        
     		<p><?php /* footer text set in theme options */ echo stripslashes($thm_footertext); ?></p>
-		</div><!-- #site-info -->
+		</div><!-- #siteinfo -->
 	</div><!-- #footer -->
 
 </div><!-- #wrapper .hfeed -->
