@@ -109,7 +109,7 @@ img#wpstats {   /* hide WordPress Stats smiley */
 /* =Content
 -------------------------------------------------------------- */
 
-#container .sidebar {
+#container .support {
     margin:0 0 36px 0;
 }
 #content {
@@ -229,16 +229,16 @@ img.center {
 	max-height:11px;
 }
 
-/* =Sidebars
+/* =Supports
 -------------------------------------------------------------- */
 
-.sidebar h3 {
+.support h3 {
 }
-.sidebar ul {
+.support ul {
     margin:0;
     list-style:none;
 }
-.sidebar {
+.support {
     background:#cccccc;
 }
 #primary {
@@ -246,31 +246,21 @@ img.center {
 }
 
 
-/* =Primary Sidebar
--------------------------------------------------------------- */
-
-#primary-sidebar {
-}
-#primary-sidebar a {
-}
-#primary-sidebar ul.xoxo {
-}
-
 /* =Footer
 -------------------------------------------------------------- */
 
 #footer {
 }
-.footer-column {
+#subsidiary .support {
     margin-bottom:18px;
 }
 .footer-column ul.xoxo ul {
 }
 .footer-column h3 {
 }
-#site-info {
+#siteinfo {
 }
-#site-info p {
+#siteinfo p {
 }
 
 /* =PageNavi

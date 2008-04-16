@@ -1,4 +1,4 @@
-	<div id="primary" class="sidebar">
+	<div id="primary" class="support">
 		<ul class="xoxo">
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // begin primary sidebar widgets ?>
 			<li id="search">
@@ -35,9 +35,9 @@
 			</li>
 <?php endif; // end primary sidebar widgets  ?>
 		</ul>
-	</div><!-- #primary .sidebar -->
+	</div><!-- #primary .support -->
 
-	<div id="secondary" class="sidebar">
+	<div id="secondary" class="support">
 		<ul class="xoxo">
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // begin  secondary sidebar widgets ?>
 
@@ -63,4 +63,4 @@
 			</li>
 <?php endif; // end secondary sidebar widgets  ?>
 		</ul>
-	</div><!-- #secondary .sidebar -->
+	</div><!-- #secondary .support -->

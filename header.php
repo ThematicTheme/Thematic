@@ -70,5 +70,5 @@
         </div><!-- #access -->    
     </div><!-- #header-->   
     
-    <div id="center">
+    <div id="main">
     

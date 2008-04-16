@@ -82,7 +82,7 @@ function sandbox_widgets_init() {
 
 	// Register Widgetized areas.
     register_sidebar(array(
-       	'name' => 'Primary',
+       	'name' => 'Primary Support',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -90,7 +90,7 @@ function sandbox_widgets_init() {
     ));
 
     register_sidebar(array(
-       	'name' => 'Secondary',
+       	'name' => 'Secondary Support',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -98,7 +98,7 @@ function sandbox_widgets_init() {
     ));
 
     register_sidebar(array(
-       	'name' => 'Footer Column 1',
+       	'name' => '1st Subsidiary Support',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -106,7 +106,7 @@ function sandbox_widgets_init() {
     ));  
 
     register_sidebar(array(
-       	'name' => 'Footer Column 2',
+       	'name' => '2nd Subsidiary Support',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -114,7 +114,7 @@ function sandbox_widgets_init() {
     ));  
    
     register_sidebar(array(
-       	'name' => 'Footer Column 3',
+       	'name' => '3rd Subsidiary Support',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
