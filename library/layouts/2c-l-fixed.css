@@ -1,0 +1,68 @@
+/*
+LAYOUT: One-Column (Left) Fixed
+DESCRIPTION: Two-column 950px fixed layout with one sidebar left of content
+*/
+
+#header {
+    position:relative;
+}
+#branding {
+    width:950px;
+    margin:0 auto;
+}
+#access {
+    position:relative;
+    overflow:hidden;
+}
+#menu {
+    width:950px;
+    margin:0 auto;
+}
+#center {
+    width:950px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+}
+#container {
+    width:950px;
+    float:right;
+    margin: 0 0 0 -310px;
+}
+#content {
+    overflow:hidden;
+    margin: 0 0 0 320px;
+}
+.hentry {
+    width:630px;
+}
+#primary {
+    width:310px;
+    float:left;
+}
+#secondary {
+    clear:left;
+    width:310px;
+    float:left;
+}
+#footer {    
+    clear:both;
+}
+#footer-columns {
+    width:950px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.footer-column {
+    width:310px;
+    float:left;
+    margin:0 10px 0 0;
+}
+#footer-column-three {
+    margin:0;
+}
+#site-info {
+    clear:both;
+    width:950px;
+    margin:0 auto;
+}
