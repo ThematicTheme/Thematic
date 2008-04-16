@@ -8,8 +8,9 @@ foreach ($options as $value) {
 <?php get_header() ?>
 
 	<div id="container">
-<?php get_sidebar('single-top') ?>
 		<div id="content">
+
+<?php get_sidebar('single-top') ?>
 
 <?php the_post(); ?>
 			<div id="nav-above" class="navigation">
@@ -64,7 +65,9 @@ foreach ($options as $value) {
 
 				</div>
 			</div><!-- .post -->
+			
 <?php get_sidebar('single-middle') ?>
+
 			<div id="nav-below" class="navigation">
 				<div class="nav-previous"><?php previous_post_link('%link', '<span class="meta-nav">&laquo;</span> %title') ?></div>
 				<div class="nav-next"><?php next_post_link('%link', '%title <span class="meta-nav">&raquo;</span>') ?></div>
@@ -72,8 +75,9 @@ foreach ($options as $value) {
 
 <?php comments_template(); ?>
 
-		</div><!-- #content -->
 <?php get_sidebar('single-bottom') ?>
+
+		</div><!-- #content -->
 	</div><!-- #container -->
 
 <?php get_sidebar() ?>

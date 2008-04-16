@@ -13,8 +13,12 @@ foreach ($options as $value) {
 	<h1 class="page-title"><?php _e('Tag Archives:', 'thematic') ?> <span><?php single_tag_title(); ?></span></h1>
 
 			<div id="nav-above" class="navigation">
+                <?php if(function_exists('wp_pagenavi')) { ?>
+                <?php wp_pagenavi(); ?>
+                <?php } else { ?>  
 				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
 				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+				<?php } ?>
 			</div>
 
 <?php while (have_posts()) : the_post(); ?>
@@ -41,8 +45,12 @@ foreach ($options as $value) {
 <?php endwhile; ?>
 
 			<div id="nav-below" class="navigation">
+                <?php if(function_exists('wp_pagenavi')) { ?>
+                <?php wp_pagenavi(); ?>
+                <?php } else { ?>  
 				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
 				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+				<?php } ?>
 			</div>
 
 		</div><!-- #content -->
