@@ -10,7 +10,7 @@ foreach ($options as $value) {
 	<div id="footer">
         <?php get_sidebar('subsidiary'); ?>
         <div id="siteinfo">        
-    		<p><?php /* footer text set in theme options */ echo stripslashes($thm_footertext); ?></p>
+    		<?php /* footer text set in theme options */ echo stripslashes($thm_footertext); ?>
 		</div><!-- #siteinfo -->
 	</div><!-- #footer -->
 
