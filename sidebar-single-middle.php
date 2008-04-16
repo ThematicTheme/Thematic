@@ -1,6 +1,6 @@
-    <div id="single-middle" class="sidebar">
+    <div id="single-middle" class="support">
         <ul class="xoxo">
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(10) ) : // begin single-middle widgets ?>
 <?php endif; // end single-middle widgets  ?>
     	</ul>
-    </div><!-- #single-middle .sidebar -->
+    </div><!-- #single-middle .support -->

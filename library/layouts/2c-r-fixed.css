@@ -18,7 +18,7 @@ DESCRIPTION: Two-column 950px fixed layout with one sidebar right of content
     width:950px;
     margin:0 auto;
 }
-#center {
+#main {
     width:950px;
     margin:0 auto;
     overflow:hidden;
@@ -43,20 +43,20 @@ DESCRIPTION: Two-column 950px fixed layout with one sidebar right of content
 #footer {    
     clear:both;
 }
-#footer-columns {
+#subsidiary {
     width:950px;
     margin:0 auto;
     overflow:hidden;
 }
-.footer-column {
+#subsidiary .support {
     width:310px;
     float:left;
     margin:0 10px 0 0;
 }
-#footer-column-three {
+#subsidiary #third {
     margin:0;
 }
-#site-info {
+#siteinfo {
     clear:both;
     width:950px;
     margin:0 auto;
