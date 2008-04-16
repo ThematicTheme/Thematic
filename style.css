@@ -7,87 +7,22 @@ AUTHOR: Ian Stewart
 AUTHOR URI: http://themeshaper.com/
 */
 
+/* Reset browser defaults */
 @import url('library/styles/reset.css');
+
+/* Apply basic typography styles */
 @import url('library/styles/typography.css');
 
-/*  Set a grid with 18px line-height to fit 125px ad units  */
+/* Apply a basic layout */
+@import url('library/layouts/2c-r-fixed.css');
+
+/* Set a grid with 18px line-height to fit 125px ad units  */
 body { background:url(images/125x18grid.jpg) repeat-y top center; }
-
-
-/* =Structure
--------------------------------------------------------------- */
-
-/*  The Structure section controls the widths, floats and clearing
-    for the entire theme.   */
-
-body {
-    margin:0;
-}
-#header {
-    position:relative;
-}
-#branding {
-    width:950px;
-    margin:0 auto;
-}
-#access {
-    position:relative;
-    overflow:hidden;
-}
-#menu {
-    width:950px;
-    margin:0 auto;
-}
-#center {
-    width:950px;
-    margin:0 auto;
-    overflow:hidden;
-    position:relative;
-}
-#container {
-    width:630px;
-    float:left;
-}
-#content {
-    overflow:hidden;
-}
-#primary {
-    width:310px;
-    float:right;
-    background:green;
-}
-#secondary {
-    clear:right;
-    width:310px;
-    float:right;
-    background:red;
-}
-#footer {    
-    clear:both;
-}
-#footer-columns {
-    width:950px;
-    margin:0 auto;
-    overflow:hidden;
-}
-.footer-column {
-    width:310px;
-    float:left;
-    margin:0 10px 0 0;
-}
-#footer-column-three {
-    margin:0;
-}
-#site-info {
-    clear:both;
-    width:950px;
-    margin:0 auto;
-}
 
 /* =Global Elements
 -------------------------------------------------------------- */
 
-img#wpstats {
+img#wpstats {   /* hide WordPress Stats smiley */
     width:0px;
     height:0px;
     overflow:hidden
@@ -175,13 +110,9 @@ img#wpstats {
 -------------------------------------------------------------- */
 
 #container .sidebar {
-    background:yellow;
     margin:0 0 36px 0;
 }
 #content {
-}
-#content .sidebar {
-    background:silver;
 }
 .hentry {
     padding:0 0 3em 0;
@@ -189,6 +120,9 @@ img#wpstats {
 .page-title {
 }
 .entry-title {
+}
+.entry-content {
+    overflow:hidden;
 }
 .entry-content p {
 }
@@ -210,13 +144,6 @@ img#wpstats {
     float:left;
     clear:both;
 }
-/*div.entry-attachment,div.post div.entry-caption{margin:0 auto;text-align:center;}
-div.entry-attachment img,div.post div#nav-images div img{overflow:hidden;}
-body.attachment div#nav-images{clear:both;width:100%;}
-body.attachment div#nav-images div{padding:1em 0;width:50%;}
-body.attachment div#nav-images div.nav-previous{text-align:left;}
-body.attachment div#nav-images div.nav-next{text-align:right;}
-body.attachment div#comments{clear:both;}*/
 
 /* =Comments
 -------------------------------------------------------------- */
@@ -233,9 +160,6 @@ body.attachment div#comments{clear:both;}*/
 #author-info .avatar {
     float:left;
     margin:0 10px 10px 0;
-    padding:4px;
-    background:#EEE;
-    border:1px solid #CCC;
 }
 #author-email {
 }
@@ -269,15 +193,11 @@ body.attachment div#comments{clear:both;}*/
 	text-align:right;
 }
 #nav-above,#nav-below {
-	float:right;
 	width: 100%;
 }
 #nav-above {
 }
 #nav-below {
-}
-.home #nav-above, .single #nav-above {
-    display:none;
 }
 .paged #nav-above {
     display:block;
@@ -318,6 +238,13 @@ img.center {
     margin:0;
     list-style:none;
 }
+.sidebar {
+    background:#cccccc;
+}
+#primary {
+    background:#aaaaaa;
+}
+
 
 /* =Primary Sidebar
 -------------------------------------------------------------- */
@@ -335,7 +262,6 @@ img.center {
 #footer {
 }
 .footer-column {
-    background:orange;
     margin-bottom:18px;
 }
 .footer-column ul.xoxo ul {
@@ -347,6 +273,20 @@ img.center {
 #site-info p {
 }
 
+/* =PageNavi
+-------------------------------------------------------------- */
 
+/* Use !important to override PageNavi CSS */
 
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
+	color: blue !important;
+}
+.wp-pagenavi a:hover {	
+}
+.wp-pagenavi span.pages {
+}
+.wp-pagenavi span.current {
 
+}
+.wp-pagenavi span.extend {
+}
