@@ -1,25 +1,25 @@
     <div id="subsidiary">
     
-        <div id="first" class="support">
+        <div id="first" class="aside">
             <ul class="xoxo">
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(3) ) : // begin first support widgets ?>
+<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(3) ) : // begin first aside widgets ?>
 <?php endif; // end first widgets  ?>
         	</ul>
-        </div><!-- #first .support -->
+        </div><!-- #first .aside -->
     
-        <div id="second" class="support">
+        <div id="second" class="aside">
             <ul class="xoxo">
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(4) ) : // begin second support widgets ?>
+<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(4) ) : // begin second aside widgets ?>
 <?php endif; // end second widgets  ?>
         	</ul>
-        </div><!-- #second .support -->
+        </div><!-- #second .aside -->
     
-        <div id="third" class="support">
+        <div id="third" class="aside">
             <ul class="xoxo">
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(5) ) : // begin third support widgets ?>
+<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(5) ) : // begin third aside widgets ?>
 <?php endif; // end third widgets  ?>
         	</ul>
-        </div><!-- #third .support -->
+        </div><!-- #third .aside -->
         
     </div><!-- #subsidiary -->
     

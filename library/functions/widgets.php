@@ -82,7 +82,7 @@ function sandbox_widgets_init() {
 
 	// Register Widgetized areas.
     register_sidebar(array(
-       	'name' => 'Primary Support',
+       	'name' => 'Primary Aside',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -90,7 +90,7 @@ function sandbox_widgets_init() {
     ));
 
     register_sidebar(array(
-       	'name' => 'Secondary Support',
+       	'name' => 'Secondary Aside',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -98,7 +98,7 @@ function sandbox_widgets_init() {
     ));
 
     register_sidebar(array(
-       	'name' => '1st Subsidiary Support',
+       	'name' => '1st Subsidiary Aside',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -106,7 +106,7 @@ function sandbox_widgets_init() {
     ));  
 
     register_sidebar(array(
-       	'name' => '2nd Subsidiary Support',
+       	'name' => '2nd Subsidiary Aside',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -114,7 +114,7 @@ function sandbox_widgets_init() {
     ));  
    
     register_sidebar(array(
-       	'name' => '3rd Subsidiary Support',
+       	'name' => '3rd Subsidiary Aside',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -130,7 +130,7 @@ function sandbox_widgets_init() {
     ));  
 
     register_sidebar(array(
-       	'name' => 'Index Middle',
+       	'name' => 'Index Insert',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -154,7 +154,7 @@ function sandbox_widgets_init() {
     ));  
 
     register_sidebar(array(
-       	'name' => 'Single Middle',
+       	'name' => 'Single Insert',
        	'before_widget' => "<li class=\"widgetcontainer\">",
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",

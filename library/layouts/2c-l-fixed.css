@@ -53,7 +53,7 @@ DESCRIPTION: Two-column 950px fixed layout with one sidebar left of content
     margin:0 auto;
     overflow:hidden;
 }
-#subsidiary .support {
+#subsidiary .aside {
     width:310px;
     float:left;
     margin:0 10px 0 0;
