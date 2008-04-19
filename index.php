@@ -47,7 +47,7 @@ foreach ($options as $value) {
 
 <?php comments_template() ?>
 
-<?php if ($count==1) { ?><?php get_sidebar('index-middle') ?><?php } ?>
+<?php if ($count==1) { ?><?php get_sidebar('index-insert') ?><?php } ?>
 <?php $count = $count + 1; ?>
 <?php endwhile ?>
 
