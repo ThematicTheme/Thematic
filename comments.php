@@ -117,6 +117,9 @@ foreach ( $comments as $comment )
 							<?php do_action('comment_form', $post->ID); ?>
 
 						</form><!-- #commentform -->
+						
+<?php if(function_exists('show_manual_subscription_form')) { show_manual_subscription_form(); } ?>
+						
 					</div><!-- .formcontainer -->
 <?php endif /* if ( get_option('comment_registration') && !$user_ID ) */ ?>
 
