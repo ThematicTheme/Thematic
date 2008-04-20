@@ -110,6 +110,8 @@ foreach ( $comments as $comment )
 							<div class="form-label"><label for="comment"><?php _e('Comment', 'thematic') ?></label></div>
 							<div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
 
+<?php if(function_exists('show_subscription_checkbox')) { show_subscription_checkbox(); } ?>
+
 							<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php _e('Post Comment', 'thematic') ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
 
 							<?php do_action('comment_form', $post->ID); ?>

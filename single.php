@@ -66,7 +66,7 @@ foreach ($options as $value) {
 				</div>
 			</div><!-- .post -->
 			
-<?php get_sidebar('single-middle') ?>
+<?php get_sidebar('single-insert') ?>
 
 			<div id="nav-below" class="navigation">
 				<div class="nav-previous"><?php previous_post_link('%link', '<span class="meta-nav">&laquo;</span> %title') ?></div>
