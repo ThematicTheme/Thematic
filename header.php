@@ -50,7 +50,7 @@
         		<li><?php wp_loginout() ?></li>
         	</ul>
     	</div>
-    	<a href="" id="meta-anchor">Site Meta</a>
+    	<a href="" id="meta-anchor" title="<?php _e('Site Meta','thematic'); ?>">Site Meta</a>
     </div><!-- #site-meta -->
     <?php } ?>
 

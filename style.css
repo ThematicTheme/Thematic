@@ -31,6 +31,8 @@ img#wpstats {   /* hide WordPress Stats smiley */
 /* =Site Meta
 -------------------------------------------------------------- */
 
+/* sliding panel fixed to top of browser window when logged-in */
+
 #site-meta {
     position:fixed;
     width:100%;
@@ -40,7 +42,7 @@ img#wpstats {   /* hide WordPress Stats smiley */
     display:inline;
 }
 #meta-panel {
-    background:#464646;
+    background:#464646 url(images/meta-panel.png);
 }
 #meta-panel ul {
     width:950px;
@@ -51,14 +53,16 @@ img#wpstats {   /* hide WordPress Stats smiley */
 #meta-anchor {
     display:block;
     margin:0 auto;
-    width:70px;
+    width:76px;
+    height:16px;
     text-indent:-999em;
     outline:0;
-    background:#464646;
+    background:url(images/meta-anchor.png) no-repeat;
 }
 #meta-panel a {
     color:#999999;
     text-decoration:none;
+    margin:0 5px;
 }
 #meta-panel a:hover,#meta-panel a:focus {
     color:#FFF;
@@ -121,9 +125,6 @@ img#wpstats {   /* hide WordPress Stats smiley */
 }
 .entry-title {
 }
-.entry-meta {
-    margin:0 0 18px 0;
-}
 .entry-content {
     overflow:hidden;
 }
@@ -142,6 +143,7 @@ img#wpstats {   /* hide WordPress Stats smiley */
 .content-column {
 } 
 .page-link {
+    margin:0 0 18px 0;
 }
 .page .edit-link {
     float:left;
@@ -228,11 +230,11 @@ img.center {
 	float: none;
 	clear: both;
 }
-.wp-smiley {
+.wp-smiley { /* Prevent the smileys from breaking line-height */
 	max-height:11px;
 }
 
-/* =asides
+/* =asides (widgetized areas)
 -------------------------------------------------------------- */
 
 .aside h3 {
@@ -273,13 +275,16 @@ img.center {
 
 .wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
 	color: blue !important;
+	background:transparent !important;
 }
 .wp-pagenavi a:hover {	
 }
 .wp-pagenavi span.pages {
+	background:transparent !important;
 }
 .wp-pagenavi span.current {
-
+	background:transparent !important;
 }
 .wp-pagenavi span.extend {
+	background:transparent !important;
 }
