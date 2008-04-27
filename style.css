@@ -13,61 +13,21 @@ AUTHOR URI: http://themeshaper.com/
 /* Apply basic typography styles */
 @import url('library/styles/typography.css');
 
+/* Style the meta panel for logged-in users */
+@import url('library/styles/sitemeta.css');
+
 /* Apply a basic layout */
 @import url('library/layouts/2c-r-fixed.css');
 
 /* Set a grid with 18px line-height to fit 125px ad units  */
 body { background:url(images/125x18grid.jpg) repeat-y top center; }
 
+
 /* =Global Elements
 -------------------------------------------------------------- */
 
-img#wpstats {   /* hide WordPress Stats smiley */
-    width:0px;
-    height:0px;
-    overflow:hidden
-}
-
-/* =Site Meta
--------------------------------------------------------------- */
-
-/* sliding panel fixed to top of browser window when logged-in */
-
-#site-meta {
-    position:fixed;
-    width:100%;
-    z-index:1000;
-}
-#site-meta li {
-    display:inline;
-}
-#meta-panel {
-    background:#464646 url(images/meta-panel.png);
-}
-#meta-panel ul {
-    width:950px;
-    margin:0 auto;
-    padding:36px 0;
-    text-align:center;
-}
-#meta-anchor {
-    display:block;
-    margin:0 auto;
-    width:76px;
-    height:16px;
-    text-indent:-999em;
-    outline:0;
-    background:url(images/meta-anchor.png) no-repeat;
-}
-#meta-panel a {
-    color:#999999;
-    text-decoration:none;
-    margin:0 5px;
-}
-#meta-panel a:hover,#meta-panel a:focus {
-    color:#FFF;
-}
-.active {
+a:link, a:visited {
+    color:blue;
 }
 
 /* =Header
@@ -266,6 +226,15 @@ img.center {
 #siteinfo {
 }
 #siteinfo p {
+}
+
+/* =WordPress Stats
+-------------------------------------------------------------- */
+
+img#wpstats {   /* hide WordPress Stats smiley */
+    width:0px;
+    height:0px;
+    overflow:hidden
 }
 
 /* =PageNavi
