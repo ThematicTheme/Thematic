@@ -36,20 +36,12 @@ a:link, a:visited {
 #header {
     padding:3em 0;
 }
-#blog-title {
-}
-#blog-description {
-}
 
 /* =Menu
 -------------------------------------------------------------- */
 
 .skip-link {
     display:none;
-}
-#nav {
-}
-#subnav {
 }
 #menu ul {
     margin:0;
@@ -76,32 +68,16 @@ a:link, a:visited {
 #container .aside {
     margin:0 0 36px 0;
 }
-#content {
-}
 .hentry {
-    padding:0 0 3em 0;
-}
-.page-title {
-}
-.entry-title {
+    padding:0 0 36px 0;
 }
 .entry-content {
     overflow:hidden;
-}
-.entry-content p {
-}
-.entry-content h1,.entry-content h2 {
-}
-.entry-content h3 {
 }
 .content-column, .entry-content .linkcat {
 	list-style:none;
 	float:left;
 }
-.entry-content .linkcat {
-}
-.content-column {
-} 
 .page-link {
     margin:0 0 18px 0;
 }
@@ -126,9 +102,6 @@ a:link, a:visited {
     float:left;
     margin:0 10px 10px 0;
 }
-#author-email {
-}
-
 
 /* =Forms
 -------------------------------------------------------------- */
@@ -160,10 +133,6 @@ a:link, a:visited {
 #nav-above,#nav-below {
 	width: 100%;
 }
-#nav-above {
-}
-#nav-below {
-}
 .paged #nav-above {
     display:block;
 }
@@ -191,14 +160,12 @@ img.center {
 	clear: both;
 }
 .wp-smiley { /* Prevent the smileys from breaking line-height */
-	max-height:11px;
+	max-height:12px;
 }
 
 /* =asides (widgetized areas)
 -------------------------------------------------------------- */
 
-.aside h3 {
-}
 .aside ul {
     margin:0;
     list-style:none;
@@ -214,18 +181,8 @@ img.center {
 /* =Footer
 -------------------------------------------------------------- */
 
-#footer {
-}
 #subsidiary .aside {
     margin-bottom:18px;
-}
-.footer-column ul.xoxo ul {
-}
-.footer-column h3 {
-}
-#siteinfo {
-}
-#siteinfo p {
 }
 
 /* =WordPress Stats
