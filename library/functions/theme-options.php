@@ -3,7 +3,7 @@
 // Theme options adapted from "A Theme Tip For WordPress Theme Authors"
 // http://literalbarrage.org/blog/archives/2007/05/03/a-theme-tip-for-wordpress-theme-authors/
 
-$themename = "Theme";
+$themename = "Thematic";
 $shortname = "thm";
 
 // Create theme options
@@ -15,6 +15,12 @@ $options = array (
 						"id" => $shortname."_authorlink",
 						"std" => "false",
 						"type" => "checkbox"),
+
+				array(	"name" => "Index Insert Position",
+						"desc" => "The widgetized Index Insert will follow after this post number.",
+						"id" => $shortname."_insert_position",
+						"std" => "2",
+						"type" => "text"),
 
 				array(	"name" => "Info on Author Page",
 						"desc" => "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page.",
@@ -61,7 +67,7 @@ function mytheme_add_admin() {
         }
     }
 
-    add_theme_page($themename." Options", "Current Theme Options", 'edit_themes', basename(__FILE__), 'mytheme_admin');
+    add_theme_page($themename." Options", "Thematic Options", 'edit_themes', basename(__FILE__), 'mytheme_admin');
 
 }
 
@@ -89,6 +95,7 @@ function mytheme_admin() {
 		    <th scope="row"><?php echo $value['name']; ?>:</th>
 		    <td>
 		        <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
+			    <?php echo $value['desc']; ?>
 		    </td>
 		</tr>
 		<?php
