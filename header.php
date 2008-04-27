@@ -40,9 +40,9 @@
 
 <body class="<?php sandbox_body_class() ?>">
 
-<div id="wrapper" class="hfeed">
+<?php /* Load sliding meta panel */ if (is_user_logged_in()) { include ('sitemeta.php'); } ?>
 
-    <?php /* Load sliding meta panel */ if (is_user_logged_in()) { include ('sitemeta.php'); } ?>
+<div id="wrapper" class="hfeed">
 
     <div id="header">
     	<div id="branding">
