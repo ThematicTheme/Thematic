@@ -42,17 +42,7 @@
 
 <div id="wrapper" class="hfeed">
 
-    <?php if (is_user_logged_in()) { ?>
-    <div id="site-meta">
-    	<div id="meta-panel">
-        	<ul>
-        		<?php wp_register() ?>
-        		<li><?php wp_loginout() ?></li>
-        	</ul>
-    	</div>
-    	<a href="" id="meta-anchor" title="<?php _e('Site Meta','thematic'); ?>">Site Meta</a>
-    </div><!-- #site-meta -->
-    <?php } ?>
+    <?php /* Load sliding meta panel */ if (is_user_logged_in()) { include ('sitemeta.php'); } ?>
 
     <div id="header">
     	<div id="branding">
