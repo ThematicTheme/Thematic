@@ -17,7 +17,7 @@ AUTHOR URI: http://themeshaper.com/
 @import url('library/styles/sitemeta.css');
 
 /* Apply a basic layout */
-@import url('library/layouts/2c-r-fixed.css');
+@import url('library/layouts/3c-r-fixed.css');
 
 /* Set a grid with 18px line-height to fit 125px ad units  */
 body { background:url(images/125x18grid.jpg) repeat-y top center; }
