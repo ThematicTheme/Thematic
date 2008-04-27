@@ -1,6 +1,6 @@
 /* -----------------------------------------------------------------------
 
-   A print stylesheet based on Blueprint.
+   A print stylesheet based on Blueprint and Hartija.
 
 ----------------------------------------------------------------------- */
 
@@ -15,9 +15,39 @@ div {
     background:none;
     width:100%;
 }
+#wrapper, #main, #container, #content {
+    background:none;
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    position:static !important;
+    float:none !important; 
+}
 h1, h2, h3, h4, h5, h6 {
     font-family:"Helvetica Neue", Arial, "Lucida Grande", sans-serif;
     font-weight:bold;
+    margin:0 0 18pt 0;
+    padding:18pt 0 0 0;
+}
+.entry-title {
+    font-size:36pt;
+    margin:0;
+    padding:0;
+}
+.entry-meta {
+    margin:0 0 36pt 0;
+}
+.entry-content h1, .entry-content h2, .entry-content h3 {
+    font-size:18pt;
+}
+.entry-content h4 {
+    font-size:12pt;
+}
+.entry-content h5 {
+    font-size:10pt;    
+}
+.entry-content h6 {
+    font-size:8pt;    
 }
 code {
     font:.9em "Courier New", Monaco, Courier, monospace;
@@ -37,13 +67,17 @@ blockquote {
 }
 a:link, a:visited {
     background:transparent;
-    font-weight:700;
+    text-decoration:none;
+    color:#000;
+}
+.entry-content a {
+    font-weight:bold;
     text-decoration:underline;
 }
-a:link:after, a:visited:after {
+.entry-content a:link:after, .entry-content a:visited:after {
     content:" (" attr(href) ") ";
     font-size:90%;
 }
-#header, #access, .navigation, .page-link, .entry-meta, .comment-meta, #trackbacks-list, #respond, .sidebar, #footer {
+#site-meta, #header, #access, .navigation, .page-link, .entry-utility, #comments, #trackbacks-list, #respond, .aside, #footer {
     display:none;
 }
