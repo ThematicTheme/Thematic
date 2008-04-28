@@ -1,0 +1,29 @@
+/* =WordPress Stats
+-------------------------------------------------------------- */
+
+img#wpstats {   /* hide WordPress Stats smiley */
+    width:0px;
+    height:0px;
+    overflow:hidden
+}
+
+/* =PageNavi
+-------------------------------------------------------------- */
+
+/* Use !important to override PageNavi CSS */
+
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
+	color: blue !important;
+	background:transparent !important;
+}
+.wp-pagenavi a:hover {	
+}
+.wp-pagenavi span.pages {
+	background:transparent !important;
+}
+.wp-pagenavi span.current {
+	background:transparent !important;
+}
+.wp-pagenavi span.extend {
+	background:transparent !important;
+}

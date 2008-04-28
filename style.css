@@ -2,7 +2,7 @@
 THEME NAME: Thematic
 THEME URI: http://themeshaper.com/
 DESCRIPTION: A development theme based on work in <a href="http://code.google.com/p/blueprintcss/"> The Blueprint CSS Framework</a>, and by <a href="http://www.pearsonified.com/">Chris Pearson</a>, <a href="http://andy.wordpress.com/">Andy Skelton</a>, <a href="http://www.plaintxt.org/">Scott Allan Wallick</a> and many, many others.
-VERSION: 0.2
+VERSION: 0.3
 AUTHOR: Ian Stewart
 AUTHOR URI: http://themeshaper.com/
 */
@@ -18,6 +18,9 @@ AUTHOR URI: http://themeshaper.com/
 
 /* Apply a basic layout */
 @import url('library/layouts/3c-r-fixed.css');
+
+/* Prepare theme for plugins */
+@import url('library/styles/plugins.css');
 
 /* Set a grid with 18px line-height to fit 125px ad units  */
 body { background:url(images/125x18grid.jpg) repeat-y top center; }
@@ -183,34 +186,4 @@ img.center {
 
 #subsidiary .aside {
     margin-bottom:18px;
-}
-
-/* =WordPress Stats
--------------------------------------------------------------- */
-
-img#wpstats {   /* hide WordPress Stats smiley */
-    width:0px;
-    height:0px;
-    overflow:hidden
-}
-
-/* =PageNavi
--------------------------------------------------------------- */
-
-/* Use !important to override PageNavi CSS */
-
-.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
-	color: blue !important;
-	background:transparent !important;
-}
-.wp-pagenavi a:hover {	
-}
-.wp-pagenavi span.pages {
-	background:transparent !important;
-}
-.wp-pagenavi span.current {
-	background:transparent !important;
-}
-.wp-pagenavi span.extend {
-	background:transparent !important;
 }
