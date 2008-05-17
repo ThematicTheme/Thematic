@@ -2,7 +2,7 @@
 THEME NAME: Thematic
 THEME URI: http://themeshaper.com/
 DESCRIPTION: A development theme based on work in <a href="http://code.google.com/p/blueprintcss/"> The Blueprint CSS Framework</a>, and by <a href="http://www.pearsonified.com/">Chris Pearson</a>, <a href="http://andy.wordpress.com/">Andy Skelton</a>, <a href="http://www.plaintxt.org/">Scott Allan Wallick</a> and many, many others.
-VERSION: 0.3
+VERSION: 0.4
 AUTHOR: Ian Stewart
 AUTHOR URI: http://themeshaper.com/
 */
@@ -17,34 +17,87 @@ AUTHOR URI: http://themeshaper.com/
 @import url('library/styles/sitemeta.css');
 
 /* Apply a basic layout */
-@import url('library/layouts/3c-r-fixed.css');
+@import url('library/layouts/2c-r-fixed.css');
 
 /* Prepare theme for plugins */
 @import url('library/styles/plugins.css');
 
 /* Set a grid with 18px line-height to fit 125px ad units  */
-body { background:url(images/125x18grid.jpg) repeat-y top center; }
+/*body { background:url(images/960_grid_12_col.gif) repeat-y top center; }*/
 
 
 /* =Global Elements
 -------------------------------------------------------------- */
 
+body {
+    font-family:Georgia, serif;
+}
+#wrapper {
+    border-top:9px solid black;
+    padding:9px 0 0 0;
+}
 a:link, a:visited {
-    color:blue;
+    color:#1B6A9E;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+blockquote {
+    font-style:italic;
+}
+blockquote em, blockquote cite, blockquote i {
+    font-style:normal;
+}
+.caps {
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+.important {
+    font-weight:bold;
 }
 
 /* =Header
 -------------------------------------------------------------- */
 
 #header {
-    padding:3em 0;
+    background:#0a0a0a;
+}
+#blog-title {
+    font-size:36px;
+    line-height:54px;
+    font-weight:bold;
+    letter-spacing:-1px;
+    padding:99px 0 0 0;
+    margin:-9px 0 0 0;
+    border-bottom:1px solid #323232;
+}
+#blog-title a {
+    color:#fff;
+    text-decoration:none;
+}
+#blog-description {
+    font-style:italic;
+    padding:8px 0 63px 0;
+    color:#fff;
 }
 
 /* =Menu
 -------------------------------------------------------------- */
 
+#access {
+    font-size:11px;
+    background:#cfcfcf;
+    border-top:1px solid #ddd;
+    margin-top:-1px;
+}
 .skip-link {
     display:none;
+}
+#menu {
+    padding:7px 0 8px 0;
+    overflow:hidden; /* clears the inner float  */
 }
 #menu ul {
     margin:0;
@@ -60,26 +113,141 @@ a:link, a:visited {
 #menu a {
     display:block;
     float:left;
+    margin:0 10px 0 0;
+    padding:1px 6px;
+    background:#b1b1b1;
+    color:#fff;
+    border-top:1px solid #a0a0a0;
+    text-decoration:none;
 }
-.current_page_item a {
-    font-weight:bold;
+#menu a:hover {
+    background:#959595;
+    color:#fff;
+    border-color:#808080;
+}
+#menu .current_page_item a {
+    background:#606060;
+    color:#fff;
+    border-color:#474747;
+}
+#menu a:focus {
+    background:#383838;
+    color:#fff;
+    border-color:#1c1c1c;
 }
 
 /* =Content
 -------------------------------------------------------------- */
 
-#container .aside {
-    margin:0 0 36px 0;
+#main {
+    padding:54px 0 54px 0;
 }
+#content {
+}    
 .hentry {
+    margin:9px 0 0 0;
+    padding:44px 1px 36px 1px;
+    border-top:1px solid #e0e0e0;
+}
+.p1 {
+    margin:0;
     padding:0 0 36px 0;
+    border:none;
+}
+.page-title {
+    font-size:14px;
+    font-weight:bold;
+    padding:18px 0 36px 0;
+}
+.page-title span {
+    font-size:12px;
+    font-weight:normal;
+    font-style:italic;
+}
+.entry-title {
+    font-size:24px;
+    line-height:26px;
+    padding:8px 0 2px 0;
+    font-weight:bold;
+    color:#000;
+}
+.entry-title a {
+    text-decoration:none;
+    color:#000;
+}
+.entry-meta {
+    font-size:11px;
+    color:#787878;
+}
+.entry-meta a {
+    color:#787878;
+    font-style:italic;
+}
+.entry-meta a:hover {
+}
+.entry-meta .author {
+}
+.entry-meta .meta-sep {
+}
+.entry-meta abbr {
 }
 .entry-content {
+    margin:18px 0 0 0;
     overflow:hidden;
+}
+.entry-content h1, .entry-content h2 {
+    font-size:18px;
+    font-weight:bold;
+    margin:0 0 18px 0;
+    padding:18px 0 0 0;
+}
+.entry-content h3 {
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin:0 0 18px 0;
+    padding:18px 0 0 0;
+}
+.entry-content h4 {
+    font-weight:bold;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+.entry-content h5 {
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+.entry-content h6 {
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+.entry-content ul {
+    list-style:square;
+}
+.entry-content dl {
+    margin:0 1.5em;
+}
+.entry-content dt {
+    font-weight:bold;
+}
+.entry-content dd {
+    margin:0 0 18px 0;
+}
+.entry-content abbr, .entry-content acronym, .entry-content .help {
+  border-bottom: 1px dotted #333;
+  cursor: help;
 }
 .content-column, .entry-content .linkcat {
 	list-style:none;
 	float:left;
+}
+.more-link {
+    font-weight:bold;
+    font-style:italic;
+    display:block;
 }
 .page-link {
     margin:0 0 18px 0;
@@ -87,6 +255,20 @@ a:link, a:visited {
 .page .edit-link {
     float:left;
     clear:both;
+}
+.entry-utility {
+    font-size:11px;
+    color:#787878;
+}
+.entry-utility a {
+    font-style:italic;
+    color:#787878;
+}
+.entry-utility a:hover {
+}
+.comments-link a {
+    font-weight:bold;
+    color:#1B6A9E;
 }
 
 /* =Comments
@@ -99,7 +281,7 @@ a:link, a:visited {
 -------------------------------------------------------------- */
 
 #author-info {
-    margin:18px 0 36px 0;
+    margin:18px 0 54px 0;
 }
 #author-info .avatar {
     float:left;
@@ -121,8 +303,7 @@ a:link, a:visited {
 -------------------------------------------------------------- */
 
 .navigation {
-    overflow:hidden;
-    margin:0 0 36px 0;
+    margin:0px 0 36px 0;
 }
 .nav-previous {
 	float: left;
@@ -135,6 +316,12 @@ a:link, a:visited {
 }
 #nav-above,#nav-below {
 	width: 100%;
+}
+#nav-above {
+    margin:18px 0 36px 0;
+}
+.home #nav-above, .single #nav-above {
+    display:none;
 }
 .paged #nav-above {
     display:block;
@@ -166,7 +353,7 @@ img.center {
 	max-height:12px;
 }
 
-/* =asides (widgetized areas)
+/* =Asides (widgetized areas)
 -------------------------------------------------------------- */
 
 .aside ul {
@@ -174,16 +361,133 @@ img.center {
     list-style:none;
 }
 .aside {
-    background:#cccccc;
 }
-#primary {
-    background:#aaaaaa;
+.aside h3 {
+    font-size:14px;
+    font-weight:bold;
 }
-
+.aside ul ul {
+    list-style:square;
+}
+/* Begin Calendar styles */
+.aside table {
+    border-top:1px solid #e0e0e0;
+    margin:0 0 8px 0;
+}
+.aside th {
+    border-left:1px solid #e0e0e0;
+}
+.aside tr {
+    border-bottom:1px solid #e0e0e0;
+    border-right:1px solid #e0e0e0;
+    line-height:35px;
+}
+.aside td {
+    border-left:1px solid #e0e0e0;
+    padding:0 10px
+}
+.aside caption { /* Make the caption match h3 styles */
+    font-size:14px;
+    font-weight:bold;
+    text-align:left;
+    margin:0 0 9px 0;
+}
+.aside tfoot tr {
+    border:none;
+    line-height:36px;
+}
+.aside tfoot td {
+    border:none;
+    padding:0;
+}
+.aside #next {
+    text-align:right;
+}
+/* End Calendar styles */
+/* Begin Search styles */
+.aside form {
+    margin:4px 0 10px 0;
+}
+/* End Search styles */
+/* Begin RSS widget styles */
+/* I think I'm going to have to reset some stuff in functions.php for the RSS widget. It sucks for styling. */
+/* End RSS widget styles */
+#content .widgetcontainer {
+    border-top:1px solid #e0e0e0;
+    padding:35px 1px 18px 1px;
+    margin:18px 0 36px 0;
+}
+#index-top .widgetcontainer,
+#single-top .widgetcontainer,
+#page-top .widgetcontainer {
+    border-top:none;
+    border-bottom:1px solid #e0e0e0;
+    padding:0 1px 53px 1px;
+    margin:0 0 36px 0;
+}
+#content .aside:first-child .widgetcontainer:first-child {
+    padding-top:18px;
+}
+#content .aside h3 {
+    font-size:24px;
+    line-height:26px;
+    padding:8px 0 20px 0;
+    font-weight:bold;
+}
+.main-aside {
+}
+.main-aside h3 {
+    padding:17px 0 1px 0;
+}
+.main-aside ul ul {
+    margin:0 0 18px 13px;
+}
+.main-aside ul ul ul {
+    margin:0;
+}
+.sub-aside h3 {
+}
 
 /* =Footer
 -------------------------------------------------------------- */
 
+#footer {
+    background:#0a0a0a;
+    color:#fff;
+    padding:35px 0 72px 0;
+    border-top:1px solid #cfcfcf;
+}
+#footer a {
+    color:#fff;
+}
 #subsidiary .aside {
     margin-bottom:18px;
 }
+
+/* =PageNavi
+-------------------------------------------------------------- */
+
+/* Use !important to override PageNavi CSS */
+
+.wp-pagenavi {
+}
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
+    color:#1B6A9E !important;
+    background:#transparent !important;
+    border:1px solid #e0e0e0 !important;
+}
+.wp-pagenavi a:hover {
+    color:#000 !important;	
+}
+.wp-pagenavi span.pages {
+    margin-left:0 !important;
+    padding-left:0 !important;
+}
+.wp-pagenavi span.current {
+    border:1px solid #e0e0e0 !important;
+}
+.wp-pagenavi span.extend {
+    margin:0 !important;
+}
+
+
