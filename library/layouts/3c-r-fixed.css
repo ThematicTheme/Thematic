@@ -7,7 +7,7 @@ DESCRIPTION: Three-column 950px fixed layout with two sidebars right of content
     position:relative;
 }
 #branding {
-    width:950px;
+    width:940px;
     margin:0 auto;
 }
 #access {
@@ -15,29 +15,30 @@ DESCRIPTION: Three-column 950px fixed layout with two sidebars right of content
     overflow:hidden;
 }
 #menu {
-    width:950px;
+    width:940px;
     margin:0 auto;
 }
 #main {
-    width:950px;
+    width:960px;
     margin:0 auto;
     overflow:hidden;
     position:relative;
 }
 #container {
-    width:470px;
+    width:540px;
     float:left;
+    margin:0 0 0 10px;
 }
 #content {
     overflow:hidden;
 }
 #primary {
-    width:310px;
+    width:220px;
     float:right;
-    margin:0 0 0 10px;
+    margin:0 10px 0 20px;
 }
 #secondary {
-    width:150px;
+    width:140px;
     float:right;
     margin:0 0 0 10px;
 }
@@ -45,20 +46,20 @@ DESCRIPTION: Three-column 950px fixed layout with two sidebars right of content
     clear:both;
 }
 #subsidiary {
-    width:950px;
+    width:960px;
     margin:0 auto;
     overflow:hidden;
 }
 #subsidiary .aside {
-    width:310px;
+    width:300px;
     float:left;
-    margin:0 10px 0 0;
+    margin:0 10px 0 10px;
 }
 #subsidiary #third {
-    margin:0;
+    margin:0 0 0 10px;
 }
 #siteinfo {
     clear:both;
-    width:950px;
+    width:940px;
     margin:0 auto;
 }

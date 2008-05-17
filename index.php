@@ -10,8 +10,6 @@ foreach ($options as $value) {
 	<div id="container">
 		<div id="content">
 
-<?php get_sidebar('index-top') ?>
-
 			<div id="nav-above" class="navigation">
                 <?php if(function_exists('wp_pagenavi')) { ?>
                 <?php wp_pagenavi(); ?>
@@ -21,8 +19,9 @@ foreach ($options as $value) {
 				<?php } ?>
 			</div>
 			
+<?php get_sidebar('index-top') ?>
 
-<?php $count = 1 ?>
+<?php /* Count the number of posts so we can insert a widgetized area */ $count = 1 ?>
 <?php while ( have_posts() ) : the_post() ?>
 
 			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
@@ -53,6 +52,8 @@ foreach ($options as $value) {
 <?php $count = $count + 1; ?>
 <?php endwhile ?>
 
+<?php get_sidebar('index-bottom') ?>
+
 			<div id="nav-below" class="navigation">
                 <?php if(function_exists('wp_pagenavi')) { ?>
                 <?php wp_pagenavi(); ?>
@@ -61,8 +62,6 @@ foreach ($options as $value) {
 				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
 				<?php } ?>
 			</div>
-
-<?php get_sidebar('index-bottom') ?>
 
 		</div><!-- #content -->
 	</div><!-- #container -->

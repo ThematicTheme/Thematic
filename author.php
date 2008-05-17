@@ -12,9 +12,9 @@ foreach ($options as $value) {
 
 <?php the_post() ?>
 
-			<h1 class="page-title author"><?php $author = get_the_author(); ?><?php _e('Author Archives: ') ?><?php _e("$author") ?></h1>
+			<h1 class="page-title author"><?php $author = get_the_author(); ?><?php _e('Author Archives: ') ?><span><?php _e("$author") ?></span></h1>
 			
-<?php /* if display author bio is selected */ if($thm_authorinfo == 'true') { ?>
+<?php /* if display author bio is selected */ if($thm_authorinfo == 'true' & !is_paged()) { ?>
 
 			<div id="author-info" class="vcard">
     			<?php thematic_author_info_avatar(); ?>
@@ -30,8 +30,12 @@ foreach ($options as $value) {
 			
 
 			<div id="nav-above" class="navigation">
+                <?php if(function_exists('wp_pagenavi')) { ?>
+                <?php wp_pagenavi(); ?>
+                <?php } else { ?>  
 				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
 				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+				<?php } ?>
 			</div>
 
 <?php rewind_posts(); while (have_posts()) : the_post(); ?>
@@ -60,8 +64,12 @@ foreach ($options as $value) {
 <?php endwhile ?>
 
 			<div id="nav-below" class="navigation">
+                <?php if(function_exists('wp_pagenavi')) { ?>
+                <?php wp_pagenavi(); ?>
+                <?php } else { ?>  
 				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
 				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+				<?php } ?>
 			</div>
 	
 		</div><!-- #content -->

@@ -15,15 +15,19 @@ img#wpstats {   /* hide WordPress Stats smiley */
 .wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
 	color: blue !important;
 	background:transparent !important;
+	border:none !important;
 }
 .wp-pagenavi a:hover {	
 }
 .wp-pagenavi span.pages {
 	background:transparent !important;
+	border:none !important;
 }
 .wp-pagenavi span.current {
 	background:transparent !important;
+	border:none !important;
 }
 .wp-pagenavi span.extend {
 	background:transparent !important;
+	border:none !important;
 }

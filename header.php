@@ -20,7 +20,10 @@
 	
 <?php wp_head() ?>
 
-    <script src="<?php bloginfo('template_directory'); ?>/library/scripts/ie7/IE8.js" type="text/javascript"></script>     
+    <!--[if lt IE 8]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
+    <![endif]-->
+
     <script type="text/javascript">
     	jQuery(document).ready(function(){
     		// Hide the site-meta panel

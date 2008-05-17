@@ -1,4 +1,4 @@
-	<div id="primary" class="aside">
+	<div id="primary" class="aside main-aside">
 		<ul class="xoxo">
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(1) ) : // begin primary sidebar widgets ?>
 			<li id="search">
@@ -37,7 +37,7 @@
 		</ul>
 	</div><!-- #primary .aside -->
 
-	<div id="secondary" class="aside">
+	<div id="secondary" class="aside main-aside">
 		<ul class="xoxo">
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // begin  secondary sidebar widgets ?>
 
