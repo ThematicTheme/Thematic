@@ -10,7 +10,7 @@ function widget_sandbox_search($args) {
 				<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" tabindex="1" />
+						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="20" tabindex="1" />
 						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Search', 'sandbox') ?>" tabindex="2" />
 					</div>
 				</form>
