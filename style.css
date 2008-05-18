@@ -22,8 +22,8 @@ AUTHOR URI: http://themeshaper.com/
 /* Prepare theme for plugins */
 @import url('library/styles/plugins.css');
 
-/* Set a grid with 18px line-height to fit 125px ad units  */
-/*body { background:url(images/960_grid_12_col.gif) repeat-y top center; }*/
+/* Un-comment the line below to set a grid with 18px line-height to fit 125px ad units  */
+/* body { background:url(images/960_grid_12_col.gif) repeat-y top center; } */
 
 
 /* =Global Elements
@@ -37,7 +37,7 @@ body {
     padding:9px 0 0 0;
 }
 a:link, a:visited {
-    color:#1B6A9E;
+    color:#2A6191;
     text-decoration:none;
 }
 a:hover {
@@ -45,9 +45,13 @@ a:hover {
 }
 blockquote {
     font-style:italic;
+    font-size:13px;
 }
 blockquote em, blockquote cite, blockquote i {
     font-style:normal;
+}
+input, textarea {
+    font-family:Georgia, serif;
 }
 .caps {
     font-size:10px;
@@ -62,7 +66,7 @@ blockquote em, blockquote cite, blockquote i {
 -------------------------------------------------------------- */
 
 #header {
-    background:#0a0a0a;
+    background:#181E24;
 }
 #blog-title {
     font-size:36px;
@@ -71,7 +75,7 @@ blockquote em, blockquote cite, blockquote i {
     letter-spacing:-1px;
     padding:99px 0 0 0;
     margin:-9px 0 0 0;
-    border-bottom:1px solid #323232;
+    border-bottom:1px solid #242A30;
 }
 #blog-title a {
     color:#fff;
@@ -88,8 +92,8 @@ blockquote em, blockquote cite, blockquote i {
 
 #access {
     font-size:11px;
-    background:#cfcfcf;
-    border-top:1px solid #ddd;
+    background:#B5D1EA;
+    border-top:1px solid #CADEF0;
     margin-top:-1px;
 }
 .skip-link {
@@ -115,25 +119,25 @@ blockquote em, blockquote cite, blockquote i {
     float:left;
     margin:0 10px 0 0;
     padding:1px 6px;
-    background:#b1b1b1;
+    background:#87B5DD;
     color:#fff;
-    border-top:1px solid #a0a0a0;
+    border-top:1px solid #6DA5D6;
     text-decoration:none;
 }
 #menu a:hover {
-    background:#959595;
+    background:#5C9BD1;
     color:#fff;
-    border-color:#808080;
+    border-color:#3B86C7;
 }
 #menu .current_page_item a {
-    background:#606060;
+    background:#5C9BD1;
     color:#fff;
-    border-color:#474747;
+    border-color:#3B86C7;
 }
 #menu a:focus {
-    background:#383838;
+    background:#4887BD;
     color:#fff;
-    border-color:#1c1c1c;
+    border-color:#2772B3;
 }
 
 /* =Content
@@ -268,13 +272,148 @@ blockquote em, blockquote cite, blockquote i {
 }
 .comments-link a {
     font-weight:bold;
-    color:#1B6A9E;
+    color:#2A6191;
 }
 
 /* =Comments
 -------------------------------------------------------------- */
 
 #comments {
+    background:#B5D1EA;
+    color:#fff;
+    margin:54px 0 0 0;
+    padding:18px 0;
+}
+#comments h3 {
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    text-align:center;
+    margin:0 0 18px 0;
+    padding:0 20px 0 20px;
+}
+#comments .comments:first-child h3 {
+    padding-top:18px;
+}
+#comments ol {
+    margin:0;
+    padding:0 0 18px 0;
+    list-style:none;
+}
+#comments li {
+    background:#87B5DD;
+    border-top:1px solid #6DA5D6;
+    margin:0 20px 18px 20px;
+    padding:17px 20px 0 20px;
+    position:relative;
+}
+#comments a {
+    color:#2772B3;
+}
+#comments li.byuser {
+    background:#5C9BD1;
+    border-color:#3B86C7;
+}
+#comments li.byuser p a {
+}
+#comments li.bypostauthor {
+}
+#comments li.bypostauthor p a {
+}
+#comments .avatar {
+    width:48px;
+    height:48px;
+    position:absolute;
+    top:19px;
+    left:20px;
+}
+#comments .fn {
+    font-weight:bold;
+    font-size:14px;
+    padding:18px 0 0 58px;
+    display:block;
+}
+#comments .fn a {
+    color:#fff;
+}
+#comments-list .comment-meta {
+    font-size:10px;
+    margin:0 0 18px 0;
+    padding:0 0 0 58px
+}
+#comments-list .comment-meta a {
+    font-style:italic;
+    color:#fff;
+}
+#comments li p {
+    margin:0;
+    padding:0 0 18px 0;
+}
+#respond {
+    background:#87B5DD;
+    border-top:1px solid #6DA5D6;
+    margin:0 20px;
+    padding:17px 20px 0 20px;
+}
+#respond h3 {
+    padding-top:18px;
+}
+#respond form {
+    padding:0 0 18px 0;
+}
+#respond #form-section-author {
+    width:230px;
+    float:left;
+}
+#respond #form-section-author input {
+    width:220px;
+}
+#respond #form-section-email {
+    width:220px;
+    float:right;
+}
+#respond #form-section-email input {
+    width:100%;
+}
+#respond #form-section-url {
+}
+#respond #form-section-url input {
+    width:100%;
+}
+#respond .form-label {
+    font-size:10px;
+}
+#respond input {
+    margin:0 0 14px 0;
+}
+#respond textarea {
+    width:464px;
+    margin:0 0 16px 0;
+}
+#respond .form-submit {
+    float:right;
+}
+p.subscribe-to-comments {
+    width:260px;
+    float:left;
+}
+p.comment_license {
+    clear:both;
+    margin:0;
+}
+p.solo-subscribe-to-comments {
+    clear:both;
+    margin:9px 0;
+}
+p.solo-subscribe-to-comments:first-line {
+    font-style:italic;
+}
+input#solo-subscribe-email {
+    width:220px;
+    margin:9px 0;
+}
+#respond .required {
+    font-weight:bold;
 }
 
 /* =Author Info
@@ -287,17 +426,6 @@ blockquote em, blockquote cite, blockquote i {
     float:left;
     margin:0 10px 10px 0;
 }
-
-/* =Forms
--------------------------------------------------------------- */
-
-#respond input {
-    width:100%;
-}
-#respond textarea {
-    width:100%;
-}
-
 
 /* =Navigation
 -------------------------------------------------------------- */
@@ -452,10 +580,10 @@ img.center {
 -------------------------------------------------------------- */
 
 #footer {
-    background:#0a0a0a;
+    background:#181E24;
     color:#fff;
-    padding:35px 0 72px 0;
-    border-top:1px solid #cfcfcf;
+    padding:34px 0 72px 0;
+    border-top:2px solid #000;
 }
 #footer a {
     color:#fff;
@@ -472,7 +600,7 @@ img.center {
 .wp-pagenavi {
 }
 .wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
-    color:#1B6A9E !important;
+    color:#2A6191 !important;
     background:#transparent !important;
     border:1px solid #e0e0e0 !important;
 }

@@ -266,7 +266,7 @@ function sandbox_commenter_link() {
 		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
 	}
 	$email = get_comment_author_email();
-	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( "$email", "70" ) );
+	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( "$email") );
 	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 }
 
