@@ -582,6 +582,9 @@ img.center {
     padding:8px 0 20px 0;
     font-weight:bold;
 }
+#single-bottom .widgetcontainer {
+    border-top:none;
+}
 .main-aside {
 }
 .main-aside h3 {
@@ -594,6 +597,15 @@ img.center {
     margin:0;
 }
 .sub-aside h3 {
+}
+#footer .widgetcontainer {
+    padding:0 1px;
+    margin:0 0 18px 0;
+}
+#footer .widgetcontainer ul {
+    margin:0 0 0 13px;
+}
+#footer .widgetcontainer ul ul {
 }
 
 /* =Footer
@@ -610,6 +622,9 @@ img.center {
 }
 #subsidiary .aside {
     margin-bottom:18px;
+}
+#siteinfo {
+    padding:18px 0;
 }
 
 /* =PageNavi
