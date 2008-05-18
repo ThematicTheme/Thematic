@@ -5,8 +5,8 @@
 				<h3><label for="s"><?php _e('Search', 'thematic') ?></label></h3>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="10" tabindex="1" />
-						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'thematic') ?>" tabindex="2" />
+						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="20" tabindex="1" />
+						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Search', 'thematic') ?>" tabindex="2" />
 					</div>
 				</form>
 			</li>
