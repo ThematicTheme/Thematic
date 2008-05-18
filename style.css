@@ -161,7 +161,7 @@ input, textarea {
 .page-title {
     font-size:14px;
     font-weight:bold;
-    padding:18px 0 36px 0;
+    padding:18px 0;
 }
 .page-title span {
     font-size:12px;
@@ -367,7 +367,7 @@ input, textarea {
     padding-top:18px;
 }
 #respond form {
-    padding:0 0 18px 0;
+    padding:0 0 36px 0;
 }
 #respond #form-section-author {
     width:230px;
@@ -406,8 +406,6 @@ p.subscribe-to-comments {
     float:left;
 }
 p.subscribe-to-comments label {
-    position:relative;
-    top:-2px;
 }
 p.comment_license {
     clear:both;
@@ -415,7 +413,7 @@ p.comment_license {
 }
 p.solo-subscribe-to-comments {
     clear:both;
-    margin:9px 0;
+    margin:0;
 }
 p.solo-subscribe-to-comments:first-line {
     font-style:italic;
@@ -432,11 +430,20 @@ input#solo-subscribe-email {
 -------------------------------------------------------------- */
 
 #author-info {
-    margin:18px 0 54px 0;
+    margin:18px 0 36px 0;
+}
+#author-info p:first-line {
+    font-weight:bold;
 }
 #author-info .avatar {
     float:left;
-    margin:0 10px 10px 0;
+    width:72px;
+    height:72px;
+    margin:0 10px 0 0;
+    padding:5px;
+    background:#B5D1EA;
+    position:relative;
+    top:4px;
 }
 
 /* =Navigation
@@ -444,6 +451,7 @@ input#solo-subscribe-email {
 
 .navigation {
     margin:0px 0 36px 0;
+    overflow:hidden;
 }
 .nav-previous {
 	float: left;
@@ -594,7 +602,7 @@ img.center {
 #footer {
     background:#181E24;
     color:#fff;
-    padding:34px 0 72px 0;
+    padding:34px 0 90px 0;
     border-top:2px solid #000;
 }
 #footer a {
@@ -610,6 +618,8 @@ img.center {
 /* Use !important to override PageNavi CSS */
 
 .wp-pagenavi {
+    margin:0 0 0 0;
+    line-height:36px;
 }
 .wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
     color:#2772B3 !important;
