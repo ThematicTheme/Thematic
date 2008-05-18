@@ -37,7 +37,7 @@ body {
     padding:9px 0 0 0;
 }
 a:link, a:visited {
-    color:#2A6191;
+    color:#2772B3;
     text-decoration:none;
 }
 a:hover {
@@ -272,7 +272,7 @@ input, textarea {
 }
 .comments-link a {
     font-weight:bold;
-    color:#2A6191;
+    color:#2772B3;
 }
 
 /* =Comments
@@ -308,7 +308,6 @@ input, textarea {
     position:relative;
 }
 #comments a {
-    color:#2772B3;
 }
 #comments li.byuser {
     background:#5C9BD1;
@@ -348,6 +347,15 @@ input, textarea {
 #comments li p {
     margin:0;
     padding:0 0 18px 0;
+}
+#trackbacks-list .comment-author {
+    margin:0 0 18px 0;
+    font-size:11px;
+}
+#trackbacks-list .comment-author a {
+    font-size:14px;
+    font-weight:bold;
+    color:#fff;
 }
 #respond {
     background:#87B5DD;
@@ -396,6 +404,10 @@ input, textarea {
 p.subscribe-to-comments {
     width:260px;
     float:left;
+}
+p.subscribe-to-comments label {
+    position:relative;
+    top:-2px;
 }
 p.comment_license {
     clear:both;
@@ -600,7 +612,7 @@ img.center {
 .wp-pagenavi {
 }
 .wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
-    color:#2A6191 !important;
+    color:#2772B3 !important;
     background:#transparent !important;
     border:1px solid #e0e0e0 !important;
 }
