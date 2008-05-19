@@ -576,6 +576,9 @@ img.center {
 #content .aside:first-child .widgetcontainer:first-child {
     padding-top:18px;
 }
+.page #content .aside:first-child .widgetcontainer:first-child {
+    padding-top:0;
+}
 #content .aside h3 {
     font-size:24px;
     line-height:26px;
