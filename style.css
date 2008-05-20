@@ -34,7 +34,6 @@ body {
 }
 #wrapper {
     border-top:9px solid black;
-    padding:9px 0 0 0;
 }
 a:link, a:visited {
     color:#2772B3;
@@ -74,7 +73,6 @@ input, textarea {
     font-weight:bold;
     letter-spacing:-1px;
     padding:99px 0 0 0;
-    margin:-9px 0 0 0;
     border-bottom:1px solid #242A30;
 }
 #blog-title a {
@@ -144,7 +142,7 @@ input, textarea {
 -------------------------------------------------------------- */
 
 #main {
-    padding:54px 0 54px 0;
+    padding:54px 0;
 }
 #content {
 }    
@@ -230,6 +228,7 @@ input, textarea {
 }
 .entry-content ul {
     list-style:square;
+    margin:0 0 0 1.5em;
 }
 .entry-content dl {
     margin:0 1.5em;
@@ -283,6 +282,7 @@ input, textarea {
     color:#fff;
     margin:54px 0 0 0;
     padding:18px 0;
+    overflow:hidden;
 }
 #comments h3 {
     font-weight:bold;
@@ -296,8 +296,7 @@ input, textarea {
     padding-top:18px;
 }
 #comments ol {
-    margin:0;
-    padding:0 0 18px 0;
+    margin:0 0 36px 0;
     list-style:none;
 }
 #comments li {
@@ -360,8 +359,9 @@ input, textarea {
 #respond {
     background:#87B5DD;
     border-top:1px solid #6DA5D6;
-    margin:0 20px;
     padding:17px 20px 0 20px;
+    width:460px;
+    margin:0 auto;
 }
 #respond h3 {
     padding-top:18px;
@@ -391,11 +391,11 @@ input, textarea {
 #respond .form-label {
     font-size:10px;
 }
-#respond input {
+#respond .form-input input {
     margin:0 0 14px 0;
 }
 #respond textarea {
-    width:464px;
+    width:100%;
     margin:0 0 16px 0;
 }
 #respond .form-submit {
@@ -418,10 +418,10 @@ p.solo-subscribe-to-comments {
 p.solo-subscribe-to-comments:first-line {
     font-style:italic;
 }
-input#solo-subscribe-email {
+/*input#solo-subscribe-email {
     width:220px;
     margin:9px 0;
-}
+}*/
 #respond .required {
     font-weight:bold;
 }
