@@ -7,7 +7,7 @@ DESCRIPTION: Two-column 950px fixed layout with one sidebar left of content
     position:relative;
 }
 #branding {
-    width:950px;
+    width:940px;
     margin:0 auto;
 }
 #access {
@@ -15,54 +15,57 @@ DESCRIPTION: Two-column 950px fixed layout with one sidebar left of content
     overflow:hidden;
 }
 #menu {
-    width:950px;
+    width:940px;
     margin:0 auto;
 }
 #main {
-    width:950px;
+    width:940px;
     margin:0 auto;
     overflow:hidden;
     position:relative;
 }
 #container {
-    width:950px;
+    width:940px;
     float:right;
     margin: 0 0 0 -310px;
 }
 #content {
+    width:620px;
     overflow:hidden;
     margin: 0 0 0 320px;
 }
 .hentry {
     width:630px;
 }
+.main-aside {
+    width:300px;
+    float:left;
+    position:relative;
+}
 #primary {
-    width:310px;
     float:left;
 }
 #secondary {
     clear:left;
-    width:310px;
-    float:left;
 }
 #footer {    
     clear:both;
 }
 #subsidiary {
-    width:950px;
+    width:940px;
     margin:0 auto;
     overflow:hidden;
 }
 #subsidiary .aside {
-    width:310px;
+    width:300px;
     float:left;
-    margin:0 10px 0 0;
+    margin:0 20px 0 0;
 }
 #subsidiary #third {
     margin:0;
 }
 #siteinfo {
     clear:both;
-    width:950px;
+    width:940px;
     margin:0 auto;
 }
