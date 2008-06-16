@@ -2,7 +2,7 @@
 THEME NAME: Thematic
 THEME URI: http://themeshaper.com/
 DESCRIPTION: A development theme based on work in <a href="http://code.google.com/p/blueprintcss/"> The Blueprint CSS Framework</a>, and by <a href="http://www.pearsonified.com/">Chris Pearson</a>, <a href="http://andy.wordpress.com/">Andy Skelton</a>, <a href="http://www.plaintxt.org/">Scott Allan Wallick</a> and many, many others.
-VERSION: 0.4
+VERSION: 0.4.1
 AUTHOR: Ian Stewart
 AUTHOR URI: http://themeshaper.com/
 .
@@ -26,8 +26,8 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 /* Prepare theme for plugins */
 @import url('library/styles/plugins.css');
 
-/* Un-comment the line below to set a grid with 18px line-height to fit 125px ad units  */
-/* body { background:url(images/960_grid_12_col.gif) repeat-y top center; } */
+/* Un-comment the line below to set a grid with 18px line-height */
+/*body { background:url(images/960_grid_12_col.gif) repeat-y top center; }*/
 
 
 /* =Global Elements
