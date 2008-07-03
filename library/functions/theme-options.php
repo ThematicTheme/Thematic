@@ -32,7 +32,7 @@ $options = array (
 				array(	"name" => "Text in Footer",
 						"desc" => "Enter the HTML text that will appear in the bottom of your footer. Feel free to remove or change any links. <strong>Hint:</strong> <a href=\"http://www.w3schools.com/HTML/html_links.asp\" target=\"_blank\">how to write a link</a>.",
 						"id" => $shortname."_footertext",
-						"std" => "<span id=\"generator-link\"><a href=\"http://WordPress.org/\" title=\"WordPress\" rel=\"generator\">WordPress</a></span> <span class=\"meta-sep\">|</span> <span id=\"designer-link\"><a href=\"http://themeshaper.com/\" title=\"A ThemeShaper Theme\" rel=\"designer\">ThemeShaper</a></span>",
+						"std" => "<span id=\"generator-link\">Powered by <a href=\"http://WordPress.org/\" title=\"WordPress\" rel=\"generator\">WordPress</a></span><span class=\"meta-sep\">. </span><span id=\"designer-link\">Built on the <a href=\"http://themeshaper.com/thematic-for-wordpress\" title=\"Thematic Theme Framework\" rel=\"designer\">Thematic Theme Framework</a>.</span>",
 						"type" => "textarea",
 						"options" => array(	"rows" => "5",
 											"cols" => "94") ),

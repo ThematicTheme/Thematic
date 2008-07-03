@@ -24,4 +24,8 @@ require_once(THEMELIB . '/functions/author-info-avatar.php');
 // Translate, if applicable
 load_theme_textdomain('thematic');
 
+// Remove the WordPress Generator – via http://blog.ftwr.co.uk/archives/2007/10/06/improving-the-wordpress-generator/
+function thematic_remove_generators() { return ''; }  
+add_filter('the_generator','thematic_remove_generators'); 
+
 ?>
