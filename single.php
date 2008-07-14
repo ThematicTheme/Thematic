@@ -22,7 +22,7 @@ foreach ($options as $value) {
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<div class="entry-meta">
                     <?php /* if default setting of no author link */ if($thm_authorlink == 'false') { ?>
-                    					<span class="author vcard"><?php $author = get_the_author(); ?><?php _e('By ') ?><span class="fn n"><?php _e("$author") ?></span></span>
+                    					<span class="author vcard"><?php $author = get_the_author(); ?><?php _e('By ', 'thematic') ?><span class="fn n"><?php _e("$author") ?></span></span>
                     <?php /* else show a link to the author page */ } else { ?>	
                                         <span class="author vcard"><?php printf(__('By %s', 'thematic'), '<a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="' . sprintf(__('View all posts by %s', 'thematic'), $authordata->display_name) . '">'.get_the_author().'</a>') ?></span>
                     <?php } ?>				    
