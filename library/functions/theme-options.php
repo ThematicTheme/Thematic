@@ -202,7 +202,7 @@ function mytheme_admin() {
 </p>
 </form>
 
-<p><?php _e('For more information about this theme, <a href="http://themeshaper.com">visit ThemeShaper</a>. If you have any questions, <a href="http://themeshaper.com/contact">contact the author</a>.', 'thematic'); ?></p>
+<p><?php _e('For more information about this theme, <a href="http://themeshaper.com">visit ThemeShaper</a>. Please visit the <a href="http://themeshaper.com/forums/">ThemeShaper Forums</a> if you have any questions about Thematic.', 'thematic'); ?></p>
 
 <?php
 }
