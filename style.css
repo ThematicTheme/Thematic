@@ -2,9 +2,10 @@
 THEME NAME: Thematic
 THEME URI: http://themeshaper.com/thematic-for-wordpress/
 DESCRIPTION: A development theme based on work in <a href="http://code.google.com/p/blueprintcss/"> The Blueprint CSS Framework</a>, and by <a href="http://www.pearsonified.com/">Chris Pearson</a>, <a href="http://andy.wordpress.com/">Andy Skelton</a>, <a href="http://www.plaintxt.org/">Scott Allan Wallick</a> and many, many others.
-VERSION: 0.5
+VERSION: 0.5.1
 AUTHOR: Ian Stewart
 AUTHOR URI: http://themeshaper.com/
+Tags:three column,two column,one column,fixed width, options, seo
 .
 This work, like WordPress, is released under GNU General Public License, version 2 (GPL).
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -232,7 +233,7 @@ input, textarea {
 }
 .entry-content ul {
     list-style:square;
-    margin:0 0 0 1.5em;
+    margin:0 0 18px 1.5em;
 }
 .entry-content dl {
     margin:0 1.5em;
@@ -495,11 +496,17 @@ img.alignright,img.align-right {
 	float: right;
 	margin-left:20px;
 }
-img.center {
+img.center, img.centered {
 	margin: 0 auto;
 	display: block;
 	float: none;
 	clear: both;
+}
+.alignright {
+    float: right;
+}
+.alignleft {
+    float: left;
 }
 .wp-smiley { /* Prevent the smileys from breaking line-height */
 	max-height:12px;
