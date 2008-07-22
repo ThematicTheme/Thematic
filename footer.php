@@ -6,6 +6,8 @@ foreach ($options as $value) {
     }
 ?>
     </div><!-- #main -->
+    
+<?php thematic_abovefooter(); ?>    
 
 	<div id="footer">
         <?php get_sidebar('subsidiary'); ?>
