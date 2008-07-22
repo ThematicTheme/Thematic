@@ -510,6 +510,7 @@ img.center, img.centered {
 }
 .wp-smiley { /* Prevent the smileys from breaking line-height */
 	max-height:12px;
+	margin:0 !important;
 }
 
 /* =Asides (widgetized areas)
@@ -569,7 +570,7 @@ img.center, img.centered {
 }
 /* End Search styles */
 /* Begin RSS widget styles */
-/* I think I'm going to have to reset some stuff in functions.php for the RSS widget. It sucks for styling. */
+/* I think I'm going to have to reset some stuff in functions.php for the RSS widget. It stinks for styling. */
 /* End RSS widget styles */
 #content .widgetcontainer {
     border-top:1px solid #e0e0e0;
