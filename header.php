@@ -62,7 +62,8 @@
     		<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
             <?php sandbox_globalnav() ?>
         </div><!-- #access -->    
-    </div><!-- #header-->   
+    </div><!-- #header-->
     
+<?php thematic_belowheader(); ?>   
     <div id="main">
     
