@@ -1,5 +1,7 @@
 <?php
 
+// Many thanks to Scott Wallick and Andy Skelton for the work below
+
 // Produces a list of pages in the header without whitespace -- er, I mean negative space.
 function sandbox_globalnav() {
 	$menu = '<div id="menu"><ul>';
