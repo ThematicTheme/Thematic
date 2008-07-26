@@ -502,11 +502,16 @@ img.center, img.centered {
 	float: none;
 	clear: both;
 }
-.alignright {
-    float: right;
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 .alignleft {
-    float: left;
+	float: left;
+}
+.alignright {
+	float: right;
 }
 .wp-smiley { /* Prevent the smileys from breaking line-height */
 	max-height:12px;
