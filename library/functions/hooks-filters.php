@@ -18,15 +18,22 @@ function sandbox_globalnav() {
 
 // Information in Post Header
 function thematic_postheader() {
+    global $post;
     global $authordata;
     
-    $posttitle = '<h2 class="entry-title"><a href="';
-    $posttitle .= get_permalink();
-    $posttitle .= '" title="';
-    $posttitle .= __('Permalink to ', 'thematic') . wp_specialchars(get_the_title(), 1);
-    $posttitle .= '" rel="bookmark">';
-    $posttitle .= get_the_title();   
-    $posttitle .= "</a></h2>\n";
+    if (is_single() || is_page()) {
+        $posttitle = '<h1 class="entry-title">' . get_the_title() . "</h1>\n";
+    } elseif (is_404()) {    
+        $posttitle = '<h1 class="entry-title">' . __('Not Found', 'thematic') . "</h1>\n";
+    } else {
+        $posttitle = '<h2 class="entry-title"><a href="';
+        $posttitle .= get_permalink();
+        $posttitle .= '" title="';
+        $posttitle .= __('Permalink to ', 'thematic') . wp_specialchars(get_the_title(), 1);
+        $posttitle .= '" rel="bookmark">';
+        $posttitle .= get_the_title();   
+        $posttitle .= "</a></h2>\n";
+    }
     
     $postmeta = '<div class="entry-meta">';
     $postmeta .= '<span class="author vcard">';
@@ -41,7 +48,12 @@ function thematic_postheader() {
     $postmeta .= '</abbr></span>';
     $postmeta .= "</div><!-- .entry-meta -->\n";
     
-    $postheader = $posttitle . $postmeta;    
+    if ($post->post_type == 'page' || is_404()) {
+        $postheader = $posttitle;        
+    } else {
+        $postheader = $posttitle . $postmeta;    
+    }
+    
     echo apply_filters( 'thematic_postheader', $postheader ); // Filter to override default post header
 }
 
