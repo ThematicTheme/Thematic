@@ -7,7 +7,7 @@
 
 <?php the_post() ?>
 			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class() ?>">
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+    			<?php thematic_postheader(); ?>
 				<div class="entry-content">
 <?php the_content() ?>
 

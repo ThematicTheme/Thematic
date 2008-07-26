@@ -14,7 +14,7 @@ foreach ($options as $value) {
 
 			<h1 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h1>
 			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class() ?>">
-				<h2 class="entry-title"><?php the_title() ?></h2>
+    			<?php thematic_postheader(); ?>
 				<div class="entry-meta">
                     <?php /* if default setting of no author link */ if($thm_authorlink == 'false') { ?>
                     					<span class="author vcard"><?php $author = get_the_author(); ?><?php _e('By ', 'thematic') ?><span class="fn n"><?php _e("$author") ?></span></span>
