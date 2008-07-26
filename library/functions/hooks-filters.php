@@ -28,7 +28,7 @@ function thematic_postheader() {
         $posttitle = '<h2 class="entry-title"><a href="';
         $posttitle .= get_permalink();
         $posttitle .= '" title="';
-        $posttitle .= __('Permalink to ', 'thematic') . wp_specialchars(get_the_title(), 1);
+        $posttitle .= __('Permalink to ', 'thematic') . the_title_attribute('echo=0');
         $posttitle .= '" rel="bookmark">';
         $posttitle .= get_the_title();   
         $posttitle .= "</a></h2>\n";
@@ -94,17 +94,17 @@ function thematic_postfooter() {
     if (comments_open()) {
         $postcommentnumber = get_comments_number();
         if ($postcommentnumber > '1') {
-            $postcomments = ' <a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . wp_specialchars(get_the_title(), 1) . '">';
+            $postcomments = ' <a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
             $postcomments .= get_comments_number() . __(' Comments', 'thematic') . '</a>';
         } elseif ($postcommentnumber == '1') {
-            $postcomments = ' <a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . wp_specialchars(get_the_title(), 1) . '">';
+            $postcomments = ' <a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
             $postcomments .= get_comments_number() . __(' Comment', 'thematic') . '</a>';
         } elseif ($postcommentnumber == '0') {
-            $postcomments = ' <a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . wp_specialchars(get_the_title(), 1) . '">';
+            $postcomments = ' <a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
             $postcomments .= __('Leave a comment', 'thematic') . '</a>';
         }
     } else {
-        $postcomments = ' <span class="comments-link">Comments Closed</span>';
+        $postcomments = ' <span class="comments-link">' . __('Comments closed', 'thematic') .'</span>';
     }
     // Display edit link
     if (current_user_can('edit_posts')) {
@@ -112,7 +112,7 @@ function thematic_postfooter() {
     }               
     
     // Display permalink, comments link, and RSS on single posts
-    $postconnect .= __('. Bookmark the ', 'thematic') . '<a href="' . get_permalink() . '" title="' . __('Permalink to ', 'thematic') . wp_specialchars(get_the_title(), 1) . '">';
+    $postconnect .= __('. Bookmark the ', 'thematic') . '<a href="' . get_permalink() . '" title="' . __('Permalink to ', 'thematic') . the_title_attribute('echo=0') . '">';
     $postconnect .= __('permalink', 'thematic') . '</a>.';
     if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) { /* Comments are open */
         $postconnect .= ' <a class="comment-link" href="#respond" title ="' . __('Post a comment', 'thematic') . '">' . __('Post a comment', 'thematic') . '</a>';
