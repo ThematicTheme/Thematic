@@ -10,12 +10,6 @@ $shortname = "thm";
 
 $options = array (
 										
-				array(	"name" => "Link to Author Page",
-						"desc" => "Display a link to author page. The default is no link, for <a href=\"http://en.wikipedia.org/wiki/Search_engine_optimization\" target=\"_blank\">SEO</a> purposes, but it's useful to enable on multi-author blogs.",
-						"id" => $shortname."_authorlink",
-						"std" => "false",
-						"type" => "checkbox"),
-
 				array(	"name" => "Index Insert Position",
 						"desc" => "The widgetized Index Insert will follow after this post number.",
 						"id" => $shortname."_insert_position",
