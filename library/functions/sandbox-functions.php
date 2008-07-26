@@ -2,14 +2,6 @@
 
 // Many thanks to Scott Wallick and Andy Skelton for the work below
 
-// Produces a list of pages in the header without whitespace -- er, I mean negative space.
-function sandbox_globalnav() {
-	$menu = '<div id="menu"><ul>';
-	$menu .= str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') );
-	$menu .= "</ul></div>\n";
-	echo apply_filters( 'sandbox_menu', $menu ); // Filter to override default globalnav
-}
-
 // Generates semantic classes for BODY element
 function sandbox_body_class( $print = true ) {
 	global $wp_query, $current_user;
