@@ -19,16 +19,7 @@ foreach ($options as $value) {
 <?php get_sidebar('single-top') ?>
 
 			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class(); ?>">
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<div class="entry-meta">
-                    <?php /* if default setting of no author link */ if($thm_authorlink == 'false') { ?>
-                    					<span class="author vcard"><?php $author = get_the_author(); ?><?php _e('By ', 'thematic') ?><span class="fn n"><?php _e("$author") ?></span></span>
-                    <?php /* else show a link to the author page */ } else { ?>	
-                                        <span class="author vcard"><?php printf(__('By %s', 'thematic'), '<a class="url fn n" href="'.get_author_link(false, $authordata->ID, $authordata->user_nicename).'" title="' . sprintf(__('View all posts by %s', 'thematic'), $authordata->display_name) . '">'.get_the_author().'</a>') ?></span>
-                    <?php } ?>				    
-					<span class="meta-sep">|</span>
-    				<span class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO'); ?>"><?php unset($previousday); printf(__('%1$s', 'sandbox'), the_date('', '', '', false), get_the_time()) ?></abbr></span>
-				</div><!-- .entry-meta -->
+    			<?php thematic_postheader(); ?>
 				<div class="entry-content">
 <?php the_content(''.__('Read More <span class="meta-nav">&raquo;</span>', 'thematic').''); ?>
 
