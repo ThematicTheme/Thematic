@@ -71,6 +71,9 @@ function thematic_postfooter() {
     if (is_single()) {
         $postcategory .= __('This entry was posted in ', 'thematic') . get_the_category_list(', ');
         $postcategory .= '</span>';
+    } elseif ( is_category() && $cats_meow = sandbox_cats_meow(', ') ) { /* Returns categories other than the one queried */
+        $postcategory .= __('Also posted in ', 'thematic') . $cats_meow;
+        $postcategory .= '</span> <span class="meta-sep">|</span>';
     } else {
         $postcategory .= __('Posted in ', 'thematic') . get_the_category_list(', ');
         $postcategory .= '</span> <span class="meta-sep">|</span>';
@@ -80,6 +83,8 @@ function thematic_postfooter() {
     if (is_single()) {
         $tagtext = __(' and tagged', 'thematic');
         $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span>');
+    } elseif ( is_tag() && $tag_ur_it = sandbox_tag_ur_it(', ') ) { /* Returns tags other than the one queried */
+        $posttags = '<span class="tag-links">' . __(' Also tagged ', 'thematic') . $tag_ur_it . '</span> <span class="meta-sep">|</span>';
     } else {
         $tagtext = __('Tagged', 'thematic');
         $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span> <span class="meta-sep">|</span>');
