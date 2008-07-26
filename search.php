@@ -31,12 +31,7 @@ foreach ($options as $value) {
 <?php the_excerpt(''.__('Read More <span class="meta-nav">&raquo;</span>', 'thematic').'') ?>
 
 				</div>
-<?php /* Only show entry utility for posts */ if ( $post->post_type == 'post' ) { ?>
-				<div class="entry-utility">
-					<span class="comments-link"><?php comments_popup_link(__('Leave a comment', 'thematic'), __('1 Comment', 'thematic'), __('% Comments', 'thematic')) ?></span>
-                    <?php edit_post_link(__('Edit', 'thematic'), "\t\t\t\t\t<span class=\"meta-sep\">|</span>\n<span class=\"edit-link\">", "</span>\t\t\t\t\t"); ?>
-				</div><!-- .entry-utility -->
-<?php } ?>				
+				<?php thematic_postfooter(); ?>
 			</div><!-- .post -->
 
 <?php endwhile; ?>
