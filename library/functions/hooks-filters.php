@@ -59,6 +59,11 @@ function thematic_postheader() {
 // Information in Post Footer
 function thematic_postfooter() {
     global $id, $post;
+
+    // Create $posteditlink    
+    $posteditlink .= '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&post=' . $id;
+    $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
+    $posteditlink .= __('Edit', 'thematic') . '</a>';
     
     // Display the post categories  
     $postcategory = '<div class="entry-utility">';
@@ -98,11 +103,8 @@ function thematic_postfooter() {
     }
     // Display edit link
     if (current_user_can('edit_posts')) {
-        $postcomments .= '<span class="meta-sep"> |</span> <a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&post=' . $id;
-        $postcomments .= '" title="' . __('Edit post', 'thematic') .'">';
-        $postcomments .= __('Edit', 'thematic') . '</a>';
+        $postcomments .= ' <span class="meta-sep">|</span> ' . $posteditlink;
     }               
-    $postcomments .= "</div><!-- .entry-utility -->\n";
     
     // Display permalink, comments link, and RSS on single posts
     $postconnect .= __('. Bookmark the ', 'thematic') . '<a href="' . get_permalink() . '" title="' . __('Permalink to ', 'thematic') . wp_specialchars(get_the_title(), 1) . '">';
@@ -122,17 +124,22 @@ function thematic_postfooter() {
     }
     // Display edit link on single posts
     if (current_user_can('edit_posts')) {
-        $postconnect .= ' <a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&post=' . $id;
-        $postconnect .= '" title="' . __('Edit post', 'thematic') .'">';
-        $postconnect .= __('Edit', 'thematic') . '</a>';
+        $postconnect .= ' ' . $posteditlink;
     }
-    $postconnect .= "</div><!-- .entry-utility -->\n";    
     
     // Add it all up
-    if (is_single()) {
-        $postfooter = $postcategory . $posttags . $postconnect;
+    if ($post->post_type == 'page' && current_user_can('edit_posts')) { /* For logged-in "page" search results */
+        $postfooter = '<div class="entry-utility">' . $posteditlink;
+        $postfooter .= "</div><!-- .entry-utility -->\n";    
+    } elseif ($post->post_type == 'page') { /* For logged-out "page" search results */
+        $postfooter = '';
     } else {
-        $postfooter = $postcategory . $posttags . $postcomments;
+        if (is_single()) {
+            $postfooter = $postcategory . $posttags . $postconnect;
+        } else {
+            $postfooter = $postcategory . $posttags . $postcomments;
+        }
+        $postfooter .= "</div><!-- .entry-utility -->\n";    
     }
     
     // Put it on the screen
