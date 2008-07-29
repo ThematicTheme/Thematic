@@ -94,14 +94,14 @@ function thematic_postfooter() {
     if (comments_open()) {
         $postcommentnumber = get_comments_number();
         if ($postcommentnumber > '1') {
-            $postcomments = ' <a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
-            $postcomments .= get_comments_number() . __(' Comments', 'thematic') . '</a>';
+            $postcomments = ' <span class="comments-link"><a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
+            $postcomments .= get_comments_number() . __(' Comments', 'thematic') . '</a></span>';
         } elseif ($postcommentnumber == '1') {
-            $postcomments = ' <a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
-            $postcomments .= get_comments_number() . __(' Comment', 'thematic') . '</a>';
+            $postcomments = ' <span class="comments-link"><a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
+            $postcomments .= get_comments_number() . __(' Comment', 'thematic') . '</a></span>';
         } elseif ($postcommentnumber == '0') {
-            $postcomments = ' <a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
-            $postcomments .= __('Leave a comment', 'thematic') . '</a>';
+            $postcomments = ' <span class="comments-link"><a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
+            $postcomments .= __('Leave a comment', 'thematic') . '</a></span>';
         }
     } else {
         $postcomments = ' <span class="comments-link">' . __('Comments closed', 'thematic') .'</span>';
