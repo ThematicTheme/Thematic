@@ -1,6 +1,6 @@
     <div id="single-top" class="aside">
-        <ul class="xoxo">
+        <div>
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(9) ) : // begin single-top widgets ?>
 <?php endif; // end single-top widgets  ?>
-    	</ul>
+    	</div>
     </div><!-- #single-top .aside -->

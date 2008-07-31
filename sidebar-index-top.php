@@ -1,6 +1,6 @@
     <div id="index-top" class="aside">
-        <ul class="xoxo">
+        <div>
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(6) ) : // begin index-top widgets ?>
 <?php endif; // end index-top widgets  ?>
-    	</ul>
+    	</div>
     </div><!-- #index-top .aside -->
