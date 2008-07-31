@@ -98,7 +98,7 @@ foreach ( $comments as $comment )
 
                             <div id="form-section-author" class="form-section">
     							<div class="form-label"><label for="author"><?php _e('Name', 'thematic') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'thematic') ?></div>
-    							<div class="form-input" class="form-section"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
+    							<div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
                             </div><!-- #form-section-author .form-section -->
 
                             <div id="form-section-email" class="form-section">
