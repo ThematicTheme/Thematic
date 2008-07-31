@@ -25,7 +25,10 @@ require_once(THEMELIB . '/functions/sandbox-functions.php');
 require_once(THEMELIB . '/functions/author-info-avatar.php');
 
 // Translate, if applicable
+// I'll be hunting down and merging Thematic and The Sandbox
+// if only for the sake of my sanity
 load_theme_textdomain('thematic');
+load_theme_textdomain('sandbox');
 
 // Remove the WordPress Generator – via http://blog.ftwr.co.uk/archives/2007/10/06/improving-the-wordpress-generator/
 function thematic_remove_generators() { return ''; }  
