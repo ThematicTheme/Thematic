@@ -1,6 +1,14 @@
 <?php
 
-// Many thanks to Scott Wallick and Andy Skelton for the work below
+/*
+This file is part of SANDBOX.
+
+SANDBOX is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+SANDBOX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with SANDBOX. If not, see http://www.gnu.org/licenses/.
+*/
 
 // Generates semantic classes for BODY element
 function sandbox_body_class( $print = true ) {
@@ -13,8 +21,8 @@ function sandbox_body_class( $print = true ) {
 	sandbox_date_classes( time(), $c );
 
 	// Generic semantic classes for what type of content is displayed
-	is_front_page()  ? $c[] = 'home'       : null; // New 'front' class for WP 2.5
-	is_home()        ? $c[] = 'blog'       : null; // Class for the posts, if set
+	is_front_page()  ? $c[] = 'home'       : null; // For the front page, if set
+	is_home()        ? $c[] = 'blog'       : null; // For the blog posts page, if set
 	is_archive()     ? $c[] = 'archive'    : null;
 	is_date()        ? $c[] = 'date'       : null;
 	is_search()      ? $c[] = 'search'     : null;
@@ -85,12 +93,23 @@ function sandbox_body_class( $print = true ) {
 		$c[] = 'page pageid-' . $pageID;
 		$c[] = 'page-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		// Checks to see if the page has children and/or is a child page; props to Adam
-		if ( $page_children != '' )
+		if ( $page_children )
 			$c[] = 'page-parent';
 		if ( $wp_query->post->post_parent )
 			$c[] = 'page-child parent-pageid-' . $wp_query->post->post_parent;
 		if ( is_page_template() ) // Hat tip to Ian, themeshaper.com
 			$c[] = 'page-template page-template-' . str_replace( '.php', '-php', get_post_meta( $pageID, '_wp_page_template', true ) );
+		rewind_posts();
+	}
+
+	// Search classes for results or no results
+	elseif ( is_search() ) {
+		the_post();
+		if ( have_posts() ) {
+			$c[] = 'search-results';
+		} else {
+			$c[] = 'search-no-results';
+		}
 		rewind_posts();
 	}
 
@@ -119,7 +138,7 @@ function sandbox_body_class( $print = true ) {
 	}
 
 	// Separates classes with a single space, collates classes for BODY
-	$c = join( ' ', apply_filters( 'body_class',  $c ) );
+	$c = join( ' ', apply_filters( 'body_class',  $c ) ); // Available filter: body_class
 
 	// And tada!
 	return $print ? print($c) : $c;
@@ -159,7 +178,7 @@ function sandbox_post_class( $print = true ) {
 		$c[] = 'alt';
 
 	// Separates classes with a single space, collates classes for post DIV
-	$c = join( ' ', apply_filters( 'post_class', $c ) );
+	$c = join( ' ', apply_filters( 'post_class', $c ) ); // Available filter: post_class
 
 	// And tada!
 	return $print ? print($c) : $c;
@@ -185,7 +204,6 @@ function sandbox_comment_class( $print = true ) {
 	// If the comment author has an id (registered), then print the log in name
 	if ( $comment->user_id > 0 ) {
 		$user = get_userdata($comment->user_id);
-
 		// For all registered users, 'byuser'; to specificy the registered user, 'commentauthor+[log in name]'
 		$c[] = 'byuser comment-author-' . sanitize_title_with_dashes(strtolower( $user->user_login ));
 		// For comment authors who are the author of the post
@@ -199,7 +217,7 @@ function sandbox_comment_class( $print = true ) {
 		$c[] = 'alt';
 
 	// Separates classes with a single space, collates classes for comment LI
-	$c = join( ' ', apply_filters( 'comment_class', $c ) );
+	$c = join( ' ', apply_filters( 'comment_class', $c ) ); // Available filter: comment_class
 
 	// Tada again!
 	return $print ? print($c) : $c;
@@ -219,14 +237,12 @@ function sandbox_cats_meow($glue) {
 	$current_cat = single_cat_title( '', false );
 	$separator = "\n";
 	$cats = explode( $separator, get_the_category_list($separator) );
-
 	foreach ( $cats as $i => $str ) {
 		if ( strstr( $str, ">$current_cat<" ) ) {
 			unset($cats[$i]);
 			break;
 		}
 	}
-
 	if ( empty($cats) )
 		return false;
 
@@ -238,14 +254,12 @@ function sandbox_tag_ur_it($glue) {
 	$current_tag = single_tag_title( '', '',  false );
 	$separator = "\n";
 	$tags = explode( $separator, get_the_tag_list( "", "$separator", "" ) );
-
 	foreach ( $tags as $i => $str ) {
 		if ( strstr( $str, ">$current_tag<" ) ) {
 			unset($tags[$i]);
 			break;
 		}
 	}
-
 	if ( empty($tags) )
 		return false;
 
@@ -261,7 +275,7 @@ function sandbox_commenter_link() {
 		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
 	}
 	$avatar_email = get_comment_author_email();
-	$avatar_size = apply_filters( 'sandbox_avatar', '80' ); // Filter for changing avatar size
+	$avatar_size = apply_filters( 'avatar_size', '80' ); // Available filter: avatar_size
 	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( $avatar_email, $avatar_size ) );
 	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 }

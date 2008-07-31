@@ -107,80 +107,80 @@ function sandbox_widgets_init() {
 
     register_sidebar(array(
        	'name' => '2nd Subsidiary Aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));  
    
     register_sidebar(array(
        	'name' => '3rd Subsidiary Aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));  
 
     register_sidebar(array(
        	'name' => 'Index Top',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));  
 
     register_sidebar(array(
        	'name' => 'Index Insert',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));
 
     register_sidebar(array(
        	'name' => 'Index Bottom',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));      
 
     register_sidebar(array(
        	'name' => 'Single Top',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));  
 
     register_sidebar(array(
        	'name' => 'Single Insert',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));      
     
     register_sidebar(array(
        	'name' => 'Single Bottom',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));      
       
     register_sidebar(array(
        	'name' => 'Page Top',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));      
    
     register_sidebar(array(
        	'name' => 'Page Bottom',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
+       	'before_widget' => '<div id="%1$s" class="widgetcontainer %2$s">',
+       	'after_widget' => "</div>",
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));      
