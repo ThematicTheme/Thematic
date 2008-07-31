@@ -12,8 +12,8 @@ foreach ($options as $value) {
 
 <?php the_post() ?>
 
-			<h1 class="page-title author"><?php $author = get_the_author(); ?><?php _e('Author Archives: ') ?><span><?php _e("$author") ?></span></h1>
-		
+            <h1 class="page-title author"><?php $author = get_the_author(); ?><?php _e('Author Archives: ', 'thematic'); ?><span><?php echo $author ?></span></h1>		
+            
 			<div id="nav-above" class="navigation">
                 <?php if(function_exists('wp_pagenavi')) { ?>
                 <?php wp_pagenavi(); ?>
