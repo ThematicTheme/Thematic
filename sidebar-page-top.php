@@ -1,6 +1,5 @@
-    <div id="page-top" class="aside">
-        <div>
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(12) ) : // begin page-top widgets ?>
-<?php endif; // end page-top widgets  ?>
-    	</div>
-    </div><!-- #page-top .aside -->
+<?php if ( function_exists('dynamic_sidebar') && is_sidebar_active(12) ) { // there is active widgets for this sidebar
+    echo '<div id="page-top" class="aside">'.PHP_EOL;
+    dynamic_sidebar(12);
+    echo '</div><!-- #page-top .aside -->'.PHP_EOL;
+} ?>

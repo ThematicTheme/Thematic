@@ -1,6 +1,5 @@
-    <div id="index-top" class="aside">
-        <div>
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar(6) ) : // begin index-top widgets ?>
-<?php endif; // end index-top widgets  ?>
-    	</div>
-    </div><!-- #index-top .aside -->
+<?php if ( function_exists('dynamic_sidebar') && is_sidebar_active(6) ) { // there is active widgets for this sidebar
+    echo '<div id="index-top" class="aside">'.PHP_EOL;
+    dynamic_sidebar(6);
+    echo '</div><!-- #index-top .aside -->'.PHP_EOL;
+} ?>
