@@ -1,5 +1,14 @@
 <?php
 
+// Check for widgets in widget-ready areas http://wordpress.org/support/topic/190184?replies=7#post-808787
+// Thanks to Chaos Kaizer http://blog.kaizeku.com/
+function is_sidebar_active( $index = 1){
+	$sidebars	= wp_get_sidebars_widgets();
+	$key		= (string) 'sidebar-'.$index;
+
+	return (isset($sidebars[$key]));
+}
+
 // Widget: Search; to match the Sandbox style and replace Widget plugin default
 function widget_sandbox_search($args) {
 	extract($args);
