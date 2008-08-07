@@ -525,14 +525,12 @@ img.center, img.centered {
     margin:0;
     list-style:none;
 }
-.aside {
+.aside ul ul {
+    list-style:square;
 }
 .aside h3 {
     font-size:14px;
     font-weight:bold;
-}
-.aside ul ul {
-    list-style:square;
 }
 /* Begin Calendar styles */
 .aside table {
