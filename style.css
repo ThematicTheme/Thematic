@@ -2,7 +2,7 @@
 THEME NAME: Thematic
 THEME URI: http://themeshaper.com/thematic-for-wordpress/
 DESCRIPTION: A highly extensible, search-engine optimized WordPress Theme Framework featuring 13 widget-ready areas, grid-based layout samples, styling for popular plugins and more.
-VERSION: 0.6.4
+VERSION: 0.6.4.1
 AUTHOR: Ian Stewart
 AUTHOR URI: http://themeshaper.com/
 TAGS:three columns,two columns,fixed width,simple,seo,microformats,widgets,framework,options page,hooks,filters,valid XHTML,valid CSS
@@ -487,31 +487,26 @@ p.solo-subscribe-to-comments:first-line {
 
 .entry-content img { margin: 0 0 18px 0; max-width:100%; }
 
-img.alignleft,img.align-left {
+.alignleft,
+img.alignleft,
+img.align-left {
 	float: left;
 	margin-right:20px;
 }
-img.alignright,img.align-right {
+.alignright,
+img.alignright,
+img.align-right {
 	display: block;
 	float: right;
 	margin-left:20px;
 }
-img.center, img.centered {
-	margin: 0 auto;
+.aligncenter,
+img.aligncenter,
+img.centered {
+	margin: 0 auto 18px auto;
 	display: block;
 	float: none;
 	clear: both;
-}
-.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-.alignleft {
-	float: left;
-}
-.alignright {
-	float: right;
 }
 .wp-smiley { /* Prevent the smileys from breaking line-height */
 	max-height:12px;
