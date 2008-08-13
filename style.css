@@ -18,9 +18,6 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 /* Apply basic typography styles */
 @import url('library/styles/typography.css');
 
-/* Style the meta panel for logged-in users */
-@import url('library/styles/sitemeta.css');
-
 /* Apply a basic layout */
 @import url('library/layouts/2c-r-fixed.css');
 

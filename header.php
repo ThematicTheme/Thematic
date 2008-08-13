@@ -26,26 +26,9 @@
 	
 <?php wp_head() ?>
 
-    <script type="text/javascript">
-    	jQuery(document).ready(function(){
-    		// Hide the site-meta panel
-    		jQuery('#meta-panel').hide();
-    		
-    		// Toggle site-meta panel visibilty and class when handle is clicked
-    		jQuery('#meta-anchor').click(function() {
-    			jQuery('#meta-panel').slideToggle(50);
-                jQuery(this).toggleClass("active");
-    			return false;
-    		} );	
-    	});
-            
-    </script>   
-         
 </head>
 
 <body class="<?php sandbox_body_class() ?>">
-
-<?php /* Load sliding meta panel */ if (is_user_logged_in()) { include ('sitemeta.php'); } ?>
 
 <div id="wrapper" class="hfeed">
 
