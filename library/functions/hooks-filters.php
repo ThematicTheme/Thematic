@@ -43,7 +43,7 @@ function thematic_postheader() {
     $postmeta .= '</a></span><span class="meta-sep"> | </span>';
     $postmeta .= '<span class="entry-date"><abbr class="published" title="';
     $postmeta .= get_the_time('Y-m-d\TH:i:sO') . '">';
-    $postmeta .= the_date('', '', '', false);
+    $postmeta .= get_the_time('F j, Y');
     $postmeta .= '</abbr></span>';
     $postmeta .= "</div><!-- .entry-meta -->\n";
     
