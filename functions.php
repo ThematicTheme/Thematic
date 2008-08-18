@@ -9,6 +9,9 @@ define('THEMELIB', TEMPLATEPATH . '/library');
 // Create Theme Options Page
 require_once(THEMELIB . '/functions/theme-options.php');
 
+// Create Theme Instructions Page
+require_once(THEMELIB . '/functions/theme-instructions.php');
+
 // Get the page number
 require_once(THEMELIB . '/functions/page-numbers.php');
 
@@ -26,7 +29,7 @@ require_once(THEMELIB . '/functions/author-info-avatar.php');
 
 // Translate, if applicable
 // I'll be hunting down and merging Thematic and The Sandbox
-// if only for the sake of my sanity
+// if only for the sake of our sanity
 load_theme_textdomain('thematic');
 load_theme_textdomain('sandbox');
 
