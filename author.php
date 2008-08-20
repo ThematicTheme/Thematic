@@ -24,7 +24,6 @@ foreach ($options as $value) {
 			</div>
 
 <?php /* if display author bio is selected */ if($thm_authorinfo == 'true' & !is_paged()) { ?>
-
 			<div id="author-info" class="vcard">
     			<?php thematic_author_info_avatar(); ?>
     			<div class="author-bio note">
