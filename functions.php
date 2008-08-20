@@ -9,9 +9,6 @@ define('THEMELIB', TEMPLATEPATH . '/library');
 // Create Theme Options Page
 require_once(THEMELIB . '/functions/theme-options.php');
 
-// Create Theme Guide
-require_once(THEMELIB . '/functions/theme-guide.php');
-
 // Get the page number
 require_once(THEMELIB . '/functions/page-numbers.php');
 
