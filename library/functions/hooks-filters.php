@@ -1,19 +1,32 @@
 <?php
 
+// Located in header.php, between #branding and #access
+function thematic_belowbranding() {
+    do_action('thematic_belowbranding');
+}
+
+// Located in header.php 
 function thematic_belowheader() {
     do_action('thematic_belowheader');
 }
 
+//Located in footer.php, between #subsidiary and #siteinfo
+function thematic_abovesiteinfo() {
+    do_action('thematic_abovesiteinfo');
+}
+
+// Located in footer.php
 function thematic_abovefooter() {
     do_action('thematic_abovefooter');
 }
 
 // Produces a clean list of pages in the header — thanks to Scott Wallick and Andy Skelton.
-function sandbox_globalnav() {
-	$menu = '<div id="menu"><ul>';
-	$menu .= str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') );
-	$menu .= "</ul></div>\n";
-	echo apply_filters( 'sandbox_menu', $menu ); // Filter to override default globalnav
+// Produces a list of pages in the header without whitespace
+function thematic_globalnav() {
+	if ( $menu = str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') ) )
+		$menu = '<ul>' . $menu . '</ul>';
+	$menu = '<div id="menu">' . $menu . "</div>\n";
+	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav: globalnav_menu
 }
 
 // Information in Post Header
@@ -71,7 +84,7 @@ function thematic_postfooter() {
     if (is_single()) {
         $postcategory .= __('This entry was posted in ', 'thematic') . get_the_category_list(', ');
         $postcategory .= '</span>';
-    } elseif ( is_category() && $cats_meow = sandbox_cats_meow(', ') ) { /* Returns categories other than the one queried */
+    } elseif ( is_category() && $cats_meow = thematic_cats_meow(', ') ) { /* Returns categories other than the one queried */
         $postcategory .= __('Also posted in ', 'thematic') . $cats_meow;
         $postcategory .= '</span> <span class="meta-sep">|</span>';
     } else {
@@ -83,7 +96,7 @@ function thematic_postfooter() {
     if (is_single()) {
         $tagtext = __(' and tagged', 'thematic');
         $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span>');
-    } elseif ( is_tag() && $tag_ur_it = sandbox_tag_ur_it(', ') ) { /* Returns tags other than the one queried */
+    } elseif ( is_tag() && $tag_ur_it = thematic_tag_ur_it(', ') ) { /* Returns tags other than the one queried */
         $posttags = '<span class="tag-links">' . __(' Also tagged ', 'thematic') . $tag_ur_it . '</span> <span class="meta-sep">|</span>';
     } else {
         $tagtext = __('Tagged', 'thematic');
@@ -149,6 +162,54 @@ function thematic_postfooter() {
     
     // Put it on the screen
     echo apply_filters( 'thematic_postfooter', $postfooter ); // Filter to override default post footer
+}
+
+// For category lists on category archives: Returns other categories except the current one (redundant)
+function thematic_cats_meow($glue) {
+	$current_cat = single_cat_title( '', false );
+	$separator = "\n";
+	$cats = explode( $separator, get_the_category_list($separator) );
+	foreach ( $cats as $i => $str ) {
+		if ( strstr( $str, ">$current_cat<" ) ) {
+			unset($cats[$i]);
+			break;
+		}
+	}
+	if ( empty($cats) )
+		return false;
+
+	return trim(join( $glue, $cats ));
+}
+
+// For tag lists on tag archives: Returns other tags except the current one (redundant)
+function thematic_tag_ur_it($glue) {
+	$current_tag = single_tag_title( '', '',  false );
+	$separator = "\n";
+	$tags = explode( $separator, get_the_tag_list( "", "$separator", "" ) );
+	foreach ( $tags as $i => $str ) {
+		if ( strstr( $str, ">$current_tag<" ) ) {
+			unset($tags[$i]);
+			break;
+		}
+	}
+	if ( empty($tags) )
+		return false;
+
+	return trim(join( $glue, $tags ));
+}
+
+// Produces an avatar image with the hCard-compliant photo class
+function thematic_commenter_link() {
+	$commenter = get_comment_author_link();
+	if ( ereg( '<a[^>]* class=[^>]+>', $commenter ) ) {
+		$commenter = ereg_replace( '(<a[^>]* class=[\'"]?)', '\\1url ' , $commenter );
+	} else {
+		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
+	}
+	$avatar_email = get_comment_author_email();
+	$avatar_size = apply_filters( 'avatar_size', '32' ); // Available filter: avatar_size
+	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( $avatar_email, $avatar_size ) );
+	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 }
 
 ?>

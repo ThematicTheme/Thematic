@@ -9,18 +9,18 @@ function is_sidebar_active( $index = 1){
 	return (isset($sidebars[$key]));
 }
 
-// Widget: Search; to match the Sandbox style and replace Widget plugin default
-function widget_sandbox_search($args) {
+// Widget: Thematic Search
+function widget_thematic_search($args) {
 	extract($args);
 	if ( empty($title) )
-		$title = __('Search', 'sandbox');
+		$title = __('Search', 'thematic');
 ?>
 			<?php echo $before_widget ?>
 				<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
 						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="20" tabindex="1" />
-						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Search', 'sandbox') ?>" tabindex="2" />
+						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Search', 'thematic') ?>" tabindex="2" />
 					</div>
 				</form>
 			<?php echo $after_widget ?>
@@ -28,11 +28,11 @@ function widget_sandbox_search($args) {
 <?php
 }
 
-// Widget: Meta; to match the Sandbox style and replace Widget plugin default
-function widget_sandbox_meta($args) {
+// Widget: Thematic Meta
+function widget_thematic_meta($args) {
 	extract($args);
 	if ( empty($title) )
-		$title = __('Meta', 'sandbox');
+		$title = __('Meta', 'thematic');
 ?>
 			<?php echo $before_widget; ?>
 				<?php echo $before_title . $title . $after_title; ?>
@@ -45,31 +45,31 @@ function widget_sandbox_meta($args) {
 <?php
 }
 
-// Widget: RSS links; to match the Sandbox style
-function widget_sandbox_rsslinks($args) {
+// Widget: Thematic RSS links
+function widget_thematic_rsslinks($args) {
 	extract($args);
-	$options = get_option('widget_sandbox_rsslinks');
-	$title = empty($options['title']) ? __('RSS Links', 'sandbox') : $options['title'];
+	$options = get_option('widget_thematic_rsslinks');
+	$title = empty($options['title']) ? __('RSS Links', 'thematic') : $options['title'];
 ?>
 		<?php echo $before_widget; ?>
 			<?php echo $before_title . $title . $after_title; ?>
 			<ul>
-				<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Posts RSS feed', 'sandbox'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'sandbox') ?></a></li>
-				<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(bloginfo('name'), 1) ?> <?php _e('Comments RSS feed', 'sandbox'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'sandbox') ?></a></li>
+				<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>
+				<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(bloginfo('name'), 1) ?> <?php _e('Comments RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'thematic') ?></a></li>
 			</ul>
 		<?php echo $after_widget; ?>
 <?php
 }
 
 // Widget: RSS links; element controls for customizing text within Widget plugin
-function widget_sandbox_rsslinks_control() {
-	$options = $newoptions = get_option('widget_sandbox_rsslinks');
+function widget_thematic_rsslinks_control() {
+	$options = $newoptions = get_option('widget_thematic_rsslinks');
 	if ( $_POST["rsslinks-submit"] ) {
 		$newoptions['title'] = strip_tags(stripslashes($_POST["rsslinks-title"]));
 	}
 	if ( $options != $newoptions ) {
 		$options = $newoptions;
-		update_option('widget_sandbox_rsslinks', $options);
+		update_option('widget_thematic_rsslinks', $options);
 	}
 	$title = htmlspecialchars($options['title'], ENT_QUOTES);
 ?>
@@ -79,15 +79,9 @@ function widget_sandbox_rsslinks_control() {
 }
 
 // Widgets plugin: intializes the plugin after the widgets above have passed snuff
-function sandbox_widgets_init() {
+function thematic_widgets_init() {
 	if ( !function_exists('register_sidebars') )
 		return;
-
-	// Uses H3-level headings with all widgets to match Sandbox style
-//	$p = array(
-//		'before_title' => "<h3 class=\"widgettitle\">",
-//		'after_title' => "</h3>\n",
-//	);
 
 	// Register Widgetized areas.
     register_sidebar(array(
@@ -195,23 +189,17 @@ function sandbox_widgets_init() {
     ));      
    
    
-	// Finished intializing Widgets plugin, now let's load the Sandbox default widgets
-	register_sidebar_widget(__('Blog Index', 'sandbox'), 'widget_blog_index', null, 'blog index');
-	register_sidebar_widget(__('Search', 'sandbox'), 'widget_sandbox_search', null, 'search');
+	// Finished intializing Widgets plugin, now let's load the thematic default widgets
+	register_sidebar_widget(__('Blog Index', 'thematic'), 'widget_blog_index', null, 'blog index');
+	register_sidebar_widget(__('Search', 'thematic'), 'widget_thematic_search', null, 'search');
 	unregister_widget_control('search');
-	register_sidebar_widget(__('Meta', 'sandbox'), 'widget_sandbox_meta', null, 'meta');
+	register_sidebar_widget(__('Meta', 'thematic'), 'widget_thematic_meta', null, 'meta');
 	unregister_widget_control('meta');
-	register_sidebar_widget(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks');
-	register_widget_control(array(__('RSS Links', 'sandbox'), 'widgets'), 'widget_sandbox_rsslinks_control', 300, 90);
+	register_sidebar_widget(array(__('RSS Links', 'thematic'), 'widgets'), 'widget_thematic_rsslinks');
+	register_widget_control(array(__('RSS Links', 'thematic'), 'widgets'), 'widget_thematic_rsslinks_control', 300, 90);
 }
 
 // Runs our code at the end to check that everything needed has loaded
-add_action( 'init', 'sandbox_widgets_init' );
-
-// Adds filters so that things run smoothly
-add_filter( 'archive_meta', 'wptexturize' );
-add_filter( 'archive_meta', 'convert_smilies' );
-add_filter( 'archive_meta', 'convert_chars' );
-add_filter( 'archive_meta', 'wpautop' );
+add_action( 'init', 'thematic_widgets_init' );
 
 ?>
