@@ -14,7 +14,7 @@
 endif;
 ?>
 <?php if ( $comments ) : ?>
-<?php global $sandbox_comment_alt ?>
+<?php global $thematic_comment_alt ?>
 
 <?php /* numbers of pings and comments */
 $ping_count = $comment_count = 0;
@@ -22,7 +22,7 @@ foreach ( $comments as $comment )
 	get_comment_type() == "comment" ? ++$comment_count : ++$ping_count;
 ?>
 <?php if ( $comment_count ) : ?>
-<?php $sandbox_comment_alt = 0 ?>
+<?php $thematic_comment_alt = 0 ?>
 
 				<div id="comments-list" class="comments">
 					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'thematic') : __('<span>One</span> Comment', 'thematic'), $comment_count) ?></h3>
@@ -30,8 +30,8 @@ foreach ( $comments as $comment )
 					<ol>
 <?php foreach ($comments as $comment) : ?>
 <?php if ( get_comment_type() == "comment" ) : ?>
-						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
-							<div class="comment-author vcard"><?php sandbox_commenter_link() ?></div>
+						<li id="comment-<?php comment_ID() ?>" class="<?php thematic_comment_class() ?>">
+							<div class="comment-author vcard"><?php thematic_commenter_link() ?></div>
 							<div class="comment-meta"><?php printf(__('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'thematic'),
 										get_comment_date(),
 										get_comment_time(),
@@ -48,7 +48,7 @@ foreach ( $comments as $comment )
 
 <?php endif; /* if ( $comment_count ) */ ?>
 <?php if ( $ping_count ) : ?>
-<?php $sandbox_comment_alt = 0 ?>
+<?php $thematic_comment_alt = 0 ?>
 
 				<div id="trackbacks-list" class="comments">
 					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'thematic') : __('<span>One</span> Trackback', 'thematic'), $ping_count) ?></h3>
@@ -57,7 +57,7 @@ foreach ( $comments as $comment )
 <?php foreach ( $comments as $comment ) : ?>
 <?php if ( get_comment_type() != "comment" ) : ?>
 
-						<li id="comment-<?php comment_ID() ?>" class="<?php sandbox_comment_class() ?>">
+						<li id="comment-<?php comment_ID() ?>" class="<?php thematic_comment_class() ?>">
 							<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'thematic'),
 									get_comment_author_link(),
 									get_comment_date(),
