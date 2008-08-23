@@ -1,20 +1,12 @@
 /* -------------------------------------------------------------- 
    
-   Set some default typography based on Blueprint
-   * http://code.google.com/p/blueprintcss/
-  
-   Based on work by:
-   * Nathan Borror     [playgroundblues.com]
-   * Jeff Croft        [jeffcroft.com]
-   * Christian Metts   [mintchaos.com]
-   * Wilson Miner      [wilsonminer.com]
+   Set default typography based on Blueprint
    
-   Read more about using a baseline here:
-   * alistapart.com/articles/settingtypeontheweb
-  
+   http://code.google.com/p/blueprintcss/
+     
 -------------------------------------------------------------- */   
 
-body {
+body, input, textarea {
     color:#000;    
     font: 12px Arial,sans-serif;
     line-height:18px;
@@ -32,7 +24,7 @@ h1,h2,h3,h4,h5,h6 {
 -------------------------------------------------------------- */
 
 p {
-	margin: 0 0 18px 0;
+    margin-bottom:18px;
 }
 ul, ol {
 	margin: 0 0 18px 1.5em;
@@ -55,16 +47,12 @@ ol ol ol ol {
 ul ul, ol ol, ul ol, ol ul {
 	margin-bottom:0;
 }
-/*dl	{
-	margin: 0 0 1.5em 0;
-}
-dl dt {
-	font-weight: bold;
-	margin: 18px 0 0 0;
+dl	{
+    margin:0 1.5em;
 }
 dd {
-	margin: 0 0 0 1.5em;
-}*/
+	margin-bottom:18px;
+}
 strong {
 	font-weight: bold;
 }
@@ -104,9 +92,24 @@ sub {
 	top: .5ex;
 }
 
-/* Forms
--------------------------------------------------------------- */
 
-input, textarea {
-    font: 12px/18px Arial,sans-serif;
+/*
+
+Adapt the following for use in your Child Themes when using
+different font-sizes and line-heights
+
+body, input, textarea {
+    font: --px Arial,sans-serif;
+    line-height:--px;
 }
+p, ul, ol, dd, pre {
+    margin-bottom:--px;
+}
+pre, code {
+	font:--px Monaco, monospace;
+	line-height:--px;
+}
+
+All other styles can be overridden--or ignored!--in Child Theme stylesheets
+
+*/
