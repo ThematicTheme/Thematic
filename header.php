@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="<?php sandbox_body_class() ?>">
+<body class="<?php thematic_body_class() ?>">
 
 <div id="wrapper" class="hfeed">
 
@@ -40,10 +40,11 @@
     		<div id="blog-description"><?php bloginfo('description') ?></div>
     		<?php } ?>
     	</div><!--  #branding -->
+        <?php thematic_belowbranding(); ?>             
     	<div id="access">
     		<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
-            <?php sandbox_globalnav() ?>
-        </div><!-- #access -->    
+            <?php thematic_globalnav() ?>
+        </div><!-- #access -->
     </div><!-- #header-->
     
 <?php thematic_belowheader(); ?>   

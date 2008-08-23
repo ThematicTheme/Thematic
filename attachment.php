@@ -13,7 +13,7 @@ foreach ($options as $value) {
 <?php the_post() ?>
 
 			<h1 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h1>
-			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class() ?>">
+			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
     			<?php thematic_postheader(); ?>
 				<div class="entry-content">
 					<div class="entry-attachment"><?php the_attachment_link($post->post_ID, true) ?></div>
