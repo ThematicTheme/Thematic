@@ -4,13 +4,90 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <title>A Guide To Thematic</title>
 <style type="text/css">
+@import url('library/styles/reset.css');
+@import url('library/styles/typography.css');
 body {
-    font-family:Georgia,serif;
-    margin:1.5em auto;
+    color:#333;
+    font: 14px "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    line-height:21px;
+    margin:72px auto 53px auto;
     max-width:800px;
+}
+strong, em {
+    font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+em.thankyou {
+    font-family:Georgia,serif;
+    font-size:18px;
+    margin-bottom:36px;
+}
+p, ul, ol, dd, pre {
+    margin-bottom:21px;
+}
+pre, code {
+	font:13px Monaco, monospace;
+	line-height:21px;
+}
+p.intro,
+p.intro em {
+    color:#000;
+    font-family:Georgia,serif;
+    font-size:24px;
+    line-height:36px;
+    margin-bottom:24px;
 }
 ul {
     margin-right:3em;
+}
+h1 {
+    color:#000;
+    font-family:Georgia,serif;
+    font-size:36px;
+    line-height:36px;
+    margin-bottom:24px;
+}
+h2,h3,h4 {
+    color:#000;
+    font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+}
+h2 {
+    font-family:Georgia,serif;
+    font-size:18px;
+    letter-spacing:2px;    
+    margin-bottom:21px;
+    padding-top:21px;
+    text-transform:uppercase;
+}
+h3 {
+    color:#333;
+    font-family:Georgia,serif;
+    font-size:18px;
+    font-style:italic;
+    font-weight:normal;
+    margin-bottom:21px;
+}
+li {
+    color:#000;
+}
+li h3 {
+    color:#000;
+    font-size:14px;
+    font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    margin:0;    
+}
+li p {
+    color:#333;
+}
+.content-column {
+    float:left;
+    margin:0 3em 0 0;
+}
+iframe {
+    border:1px solid #ccc;
+    border-top-color:#aaa;
+    margin-bottom:21px;
 }
 #ts-forums {
 	height: 300px;
@@ -20,9 +97,8 @@ ul {
 </style>
 </head>
 <body>
-
 <h1>A Guide To Thematic</h1>
-<p>Thematic is more than just a WordPress theme, it's also a Theme Framework. Now, that doesn't mean it's hard to use, bloated or overcomplicated. Quite the opposite. It's extremely easy to use, lean and well organized.</p>
+<p class="intro">Thematic is more than just a WordPress theme, it's also a <em>Theme Framework</em>. Now, that doesn't mean it's hard to use, bloated or overcomplicated. <em>Quite the opposite</em>. It's extremely easy to use, lean and well organized. This guide will show you why and how.</p>
 
 <h2>Widget-Ready Areas</h2>
 <p>Thematic has 13 widget-ready areas, called <em>Asides</em>, that can be used creatively to customize your theme.</p>
@@ -48,40 +124,44 @@ ul {
 <h2>Child Themes</h2>        
 <p>Thematic has been specially optimized to take advantage of the power of WordPress Child Themes. Unless you plan on making <strong>extreme</strong> modifications I recommend you use a <em>Child Theme</em> to customize Thematic.</p>
 <p>I've compiled a few Thematic Child Themes here that can help you get started. If you'd like to see your Child Theme listed here, <a href="http://themeshaper.com/contact/">contact Ian Stewart</a>.</p>
-<h3>Free Child Themes</h3>
-<ul>
-<li><a href="http://patdryburgh.net/junction/">Junction</a></li>
-</ul>
-<h3>Commercial Child Themes</h3>
-<ul>
-<li><a href="http://themeshaper.com/acamas-theme-clarity-elegance-power/">Acamas</a></li>
-<li><a href="http://themeshaper.com/travailler-professional-wordpress-cms-theme/">Travailler</a></li>
-</ul>
+<div class="content-column">
+    <h3>Free Child Themes</h3>
+    <ul>
+        <li><a href="http://patdryburgh.net/junction/">Junction</a></li>
+    </ul>
+</div>
+<div class="content-column">
+    <h3>Commercial Child Themes</h3>
+    <ul>
+        <li><a href="http://themeshaper.com/acamas-theme-clarity-elegance-power/">Acamas</a></li>
+        <li><a href="http://themeshaper.com/travailler-professional-wordpress-cms-theme/">Travailler</a></li>
+    </ul>
+</div>
 
 <h2>Credit and Inspiration</h2>
 <p>Thematic is a fork of the hugely succesful and amazing <a href="http://www.plaintxt.org/themes/sandbox/">Sandbox theme for WordPress</a> and inherits the bulk of that code base. I owe a huge debt of gratitude to Scott Wallick and Andy Skelton, not only for their work on The Sandbox but for their ongoing help with, and support of, my efforts. Thank you, Scott and Andy.</p>
 <p>In addition, Thematic has been inspired by and uses techinques from the following people and projects.</p>
 <ul>
-<li><a href="http://code.google.com/p/blueprintcss/">Blueprint</a></li>
-<li><a href="http://blog.kaizeku.com/">Avice (Chaoskaizer) De’véreux</a></li>
-<li>Tung (Small Potato) Do</li>
-<li><a href="http://efficienttips.com/wordpress-seo-title-description-tag/">Milan Kaneria</a></li>
-<li><a href="http://960.gs/">960.gs</a></li>
-<li><a href="http://www.pearsonified.com/">Chris Pearson</a></li>
-<li><a href="http://justintadlock.com/">Justin Tadlock</a></li>
-<li><a href="http://tarskitheme.com/">Tarski</a></li>
-<li><a href="http://devkick.com/lab/tripoli/">Tripoli</a></li>
+    <li><a href="http://code.google.com/p/blueprintcss/">Blueprint</a></li>
+    <li><a href="http://blog.kaizeku.com/">Avice (Chaoskaizer) De’véreux</a></li>
+    <li>Tung (Small Potato) Do</li>
+    <li><a href="http://efficienttips.com/wordpress-seo-title-description-tag/">Milan Kaneria</a></li>
+    <li><a href="http://960.gs/">960.gs</a></li>
+    <li><a href="http://www.pearsonified.com/">Chris Pearson</a></li>
+    <li><a href="http://justintadlock.com/">Justin Tadlock</a></li>
+    <li><a href="http://tarskitheme.com/">Tarski</a></li>
+    <li><a href="http://devkick.com/lab/tripoli/">Tripoli</a></li>
 </ul>
 
 <h2>Find An Answer To Common Problems</h2>
-<p>If you have a question, problem or concern with Thematic, you can <a href="http://themeshaper.com/contact/">contact Ian Stewart</a>. Better yet, I recommend posting to the <a href="http://themeshaper.com/forums/" title="ThemeShaper Forums">ThemeShaper Forums</a> after looking there for an answer.</p>
+<p>If you have a question, problem or concern with Thematic you can <a href="http://themeshaper.com/contact/">contact Ian Stewart</a>. Better yet, I recommend posting to the <a href="http://themeshaper.com/forums/" title="ThemeShaper Forums">ThemeShaper Forums</a> after looking there for an answer.</p>
 <iframe id="ts-forums" src="http://themeshaper.com/forums/"></iframe>
 
 <h2>Copyright &amp; License</h2>
 <p>Thematic is copyright <a href="http://themeshaper.com/">Ian Stewart</a> and released, like WordPress, under <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GNU General Public License, version 2 (GPL)</a>.
 <p>Thematic has a credit link in the footer template. You may remove or edit this link without cost or concern—although it sure is appreciated if you link back to <a href="http://themeshaper.com/">ThemeShaper</a>, or the Thematic project, in some way.</p>
 
-<p>Thank you.</p>
+<p><em class="thankyou">Thank you</em>.</p>
 
 </body>
 </html>
