@@ -9,7 +9,7 @@ Template Name: Links Page
 		<div id="content">
 
 <?php the_post() ?>
-			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class() ?>">
+			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
     			<?php thematic_postheader(); ?>
 				<div class="entry-content">
 <?php the_content() ?>

@@ -18,7 +18,7 @@ foreach ($options as $value) {
 
 <?php get_sidebar('single-top') ?>
 
-			<div id="post-<?php the_ID(); ?>" class="<?php sandbox_post_class(); ?>">
+			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
     			<?php thematic_postheader(); ?>
 				<div class="entry-content">
 <?php the_content(''.__('Read More <span class="meta-nav">&raquo;</span>', 'thematic').''); ?>
