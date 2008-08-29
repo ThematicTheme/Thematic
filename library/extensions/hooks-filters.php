@@ -207,7 +207,7 @@ function thematic_commenter_link() {
 		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
 	}
 	$avatar_email = get_comment_author_email();
-	$avatar_size = apply_filters( 'avatar_size', '32' ); // Available filter: avatar_size
+	$avatar_size = apply_filters( 'avatar_size', '80' ); // Available filter: avatar_size
 	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( $avatar_email, $avatar_size ) );
 	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 }
