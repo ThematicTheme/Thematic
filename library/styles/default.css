@@ -463,12 +463,16 @@ p.solo-subscribe-to-comments:first-line {
     margin:0;
     list-style:none;
 }
-.aside ul ul {
-    list-style:square;
-}
 .aside h3 {
     font-size:14px;
     font-weight:bold;
+}
+.aside ul ul {
+    list-style:square;
+    margin:0 0 18px 1.5em;
+}
+.aside ul ul ul {
+    margin:0 0 0 1.5em;
 }
 /* Begin Calendar styles */
 .aside table {
@@ -541,27 +545,12 @@ p.solo-subscribe-to-comments:first-line {
 #single-bottom .widgetcontainer {
     border-top:none;
 }
-.main-aside {
-}
 .main-aside h3 {
     padding:17px 0 1px 0;
-}
-.main-aside ul ul {
-    margin:0 0 18px 13px;
-}
-.main-aside ul ul ul {
-    margin:0;
-}
-.sub-aside h3 {
 }
 #footer .widgetcontainer {
     padding:0 1px;
     margin:0 0 18px 0;
-}
-#footer .widgetcontainer ul {
-    margin:0 0 0 13px;
-}
-#footer .widgetcontainer ul ul {
 }
 
 /* =Footer
