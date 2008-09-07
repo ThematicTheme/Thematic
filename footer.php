@@ -11,7 +11,6 @@ foreach ($options as $value) {
 
 	<div id="footer">
         <?php get_sidebar('subsidiary'); ?>
-        <?php thematic_abovesiteinfo() ?>
         <div id="siteinfo">        
     		<?php /* footer text set in theme options */ echo stripslashes($thm_footertext); ?>
 		</div><!-- #siteinfo -->
