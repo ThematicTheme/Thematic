@@ -1,18 +1,8 @@
 <?php
 
-// Located in header.php, between #branding and #access
-function thematic_belowbranding() {
-    do_action('thematic_belowbranding');
-}
-
 // Located in header.php 
 function thematic_belowheader() {
     do_action('thematic_belowheader');
-}
-
-//Located in footer.php, between #subsidiary and #siteinfo
-function thematic_abovesiteinfo() {
-    do_action('thematic_abovesiteinfo');
 }
 
 // Located in footer.php
