@@ -6,7 +6,7 @@
 
 
 /* Un-comment the line below to set a grid with 18px line-height */
-/*body { background:url(images/960_grid_12_col.gif) repeat-y top center; }*/
+/*body { background:url(library/grids/960_grid_12_col.gif) repeat-y top center; }*/
 
 
 /* =Global Elements
@@ -223,9 +223,20 @@ input, textarea {
   border-bottom: 1px dotted #333;
   cursor: help;
 }
-.content-column, .entry-content .linkcat {
-	list-style:none;
+.entry-content ul.xoxo {
+    margin:0 0 18px 0;
+    overflow:hidden;
+}
+.entry-content ul.xoxo ul {
+    margin:0 0 0 1.5em;
+}
+li.content-column, .entry-content li.linkcat {
 	float:left;
+	list-style:none;
+	margin:0 20px 0 0;
+}
+.entry-content li.linkcat ul.xoxo {
+    overflow:visible;
 }
 .more-link {
     font-weight:bold;
@@ -514,9 +525,6 @@ p.solo-subscribe-to-comments:first-line {
     margin:4px 0 10px 0;
 }
 /* End Search styles */
-/* Begin RSS widget styles */
-/* I think I'm going to have to reset some stuff in functions.php for the RSS widget. It stinks for styling. */
-/* End RSS widget styles */
 #content .widgetcontainer {
     border-top:1px solid #e0e0e0;
     padding:35px 1px 18px 1px;
@@ -570,6 +578,10 @@ p.solo-subscribe-to-comments:first-line {
 }
 #siteinfo {
     padding:18px 0;
+    font-size:11px;
+}
+#siteinfo a {
+    font-style:italic;
 }
 
 /* =PageNavi
