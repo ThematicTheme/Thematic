@@ -13,8 +13,7 @@
 	endif;
 endif;
 ?>
-
-<?php if ( have_comments() ) : ?>
+<?php if ( $comments ) : ?>
 <?php global $thematic_comment_alt ?>
 
 <?php /* numbers of pings and comments */
@@ -22,51 +21,62 @@ $ping_count = $comment_count = 0;
 foreach ( $comments as $comment )
 	get_comment_type() == "comment" ? ++$comment_count : ++$ping_count;
 ?>
-
-<?php if ( ! empty($comments_by_type['comment']) ) : ?>
+<?php if ( $comment_count ) : ?>
+<?php $thematic_comment_alt = 0 ?>
 
 				<div id="comments-list" class="comments">
 					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'thematic') : __('<span>One</span> Comment', 'thematic'), $comment_count) ?></h3>
-					
-					<ol>
-<?php wp_list_comments('type=comment'); ?>
-					</ol>
-					
-				</div><!-- #comments-list .comments -->
-				
-                <div class="navigation">
-                    <div class="alignleft"><?php previous_comments_link() ?></div>
-                    <div class="alignright"><?php next_comments_link() ?></div>
-                </div>
 
+					<ol>
+<?php foreach ($comments as $comment) : ?>
+<?php if ( get_comment_type() == "comment" ) : ?>
+						<li id="comment-<?php comment_ID() ?>" class="<?php thematic_comment_class() ?>">
+							<div class="comment-author vcard"><?php thematic_commenter_link() ?></div>
+							<div class="comment-meta"><?php printf(__('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'thematic'),
+										get_comment_date(),
+										get_comment_time(),
+										'#comment-' . get_comment_ID() );
+										edit_comment_link(__('Edit', 'thematic'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
+<?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'thematic') ?>
+							<?php comment_text() ?>
+						</li>
+<?php endif; /* if ( get_comment_type() == "comment" ) */ ?>
+<?php endforeach; ?>
+
+					</ol>
+				</div><!-- #comments-list .comments -->
 
 <?php endif; /* if ( $comment_count ) */ ?>
-
-<?php if ( ! empty($comments_by_type['pings']) ) : ?>
+<?php if ( $ping_count ) : ?>
 <?php $thematic_comment_alt = 0 ?>
 
 				<div id="trackbacks-list" class="comments">
 					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'thematic') : __('<span>One</span> Trackback', 'thematic'), $ping_count) ?></h3>
 
 					<ol>
-<?php wp_list_comments('type=pings'); ?>
+<?php foreach ( $comments as $comment ) : ?>
+<?php if ( get_comment_type() != "comment" ) : ?>
+
+						<li id="comment-<?php comment_ID() ?>" class="<?php thematic_comment_class() ?>">
+							<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'thematic'),
+									get_comment_author_link(),
+									get_comment_date(),
+									get_comment_time() );
+									edit_comment_link(__('Edit', 'thematic'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
+<?php if ($comment->comment_approved == '0') _e('\t\t\t\t\t<span class="unapproved">Your trackback is awaiting moderation.</span>\n', 'thematic') ?>
+							<?php comment_text() ?>
+						</li>
+<?php endif /* if ( get_comment_type() != "comment" ) */ ?>
+<?php endforeach; ?>
+
 					</ol>
 				</div><!-- #trackbacks-list .comments -->
-				
-                <div class="navigation">
-                    <div class="alignleft"><?php previous_comments_link() ?></div>
-                    <div class="alignright"><?php next_comments_link() ?></div>
-                </div>
-				
 
 <?php endif /* if ( $ping_count ) */ ?>
 <?php endif /* if ( $comments ) */ ?>
-
 <?php if ( 'open' == $post->comment_status ) : ?>
 				<div id="respond">
-    				<h3><?php comment_form_title( 'Post a Comment', 'Post a Reply to %s' ); ?></h3>
-    				
-    				<div id="cancel-comment-reply"><?php cancel_comment_reply_link() ?></div>
+					<h3><?php _e('Post a Comment', 'thematic') ?></h3>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 					<p id="login-req"><?php printf(__('You must be <a href="%s" title="Log in">logged in</a> to post a comment.', 'thematic'),
