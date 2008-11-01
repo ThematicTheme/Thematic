@@ -18,6 +18,9 @@ require_once(THEMELIB . '/extensions/widgets.php');
 // Load custom theme hooks and filters
 require_once(THEMELIB . '/extensions/hooks-filters.php');
 
+// Load the Comments Template functions and callbacks
+require_once(THEMELIB . '/extensions/discussion.php');
+
 // Add Dynamic Contextual Semantic Classes
 require_once(THEMELIB . '/extensions/dynamic-classes.php');
 
