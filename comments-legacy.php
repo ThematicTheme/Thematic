@@ -1,6 +1,6 @@
 			<div id="comments">
 <?php
-	$req = get_option('require_name_email'); // Checks if fields are required.
+	$req = get_option('require_name_email'); // Checks if fields are required. Thanks, Adam. ;-)
 	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
 		die ( 'Please do not load this page directly. Thanks!' );
 	if ( ! empty($post->post_password) ) :
@@ -122,7 +122,7 @@ foreach ( $comments as $comment )
 
 							<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php _e('Post Comment', 'thematic') ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
 
-                            <?php comment_id_fields(); ?>    
+							<?php do_action('comment_form', $post->ID); ?>
 
 						</form><!-- #commentform -->
 						

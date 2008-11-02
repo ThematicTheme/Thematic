@@ -29,7 +29,7 @@ foreach ( $comments as $comment )
 					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'thematic') : __('<span>One</span> Comment', 'thematic'), $comment_count) ?></h3>
 					
 					<ol>
-<?php wp_list_comments('type=comment'); ?>
+<?php wp_list_comments(array('callback' => 'thematic_comments')); ?>
 					</ol>
 					
 				</div><!-- #comments-list .comments -->
@@ -49,7 +49,7 @@ foreach ( $comments as $comment )
 					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'thematic') : __('<span>One</span> Trackback', 'thematic'), $ping_count) ?></h3>
 
 					<ol>
-<?php wp_list_comments('type=pings'); ?>
+<?php wp_list_comments('type=pings&callback=thematic_pings'); ?>
 					</ol>
 				</div><!-- #trackbacks-list .comments -->
 				
