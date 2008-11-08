@@ -1,26 +1,5 @@
 <?php
 
-/*
-Justin Tadlock is awesome.
-
-I'm using this in the Hybrid theme in the callback function to get the reply link.
-
-You can see a beta version of the theme here (this code is in hybrid/library/functions/comments.php):
-http://themehybrid.com/downloads/hybrid.zip
-
-
-<?php
-	echo comment_reply_link(array(
-		'reply_text' => __('Reply'), 
-		'login_text' => __('Log in to reply.'),
-		'depth' => $depth,
-		'max_depth' => $max_depth, 
-		'before' => '<span class="comment-reply-link">', 
-		'after' => '</span>'
-	));
-?>
-*/
-
 // Custom callback to list comments in the Thematic style
 function thematic_comments($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
