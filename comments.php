@@ -26,11 +26,6 @@ foreach ( $comments as $comment )
 
 				<div id="comments-list" class="comments">
 					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'thematic') : __('<span>One</span> Comment', 'thematic'), $comment_count) ?></h3>
-
-        			<div id="comments-nav-above" class="comment-navigation">
-                        <div class="nav-previous"><?php previous_comments_link() ?></div>
-                        <div class="nav-next"><?php next_comments_link() ?></div>
-                    </div>					
 					
 					<ol>
 <?php wp_list_comments(array('callback' => 'thematic_comments')); ?>
