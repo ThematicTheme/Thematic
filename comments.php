@@ -15,7 +15,6 @@ endif;
 ?>
 
 <?php if ( have_comments() ) : ?>
-<?php global $thematic_comment_alt ?>
 
 <?php /* numbers of pings and comments */
 $ping_count = $comment_count = 0;
@@ -27,36 +26,36 @@ foreach ( $comments as $comment )
 
 				<div id="comments-list" class="comments">
 					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'thematic') : __('<span>One</span> Comment', 'thematic'), $comment_count) ?></h3>
+
+        			<div id="comments-nav-above" class="comment-navigation">
+                        <div class="nav-previous"><?php previous_comments_link() ?></div>
+                        <div class="nav-next"><?php next_comments_link() ?></div>
+                    </div>					
 					
 					<ol>
 <?php wp_list_comments(array('callback' => 'thematic_comments')); ?>
 					</ol>
+
+        			<div id="comments-nav-below" class="comment-navigation">
+                        <div class="nav-previous"><?php previous_comments_link() ?></div>
+                        <div class="nav-next"><?php next_comments_link() ?></div>
+                    </div>
 					
 				</div><!-- #comments-list .comments -->
-				
-                <div class="navigation">
-                    <div class="alignleft"><?php previous_comments_link() ?></div>
-                    <div class="alignright"><?php next_comments_link() ?></div>
-                </div>
-
+			
 
 <?php endif; /* if ( $comment_count ) */ ?>
 
 <?php if ( ! empty($comments_by_type['pings']) ) : ?>
-<?php $thematic_comment_alt = 0 ?>
 
 				<div id="trackbacks-list" class="comments">
 					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'thematic') : __('<span>One</span> Trackback', 'thematic'), $ping_count) ?></h3>
-
+					
 					<ol>
 <?php wp_list_comments('type=pings&callback=thematic_pings'); ?>
-					</ol>
-				</div><!-- #trackbacks-list .comments -->
-				
-                <div class="navigation">
-                    <div class="alignleft"><?php previous_comments_link() ?></div>
-                    <div class="alignright"><?php next_comments_link() ?></div>
-                </div>
+					</ol>				
+					
+				</div><!-- #trackbacks-list .comments -->			
 				
 
 <?php endif /* if ( $ping_count ) */ ?>
