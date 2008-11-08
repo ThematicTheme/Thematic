@@ -275,6 +275,17 @@ li.content-column, .entry-content li.linkcat {
     padding:18px 0;
     overflow:hidden;
 }
+#comments .comment-navigation {
+    background:#87B5DD;
+    border-top:1px solid #6DA5D6;
+    line-height:36px;
+    margin:-18px 20px 18px 20px;
+    padding:0 20px;
+    overflow:hidden;
+}
+.comment-navigation a {
+    color:#fff;
+}
 #comments h3 {
     font-weight:bold;
     text-transform:uppercase;
@@ -349,7 +360,12 @@ li.content-column, .entry-content li.linkcat {
     padding:0 0 18px 0;
 }
 .comment-reply-link {
+    font-size:10px;
+    font-style:italic;
     padding:0 0 18px 0;
+}
+.comment-reply-link a {
+    color:#fff;
 }
 #cancel-comment-reply {
     padding:0 0 18px 0;
@@ -369,9 +385,14 @@ li.content-column, .entry-content li.linkcat {
     padding:17px 20px 0 20px;
     width:460px;
     margin:0 auto;
+    z-index:100;
 }
 #respond h3 {
     padding-top:18px;
+}
+#cancel-comment-reply a {
+    color:#fff;
+    font-style:italic;
 }
 #respond form {
     padding:0 0 36px 0;
