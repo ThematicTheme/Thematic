@@ -179,7 +179,7 @@ $thematic_post_alt = 1;
 
 // Generates semantic classes for each comment LI element
 function thematic_comment_class( $print = true ) {
-	global $comment, $post, $thematic_comment_alt;
+	global $comment, $post, $thematic_comment_alt, $comment_depth, $comment_thread_alt;
 
 	// Collects the comment type (comment, trackback),
 	$c = array( $comment->comment_type );
@@ -205,7 +205,10 @@ function thematic_comment_class( $print = true ) {
 	thematic_date_classes( mysql2date( 'U', $comment->comment_date ), $c, 'c-' );
 	if ( ++$thematic_comment_alt % 2 )
 		$c[] = 'alt';
-
+		
+	// Comment depth
+	$c[] = "depth-$comment_depth";
+		
 	// Separates classes with a single space, collates classes for comment LI
 	$c = join( ' ', apply_filters( 'comment_class', $c ) ); // Available filter: comment_class
 
