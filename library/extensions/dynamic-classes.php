@@ -159,6 +159,10 @@ function thematic_post_class( $print = true ) {
 	// For password-protected posts
 	if ( $post->post_password )
 		$c[] = 'protected';
+		
+	// For sticky posts
+	if (is_sticky())
+	   $c[] = 'sticky';
 
 	// Applies the time- and date-based classes (below) to post DIV
 	thematic_date_classes( mysql2date( 'U', $post->post_date ), $c );
