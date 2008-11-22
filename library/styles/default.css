@@ -286,6 +286,9 @@ li.content-column, .entry-content li.linkcat {
 .comment-navigation a {
     color:#fff;
 }
+.paginated-comments-links {
+    text-align:center;
+}
 #comments h3 {
     font-weight:bold;
     text-transform:uppercase;
@@ -446,10 +449,6 @@ p.solo-subscribe-to-comments {
 p.solo-subscribe-to-comments:first-line {
     font-style:italic;
 }
-/*input#solo-subscribe-email {
-    width:220px;
-    margin:9px 0;
-}*/
 #respond .required {
     font-weight:bold;
 }
