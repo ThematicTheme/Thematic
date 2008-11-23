@@ -16,17 +16,15 @@ function thematic_comments($comment, $args, $depth) {
             <div class="comment-content">
         		<?php comment_text() ?>
     		</div>
-			<?php // echo the comment reply link with help from Justin Tadlock http://justintadlock.com/
+			<?php // echo the comment reply link with help from Justin Tadlock http://justintadlock.com/ and Will Norris http://willnorris.com/
 				if($args['type'] == 'all' || get_comment_type() == 'comment') :
-					$max_depth = get_option('thread_comments_depth');
-					echo comment_reply_link(array(
+					comment_reply_link(array_merge($args, array(
 						'reply_text' => __('Reply','thematic'), 
 						'login_text' => __('Log in to reply.','thematic'),
 						'depth' => $depth,
-						'max_depth' => $max_depth, 
 						'before' => '<div class="comment-reply-link">', 
 						'after' => '</div>'
-					));
+					)));
 				endif;
 			?>
 <?php }
