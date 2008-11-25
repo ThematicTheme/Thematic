@@ -10,14 +10,22 @@ function thematic_abovefooter() {
     do_action('thematic_abovefooter');
 }
 
-// Produces a clean list of pages in the header — thanks to Scott Wallick and Andy Skelton.
-// Produces a list of pages in the header without whitespace
-function thematic_globalnav() {
-	if ( $menu = str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&sort_column=menu_order&echo=0') ) )
-		$menu = '<ul>' . $menu . '</ul>';
-	$menu = '<div id="menu">' . $menu . "</div>\n";
-	echo apply_filters( 'globalnav_menu', $menu ); // Filter to override default globalnav: globalnav_menu
-}
+/*
+The globalnav filter is gone. long live wp_page_menu!
+Here's how to filter your menu now.
+
+function sample_nav() { ?>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Oh</a></li>
+            <li><a href="#">Hello there!</a></li>
+        </ul>
+    </div><!-- #menu -->     
+<?php }
+add_filter('wp_page_menu', 'sample_nav');
+
+*/
+
 
 // Information in Post Header
 function thematic_postheader() {
