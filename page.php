@@ -18,7 +18,7 @@
 				</div>
 			</div><!-- .post -->
 
-<?php if ( get_post_custom_values('comments') ) comments_template() // Add a key+value of "comments" to enable comments on this page ?>
+<?php if ( get_post_custom_values('comments') ) comments_template('', true) // Add a key+value of "comments" to enable comments on this page ?>
 
 <?php get_sidebar('page-bottom') ?>
 
