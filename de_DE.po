@@ -4,11 +4,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Thematic 0.6.5\n"
+"Project-Id-Version: Thematic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-26 21:54+0100\n"
-"PO-Revision-Date: 2008-08-26 22:37+0100\n"
-"Last-Translator: Raphael Campestrini <campesr@aol.com>\n"
+"POT-Creation-Date: 2008-11-18 20:32+0100\n"
+"PO-Revision-Date: 2008-11-18 20:34+0100\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,8 +92,8 @@ msgid "Archives by Month"
 msgstr "Archive nach Monat"
 
 #: archives.php:32
-#: comments.php:39
-#: comments.php:65
+#: comments-legacy.php:39
+#: comments-legacy.php:65
 #: links.php:20
 #: page.php:16
 msgid "Edit"
@@ -116,110 +116,126 @@ msgstr "E-Mail "
 msgid "Category Archives:"
 msgstr "Kategorien-Archiv:"
 
+#: comments-legacy.php:9
 #: comments.php:9
 #, fuzzy
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Dieser Beitrag ist passwortgesch&uuml;tzt. Bitte geben Sie das Passwort ein, um Kommentare lesen zu k&ouml;nnen."
 
+#: comments-legacy.php:28
 #: comments.php:28
 #, php-format
 msgid "<span>%d</span> Comments"
 msgstr "<span>%d</span> Kommentare"
 
+#: comments-legacy.php:28
 #: comments.php:28
 msgid "<span>One</span> Comment"
 msgstr "<span>Ein</span> Kommentar"
 
-#: comments.php:35
+#: comments-legacy.php:35
 #, php-format
 msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
 msgstr "Erstellt am %1$s um %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\">Permanent-Link</a>"
 
-#: comments.php:40
+#: comments-legacy.php:40
 msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
 msgstr "\t\t\t\t\t<span class='unapproved'>Ihr Kommentar wartet auf Freischaltung.</span>\n"
 
-#: comments.php:54
+#: comments-legacy.php:54
+#: comments.php:47
 #, php-format
 msgid "<span>%d</span> Trackbacks"
 msgstr "<span>%d</span> Trackbacks"
 
-#: comments.php:54
+#: comments-legacy.php:54
+#: comments.php:47
 msgid "<span>One</span> Trackback"
 msgstr "<span>Ein</span> Trackback"
 
-#: comments.php:61
+#: comments-legacy.php:61
 #, php-format
 msgid "By %1$s on %2$s at %3$s"
 msgstr "Von %1$s am %2$s um %3$s"
 
-#: comments.php:66
+#: comments-legacy.php:66
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
 msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Ihr Trackback wartet auf Freischaltung.</span>\\n"
 
-#: comments.php:79
+#: comments-legacy.php:79
 #, fuzzy
 msgid "Post a Comment"
 msgstr "Ihr Kommentar"
 
-#: comments.php:82
+#: comments-legacy.php:82
+#: comments.php:66
 #, fuzzy, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
 msgstr "Sie m&uuml;ssen <a href=\"%s\">angemeldet</a> sein, um kommentieren zu k&ouml;nnen."
 
-#: comments.php:90
+#: comments-legacy.php:90
+#: comments.php:74
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
 msgstr "Angemeldet als <a href=\"%1$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\">Abmelden?</a></span>"
 
-#: comments.php:97
+#: comments-legacy.php:97
+#: comments.php:81
 msgid "Your email is <em>never</em> published nor shared."
 msgstr "Ihre E-Mail wird <em>niemals</em> veröffentlicht oder verteilt."
 
-#: comments.php:97
+#: comments-legacy.php:97
+#: comments.php:81
 msgid "Required fields are marked <span class=\"required\">*</span>"
 msgstr "Benötigte Felder sind mit <span class=\"required\">*</span> markiert"
 
-#: comments.php:100
+#: comments-legacy.php:100
+#: comments.php:84
 msgid "Name"
 msgstr "Name"
 
-#: comments.php:100
-#: comments.php:105
+#: comments-legacy.php:100
+#: comments-legacy.php:105
+#: comments.php:84
+#: comments.php:89
 msgid "<span class=\"required\">*</span>"
 msgstr "<span class=\"required\">*</span>"
 
-#: comments.php:105
+#: comments-legacy.php:105
+#: comments.php:89
 #, fuzzy
 msgid "Email"
 msgstr "E-Mail"
 
-#: comments.php:110
+#: comments-legacy.php:110
+#: comments.php:94
 msgid "Website"
 msgstr "Website"
 
-#: comments.php:117
+#: comments-legacy.php:117
+#: comments.php:101
 msgid "Comment"
 msgstr "Kommentar"
 
-#: comments.php:123
+#: comments-legacy.php:123
+#: comments.php:107
 #, fuzzy
 msgid "Post Comment"
 msgstr "Ihr Kommentar"
 
-#: header.php:22
+#: header.php:29
 msgid "Posts RSS feed"
 msgstr "RSS-Feed der Beiträge"
 
-#: header.php:23
+#: header.php:30
 msgid "Comments RSS feed"
 msgstr "RSS-Feed der Kommentare"
 
-#: header.php:44
+#: header.php:53
 msgid "Skip navigation to the content"
 msgstr "Navigation zu Inhalt überspringen"
 
-#: header.php:44
+#: header.php:53
 msgid "Skip to content"
 msgstr "Zu Inhalt springen"
 
@@ -241,9 +257,6 @@ msgstr "Entschuldigung, aber Nichts passt auf Ihre Suchkriterien. Bitte versuche
 
 #: sidebar.php:5
 #: sidebar.php:9
-#: library/functions/widgets.php:16
-#: library/functions/widgets.php:23
-#: library/functions/widgets.php:200
 msgid "Search"
 msgstr "Suchen"
 
@@ -264,18 +277,14 @@ msgid "RSS Feeds"
 msgstr "RSS-Feeds"
 
 #: sidebar.php:49
-#: library/functions/widgets.php:57
 msgid "All posts"
 msgstr "Alle Beiträge"
 
 #: sidebar.php:50
-#: library/functions/widgets.php:58
 msgid "All comments"
 msgstr "Alle Kommentare"
 
 #: sidebar.php:55
-#: library/functions/widgets.php:35
-#: library/functions/widgets.php:202
 msgid "Meta"
 msgstr "Meta"
 
@@ -283,136 +292,144 @@ msgstr "Meta"
 msgid "Tag Archives:"
 msgstr "Tag-Archiv:"
 
-#: library/functions/hooks-filters.php:26
+#: library/extensions/discussion.php:23
+msgid "Reply"
+msgstr "Antworten"
+
+#: library/extensions/discussion.php:24
+msgid "Log in to reply."
+msgstr "Sie müssen eingeloggt sein, um antworten zu können."
+
+#: library/extensions/hooks-filters.php:29
 msgid "Not Found"
 msgstr "Nicht gefunden"
 
-#: library/functions/hooks-filters.php:31
-#: library/functions/hooks-filters.php:115
+#: library/extensions/hooks-filters.php:34
+#: library/extensions/hooks-filters.php:118
 msgid "Permalink to "
 msgstr "Permanent-Link zu "
 
-#: library/functions/hooks-filters.php:39
+#: library/extensions/hooks-filters.php:42
 msgid "By "
 msgstr "Von "
 
-#: library/functions/hooks-filters.php:41
+#: library/extensions/hooks-filters.php:44
 msgid "View all posts by "
 msgstr "Alle Beiträge zeigen von "
 
-#: library/functions/hooks-filters.php:65
+#: library/extensions/hooks-filters.php:68
 #, fuzzy
 msgid "Edit post"
 msgstr "Bearbeiten"
 
-#: library/functions/hooks-filters.php:72
+#: library/extensions/hooks-filters.php:75
 msgid "This entry was posted in "
 msgstr "Dieser Eintrag wurde veröffentlicht in "
 
-#: library/functions/hooks-filters.php:75
+#: library/extensions/hooks-filters.php:78
 msgid "Also posted in "
 msgstr "Ver&ouml;ffentlicht in "
 
-#: library/functions/hooks-filters.php:78
+#: library/extensions/hooks-filters.php:81
 msgid "Posted in "
 msgstr "Ver&ouml;ffentlicht in "
 
-#: library/functions/hooks-filters.php:84
+#: library/extensions/hooks-filters.php:87
 msgid " and tagged"
 msgstr " und getagged "
 
-#: library/functions/hooks-filters.php:87
+#: library/extensions/hooks-filters.php:90
 msgid " Also tagged "
 msgstr " Auch getagged "
 
-#: library/functions/hooks-filters.php:89
+#: library/extensions/hooks-filters.php:92
 msgid "Tagged"
 msgstr "Getagged"
 
-#: library/functions/hooks-filters.php:97
-#: library/functions/hooks-filters.php:100
-#: library/functions/hooks-filters.php:103
+#: library/extensions/hooks-filters.php:100
+#: library/extensions/hooks-filters.php:103
+#: library/extensions/hooks-filters.php:106
 #, fuzzy
 msgid "Comment on "
 msgstr "Kommentar"
 
-#: library/functions/hooks-filters.php:98
+#: library/extensions/hooks-filters.php:101
 msgid " Comments"
 msgstr " Kommentare"
 
-#: library/functions/hooks-filters.php:101
+#: library/extensions/hooks-filters.php:104
 msgid " Comment"
 msgstr " Kommentar"
 
-#: library/functions/hooks-filters.php:104
+#: library/extensions/hooks-filters.php:107
 msgid "Leave a comment"
 msgstr "Kommentieren"
 
-#: library/functions/hooks-filters.php:107
+#: library/extensions/hooks-filters.php:110
 #, fuzzy
 msgid "Comments closed"
 msgstr "Kommentare geschlossen"
 
-#: library/functions/hooks-filters.php:115
+#: library/extensions/hooks-filters.php:118
 msgid ". Bookmark the "
 msgstr ". Bookmarken: "
 
-#: library/functions/hooks-filters.php:116
+#: library/extensions/hooks-filters.php:119
 msgid "permalink"
 msgstr "Permanent-Link"
 
-#: library/functions/hooks-filters.php:118
-#: library/functions/hooks-filters.php:126
+#: library/extensions/hooks-filters.php:121
+#: library/extensions/hooks-filters.php:129
 #, fuzzy
 msgid "Post a comment"
 msgstr "Kommentieren"
 
-#: library/functions/hooks-filters.php:119
+#: library/extensions/hooks-filters.php:122
 msgid " or leave a trackback: "
 msgstr " oder ein Trackback hinterlassen: "
 
-#: library/functions/hooks-filters.php:120
-#: library/functions/hooks-filters.php:123
+#: library/extensions/hooks-filters.php:123
+#: library/extensions/hooks-filters.php:126
 msgid "Trackback URL for your post"
 msgstr "Trackback-URL für Ihren Beitrag"
 
-#: library/functions/hooks-filters.php:120
-#: library/functions/hooks-filters.php:123
+#: library/extensions/hooks-filters.php:123
+#: library/extensions/hooks-filters.php:126
 msgid "Trackback URL"
 msgstr "Trackback-URL"
 
-#: library/functions/hooks-filters.php:122
+#: library/extensions/hooks-filters.php:125
 msgid " Comments are closed, but you can leave a trackback: "
 msgstr " Kommentare sind geschlossen, aber Sie können ein Trackback hinterlassen: "
 
-#: library/functions/hooks-filters.php:125
+#: library/extensions/hooks-filters.php:128
 msgid " Trackbacks are closed, but you can "
 msgstr " Trackbacks sind geschlossen, aber sie können "
 
-#: library/functions/hooks-filters.php:126
+#: library/extensions/hooks-filters.php:129
 #, fuzzy
 msgid "post a comment"
 msgstr "Kommentieren"
 
-#: library/functions/hooks-filters.php:128
+#: library/extensions/hooks-filters.php:131
 msgid " Both comments and trackbacks are currently closed."
 msgstr " Momentan ist weder das Kommentieren noch das Setzen eines Trackbacks m&ouml;glich."
 
-#: library/functions/theme-options.php:199
+#: library/extensions/theme-options.php:199
 msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
 msgstr "Um mehr Information über dieses Thema zu erhalten, <a href=\"http://themeshaper.com\">besuchen Sie ThemeShaper</a>. Bitte besuchen Sie die <a href=\"http://themeshaper.com/forums/\">ThemeShaper Foren</a> falls Sie irgendwelche Fragen zu Thematic haben."
 
-#: library/functions/widgets.php:52
-#: library/functions/widgets.php:204
-#: library/functions/widgets.php:205
+#: library/extensions/widgets.php:52
+#: library/extensions/widgets.php:198
+#: library/extensions/widgets.php:199
 msgid "RSS Links"
 msgstr "RSS-Links:"
 
-#: library/functions/widgets.php:76
+#: library/extensions/widgets.php:76
 msgid "Title:"
 msgstr "Titel:"
 
-#: library/functions/widgets.php:199
+#: library/extensions/widgets.php:193
 msgid "Blog Index"
 msgstr "Blog-Index"
 
