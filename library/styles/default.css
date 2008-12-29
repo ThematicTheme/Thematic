@@ -80,22 +80,23 @@ input, textarea {
 .skip-link {
     display:none;
 }
-#menu {
+.menu {
     padding:7px 0 8px 0;
     overflow:hidden; /* clears the inner float  */
 }
-#menu ul {
+.menu ul,
+.menu ul {
     margin:0;
     list-style:none;
     clear:both;
 }
-#menu ul ul {
+.menu ul ul {
     display:none;
 }
-#menu li {
+.menu li {
     display:inline;
 }
-#menu a {
+.menu a {
     display:block;
     float:left;
     margin:0 10px 0 0;
@@ -105,17 +106,17 @@ input, textarea {
     border-top:1px solid #6DA5D6;
     text-decoration:none;
 }
-#menu a:hover {
+.menu a:hover {
     background:#5C9BD1;
     color:#fff;
     border-color:#3B86C7;
 }
-#menu .current_page_item a {
+.menu .current_page_item a {
     background:#5C9BD1;
     color:#fff;
     border-color:#3B86C7;
 }
-#menu a:focus {
+.menu a:focus {
     background:#4887BD;
     color:#fff;
     border-color:#2772B3;

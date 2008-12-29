@@ -27,6 +27,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	background: transparent;
 }
 body {
+    background:#fff;
 	line-height: 1;
 }
 ol, ul {
