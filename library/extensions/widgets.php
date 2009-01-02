@@ -6,7 +6,7 @@ function is_sidebar_active( $index = 1){
 	$sidebars	= wp_get_sidebars_widgets();
 	$key		= (string) 'sidebar-'.$index;
 
-	return (isset($sidebars[$key]));
+	return (isset($sidebars[$key][0]));
 }
 
 // Widget: Thematic Search
