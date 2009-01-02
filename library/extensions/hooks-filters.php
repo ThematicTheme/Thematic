@@ -15,12 +15,12 @@ The globalnav filter is gone. long live wp_page_menu!
 Here's how to filter your menu now.
 
 function sample_nav() { ?>
-    <div id="menu">
+    <div class="menu">
         <ul>
             <li><a href="#">Oh</a></li>
             <li><a href="#">Hello there!</a></li>
         </ul>
-    </div><!-- #menu -->     
+    </div><!-- .menu -->     
 <?php }
 add_filter('wp_page_menu', 'sample_nav');
 
