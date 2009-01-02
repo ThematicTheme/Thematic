@@ -57,7 +57,7 @@ foreach ( $comments as $comment )
 
 <?php if ( 'open' == $post->comment_status ) : ?>
 				<div id="respond">
-    				<h3><?php comment_form_title( 'Post a Comment', 'Post a Reply to %s' ); ?></h3>
+    				<h3><?php comment_form_title( __('Post a Comment', 'thematic'), __('Post a Reply to %s', 'thematic') ); ?></h3>
     				
     				<div id="cancel-comment-reply"><?php cancel_comment_reply_link() ?></div>
 
