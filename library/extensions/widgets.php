@@ -2,11 +2,24 @@
 
 // Check for widgets in widget-ready areas http://wordpress.org/support/topic/190184?replies=7#post-808787
 // Thanks to Chaos Kaizer http://blog.kaizeku.com/
-function is_sidebar_active( $index = 1){
-	$sidebars	= wp_get_sidebars_widgets();
-	$key		= (string) 'sidebar-'.$index;
+// Thanks to Will Noris for the rework
+function is_sidebar_active( $index = 1 ){
+   global $wp_registered_sidebars;
 
-	return (isset($sidebars[$key][0]));
+   if ( is_int($index) ) {
+       $index = "sidebar-$index";
+   } else {
+       $index = sanitize_title($index);
+       foreach ( (array) $wp_registered_sidebars as $key => $value ) {
+           if ( sanitize_title($value['name']) == $index ) {
+               $index = $key;
+               break;
+           }
+       }
+   }
+
+   $sidebars = wp_get_sidebars_widgets();
+   return (isset($sidebars[$key]));
 }
 
 // Widget: Thematic Search
@@ -84,6 +97,7 @@ function thematic_widgets_init() {
 		return;
 
 	// Register Widgetized areas.
+	// Area 1
     register_sidebar(array(
        	'name' => 'Primary Aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -92,6 +106,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));
 
+	// Area 2
     register_sidebar(array(
        	'name' => 'Secondary Aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -100,6 +115,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));
 
+	// Area 3
     register_sidebar(array(
        	'name' => '1st Subsidiary Aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -108,6 +124,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));  
 
+	// Area 4
     register_sidebar(array(
        	'name' => '2nd Subsidiary Aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -116,6 +133,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));  
    
+	// Area 5
     register_sidebar(array(
        	'name' => '3rd Subsidiary Aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -124,6 +142,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));  
 
+	// Area 6
     register_sidebar(array(
        	'name' => 'Index Top',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -132,6 +151,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));  
 
+	// Area 7
     register_sidebar(array(
        	'name' => 'Index Insert',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -140,6 +160,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));
 
+	// Area 8
     register_sidebar(array(
        	'name' => 'Index Bottom',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -148,6 +169,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));      
 
+	// Area 9
     register_sidebar(array(
        	'name' => 'Single Top',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -156,6 +178,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));  
 
+	// Area 10
     register_sidebar(array(
        	'name' => 'Single Insert',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -164,6 +187,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));      
     
+	// Area 11
     register_sidebar(array(
        	'name' => 'Single Bottom',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -172,6 +196,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));      
       
+	// Area 12
     register_sidebar(array(
        	'name' => 'Page Top',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
@@ -180,6 +205,7 @@ function thematic_widgets_init() {
 		'after_title' => "</h3>\n",
     ));      
    
+	// Area 13
     register_sidebar(array(
        	'name' => 'Page Bottom',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
