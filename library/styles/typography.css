@@ -26,8 +26,11 @@ h1,h2,h3,h4,h5,h6 {
 p {
     margin-bottom:18px;
 }
-ul, ol {
+ul {
 	margin: 0 0 18px 1.5em;
+}
+ol {
+	margin: 0 0 18px 3em;
 }
 ul {
 	list-style:disc;
