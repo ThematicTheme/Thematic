@@ -1,1113 +1,693 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<title> Thematic 0.6.5 - German / GERMANY - Poedit Export </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body bgcolor='#FFFFFF'>
-<h1> Thematic 0.6.5 : German / GERMANY</h1>
-<table align=center border=1 cellspacing=2 cellpadding=4>
-<tr><th colspan=2>Project info</th></tr>
-<tr><td>Project name and version:</td><td>Thematic 0.6.5</td></tr>
-<tr><td>Language:</td><td>German</td></tr>
-<tr><td>Country:</td><td>GERMANY</td></tr>
-<tr><td>Team:</td><td></td></tr>
-<tr><td>Team's email address:</td><td><a href="mailto:"></a></td></tr>
-<tr><td>Charset:</td><td>UTF-8</td></tr>
-</table>
-98 % translated, 83 strings (1 fuzzy, 0 bad tokens, 0 not translated)
-<table border=1 cellspacing=2 cellpadding=4>
-<tr>
-<th>
-Original string
-</th>
-<th>
-Translation
-</th>
-</th>
-<th>
-Notes
-</th>
-</tr>
-<tr bgcolor='#F4F1C1'>
-<td>
-Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.
-</td>
-<td>
-Non è stato trovato quelo che cercavi, ci dispiace.
-</td>
-<td>
-<font size="-1">
-Fuzzy translation&lt;BR&gt;
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Find
-</td>
-<td>
-Cerca
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Daily Archives: &lt;span&gt;%s&lt;/span&gt;
-</td>
-<td>
-Archivi Giornalieri: &lt;span&gt;%s&lt;/span&gt;
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Monthly Archives: &lt;span&gt;%s&lt;/span&gt;
-</td>
-<td>
-Archivi Mensili: &lt;span&gt;%s&lt;/span&gt;
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Yearly Archives: &lt;span&gt;%s&lt;/span&gt;
-</td>
-<td>
-Archivi Annuali: &lt;span&gt;%s&lt;/span&gt;
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Blog Archives
-</td>
-<td>
-Archivi del blog
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-&lt;span class=\"meta-nav\"&gt;&amp;laquo;&lt;/span&gt; Older posts
-</td>
-<td>
-&lt;span class=\"meta-nav\"&gt;&amp;laquo;&lt;/span&gt; Articoli Precedenti
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Newer posts &lt;span class=\"meta-nav\"&gt;&amp;raquo;&lt;/span&gt;
-</td>
-<td>
-Articoli Recenti &lt;span class=\"meta-nav\"&gt;&amp;raquo;&lt;/span&gt;
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Read More &lt;span class=\"meta-nav\"&gt;&amp;raquo;&lt;/span&gt;
-</td>
-<td>
-Continua  &lt;span class=\"meta-nav\"&gt;&amp;raquo;&lt;/span&gt;
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Archives by Category
-</td>
-<td>
-Archivi per Categoria
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Archives by Month
-</td>
-<td>
-Archivi Mensili
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Edit
-</td>
-<td>
-Modifica
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Pages:
-</td>
-<td>
-Pagine:
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Author Archives: 
-</td>
-<td>
-Archivi dell'Autore: 
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Email 
-</td>
-<td>
-Email
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Category Archives:
-</td>
-<td>
-Archivi per Categoria:
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-This post is password protected. Enter the password to view any comments.
-</td>
-<td>
-Questo articolo è protetto da password. Inserisci la password per leggere i commenti.
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-&lt;span&gt;%d&lt;/span&gt; Comments
-</td>
-<td>
-&lt;span&gt;%d&lt;/span&gt;  Commenti
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-&lt;span&gt;One&lt;/span&gt; Comment
-</td>
-<td>
-&lt;span&gt;Un&lt;/span&gt; Commento
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Posted %1$s at %2$s &lt;span class=\"meta-sep\"&gt;|&lt;/span&gt; &lt;a href=\"%3$s\" title=\"Permalink to this comment\"&gt;Permalink&lt;/a&gt;
-</td>
-<td>
-Pubblicato %1$s in %2$s &lt;span class=\"meta-sep\"&gt;|&lt;/span&gt; &lt;a href=\"%3$s\"&gt;Permalink&lt;/a&gt;
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-\t\t\t\t\t&lt;span class='unapproved'&gt;Your comment is awaiting moderation.&lt;/span&gt;\n
-</td>
-<td>
-\t\t\t\t\t&lt;span class='unapproved'&gt;Il tuo commento deve essere autorizzato.&lt;/span&gt;\n
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-&lt;span&gt;%d&lt;/span&gt; Trackbacks
-</td>
-<td>
-&lt;span&gt;%d&lt;/span&gt; Trackbacks
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-&lt;span&gt;One&lt;/span&gt; Trackback
-</td>
-<td>
-&lt;span&gt;Un&lt;/span&gt; Trackback
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-By %1$s on %2$s at %3$s
-</td>
-<td>
-Di %1$s il %2$s alle %3$s
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-\\t\\t\\t\\t\\t&lt;span class=\"unapproved\"&gt;Your trackback is awaiting moderation.&lt;/span&gt;\\n
-</td>
-<td>
-\\t\\t\\t\\t\\t&lt;span class=\"unapproved\"&gt;Il tuo trackback è in attesa di autorizzazione.&lt;/span&gt;\\n
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Post a Comment
-</td>
-<td>
-Scrivi un Commento
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-You must be &lt;a href=\"%s\" title=\"Log in\"&gt;logged in&lt;/a&gt; to post a comment.
-</td>
-<td>
-Devi effettuare il &lt;a href=\"%s\"&gt;Log in&lt;/a&gt; per pubblicare un commento.
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-&lt;span class=\"loggedin\"&gt;Logged in as &lt;a href=\"%1$s\" title=\"Logged in as %2$s\"&gt;%2$s&lt;/a&gt;.&lt;/span&gt; &lt;span class=\"logout\"&gt;&lt;a href=\"%3$s\" title=\"Log out of this account\"&gt;Log out?&lt;/a&gt;&lt;/span&gt;
-</td>
-<td>
-&lt;span class=\"loggedin\"&gt;Autenticato come &lt;a href=\"%1$s\" title=\"Autenticato come %2$s\"&gt;%2$s&lt;/a&gt;.&lt;/span&gt; &lt;span class=\"logout\"&gt;&lt;a href=\"%3$s\" title=\"Esci dal tuo account\"&gt;Esci dal tuo accountt?&lt;/a&gt;&lt;/span&gt;
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Your email is &lt;em&gt;never&lt;/em&gt; published nor shared.
-</td>
-<td>
-Il tuo indirizzo email non sarà &lt;em&gt;mai&lt;/em&gt;  pubblicato e/o condiviso.
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Required fields are marked &lt;span class=\"required\"&gt;*&lt;/span&gt;
-</td>
-<td>
-I campi obbligatori sono contrassegnati da &lt;span class=\"requeridos\"&gt;*&lt;/span&gt; 
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Name
-</td>
-<td>
-Nome
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-&lt;span class=\"required\"&gt;*&lt;/span&gt;
-</td>
-<td>
-&lt;span class=\"obbligatorio\"&gt;*&lt;/span&gt;
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Email
-</td>
-<td>
-Email
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Website
-</td>
-<td>
-Sito Web
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Comment
-</td>
-<td>
-Commenta
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Post Comment
-</td>
-<td>
-Scrivi Commento
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Posts RSS feed
-</td>
-<td>
-RSS feed Articoli
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Comments RSS feed
-</td>
-<td>
-RSS feed Commenti
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Skip navigation to the content
-</td>
-<td>
-Vai al contenuto
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Skip to content
-</td>
-<td>
-Vai al contenuto
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Pages: 
-</td>
-<td>
-Pagine:
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Search Results for:
-</td>
-<td>
-Risultati della ricerca:
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Nothing Found
-</td>
-<td>
-Nessun Risultato
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Sorry, but nothing matched your search criteria. Please try again with some different keywords.
-</td>
-<td>
-Nessun risultato per la tua ricerca. Prova ancora cercando termini differenti
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Search
-</td>
-<td>
-Cerca
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Pages
-</td>
-<td>
-Pagine
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Categories
-</td>
-<td>
-Categorie
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Archives
-</td>
-<td>
-Archivi
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-RSS Feeds
-</td>
-<td>
-RSS Feeds
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-All posts
-</td>
-<td>
-Tutti gli articoli
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-All comments
-</td>
-<td>
-Tutti i commenti
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Meta
-</td>
-<td>
-Informazioni
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Tag Archives:
-</td>
-<td>
-Archivio delle etichette
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Not Found
-</td>
-<td>
-Non trovato
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Permalink to 
-</td>
-<td>
-Permalink a
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-By 
-</td>
-<td>
-Di
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-View all posts by 
-</td>
-<td>
-Leggi tutti i commenti di
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Edit post
-</td>
-<td>
-Modifica articolo
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-This entry was posted in 
-</td>
-<td>
-Questo articolo è stato pubblicato in
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Also posted in 
-</td>
-<td>
-Pubblicato anche in
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Posted in 
-</td>
-<td>
-Pubblicato in
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
- and tagged
-</td>
-<td>
- e eticchettato
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
- Also tagged 
-</td>
-<td>
-Etichettato anche
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Tagged
-</td>
-<td>
-Etichettato
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Comment on 
-</td>
-<td>
-Commenta
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
- Comments
-</td>
-<td>
- Commenti
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
- Comment
-</td>
-<td>
- Commento
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Leave a comment
-</td>
-<td>
-Scrivi un commento
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Comments closed
-</td>
-<td>
-Commenti chiusi
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-. Bookmark the 
-</td>
-<td>
-. Aggiungi ai preferiti
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-permalink
-</td>
-<td>
-permalink
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Post a comment
-</td>
-<td>
-Scrivi un commento
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
- or leave a trackback: 
-</td>
-<td>
- . o lascia un trackback: 
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Trackback URL for your post
-</td>
-<td>
-URL del Trackback per il tuo articolo
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Trackback URL
-</td>
-<td>
-URL del Trackback
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
- Comments are closed, but you can leave a trackback: 
-</td>
-<td>
-I commenti sono chiusi ma puoi lasciare un trackback
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
- Trackbacks are closed, but you can 
-</td>
-<td>
- I trackbacks sono chiusi ma puoi
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-post a comment
-</td>
-<td>
-scrivere un commento
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
- Both comments and trackbacks are currently closed.
-</td>
-<td>
-I commenti ed i trackbacks sono chiusi.
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-For more information about this theme, &lt;a href=\"http://themeshaper.com\"&gt;visit ThemeShaper&lt;/a&gt;. Please visit the &lt;a href=\"http://themeshaper.com/forums/\"&gt;ThemeShaper Forums&lt;/a&gt; if you have any questions about Thematic.
-</td>
-<td>
-Per avere maggiori informazioni su questo tema, &lt;a href=\"http://themeshaper.com\"&gt;visita  ThemeShaper&lt;/a&gt;. visitare &lt;a href=\"http://themeshaper.com/forums/\"&gt;ThemeShaper Forum&lt;/a&gt; se hai qualunque domanda su Thematic.
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-RSS Links
-</td>
-<td>
-Collegamenti RSS
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#F2F2F2'>
-<td>
-Title:
-</td>
-<td>
-Titolo:
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-<tr bgcolor='#FFFFFF'>
-<td>
-Blog Index
-</td>
-<td>
-Indice del blog
-</td>
-<td>
-<font size="-1">
- 
-</font>
-</td>
-</tr>
-</table>
-</body>
-</html>
+# kubrick theme pot file.
+# Copyright (C) 2007 WordPress
+# This file is distributed under the same license as the kubrick theme package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Thematic 0.6.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-02 13:55-0500\n"
+"PO-Revision-Date: 2009-01-05 16:01+0100\n"
+"Last-Translator: danny <dannydamnboy@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:10
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
+msgstr "Non è stato trovato quelo che cercavi, prova a cercare con termini diversi."
+
+#: 404.php:15
+#: search.php:58
+msgid "Find"
+msgstr "Cerca"
+
+#: archive.php:16
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Archivi Giornalieri: <span>%s</span>"
+
+#: archive.php:18
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Archivi Mensili: <span>%s</span>"
+
+#: archive.php:20
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Archivi Annuali: <span>%s</span>"
+
+#: archive.php:22
+msgid "Blog Archives"
+msgstr "Archivi del blog"
+
+#: archive.php:31
+#: archive.php:53
+#: author.php:21
+#: author.php:56
+#: category.php:20
+#: category.php:42
+#: index.php:17
+#: index.php:49
+#: search.php:21
+#: search.php:43
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Articoli Precedenti"
+
+#: archive.php:32
+#: archive.php:54
+#: author.php:22
+#: author.php:57
+#: category.php:21
+#: category.php:43
+#: index.php:18
+#: index.php:50
+#: search.php:22
+#: search.php:44
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Articoli Recenti <span class=\"meta-nav\">&raquo;</span>"
+
+#: archive.php:41
+#: attachment.php:20
+#: author.php:44
+#: category.php:30
+#: index.php:30
+#: search.php:31
+msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Continua  <span class=\"meta-nav\">&raquo;</span>"
+
+#: archives.php:20
+msgid "Archives by Category"
+msgstr "Archivi per Categoria"
+
+#: archives.php:26
+msgid "Archives by Month"
+msgstr "Archivi Mensili"
+
+#: archives.php:32
+#: comments.php:39
+#: comments.php:65
+#: links.php:20
+#: page.php:16
+msgid "Edit"
+msgstr "Modifica"
+
+#: attachment.php:22
+#: index.php:32
+msgid "Pages:"
+msgstr "Pagine:"
+
+#: author.php:15
+msgid "Author Archives: "
+msgstr "Archivi dell'Autore: "
+
+#: author.php:33
+msgid "Email "
+msgstr "Email"
+
+#: category.php:13
+msgid "Category Archives:"
+msgstr "Archivi per Categoria:"
+
+#: comments.php:9
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Questo articolo è protetto da password. Inserisci la password per leggere i commenti."
+
+#: comments.php:28
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span>  Commenti"
+
+#: comments.php:28
+msgid "<span>One</span> Comment"
+msgstr "<span>Un</span> Commento"
+
+#: comments.php:35
+#, php-format
+msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
+msgstr "Pubblicato %1$s in %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\">Permalink</a>"
+
+#: comments.php:40
+msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>Il tuo commento deve essere autorizzato.</span>\n"
+
+#: comments.php:54
+#, php-format
+msgid "<span>%d</span> Trackbacks"
+msgstr "<span>%d</span> Trackbacks"
+
+#: comments.php:54
+msgid "<span>One</span> Trackback"
+msgstr "<span>Un</span> Trackback"
+
+#: comments.php:61
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr "Di %1$s il %2$s alle %3$s"
+
+#: comments.php:66
+msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Il tuo trackback è in attesa di autorizzazione.</span>\\n"
+
+#: comments.php:79
+msgid "Post a Comment"
+msgstr "Scrivi un Commento"
+
+#: comments.php:82
+#, php-format
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Devi effettuare il <a href=\"%s\">Log in</a> per pubblicare un commento."
+
+#: comments.php:90
+#, php-format
+msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"loggedin\">Autenticato come <a href=\"%1$s\" title=\"Autenticato come %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Esci dal tuo account\">Esci dal tuo accountt?</a></span>"
+
+#: comments.php:97
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "Il tuo indirizzo email non sarà <em>mai</em>  pubblicato e/o condiviso."
+
+#: comments.php:97
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "I campi obbligatori sono contrassegnati da <span class=\"requeridos\">*</span> "
+
+#: comments.php:100
+msgid "Name"
+msgstr "Nome"
+
+#: comments.php:100
+#: comments.php:105
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"obbligatorio\">*</span>"
+
+#: comments.php:105
+msgid "Email"
+msgstr "Email"
+
+#: comments.php:110
+msgid "Website"
+msgstr "Sito Web"
+
+#: comments.php:117
+msgid "Comment"
+msgstr "Commenta"
+
+#: comments.php:123
+msgid "Post Comment"
+msgstr "Scrivi Commento"
+
+#: header.php:22
+msgid "Posts RSS feed"
+msgstr "RSS feed Articoli"
+
+#: header.php:23
+msgid "Comments RSS feed"
+msgstr "RSS feed Commenti"
+
+#: header.php:44
+msgid "Skip navigation to the content"
+msgstr "Vai al contenuto"
+
+#: header.php:44
+msgid "Skip to content"
+msgstr "Vai al contenuto"
+
+#: page.php:14
+msgid "Pages: "
+msgstr "Pagine:"
+
+#: search.php:15
+msgid "Search Results for:"
+msgstr "Risultati della ricerca:"
+
+#: search.php:51
+msgid "Nothing Found"
+msgstr "Nessun Risultato"
+
+#: search.php:53
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Nessun risultato per la tua ricerca. Prova ancora cercando termini differenti"
+
+#: sidebar.php:5
+#: sidebar.php:9
+#: library/extensions/widgets.php:16
+#: library/extensions/widgets.php:23
+#: library/extensions/widgets.php:194
+msgid "Search"
+msgstr "Cerca"
+
+#: sidebar.php:15
+msgid "Pages"
+msgstr "Pagine"
+
+#: sidebar.php:22
+msgid "Categories"
+msgstr "Categorie"
+
+#: sidebar.php:30
+msgid "Archives"
+msgstr "Archivi"
+
+#: sidebar.php:47
+msgid "RSS Feeds"
+msgstr "RSS Feeds"
+
+#: sidebar.php:49
+#: library/extensions/widgets.php:57
+msgid "All posts"
+msgstr "Tutti gli articoli"
+
+#: sidebar.php:50
+#: library/extensions/widgets.php:58
+msgid "All comments"
+msgstr "Tutti i commenti"
+
+#: sidebar.php:55
+#: library/extensions/widgets.php:35
+#: library/extensions/widgets.php:196
+msgid "Meta"
+msgstr "Informazioni"
+
+#: tag.php:13
+msgid "Tag Archives:"
+msgstr "Archivio delle etichette"
+
+#: library/extensions/hooks-filters.php:29
+msgid "Not Found"
+msgstr "Non trovato"
+
+#: library/extensions/hooks-filters.php:34
+#: library/extensions/hooks-filters.php:118
+msgid "Permalink to "
+msgstr "Permalink a"
+
+#: library/extensions/hooks-filters.php:42
+msgid "By "
+msgstr "Di"
+
+#: library/extensions/hooks-filters.php:44
+msgid "View all posts by "
+msgstr "Leggi tutti i commenti di"
+
+#: library/extensions/hooks-filters.php:68
+msgid "Edit post"
+msgstr "Modifica articolo"
+
+#: library/extensions/hooks-filters.php:75
+msgid "This entry was posted in "
+msgstr "Questo articolo è stato pubblicato in"
+
+#: library/extensions/hooks-filters.php:78
+msgid "Also posted in "
+msgstr "Pubblicato anche in"
+
+#: library/extensions/hooks-filters.php:81
+msgid "Posted in "
+msgstr "Pubblicato in"
+
+#: library/extensions/hooks-filters.php:87
+msgid " and tagged"
+msgstr " e eticchettato"
+
+#: library/extensions/hooks-filters.php:90
+msgid " Also tagged "
+msgstr "Etichettato anche"
+
+#: library/extensions/hooks-filters.php:92
+msgid "Tagged"
+msgstr "Etichettato"
+
+#: library/extensions/hooks-filters.php:100
+#: library/extensions/hooks-filters.php:103
+#: library/extensions/hooks-filters.php:106
+msgid "Comment on "
+msgstr "Commenta"
+
+#: library/extensions/hooks-filters.php:101
+msgid " Comments"
+msgstr " Commenti"
+
+#: library/extensions/hooks-filters.php:104
+msgid " Comment"
+msgstr " Commento"
+
+#: library/extensions/hooks-filters.php:107
+msgid "Leave a comment"
+msgstr "Scrivi un commento"
+
+#: library/extensions/hooks-filters.php:110
+msgid "Comments closed"
+msgstr "Commenti chiusi"
+
+#: library/extensions/hooks-filters.php:118
+msgid ". Bookmark the "
+msgstr ". Aggiungi ai preferiti"
+
+#: library/extensions/hooks-filters.php:119
+msgid "permalink"
+msgstr "permalink"
+
+#: library/extensions/hooks-filters.php:121
+#: library/extensions/hooks-filters.php:129
+msgid "Post a comment"
+msgstr "Scrivi un commento"
+
+#: library/extensions/hooks-filters.php:122
+msgid " or leave a trackback: "
+msgstr " . o lascia un trackback: "
+
+#: library/extensions/hooks-filters.php:123
+#: library/extensions/hooks-filters.php:126
+msgid "Trackback URL for your post"
+msgstr "URL del Trackback per il tuo articolo"
+
+#: library/extensions/hooks-filters.php:123
+#: library/extensions/hooks-filters.php:126
+msgid "Trackback URL"
+msgstr "URL del Trackback"
+
+#: library/extensions/hooks-filters.php:125
+msgid " Comments are closed, but you can leave a trackback: "
+msgstr "I commenti sono chiusi ma puoi lasciare un trackback"
+
+#: library/extensions/hooks-filters.php:128
+msgid " Trackbacks are closed, but you can "
+msgstr " I trackbacks sono chiusi ma puoi"
+
+#: library/extensions/hooks-filters.php:129
+msgid "post a comment"
+msgstr "scrivere un commento"
+
+#: library/extensions/hooks-filters.php:131
+msgid " Both comments and trackbacks are currently closed."
+msgstr "I commenti ed i trackbacks sono chiusi."
+
+#: library/extensions/theme-options.php:199
+msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
+msgstr "Per avere maggiori informazioni su questo tema, <a href=\"http://themeshaper.com\">visita  ThemeShaper</a>. visitare <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forum</a> se hai qualunque domanda su Thematic."
+
+#: library/extensions/widgets.php:52
+#: library/extensions/widgets.php:198
+#: library/extensions/widgets.php:199
+msgid "RSS Links"
+msgstr "Collegamenti RSS"
+
+#: library/extensions/widgets.php:76
+msgid "Title:"
+msgstr "Titolo:"
+
+#: library/extensions/widgets.php:193
+msgid "Blog Index"
+msgstr "Indice del blog"
+
+#~ msgid "Error 404 - Not Found"
+#~ msgstr "Fehler 404 - Nicht gefunden"
+#~ msgid "Archive for the &#8216;%s&#8217; Category"
+#~ msgstr "Archiv f&uuml;r die Kategorie &#8222;%s&#8220;"
+#~ msgid "Posts Tagged &#8216;%s&#8217;"
+#~ msgstr "Artikel-Schlagworte: &#8222;%s&#8220;"
+#~ msgid "Archive for %s|Daily archive page"
+#~ msgstr "Archiv f&uuml;r %s"
+#~ msgid "F jS, Y"
+#~ msgstr "j. F Y"
+#~ msgid "Archive for %s|Monthly archive page"
+#~ msgstr "Archiv f&uuml;r %s"
+#~ msgid "F, Y"
+#~ msgstr "F Y"
+#~ msgid "Archive for %s|Yearly archive page"
+#~ msgstr "Archiv f&uuml;r %s"
+#~ msgid "Y"
+#~ msgstr "Y"
+#~ msgid "&laquo; Older Entries"
+#~ msgstr "&laquo; &Auml;ltere Eintr&auml;ge"
+#~ msgid "Newer Entries &raquo;"
+#~ msgstr "Neuere Eintr&auml;ge &raquo;"
+#~ msgid "l, F jS, Y"
+#~ msgstr "l, j. F Y"
+#~ msgid "Tags:"
+#~ msgstr "Schlagworte:"
+#~ msgid "No Comments &#187;"
+#~ msgstr "Keine Kommentare &#187;"
+#~ msgid "1 Comment &#187;"
+#~ msgstr "1 Kommentar &#187;"
+#~ msgid "% Comments &#187;"
+#~ msgstr "% Kommentare &#187;"
+#~ msgid "Archives by Subject:"
+#~ msgstr "Archive nach Thema:"
+#~ msgid "Permanent Link: %s"
+#~ msgstr "Permanent-Link: %s"
+#~ msgid "Read the rest of this entry &raquo;"
+#~ msgstr "Diesen Beitrag weiterlesen &raquo;"
+#~ msgid "This entry was posted %1$s on %2$s at %3$s and is filed under %4$s."
+#~ msgstr ""
+#~ "Dieser Beitrag wurde vor %1$s am %2$s um %3$s Uhr ver&ouml;ffentlicht und "
+#~ "unter %4$s gespeichert."
+#~ msgid ""
+#~ "You can follow any responses to this entry through the <a href='%s'>RSS "
+#~ "2.0</a> feed."
+#~ msgstr ""
+#~ "Sie k&ouml;nnen Kommentare zu diesem Eintrag &uuml;ber den <a href='%"
+#~ "s'>RSS-2.0</a>-Feed verfolgen."
+#~ msgid ""
+#~ "You can <a href=\"#respond\">leave a response</a>, or <a href=\"%s\" rel="
+#~ "\"trackback\">trackback</a> from your own site."
+#~ msgstr ""
+#~ "Sie k&ouml;nnen einen <a href=\"#respond\">Kommentar hinterlassen</a> "
+#~ "oder einen <a href=\"%s\" rel=\"trackback\">Trackback</a> von Ihrer "
+#~ "Website hierher setzen."
+#~ msgid ""
+#~ "Responses are currently closed, but you can <a href=\"%s\" rel=\"trackback"
+#~ "\">trackback</a> from your own site."
+#~ msgstr ""
+#~ "Kommentare sind momentan deaktiviert, aber Sie k&ouml;nnen einen <a href="
+#~ "\"%s\" rel=\"trackback\">Trackback</a> von Ihrer Website hierher setzen."
+#~ msgid ""
+#~ "You can skip to the end and leave a response. Pinging is currently not "
+#~ "allowed."
+#~ msgstr ""
+#~ "Sie k&ouml;nnen einen <a href=\"#respond\">Kommentar hinterlassen</a>, "
+#~ "Pingbacks/Trackbacks sind momentan deaktiviert."
+#~ msgid "Edit this entry."
+#~ msgstr "Diesen Eintrag bearbeiten"
+#~ msgid "Sorry, no attachments matched your criteria."
+#~ msgstr ""
+#~ "Leider wurden keine Anh&auml;nge gefunden, die Ihren Kriterien "
+#~ "entsprechen."
+#~ msgid "No Responses"
+#~ msgstr "Keine Kommentare"
+#~ msgid "One Response"
+#~ msgstr "1 Kommentar"
+#~ msgid "% Responses"
+#~ msgstr "% Kommentare"
+#~ msgid "to &#8220;%s&#8221;"
+#~ msgstr "zu &#8222;%s&#8220;"
+#~ msgid "<cite>%s</cite> Says:"
+#~ msgstr "<cite>%s</cite> sagt:"
+#~ msgid "edit"
+#~ msgstr "bearbeiten"
+#~ msgid "Comments are closed."
+#~ msgstr "Kommentieren ist momentan nicht m&ouml;glich."
+#~ msgid "Leave a Reply"
+#~ msgstr "Kommentieren"
+#~ msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
+#~ msgstr "Angemeldet als <a href=\"%1$s\">%2$s</a>."
+#~ msgid "Log out of this account"
+#~ msgstr "Jetzt abmelden"
+#~ msgid "Log out &raquo;"
+#~ msgstr "Abmelden &raquo;"
+#~ msgid "(required)"
+#~ msgstr "(ben&ouml;tigt)"
+#~ msgid "Mail (will not be published)"
+#~ msgstr "E-Mail (wird nicht ver&ouml;ffentlicht)"
+#~ msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
+#~ msgstr ""
+#~ "<strong>XHTML:</strong> Sie k&ouml;nnen folgende Elemente nutzen: <code>%"
+#~ "s</code>"
+#~ msgid "Submit Comment"
+#~ msgstr "Kommentar senden"
+#~ msgid "%1$s - Comments on %2$s"
+#~ msgstr "%1$s - Kommentare zu %2$s"
+#~ msgid ""
+#~ "<abbr title=\"Really Simple Syndication\">RSS</abbr> feed for comments on "
+#~ "this post."
+#~ msgstr ""
+#~ "<abbr title=\"Really Simple Syndication\">RSS</abbr>-Feed f&uuml;r "
+#~ "Kommentare zu diesem Artikel."
+#~ msgid ""
+#~ "The <abbr title=\"Universal Resource Locator\">URL</abbr> to TrackBack "
+#~ "this entry is: <em>%s</em>"
+#~ msgstr ""
+#~ "Die Trackback-<abbr title=\"Universal Resource Locator\">URL</abbr> zu "
+#~ "diesem Artikel ist: <em>%s</em>"
+#~ msgid "Pingback"
+#~ msgstr "Pingback"
+#~ msgid "by %1$s &#8212; %2$s @ <a href=\"#comment-%3$s\">%4$s</a>"
+#~ msgstr "von %1$s &#8212; %2$s um <a href=\"#comment-%3$s\">%4$s Uhr</a>"
+#~ msgid "No comments yet."
+#~ msgstr "Noch keine Kommentare."
+#~ msgid ""
+#~ "Line and paragraph breaks automatic, e-mail address never displayed, "
+#~ "<acronym title=\"Hypertext Markup Language\">HTML</acronym> allowed: "
+#~ "<code>%s</code>"
+#~ msgstr ""
+#~ "Zeilen- und Absatzumbr&uuml;che werden automatisch eingef&uuml;gt, Ihre E-"
+#~ "Mail wird nicht angezeigt.Erlaubtes <acronym title=\"Hypertext Markup "
+#~ "Language\">HTML</acronym>:"
+#~ msgid "<abbr title=\"Universal Resource Locator\">URL</abbr>"
+#~ msgstr "<abbr title=\"Universal Resource Locator\">URL</abbr>"
+#~ msgid "Say It!"
+#~ msgstr "Senden"
+#~ msgid "Sorry, the comment form is closed at this time."
+#~ msgstr "Kommentieren ist momentan leider nicht m&ouml;glich."
+#~ msgid "Close this window."
+#~ msgstr "Fenster schlie&szlig;en."
+#~ msgid ""
+#~ "Powered by <a href=\"%s\" title=\"Powered by WordPress, state-of-the-art "
+#~ "semantic personal publishing platform\"><strong>WordPress</strong></a>"
+#~ msgstr ""
+#~ "<a href=\"%s\" title=\"WordPress, die f&uuml;hrende Weblog-Anwendung"
+#~ "\"><strong>WordPress</strong></a>"
+#~ msgid "%1$s is proudly powered by %2$s"
+#~ msgstr "%1$s l&auml;uft mit %2$s"
+#~ msgid "%1$s and %2$s."
+#~ msgstr "%1$s und %2$s."
+#~ msgid "Entries (RSS)"
+#~ msgstr "Beitr&auml;ge (RSS)"
+#~ msgid "%d queries. %s seconds."
+#~ msgstr "%d Abfragen. %s Sekunden."
+#~ msgid "Customize Header"
+#~ msgstr "Kopfbereich anpassen"
+#~ msgid "Header Image and Color"
+#~ msgstr "Hintergrundbild und -farbe"
+#~ msgid "Close Color Picker"
+#~ msgstr "Farbw&auml;hler schlie&szlig;en"
+#~ msgid "Options saved."
+#~ msgstr "Einstellungen gespeichert."
+#~ msgid "Save"
+#~ msgstr "Speichern"
+#~ msgid "Font Color:"
+#~ msgstr "Schriftfarbe:"
+#~ msgid "Any CSS color (%s or %s or %s)"
+#~ msgstr "Eine beliebige CSS-Farbe (%s oder %s oder %s)"
+#~ msgid "Upper Color:"
+#~ msgstr "Farbe f&uuml;r oben:"
+#~ msgid "HEX only (%s or %s)"
+#~ msgstr "Nur HEX (%s oder %s)"
+#~ msgid "Lower Color:"
+#~ msgstr "Farbe f&uuml;r unten:"
+#~ msgid "Toggle Text"
+#~ msgstr "Text umschalten"
+#~ msgid "Use Defaults"
+#~ msgstr "Standard verwenden"
+#~ msgid "Font Color"
+#~ msgstr "Schriftfarbe"
+#~ msgid "Upper Color"
+#~ msgstr "Farbe f&uuml;r oben"
+#~ msgid "Lower Color"
+#~ msgstr "Farbe f&uuml;r unten"
+#~ msgid "Revert"
+#~ msgstr "Zur&uuml;cksetzen"
+#~ msgid "Advanced"
+#~ msgstr "Erweitert"
+#~ msgid "Update Header &raquo;"
+#~ msgstr "Kopfbereich aktualisieren &raquo;"
+#~ msgid "Font Color (CSS):"
+#~ msgstr "Schriftfarbe (CSS):"
+#~ msgid "Upper Color (HEX):"
+#~ msgstr "Farbe f&uuml;r oben (HEX):"
+#~ msgid "Lower Color (HEX):"
+#~ msgstr "Farbe f&uuml;r unten (HEX):"
+#~ msgid "Select Default Colors"
+#~ msgstr "Standardfarben ausw&auml;hlen"
+#~ msgid "Toggle Text Display"
+#~ msgstr "Textanzeige aktivieren/deaktivieren"
+#~ msgid "&raquo; Blog Archive"
+#~ msgstr "&raquo; Blogarchiv"
+#~ msgid "This entry was posted on %1$s at %2$s and is filed under %3$s."
+#~ msgstr ""
+#~ "Dieser Beitrag wurde am %1$s um %2$s Uhr veröffentlicht und unter %3$s "
+#~ "gespeichert."
+#~ msgid "Sorry, no posts matched your criteria."
+#~ msgstr ""
+#~ "Leider wurden keine Artikel gefunden, die Ihren Kriterien entsprechen."
+#~ msgid "Sorry, but you are looking for something that isn&#8217;t here."
+#~ msgstr "Es konnten leider keine passenden Inhalte gefunden werden."
+#~ msgid "Read the rest of this page &raquo;"
+#~ msgstr "Diesen Seite weiterlesen &raquo;"
+#~ msgid "Search for:"
+#~ msgstr "Suchen nach:"
+#~ msgid "No posts found. Try a different search?"
+#~ msgstr ""
+#~ "Ihre Suche ergab keine Treffer. M&ouml;chten Sie eine neue Suche starten?"
+#~ msgid "Author"
+#~ msgstr "Autor"
+#~ msgid "You are currently browsing the archives for the %s category."
+#~ msgstr "Sie sind momentan im Archiv der Kategorie %s."
+#~ msgid ""
+#~ "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives "
+#~ "for the day %3$s."
+#~ msgstr ""
+#~ "Sie sind momentan im Blogarchiv f&uuml;r den %3$s von <a href=\"%1$s/\">%2"
+#~ "$s</a>."
+#~ msgid ""
+#~ "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives "
+#~ "for %3$s."
+#~ msgstr ""
+#~ "Sie sind momentan im Blogarchiv f&uuml;r %3$s von <a href=\"%1$s/\">%2$s</"
+#~ "a>."
+#~ msgid ""
+#~ "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives "
+#~ "for the year %3$s."
+#~ msgstr ""
+#~ "Sie sind momentan im Blogarchiv f&uuml;r das Jahr %3$s von <a href=\"%1$s/"
+#~ "\">%2$s</a>."
+#~ msgid ""
+#~ "You have searched the <a href=\"%1$s/\">%2$s</a> blog archives for "
+#~ "<strong>&#8216;%3$s&#8217;</strong>. If you are unable to find anything "
+#~ "in these search results, you can try one of these links."
+#~ msgstr ""
+#~ "Sie haben im Blogarchiv von <a href=\"%1$s/\">%2$s</a> nach "
+#~ "<strong>&#8222;%3$s&#8220;</strong> gesucht. Falls Sie in den "
+#~ "Suchergebnissen nicht f&uuml;ndig werden, helfen Ihnen m&ouml;"
+#~ "glicherweise die folgenden Links."
+#~ msgid ""
+#~ "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives."
+#~ msgstr "Sie sind momentan im Blogarchiv von <a href=\"%1$s/\">%2$s</a>."
+#~ msgid "This page validates as XHTML 1.0 Transitional"
+#~ msgstr "Diese Seite ist valides XHTML 1.0 Transitional"
+#~ msgid ""
+#~ "Valid <abbr title=\"eXtensible HyperText Markup Language\">XHTML</abbr>"
+#~ msgstr ""
+#~ "Valides <abbr title=\"eXtensible HyperText Markup Language\">XHTML</abbr>"
+#~ msgid "XHTML Friends Network"
+#~ msgstr "XHTML Friends Network"
+#~ msgid "XFN"
+#~ msgstr "XFN"
+#~ msgid ""
+#~ "Powered by WordPress, state-of-the-art semantic personal publishing "
+#~ "platform."
+#~ msgstr "L&auml;uft mit WordPress, der f&uuml;hrenden Weblog-Anwendung."
+#~ msgid "Edit this entry"
+#~ msgstr "Diesen Eintrag bearbeiten"
+#~ msgid ""
+#~ "Powered by <a href=\"%s\" title=\"Powered by WordPress, state-of-the-art "
+#~ "semantic personal publishing platform\"><strong>Wordpress</strong></a>"
+#~ msgstr ""
+#~ "<a href=\"%s\" title=\"WordPress, die f&uuml;hrende Weblog-Anwendung"
+#~ "\"><strong>WordPress</strong></a>"
+#~ msgid "Logout &raquo;"
+#~ msgstr "Abmelden &raquo;"
+#~ msgid ""
+#~ "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out "
+#~ "of this account\">Logout &raquo;</a>"
+#~ msgstr ""
+#~ "Angemeldet als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\">Abmelden "
+#~ "&raquo;</a>"
+
