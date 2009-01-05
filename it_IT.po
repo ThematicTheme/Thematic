@@ -1,0 +1,1113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title> Thematic 0.6.5 - German / GERMANY - Poedit Export </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor='#FFFFFF'>
+<h1> Thematic 0.6.5 : German / GERMANY</h1>
+<table align=center border=1 cellspacing=2 cellpadding=4>
+<tr><th colspan=2>Project info</th></tr>
+<tr><td>Project name and version:</td><td>Thematic 0.6.5</td></tr>
+<tr><td>Language:</td><td>German</td></tr>
+<tr><td>Country:</td><td>GERMANY</td></tr>
+<tr><td>Team:</td><td></td></tr>
+<tr><td>Team's email address:</td><td><a href="mailto:"></a></td></tr>
+<tr><td>Charset:</td><td>UTF-8</td></tr>
+</table>
+98 % translated, 83 strings (1 fuzzy, 0 bad tokens, 0 not translated)
+<table border=1 cellspacing=2 cellpadding=4>
+<tr>
+<th>
+Original string
+</th>
+<th>
+Translation
+</th>
+</th>
+<th>
+Notes
+</th>
+</tr>
+<tr bgcolor='#F4F1C1'>
+<td>
+Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.
+</td>
+<td>
+Non è stato trovato quelo che cercavi, ci dispiace.
+</td>
+<td>
+<font size="-1">
+Fuzzy translation&lt;BR&gt;
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Find
+</td>
+<td>
+Cerca
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Daily Archives: &lt;span&gt;%s&lt;/span&gt;
+</td>
+<td>
+Archivi Giornalieri: &lt;span&gt;%s&lt;/span&gt;
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Monthly Archives: &lt;span&gt;%s&lt;/span&gt;
+</td>
+<td>
+Archivi Mensili: &lt;span&gt;%s&lt;/span&gt;
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Yearly Archives: &lt;span&gt;%s&lt;/span&gt;
+</td>
+<td>
+Archivi Annuali: &lt;span&gt;%s&lt;/span&gt;
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Blog Archives
+</td>
+<td>
+Archivi del blog
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+&lt;span class=\"meta-nav\"&gt;&amp;laquo;&lt;/span&gt; Older posts
+</td>
+<td>
+&lt;span class=\"meta-nav\"&gt;&amp;laquo;&lt;/span&gt; Articoli Precedenti
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Newer posts &lt;span class=\"meta-nav\"&gt;&amp;raquo;&lt;/span&gt;
+</td>
+<td>
+Articoli Recenti &lt;span class=\"meta-nav\"&gt;&amp;raquo;&lt;/span&gt;
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Read More &lt;span class=\"meta-nav\"&gt;&amp;raquo;&lt;/span&gt;
+</td>
+<td>
+Continua  &lt;span class=\"meta-nav\"&gt;&amp;raquo;&lt;/span&gt;
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Archives by Category
+</td>
+<td>
+Archivi per Categoria
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Archives by Month
+</td>
+<td>
+Archivi Mensili
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Edit
+</td>
+<td>
+Modifica
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Pages:
+</td>
+<td>
+Pagine:
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Author Archives: 
+</td>
+<td>
+Archivi dell'Autore: 
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Email 
+</td>
+<td>
+Email
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Category Archives:
+</td>
+<td>
+Archivi per Categoria:
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+This post is password protected. Enter the password to view any comments.
+</td>
+<td>
+Questo articolo è protetto da password. Inserisci la password per leggere i commenti.
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+&lt;span&gt;%d&lt;/span&gt; Comments
+</td>
+<td>
+&lt;span&gt;%d&lt;/span&gt;  Commenti
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+&lt;span&gt;One&lt;/span&gt; Comment
+</td>
+<td>
+&lt;span&gt;Un&lt;/span&gt; Commento
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Posted %1$s at %2$s &lt;span class=\"meta-sep\"&gt;|&lt;/span&gt; &lt;a href=\"%3$s\" title=\"Permalink to this comment\"&gt;Permalink&lt;/a&gt;
+</td>
+<td>
+Pubblicato %1$s in %2$s &lt;span class=\"meta-sep\"&gt;|&lt;/span&gt; &lt;a href=\"%3$s\"&gt;Permalink&lt;/a&gt;
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+\t\t\t\t\t&lt;span class='unapproved'&gt;Your comment is awaiting moderation.&lt;/span&gt;\n
+</td>
+<td>
+\t\t\t\t\t&lt;span class='unapproved'&gt;Il tuo commento deve essere autorizzato.&lt;/span&gt;\n
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+&lt;span&gt;%d&lt;/span&gt; Trackbacks
+</td>
+<td>
+&lt;span&gt;%d&lt;/span&gt; Trackbacks
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+&lt;span&gt;One&lt;/span&gt; Trackback
+</td>
+<td>
+&lt;span&gt;Un&lt;/span&gt; Trackback
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+By %1$s on %2$s at %3$s
+</td>
+<td>
+Di %1$s il %2$s alle %3$s
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+\\t\\t\\t\\t\\t&lt;span class=\"unapproved\"&gt;Your trackback is awaiting moderation.&lt;/span&gt;\\n
+</td>
+<td>
+\\t\\t\\t\\t\\t&lt;span class=\"unapproved\"&gt;Il tuo trackback è in attesa di autorizzazione.&lt;/span&gt;\\n
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Post a Comment
+</td>
+<td>
+Scrivi un Commento
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+You must be &lt;a href=\"%s\" title=\"Log in\"&gt;logged in&lt;/a&gt; to post a comment.
+</td>
+<td>
+Devi effettuare il &lt;a href=\"%s\"&gt;Log in&lt;/a&gt; per pubblicare un commento.
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+&lt;span class=\"loggedin\"&gt;Logged in as &lt;a href=\"%1$s\" title=\"Logged in as %2$s\"&gt;%2$s&lt;/a&gt;.&lt;/span&gt; &lt;span class=\"logout\"&gt;&lt;a href=\"%3$s\" title=\"Log out of this account\"&gt;Log out?&lt;/a&gt;&lt;/span&gt;
+</td>
+<td>
+&lt;span class=\"loggedin\"&gt;Autenticato come &lt;a href=\"%1$s\" title=\"Autenticato come %2$s\"&gt;%2$s&lt;/a&gt;.&lt;/span&gt; &lt;span class=\"logout\"&gt;&lt;a href=\"%3$s\" title=\"Esci dal tuo account\"&gt;Esci dal tuo accountt?&lt;/a&gt;&lt;/span&gt;
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Your email is &lt;em&gt;never&lt;/em&gt; published nor shared.
+</td>
+<td>
+Il tuo indirizzo email non sarà &lt;em&gt;mai&lt;/em&gt;  pubblicato e/o condiviso.
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Required fields are marked &lt;span class=\"required\"&gt;*&lt;/span&gt;
+</td>
+<td>
+I campi obbligatori sono contrassegnati da &lt;span class=\"requeridos\"&gt;*&lt;/span&gt; 
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Name
+</td>
+<td>
+Nome
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+&lt;span class=\"required\"&gt;*&lt;/span&gt;
+</td>
+<td>
+&lt;span class=\"obbligatorio\"&gt;*&lt;/span&gt;
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Email
+</td>
+<td>
+Email
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Website
+</td>
+<td>
+Sito Web
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Comment
+</td>
+<td>
+Commenta
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Post Comment
+</td>
+<td>
+Scrivi Commento
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Posts RSS feed
+</td>
+<td>
+RSS feed Articoli
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Comments RSS feed
+</td>
+<td>
+RSS feed Commenti
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Skip navigation to the content
+</td>
+<td>
+Vai al contenuto
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Skip to content
+</td>
+<td>
+Vai al contenuto
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Pages: 
+</td>
+<td>
+Pagine:
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Search Results for:
+</td>
+<td>
+Risultati della ricerca:
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Nothing Found
+</td>
+<td>
+Nessun Risultato
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Sorry, but nothing matched your search criteria. Please try again with some different keywords.
+</td>
+<td>
+Nessun risultato per la tua ricerca. Prova ancora cercando termini differenti
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Search
+</td>
+<td>
+Cerca
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Pages
+</td>
+<td>
+Pagine
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Categories
+</td>
+<td>
+Categorie
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Archives
+</td>
+<td>
+Archivi
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+RSS Feeds
+</td>
+<td>
+RSS Feeds
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+All posts
+</td>
+<td>
+Tutti gli articoli
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+All comments
+</td>
+<td>
+Tutti i commenti
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Meta
+</td>
+<td>
+Informazioni
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Tag Archives:
+</td>
+<td>
+Archivio delle etichette
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Not Found
+</td>
+<td>
+Non trovato
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Permalink to 
+</td>
+<td>
+Permalink a
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+By 
+</td>
+<td>
+Di
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+View all posts by 
+</td>
+<td>
+Leggi tutti i commenti di
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Edit post
+</td>
+<td>
+Modifica articolo
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+This entry was posted in 
+</td>
+<td>
+Questo articolo è stato pubblicato in
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Also posted in 
+</td>
+<td>
+Pubblicato anche in
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Posted in 
+</td>
+<td>
+Pubblicato in
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+ and tagged
+</td>
+<td>
+ e eticchettato
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+ Also tagged 
+</td>
+<td>
+Etichettato anche
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Tagged
+</td>
+<td>
+Etichettato
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Comment on 
+</td>
+<td>
+Commenta
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+ Comments
+</td>
+<td>
+ Commenti
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+ Comment
+</td>
+<td>
+ Commento
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Leave a comment
+</td>
+<td>
+Scrivi un commento
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Comments closed
+</td>
+<td>
+Commenti chiusi
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+. Bookmark the 
+</td>
+<td>
+. Aggiungi ai preferiti
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+permalink
+</td>
+<td>
+permalink
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Post a comment
+</td>
+<td>
+Scrivi un commento
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+ or leave a trackback: 
+</td>
+<td>
+ . o lascia un trackback: 
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Trackback URL for your post
+</td>
+<td>
+URL del Trackback per il tuo articolo
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Trackback URL
+</td>
+<td>
+URL del Trackback
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+ Comments are closed, but you can leave a trackback: 
+</td>
+<td>
+I commenti sono chiusi ma puoi lasciare un trackback
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+ Trackbacks are closed, but you can 
+</td>
+<td>
+ I trackbacks sono chiusi ma puoi
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+post a comment
+</td>
+<td>
+scrivere un commento
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+ Both comments and trackbacks are currently closed.
+</td>
+<td>
+I commenti ed i trackbacks sono chiusi.
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+For more information about this theme, &lt;a href=\"http://themeshaper.com\"&gt;visit ThemeShaper&lt;/a&gt;. Please visit the &lt;a href=\"http://themeshaper.com/forums/\"&gt;ThemeShaper Forums&lt;/a&gt; if you have any questions about Thematic.
+</td>
+<td>
+Per avere maggiori informazioni su questo tema, &lt;a href=\"http://themeshaper.com\"&gt;visita  ThemeShaper&lt;/a&gt;. visitare &lt;a href=\"http://themeshaper.com/forums/\"&gt;ThemeShaper Forum&lt;/a&gt; se hai qualunque domanda su Thematic.
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+RSS Links
+</td>
+<td>
+Collegamenti RSS
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#F2F2F2'>
+<td>
+Title:
+</td>
+<td>
+Titolo:
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+<td>
+Blog Index
+</td>
+<td>
+Indice del blog
+</td>
+<td>
+<font size="-1">
+ 
+</font>
+</td>
+</tr>
+</table>
+</body>
+</html>
