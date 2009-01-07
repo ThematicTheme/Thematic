@@ -1,0 +1,716 @@
+# kubrick theme pot file.
+# Copyright (C) 2007 WordPress
+# This file is distributed under the same license as the kubrick theme package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Thematic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-07 23:27+0200\n"
+"PO-Revision-Date: 2009-01-08 00:41+0200\n"
+"Last-Translator: Cristian Antohe <sareiodata@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Romana\n"
+"X-Poedit-Country: GERMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:10
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
+msgstr "Ne cerem scuze, dar nu am reusit sa gasim ce cautati. Poate formularul de cautare va va ajuta."
+
+#: 404.php:15
+#: search.php:58
+msgid "Find"
+msgstr "Cautare"
+
+#: archive.php:16
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Arhive zilnice: <span>%s</span>"
+
+#: archive.php:18
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Arhive lunare: <span>%s</span>"
+
+#: archive.php:20
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Arhive anuale: <span>%s</span>"
+
+#: archive.php:22
+msgid "Blog Archives"
+msgstr "Arhivele blogului"
+
+#: archive.php:31
+#: archive.php:53
+#: author.php:21
+#: author.php:56
+#: category.php:20
+#: category.php:42
+#: index.php:17
+#: index.php:49
+#: search.php:21
+#: search.php:43
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Posturi mai vechi"
+
+#: archive.php:32
+#: archive.php:54
+#: author.php:22
+#: author.php:57
+#: category.php:21
+#: category.php:43
+#: index.php:18
+#: index.php:50
+#: search.php:22
+#: search.php:44
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Posturi mai noi <span class=\"meta-nav\">&raquo;</span>"
+
+#: archive.php:41
+#: attachment.php:20
+#: author.php:44
+#: category.php:30
+#: index.php:30
+#: search.php:31
+msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Citeste mai departe <span class=\"meta-nav\">&raquo;</span>"
+
+#: archives.php:20
+msgid "Archives by Category"
+msgstr "Arhive dupa categorii"
+
+#: archives.php:26
+msgid "Archives by Month"
+msgstr "Arhive dupa luna"
+
+#: archives.php:32
+#: comments-legacy.php:39
+#: comments-legacy.php:65
+#: links.php:20
+#: page.php:16
+msgid "Edit"
+msgstr "Editeaza"
+
+#: attachment.php:22
+#: index.php:32
+msgid "Pages:"
+msgstr "Pagini:"
+
+#: author.php:15
+msgid "Author Archives: "
+msgstr "Arhivele autorului: "
+
+#: author.php:33
+msgid "Email "
+msgstr "Email"
+
+#: category.php:13
+msgid "Category Archives:"
+msgstr "Arhivele categoriilor:"
+
+#: comments-legacy.php:9
+#: comments.php:9
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Acest articol este protejat cu parola. Introduce-ti parola pentru a vedea comentariile."
+
+#: comments-legacy.php:28
+#: comments.php:28
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span>Comentarii"
+
+#: comments-legacy.php:28
+#: comments.php:28
+msgid "<span>One</span> Comment"
+msgstr "<span>Ein</span> Comentariu"
+
+#: comments-legacy.php:35
+#, php-format
+msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
+msgstr "Publicat %1$s la %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Link permanent catre comentariu\">Link permanent</a>"
+
+#: comments-legacy.php:40
+msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>Comentariul asteapta sa fie moderat.</span>\n"
+
+#: comments-legacy.php:54
+#: comments.php:46
+#, php-format
+msgid "<span>%d</span> Trackbacks"
+msgstr "<span>%d</span> Ping-uri"
+
+#: comments-legacy.php:54
+#: comments.php:46
+msgid "<span>One</span> Trackback"
+msgstr "<span>Un</span> Ping"
+
+#: comments-legacy.php:61
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr "De catre %1$s in %2$s la %3$s"
+
+#: comments-legacy.php:66
+msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Ping-ul d-voastra asteapta sa fie moderat.</span>\\n"
+
+#: comments-legacy.php:79
+#: comments.php:60
+msgid "Post a Comment"
+msgstr "Publicati un comentariu"
+
+#: comments-legacy.php:82
+#: comments.php:65
+#, php-format
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Trebuie sa va <a href=\"%s\" title=\"Autentificare\">autentificati</a> pentru a publica un comentariu."
+
+#: comments-legacy.php:90
+#: comments.php:73
+#, php-format
+msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"loggedin\">Sunteti autentificati ca <a href=\"%1$s\" title=\"Sunteti autentificati ca %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Deautentificare\">Deautentificare?</a></span>"
+
+#: comments-legacy.php:97
+#: comments.php:80
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "Emailul d-voastra nu va fi <em>niciodata</em> publicat sau redistribuit."
+
+#: comments-legacy.php:97
+#: comments.php:80
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "Campurile obligatorii sunt marcate cu <span class=\"required\">*</span>"
+
+#: comments-legacy.php:100
+#: comments.php:83
+msgid "Name"
+msgstr "Nume"
+
+#: comments-legacy.php:100
+#: comments-legacy.php:105
+#: comments.php:83
+#: comments.php:88
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: comments-legacy.php:105
+#: comments.php:88
+msgid "Email"
+msgstr "Email"
+
+#: comments-legacy.php:110
+#: comments.php:93
+msgid "Website"
+msgstr "Sit web"
+
+#: comments-legacy.php:117
+#: comments.php:100
+msgid "Comment"
+msgstr "Comentariu"
+
+#: comments-legacy.php:123
+#: comments.php:106
+msgid "Post Comment"
+msgstr "Publicati comentariul"
+
+#: comments.php:60
+#, php-format
+msgid "Post a Reply to %s"
+msgstr "Publicati un raspuns la %s"
+
+#: header.php:29
+msgid "Posts RSS feed"
+msgstr "RSS feed-ul articolelor"
+
+#: header.php:30
+msgid "Comments RSS feed"
+msgstr "RSS feed-ul comentarilor"
+
+#: header.php:53
+msgid "Skip navigation to the content"
+msgstr "Sariti peste navigatie catre continut"
+
+#: header.php:53
+msgid "Skip to content"
+msgstr "Sariti catre continut"
+
+#: page.php:14
+msgid "Pages: "
+msgstr "Pagini: "
+
+#: search.php:15
+msgid "Search Results for:"
+msgstr "Rezultatele cautarii pentru:"
+
+#: search.php:51
+msgid "Nothing Found"
+msgstr "Nu s-a gasit nimic"
+
+#: search.php:53
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Ne pare rau, dar nimic nu se potriveste cu cautarea d-voastra. Va rugam sa reincercati cu alte cuvinte."
+
+#: sidebar.php:5
+#: sidebar.php:9
+msgid "Search"
+msgstr "Cauta"
+
+#: sidebar.php:15
+msgid "Pages"
+msgstr "Pagini"
+
+#: sidebar.php:22
+msgid "Categories"
+msgstr "Categorii"
+
+#: sidebar.php:30
+msgid "Archives"
+msgstr "Arhive"
+
+#: sidebar.php:47
+msgid "RSS Feeds"
+msgstr "Feed-uri RSS"
+
+#: sidebar.php:49
+msgid "All posts"
+msgstr "Toate articolele"
+
+#: sidebar.php:50
+msgid "All comments"
+msgstr "Toate comentarile"
+
+#: sidebar.php:55
+msgid "Meta"
+msgstr "Meta"
+
+#: tag.php:13
+msgid "Tag Archives:"
+msgstr "Arviha etichetelor:"
+
+#: library/extensions/discussion.php:22
+msgid "Reply"
+msgstr "Raspunde"
+
+#: library/extensions/discussion.php:23
+msgid "Log in to reply."
+msgstr "Autentificati-va pentru a raspunde."
+
+#: library/extensions/hooks-filters.php:37
+msgid "Not Found"
+msgstr "Nimic gasit"
+
+#: library/extensions/hooks-filters.php:42
+#: library/extensions/hooks-filters.php:126
+msgid "Permalink to "
+msgstr "Link permanent catre "
+
+#: library/extensions/hooks-filters.php:50
+msgid "By "
+msgstr "De catre "
+
+#: library/extensions/hooks-filters.php:52
+msgid "View all posts by "
+msgstr "Vedeti toate articolele scrise de "
+
+#: library/extensions/hooks-filters.php:76
+msgid "Edit post"
+msgstr "Editeaza articol"
+
+#: library/extensions/hooks-filters.php:83
+msgid "This entry was posted in "
+msgstr "Acest articol a post publicat in "
+
+#: library/extensions/hooks-filters.php:86
+msgid "Also posted in "
+msgstr "Deasemenea publicat in "
+
+#: library/extensions/hooks-filters.php:89
+msgid "Posted in "
+msgstr "Publicat in "
+
+#: library/extensions/hooks-filters.php:95
+msgid " and tagged"
+msgstr " si etichetat"
+
+#: library/extensions/hooks-filters.php:98
+msgid " Also tagged "
+msgstr " Deasemenea etichetat "
+
+#: library/extensions/hooks-filters.php:100
+msgid "Tagged"
+msgstr "Etichetat"
+
+#: library/extensions/hooks-filters.php:108
+#: library/extensions/hooks-filters.php:111
+#: library/extensions/hooks-filters.php:114
+msgid "Comment on "
+msgstr "Puteti comenta."
+
+#: library/extensions/hooks-filters.php:109
+msgid " Comments"
+msgstr " Comentarii"
+
+#: library/extensions/hooks-filters.php:112
+msgid " Comment"
+msgstr " Comentariu"
+
+#: library/extensions/hooks-filters.php:115
+msgid "Leave a comment"
+msgstr "Lasati un comentariu"
+
+#: library/extensions/hooks-filters.php:118
+msgid "Comments closed"
+msgstr "Comentariile nu sunt acceptate."
+
+#: library/extensions/hooks-filters.php:126
+msgid ". Bookmark the "
+msgstr ". Salvati ca legatura de carte: "
+
+#: library/extensions/hooks-filters.php:127
+msgid "permalink"
+msgstr "link permanent"
+
+#: library/extensions/hooks-filters.php:129
+#: library/extensions/hooks-filters.php:137
+msgid "Post a comment"
+msgstr "Publicati un comentariu"
+
+#: library/extensions/hooks-filters.php:130
+msgid " or leave a trackback: "
+msgstr " sau lasati un ping: "
+
+#: library/extensions/hooks-filters.php:131
+#: library/extensions/hooks-filters.php:134
+msgid "Trackback URL for your post"
+msgstr "Linkul Ping-ului pentru articolul d-voastra"
+
+#: library/extensions/hooks-filters.php:131
+#: library/extensions/hooks-filters.php:134
+msgid "Trackback URL"
+msgstr "Linkul Ping-ului"
+
+#: library/extensions/hooks-filters.php:133
+msgid " Comments are closed, but you can leave a trackback: "
+msgstr " Comentarile sunt inchise, dar puteti lasa un ping: "
+
+#: library/extensions/hooks-filters.php:136
+msgid " Trackbacks are closed, but you can "
+msgstr "Ping-urile sunt inchise, dar puteti sa "
+
+#: library/extensions/hooks-filters.php:137
+msgid "post a comment"
+msgstr "publicati un comentariu"
+
+#: library/extensions/hooks-filters.php:139
+msgid " Both comments and trackbacks are currently closed."
+msgstr "Comentarile si ping-urile sunt inchise."
+
+#: library/extensions/theme-options.php:211
+msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
+msgstr "Pentru mai multe informatii despre aceasta tema, <a href=\"http://themeshaper.com\">visitati ThemeShaper</a>. Va rugam vizitati <a href=\"http://themeshaper.com/forums/\">Forumul ThemeShaper</a> daca aveti intrebari despre Thematic."
+
+#: library/extensions/widgets.php:65
+#: library/extensions/widgets.php:237
+#: library/extensions/widgets.php:238
+msgid "RSS Links"
+msgstr "Link-uri RSS"
+
+#: library/extensions/widgets.php:89
+msgid "Title:"
+msgstr "Titlu:"
+
+#: library/extensions/widgets.php:232
+msgid "Blog Index"
+msgstr "Index blog"
+
+#~ msgid "Error 404 - Not Found"
+#~ msgstr "Fehler 404 - Nicht gefunden"
+#~ msgid "Archive for the &#8216;%s&#8217; Category"
+#~ msgstr "Archiv f&uuml;r die Kategorie &#8222;%s&#8220;"
+#~ msgid "Posts Tagged &#8216;%s&#8217;"
+#~ msgstr "Artikel-Schlagworte: &#8222;%s&#8220;"
+#~ msgid "Archive for %s|Daily archive page"
+#~ msgstr "Archiv f&uuml;r %s"
+#~ msgid "F jS, Y"
+#~ msgstr "j. F Y"
+#~ msgid "Archive for %s|Monthly archive page"
+#~ msgstr "Archiv f&uuml;r %s"
+#~ msgid "F, Y"
+#~ msgstr "F Y"
+#~ msgid "Archive for %s|Yearly archive page"
+#~ msgstr "Archiv f&uuml;r %s"
+#~ msgid "Y"
+#~ msgstr "Y"
+#~ msgid "&laquo; Older Entries"
+#~ msgstr "&laquo; &Auml;ltere Eintr&auml;ge"
+#~ msgid "Newer Entries &raquo;"
+#~ msgstr "Neuere Eintr&auml;ge &raquo;"
+#~ msgid "l, F jS, Y"
+#~ msgstr "l, j. F Y"
+#~ msgid "Tags:"
+#~ msgstr "Schlagworte:"
+#~ msgid "No Comments &#187;"
+#~ msgstr "Keine Kommentare &#187;"
+#~ msgid "1 Comment &#187;"
+#~ msgstr "1 Kommentar &#187;"
+#~ msgid "% Comments &#187;"
+#~ msgstr "% Kommentare &#187;"
+#~ msgid "Archives by Subject:"
+#~ msgstr "Archive nach Thema:"
+#~ msgid "Permanent Link: %s"
+#~ msgstr "Permanent-Link: %s"
+#~ msgid "Read the rest of this entry &raquo;"
+#~ msgstr "Diesen Beitrag weiterlesen &raquo;"
+#~ msgid "This entry was posted %1$s on %2$s at %3$s and is filed under %4$s."
+#~ msgstr ""
+#~ "Dieser Beitrag wurde vor %1$s am %2$s um %3$s Uhr ver&ouml;ffentlicht und "
+#~ "unter %4$s gespeichert."
+#~ msgid ""
+#~ "You can follow any responses to this entry through the <a href='%s'>RSS "
+#~ "2.0</a> feed."
+#~ msgstr ""
+#~ "Sie k&ouml;nnen Kommentare zu diesem Eintrag &uuml;ber den <a href='%"
+#~ "s'>RSS-2.0</a>-Feed verfolgen."
+#~ msgid ""
+#~ "You can <a href=\"#respond\">leave a response</a>, or <a href=\"%s\" rel="
+#~ "\"trackback\">trackback</a> from your own site."
+#~ msgstr ""
+#~ "Sie k&ouml;nnen einen <a href=\"#respond\">Kommentar hinterlassen</a> "
+#~ "oder einen <a href=\"%s\" rel=\"trackback\">Trackback</a> von Ihrer "
+#~ "Website hierher setzen."
+#~ msgid ""
+#~ "Responses are currently closed, but you can <a href=\"%s\" rel=\"trackback"
+#~ "\">trackback</a> from your own site."
+#~ msgstr ""
+#~ "Kommentare sind momentan deaktiviert, aber Sie k&ouml;nnen einen <a href="
+#~ "\"%s\" rel=\"trackback\">Trackback</a> von Ihrer Website hierher setzen."
+#~ msgid ""
+#~ "You can skip to the end and leave a response. Pinging is currently not "
+#~ "allowed."
+#~ msgstr ""
+#~ "Sie k&ouml;nnen einen <a href=\"#respond\">Kommentar hinterlassen</a>, "
+#~ "Pingbacks/Trackbacks sind momentan deaktiviert."
+#~ msgid "Edit this entry."
+#~ msgstr "Diesen Eintrag bearbeiten"
+#~ msgid "Sorry, no attachments matched your criteria."
+#~ msgstr ""
+#~ "Leider wurden keine Anh&auml;nge gefunden, die Ihren Kriterien "
+#~ "entsprechen."
+#~ msgid "No Responses"
+#~ msgstr "Keine Kommentare"
+#~ msgid "One Response"
+#~ msgstr "1 Kommentar"
+#~ msgid "% Responses"
+#~ msgstr "% Kommentare"
+#~ msgid "to &#8220;%s&#8221;"
+#~ msgstr "zu &#8222;%s&#8220;"
+#~ msgid "<cite>%s</cite> Says:"
+#~ msgstr "<cite>%s</cite> sagt:"
+#~ msgid "edit"
+#~ msgstr "bearbeiten"
+#~ msgid "Comments are closed."
+#~ msgstr "Kommentieren ist momentan nicht m&ouml;glich."
+#~ msgid "Leave a Reply"
+#~ msgstr "Kommentieren"
+#~ msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
+#~ msgstr "Angemeldet als <a href=\"%1$s\">%2$s</a>."
+#~ msgid "Log out of this account"
+#~ msgstr "Jetzt abmelden"
+#~ msgid "Log out &raquo;"
+#~ msgstr "Abmelden &raquo;"
+#~ msgid "(required)"
+#~ msgstr "(ben&ouml;tigt)"
+#~ msgid "Mail (will not be published)"
+#~ msgstr "E-Mail (wird nicht ver&ouml;ffentlicht)"
+#~ msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
+#~ msgstr ""
+#~ "<strong>XHTML:</strong> Sie k&ouml;nnen folgende Elemente nutzen: <code>%"
+#~ "s</code>"
+#~ msgid "Submit Comment"
+#~ msgstr "Kommentar senden"
+#~ msgid "%1$s - Comments on %2$s"
+#~ msgstr "%1$s - Kommentare zu %2$s"
+#~ msgid ""
+#~ "<abbr title=\"Really Simple Syndication\">RSS</abbr> feed for comments on "
+#~ "this post."
+#~ msgstr ""
+#~ "<abbr title=\"Really Simple Syndication\">RSS</abbr>-Feed f&uuml;r "
+#~ "Kommentare zu diesem Artikel."
+#~ msgid ""
+#~ "The <abbr title=\"Universal Resource Locator\">URL</abbr> to TrackBack "
+#~ "this entry is: <em>%s</em>"
+#~ msgstr ""
+#~ "Die Trackback-<abbr title=\"Universal Resource Locator\">URL</abbr> zu "
+#~ "diesem Artikel ist: <em>%s</em>"
+#~ msgid "Pingback"
+#~ msgstr "Pingback"
+#~ msgid "by %1$s &#8212; %2$s @ <a href=\"#comment-%3$s\">%4$s</a>"
+#~ msgstr "von %1$s &#8212; %2$s um <a href=\"#comment-%3$s\">%4$s Uhr</a>"
+#~ msgid "No comments yet."
+#~ msgstr "Noch keine Kommentare."
+#~ msgid ""
+#~ "Line and paragraph breaks automatic, e-mail address never displayed, "
+#~ "<acronym title=\"Hypertext Markup Language\">HTML</acronym> allowed: "
+#~ "<code>%s</code>"
+#~ msgstr ""
+#~ "Zeilen- und Absatzumbr&uuml;che werden automatisch eingef&uuml;gt, Ihre E-"
+#~ "Mail wird nicht angezeigt.Erlaubtes <acronym title=\"Hypertext Markup "
+#~ "Language\">HTML</acronym>:"
+#~ msgid "<abbr title=\"Universal Resource Locator\">URL</abbr>"
+#~ msgstr "<abbr title=\"Universal Resource Locator\">URL</abbr>"
+#~ msgid "Say It!"
+#~ msgstr "Senden"
+#~ msgid "Sorry, the comment form is closed at this time."
+#~ msgstr "Kommentieren ist momentan leider nicht m&ouml;glich."
+#~ msgid "Close this window."
+#~ msgstr "Fenster schlie&szlig;en."
+#~ msgid ""
+#~ "Powered by <a href=\"%s\" title=\"Powered by WordPress, state-of-the-art "
+#~ "semantic personal publishing platform\"><strong>WordPress</strong></a>"
+#~ msgstr ""
+#~ "<a href=\"%s\" title=\"WordPress, die f&uuml;hrende Weblog-Anwendung"
+#~ "\"><strong>WordPress</strong></a>"
+#~ msgid "%1$s is proudly powered by %2$s"
+#~ msgstr "%1$s l&auml;uft mit %2$s"
+#~ msgid "%1$s and %2$s."
+#~ msgstr "%1$s und %2$s."
+#~ msgid "Entries (RSS)"
+#~ msgstr "Beitr&auml;ge (RSS)"
+#~ msgid "%d queries. %s seconds."
+#~ msgstr "%d Abfragen. %s Sekunden."
+#~ msgid "Customize Header"
+#~ msgstr "Kopfbereich anpassen"
+#~ msgid "Header Image and Color"
+#~ msgstr "Hintergrundbild und -farbe"
+#~ msgid "Close Color Picker"
+#~ msgstr "Farbw&auml;hler schlie&szlig;en"
+#~ msgid "Options saved."
+#~ msgstr "Einstellungen gespeichert."
+#~ msgid "Save"
+#~ msgstr "Speichern"
+#~ msgid "Font Color:"
+#~ msgstr "Schriftfarbe:"
+#~ msgid "Any CSS color (%s or %s or %s)"
+#~ msgstr "Eine beliebige CSS-Farbe (%s oder %s oder %s)"
+#~ msgid "Upper Color:"
+#~ msgstr "Farbe f&uuml;r oben:"
+#~ msgid "HEX only (%s or %s)"
+#~ msgstr "Nur HEX (%s oder %s)"
+#~ msgid "Lower Color:"
+#~ msgstr "Farbe f&uuml;r unten:"
+#~ msgid "Toggle Text"
+#~ msgstr "Text umschalten"
+#~ msgid "Use Defaults"
+#~ msgstr "Standard verwenden"
+#~ msgid "Font Color"
+#~ msgstr "Schriftfarbe"
+#~ msgid "Upper Color"
+#~ msgstr "Farbe f&uuml;r oben"
+#~ msgid "Lower Color"
+#~ msgstr "Farbe f&uuml;r unten"
+#~ msgid "Revert"
+#~ msgstr "Zur&uuml;cksetzen"
+#~ msgid "Advanced"
+#~ msgstr "Erweitert"
+#~ msgid "Update Header &raquo;"
+#~ msgstr "Kopfbereich aktualisieren &raquo;"
+#~ msgid "Font Color (CSS):"
+#~ msgstr "Schriftfarbe (CSS):"
+#~ msgid "Upper Color (HEX):"
+#~ msgstr "Farbe f&uuml;r oben (HEX):"
+#~ msgid "Lower Color (HEX):"
+#~ msgstr "Farbe f&uuml;r unten (HEX):"
+#~ msgid "Select Default Colors"
+#~ msgstr "Standardfarben ausw&auml;hlen"
+#~ msgid "Toggle Text Display"
+#~ msgstr "Textanzeige aktivieren/deaktivieren"
+#~ msgid "&raquo; Blog Archive"
+#~ msgstr "&raquo; Blogarchiv"
+#~ msgid "This entry was posted on %1$s at %2$s and is filed under %3$s."
+#~ msgstr ""
+#~ "Dieser Beitrag wurde am %1$s um %2$s Uhr veröffentlicht und unter %3$s "
+#~ "gespeichert."
+#~ msgid "Sorry, no posts matched your criteria."
+#~ msgstr ""
+#~ "Leider wurden keine Artikel gefunden, die Ihren Kriterien entsprechen."
+#~ msgid "Sorry, but you are looking for something that isn&#8217;t here."
+#~ msgstr "Es konnten leider keine passenden Inhalte gefunden werden."
+#~ msgid "Read the rest of this page &raquo;"
+#~ msgstr "Diesen Seite weiterlesen &raquo;"
+#~ msgid "Search for:"
+#~ msgstr "Suchen nach:"
+#~ msgid "No posts found. Try a different search?"
+#~ msgstr ""
+#~ "Ihre Suche ergab keine Treffer. M&ouml;chten Sie eine neue Suche starten?"
+#~ msgid "Author"
+#~ msgstr "Autor"
+#~ msgid "You are currently browsing the archives for the %s category."
+#~ msgstr "Sie sind momentan im Archiv der Kategorie %s."
+#~ msgid ""
+#~ "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives "
+#~ "for the day %3$s."
+#~ msgstr ""
+#~ "Sie sind momentan im Blogarchiv f&uuml;r den %3$s von <a href=\"%1$s/\">%2"
+#~ "$s</a>."
+#~ msgid ""
+#~ "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives "
+#~ "for %3$s."
+#~ msgstr ""
+#~ "Sie sind momentan im Blogarchiv f&uuml;r %3$s von <a href=\"%1$s/\">%2$s</"
+#~ "a>."
+#~ msgid ""
+#~ "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives "
+#~ "for the year %3$s."
+#~ msgstr ""
+#~ "Sie sind momentan im Blogarchiv f&uuml;r das Jahr %3$s von <a href=\"%1$s/"
+#~ "\">%2$s</a>."
+#~ msgid ""
+#~ "You have searched the <a href=\"%1$s/\">%2$s</a> blog archives for "
+#~ "<strong>&#8216;%3$s&#8217;</strong>. If you are unable to find anything "
+#~ "in these search results, you can try one of these links."
+#~ msgstr ""
+#~ "Sie haben im Blogarchiv von <a href=\"%1$s/\">%2$s</a> nach "
+#~ "<strong>&#8222;%3$s&#8220;</strong> gesucht. Falls Sie in den "
+#~ "Suchergebnissen nicht f&uuml;ndig werden, helfen Ihnen m&ouml;"
+#~ "glicherweise die folgenden Links."
+#~ msgid ""
+#~ "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives."
+#~ msgstr "Sie sind momentan im Blogarchiv von <a href=\"%1$s/\">%2$s</a>."
+#~ msgid "This page validates as XHTML 1.0 Transitional"
+#~ msgstr "Diese Seite ist valides XHTML 1.0 Transitional"
+#~ msgid ""
+#~ "Valid <abbr title=\"eXtensible HyperText Markup Language\">XHTML</abbr>"
+#~ msgstr ""
+#~ "Valides <abbr title=\"eXtensible HyperText Markup Language\">XHTML</abbr>"
+#~ msgid "XHTML Friends Network"
+#~ msgstr "XHTML Friends Network"
+#~ msgid "XFN"
+#~ msgstr "XFN"
+#~ msgid ""
+#~ "Powered by WordPress, state-of-the-art semantic personal publishing "
+#~ "platform."
+#~ msgstr "L&auml;uft mit WordPress, der f&uuml;hrenden Weblog-Anwendung."
+#~ msgid "Edit this entry"
+#~ msgstr "Diesen Eintrag bearbeiten"
+#~ msgid ""
+#~ "Powered by <a href=\"%s\" title=\"Powered by WordPress, state-of-the-art "
+#~ "semantic personal publishing platform\"><strong>Wordpress</strong></a>"
+#~ msgstr ""
+#~ "<a href=\"%s\" title=\"WordPress, die f&uuml;hrende Weblog-Anwendung"
+#~ "\"><strong>WordPress</strong></a>"
+#~ msgid "Logout &raquo;"
+#~ msgstr "Abmelden &raquo;"
+#~ msgid ""
+#~ "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out "
+#~ "of this account\">Logout &raquo;</a>"
+#~ msgstr ""
+#~ "Angemeldet als <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\">Abmelden "
+#~ "&raquo;</a>"
+
