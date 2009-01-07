@@ -58,6 +58,11 @@ function mytheme_add_admin() {
             header("Location: themes.php?page=theme-options.php&reset=true");
             die;
 
+        } else if ( 'reset_widgets' == $_REQUEST['action'] ) {
+            $null = null;
+            update_option('sidebars_widgets',$null);
+            header("Location: themes.php?page=theme-options.php&reset=true");
+            die;
         }
     }
 
@@ -71,6 +76,7 @@ function mytheme_admin() {
 
     if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings saved.</strong></p></div>';
     if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
+    if ( $_REQUEST['reset_widgets'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
     
 ?>
 <div class="wrap">
@@ -193,6 +199,12 @@ function mytheme_admin() {
 <p class="submit">
 <input name="reset" type="submit" value="Reset" />
 <input type="hidden" name="action" value="reset" />
+</p>
+</form>
+<form method="post">
+<p class="submit">
+<input name="reset_widgets" type="submit" value="Reset Widgets" />
+<input type="hidden" name="action" value="reset_widgets" />
 </p>
 </form>
 
