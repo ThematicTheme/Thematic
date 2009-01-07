@@ -1,6 +1,6 @@
 	<div id="primary" class="aside main-aside">
 		<ul class="xoxo">
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Primary Aside') ) : // begin primary sidebar widgets ?>
+<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('primary-aside') ) : // begin primary sidebar widgets ?>
 			<li id="search">
 				<h3><label for="s"><?php _e('Search', 'thematic') ?></label></h3>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
@@ -39,7 +39,7 @@
 
 	<div id="secondary" class="aside main-aside">
 		<ul class="xoxo">
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Secondary Aside') ) : // begin  secondary sidebar widgets ?>
+<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('secondary-aside') ) : // begin  secondary sidebar widgets ?>
 
 <?php wp_list_bookmarks('title_before=<h3>&title_after=</h3>&show_images=1') ?>
 

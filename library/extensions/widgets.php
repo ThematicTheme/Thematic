@@ -100,6 +100,7 @@ function thematic_widgets_init() {
 	// Area 1
     register_sidebar(array(
        	'name' => 'Primary Aside',
+       	'id' => 'primary-aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -109,6 +110,7 @@ function thematic_widgets_init() {
 	// Area 2
     register_sidebar(array(
        	'name' => 'Secondary Aside',
+       	'id' => 'secondary-aside', 
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -118,6 +120,7 @@ function thematic_widgets_init() {
 	// Area 3
     register_sidebar(array(
        	'name' => '1st Subsidiary Aside',
+       	'id' => '1st-subsidiary-aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -127,6 +130,7 @@ function thematic_widgets_init() {
 	// Area 4
     register_sidebar(array(
        	'name' => '2nd Subsidiary Aside',
+       	'id' => '2nd-subsidiary-aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -136,6 +140,7 @@ function thematic_widgets_init() {
 	// Area 5
     register_sidebar(array(
        	'name' => '3rd Subsidiary Aside',
+       	'id' => '3rd-subsidiary-aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -145,6 +150,7 @@ function thematic_widgets_init() {
 	// Area 6
     register_sidebar(array(
        	'name' => 'Index Top',
+       	'id' => 'index-top',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -154,6 +160,7 @@ function thematic_widgets_init() {
 	// Area 7
     register_sidebar(array(
        	'name' => 'Index Insert',
+       	'id' => 'index-insert',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -163,6 +170,7 @@ function thematic_widgets_init() {
 	// Area 8
     register_sidebar(array(
        	'name' => 'Index Bottom',
+       	'id' => 'index-bottom',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -172,6 +180,7 @@ function thematic_widgets_init() {
 	// Area 9
     register_sidebar(array(
        	'name' => 'Single Top',
+       	'id' => 'single-top',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -181,6 +190,7 @@ function thematic_widgets_init() {
 	// Area 10
     register_sidebar(array(
        	'name' => 'Single Insert',
+       	'id' => 'single-insert',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -190,6 +200,7 @@ function thematic_widgets_init() {
 	// Area 11
     register_sidebar(array(
        	'name' => 'Single Bottom',
+       	'id' => 'single-bottom',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -199,6 +210,7 @@ function thematic_widgets_init() {
 	// Area 12
     register_sidebar(array(
        	'name' => 'Page Top',
+       	'id' => 'page-top',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
@@ -208,6 +220,7 @@ function thematic_widgets_init() {
 	// Area 13
     register_sidebar(array(
        	'name' => 'Page Bottom',
+       	'id' => 'page-bottom',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
 		'before_title' => "<h3 class=\"widgettitle\">",
