@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Thematic\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-11-18 20:32+0100\n"
-"PO-Revision-Date: 2009-01-02 16:17+0100\n"
+"PO-Revision-Date: 2009-01-09 11:20+0100\n"
 "Last-Translator: Chris Gossmann <chris.gossmann@googlemail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -167,15 +167,15 @@ msgstr "Ihr Kommentar"
 
 #: comments-legacy.php:82
 #: comments.php:66
-#, fuzzy, php-format
+#, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Sie m&uuml;ssen <a href=\"%s\">angemeldet</a> sein, um kommentieren zu k&ouml;nnen."
+msgstr "Sie m&uuml;ssen <a href=\"%s\" title=\"Anmelden\">angemeldet</a> sein, um kommentieren zu k&ouml;nnen."
 
 #: comments-legacy.php:90
 #: comments.php:74
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "Angemeldet als <a href=\"%1$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\">Abmelden?</a></span>"
+msgstr "<span class=\"loggedin\">Angemeldet als <a href=\"%1$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\">Abmelden?</a></span>"
 
 #: comments-legacy.php:97
 #: comments.php:81
@@ -201,7 +201,6 @@ msgstr "<span class=\"required\">*</span>"
 
 #: comments-legacy.php:105
 #: comments.php:89
-#, fuzzy
 msgid "Email"
 msgstr "E-Mail"
 
@@ -345,7 +344,6 @@ msgstr "Getagged"
 #: library/extensions/hooks-filters.php:100
 #: library/extensions/hooks-filters.php:103
 #: library/extensions/hooks-filters.php:106
-#, fuzzy
 msgid "Comment on "
 msgstr "Kommentar"
 
@@ -362,7 +360,6 @@ msgid "Leave a comment"
 msgstr "Kommentieren"
 
 #: library/extensions/hooks-filters.php:110
-#, fuzzy
 msgid "Comments closed"
 msgstr "Kommentare geschlossen"
 
@@ -402,7 +399,6 @@ msgid " Trackbacks are closed, but you can "
 msgstr " Trackbacks sind geschlossen, aber sie können "
 
 #: library/extensions/hooks-filters.php:129
-#, fuzzy
 msgid "post a comment"
 msgstr "Kommentieren"
 
