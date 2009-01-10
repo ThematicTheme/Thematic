@@ -1,0 +1,403 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: thematic-pt\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-08-09 15:37+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Hugo Baeta <info@hugobaeta.com>\n"
+"Language-Team: Hugo Baeta <info@hugobaeta.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: PORTUGAL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;_c\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress\\wp-content\\themes\\thematic-0-6\n"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/404.php:12
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
+msgstr "Lamentamos, mas não foi possível encontrar o que procura. Tente usar a pesquisa."
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/404.php:17
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:58
+msgid "Find"
+msgstr "Procura"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archive.php:16
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Arquivos Diários: <span>%s</span>"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archive.php:18
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Arquivos Mensais: <span>%s</span>"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archive.php:20
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Arquivos Anuais: <span>%s</span>"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archive.php:22
+msgid "Blog Archives"
+msgstr "Arquivos do Blog"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archive.php:31
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archive.php:53
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/author.php:21
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/author.php:57
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/category.php:20
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/category.php:42
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/index.php:17
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/index.php:49
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:21
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:43
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Posts anteriores"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archive.php:32
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archive.php:54
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/author.php:22
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/author.php:58
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/category.php:21
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/category.php:43
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/index.php:18
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/index.php:50
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:22
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:44
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Posts mais recentes <span class=\"meta-nav\">&raquo;</span>"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archive.php:41
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/attachment.php:20
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/author.php:45
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/category.php:30
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/index.php:30
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:31
+msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Ler mais<span class=\"meta-nav\">&raquo;</span>"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archives.php:20
+msgid "Archives by Category"
+msgstr "Arquivos por Categoria"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archives.php:26
+msgid "Archives by Month"
+msgstr "Arquivos por Mês"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/archives.php:32
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:39
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:65
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/links.php:20
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/page.php:16
+msgid "Edit"
+msgstr "Editar"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/attachment.php:22
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/index.php:32
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/author.php:15
+msgid "Author Archives: "
+msgstr "Arquivos de Autor:"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/author.php:34
+msgid "Email "
+msgstr "Email"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/category.php:13
+msgid "Category Archives:"
+msgstr "Arquivos de Categoria:"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:9
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Este post encontra-se protegido por password. Insira a password para visualizar os comentários."
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:28
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span> Comentários"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:28
+msgid "<span>One</span> Comment"
+msgstr "<span>Um</span> Comentário"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:35
+#, php-format
+msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
+msgstr "Publicado %1$s às %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Link para este comentário\">Link</a>"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:40
+msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>O seu comentário aguarda moderação.</span>\n"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:54
+#, php-format
+msgid "<span>%d</span> Trackbacks"
+msgstr "<span>%d</span> Trackbacks"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:54
+msgid "<span>One</span> Trackback"
+msgstr "<span>Um</span> Trackback"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:61
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr "Por %1$s a %2$s às %3$s"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:66
+msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">O trackback aguarda moderação.</span>\\n"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:79
+msgid "Post a Comment"
+msgstr "Publicar Comentário"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:82
+#, php-format
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Tem de estar com <a href=\"%s\" title=\"Log in\">sessão activa</a> para publicar um comentário."
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:90
+#, php-format
+msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"loggedin\">Sessão iniciada como <a href=\"%1$s\" title=\"Sessão iniciada como %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Terminar esta sessão\">Terminar a sessão?</a></span>"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:97
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "O seu endereço de e-mail <em>nunca</em> será publicado ou partilhado."
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:97
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "Campos obrigatórios marcados com <span class=\"required\">*</span>"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:100
+msgid "Name"
+msgstr "Nome"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:100
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:105
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:105
+msgid "Email"
+msgstr "Email"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:110
+msgid "Website"
+msgstr "Website"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:117
+msgid "Comment"
+msgstr "Comentário"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:123
+msgid "Post Comment"
+msgstr "Publicar Comentário"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/header.php:23
+msgid "Posts RSS feed"
+msgstr "RSS feed de Posts"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/header.php:24
+msgid "Comments RSS feed"
+msgstr "RSS feed de Comentários"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/header.php:62
+msgid "Skip navigation to the content"
+msgstr "Saltar navegação para o conteúdo"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/header.php:62
+msgid "Skip to content"
+msgstr "Saltar para o conteúdo"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/page.php:14
+msgid "Pages: "
+msgstr "Páginas:"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:15
+msgid "Search Results for:"
+msgstr "Resultados da pesquisa por:"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:51
+msgid "Nothing Found"
+msgstr "Nada foi encontrado"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:53
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Lamentamos, mas nada foi encontrado com os critérios de pesquisa. Por favor tente novamente com outros termos de pesquisa."
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:16
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:20
+msgid "Search"
+msgstr "Pesquisa"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:26
+msgid "Pages"
+msgstr "Páginas"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:33
+msgid "Categories"
+msgstr "Categorias"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:41
+msgid "Archives"
+msgstr "Arquivos"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:58
+msgid "RSS Feeds"
+msgstr "RSS Feeds"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:60
+msgid "All posts"
+msgstr "Todos os posts"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:61
+msgid "All comments"
+msgstr "Todos os comentários"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:66
+msgid "Meta"
+msgstr "Meta"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sitemeta.php:8
+msgid "Site Meta"
+msgstr "Meta do Site"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/tag.php:13
+msgid "Tag Archives:"
+msgstr "Arquivos de Tags:"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:26
+msgid "Not Found"
+msgstr "Não Encontrado"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:31
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:115
+msgid "Permalink to "
+msgstr "Link para "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:39
+msgid "By "
+msgstr "Por "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:41
+msgid "View all posts by "
+msgstr "Ver todos os posts por "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:65
+msgid "Edit post"
+msgstr "Editar Post"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:72
+msgid "This entry was posted in "
+msgstr "Esta entrada foi publicada em "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:75
+msgid "Also posted in "
+msgstr "Também publicado em "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:78
+msgid "Posted in "
+msgstr "Publicado em "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:84
+msgid " and tagged"
+msgstr " e com as tags"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:87
+msgid " Also tagged "
+msgstr "Também com as tags "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:89
+msgid "Tagged"
+msgstr "Tags"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:97
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:100
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:103
+msgid "Comment on "
+msgstr "Comentário ligado"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:98
+msgid " Comments"
+msgstr " Comentários"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:101
+msgid " Comment"
+msgstr " Comentário"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:104
+msgid "Leave a comment"
+msgstr "Deixar comentário"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:107
+msgid "Comments closed"
+msgstr "Comentários encerrados"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:115
+msgid ". Bookmark the "
+msgstr ". Guardar nos favoritos o "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:116
+msgid "permalink"
+msgstr "link permanente"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:118
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:126
+msgid "Post a comment"
+msgstr "Publicar comentário"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:119
+msgid " or leave a trackback: "
+msgstr " ou deixar um trackback: "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:120
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:123
+msgid "Trackback URL for your post"
+msgstr "URL de Trackback do seu post"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:120
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:123
+msgid "Trackback URL"
+msgstr "URL de Trackback"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:122
+msgid " Comments are closed, but you can leave a trackback: "
+msgstr " Comentários encerrados, mas poderá deixar um trackback: "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:125
+msgid " Trackbacks are closed, but you can "
+msgstr " Trackbacks encerrados, mas pode "
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:126
+msgid "post a comment"
+msgstr "publicar comentário"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:128
+msgid " Both comments and trackbacks are currently closed."
+msgstr " Tanto os comentários como os trackbacks estão encerrados."
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/theme-options.php:199
+msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
+msgstr "Para mais informações sobre este tema, <a href=\"http://themeshaper.com\">visite o ThemeShaper</a>. Por favor visite o <a href=\"http://themeshaper.com/forums/\">Fórum ThemeShaper</a> se tem alguma questão relativa ao Thematic."
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/widgets.php:43
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/widgets.php:195
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/widgets.php:196
+msgid "RSS Links"
+msgstr "Links RSS"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/widgets.php:67
+msgid "Title:"
+msgstr "Título:"
+
+#: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/widgets.php:190
+msgid "Blog Index"
+msgstr "Index do Blog"
+
