@@ -80,6 +80,7 @@ function mytheme_admin() {
     
 ?>
 <div class="wrap">
+<div id="icon-themes" class="icon32"><br/></div>
 <h2><?php echo $themename; ?> Options</h2>
 
 <form method="post">
