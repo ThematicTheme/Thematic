@@ -25,6 +25,9 @@ function thematic_body_class( $print = true ) {
 		$postID = $wp_query->post->ID;
 		the_post();
 
+        // Adds post slug class, prefixed by 'slug-'
+        $c[] = 'slug-' . $wp_query->post->post_name;
+
 		// Adds 'single' class and class with the post ID
 		$c[] = 'single postid-' . $postID;
 
@@ -80,6 +83,10 @@ function thematic_body_class( $print = true ) {
 		$pageID = $wp_query->post->ID;
 		$page_children = wp_list_pages("child_of=$pageID&echo=0");
 		the_post();
+
+        // Adds post slug class, prefixed by 'slug-'
+        $c[] = 'slug-' . $wp_query->post->post_name;
+
 		$c[] = 'page pageid-' . $pageID;
 		$c[] = 'page-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
 		// Checks to see if the page has children and/or is a child page; props to Adam
@@ -159,7 +166,7 @@ function thematic_post_class( $print = true ) {
 	// For password-protected posts
 	if ( $post->post_password )
 		$c[] = 'protected';
-		
+
 	// For sticky posts
 	if (is_sticky())
 	   $c[] = 'sticky';
@@ -170,6 +177,9 @@ function thematic_post_class( $print = true ) {
 	// If it's the other to the every, then add 'alt' class
 	if ( ++$thematic_post_alt % 2 )
 		$c[] = 'alt';
+
+    // Adds post slug class, prefixed by 'slug-'
+    $c[] = 'slug-' . $post->post_name;
 
 	// Separates classes with a single space, collates classes for post DIV
 	$c = join( ' ', apply_filters( 'post_class', $c ) ); // Available filter: post_class
@@ -209,10 +219,10 @@ function thematic_comment_class( $print = true ) {
 	thematic_date_classes( mysql2date( 'U', $comment->comment_date ), $c, 'c-' );
 	if ( ++$thematic_comment_alt % 2 )
 		$c[] = 'alt';
-		
+
 	// Comment depth
 	$c[] = "depth-$comment_depth";
-		
+
 	// Separates classes with a single space, collates classes for comment LI
 	$c = join( ' ', apply_filters( 'comment_class', $c ) ); // Available filter: comment_class
 
