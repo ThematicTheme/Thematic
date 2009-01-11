@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-08-09 15:37+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: danny <dannydamnboy@gmail.com>\n"
+"Last-Translator: Marco Del Tongo <info@marcodeltongo.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/404.php:12
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Ci dispiace, ma non è stato trovato quello che cercavi. Prova con la ricerca."
+msgstr "Ci dispiace, ma quello che cercavi non è stato trovato. Prova con la ricerca."
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/404.php:17
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/search.php:58
@@ -142,7 +142,7 @@ msgstr "<span>Un</span> Trackback"
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:61
 #, php-format
 msgid "By %1$s on %2$s at %3$s"
-msgstr "Scritto da %1$s il  %2$s alle %3$s"
+msgstr "Scritto da %1$s il %2$s alle %3$s"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:66
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
@@ -155,7 +155,7 @@ msgstr "Scrivi un Commento"
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:82
 #, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Devi esssere <a href=\"%s\" title=\"Autenticazione\">autenticato </a> per scrivere un commento."
+msgstr "Devi esssere <a href=\"%s\" title=\"Autenticazione\">autenticato</a> per scrivere un commento."
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:90
 #, php-format
@@ -164,7 +164,7 @@ msgstr "<span class=\"loggedin\">Autenticato come <a href=\"%1$s\" title=\"Auten
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:97
 msgid "Your email is <em>never</em> published nor shared."
-msgstr "Il tu indirizzo Email non verrà <em>mai</em> pubblicato e/o condiviso."
+msgstr "Il tuo indirizzo email non verrà <em>mai</em> pubblicato e/o condiviso."
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:97
 msgid "Required fields are marked <span class=\"required\">*</span>"
@@ -193,7 +193,7 @@ msgstr "Commenta"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:123
 msgid "Post Comment"
-msgstr "Comemnta"
+msgstr "Commenta"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/header.php:23
 msgid "Posts RSS feed"
@@ -250,11 +250,11 @@ msgstr "Feeds RSS"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:60
 msgid "All posts"
-msgstr "Tutti gli Articoli"
+msgstr "Tutti gli articoli"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:61
 msgid "All comments"
-msgstr "Tutti i Commenti"
+msgstr "Tutti i commenti"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/sidebar.php:66
 msgid "Meta"
@@ -266,7 +266,7 @@ msgstr "Info sul sito"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/tag.php:13
 msgid "Tag Archives:"
-msgstr "Archivo dei tags:"
+msgstr "Archivio dei tags:"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:26
 msgid "Not Found"
@@ -275,7 +275,7 @@ msgstr "Non Trovato"
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:31
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:115
 msgid "Permalink to "
-msgstr "Link Permanente a "
+msgstr "Link permanente a "
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:39
 msgid "By "
@@ -287,7 +287,7 @@ msgstr "Leggi tutti gli articoli scritti da "
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:65
 msgid "Edit post"
-msgstr "Modifica Articolo"
+msgstr "Modifica articolo"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:72
 msgid "This entry was posted in "
@@ -307,11 +307,11 @@ msgstr " e ha i tags"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:87
 msgid " Also tagged "
-msgstr " Ha anche i Tags "
+msgstr " Ha anche i tags "
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:89
 msgid "Tagged"
-msgstr "ha i Tags"
+msgstr "ha i tags"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:97
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:100
@@ -364,11 +364,11 @@ msgstr "Trackback URL"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:122
 msgid " Comments are closed, but you can leave a trackback: "
-msgstr " I Commenti sono chiusi ma puoi lasciare un trackback: "
+msgstr " I commenti sono chiusi ma puoi lasciare un trackback: "
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:125
 msgid " Trackbacks are closed, but you can "
-msgstr " I Trackacks sono chiusi ma puoi "
+msgstr " I trackbacks sono chiusi ma puoi "
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:126
 msgid "post a comment"
@@ -376,11 +376,11 @@ msgstr "scrivi un commento"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:128
 msgid " Both comments and trackbacks are currently closed."
-msgstr " I Commenti ed i Trackbacks sono attualmente chiusi."
+msgstr " I commenti ed i trackbacks sono attualmente chiusi."
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/theme-options.php:199
 msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
-msgstr "Per maggiori informazioni su questo Tema, <a href=\"http://themeshaper.com\">visita ThemeShaper</a>. Visita i <a href=\"http://themeshaper.com/forums/\">Forums ThemeShaper</a> se hai domande su Thematic."
+msgstr "Per maggiori informazioni su questo tema, <a href=\"http://themeshaper.com\">visita ThemeShaper</a>. Visita i <a href=\"http://themeshaper.com/forums/\">Forums ThemeShaper</a> se hai domande su Thematic."
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/widgets.php:43
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/widgets.php:195
