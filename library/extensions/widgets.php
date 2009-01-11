@@ -1,14 +1,25 @@
 <?php
 
-// Check for widgets in widget-ready areas http://wordpress.org/support/topic/190184?replies=7#post-808787
-// Thanks to Chaos Kaizer http://blog.kaizeku.com/
-// Check for widgets in widget-ready areas http://wordpress.org/support/topic/190184?replies=7#post-808787
-// Thanks to Chaos Kaizer http://blog.kaizeku.com/
-function is_sidebar_active( $index = 1){
-	$sidebars	= wp_get_sidebars_widgets();
-	$key		= (string) 'sidebar-'.$index;
- 
-	return (isset($sidebars[$key]));
+// Check for static widgets in widget-ready areas http://wordpress.org/support/topic/190184?replies=7#post-808787
+// Thanks to Will Norris 
+
+function is_sidebar_active( $index = 1 ){
+   global $wp_registered_sidebars;
+
+   if ( is_int($index) ) {
+       $index = "sidebar-$index";
+   } else {
+       $index = sanitize_title($index);
+       foreach ( (array) $wp_registered_sidebars as $key => $value ) {
+           if ( sanitize_title($value['name']) == $index ) {
+               $index = $key;
+               break;
+           }
+       }
+   }
+
+   $sidebars = wp_get_sidebars_widgets();
+   return (isset($sidebars[$key]));
 }
 
 // Widget: Thematic Search
