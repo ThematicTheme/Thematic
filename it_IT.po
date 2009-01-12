@@ -164,7 +164,11 @@ msgstr "<span class=\"loggedin\">Autenticato come <a href=\"%1$s\" title=\"Auten
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:97
 msgid "Your email is <em>never</em> published nor shared."
+<<<<<<< .mine
+msgstr "Il tuo indirizzo Email non verrà <em>mai</em> pubblicato e/o condiviso."
+=======
 msgstr "Il tuo indirizzo email non verrà <em>mai</em> pubblicato e/o condiviso."
+>>>>>>> .r270
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/comments.php:97
 msgid "Required fields are marked <span class=\"required\">*</span>"
@@ -337,7 +341,7 @@ msgstr "Commenti chiusi"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:115
 msgid ". Bookmark the "
-msgstr ". Aggiungi ai preferiti "
+msgstr ". Aggiungi ai preferiti: "
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:116
 msgid "permalink"
