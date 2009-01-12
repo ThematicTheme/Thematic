@@ -366,7 +366,7 @@ msgstr "Komentowanie zostało zablokowane, ale możesz dodać odpowiedź (trackb
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:125
 msgid " Trackbacks are closed, but you can "
-msgstr " Dodawanie odpowiedźi Trackback do tego wpisu zostało zablokowane, ale możesz "
+msgstr " Dodawanie odpowiedzi Trackback do tego wpisu zostało zablokowane, ale możesz "
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:126
 msgid "post a comment"
