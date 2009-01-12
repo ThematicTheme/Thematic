@@ -289,7 +289,7 @@ msgstr "Edytuj wpis"
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:72
 msgid "This entry was posted in "
-msgstr "Ten wpis umieszczono również w"
+msgstr "Ten wpis umieszczono również w "
 
 #: C:\wamp\www\wordpress\wp-content\themes\thematic-0-6/library/functions/hooks-filters.php:75
 msgid "Also posted in "
