@@ -216,7 +216,26 @@ function thematic_widgets_init() {
 		'before_title' => "<h3 class=\"widgettitle\">",
 		'after_title' => "</h3>\n",
     ));      
-   
+	  
+    // we will check for a Thematic widgets directory and and add and activate additional widgets
+    // Thanks to Joern Kretzschmar
+	  $widgets_dir = @ dir(ABSPATH . '/wp-content/themes/' . get_template() . '/widgets');
+	  if ($widgets_dir)	{
+		  while(($widgetFile = $widgets_dir->read()) !== false) {
+			 if (!preg_match('|^\.+$|', $widgetFile) && preg_match('|\.php$|', $widgetFile))
+				  include(ABSPATH . '/wp-content/themes/' . get_template() . '/widgets/' . $widgetFile);
+		  }
+	  }
+
+	  // we will check for the child themes widgets directory and add and activate additional widgets
+    // Thanks to Joern Kretzschmar 
+	  $widgets_dir = @ dir(ABSPATH . '/wp-content/themes/' . get_stylesheet() . '/widgets');
+	  if ((TEMPLATENAME != THEMENAME) && ($widgets_dir)) {
+		  while(($widgetFile = $widgets_dir->read()) !== false) {
+			 if (!preg_match('|^\.+$|', $widgetFile) && preg_match('|\.php$|', $widgetFile))
+				  include(ABSPATH . '/wp-content/themes/' . get_stylesheet() . '/widgets/' . $widgetFile);
+		  }
+	  }   
    
 	// Finished intializing Widgets plugin, now let's load the thematic default widgets
 	register_sidebar_widget(__('Blog Index', 'thematic'), 'widget_blog_index', null, 'blog index');
