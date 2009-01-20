@@ -3,6 +3,9 @@ LAYOUT: Three-Column
 DESCRIPTION: Three-column 950px fixed layout with two sidebars on either side of content
 */
 
+body {
+    min-width:960px;
+}
 #header {
     position:relative;
 }
