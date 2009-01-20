@@ -1,5 +1,13 @@
 <?php
 
+$themeData = get_theme_data(TEMPLATEPATH . '/style.css');
+define('THEMENAME', $themeData['Title']);
+
+$cur=(STYLESHEETPATH . '/style.css');
+$localhost=strstr($cur, 'localhost');
+$ct=get_theme_data($cur);
+define('TEMPLATENAME', $ct['Title']);
+
 // load jQuery
 wp_enqueue_script('jquery');
 
