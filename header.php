@@ -51,7 +51,7 @@
     	</div><!--  #branding -->
     	<div id="access">
     		<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
-            <?php wp_page_menu() ?>
+            <?php wp_page_menu('sort_column=menu_order') ?>
         </div><!-- #access -->
     </div><!-- #header-->
     
