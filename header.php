@@ -14,7 +14,7 @@
     <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 
 <?php if (is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <meta name="description" content="<?php echo strip_tags(thematic_the_excerpt()); ?>" />
+    <meta name="description" content="<?php if (thematic_the_excerpt() == "") {echo thematic_excerpt_rss(); } else { echo thematic_the_excerpt(); } ?>" />
 <?php endwhile; endif; elseif(is_home()) : ?>
     <meta name="description" content="<?php bloginfo('description'); ?>" />
 <?php endif; ?>
