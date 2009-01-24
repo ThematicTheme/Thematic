@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-22 12:13+0100\n"
+"POT-Creation-Date: 2009-01-24 16:45+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: danny <dannydamnboy@gmail.com>\n"
 "Language-Team: \n"
@@ -206,7 +206,7 @@ msgid "Comment"
 msgstr "Commenta"
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments-legacy.php:123
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:106
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:108
 msgid "Post Comment"
 msgstr "Commenta"
 
@@ -402,9 +402,65 @@ msgstr "scrivi un commento"
 msgid " Both comments and trackbacks are currently closed."
 msgstr " I commenti ed i trackbacks sono attualmente chiusi."
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/page-numbers.php:8
-msgid "Page"
-msgstr "Pagine"
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:13
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:13
+msgid "Index Insert Position"
+msgstr "Inserisci la posizione della pagina INDEX"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:14
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:14
+msgid "The widgetized Index Insert will follow after this post number."
+msgstr "L' inserimento dell' INDEX delle widget seguira dopo0 questo numero di articolo."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:19
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:19
+msgid "Info on Author Page"
+msgstr "Info sull'Autore della Pagina"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:20
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:20
+msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
+msgstr "Mostra una <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—con l'avatar dell'auore, la sua biografia e indirizzo email - nella pagina dell'autore."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:26
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:26
+msgid "Text in Footer"
+msgstr "Testo del Footer"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:27
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:27
+msgid "Enter the HTML text that will appear in the bottom of your footer. Feel free to remove or change any links. <strong>Hint:</strong> <a href=\"http://www.w3schools.com/HTML/html_links.asp\" target=\"_blank\">how to write a link</a>."
+msgstr "Inserisci il testo HTML che apparira' in fondo al tuo footer. Sei libero di rimuovere o cambiare qualunque link. <strong>Suggerimento:</strong> <a href=\"http://www.w3schools.com/HTML/html_links.asp\" target=\"_blank\">come scrivere un link</a>."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:77
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:77
+msgid "settings saved."
+msgstr "impostazioni salvate."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:78
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:78
+msgid "settings reset."
+msgstr "impostazioni ripristinate."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:79
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:79
+msgid "widgets reset."
+msgstr "widget ripristinate."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:195
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:195
+msgid "Save changes"
+msgstr "Salva le modifiche"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:201
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:201
+msgid "Reset"
+msgstr "Ripristina"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:207
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:207
+msgid "Reset Widgets"
+msgstr "Ripristina le Widget"
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:212
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:212
@@ -437,6 +493,8 @@ msgstr "Indice del Blog"
 msgid "Blog Buttons"
 msgstr "Pulsanti del Blog"
 
+#~ msgid "Page"
+#~ msgstr "Pagine"
 #~ msgid "Site Meta"
 #~ msgstr "Info sul sito"
 
