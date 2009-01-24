@@ -32,6 +32,9 @@ require_once(THEMELIB . '/extensions/discussion.php');
 // Add Dynamic Contextual Semantic Classes
 require_once(THEMELIB . '/extensions/dynamic-classes.php');
 
+// Need a little help from our helper functions
+require_once(THEMELIB . '/extensions/helpers.php');
+
 // Produces an avatar image with the hCard-compliant photo class for author info
 require_once(THEMELIB . '/extensions/author-info-avatar.php');
 
