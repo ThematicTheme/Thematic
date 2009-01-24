@@ -10,21 +10,21 @@ $shortname = "thm";
 
 $options = array (
 										
-				array(	"name" => "Index Insert Position",
-						"desc" => "The widgetized Index Insert will follow after this post number.",
+				array(	"name" => __('Index Insert Position','thematic'),
+						"desc" => __('The widgetized Index Insert will follow after this post number.','thematic'),
 						"id" => $shortname."_insert_position",
 						"std" => "2",
 						"type" => "text"),
 
-				array(	"name" => "Info on Author Page",
-						"desc" => "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page.",
+				array(	"name" => __('Info on Author Page','thematic'),
+						"desc" => __("Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page.",'thematic'),
 						"id" => $shortname."_authorinfo",
 						"std" => "false",
 						"type" => "checkbox"),
 
 
-				array(	"name" => "Text in Footer",
-						"desc" => "Enter the HTML text that will appear in the bottom of your footer. Feel free to remove or change any links. <strong>Hint:</strong> <a href=\"http://www.w3schools.com/HTML/html_links.asp\" target=\"_blank\">how to write a link</a>.",
+				array(	"name" => __('Text in Footer','thematic'),
+						"desc" => __("Enter the HTML text that will appear in the bottom of your footer. Feel free to remove or change any links. <strong>Hint:</strong> <a href=\"http://www.w3schools.com/HTML/html_links.asp\" target=\"_blank\">how to write a link</a>.",'thematic'),
 						"id" => $shortname."_footertext",
 						"std" => "<span id=\"generator-link\">Powered by <a href=\"http://WordPress.org/\" title=\"WordPress\" rel=\"generator\">WordPress</a></span><span class=\"meta-sep\">. </span><span id=\"designer-link\">Built on the <a href=\"http://themeshaper.com/thematic-for-wordpress\" title=\"Thematic Theme Framework\" rel=\"designer\">Thematic Theme Framework</a>.</span>",
 						"type" => "textarea",
@@ -74,9 +74,9 @@ function mytheme_admin() {
 
     global $themename, $shortname, $options;
 
-    if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings saved.</strong></p></div>';
-    if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
-    if ( $_REQUEST['reset_widgets'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
+    if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings saved.','thematic').'</strong></p></div>';
+    if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings reset.','thematic').'</strong></p></div>';
+    if ( $_REQUEST['reset_widgets'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('widgets reset.','thematic').'</strong></p></div>';
     
 ?>
 <div class="wrap">
@@ -93,10 +93,10 @@ function mytheme_admin() {
 		case 'text':
 		?>
 		<tr valign="top"> 
-		    <th scope="row"><?php echo $value['name']; ?>:</th>
+		    <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
 		    <td>
 		        <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
-			    <?php echo $value['desc']; ?>
+			    <?php echo __($value['desc'],'thematic'); ?>
 		    </td>
 		</tr>
 		<?php
@@ -105,7 +105,7 @@ function mytheme_admin() {
 		case 'select':
 		?>
 		<tr valign="top"> 
-	        <th scope="row"><?php echo $value['name']; ?>:</th>
+	        <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
 	        <td>
 	            <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
 	                <?php foreach ($value['options'] as $option) { ?>
@@ -121,9 +121,9 @@ function mytheme_admin() {
 		$ta_options = $value['options'];
 		?>
 		<tr valign="top"> 
-	        <th scope="row"><?php echo $value['name']; ?>:</th>
+	        <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
 	        <td>
-			    <?php echo $value['desc']; ?>
+			    <?php echo __($value['desc'],'thematic'); ?>
 				<textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="<?php echo $ta_options['cols']; ?>" rows="<?php echo $ta_options['rows']; ?>"><?php 
 				if( get_settings($value['id']) != "") {
 						echo stripslashes(get_settings($value['id']));
@@ -138,7 +138,7 @@ function mytheme_admin() {
 		case "radio":
 		?>
 		<tr valign="top"> 
-	        <th scope="row"><?php echo $value['name']; ?>:</th>
+	        <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
 	        <td>
 	            <?php foreach ($value['options'] as $key=>$option) { 
 				$radio_setting = get_settings($value['id']);
@@ -165,7 +165,7 @@ function mytheme_admin() {
 		case "checkbox":
 		?>
 			<tr valign="top"> 
-		        <th scope="row"><?php echo $value['name']; ?>:</th>
+		        <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
 		        <td>
 		           <?php
 						if(get_settings($value['id'])){
@@ -176,7 +176,7 @@ function mytheme_admin() {
 					?>
 		            <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
 		            <?php  ?>
-			    <?php echo $value['desc']; ?>
+			    <?php echo __($value['desc'],'thematic'); ?>
 		        </td>
 		    </tr>
 			<?php
@@ -192,19 +192,19 @@ function mytheme_admin() {
 </table>
 
 <p class="submit">
-<input name="save" type="submit" value="Save changes" />    
+<input name="save" type="submit" value="<?php _e('Save changes','thematic'); ?>" />    
 <input type="hidden" name="action" value="save" />
 </p>
 </form>
 <form method="post">
 <p class="submit">
-<input name="reset" type="submit" value="Reset" />
+<input name="reset" type="submit" value="<?php _e('Reset','thematic'); ?>" />
 <input type="hidden" name="action" value="reset" />
 </p>
 </form>
 <form method="post">
 <p class="submit">
-<input name="reset_widgets" type="submit" value="Reset Widgets" />
+<input name="reset_widgets" type="submit" value="<?php _e('Reset Widgets','thematic'); ?>" />
 <input type="hidden" name="action" value="reset_widgets" />
 </p>
 </form>

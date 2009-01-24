@@ -100,6 +100,8 @@ foreach ( $comments as $comment )
     							<div class="form-label"><label for="comment"><?php _e('Comment', 'thematic') ?></label></div>
     							<div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
                             </div><!-- #form-section-comment .form-section -->
+							
+                  <?php do_action('comment_form', $post->ID); ?>
 
 <?php if(function_exists('show_subscription_checkbox')) { show_subscription_checkbox(); } ?>
 
