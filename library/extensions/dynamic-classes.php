@@ -139,60 +139,60 @@ function thematic_body_class( $print = true ) {
 	
 	// Mac, PC ...or Linux
 	if ( preg_match( "/Mac/", $browser ) ){
-			$sc[] = 'mac';
+			$c[] = 'mac';
 		
 	} elseif ( preg_match( "/Windows/", $browser ) ){
-			$sc[] = 'windows';
+			$c[] = 'windows';
 		
 	} elseif ( preg_match( "/Linux/", $browser ) ) {
-			$sc[] = 'linux';
+			$c[] = 'linux';
 
 	} else {
-			$sc[] = 'unknown-os';
+			$c[] = 'unknown-os';
 	}
 	
 	// Checks browsers in this order: Chrome, Safari, Opera, MSIE, FF
 	if ( preg_match( "/Chrome/", $browser ) ) {
-			$sc[] = 'chrome';
+			$c[] = 'chrome';
 
 			preg_match( "/Chrome\/(\d.\d)/si", $browser, $matches);
 			$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );      
-			$sc[] = $ch_version;
+			$c[] = $ch_version;
 
 	} elseif ( preg_match( "/Safari/", $browser ) ) {
-			$sc[] = 'safari';
+			$c[] = 'safari';
 			
 			preg_match( "/Version\/(\d.\d)/si", $browser, $matches);
 			$sf_version = 'sf' . str_replace( '.', '-', $matches[1] );      
-			$sc[] = $sf_version;
+			$c[] = $sf_version;
 			
 	} elseif ( preg_match( "/Opera/", $browser ) ) {
-			$sc[] = 'opera';
+			$c[] = 'opera';
 			
 			preg_match( "/Opera\/(\d.\d)/si", $browser, $matches);
 			$op_version = 'op' . str_replace( '.', '-', $matches[1] );      
-			$sc[] = $op_version;
+			$c[] = $op_version;
 			
 	} elseif ( preg_match( "/MSIE/", $browser ) ) {
-			$sc[] = 'msie';
+			$c[] = 'msie';
 			
 			if( preg_match( "/MSIE 6.0/", $browser ) ) {
-					$sc[] = 'ie6';
+					$c[] = 'ie6';
 			} elseif ( preg_match( "/MSIE 7.0/", $browser ) ){
-					$sc[] = 'ie7';
+					$c[] = 'ie7';
 			} elseif ( preg_match( "/MSIE 8.0/", $browser ) ){
-					$sc[] = 'ie8';
+					$c[] = 'ie8';
 			}
 			
 	} elseif ( preg_match( "/Firefox/", $browser ) && preg_match( "/Gecko/", $browser ) ) {
-			$sc[] = 'firefox';
+			$c[] = 'firefox';
 			
 			preg_match( "/Firefox\/(\d)/si", $browser, $matches);
 			$ff_version = 'ff' . str_replace( '.', '-', $matches[1] );      
-			$sc[] = $ff_version;
+			$c[] = $ff_version;
 			
 	} else {
-			$sc[] = 'unknown-browser';
+			$c[] = 'unknown-browser';
 	}
 	
 	
