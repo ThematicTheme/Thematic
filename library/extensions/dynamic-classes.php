@@ -133,6 +133,69 @@ function thematic_body_class( $print = true ) {
 			$c[] = 'search-paged-' . $page;
 		}
 	}
+	
+	// A little Browser detection shall we?
+	$browser = $_SERVER[ 'HTTP_USER_AGENT' ];
+	
+	// Mac, PC ...or Linux
+	if ( preg_match( "/Mac/", $browser ) ){
+			$sc[] = 'mac';
+		
+	} elseif ( preg_match( "/Windows/", $browser ) ){
+			$sc[] = 'windows';
+		
+	} elseif ( preg_match( "/Linux/", $browser ) ) {
+			$sc[] = 'linux';
+
+	} else {
+			$sc[] = 'unknown-os';
+	}
+	
+	// Checks browsers in this order: Chrome, Safari, Opera, MSIE, FF
+	if ( preg_match( "/Chrome/", $browser ) ) {
+			$sc[] = 'chrome';
+
+			preg_match( "/Chrome\/(\d.\d)/si", $browser, $matches);
+			$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );      
+			$sc[] = $ch_version;
+
+	} elseif ( preg_match( "/Safari/", $browser ) ) {
+			$sc[] = 'safari';
+			
+			preg_match( "/Version\/(\d.\d)/si", $browser, $matches);
+			$sf_version = 'sf' . str_replace( '.', '-', $matches[1] );      
+			$sc[] = $sf_version;
+			
+	} elseif ( preg_match( "/Opera/", $browser ) ) {
+			$sc[] = 'opera';
+			
+			preg_match( "/Opera\/(\d.\d)/si", $browser, $matches);
+			$op_version = 'op' . str_replace( '.', '-', $matches[1] );      
+			$sc[] = $op_version;
+			
+	} elseif ( preg_match( "/MSIE/", $browser ) ) {
+			$sc[] = 'msie';
+			
+			if( preg_match( "/MSIE 6.0/", $browser ) ) {
+					$sc[] = 'ie6';
+			} elseif ( preg_match( "/MSIE 7.0/", $browser ) ){
+					$sc[] = 'ie7';
+			} elseif ( preg_match( "/MSIE 8.0/", $browser ) ){
+					$sc[] = 'ie8';
+			}
+			
+	} elseif ( preg_match( "/Firefox/", $browser ) && preg_match( "/Gecko/", $browser ) ) {
+			$sc[] = 'firefox';
+			
+			preg_match( "/Firefox\/(\d)/si", $browser, $matches);
+			$ff_version = 'ff' . str_replace( '.', '-', $matches[1] );      
+			$sc[] = $ff_version;
+			
+	} else {
+			$sc[] = 'unknown-browser';
+	}
+	
+	
 
 	// Separates classes with a single space, collates classes for BODY
 	$c = join( ' ', apply_filters( 'body_class',  $c ) ); // Available filter: body_class
