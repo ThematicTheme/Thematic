@@ -15,10 +15,13 @@ foreach ($options as $value) {
     		<?php /* footer text set in theme options */ echo stripslashes($thm_footertext); ?>
 		</div><!-- #siteinfo -->
 	</div><!-- #footer -->
+	
+<?php thematic_belowfooter(); ?>  
 
 </div><!-- #wrapper .hfeed -->
 
 <?php wp_footer() ?>
 
+<?php thematic_after(); ?>
 </body>
 </html>

@@ -37,8 +37,11 @@
 </head>
 
 <body class="<?php thematic_body_class() ?>">
+<?php thematic_before(); ?>
 
 <div id="wrapper" class="hfeed">
+
+<?php thematic_aboveheader(); ?>   
 
     <div id="header">
     	<div id="branding">
@@ -56,5 +59,6 @@
     </div><!-- #header-->
     
 <?php thematic_belowheader(); ?>   
+
     <div id="main">
     
