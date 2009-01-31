@@ -4,7 +4,7 @@
 
     <title><?php
         if ( is_single() ) { single_post_title(); }
-        elseif ( is_home() ) { bloginfo('name'); print ' | '; bloginfo('description'); pageGetPageNo(); }
+        elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); pageGetPageNo(); }
         elseif ( is_page() ) { single_post_title(''); }
         elseif ( is_search() ) { bloginfo('name'); print ' | Search results for ' . wp_specialchars($s); pageGetPageNo(); }
         elseif ( is_404() ) { bloginfo('name'); print ' | Not Found'; }
@@ -46,7 +46,7 @@
     <div id="header">
     	<div id="branding">
     		<div id="blog-title"><span><a href="<?php echo get_option('home') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
-    		<?php if (is_home()) { ?>
+    		<?php if (is_home() || is_front_page()) { ?>
     		<h1 id="blog-description"><?php bloginfo('description') ?></h1>
     		<?php } else { ?>	
     		<div id="blog-description"><?php bloginfo('description') ?></div>
