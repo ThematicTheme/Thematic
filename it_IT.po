@@ -327,15 +327,15 @@ msgstr "Pubblicato in "
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:95
 msgid " and tagged"
-msgstr " e ha i tags"
+msgstr " e ha i tag"
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:98
 msgid " Also tagged "
-msgstr " Ha anche i tags "
+msgstr " Altri termini collegati "
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:100
 msgid "Tagged"
-msgstr "ha i tags"
+msgstr "Termini collegati:"
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:108
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:111
