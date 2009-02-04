@@ -2,6 +2,25 @@
 
 // create bullet-proof excerpt for meta name="description"
 
+function thematic_trim_excerpt($text) {
+	if ( '' == $text ) {
+		$text = get_the_content('');
+
+		$text = strip_shortcodes( $text );
+
+		$text = str_replace(']]>', ']]&gt;', $text);
+		$text = strip_tags($text);
+		$excerpt_length = apply_filters('excerpt_length', 55);
+		$words = explode(' ', $text, $excerpt_length + 1);
+		if (count($words) > $excerpt_length) {
+			array_pop($words);
+			array_push($words, '[...]');
+			$text = implode(' ', $words);
+		}
+	}
+	return $text;
+}
+
 function thematic_the_excerpt($deprecated = '') {
 	global $post;
 	$output = '';
@@ -14,8 +33,6 @@ function thematic_the_excerpt($deprecated = '') {
 	return $output;
 	
 }
-
-// create bullet-proof excerpt for meta name="description"
 
 function thematic_excerpt_rss() {
 	global $post;
@@ -30,7 +47,9 @@ function thematic_excerpt_rss() {
 
 }
 
-add_filter('thematic_excerpt_rss', 'wp_trim_excerpt');
+add_filter('thematic_excerpt_rss', 'thematic_trim_excerpt');
+
+// create nice multi_tag_title
 
 function thematic_tag_query() {
   $nice_tag_query = $_SERVER['REQUEST_URI'];
