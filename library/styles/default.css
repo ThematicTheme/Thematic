@@ -635,7 +635,7 @@ p.solo-subscribe-to-comments:first-line {
 }
 .wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
     color:#2772B3 !important;
-    background:#transparent !important;
+    background:transparent !important;
     border:1px solid #e0e0e0 !important;
 }
 .wp-pagenavi a:hover {
