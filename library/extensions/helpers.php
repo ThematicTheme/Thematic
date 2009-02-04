@@ -32,5 +32,16 @@ function thematic_excerpt_rss() {
 
 add_filter('thematic_excerpt_rss', 'wp_trim_excerpt');
 
+function thematic_tag_query() {
+  $nice_tag_query = $_SERVER['REQUEST_URI'];
+  $nice_tag_query = preg_replace('/.*(\/tag\/|\?tag=)/', '', $nice_tag_query);
+  $nice_tag_query = str_replace(',', ', ', $nice_tag_query);
+  $nice_tag_query = str_replace('/','', $nice_tag_query);
+  $nice_tag_query = str_replace('%20','', $nice_tag_query);
+  $nice_tag_query = str_replace('+',' + ', $nice_tag_query);
+
+  return $nice_tag_query;
+}
+
 
 ?>
