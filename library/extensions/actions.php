@@ -14,8 +14,9 @@ function thematic_header_create_title() {
         if ( is_single() ) { single_post_title(); }
         elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); pageGetPageNo(); }
         elseif ( is_page() ) { single_post_title(''); }
-        elseif ( is_search() ) { bloginfo('name'); print ' | Search results for ' . wp_specialchars($s); pageGetPageNo(); }
-        elseif ( is_404() ) { bloginfo('name'); print ' | Not Found'; }
+        elseif ( is_search() ) { bloginfo('name'); print ' | '; _e('Search Results for:','thematic'); print ' ' . wp_specialchars(stripslashes($_GET['s']), true); pageGetPageNo(); }
+        elseif ( is_tag() ) { bloginfo('name'); print ' | '; _e(thematic_tag_query()); pageGetPageNo(); }
+        elseif ( is_404() ) { bloginfo('name'); print ' | '; _e('Not Found', 'thematic'); }
         else { bloginfo('name'); wp_title('|'); pageGetPageNo(); }
     ?></title>
     
