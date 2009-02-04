@@ -10,7 +10,7 @@ foreach ($options as $value) {
 	<div id="container">
 		<div id="content">
 
-	<h1 class="page-title"><?php _e('Tag Archives:', 'thematic') ?> <span><?php single_tag_title(); ?></span></h1>
+	<h1 class="page-title"><?php _e('Tag Archives:', 'thematic') ?> <span><?php _e(thematic_tag_query()); ?></span></h1>
 
 			<div id="nav-above" class="navigation">
                 <?php if(function_exists('wp_pagenavi')) { ?>

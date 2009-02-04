@@ -1,5 +1,11 @@
 <?php
 
+// Loccated in header.php
+// Just before anything else
+function thematic_header() {
+    do_action('thematic_header');
+}
+
 // Located in header.php 
 // Just after the opening body tag, before anything else.
 function thematic_before() {
