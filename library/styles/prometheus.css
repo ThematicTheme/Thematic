@@ -1,12 +1,40 @@
 /* -------------------------------------------------------------- 
   
-   Minimal styles that hold to a 18px line-height
+   Prometheus: a new default style for Thematic
    
 -------------------------------------------------------------- */
+
+
+/* =Global Elements
+-------------------------------------------------------------- */
+
+body, input, textarea {
+    font: 16px Georgia,serif;
+    line-height:22px;
+}
+p, ul, ol, dd, pre {
+    margin-bottom:22px;
+}
+pre, code {
+	font:15px Monaco, monospace;
+	line-height:22px;
+}
+blockquote {
+    color:#666;
+    font-style:italic;
+}
+a {
+    color:#000;
+    text-decoration:none;
+}
+
 
 /* =Header
 -------------------------------------------------------------- */
 
+#header {
+    border-bottom:1px solid #ccc;
+}
 #branding {
     padding:18px 0;
 }
@@ -17,42 +45,94 @@
 .skip-link {
     display:none;
 }
-#menu {
+#access {
+    font-size:12px;
+    line-height:36px;
+    margin-bottom:-1px;
+}
+.menu {
     overflow:hidden; /* clears the inner float  */
 }
-#menu ul {
+.menu ul {
+    border-left:1px solid #ccc;
+    float:right;
     margin:0;
     list-style:none;
 }
-#menu ul ul {
+.menu ul ul {
     display:none;
 }
-#menu li {
+.menu li {
     display:inline;
 }
-#menu a {
+.menu a {
+    color:#666;
+    border:1px solid #ccc;
+    border-left:none;
     display:block;
     float:left;
+    padding:0 22px;
 }
+.menu .current_page_item a {
+    border-bottom-color:#fff;
+}
+.menu a:hover,
+.menu a:focus {
+    color:#000;
+}
+
 
 /* =Content
 -------------------------------------------------------------- */
 
 #main {
-    padding-top:18px;
+    padding-top:66px;
 }
 .hentry {
-    padding-bottom:18px;
+    padding-bottom:22px;
+}
+.entry-title {
+    font-size:24px;
+    line-height:28px;
+    font-weight:bold;
+    padding:0 0 6px 0;
+}
+.entry-meta {
+    color:#666;
+    font-size:12px;
+    font-style:italic;
+    line-height:18px;
+}
+.entry-meta a {
+    color:#666;
+}
+.entry-content {
+    padding:44px 0 0 0;
+}
+.entry-content h1,
+.entry-content h2 {
+    font-size:20px;
+    font-weight:bold;
+    line-height:28px;
+    margin:0 0 22px 0;
+    padding:16px 0 6px 0;
+}
+.entry-content h3 {
+    font-weight:bold;
+    padding:16px 0 6px 0;
+}
+.entry-content h4 {
+    font-style:italic;
 }
 .page-link {
-    margin-bottom:18px;
+    margin-bottom:22px;
 }
 
 /* =Navigation
 -------------------------------------------------------------- */
 
 .navigation {
-    margin:0px 0 18px 0;
+    margin:0px 0 22px 0;
     overflow:hidden;
 }
 .nav-previous {
@@ -66,6 +146,9 @@
 }
 #nav-above,#nav-below {
 	width: 100%;
+}
+#nav-above {
+    display:none;
 }
 
 /* =Comments
@@ -81,12 +164,46 @@
 }
 .aside ul ul {
     list-style:disc;
-    margin:0 0 18px 1.5em;
+    margin:0 0 22px 1.5em;
 }
 .aside ul ul ul {
     margin-bottom:0;
 }
 .aside form,
 .aside table {
-    margin-bottom:18px;
+    margin-bottom:22px;
 }
+
+/*
+  Main Asides
+*/
+
+.main-aside a {
+    color:#666;
+}    
+.main-aside {
+    color:#666;
+    font: 14px Georgia,serif;
+    line-height:20px;
+}
+.main-aside p, .main-aside ul, .main-aside ol, .main-aside dd, .main-aside pre {
+    margin-bottom:20px;
+}
+.main-aside pre, .main-aside code {
+	font:13px Monaco, monospace;
+	line-height:20px;
+}
+.main-aside ul {
+    padding:0 20px;
+}
+.main-aside ul ul {
+    padding:0;
+}
+#primary {
+    border:1px solid #ccc;
+    padding:20px 0;
+    margin-bottom:22px;
+}
+
+
+
