@@ -36,8 +36,18 @@ a {
     border-bottom:1px solid #ccc;
 }
 #branding {
-    padding:18px 0;
+    padding:88px 0 44px 0;
 }
+#blog-title {
+    font-size:36px;
+    font-weight:bold;
+    line-height:42px;
+}
+#blog-description {
+    color:#666;
+    font-style:italic;
+}
+
 
 /* =Menu
 -------------------------------------------------------------- */
@@ -66,6 +76,7 @@ a {
     display:inline;
 }
 .menu a {
+    background:#fafafa;
     color:#666;
     border:1px solid #ccc;
     border-left:none;
@@ -74,6 +85,7 @@ a {
     padding:0 22px;
 }
 .menu .current_page_item a {
+    background:#fff;
     border-bottom-color:#fff;
 }
 .menu a:hover,
@@ -89,7 +101,7 @@ a {
     padding-top:66px;
 }
 .hentry {
-    padding-bottom:22px;
+    padding-bottom:66px;
 }
 .entry-title {
     font-size:24px;
@@ -123,6 +135,9 @@ a {
 }
 .entry-content h4 {
     font-style:italic;
+}
+.entry-content table {
+    border:1px solid #ccc;
 }
 .page-link {
     margin-bottom:22px;
@@ -181,10 +196,13 @@ a {
 .main-aside a {
     color:#666;
 }    
-.main-aside {
-    color:#666;
+.main-aside,
+.main-aside input {
     font: 14px Georgia,serif;
     line-height:20px;
+}
+.main-aside {
+    color:#666;
 }
 .main-aside p, .main-aside ul, .main-aside ol, .main-aside dd, .main-aside pre {
     margin-bottom:20px;
@@ -195,6 +213,9 @@ a {
 }
 .main-aside ul {
     padding:0 20px;
+}
+.main-aside h3 {
+
 }
 .main-aside ul ul {
     padding:0;
