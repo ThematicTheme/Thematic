@@ -1,7 +1,7 @@
 <?php
 
-// Loccated in header.php
-// Just before anything else
+// Located in header.php
+// Just before anything else, it loads all the neccesary elements for the <head> section
 function thematic_header() {
     do_action('thematic_header');
 }
