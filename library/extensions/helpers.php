@@ -10,6 +10,7 @@ function thematic_trim_excerpt($text) {
 
 		$text = str_replace(']]>', ']]&gt;', $text);
 		$text = strip_tags($text);
+	  $text = str_replace('"', '\'', $text);
 		$excerpt_length = apply_filters('excerpt_length', 55);
 		$words = explode(' ', $text, $excerpt_length + 1);
 		if (count($words) > $excerpt_length) {
@@ -25,6 +26,7 @@ function thematic_the_excerpt($deprecated = '') {
 	global $post;
 	$output = '';
 	$output = strip_tags($post->post_excerpt);
+	$output = str_replace('"', '\'', $output);
 	if ( post_password_required($post) ) {
 		$output = __('There is no excerpt because this is a protected post.');
 		return $output;
