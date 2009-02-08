@@ -100,6 +100,7 @@ sub {
 
 blockquote.left {
 	float: left;
+	margin-left:0;
 	margin-right:20px;
 	text-align: right;
 	width: 33%;
@@ -107,6 +108,7 @@ blockquote.left {
 blockquote.right {
 	float: right;
 	margin-left:20px;
+	margin-right:0;
 	text-align: left;
 	width: 33%;
 }
