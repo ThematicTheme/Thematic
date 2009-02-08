@@ -9,15 +9,15 @@
 -------------------------------------------------------------- */
 
 body, input, textarea {
-    font: 16px Georgia,serif;
-    line-height:22px;
+    font: 15px Georgia,serif;
+    line-height:21px;
 }
 p, ul, ol, dd, pre {
-    margin-bottom:22px;
+    margin-bottom:21px;
 }
 pre, code {
 	font:15px Monaco, monospace;
-	line-height:22px;
+	line-height:21px;
 }
 blockquote {
     color:#666;
@@ -34,18 +34,9 @@ a {
 
 #header {
     border-bottom:1px solid #ccc;
+    display:none;
 }
 #branding {
-    padding:88px 0 44px 0;
-}
-#blog-title {
-    font-size:36px;
-    font-weight:bold;
-    line-height:42px;
-}
-#blog-description {
-    color:#666;
-    font-style:italic;
 }
 
 
@@ -82,7 +73,7 @@ a {
     border-left:none;
     display:block;
     float:left;
-    padding:0 22px;
+    padding:0 21px;
 }
 .menu .current_page_item a {
     background:#fff;
@@ -98,56 +89,60 @@ a {
 -------------------------------------------------------------- */
 
 #main {
-    padding-top:66px;
+    padding-top:63px;
 }
 .hentry {
-    padding-bottom:66px;
 }
 .entry-title {
-    font-size:24px;
-    line-height:28px;
+    font-family:Arial,sans-serif;
+    font-size:34px;
     font-weight:bold;
-    padding:0 0 6px 0;
+    line-height:34px;
+    padding:0 0 7px 0;
 }
 .entry-meta {
     color:#666;
-    font-size:12px;
-    font-style:italic;
-    line-height:18px;
+    font-size:13px;
 }
 .entry-meta a {
     color:#666;
 }
 .entry-content {
-    padding:44px 0 0 0;
+    padding:21px 0 0 0;
 }
 .entry-content h1,
 .entry-content h2 {
-    font-size:20px;
+    font-family:Arial,sans-serif;
+    font-size:19px;
     font-weight:bold;
-    line-height:28px;
-    margin:0 0 22px 0;
-    padding:16px 0 6px 0;
+    padding:28px 0 14px 0;
 }
 .entry-content h3 {
-    font-weight:bold;
-    padding:16px 0 6px 0;
+    font-size:17px;
+    font-style:italic;
+    padding:28px 0 14px 0;
 }
 .entry-content h4 {
-    font-style:italic;
 }
 .entry-content table {
-    border:1px solid #ccc;
+}
+.entry-utility {
+    color:#666;
+    font-size:13px;
+    margin:0 0 42px 0;
+}
+.entry-utility a {
+    color:#666;
 }
 .page-link {
-    margin-bottom:22px;
+    margin:0 0 21px 0;
 }
 
 /* =Navigation
 -------------------------------------------------------------- */
 
 .navigation {
-    margin:0px 0 22px 0;
+    margin:0px 0 21px 0;
     overflow:hidden;
 }
 .nav-previous {
@@ -179,20 +174,22 @@ a {
 }
 .aside ul ul {
     list-style:disc;
-    margin:0 0 22px 1.5em;
+    margin:0 0 21px 1.5em;
 }
 .aside ul ul ul {
     margin-bottom:0;
 }
 .aside form,
 .aside table {
-    margin-bottom:22px;
+    margin-bottom:21px;
 }
 
 /*
   Main Asides
 */
-
+.main-aside {
+    display:none;
+}
 .main-aside a {
     color:#666;
 }    
@@ -223,7 +220,7 @@ a {
 #primary {
     border:1px solid #ccc;
     padding:20px 0;
-    margin-bottom:22px;
+    margin-bottom:21px;
 }
 
 
