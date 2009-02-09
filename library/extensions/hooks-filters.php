@@ -102,6 +102,7 @@ function thematic_postheader() {
     $postmeta .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
     $postmeta .= get_the_author();
     $postmeta .= '</a></span><span class="meta-sep"> | </span>';
+    $postmeta .= __('Published: ', 'thematic');
     $postmeta .= '<span class="entry-date"><abbr class="published" title="';
     $postmeta .= get_the_time('Y-m-d\TH:i:sO') . '">';
     $postmeta .= get_the_time('F j, Y');
