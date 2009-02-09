@@ -24,8 +24,6 @@ blockquote {
     font-style:italic;
 }
 a {
-    color:#000;
-    text-decoration:none;
 }
 
 
@@ -105,11 +103,28 @@ a {
     font-size:13px;
     line-height:18px;
 }
+.entry-meta .author {
+    font-style:italic;
+}
+.entry-meta .n {
+    font-size:11px;
+    font-style:normal;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+}
 .entry-meta a {
-    color:#666;
+    text-decoration:none;
 }
 .entry-content {
     padding:21px 0 0 0;
+}
+.entry-content a:visited {
+}
+.entry-content a:hover {
+}
+.entry-content a:focus {
+}
+.entry-content a:active {
 }
 .entry-content h1,
 .entry-content h2 {
