@@ -23,10 +23,6 @@ blockquote {
     color:#666;
     font-style:italic;
 }
-abbr, acronym {
-  border-bottom:1px dotted #333;
-  cursor: help;
-}
 a {
     color:#000;
     text-decoration:none;
@@ -130,6 +126,10 @@ a {
 .entry-content h4 {
     font-family:Arial,sans-serif;
     font-weight:bold;
+}
+.entry-content abbr, .entry-content acronym {
+  border-bottom:1px dotted #333;
+  cursor: help;
 }
 .entry-content table {
 }
@@ -373,13 +373,16 @@ a {
     Main Asides
 */
 .main-aside {
+    color:#666;
 }
 .main-aside a {
+    color:#666;
 }    
 .main-aside ul {
     padding:0 1.5em;
 }
 .main-aside h3 {
+    color:#000;
 }
 .main-aside ul ul {
     padding:0;
@@ -396,7 +399,6 @@ a {
     border:1px solid #ccc;
     margin:0 0 21px 0;
 }
-
 /*
     Footer Asides
 */
@@ -408,6 +410,10 @@ a {
 /* =Footer
 -------------------------------------------------------------- */
 
+#footer {
+    border-top:1px solid #ccc;
+    margin-top:21px;
+}
 #siteinfo {
     font-size:11px;
     line-height:18px;
