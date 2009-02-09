@@ -53,6 +53,9 @@ ul ul, ol ol, ul ol, ol ul {
 dl	{
     margin:0 1.5em;
 }
+dt {
+    font-weight:bold;
+}
 dd {
 	margin-bottom:18px;
 }
