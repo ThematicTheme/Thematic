@@ -1,6 +1,7 @@
 <?php
 
 // Load scripts for the jquery Superfish plugin
+// http://users.tpg.com.au/j_birch/plugins/superfish/#examples
 function thematic_superfish() { ?>
 
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/scripts/jquery-1.2.6.min.js"></script>
