@@ -44,8 +44,97 @@ a {
     display:none;
 }
 #access {
+    border-bottom:1px solid #ccc;
+    height:38px;
+    overflow:visible;
     z-index:100;
 }
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	1.0;
+}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width:			100%;
+}
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+/*** THEMATIC SKIN ***/
+.sf-menu {
+	float:			left;
+	margin-bottom:	1em;
+}
+.sf-menu a {
+	border-left:	1px solid #ccc;
+	border-top:		1px solid #ccc;
+	padding: 		.75em 1em;
+	text-decoration:none;
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:			#666;
+}
+.sf-menu li {
+	background:		#fff;
+}
+.sf-menu li li {
+	background:		#fff;
+}
+.sf-menu li li li {
+	background:		#9AAEDB;
+}
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+    background:     #fafafa;
+	outline:		0;
+}
+.sf-menu ul a {
+    background:#fafafa;
+}
+
+
 
 
 /* =Content
@@ -55,12 +144,16 @@ a {
     padding:63px 0 21px 0;
 }
 .hentry {
+    padding:0 0 21px 0;
+}
+.single .hentry {
+    padding:0;
 }
 .entry-title {
     font-family:Arial,sans-serif;
-    font-size:34px;
+    font-size:26px;
     font-weight:bold;
-    line-height:34px;
+    line-height:26px;
     padding:0 0 7px 0;
 }
 .entry-title a {
@@ -70,10 +163,10 @@ a {
 .entry-meta {
     color:#666;
     font-size:13px;
+    font-style:italic;
     line-height:18px;
 }
 .entry-meta .author {
-    font-style:italic;
 }
 .entry-meta .n {
     font-size:11px;
@@ -83,6 +176,9 @@ a {
 }
 .entry-meta a {
     text-decoration:none;
+}
+.entry-meta abbr {
+    font-style:normal;
 }
 .entry-content {
     padding:21px 0 0 0;
@@ -172,6 +268,11 @@ a {
 #nav-above {
     display:none;
 }
+.paged #nav-above {
+    display:block;
+    padding:0 0 42px 0;
+}
+
 
 /* =Comments
 -------------------------------------------------------------- */
