@@ -60,8 +60,13 @@ function thematic_after() {
     do_action('thematic_after');
 }
 
+// Add ID and CLASS attributes to the first <ul> occurence in wp_page_menu
+function thematic_add_menuclass($ulclass) {
+return preg_replace('/<ul>/', '<ul id="nav" class="sf-menu">', $ulclass, 1);
+}
+add_filter('wp_page_menu','thematic_add_menuclass');
+
 /*
-The globalnav filter is gone. long live wp_page_menu!
 Here's how to filter your menu now.
 
 function sample_nav() { ?>
