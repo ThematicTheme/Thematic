@@ -54,6 +54,9 @@ add_filter( 'archive_meta', 'wpautop' );
 function thematic_remove_generators() { return ''; }  
 add_filter('the_generator','thematic_remove_generators');
 
+// Load the dropdown scripts
+require_once(THEMELIB . '/extensions/dropdown.php');
+
 // Translate, if applicable
 load_theme_textdomain('thematic');
 
