@@ -33,7 +33,22 @@ a {
 #header {
 }
 #branding {
-    padding:63px 0 42px 0;
+    padding:84px 0 42px 0;
+}
+#blog-title {
+    font-family:Arial,sans-serif;
+    font-size:34px;
+    font-weight:bold;
+    line-height:40px;
+}
+#blog-title a {
+    color:#000;
+    text-decoration:none;
+}
+#blog-description {
+    color:#666;
+    font-size:13px;
+    font-style:italic;
 }
 
 
@@ -45,7 +60,8 @@ a {
 }
 #access {
     border-bottom:1px solid #ccc;
-    height:38px;
+    height:34px;
+    font-size:13px;
     overflow:visible;
     z-index:100;
 }
@@ -104,14 +120,20 @@ ul.sf-menu li li li.sfHover ul {
 
 /*** THEMATIC SKIN ***/
 .sf-menu {
-	float:			left;
-	margin-bottom:	1em;
+    border-right:1px solid #ccc;
+	float:left;
+	margin-bottom:1em;
 }
 .sf-menu a {
-	border-left:	1px solid #ccc;
-	border-top:		1px solid #ccc;
-	padding: 		.75em 1em;
+	border-left:1px solid #ccc;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	padding:.75em 1em;
 	text-decoration:none;
+}
+.sf-menu .current_page_item a,
+.sf-menu .current_page_ancestor a {
+    border-bottom-color:#fff;
 }
 .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
 	color:			#666;
@@ -130,11 +152,21 @@ ul.sf-menu li li li.sfHover ul {
     background:     #fafafa;
 	outline:		0;
 }
+.sf-menu .current_page_item a:hover {
+    border-bottom-color:#ccc;
+}
+.sf-menu ul {
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    margin-top:1px;
+}
+.sf-menu ul ul {
+    margin-top:0;
+}
 .sf-menu ul a {
     background:#fafafa;
+	border-bottom:none;
 }
-
-
 
 
 /* =Content
@@ -238,6 +270,7 @@ ul.sf-menu li li li.sfHover ul {
     color:#666;
     font-weight:normal;
     padding:0.5em 0.75em;
+    text-decoration:none;
 }
 
 /* =Navigation
@@ -363,6 +396,7 @@ ul.sf-menu li li li.sfHover ul {
     color:#666;
     font-weight:normal;
     padding:0.5em 0.75em;
+    text-decoration:none;
 }
 .comment-navigation a,
 .comment-navigation span {
@@ -435,6 +469,9 @@ ul.sf-menu li li li.sfHover ul {
     font-size:12px;
     line-height:18px;
 }
+.aside .current_page_item a {
+    font-weight:bold;
+}
 .aside h3 {
     font-size:11px;
     font-family:Arial,sans-serif;
@@ -442,13 +479,20 @@ ul.sf-menu li li li.sfHover ul {
     text-transform:uppercase;
     letter-spacing:0.05em;
 }
+.aside h3 a {
+    color:#000;
+    text-decoration:none;
+}
 .aside ul {
     list-style:none;
     margin-left:0;
 }
 .aside ul ul {
     list-style:disc;
-    margin:0 0 21px 1.5em;
+    margin:0 0 21px 20px;
+}
+.aside ul ul li {
+    padding:2px 0 0 0;
 }
 .aside ul ul ul {
     margin-bottom:0;
