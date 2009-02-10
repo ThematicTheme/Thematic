@@ -132,7 +132,8 @@ ul.sf-menu li li li.sfHover ul {
 	text-decoration:none;
 }
 .sf-menu .current_page_item a,
-.sf-menu .current_page_ancestor a {
+.sf-menu .current_page_ancestor a,
+.sf-menu .current_page_parent a {
     border-bottom-color:#fff;
 }
 .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
@@ -471,6 +472,9 @@ ul.sf-menu li li li.sfHover ul {
 }
 .aside .current_page_item a {
     font-weight:bold;
+}
+.aside .current_page_item .page_item a {
+    font-weight:normal;
 }
 .aside h3 {
     font-size:11px;
