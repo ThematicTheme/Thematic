@@ -4,6 +4,7 @@
    
 -------------------------------------------------------------- */
 
+/*body { background:#fff url(../grids/960_grid_12_col.gif) repeat-y top center; }*/
 
 /* =Global Elements
 -------------------------------------------------------------- */
@@ -25,7 +26,23 @@ blockquote {
 }
 a {
 }
-
+table {
+    border:1px solid #ccc;
+    border-width:1px 1px 0 1px;
+    font-size:13px;
+    line-height:18px;
+    margin:0 0 22px 0;
+    text-align:left;
+}
+caption {
+    text-align:left;
+}
+tr {
+    border-bottom:1px solid #ccc;
+}
+th, td {
+    padding: .7em 1.25em;
+}
 
 /* =Header
 -------------------------------------------------------------- */
@@ -256,6 +273,7 @@ ul.sf-menu li li li.sfHover ul {
   cursor: help;
 }
 .entry-content table {
+    margin-left:1px;
 }
 .entry-content embed {
     margin:0 0 22px 0;
@@ -498,6 +516,14 @@ ul.sf-menu li li li.sfHover ul {
     color:#000;
     text-decoration:none;
 }
+.aside caption {
+    color:#000;
+    font-size:11px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+}
 .aside ul {
     list-style:none;
     margin-left:0;
@@ -516,7 +542,28 @@ ul.sf-menu li li li.sfHover ul {
 .aside table {
     margin-bottom:22px;
 }
-
+.aside table {
+    border:none;
+}
+.aside thead {
+    border:1px solid #ccc;
+}
+.aside tbody {
+    border:1px solid #ccc;
+}
+.aside th, .aside td {
+    border-right:1px solid #ccc;
+    padding:.25em .8em;
+}
+.aside tfoot tr {
+    border:none;
+}
+.aside tfoot td {
+    border-color:transparent;
+}
+.widget_tag_cloud {
+    margin:0 0 22px 0;
+}
 /*
     Main Asides
 */
