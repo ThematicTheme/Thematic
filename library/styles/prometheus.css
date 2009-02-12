@@ -10,14 +10,14 @@
 
 body, input, textarea {
     font: 15px Georgia,serif;
-    line-height:21px;
+    line-height:22px;
 }
 p, ul, ol, dd, pre {
-    margin-bottom:21px;
+    margin-bottom:22px;
 }
 pre, code {
 	font:14px Monaco, monospace;
-	line-height:21px;
+	line-height:22px;
 }
 blockquote {
     color:#666;
@@ -33,7 +33,7 @@ a {
 #header {
 }
 #branding {
-    padding:84px 0 42px 0;
+    padding:88px 0 44px 0;
 }
 #blog-title {
     font-family:Arial,sans-serif;
@@ -60,7 +60,7 @@ a {
 }
 #access {
     border-bottom:1px solid #ccc;
-    height:34px;
+    height:32px;
     font-size:13px;
     overflow:visible;
     z-index:100;
@@ -122,13 +122,12 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu {
     border-right:1px solid #ccc;
 	float:left;
-	margin-bottom:1em;
 }
 .sf-menu a {
 	border-left:1px solid #ccc;
 	border-top:1px solid #ccc;
 	border-bottom:1px solid #ccc;
-	padding:.75em 1em;
+	padding:9px 13px;
 	text-decoration:none;
 }
 .sf-menu .current_page_item a,
@@ -159,7 +158,10 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu ul {
     border-right:1px solid #ccc;
     border-bottom:1px solid #ccc;
-    margin-top:1px;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	top:32px; /* overriding essential styles */
 }
 .sf-menu ul ul {
     margin-top:0;
@@ -174,13 +176,19 @@ ul.sf-menu li li li.sfHover ul {
 -------------------------------------------------------------- */
 
 #main {
-    padding:63px 0 21px 0;
+    clear:both;
+    padding:66px 0 22px 0;
 }
 .hentry {
-    padding:0 0 21px 0;
+    padding:0 0 22px 0;
 }
 .single .hentry {
     padding:0;
+}
+.home #content .sticky {
+    border:1px solid #ccc;
+    margin:0 0 66px 0;
+    padding:22px 20px 0 20px;
 }
 .entry-title {
     font-family:Arial,sans-serif;
@@ -214,7 +222,7 @@ ul.sf-menu li li li.sfHover ul {
     font-style:normal;
 }
 .entry-content {
-    padding:21px 0 0 0;
+    padding:22px 0 0 0;
 }
 .entry-content a:visited {
 }
@@ -249,11 +257,14 @@ ul.sf-menu li li li.sfHover ul {
 }
 .entry-content table {
 }
+.entry-content embed {
+    margin:0 0 22px 0;
+}
 .entry-utility {
     color:#666;
     font-size:13px;
     line-height:18px;
-    margin:0 0 42px 0;
+    margin:0 0 44px 0;
 }
 .entry-utility a {
     color:#666;
@@ -262,8 +273,8 @@ ul.sf-menu li li li.sfHover ul {
     font-size:13px;
     font-weight:bold;
     line-height:18px;
-    margin:0 0 21px 0;
-    padding:21px 0 0 0;
+    margin:0 0 22px 0;
+    padding:22px 0 0 0;
     word-spacing:0.5em;
 }
 .page-link a {
@@ -281,7 +292,7 @@ ul.sf-menu li li li.sfHover ul {
     color:#666;
     font-size:13px;
     line-height:18px;
-    margin:0px 0 21px 0;
+    margin:0px 0 22px 0;
     overflow:hidden;
 }
 .navigation a {
@@ -304,7 +315,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .paged #nav-above {
     display:block;
-    padding:0 0 42px 0;
+    padding:0 0 44px 0;
 }
 
 
@@ -312,7 +323,7 @@ ul.sf-menu li li li.sfHover ul {
 -------------------------------------------------------------- */
 
 #comments {
-    padding:21px 0 0 0;
+    padding:22px 0 0 0;
 }
 #comments,
 #comments input,
@@ -328,7 +339,7 @@ ul.sf-menu li li li.sfHover ul {
     font-family:Arial,sans-serif;
     font-size:15px;
     font-weight:bold;
-    line-height:21px;
+    line-height:22px;
     padding:0 0 18px 0;
 }
 #comments-list {
@@ -493,7 +504,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .aside ul ul {
     list-style:disc;
-    margin:0 0 21px 20px;
+    margin:0 0 22px 20px;
 }
 .aside ul ul li {
     padding:2px 0 0 0;
@@ -503,7 +514,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .aside form,
 .aside table {
-    margin-bottom:21px;
+    margin-bottom:22px;
 }
 
 /*
@@ -516,7 +527,7 @@ ul.sf-menu li li li.sfHover ul {
     color:#666;
 }    
 .main-aside ul {
-    padding:0 1.5em;
+    padding:0 20px;
 }
 .main-aside h3 {
     color:#000;
@@ -527,14 +538,24 @@ ul.sf-menu li li li.sfHover ul {
 #primary {
     border:1px solid #ccc;
     padding:18px 0 0 0;
-    margin-bottom:21px;
+    margin-bottom:22px;
 }
 /*
     Content Asides
 */
 #content .aside {
     border:1px solid #ccc;
-    margin:0 0 21px 0;
+    margin:0 0 22px 0;
+    padding:18px 0 0 0;
+}
+#content .aside ul {
+    padding:0 20px;
+}
+#content .aside h3 {
+    color:#000;
+}
+#content .aside ul ul {
+    padding:0;
 }
 /*
     Footer Asides
@@ -549,12 +570,12 @@ ul.sf-menu li li li.sfHover ul {
 
 #footer {
     border-top:1px solid #ccc;
-    margin-top:21px;
+    margin-top:22px;
 }
 #siteinfo {
     font-size:11px;
     line-height:18px;
-    padding:21px 0 42px 0;
+    padding:22px 0 44px 0;
 }
 
 
