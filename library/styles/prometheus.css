@@ -24,8 +24,6 @@ blockquote {
     color:#666;
     font-style:italic;
 }
-a {
-}
 table {
     border:1px solid #ccc;
     border-width:1px 1px 0 1px;
@@ -43,6 +41,17 @@ tr {
 th, td {
     padding: .7em 1.25em;
 }
+a:link {
+    color:#004B91;
+}
+a:visited {
+    color:#743399;
+}
+a:active,
+a:hover {
+    color: #FF4B33;
+}
+
 
 /* =Header
 -------------------------------------------------------------- */
@@ -61,6 +70,10 @@ th, td {
 #blog-title a {
     color:#000;
     text-decoration:none;
+}
+#blog-title a:active,
+#blog-title a:hover {
+    color: #FF4B33;
 }
 #blog-description {
     color:#666;
@@ -218,6 +231,11 @@ ul.sf-menu li li li.sfHover ul {
     color:#000;
     text-decoration:none;
 }
+
+.entry-title a:active,
+.entry-title a:hover {
+    color: #FF4B33;
+}
 .entry-meta {
     color:#666;
     font-size:13px;
@@ -233,21 +251,21 @@ ul.sf-menu li li li.sfHover ul {
     text-transform:uppercase;
 }
 .entry-meta a {
+    color:#666;
     text-decoration:none;
 }
+.entry-meta a:active,
+.entry-meta a:hover {
+    color: #FF4B33;
+}
 .entry-meta abbr {
+    font-size:11px;
     font-style:normal;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
 }
 .entry-content {
     padding:22px 0 0 0;
-}
-.entry-content a:visited {
-}
-.entry-content a:hover {
-}
-.entry-content a:focus {
-}
-.entry-content a:active {
 }
 .entry-content h1,
 .entry-content h2 {
@@ -286,6 +304,12 @@ ul.sf-menu li li li.sfHover ul {
 }
 .entry-utility a {
     color:#666;
+    font-style:italic;
+    text-decoration:none;
+}
+.entry-utility a:active,
+.entry-utility a:hover {
+    color: #FF4B33;
 }
 .page-link {
     font-size:13px;
@@ -302,6 +326,21 @@ ul.sf-menu li li li.sfHover ul {
     padding:0.5em 0.75em;
     text-decoration:none;
 }
+.page-link a:active,
+.page-link a:hover {
+    color: #FF4B33;
+}
+ul#links-page,
+ul#archives-page {
+    list-style:none;
+    margin-left:0;
+    overflow:hidden;
+}
+li.content-column {
+    float:left;
+    margin-right:20px;
+    width:45%;
+}
 
 /* =Navigation
 -------------------------------------------------------------- */
@@ -315,6 +354,15 @@ ul.sf-menu li li li.sfHover ul {
 }
 .navigation a {
     color:#666;
+    font-style:italic;
+    text-decoration:none;
+}
+.navigation a:active,
+.navigation a:hover {
+    color: #FF4B33;
+}
+.navigation .meta-nav {
+    font-style:normal;
 }
 .nav-previous {
 	float: left;
@@ -407,6 +455,12 @@ ul.sf-menu li li li.sfHover ul {
 }
 #comments-list .comment-meta a {
     color:#666;
+    font-style:italic;
+    text-decoration:none;
+}
+#comments-list .comment-meta a:active,
+#comments-list .comment-meta a:hover {
+    color: #FF4B33;
 }
 .comment-reply-link {
     font-size:11px;
@@ -415,6 +469,12 @@ ul.sf-menu li li li.sfHover ul {
 }
 .comment-reply-link a {
     color:#666;
+    font-style:italic;
+    text-decoration:none;
+}
+.comment-reply-link a:active,
+.comment-reply-link a:hover {
+    color: #FF4B33;
 }
 .comment-navigation {
     font-weight:bold;
@@ -428,6 +488,10 @@ ul.sf-menu li li li.sfHover ul {
     padding:0.5em 0.75em;
     text-decoration:none;
 }
+.comment-navigation a:active,
+.comment-navigation a:hover {
+    color: #FF4B33;
+}
 .comment-navigation a,
 .comment-navigation span {
     margin-right:0.5em;
@@ -438,6 +502,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 #respond {
     background:#fff;
+    margin-bottom:22px;
     padding:18px 0 0 0;
     position:relative;
 }
@@ -448,6 +513,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 #comments-list ul #respond {
     border:1px solid #ccc;
+    margin:0;
 }
 #cancel-comment-reply {
     font-size:11px;
@@ -533,7 +599,7 @@ ul.sf-menu li li li.sfHover ul {
     margin:0 0 22px 20px;
 }
 .aside ul ul li {
-    padding:2px 0 0 0;
+    padding:1px 0;
 }
 .aside ul ul ul {
     margin-bottom:0;
@@ -572,7 +638,11 @@ ul.sf-menu li li li.sfHover ul {
 }
 .main-aside a {
     color:#666;
-}    
+}
+.main-aside a:active,
+.main-aside a:hover {
+    color: #FF4B33;
+}
 .main-aside ul {
     padding:0 20px;
 }
@@ -599,7 +669,12 @@ ul.sf-menu li li li.sfHover ul {
     padding:0 20px;
 }
 #content .aside h3 {
-    color:#000;
+    font-family:Georgia,serif;
+    font-weight:normal;
+    font-size:17px;
+    font-style:italic;
+    padding:0 0 7px 0;
+    text-transform:none;
 }
 #content .aside ul ul {
     padding:0;
@@ -620,9 +695,17 @@ ul.sf-menu li li li.sfHover ul {
     margin-top:22px;
 }
 #siteinfo {
+    color:#666;
     font-size:11px;
     line-height:18px;
     padding:22px 0 44px 0;
+}
+#siteinfo a {
+    color:#666;
+}
+#siteinfo a:active,
+#siteinfo a:hover {
+    color: #FF4B33;
 }
 
 
