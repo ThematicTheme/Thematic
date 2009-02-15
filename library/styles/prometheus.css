@@ -210,6 +210,25 @@ ul.sf-menu li li li.sfHover ul {
     clear:both;
     padding:66px 0 22px 0;
 }
+.page-title {
+    font-size:13px;
+    line-height:18px;
+    padding:0 0 44px 0;
+}
+.page-title a {
+    color:#666;
+    text-decoration:none;
+}
+.page-title a:active,
+.page-title a:hover {
+    color: #FF4B33;
+}
+.page-title span {
+    font-style:italic;
+}
+.page-title .meta-nav {
+    font-style:normal;
+}
 .hentry {
     padding:0 0 22px 0;
 }
@@ -232,7 +251,6 @@ ul.sf-menu li li li.sfHover ul {
     color:#000;
     text-decoration:none;
 }
-
 .entry-title a:active,
 .entry-title a:hover {
     color: #FF4B33;
@@ -342,6 +360,38 @@ li.content-column {
     margin-right:20px;
     width:45%;
 }
+.gallery {
+    padding:0 0 22px 0;
+}
+.wp-caption-text,
+.gallery-caption {
+    color:#666;
+    font-size:13px;
+    line-height:18px;
+}
+
+
+/* =Attachments
+-------------------------------------------------------------- */
+
+.attachment-jpeg #container,
+.attachment-png #container {
+    width:100%;
+}
+.attachment-jpeg #content,
+.attachment-png #content {
+    width:930px;
+}
+.attachment-jpeg #comments,
+.attachment-png #comments {
+    width:540px;
+    overflow:hidden;
+}
+.attachment-jpeg .main-aside,
+.attachment-png .main-aside {
+    display:none;    
+}
+
 
 /* =Navigation
 -------------------------------------------------------------- */
