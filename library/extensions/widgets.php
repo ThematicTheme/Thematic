@@ -238,7 +238,6 @@ function thematic_widgets_init() {
 	  }   
    
 	// Finished intializing Widgets plugin, now let's load the thematic default widgets
-	register_sidebar_widget(__('Blog Index', 'thematic'), 'widget_blog_index', null, 'blog index');
 	register_sidebar_widget(__('Search', 'thematic'), 'widget_thematic_search', null, 'search');
 	unregister_widget_control('search');
 	register_sidebar_widget(__('Meta', 'thematic'), 'widget_thematic_meta', null, 'meta');
