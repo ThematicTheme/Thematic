@@ -100,6 +100,10 @@ foreach ( $comments as $comment )
     							<div class="form-label"><label for="comment"><?php _e('Comment', 'thematic') ?></label></div>
     							<div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
                             </div><!-- #form-section-comment .form-section -->
+                            
+                            <div id="form-allowed-tags" class="form-section">
+                                <p><span>You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: </span><?php echo allowed_tags(); ?></p>
+                            </div>
 							
                   <?php do_action('comment_form', $post->ID); ?>
 
