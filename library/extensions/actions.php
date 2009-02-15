@@ -92,7 +92,10 @@ function thematic_header_superfish() { ?>
             $("ul.sf-menu").supersubs({ 
                 delay:       0,                                 // one second delay on mouseout 
                 animation:   {opacity:'show',height:'show'},    // fade-in and slide-down animation 
-                speed:       'fast',                            // faster animation speed            
+                speed:       'fast',                            // faster animation speed   
+                autoArrows:  false,                           // disable generation of arrow mark-up 
+                dropShadows: false,                            // disable drop shadows 
+                         
                 minWidth:    12,                                // minimum width of sub-menus in em units 
                 maxWidth:    27,                                // maximum width of sub-menus in em units 
                 extraWidth:  1                                  // extra width can ensure lines don't sometimes turn over 
