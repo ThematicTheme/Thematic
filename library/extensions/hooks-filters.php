@@ -84,7 +84,13 @@ add_filter('wp_page_menu', 'sample_nav');
 
 // Information in Post Header
 function thematic_postheader() {
-    global $post, $authordata;
+    global $id, $post, $authordata;
+    
+    // Create $posteditlink    
+    $posteditlink .= '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+    $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
+    $posteditlink .= __('Edit', 'thematic') . '</a>';
+
     
     if (is_single() || is_page()) {
         $posttitle = '<h1 class="entry-title">' . get_the_title() . "</h1>\n";
@@ -112,7 +118,12 @@ function thematic_postheader() {
     $postmeta .= get_the_time('Y-m-d\TH:i:sO') . '">';
     $postmeta .= get_the_time('F j, Y');
     $postmeta .= '</abbr></span>';
+    // Display edit link
+    if (current_user_can('edit_posts')) {
+        $postmeta .= ' <span class="meta-sep">|</span> ' . $posteditlink;
+    }               
     $postmeta .= "</div><!-- .entry-meta -->\n";
+
     
     if ($post->post_type == 'page' || is_404()) {
         $postheader = $posttitle;        
