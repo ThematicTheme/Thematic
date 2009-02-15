@@ -182,8 +182,6 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
     background:     #fafafa;
 	outline:		0;
-}
-.sf-menu .current_page_item a:hover {
     border-bottom-color:#ccc;
 }
 .sf-menu ul {
