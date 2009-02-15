@@ -215,6 +215,9 @@ ul.sf-menu li li li.sfHover ul {
     line-height:18px;
     padding:0 0 44px 0;
 }
+.attachment .page-title {
+    font-style:italic;
+}
 .page-title a {
     color:#666;
     text-decoration:none;
@@ -278,6 +281,8 @@ ul.sf-menu li li li.sfHover ul {
     color: #FF4B33;
 }
 .entry-meta abbr {
+    border:none;
+    cursor:text;
     font-size:11px;
     font-style:normal;
     letter-spacing:0.05em;
@@ -304,10 +309,6 @@ ul.sf-menu li li li.sfHover ul {
     font-weight:bold;
     text-transform:uppercase;
     letter-spacing:0.05em;
-}
-.entry-content abbr, .entry-content acronym {
-  border-bottom:1px dotted #333;
-  cursor: help;
 }
 .entry-content table {
     margin-left:1px;
@@ -576,12 +577,11 @@ li.content-column {
     color:#666;
 }
 #respond .required {
-    color:red;
+    color:#FF4B33;
     font-weight:bold;
 }
 .form-section label {
     font-size:11px;
-
 }
 .form-section input {
     margin:0 0 18px 0;
@@ -589,6 +589,14 @@ li.content-column {
 }
 .form-section textarea {
     width:99%;
+}
+#form-allowed-tags p {
+    color:#666;
+    font-size:11px;
+    margin:0;    
+}
+#form-allowed-tags span {
+    font-style:italic;
 }
 .form-submit {
     padding:18px 0 0 0;
