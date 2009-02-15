@@ -8,4 +8,5 @@ add_action('thematic_header', 'thematic_header_create_stylesheet', 6);
 add_action('thematic_header', 'thematic_header_create_rss', 7);
 add_action('thematic_header', 'thematic_header_create_pingback', 8);
 add_action('thematic_header', 'thematic_header_create_commentreply', 9);
+add_action('thematic_header','thematic_header_superfish', 10);
 ?>
