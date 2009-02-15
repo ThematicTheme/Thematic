@@ -79,6 +79,10 @@ pre {
 code {
 	font:11px Monaco, monospace;
 }
+abbr, acronym {
+  border-bottom:1px dotted #333;
+  cursor: help;
+}
 ins {
 	text-decoration:none;
 }
