@@ -628,6 +628,16 @@ li.content-column {
 .aside .current_page_item .page_item a {
     font-weight:normal;
 }
+.aside {
+    color:#666;
+}
+.aside a {
+    color:#666;
+}
+.aside a:active,
+.aside a:hover {
+    color: #FF4B33;
+}
 .aside h3 {
     font-size:11px;
     font-family:Arial,sans-serif;
@@ -636,11 +646,9 @@ li.content-column {
     letter-spacing:0.05em;
 }
 .aside h3 a {
-    color:#000;
     text-decoration:none;
 }
 .aside caption {
-    color:#000;
     font-size:11px;
     font-family:Arial,sans-serif;
     font-weight:bold;
@@ -690,21 +698,10 @@ li.content-column {
 /*
     Main Asides
 */
-.main-aside {
-    color:#666;
-}
-.main-aside a {
-    color:#666;
-}
-.main-aside a:active,
-.main-aside a:hover {
-    color: #FF4B33;
-}
 .main-aside ul {
     padding:0 20px;
 }
 .main-aside h3 {
-    color:#000;
 }
 .main-aside ul ul {
     padding:0;
