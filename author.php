@@ -25,6 +25,7 @@ foreach ($options as $value) {
 
 <?php /* if display author bio is selected */ if($thm_authorinfo == 'true' & !is_paged()) { ?>
 			<div id="author-info" class="vcard">
+			    <h2 class="entry-title"><?php echo $authordata->first_name; ?> <?php echo $authordata->last_name; ?></h2> 
     			<?php thematic_author_info_avatar(); ?>
     			<div class="author-bio note">
                     <?php if ( !(''== $authordata->user_description) ) : echo apply_filters('archive_meta', $authordata->user_description); endif; ?>
