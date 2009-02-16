@@ -52,17 +52,30 @@ function thematic_excerpt_rss() {
 add_filter('thematic_excerpt_rss', 'thematic_trim_excerpt');
 
 // create nice multi_tag_title
+// Credits: Martin Kopischke for providing this code
 
 function thematic_tag_query() {
-  $nice_tag_query = $_SERVER['REQUEST_URI'];
-  $nice_tag_query = preg_replace('/.*(\/tag\/|\?tag=)/', '', $nice_tag_query);
-  $nice_tag_query = str_replace(',', ', ', $nice_tag_query);
-  $nice_tag_query = str_replace('/','', $nice_tag_query);
-  $nice_tag_query = str_replace('%20','', $nice_tag_query);
-  $nice_tag_query = str_replace('+',' + ', $nice_tag_query);
+	$nice_tag_query = get_query_var('tag'); // tags in current query
+	$nice_tag_query = str_replace(' ', '+', $nice_tag_query); // get_query_var returns ' ' for AND, replace by +
+	$tag_slugs = preg_split('%[,+]%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of tag slugs
+	$tag_ops = preg_split('%[^,+]*%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of operators
 
-  return $nice_tag_query;
+	$tag_ops_counter = 0;
+	$nice_tag_query = '';
+
+	foreach ($tag_slugs as $tag_slug) { 
+		$tag = get_term_by('slug', $tag_slug ,'post_tag');
+		// prettify tag operator, if any
+		if ($tag_ops[$tag_ops_counter] == ',') {
+			$tag_ops[$tag_ops_counter] = ', ';
+		} elseif ($tag_ops[$tag_ops_counter] == '+') {
+			$tag_ops[$tag_ops_counter] = ' + ';
+		}
+		// concatenate display name and prettified operators
+		$nice_tag_query = $nice_tag_query.$tag->name.$tag_ops[$tag_ops_counter];
+		$tag_ops_counter += 1;
+	}
+	 return $nice_tag_query;
 }
-
 
 ?>
