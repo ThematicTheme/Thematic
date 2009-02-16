@@ -639,11 +639,9 @@ li.content-column {
     color: #FF4B33;
 }
 .aside h3 {
-    font-size:11px;
-    font-family:Arial,sans-serif;
-    font-weight:bold;
-    text-transform:uppercase;
-    letter-spacing:0.05em;
+    font-size:15px;
+    font-style:italic;
+    line-height:22px;
 }
 .aside h3 a {
     text-decoration:none;
@@ -736,8 +734,8 @@ li.content-column {
 /*
     Footer Asides
 */
-#footer .aside {
-    display:none;
+#subsidiary {
+    padding:33px 0 0 0;    
 }
 
 
