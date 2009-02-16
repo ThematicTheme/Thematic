@@ -81,6 +81,28 @@ add_filter('wp_page_menu', 'sample_nav');
 
 */
 
+// Filter to create the time url title displayed in Post Header
+function thematic_time_title() {
+
+  $time_title = 'Y-m-d\TH:i:sO';
+
+	// Filters should return correct 
+	$time_title = apply_filters('thematic_time_title', $time_title);
+	
+	return $time_title;
+}
+
+// Filter to create the time displayed in Post Header
+function thematic_time_display() {
+
+  $time_display = 'F j, Y';
+
+	// Filters should return correct 
+	$time_display = apply_filters('thematic_time_display', $time_display);
+	
+	return $time_display;
+}
+
 
 // Information in Post Header
 function thematic_postheader() {
@@ -115,8 +137,8 @@ function thematic_postheader() {
     $postmeta .= '</a></span><span class="meta-sep"> | </span>';
     $postmeta .= __('Published: ', 'thematic');
     $postmeta .= '<span class="entry-date"><abbr class="published" title="';
-    $postmeta .= get_the_time('Y-m-d\TH:i:sO') . '">';
-    $postmeta .= get_the_time('F j, Y');
+    $postmeta .= get_the_time(thematic_time_title()) . '">';
+    $postmeta .= get_the_time(thematic_time_display());
     $postmeta .= '</abbr></span>';
     // Display edit link
     if (current_user_can('edit_posts')) {
