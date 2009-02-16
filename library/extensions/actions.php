@@ -1,5 +1,5 @@
 <?php
-function thematic_header_create_head() {
+function thematic_head_create_head() {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes() ?>>
@@ -8,7 +8,7 @@ function thematic_header_create_head() {
 <?php
 }
 
-function thematic_header_create_title() {
+function thematic_head_create_title() {
 ?>
     <title><?php
         if ( is_single() ) { single_post_title(); }
@@ -23,14 +23,14 @@ function thematic_header_create_title() {
 <?php
 }
 
-function thematic_header_create_contenttype() {
+function thematic_head_create_contenttype() {
 ?>
     <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 
 <?php
 }
 
-function thematic_header_create_description() {
+function thematic_head_create_description() {
     if (is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <meta name="description" content="<?php if (thematic_the_excerpt() == "") {echo thematic_excerpt_rss(); } else { echo thematic_the_excerpt(); } ?>" />
 <?php endwhile; endif; elseif(is_home()) : ?>
@@ -39,7 +39,7 @@ function thematic_header_create_description() {
 <?php endif;
 }
 
-function thematic_header_create_robots() {
+function thematic_head_create_robots() {
 if((is_home() && ($paged < 2 )) || is_front_page() || is_single() || is_page() || is_attachment()) {
       echo '    <meta name="robots" content="index,follow" />';
     } elseif (is_search()) {
@@ -49,7 +49,7 @@ if((is_home() && ($paged < 2 )) || is_front_page() || is_single() || is_page() |
     }
 }
 
-function thematic_header_create_stylesheet() {
+function thematic_head_create_stylesheet() {
 ?>
 
 
@@ -58,7 +58,7 @@ function thematic_header_create_stylesheet() {
 <?php
 }
 
-function thematic_header_create_rss() {
+function thematic_head_create_rss() {
 ?>
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" />
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Comments RSS feed', 'thematic'); ?>" />
@@ -66,20 +66,20 @@ function thematic_header_create_rss() {
 <?php
 }
 
-function thematic_header_create_pingback() {
+function thematic_head_create_pingback() {
 ?>
     <link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 
 <?php
 }
 
-function thematic_header_create_commentreply() {
+function thematic_head_create_commentreply() {
   if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); // support for comment threading
 }
 
 // Load scripts for the jquery Superfish plugin
 // http://users.tpg.com.au/j_birch/plugins/superfish/#examples
-function thematic_header_superfish() { ?>
+function thematic_head_superfish() { ?>
 
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/scripts/jquery-1.2.6.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/scripts/hoverIntent.js"></script>
