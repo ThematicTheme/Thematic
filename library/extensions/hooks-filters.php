@@ -2,8 +2,8 @@
 
 // Located in header.php
 // Just before anything else, it loads all the neccesary elements for the <head> section
-function thematic_header() {
-    do_action('thematic_header');
+function thematic_head() {
+    do_action('thematic_head');
 }
 
 // Located in header.php 

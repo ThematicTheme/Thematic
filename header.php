@@ -1,4 +1,4 @@
-<?php thematic_header(); ?>
+<?php thematic_head(); ?>
 
 <?php wp_head(); ?>
 
