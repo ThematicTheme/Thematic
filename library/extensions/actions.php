@@ -69,34 +69,44 @@ function thematic_head_create_commentreply() {
   if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); // support for comment threading
 }
 
-// Load scripts for the jquery Superfish plugin
-// http://users.tpg.com.au/j_birch/plugins/superfish/#examples
-function thematic_head_superfish() { ?>
+function thematic_head_scripts() {
+// Load scripts for the jquery Superfish plugin http://users.tpg.com.au/j_birch/plugins/superfish/#examples
 
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/scripts/jquery-1.2.6.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/scripts/hoverIntent.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/scripts/superfish.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/library/scripts/supersubs.js"></script>
+    $scriptdir_start = '<script type="text/javascript" src="';
+    $scriptdir_start .= get_bloginfo('template_directory');
+    $scriptdir_start .= '/library/scripts/';
     
-    <script type="text/javascript"> 
-     
-    $(document).ready(function(){ 
-        $("ul.sf-menu").supersubs({ 
-            minWidth:    12,   // minimum width of sub-menus in em units 
-            maxWidth:    27,   // maximum width of sub-menus in em units 
-            extraWidth:  1     // extra width can ensure lines don't sometimes turn over 
-                               // due to slight rounding differences and font-family 
-        }).superfish({ 
-            delay:       0,                            // delay on mouseout 
-            animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation 
-            speed:       'fast',                          // faster animation speed 
-            autoArrows:  false,                           // disable generation of arrow mark-up 
-            dropShadows: false                            // disable drop shadows 
-        }); 
-    }); 
-     
-    </script>
+    $scriptdir_end = '"></script>';
+    
+    $scripts .= $scriptdir_start . 'jquery-1.2.6.min.js' . $scriptdir_end . "\n";
+    $scripts .= $scriptdir_start . 'hoverIntent.js' . $scriptdir_end . "\n";
+    $scripts .= $scriptdir_start . 'superfish.js' . $scriptdir_end . "\n";
+    $scripts .= $scriptdir_start . 'supersubs.js' . $scriptdir_end . "\n";
+    
+    $scripts .= <<<EOD
+<script type="text/javascript"> 
 
-<?php }
+$(document).ready(function(){ 
+    $("ul.sf-menu").supersubs({ 
+        minWidth:    12,   // minimum width of sub-menus in em units 
+        maxWidth:    27,   // maximum width of sub-menus in em units 
+        extraWidth:  1     // extra width can ensure lines don't sometimes turn over 
+                           // due to slight rounding differences and font-family 
+    }).superfish({ 
+        delay:       0,                                 // delay on mouseout 
+        animation:   {opacity:'show',height:'show'},    // fade-in and slide-down animation 
+        speed:       'fast',                            // faster animation speed 
+        autoArrows:  false,                             // disable generation of arrow mark-up 
+        dropShadows: false                              // disable drop shadows 
+    }); 
+}); 
+
+</script>
+EOD;
+
+    // Print filtered scripts
+    print apply_filters('thematic_head_scripts', $scripts);
+
+}
 
 ?>
