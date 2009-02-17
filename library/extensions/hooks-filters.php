@@ -169,6 +169,20 @@ function thematic_time_display() {
 }
 
 
+// Filter to create create the sidebar
+function thematic_sidebar() {
+
+  $show = TRUE;
+
+	// Filters should return Boolean 
+	$show = apply_filters('thematic_sidebar', $show);
+	
+	if ($show) {
+    get_sidebar();}
+	
+	return;
+}
+
 // Information in Post Header
 function thematic_postheader() {
     global $id, $post, $authordata;

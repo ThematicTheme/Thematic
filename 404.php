@@ -20,5 +20,5 @@
 		</div><!-- #content -->
 	</div><!-- #container -->
 
-<?php get_sidebar() ?>
+<?php thematic_sidebar() ?>
 <?php get_footer() ?>

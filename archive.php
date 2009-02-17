@@ -58,5 +58,5 @@ foreach ($options as $value) {
 		</div><!-- #content .hfeed -->
 	</div><!-- #container -->
 
-<?php get_sidebar() ?>
+<?php thematic_sidebar() ?>
 <?php get_footer() ?>
