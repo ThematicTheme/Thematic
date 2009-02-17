@@ -199,6 +199,9 @@ ul.sf-menu li li li.sfHover ul {
     background:#fafafa;
 	border-bottom:none;
 }
+.sf-menu ul a:hover {
+    color: #FF4B33;
+}
 
 
 /* =Content
