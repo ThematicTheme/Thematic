@@ -92,7 +92,7 @@ function thematic_head_scripts() {
             extraWidth:  1                                  // extra width can ensure lines don't sometimes turn over 
                                                             // due to slight rounding differences and font-family 
         }).superfish({ 
-            delay:       300,                               // delay on mouseout 
+            delay:       100,                               // delay on mouseout 
             animation:   {opacity:'show',height:'show'},    // fade-in and slide-down animation 
             speed:       'fast',                            // faster animation speed 
             autoArrows:  false,                             // disable generation of arrow mark-up 
