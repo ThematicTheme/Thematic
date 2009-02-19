@@ -72,7 +72,7 @@ function thematic_head_create_commentreply() {
 function thematic_head_scripts() {
 // Load scripts for the jquery Superfish plugin http://users.tpg.com.au/j_birch/plugins/superfish/#examples
 
-    $scriptdir_start = '<script type="text/javascript" src="';
+    $scriptdir_start = '    <script type="text/javascript" src="';
     $scriptdir_start .= get_bloginfo('template_directory');
     $scriptdir_start .= '/library/scripts/';
     
@@ -84,24 +84,23 @@ function thematic_head_scripts() {
     $scripts .= $scriptdir_start . 'supersubs.js' . $scriptdir_end . "\n";
     
     $scripts .= <<<EOD
-<script type="text/javascript"> 
-
-$(document).ready(function(){ 
-    $("ul.sf-menu").supersubs({ 
-        minWidth:    12,   // minimum width of sub-menus in em units 
-        maxWidth:    27,   // maximum width of sub-menus in em units 
-        extraWidth:  1     // extra width can ensure lines don't sometimes turn over 
-                           // due to slight rounding differences and font-family 
-    }).superfish({ 
-        delay:       0,                                 // delay on mouseout 
-        animation:   {opacity:'show',height:'show'},    // fade-in and slide-down animation 
-        speed:       'fast',                            // faster animation speed 
-        autoArrows:  false,                             // disable generation of arrow mark-up 
-        dropShadows: false                              // disable drop shadows 
+    <script type="text/javascript">
+    $(document).ready(function(){ 
+        $("ul.sf-menu").supersubs({ 
+            minWidth:    12,                                // minimum width of sub-menus in em units 
+            maxWidth:    27,                                // maximum width of sub-menus in em units 
+            extraWidth:  1                                  // extra width can ensure lines don't sometimes turn over 
+                                                            // due to slight rounding differences and font-family 
+        }).superfish({ 
+            delay:       300,                               // delay on mouseout 
+            animation:   {opacity:'show',height:'show'},    // fade-in and slide-down animation 
+            speed:       'fast',                            // faster animation speed 
+            autoArrows:  false,                             // disable generation of arrow mark-up 
+            dropShadows: false                              // disable drop shadows 
+        }); 
     }); 
-}); 
-
-</script>
+    </script>
+    
 EOD;
 
     // Print filtered scripts
