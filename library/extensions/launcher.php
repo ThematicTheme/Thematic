@@ -8,5 +8,5 @@ add_action('thematic_head', 'thematic_head_create_stylesheet', 6);
 add_action('thematic_head', 'thematic_head_create_rss', 7);
 add_action('thematic_head', 'thematic_head_create_pingback', 8);
 add_action('thematic_head', 'thematic_head_create_commentreply', 9);
-add_action('thematic_head','thematic_head_scripts', 10);
+add_action('wp_head','thematic_head_scripts');
 ?>
