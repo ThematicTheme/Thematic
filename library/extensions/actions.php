@@ -78,15 +78,16 @@ function thematic_head_scripts() {
     
     $scriptdir_end = '"></script>';
     
-    $scripts .= $scriptdir_start . 'jquery-1.2.6.min.js' . $scriptdir_end . "\n";
+    $scripts = "\n";
     $scripts .= $scriptdir_start . 'hoverIntent.js' . $scriptdir_end . "\n";
     $scripts .= $scriptdir_start . 'superfish.js' . $scriptdir_end . "\n";
     $scripts .= $scriptdir_start . 'supersubs.js' . $scriptdir_end . "\n";
     
     $scripts .= <<<EOD
     <script type="text/javascript">
-    $(document).ready(function(){ 
-        $("ul.sf-menu").supersubs({ 
+    jQuery.noConflict();
+    jQuery(document).ready(function(){ 
+        jQuery("ul.sf-menu").supersubs({ 
             minWidth:    12,                                // minimum width of sub-menus in em units 
             maxWidth:    27,                                // maximum width of sub-menus in em units 
             extraWidth:  1                                  // extra width can ensure lines don't sometimes turn over 
@@ -98,7 +99,7 @@ function thematic_head_scripts() {
             autoArrows:  false,                             // disable generation of arrow mark-up 
             dropShadows: false                              // disable drop shadows 
         }); 
-    }); 
+    });
     </script>
     
 EOD;
