@@ -349,7 +349,7 @@ msgstr " Commenti"
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:112
 msgid " Comment"
-msgstr " Commenta"
+msgstr " Commento"
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:115
 msgid "Leave a comment"
