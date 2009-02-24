@@ -1,11 +1,5 @@
 <?php
 
-// Located in header.php
-// Just before anything else, it loads all the neccesary elements for the <head> section
-function thematic_head() {
-    do_action('thematic_head');
-}
-
 // Located in header.php 
 // Just after the opening body tag, before anything else.
 function thematic_before() {
@@ -60,6 +54,15 @@ function thematic_after() {
     do_action('thematic_after');
 }
 
+// Located in header.php 
+// Creates the DOCTYPE section
+function thematic_create_doctype() {
+    $content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
+    $content .= '<html xmlns="http://www.w3.org/1999/xhtml"';
+    echo apply_filters('thematic_create_head', $content);
+}
+
+// Located in header.php 
 // Creates the content of the Title tag
 // Credits: Tarski Theme
 function thematic_doctitle() {
@@ -120,9 +123,146 @@ function thematic_doctitle() {
     else {
       $doctitle = $elements;
     }
+    
+    $doctitle = "\t" . "<title>" . $doctitle . "</title>" . "\n\n";
       
     echo $doctitle;
 
+}
+
+// Located in header.php 
+// Creates the content-type section
+function thematic_create_contenttype() {
+    $content  = "\t";
+    $content .= "<meta http-equiv=\"content-type\" content=\"";
+    $content .= get_bloginfo('html_type'); 
+    $content .= " charset=";
+    $content .= get_bloginfo('charset');
+    $content .= "\"";
+    $content .= "/>";
+    $content .= "\n\n";
+    echo apply_filters('thematic_create_contenttype', $content);
+}
+
+// Creates the meta-tag description
+function thematic_create_description() {
+    $content ="\t";
+    if (is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+    $content .= "<meta name=\"description\" content=\"";
+    if (thematic_the_excerpt() == "") {$content .= thematic_excerpt_rss(); } else { $content .= thematic_the_excerpt(); }
+    $content .= " />";
+    endwhile; endif; elseif(is_home()) : 
+    $content .= "<meta name=\"description\" content=\"" . get_bloginfo('description') . "\" />";
+    endif;
+    $content .= "\n\n";
+    echo apply_filters('thematic_create_description', $content);
+}
+
+
+// Located in header.php
+// meta-tag description is switchable using a filter
+function thematic_show_description() {
+    $display = TRUE;
+    apply_filters('thematic_show_description', $display);
+    if ($display) {
+        thematic_create_description();
+    }
+}
+
+// create meta-tag robots
+function thematic_create_robots() {
+    $content = "\t";
+    if((is_home() && ($paged < 2 )) || is_front_page() || is_single() || is_page() || is_attachment()) {
+      $content .= "<meta name=\"robots\" content=\"index,follow\" />";
+    } elseif (is_search()) {
+        $content .= "<meta name=\"robots\" content=\"noindex,nofollow\" />";
+    } else {	
+        $content .= "<meta name=\"robots\" content=\"noindex,follow\" />";
+    }
+    $content .= "\n\n";
+    echo apply_filters('thematic_create_robots', $content);
+}
+
+// Located in header.php
+// meta-tag robots is switchable using a filter
+function thematic_show_robots() {
+    $display = TRUE;
+    apply_filters('thematic_show_robots', $display);
+    if ($display) {
+        thematic_create_robots();
+    }
+}
+
+// Located in header.php
+// creates link to style.css
+function thematic_create_stylesheet() {
+    $content = "\t";
+    $content .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"";
+    $content .= get_bloginfo('stylesheet_url');
+    $content .= "\" />";
+    $content .= "\n\n";
+    echo apply_filters('thematic_create_stylesheet', $content);
+}
+
+// Located in header.php
+// rss usage is switchable using a filter
+function thematic_show_rss() {
+    $display = TRUE;
+    apply_filters('thematic_show_rss', §display);
+    if (§display) {
+        $content = "\t";
+        $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
+        $content .= get_bloginfo('rss2_url');
+        $content .= "\" title=\"";
+        $content .= wp_specialchars(get_bloginfo('name'), 1);
+        $content .= " " . __('Posts RSS feed', 'thematic');
+        $content .= "\" />";
+        $content .= "\n";
+        echo $content;
+    }
+}
+
+// Located in header.php
+// comments rss usage is switchable using a filter
+function thematic_show_commentsrss() {
+    $display = TRUE;
+    apply_filters('thematic_show_commentsrss', §display);
+    if (§display) {
+        $content = "\t";
+        $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
+        $content .= get_bloginfo('comments_rss2_url');
+        $content .= "\" title=\"";
+        $content .= wp_specialchars(get_bloginfo('name'), 1);
+        $content .= " " . __('Comments RSS feed', 'thematic');
+        $content .= "\" />";
+        $content .= "\n\n";
+        echo $content;
+    }
+}
+
+// Located in header.php
+// pingback usage is switchable using a filter
+function thematic_show_pingback() {
+    $display = TRUE;
+    apply_filters('thematic_show_pingback', §display);
+    if (§display) {
+        $content = "\t";
+        $content .= "<link rel=\"pingback\" href=\"";
+        $content .= get_bloginfo('pingback_url');
+        $content .= "\" />";
+        $content .= "\n\n";
+        echo $content;
+    }
+}
+
+// Located in header.php
+// comment reply usage is switchable using a filter
+function thematic_show_commentreply() {
+    $display = TRUE;
+    apply_filters('thematic_show_commentreply', §display);
+    if (§display)
+        if ( is_singular() ) 
+            wp_enqueue_script( 'comment-reply' ); // support for comment threading
 }
 
 // Add ID and CLASS attributes to the first <ul> occurence in wp_page_menu

@@ -1,6 +1,19 @@
-<?php thematic_head(); ?>
+<?php thematic_create_doctype(); echo " "; language_attributes(); echo ">\n";?>
+<head profile="http://gmpg.org/xfn/11">
 
-<?php wp_head(); ?>
+<?php 
+
+thematic_doctitle();
+thematic_create_contenttype();
+thematic_show_description();
+thematic_show_robots();
+thematic_create_stylesheet();
+thematic_show_rss();
+thematic_show_commentsrss();
+thematic_show_pingback();
+thematic_show_commentreply();
+
+wp_head(); ?>
 
 </head>
 
