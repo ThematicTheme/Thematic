@@ -146,16 +146,19 @@ function thematic_create_contenttype() {
 
 // Creates the meta-tag description
 function thematic_create_description() {
-    $content ="\t";
-    if (is_single() || is_page() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-    $content .= "<meta name=\"description\" content=\"";
-    if (thematic_the_excerpt() == "") {$content .= thematic_excerpt_rss(); } else { $content .= thematic_the_excerpt(); }
-    $content .= " />";
-    endwhile; endif; elseif(is_home()) : 
-    $content .= "<meta name=\"description\" content=\"" . get_bloginfo('description') . "\" />";
-    endif;
-    $content .= "\n\n";
-    echo apply_filters('thematic_create_description', $content);
+    global $post;
+    if (!empty($post->post_excerpt)) {
+        $content ="\t";
+        if (is_singular() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+        $content .= "<meta name=\"description\" content=\"";
+        if (thematic_the_excerpt() == "") {$content .= thematic_excerpt_rss(); } else { $content .= thematic_the_excerpt(); }
+        $content .= "\" />";
+        endwhile; endif; elseif(is_home()) : 
+        $content .= "<meta name=\"description\" content=\"" . get_bloginfo('description') . "\" />";
+        endif;
+        $content .= "\n\n";
+        echo apply_filters('thematic_create_description', $content);
+    }
 }
 
 
@@ -271,21 +274,6 @@ return preg_replace('/<ul>/', '<ul id="nav" class="sf-menu">', $ulclass, 1);
 }
 add_filter('wp_page_menu','thematic_add_menuclass');
 
-/*
-Here's how to filter your menu now.
-
-function sample_nav() { ?>
-    <div class="menu">
-        <ul>
-            <li><a href="#">Oh</a></li>
-            <li><a href="#">Hello there!</a></li>
-        </ul>
-    </div><!-- .menu -->     
-<?php }
-add_filter('wp_page_menu', 'sample_nav');
-
-*/
-
 // Filter to create the time url title displayed in Post Header
 function thematic_time_title() {
 
@@ -309,7 +297,7 @@ function thematic_time_display() {
 }
 
 
-// Filter to create create the sidebar
+// Filter to create the sidebar
 function thematic_sidebar() {
 
   $show = TRUE;
