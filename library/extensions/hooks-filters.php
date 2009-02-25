@@ -327,7 +327,7 @@ function thematic_time_title() {
 // Filter to create the time displayed in Post Header
 function thematic_time_display() {
 
-  $time_display = 'F j, Y';
+  $time_display = get_option('date_format');
 
 	// Filters should return correct 
 	$time_display = apply_filters('thematic_time_display', $time_display);
