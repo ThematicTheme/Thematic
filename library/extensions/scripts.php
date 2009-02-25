@@ -1,4 +1,5 @@
 <?php
+
 function thematic_head_scripts() {
 // Load scripts for the jquery Superfish plugin http://users.tpg.com.au/j_birch/plugins/superfish/#examples
 
@@ -38,5 +39,6 @@ EOD;
     print apply_filters('thematic_head_scripts', $scripts);
 
 }
+add_action('wp_head','thematic_head_scripts');
 
 ?>
