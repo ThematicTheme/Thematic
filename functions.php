@@ -26,12 +26,6 @@ require_once(THEMELIB . '/extensions/widgets.php');
 // Load custom theme hooks and filters
 require_once(THEMELIB . '/extensions/hooks-filters.php');
 
-// Load custom actions
-require_once(THEMELIB . '/extensions/actions.php');
-
-// Start custom actions
-require_once(THEMELIB . '/extensions/launcher.php');
-
 // Load the Comments Template functions and callbacks
 require_once(THEMELIB . '/extensions/discussion.php');
 
@@ -40,6 +34,9 @@ require_once(THEMELIB . '/extensions/dynamic-classes.php');
 
 // Need a little help from our helper functions
 require_once(THEMELIB . '/extensions/helpers.php');
+
+// Load scripts
+require_once(THEMELIB . '/extensions/scripts.php');
 
 // Produces an avatar image with the hCard-compliant photo class for author info
 require_once(THEMELIB . '/extensions/author-info-avatar.php');
