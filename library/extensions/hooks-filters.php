@@ -429,9 +429,9 @@ function thematic_postfooter() {
     $posteditlink .= '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
     $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
     $posteditlink .= __('Edit', 'thematic') . '</a>';
+    $posteditlink = apply_filters('thematic_postfooter_posteditlink',$posteditlink); 
     
     // Display the post categories  
-    $postcategory = '<div class="entry-utility">';
     $postcategory .= '<span class="cat-links">';
     if (is_single()) {
         $postcategory .= __('This entry was posted in ', 'thematic') . get_the_category_list(', ');
@@ -443,6 +443,7 @@ function thematic_postfooter() {
         $postcategory .= __('Posted in ', 'thematic') . get_the_category_list(', ');
         $postcategory .= '</span> <span class="meta-sep">|</span>';
     }
+    $postcategory = apply_filters('thematic_postfooter_postcategory',$postcategory); 
     
     // Display the tags
     if (is_single()) {
@@ -454,6 +455,7 @@ function thematic_postfooter() {
         $tagtext = __('Tagged', 'thematic');
         $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span> <span class="meta-sep">|</span>');
     }
+    $posttags = apply_filters('thematic_postfooter_posttags',$posttags); 
     
     // Display comments link and edit link
     if (comments_open()) {
@@ -475,6 +477,7 @@ function thematic_postfooter() {
     if (current_user_can('edit_posts')) {
         $postcomments .= ' <span class="meta-sep">|</span> ' . $posteditlink;
     }               
+    $postcomments = apply_filters('thematic_postfooter_postcomments',$postcomments); 
     
     // Display permalink, comments link, and RSS on single posts
     $postconnect .= __('. Bookmark the ', 'thematic') . '<a href="' . get_permalink() . '" title="' . __('Permalink to ', 'thematic') . the_title_attribute('echo=0') . '">';
@@ -496,6 +499,8 @@ function thematic_postfooter() {
     if (current_user_can('edit_posts')) {
         $postconnect .= ' ' . $posteditlink;
     }
+    $postconnect = apply_filters('thematic_postfooter_postconnect',$postconnect); 
+    
     
     // Add it all up
     if ($post->post_type == 'page' && current_user_can('edit_posts')) { /* For logged-in "page" search results */
@@ -505,9 +510,9 @@ function thematic_postfooter() {
         $postfooter = '';
     } else {
         if (is_single()) {
-            $postfooter = $postcategory . $posttags . $postconnect;
+            $postfooter = '<div class="entry-utility">' . $postcategory . $posttags . $postconnect;
         } else {
-            $postfooter = $postcategory . $posttags . $postcomments;
+            $postfooter = '<div class="entry-utility">' . $postcategory . $posttags . $postcomments;
         }
         $postfooter .= "</div><!-- .entry-utility -->\n";    
     }
