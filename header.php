@@ -7,6 +7,7 @@ thematic_doctitle();
 thematic_create_contenttype();
 thematic_show_description();
 thematic_show_robots();
+thematic_canonical_url();
 thematic_create_stylesheet();
 thematic_show_rss();
 thematic_show_commentsrss();
