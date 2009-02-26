@@ -374,6 +374,7 @@ function thematic_postheader() {
     $posteditlink .= '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
     $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
     $posteditlink .= __('Edit', 'thematic') . '</a>';
+    $posteditlink = apply_filters('thematic_postheader_posteditlink',$posteditlink); 
 
     
     if (is_single() || is_page()) {
@@ -389,6 +390,7 @@ function thematic_postheader() {
         $posttitle .= get_the_title();   
         $posttitle .= "</a></h2>\n";
     }
+    $posttitle = apply_filters('thematic_postheader_posttitle',$posttitle); 
     
     $postmeta = '<div class="entry-meta">';
     $postmeta .= '<span class="author vcard">';
@@ -407,6 +409,7 @@ function thematic_postheader() {
         $postmeta .= ' <span class="meta-sep">|</span> ' . $posteditlink;
     }               
     $postmeta .= "</div><!-- .entry-meta -->\n";
+    $postmeta = apply_filters('thematic_postheader_postmeta',$postmeta); 
 
     
     if ($post->post_type == 'page' || is_404()) {
