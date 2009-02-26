@@ -199,23 +199,55 @@ function thematic_canonical_url() {
 
 }
 
-// Creates the meta-tag description
-function thematic_create_description() {
-    global $post;
-    if (!empty($post->post_excerpt)) {
-        $content ="\t";
-        if (is_singular() ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-        $content .= "<meta name=\"description\" content=\"";
-        if (thematic_the_excerpt() == "") {$content .= thematic_excerpt_rss(); } else { $content .= thematic_the_excerpt(); }
-        $content .= "\" />";
-        endwhile; endif; elseif(is_home()) : 
-        $content .= "<meta name=\"description\" content=\"" . get_bloginfo('description') . "\" />";
-        endif;
-        $content .= "\n\n";
-        echo apply_filters('thematic_create_description', $content);
-    }
+// switch use of thematic_the_excerpt() - default: ON
+function thematic_use_excerpt() {
+    $display = TRUE;
+    $display = apply_filters('thematic_use_excerpt', $display);
+    return $display;
 }
 
+// switch use of thematic_the_excerpt() - default: OFF
+function thematic_use_autoexcerpt() {
+    $display = FALSE;
+    $display = apply_filters('thematic_use_autoexcerpt', $display);
+    return $display;
+}
+
+// Creates the meta-tag description
+function thematic_create_description() {
+
+    if (is_single() || is_page() ) {
+        if ( have_posts() ) {
+            while ( have_posts() ) {
+                the_post();
+                if (thematic_the_excerpt() == "") {
+                    if (thematic_use_autoexcerpt()) {
+                        $content ="\t";
+                        $content .= "<meta name=\"description\" content=\"";
+                        $content .= thematic_excerpt_rss();
+                        $content .= "\" />";
+                        $content .= "\n\n";
+                    }
+                } else {
+                    if (thematic_use_excerpt()) {
+                        $content ="\t";
+                        $content .= "<meta name=\"description\" content=\"";
+                        $content .= thematic_the_excerpt();
+                        $content .= "\" />";
+                        $content .= "\n\n";
+                    }
+                }
+            }
+        }
+    } elseif(is_home()) {
+        $content ="\t";
+        $content .= "<meta name=\"description\" content=\"";
+        $content .= get_bloginfo('description');
+        $content .= "\" />";
+        $content .= "\n\n";
+    }
+    echo apply_filters ('thematic_create_description', $content);
+}
 
 // Located in header.php
 // meta-tag description is switchable using a filter
