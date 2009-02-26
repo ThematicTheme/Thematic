@@ -80,7 +80,7 @@ function mytheme_admin() {
     
 ?>
 <div class="wrap">
-<div id="icon-themes" class="icon32"><br/></div>
+<?php if ( function_exists('screen_icon') ) screen_icon(); ?>
 <h2><?php echo $themename; ?> Options</h2>
 
 <form method="post">
