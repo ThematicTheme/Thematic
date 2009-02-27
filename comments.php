@@ -1,3 +1,4 @@
+<?php thematic_abovecomments() ?>
 			<div id="comments">
 <?php
 	$req = get_option('require_name_email'); // Checks if fields are required.
@@ -24,6 +25,8 @@ foreach ( $comments as $comment )
 
 <?php if ( ! empty($comments_by_type['comment']) ) : ?>
 
+<?php thematic_abovecommentslist() ?>
+
 				<div id="comments-list" class="comments">
 					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'thematic') : __('<span>One</span> Comment', 'thematic'), $comment_count) ?></h3>
 				
@@ -36,11 +39,14 @@ foreach ( $comments as $comment )
                     </div>
 					
 				</div><!-- #comments-list .comments -->
-			
+
+<?php thematic_belowcommentslist() ?>			
 
 <?php endif; /* if ( $comment_count ) */ ?>
 
 <?php if ( ! empty($comments_by_type['pings']) ) : ?>
+
+<?php thematic_abovetrackbackslist() ?>
 
 				<div id="trackbacks-list" class="comments">
 					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'thematic') : __('<span>One</span> Trackback', 'thematic'), $ping_count) ?></h3>
@@ -50,7 +56,8 @@ foreach ( $comments as $comment )
 					</ol>				
 					
 				</div><!-- #trackbacks-list .comments -->			
-				
+
+<?php thematic_belowtrackbackslist() ?>				
 
 <?php endif /* if ( $ping_count ) */ ?>
 <?php endif /* if ( $comments ) */ ?>
@@ -67,6 +74,9 @@ foreach ( $comments as $comment )
 
 <?php else : ?>
 					<div class="formcontainer">	
+					
+<?php thematic_abovecommentsform() ?>					
+
 						<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
 <?php if ( $user_ID ) : ?>
@@ -106,16 +116,14 @@ foreach ( $comments as $comment )
                             </div>
 							
                   <?php do_action('comment_form', $post->ID); ?>
-
-<?php if(function_exists('show_subscription_checkbox')) { show_subscription_checkbox(); } ?>
-
+                  
 							<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php _e('Post Comment', 'thematic') ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
 
                             <?php comment_id_fields(); ?>    
 
 						</form><!-- #commentform -->
 						
-<?php if(function_exists('show_manual_subscription_form')) { show_manual_subscription_form(); } ?>
+<?php thematic_belowcommentsform() ?>											
 						
 					</div><!-- .formcontainer -->
 <?php endif /* if ( get_option('comment_registration') && !$user_ID ) */ ?>
@@ -124,3 +132,4 @@ foreach ( $comments as $comment )
 <?php endif /* if ( 'open' == $post->comment_status ) */ ?>
 
 			</div><!-- #comments -->
+<?php thematic_belowcomments() ?>
