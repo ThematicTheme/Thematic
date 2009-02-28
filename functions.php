@@ -68,6 +68,6 @@ function thematic_remove_generators() { return ''; }
 add_filter('the_generator','thematic_remove_generators');
 
 // Translate, if applicable
-load_theme_textdomain('thematic', 'wp-content/themes/thematic/library/languages');
+load_theme_textdomain('thematic', ABSPATH . '/wp-content/themes/thematic/library/languages');
 
 ?>
