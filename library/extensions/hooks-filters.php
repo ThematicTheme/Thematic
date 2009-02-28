@@ -1,5 +1,9 @@
 <?php
 
+//
+// Thematic Theme hooks
+//
+
 // Located in header.php 
 // Just after the opening body tag, before anything else.
 function thematic_before() {
@@ -161,6 +165,10 @@ function thematic_belowfooter() {
 function thematic_after() {
     do_action('thematic_after');
 }
+
+//
+// Thematic Theme Filters
+//
 
 // Located in header.php 
 // Creates the DOCTYPE section
