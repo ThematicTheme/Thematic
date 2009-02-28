@@ -1,12 +1,28 @@
 <?php
 
 $themeData = get_theme_data(TEMPLATEPATH . '/style.css');
-define('THEMENAME', $themeData['Title']);
+$version = trim($themeData['Version']);
+if(!$version)
+    $version = "unknown";
 
 $cur=(STYLESHEETPATH . '/style.css');
-$localhost=strstr($cur, 'localhost');
 $ct=get_theme_data($cur);
+
+$templateversion = trim($ct['Version']);
+if(!$templateversion)
+    $templateversion = "unknown";
+
+// set theme constants
+define('THEMENAME', $themeData['Title']);
+define('THEMEAUTHOR', $themeData['Author']);
+define('THEMEURI', $themeData['URI']);
+define('THEMATICVERSION', $version);
+
+// set child theme constants
 define('TEMPLATENAME', $ct['Title']);
+define('TEMPLATEAUTHOR', $ct['Author']);
+define('TEMPLATEURI', $ct['URI']);
+define('TEMPLATEVERSION', $templateversion);
 
 // load jQuery
 wp_enqueue_script('jquery');
@@ -52,6 +68,6 @@ function thematic_remove_generators() { return ''; }
 add_filter('the_generator','thematic_remove_generators');
 
 // Translate, if applicable
-load_theme_textdomain('thematic');
+load_theme_textdomain('thematic', 'wp-content/themes/thematic/library/languages');
 
 ?>
