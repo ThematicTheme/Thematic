@@ -665,4 +665,11 @@ function thematic_commenter_link() {
 	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 }
 
+// located in footer.php
+// the footer text can now be filtered and controlled from your own functions.php
+function thematic_footertext($thm_footertext) {
+    $thm_footertext = apply_filters('thematic_footertext', $thm_footertext);
+    return $thm_footertext;
+}
+
 ?>
