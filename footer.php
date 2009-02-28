@@ -12,7 +12,7 @@ foreach ($options as $value) {
 	<div id="footer">
         <?php get_sidebar('subsidiary'); ?>
         <div id="siteinfo">        
-    		<?php /* footer text set in theme options */ echo stripslashes(thematic_footertext($thm_footertext)); ?>
+    		<?php /* footer text set in theme options */ echo __(stripslashes(thematic_footertext($thm_footertext)), 'thematic'); ?>
 		</div><!-- #siteinfo -->
 	</div><!-- #footer -->
 	

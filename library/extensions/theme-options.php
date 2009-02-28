@@ -26,7 +26,7 @@ $options = array (
 				array(	"name" => __('Text in Footer','thematic'),
 						"desc" => __("Enter the HTML text that will appear in the bottom of your footer. Feel free to remove or change any links. <strong>Hint:</strong> <a href=\"http://www.w3schools.com/HTML/html_links.asp\" target=\"_blank\">how to write a link</a>.",'thematic'),
 						"id" => $shortname."_footertext",
-						"std" => "<span id=\"generator-link\">Powered by <a href=\"http://WordPress.org/\" title=\"WordPress\" rel=\"generator\">WordPress</a></span><span class=\"meta-sep\">. </span><span id=\"designer-link\">Built on the <a href=\"http://themeshaper.com/thematic-for-wordpress\" title=\"Thematic Theme Framework\" rel=\"designer\">Thematic Theme Framework</a>.</span>",
+						"std" => __("<span id=\"generator-link\">Powered by <a href=\"http://WordPress.org/\" title=\"WordPress\" rel=\"generator\">WordPress</a></span><span class=\"meta-sep\">. </span><span id=\"designer-link\">Built on the <a href=\"http://themeshaper.com/thematic-for-wordpress\" title=\"Thematic Theme Framework\" rel=\"designer\">Thematic Theme Framework</a>.</span>", 'thematic'),
 						"type" => "textarea",
 						"options" => array(	"rows" => "5",
 											"cols" => "94") ),
@@ -36,6 +36,8 @@ $options = array (
 function mytheme_add_admin() {
 
     global $themename, $shortname, $options;
+    
+    
 
     if ( $_GET['page'] == basename(__FILE__) ) {
     
@@ -73,6 +75,9 @@ function mytheme_add_admin() {
 function mytheme_admin() {
 
     global $themename, $shortname, $options;
+
+    // needs to be here because of a WordPress glitch with a none standard domain path 
+    load_theme_textdomain('thematic', '../wp-content/themes/thematic/library/languages');
 
     if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings saved.','thematic').'</strong></p></div>';
     if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings reset.','thematic').'</strong></p></div>';
@@ -126,9 +131,9 @@ function mytheme_admin() {
 			    <?php echo __($value['desc'],'thematic'); ?>
 				<textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="<?php echo $ta_options['cols']; ?>" rows="<?php echo $ta_options['rows']; ?>"><?php 
 				if( get_settings($value['id']) != "") {
-						echo stripslashes(get_settings($value['id']));
+						echo __(stripslashes(get_settings($value['id'])),'thematic');
 					}else{
-						echo $value['std'];
+						echo __($value['std'],'thematic');
 				}?></textarea>
 	        </td>
 	    </tr>
