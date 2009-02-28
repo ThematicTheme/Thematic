@@ -76,9 +76,6 @@ function mytheme_admin() {
 
     global $themename, $shortname, $options;
 
-    // needs to be here because of a WordPress glitch with a none standard domain path 
-    load_theme_textdomain('thematic', '../wp-content/themes/thematic/library/languages');
-
     if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings saved.','thematic').'</strong></p></div>';
     if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings reset.','thematic').'</strong></p></div>';
     if ( $_REQUEST['reset_widgets'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('widgets reset.','thematic').'</strong></p></div>';
