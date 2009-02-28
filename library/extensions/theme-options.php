@@ -24,7 +24,7 @@ $options = array (
 
 
 				array(	"name" => __('Text in Footer','thematic'),
-						"desc" => __("Enter the text that will appear in the bottom of your footer. You can use these shortcodes: [wp-link] [theme-link] [blog-title] [the-year]",'thematic'),
+						"desc" => __("Enter the text that will appear in the bottom of your footer. You can use these shortcodes: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]",'thematic'),
 						"id" => $shortname."_footertext",
 						"std" => __("Powered by [wp-link]. Built on the [theme-link].", 'thematic'),
 						"type" => "textarea",
@@ -42,7 +42,16 @@ function thmfooter_theme_link() {
     $themelink = '<a class="theme-link" href="http://themeshaper.com/thematic-for-wordpress" title="Thematic Theme Framework" rel="designer">Thematic Theme Framework</a>';
     return apply_filters('thematic_theme_link',$themelink);
 }
-add_shortcode('theme-link', 'thmfooter_theme_link');		  
+add_shortcode('theme-link', 'thmfooter_theme_link');	
+
+function thmfooter_login_link() {
+    if ( ! is_user_logged_in() )
+        $link = '<a href="' . get_settings('siteurl') . '/wp-login.php">' . __('Login','thematic') . '</a>';
+    else
+    $link = '<a href="' . wp_logout_url($redirect) . '">' . __('Logout','thematic') . '</a>';
+    return apply_filters('loginout', $link);
+}
+add_shortcode('loginout-link', 'thmfooter_login_link');		  	  
 
 function thmfooter_blog_title() {   
     return '<span class="blog-title">' . get_bloginfo('name') . '</span>';
