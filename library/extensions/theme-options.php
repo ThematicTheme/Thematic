@@ -24,14 +24,35 @@ $options = array (
 
 
 				array(	"name" => __('Text in Footer','thematic'),
-						"desc" => __("Enter the HTML text that will appear in the bottom of your footer. Feel free to remove or change any links. <strong>Hint:</strong> <a href=\"http://www.w3schools.com/HTML/html_links.asp\" target=\"_blank\">how to write a link</a>.",'thematic'),
+						"desc" => __("Enter the text that will appear in the bottom of your footer. You can use these shortcodes: [wp-link] [theme-link] [blog-title] [the-year]",'thematic'),
 						"id" => $shortname."_footertext",
-						"std" => __("<span id=\"generator-link\">Powered by <a href=\"http://WordPress.org/\" title=\"WordPress\" rel=\"generator\">WordPress</a></span><span class=\"meta-sep\">. </span><span id=\"designer-link\">Built on the <a href=\"http://themeshaper.com/thematic-for-wordpress\" title=\"Thematic Theme Framework\" rel=\"designer\">Thematic Theme Framework</a>.</span>", 'thematic'),
+						"std" => __("Powered by [wp-link]. Built on the [theme-link].", 'thematic'),
 						"type" => "textarea",
 						"options" => array(	"rows" => "5",
 											"cols" => "94") ),
 
 		  );
+
+function thmfooter_wp_link() {
+    return '<a class="wp-link" href="http://WordPress.org/" title="WordPress" rel="generator">WordPress</a>';
+}
+add_shortcode('wp-link', 'thmfooter_wp_link');		  
+		  
+function thmfooter_theme_link() {
+    $themelink = '<a class="theme-link" href="http://themeshaper.com/thematic-for-wordpress" title="Thematic Theme Framework" rel="designer">Thematic Theme Framework</a>';
+    return apply_filters('thematic_theme_link',$themelink);
+}
+add_shortcode('theme-link', 'thmfooter_theme_link');		  
+
+function thmfooter_blog_title() {   
+    return '<span class="blog-title">' . get_bloginfo('name') . '</span>';
+}
+add_shortcode('blog-title', 'thmfooter_blog_title');
+
+function thmfooter_year() {   
+    return '<span class="the-year">' . date('Y') . '</span>';
+}
+add_shortcode('the-year', 'thmfooter_year');
 
 function mytheme_add_admin() {
 
