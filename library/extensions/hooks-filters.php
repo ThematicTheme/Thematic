@@ -7,162 +7,6 @@ function thematic_before() {
 }
 
 // Located in header.php 
-// Just before the header div
-function thematic_aboveheader() {
-    do_action('thematic_aboveheader');
-}
-
-// Located in header.php
-// In the header div
-function thematic_header() {
-    do_action('thematic_header');
-}
-
-// Open #branding
-// In the header div
-function thematic_brandingopen() { ?>
-    	<div id="branding">
-<?php }
-add_action('thematic_header','thematic_brandingopen',1);
-
-// Create the blog title
-// In the header div
-function thematic_blogtitle() { ?>
-    		<div id="blog-title"><span><a href="<?php echo get_option('home') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
-<?php }
-add_action('thematic_header','thematic_blogtitle',3);
-
-// Create the blog description
-// In the header div
-function thematic_blogdescription() {
-    		if (is_home() || is_front_page()) { ?>
-    		<h1 id="blog-description"><?php bloginfo('description') ?></h1>
-    		<?php } else { ?>	
-    		<div id="blog-description"><?php bloginfo('description') ?></div>
-    		<?php }
-}
-add_action('thematic_header','thematic_blogdescription',5);
-
-// Close #branding
-// In the header div
-function thematic_brandingclose() { ?>
-    	</div><!--  #branding -->
-<?php }
-add_action('thematic_header','thematic_brandingclose',7);
-
-// Create #access
-// In the header div
-function thematic_access() { ?>
-    	<div id="access">
-    		<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
-            <?php wp_page_menu('sort_column=menu_order') ?>
-        </div><!-- #access -->
-<?php }
-add_action('thematic_header','thematic_access',9);
-
-// Located in header.php 
-// Just after the header div
-function thematic_belowheader() {
-    do_action('thematic_belowheader');
-}
-
-// Located in comments.php
-// Just before #comments
-function thematic_abovecomments() {
-    do_action('thematic_abovecomments');
-}
-
-// Located in comments.php
-// Just before #comments-list
-function thematic_abovecommentslist() {
-    do_action('thematic_abovecommentslist');
-}
-
-// Located in comments.php
-// Just after #comments-list
-function thematic_belowcommentslist() {
-    do_action('thematic_belowcommentslist');
-}
-
-// Located in comments.php
-// Just before #trackbacks-list
-function thematic_abovetrackbackslist() {
-    do_action('thematic_abovetrackbackslist');
-}
-
-// Located in comments.php
-// Just after #trackbacks-list
-function thematic_belowtrackbackslist() {
-    do_action('thematic_belowtrackbackslist');
-}
-
-// Located in comments.php
-// Just before the comments form
-function thematic_abovecommentsform() {
-    do_action('thematic_abovecommentsform');
-}
-
-// Adds the Subscribe to comments button
-function thematic_show_subscription_checkbox() {
-    if(function_exists('show_subscription_checkbox')) { show_subscription_checkbox(); }
-}
-add_action('comment_form', 'thematic_show_subscription_checkbox', 98);
-
-// Located in comments.php
-// Just after the comments form
-function thematic_belowcommentsform() {
-    do_action('thematic_belowcommentsform');
-}
-
-// Adds the Subscribe without commenting button
-function thematic_show_manual_subscription_form() {
-    if(function_exists('show_manual_subscription_form')) { show_manual_subscription_form(); }
-}
-add_action('thematic_belowcommentsform', 'thematic_show_manual_subscription_form', 5);
-
-// Located in comments.php
-// Just after #comments
-function thematic_belowcomments() {
-    do_action('thematic_belowcomments');
-}
-
-// Located in sidebar.php 
-// Just before the main asides (commonly used as sidebars)
-function thematic_abovemainasides() {
-    do_action('thematic_abovemainasides');
-}
-
-// Located in sidebar.php 
-// Between the main asides (commonly used as sidebars)
-function thematic_betweenmainasides() {
-    do_action('thematic_betweenmainasides');
-}
-
-// Located in sidebar.php 
-// after the main asides (commonly used as sidebars)
-function thematic_belowmainasides() {
-    do_action('thematic_belowmainasides');
-}
-
-// Located in footer.php
-// Just before the footer div
-function thematic_abovefooter() {
-    do_action('thematic_abovefooter');
-}
-
-// Located in footer.php
-// Just after the footer div
-function thematic_belowfooter() {
-    do_action('thematic_belowfooter');
-}
-
-// Located in footer.php 
-// Just before the closing body tag, after everything else.
-function thematic_after() {
-    do_action('thematic_after');
-}
-
-// Located in header.php 
 // Creates the DOCTYPE section
 function thematic_create_doctype() {
     $content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
@@ -417,6 +261,162 @@ function thematic_show_commentreply() {
     if (§display)
         if ( is_singular() ) 
             wp_enqueue_script( 'comment-reply' ); // support for comment threading
+}
+
+// Located in header.php 
+// Just before the header div
+function thematic_aboveheader() {
+    do_action('thematic_aboveheader');
+}
+
+// Located in header.php
+// In the header div
+function thematic_header() {
+    do_action('thematic_header');
+}
+
+// Open #branding
+// In the header div
+function thematic_brandingopen() { ?>
+    	<div id="branding">
+<?php }
+add_action('thematic_header','thematic_brandingopen',1);
+
+// Create the blog title
+// In the header div
+function thematic_blogtitle() { ?>
+    		<div id="blog-title"><span><a href="<?php echo get_option('home') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+<?php }
+add_action('thematic_header','thematic_blogtitle',3);
+
+// Create the blog description
+// In the header div
+function thematic_blogdescription() {
+    		if (is_home() || is_front_page()) { ?>
+    		<h1 id="blog-description"><?php bloginfo('description') ?></h1>
+    		<?php } else { ?>	
+    		<div id="blog-description"><?php bloginfo('description') ?></div>
+    		<?php }
+}
+add_action('thematic_header','thematic_blogdescription',5);
+
+// Close #branding
+// In the header div
+function thematic_brandingclose() { ?>
+    	</div><!--  #branding -->
+<?php }
+add_action('thematic_header','thematic_brandingclose',7);
+
+// Create #access
+// In the header div
+function thematic_access() { ?>
+    	<div id="access">
+    		<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
+            <?php wp_page_menu('sort_column=menu_order') ?>
+        </div><!-- #access -->
+<?php }
+add_action('thematic_header','thematic_access',9);
+
+// Located in header.php 
+// Just after the header div
+function thematic_belowheader() {
+    do_action('thematic_belowheader');
+}
+
+// Located in comments.php
+// Just before #comments
+function thematic_abovecomments() {
+    do_action('thematic_abovecomments');
+}
+
+// Located in comments.php
+// Just before #comments-list
+function thematic_abovecommentslist() {
+    do_action('thematic_abovecommentslist');
+}
+
+// Located in comments.php
+// Just after #comments-list
+function thematic_belowcommentslist() {
+    do_action('thematic_belowcommentslist');
+}
+
+// Located in comments.php
+// Just before #trackbacks-list
+function thematic_abovetrackbackslist() {
+    do_action('thematic_abovetrackbackslist');
+}
+
+// Located in comments.php
+// Just after #trackbacks-list
+function thematic_belowtrackbackslist() {
+    do_action('thematic_belowtrackbackslist');
+}
+
+// Located in comments.php
+// Just before the comments form
+function thematic_abovecommentsform() {
+    do_action('thematic_abovecommentsform');
+}
+
+// Adds the Subscribe to comments button
+function thematic_show_subscription_checkbox() {
+    if(function_exists('show_subscription_checkbox')) { show_subscription_checkbox(); }
+}
+add_action('comment_form', 'thematic_show_subscription_checkbox', 98);
+
+// Located in comments.php
+// Just after the comments form
+function thematic_belowcommentsform() {
+    do_action('thematic_belowcommentsform');
+}
+
+// Adds the Subscribe without commenting button
+function thematic_show_manual_subscription_form() {
+    if(function_exists('show_manual_subscription_form')) { show_manual_subscription_form(); }
+}
+add_action('thematic_belowcommentsform', 'thematic_show_manual_subscription_form', 5);
+
+// Located in comments.php
+// Just after #comments
+function thematic_belowcomments() {
+    do_action('thematic_belowcomments');
+}
+
+// Located in sidebar.php 
+// Just before the main asides (commonly used as sidebars)
+function thematic_abovemainasides() {
+    do_action('thematic_abovemainasides');
+}
+
+// Located in sidebar.php 
+// Between the main asides (commonly used as sidebars)
+function thematic_betweenmainasides() {
+    do_action('thematic_betweenmainasides');
+}
+
+// Located in sidebar.php 
+// after the main asides (commonly used as sidebars)
+function thematic_belowmainasides() {
+    do_action('thematic_belowmainasides');
+}
+
+// Located in footer.php
+// Just before the footer div
+function thematic_abovefooter() {
+    do_action('thematic_abovefooter');
+}
+
+// Located in footer.php
+// Just after the footer div
+function thematic_belowfooter() {
+    do_action('thematic_belowfooter');
+}
+
+// Located in footer.php 
+// Just before the closing body tag, after everything else.
+function thematic_after() {
+    do_action('thematic_after');
 }
 
 // Add ID and CLASS attributes to the first <ul> occurence in wp_page_menu
