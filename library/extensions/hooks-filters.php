@@ -218,11 +218,17 @@ function thematic_doctitle() {
     }
 
     if($content) {
-      $elements = array(
-        'site_name' => $site_name,
-        'separator' => $separator,
-        'content' => $content
-      );
+      if ( is_home() || is_front_page() ) {
+          $elements = array(
+            'site_name' => $site_name,
+            'separator' => $separator,
+            'content' => $content
+          );
+      } else {
+          $elements = array(
+            'content' => $content
+          );
+      }  
     } else {
       $elements = array(
         'site_name' => $site_name
