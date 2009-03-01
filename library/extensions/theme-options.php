@@ -33,41 +33,9 @@ $options = array (
 
 		  );
 
-function thmfooter_wp_link() {
-    return '<a class="wp-link" href="http://WordPress.org/" title="WordPress" rel="generator">WordPress</a>';
-}
-add_shortcode('wp-link', 'thmfooter_wp_link');		  
-		  
-function thmfooter_theme_link() {
-    $themelink = '<a class="theme-link" href="http://themeshaper.com/thematic-for-wordpress" title="Thematic Theme Framework" rel="designer">Thematic Theme Framework</a>';
-    return apply_filters('thematic_theme_link',$themelink);
-}
-add_shortcode('theme-link', 'thmfooter_theme_link');	
-
-function thmfooter_login_link() {
-    if ( ! is_user_logged_in() )
-        $link = '<a href="' . get_settings('siteurl') . '/wp-login.php">' . __('Login','thematic') . '</a>';
-    else
-    $link = '<a href="' . wp_logout_url($redirect) . '">' . __('Logout','thematic') . '</a>';
-    return apply_filters('loginout', $link);
-}
-add_shortcode('loginout-link', 'thmfooter_login_link');		  	  
-
-function thmfooter_blog_title() {   
-    return '<span class="blog-title">' . get_bloginfo('name') . '</span>';
-}
-add_shortcode('blog-title', 'thmfooter_blog_title');
-
-function thmfooter_year() {   
-    return '<span class="the-year">' . date('Y') . '</span>';
-}
-add_shortcode('the-year', 'thmfooter_year');
-
 function mytheme_add_admin() {
 
     global $themename, $shortname, $options;
-    
-    
 
     if ( $_GET['page'] == basename(__FILE__) ) {
     
