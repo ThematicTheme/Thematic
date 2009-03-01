@@ -199,6 +199,10 @@ function thematic_doctitle() {
       $content = __('Search Results for:', 'thematic'); 
       $content .= ' ' . wp_specialchars(stripslashes(get_search_query()), true);
     }
+    elseif ( is_category() ) {
+      $content = __('Category Archives:', 'thematic');
+      $content .= ' ' . single_cat_title("", false);;
+    }
     elseif ( is_tag() ) { 
       $content = __('Tag Archives:', 'thematic');
       $content .= ' ' . thematic_tag_query();
@@ -224,7 +228,8 @@ function thematic_doctitle() {
             'separator' => $separator,
             'content' => $content
           );
-      } else {
+      }
+      else {
           $elements = array(
             'content' => $content
           );
