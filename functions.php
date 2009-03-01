@@ -1,13 +1,14 @@
 <?php
 
+// Getting Theme and Child Theme Data
+// Credits: Joern Kretzschmar
+
 $themeData = get_theme_data(TEMPLATEPATH . '/style.css');
 $version = trim($themeData['Version']);
 if(!$version)
     $version = "unknown";
 
-$cur=(STYLESHEETPATH . '/style.css');
-$ct=get_theme_data($cur);
-
+$ct=get_theme_data(STYLESHEETPATH . '/style.css');
 $templateversion = trim($ct['Version']);
 if(!$templateversion)
     $templateversion = "unknown";
@@ -56,6 +57,9 @@ require_once(THEMELIB . '/extensions/scripts.php');
 
 // Produces an avatar image with the hCard-compliant photo class for author info
 require_once(THEMELIB . '/extensions/author-info-avatar.php');
+
+// Load shortcodes
+require_once(THEMELIB . '/extensions/shortcodes.php');
 
 // Adds filters for the description/meta content in archives.php
 add_filter( 'archive_meta', 'wptexturize' );
