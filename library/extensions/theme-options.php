@@ -9,7 +9,7 @@ $shortname = "thm";
 // Create theme options
 
 $options = array (
-										
+
 				array(	"name" => __('Index Insert Position','thematic'),
 						"desc" => __('The widgetized Index Insert will follow after this post number.','thematic'),
 						"id" => $shortname."_insert_position",
@@ -22,7 +22,6 @@ $options = array (
 						"std" => "false",
 						"type" => "checkbox"),
 
-
 				array(	"name" => __('Text in Footer','thematic'),
 						"desc" => __("Enter the text that will appear in the bottom of your footer. You can use these shortcodes: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]",'thematic'),
 						"id" => $shortname."_footertext",
@@ -31,7 +30,7 @@ $options = array (
 						"options" => array(	"rows" => "5",
 											"cols" => "94") ),
 
-		  );
+		);
 
 function mytheme_add_admin() {
 
@@ -83,9 +82,9 @@ function mytheme_admin() {
 <?php if ( function_exists('screen_icon') ) screen_icon(); ?>
 <h2><?php echo $themename; ?> Options</h2>
 
-<form method="post">
+<form method="post" action="">
 
-<table class="form-table">
+	<table class="form-table">
 
 <?php foreach ($options as $value) { 
 	
@@ -93,27 +92,28 @@ function mytheme_admin() {
 		case 'text':
 		?>
 		<tr valign="top"> 
-		    <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
-		    <td>
-		        <input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
-			    <?php echo __($value['desc'],'thematic'); ?>
-		    </td>
+			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
+			<td>
+				<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
+				<?php echo __($value['desc'],'thematic'); ?>
+
+			</td>
 		</tr>
 		<?php
 		break;
 		
 		case 'select':
 		?>
-		<tr valign="top"> 
-	        <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
-	        <td>
-	            <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
-	                <?php foreach ($value['options'] as $option) { ?>
-	                <option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option>
-	                <?php } ?>
-	            </select>
-	        </td>
-	    </tr>
+		<tr valign="top">
+			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
+				<td>
+					<select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
+					<?php foreach ($value['options'] as $option) { ?>
+					<option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option>
+					<?php } ?>
+				</select>
+			</td>
+		</tr>
 		<?php
 		break;
 		
@@ -121,29 +121,26 @@ function mytheme_admin() {
 		$ta_options = $value['options'];
 		?>
 		<tr valign="top"> 
-	        <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
-	        <td>
-			    <?php echo __($value['desc'],'thematic'); ?>
-				<textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="<?php echo $ta_options['cols']; ?>" rows="<?php echo $ta_options['rows']; ?>"><?php 
+			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
+			<td><textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="<?php echo $ta_options['cols']; ?>" rows="<?php echo $ta_options['rows']; ?>"><?php 
 				if( get_settings($value['id']) != "") {
 						echo __(stripslashes(get_settings($value['id'])),'thematic');
 					}else{
 						echo __($value['std'],'thematic');
-				}?></textarea>
-	        </td>
-	    </tr>
+				}?></textarea><br /><?php echo __($value['desc'],'thematic'); ?></td>
+		</tr>
 		<?php
 		break;
 
-		case "radio":
+		case 'radio':
 		?>
 		<tr valign="top"> 
-	        <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
-	        <td>
-	            <?php foreach ($value['options'] as $key=>$option) { 
+			<th scope="row"><?php echo __($value['name'],'thematic'); ?></th>
+			<td>
+				<?php foreach ($value['options'] as $key=>$option) { 
 				$radio_setting = get_settings($value['id']);
 				if($radio_setting != ''){
-		    		if ($key == get_settings($value['id']) ) {
+					if ($key == get_settings($value['id']) ) {
 						$checked = "checked=\"checked\"";
 						} else {
 							$checked = "";
@@ -155,31 +152,30 @@ function mytheme_admin() {
 						$checked = "";
 					}
 				}?>
-	            <input type="radio" name="<?php echo $value['id']; ?>" value="<?php echo $key; ?>" <?php echo $checked; ?> /><?php echo $option; ?><br />
-	            <?php } ?>
-	        </td>
-	    </tr>
+				<input type="radio" name="<?php echo $value['id']; ?>" id="<?php echo $value['id'] . $key; ?>" value="<?php echo $key; ?>" <?php echo $checked; ?> /><label for="<?php echo $value['id'] . $key; ?>"><?php echo $option; ?></label><br />
+				<?php } ?>
+			</td>
+		</tr>
 		<?php
 		break;
 		
-		case "checkbox":
+		case 'checkbox':
 		?>
-			<tr valign="top"> 
-		        <th scope="row"><?php echo __($value['name'],'thematic'); ?>:</th>
-		        <td>
-		           <?php
-						if(get_settings($value['id'])){
-							$checked = "checked=\"checked\"";
-						}else{
-							$checked = "";
-						}
-					?>
-		            <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
-		            <?php  ?>
-			    <?php echo __($value['desc'],'thematic'); ?>
-		        </td>
-		    </tr>
-			<?php
+		<tr valign="top"> 
+			<th scope="row"><?php echo __($value['name'],'thematic'); ?></th>
+			<td>
+				<?php
+					if(get_settings($value['id'])){
+						$checked = "checked=\"checked\"";
+					}else{
+						$checked = "";
+					}
+				?>
+				<input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
+				<label for="<?php echo $value['id']; ?>"><?php echo __($value['desc'],'thematic'); ?></label>
+			</td>
+		</tr>
+		<?php
 		break;
 
 		default:
@@ -189,28 +185,28 @@ function mytheme_admin() {
 }
 ?>
 
-</table>
+	</table>
 
-<p class="submit">
-<input name="save" type="submit" value="<?php _e('Save changes','thematic'); ?>" />    
-<input type="hidden" name="action" value="save" />
-</p>
+	<p class="submit">
+		<input name="save" type="submit" value="<?php _e('Save changes','thematic'); ?>" />    
+		<input type="hidden" name="action" value="save" />
+	</p>
 </form>
-<form method="post">
-<p class="submit">
-<input name="reset" type="submit" value="<?php _e('Reset','thematic'); ?>" />
-<input type="hidden" name="action" value="reset" />
-</p>
+<form method="post" action="">
+	<p class="submit">
+		<input name="reset" type="submit" value="<?php _e('Reset','thematic'); ?>" />
+		<input type="hidden" name="action" value="reset" />
+	</p>
 </form>
-<form method="post">
-<p class="submit">
-<input name="reset_widgets" type="submit" value="<?php _e('Reset Widgets','thematic'); ?>" />
-<input type="hidden" name="action" value="reset_widgets" />
-</p>
+<form method="post" action="">
+	<p class="submit">
+		<input name="reset_widgets" type="submit" value="<?php _e('Reset Widgets','thematic'); ?>" />
+		<input type="hidden" name="action" value="reset_widgets" />
+	</p>
 </form>
 
 <p><?php _e('For more information about this theme, <a href="http://themeshaper.com">visit ThemeShaper</a>. Please visit the <a href="http://themeshaper.com/forums/">ThemeShaper Forums</a> if you have any questions about Thematic.', 'thematic'); ?></p>
-
+</div>
 <?php
 }
 
