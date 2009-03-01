@@ -99,7 +99,7 @@ msgstr "Pages&nbsp;:"
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/author.php:15
 msgid "Author Archives: "
-msgstr "Archives par auteur&nbsp;:"
+msgstr "Archives par auteur&nbsp;: "
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/author.php:34
 msgid "Email "
