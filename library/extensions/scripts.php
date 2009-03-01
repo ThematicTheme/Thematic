@@ -13,27 +13,9 @@ function thematic_head_scripts() {
     $scripts .= $scriptdir_start . 'hoverIntent.js' . $scriptdir_end . "\n";
     $scripts .= $scriptdir_start . 'superfish.js' . $scriptdir_end . "\n";
     $scripts .= $scriptdir_start . 'supersubs.js' . $scriptdir_end . "\n";
+    $dropdown_options = $scriptdir_start . 'thematic-dropdowns.js' . $scriptdir_end . "\n";
     
-    $scripts .= <<<EOD
-    <script type="text/javascript">
-    jQuery.noConflict();
-    jQuery(document).ready(function(){ 
-        jQuery("ul.sf-menu").supersubs({ 
-            minWidth:    12,                                // minimum width of sub-menus in em units 
-            maxWidth:    27,                                // maximum width of sub-menus in em units 
-            extraWidth:  1                                  // extra width can ensure lines don't sometimes turn over 
-                                                            // due to slight rounding differences and font-family 
-        }).superfish({ 
-            delay:       100,                               // delay on mouseout 
-            animation:   {opacity:'show',height:'show'},    // fade-in and slide-down animation 
-            speed:       'fast',                            // faster animation speed 
-            autoArrows:  false,                             // disable generation of arrow mark-up 
-            dropShadows: false                              // disable drop shadows 
-        }); 
-    });
-    </script>
-    
-EOD;
+    $scripts = $scripts . apply_filters('thematic_dropdown_options', $dropdown_options);
 
     // Print filtered scripts
     print apply_filters('thematic_head_scripts', $scripts);
