@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thematic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-01 11:36+0100\n"
+"POT-Creation-Date: 2009-03-02 11:31+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Florent Dupont <codecode@chokebore.net>\n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/404.php:10
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Désolé, nous n'avons pas pu trouver ce que vous cherchiez. Peut-être qu'une recherche vous aidera."
+msgstr "Désolé, nous n'avons pas pu trouver ce que vous cherchiez. Le moteur de recherche pourra peut-être vous aider."
 
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/404.php:15
 #: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:58
@@ -433,54 +433,54 @@ msgstr "Page Info sur l'auteur"
 msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
 msgstr "Afficher une <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">vCard micorformatée</a>—avec l'avatar, la biographie et l'e-mail de l'auteur—sur la page \"auteur\"."
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:26
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:26
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:25
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:25
 msgid "Text in Footer"
 msgstr "Texte du pied de page"
 
 # Unsure about translation of "shortcode". Used "code".
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:27
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:27
-msgid "Enter the text that will appear in the bottom of your footer. You can use these shortcodes: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
-msgstr "Saisissez le texte qui apparaîtra en bas de votre pied de page. Vous pouvez utilisez les codes suivants&nbsp;: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:26
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:26
+msgid "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
+msgstr "Vous pouvez utilisez les codes suivants dans votre texte de pied de page&nbsp;: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:29
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:29
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:28
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:28
 msgid "Powered by [wp-link]. Built on the [theme-link]."
 msgstr "Propulsé par [wp-link]. Construit avec [theme-link]."
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:77
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:77
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:76
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:76
 msgid "settings saved."
 msgstr "&nbsp;: paramètres enregistrés."
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:78
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:78
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:77
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:77
 msgid "settings reset."
 msgstr "&nbsp;: paramètres réinitialisés."
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:79
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:79
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:78
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:78
 msgid "widgets reset."
 msgstr "&nbsp;: widgets réinitialisés."
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:195
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:195
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:191
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:191
 msgid "Save changes"
 msgstr "Enregistrer les modifications"
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:201
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:201
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:197
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:197
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:207
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:207
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:203
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:203
 msgid "Reset Widgets"
 msgstr "Réinitialiser les widgets"
 
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:212
-#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:212
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:208
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:208
 msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
 msgstr "Pour plus d'informations sur ce thème, <a href=\"http://themeshaper.com\">rendez-vous sur ThemeShaper</a>. Connectez-vous aux <a href=\"http://themeshaper.com/forums/\">forums ThemeShaper</a> si vous avez des questions à propos de Thematic."
 
