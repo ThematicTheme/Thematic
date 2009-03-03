@@ -41,6 +41,13 @@ tr {
 th, td {
     padding: .7em 1.25em;
 }
+hr {
+    background-color:#ccc;
+    border:0;
+    color:#ccc;
+    height:1px;
+    margin-bottom:22px;
+}
 a:link {
     color:#004B91;
 }
