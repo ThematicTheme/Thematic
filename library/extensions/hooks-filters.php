@@ -391,7 +391,7 @@ function thematic_show_rss() {
         $content .= " " . __('Posts RSS feed', 'thematic');
         $content .= "\" />";
         $content .= "\n";
-        echo $content;
+        echo apply_filters('thematic_rss', $content);
     }
 }
 
@@ -409,7 +409,7 @@ function thematic_show_commentsrss() {
         $content .= " " . __('Comments RSS feed', 'thematic');
         $content .= "\" />";
         $content .= "\n\n";
-        echo $content;
+        echo apply_filters('thematic_commentrss', $content);
     }
 }
 
