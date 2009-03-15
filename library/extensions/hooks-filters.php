@@ -261,9 +261,9 @@ function thematic_doctitle() {
 // Creates the content-type section
 function thematic_create_contenttype() {
     $content  = "\t";
-    $content .= "<meta http-equiv=\"content-type\" content=\"";
+    $content .= "<meta http-equiv=\"Content-Type\" content=\"";
     $content .= get_bloginfo('html_type'); 
-    $content .= " charset=";
+    $content .= "; charset=";
     $content .= get_bloginfo('charset');
     $content .= "\"";
     $content .= "/>";
@@ -279,7 +279,6 @@ function thematic_canonical_url() {
         $canonical_url .= "\n\n";        
         echo apply_filters('thematic_canonical_url', $canonical_url);
     }
-
 }
 
 // switch use of thematic_the_excerpt() - default: ON
