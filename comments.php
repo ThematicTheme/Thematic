@@ -112,7 +112,7 @@ foreach ( $comments as $comment )
                             </div><!-- #form-section-comment .form-section -->
                             
                             <div id="form-allowed-tags" class="form-section">
-                                <p><span>You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: </span><?php echo allowed_tags(); ?></p>
+                                <p><span><?php _e('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'thematic') ?></span> <code><?php echo allowed_tags(); ?></code></p>
                             </div>
 							
                   <?php do_action('comment_form', $post->ID); ?>
