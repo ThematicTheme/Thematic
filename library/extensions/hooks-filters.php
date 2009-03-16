@@ -335,7 +335,7 @@ function thematic_create_description() {
 // meta-tag description is switchable using a filter
 function thematic_show_description() {
     $display = TRUE;
-    apply_filters('thematic_show_description', $display);
+    $display = apply_filters('thematic_show_description', $display);
     if ($display) {
         thematic_create_description();
     }
@@ -359,7 +359,7 @@ function thematic_create_robots() {
 // meta-tag robots is switchable using a filter
 function thematic_show_robots() {
     $display = TRUE;
-    apply_filters('thematic_show_robots', $display);
+    $display = apply_filters('thematic_show_robots', $display);
     if ($display) {
         thematic_create_robots();
     }
