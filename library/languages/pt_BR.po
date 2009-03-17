@@ -1,0 +1,499 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Thematic pt_BR\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-01 11:36+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Felipe Coelho Kussik <melvindoo@gmail.com>\n"
+"Language-Team: Felipe Coelho Kussik <melvindoo@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/404.php:10
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
+msgstr "Mil perdões, mas não conseguimos achar o que você estava procurando. Talvez a busca ajude."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/404.php:15
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:58
+msgid "Find"
+msgstr "Buscar"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archive.php:16
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Arquivos do dia: <span>%s</span>"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archive.php:18
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Arquivos do mês: <span>%s</span>"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archive.php:20
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Arquivos do ano: <span>%s</span>"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archive.php:22
+msgid "Blog Archives"
+msgstr "Arquivos do blog"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archive.php:31
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archive.php:53
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/author.php:21
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/author.php:57
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/category.php:20
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/category.php:42
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/index.php:17
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/index.php:49
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:21
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:43
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Posts antigos"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archive.php:32
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archive.php:54
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/author.php:22
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/author.php:58
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/category.php:21
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/category.php:43
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/index.php:18
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/index.php:50
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:22
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:44
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Posts mais novos <span class=\"meta-nav\">&raquo;</span>"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archive.php:41
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/attachment.php:20
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/author.php:45
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/category.php:30
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/index.php:30
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:31
+msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Leia mais <span class=\"meta-nav\">&raquo;</span>"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archives.php:20
+msgid "Archives by Category"
+msgstr "Arquivos por categoria"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archives.php:26
+msgid "Archives by Month"
+msgstr "Arquivos por mês"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/archives.php:32
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/links.php:20
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/page.php:16
+msgid "Edit"
+msgstr "Editar"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/attachment.php:22
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/index.php:32
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/author.php:15
+msgid "Author Archives: "
+msgstr "Arquivos de autor:"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/author.php:34
+msgid "Email "
+msgstr "Email"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/category.php:13
+msgid "Category Archives:"
+msgstr "Arquivos de categoria:"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:10
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Este post é protegido por senha. Digite a senha pra ver os comentários."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:31
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span> comentários"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:31
+msgid "<span>One</span> Comment"
+msgstr "<span>Um</span> comentário"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:52
+#, php-format
+msgid "<span>%d</span> Trackbacks"
+msgstr "<span>%d</span> trackbacks"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:52
+msgid "<span>One</span> Trackback"
+msgstr "<span>Um</span> trackback"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:67
+msgid "Post a Comment"
+msgstr "Deixar um comentário"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:67
+#, php-format
+msgid "Post a Reply to %s"
+msgstr "Responder para %s"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:72
+#, php-format
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Você deve estar <a href=\"%s\" title=\"Login\">logado</a> para deixar um comentário."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:83
+#, php-format
+msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"loggedin\">Logado como <a href=\"%1$s\" title=\"Logado como %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Fazer logout dessa conta\">Logout?</a></span>"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:90
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "Seu email <em>nunca</em> vai ser publicado."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:90
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "Campos obrigatórios estão marcados <span class=\"required\">*</span>"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:93
+msgid "Name"
+msgstr "Nome"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:93
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:98
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:98
+msgid "Email"
+msgstr "Email"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:103
+msgid "Website"
+msgstr "Site"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:110
+msgid "Comment"
+msgstr "Comentário"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/comments.php:120
+msgid "Post Comment"
+msgstr "Enviar comentário"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/page.php:14
+msgid "Pages: "
+msgstr "Páginas:"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:15
+msgid "Search Results for:"
+msgstr "Resultados da busca por:"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:51
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/search.php:53
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Desculpe, não achamos nada. Por favor, tente outra vez com palavras diferentes."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:6
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:10
+msgid "Search"
+msgstr "Buscar"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:16
+msgid "Pages"
+msgstr "Páginas"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:23
+msgid "Categories"
+msgstr "Categorias"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:31
+msgid "Archives"
+msgstr "Arquivos"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:50
+msgid "RSS Feeds"
+msgstr "Feeds RSS"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:52
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:391
+msgid "Posts RSS feed"
+msgstr "Feed RSS dos posts"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:52
+msgid "All posts"
+msgstr "Todos os posts"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:53
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:409
+msgid "Comments RSS feed"
+msgstr "Feed RSS dos comentários"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:53
+msgid "All comments"
+msgstr "Todos os comentários"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/sidebar.php:58
+msgid "Meta"
+msgstr "Meta"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/tag.php:13
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:207
+msgid "Tag Archives:"
+msgstr "Arquivos de tag:"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/discussion.php:10
+#, php-format
+msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
+msgstr "Posted %1$s às %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink desse comentário\">Permalink</a>"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/discussion.php:15
+msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>Seu comentário está aguardando aprovação.</span>\n"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/discussion.php:22
+msgid "Reply"
+msgstr "Responder"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/discussion.php:23
+msgid "Log in to reply."
+msgstr "Faça login pra responder."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/discussion.php:37
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr "Por %1$s em %2$s às %3$s"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/discussion.php:42
+msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Seu trackback está aguardando aprovação.</span>\\n"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/helpers.php:31
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/helpers.php:44
+msgid "There is no excerpt because this is a protected post."
+msgstr "Não existe um resumo porque esse post é protegido."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:61
+msgid "Skip navigation to the content"
+msgstr "Pular da navegação pro conteúdo"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:61
+msgid "Skip to content"
+msgstr "Pular pro conteúdo"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:211
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:498
+msgid "Not Found"
+msgstr "Não encontrado"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:490
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:545
+msgid "Edit post"
+msgstr "Editar post"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:503
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:598
+msgid "Permalink to "
+msgstr "Permalink para"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:512
+msgid "By "
+msgstr "Por"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:514
+msgid "View all posts by "
+msgstr "Ver todos os posts de"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:517
+msgid "Published: "
+msgstr "Publicado:"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:552
+msgid "This entry was posted in "
+msgstr "Este post está em "
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:555
+msgid "Also posted in "
+msgstr "Também em"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:558
+msgid "Posted in "
+msgstr "Postada em"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:565
+msgid " and tagged"
+msgstr " e com as tags"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:568
+msgid " Also tagged "
+msgstr " Também com as tags"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:570
+msgid "Tagged"
+msgstr "Com as tags"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:579
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:582
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:585
+msgid "Comment on "
+msgstr "Comentários para"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:580
+msgid " Comments"
+msgstr " Comentários"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:583
+msgid " Comment"
+msgstr " Comentário"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:586
+msgid "Leave a comment"
+msgstr "Deixe um comentário"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:589
+msgid "Comments closed"
+msgstr "Comentários fechados"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:598
+msgid ". Bookmark the "
+msgstr ". Salvar"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:599
+msgid "permalink"
+msgstr " permalink"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:601
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:609
+msgid "Post a comment"
+msgstr "Postar um comentário"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:602
+msgid " or leave a trackback: "
+msgstr " ou deixar um trackback: "
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:603
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:606
+msgid "Trackback URL for your post"
+msgstr "URL de trackback do seu post"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:603
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:606
+msgid "Trackback URL"
+msgstr "URL de trackback"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:605
+msgid " Comments are closed, but you can leave a trackback: "
+msgstr " Os comentários estão fechados, mas você pode deixar um trackback:"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:608
+msgid " Trackbacks are closed, but you can "
+msgstr " Os trackbacks estão fechados, mas você pode"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:609
+msgid "post a comment"
+msgstr "postar um comentário"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/hooks-filters.php:611
+msgid " Both comments and trackbacks are currently closed."
+msgstr " Tanto comentários como trackbacks estão fechados no momento."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/shortcodes.php:16
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/shortcodes.php:16
+msgid "Login"
+msgstr "Login"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/shortcodes.php:18
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/shortcodes.php:18
+msgid "Logout"
+msgstr "Logout"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:13
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:13
+msgid "Index Insert Position"
+msgstr "Posição do Index Insert"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:14
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:14
+msgid "The widgetized Index Insert will follow after this post number."
+msgstr "O Index Insert com widgets vai aparecer depois desse número de posts."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:19
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:19
+msgid "Info on Author Page"
+msgstr "Informações da Página de autor"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:20
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:20
+msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
+msgstr "Mostrar um <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">vCard microformatado</a>—com o avatar, a bio e o email—na página do autor."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:26
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:26
+msgid "Text in Footer"
+msgstr "Texto do rodapé"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:27
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:27
+msgid "Enter the text that will appear in the bottom of your footer. You can use these shortcodes: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
+msgstr "Digite o texto que vai aparecer na base do seu rodapé. Você pode usar esses shortcodes: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:29
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:29
+msgid "Powered by [wp-link]. Built on the [theme-link]."
+msgstr "Movido a [wp-link]. Feito com [theme-link]."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:77
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:77
+msgid "settings saved."
+msgstr "opções salvas."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:78
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:78
+msgid "settings reset."
+msgstr "opções resetadas."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:79
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:79
+msgid "widgets reset."
+msgstr "widgets resetados."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:195
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:195
+msgid "Save changes"
+msgstr "Salvar mudanças"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:201
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:201
+msgid "Reset"
+msgstr "Resetar"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:207
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:207
+msgid "Reset Widgets"
+msgstr "Resetar widgets"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/theme-options.php:212
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/theme-options.php:212
+msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
+msgstr "Para mais informações sobre esse tema, <a href=\"http://themeshaper.com\">visite ThemeShaper</a>. Por favor, visite os <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> se você tiver qualquer dúvida sobre a Thematic."
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/widgets.php:55
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/widgets.php:245
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/widgets.php:246
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/widgets.php:55
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/widgets.php:245
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/widgets.php:246
+msgid "RSS Links"
+msgstr "Links RSS"
+
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic/library/extensions/widgets.php:79
+#: c:\xampp\htdocs\wupperpiraten\wp-content\themes\thematic\library\extensions/widgets.php:79
+msgid "Title:"
+msgstr "Título:"
+
