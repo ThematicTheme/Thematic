@@ -352,7 +352,9 @@ function thematic_create_robots() {
         $content .= "<meta name=\"robots\" content=\"noindex,follow\" />";
     }
     $content .= "\n\n";
-    echo apply_filters('thematic_create_robots', $content);
+    if (get_option('blog_public')) {
+    		echo apply_filters('thematic_create_robots', $content);
+    }
 }
 
 // Located in header.php
