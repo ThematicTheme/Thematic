@@ -509,20 +509,20 @@ function thematic_postheader() {
     $posttitle = apply_filters('thematic_postheader_posttitle',$posttitle); 
     
     $postmeta = '<div class="entry-meta">';
-    $postmeta .= '<span class="author vcard">';
-    $postmeta .= __('By ', 'thematic') . '<a class="url fn n" href="';
+    $postmeta .= '<span class="meta-prep-author">' . __('By ', 'thematic') . '</span>';
+    $postmeta .= '<span class="author vcard">'. '<a class="url fn n" href="';
     $postmeta .= get_author_link(false, $authordata->ID, $authordata->user_nicename);
     $postmeta .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
     $postmeta .= get_the_author();
-    $postmeta .= '</a></span><span class="meta-sep"> | </span>';
-    $postmeta .= __('Published: ', 'thematic');
+    $postmeta .= '</a></span><span class="meta-sep-entry-date"> | </span>';
+    $postmeta .= '<span class="meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
     $postmeta .= '<span class="entry-date"><abbr class="published" title="';
     $postmeta .= get_the_time(thematic_time_title()) . '">';
     $postmeta .= get_the_time(thematic_time_display());
     $postmeta .= '</abbr></span>';
     // Display edit link
     if (current_user_can('edit_posts')) {
-        $postmeta .= ' <span class="meta-sep">|</span> ' . $posteditlink;
+        $postmeta .= ' <span class="meta-sep-edit">|</span> ' . '<span class="entry-edit">' . $posteditlink . '</span>';
     }               
     $postmeta .= "</div><!-- .entry-meta -->\n";
     $postmeta = apply_filters('thematic_postheader_postmeta',$postmeta); 
