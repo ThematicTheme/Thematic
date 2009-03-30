@@ -441,7 +441,7 @@ function thematic_show_commentreply() {
 
 // Add ID and CLASS attributes to the first <ul> occurence in wp_page_menu
 function thematic_add_menuclass($ulclass) {
-return preg_replace('/<ul>/', '<ul id="nav" class="sf-menu">', $ulclass, 1);
+return preg_replace('/<ul>/', '<ul class="sf-menu">', $ulclass, 1);
 }
 add_filter('wp_page_menu','thematic_add_menuclass');
 
