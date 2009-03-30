@@ -509,20 +509,20 @@ function thematic_postheader() {
     $posttitle = apply_filters('thematic_postheader_posttitle',$posttitle); 
     
     $postmeta = '<div class="entry-meta">';
-    $postmeta .= '<span class="meta-prep-author">' . __('By ', 'thematic') . '</span>';
+    $postmeta .= '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
     $postmeta .= '<span class="author vcard">'. '<a class="url fn n" href="';
     $postmeta .= get_author_link(false, $authordata->ID, $authordata->user_nicename);
     $postmeta .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
     $postmeta .= get_the_author();
-    $postmeta .= '</a></span><span class="meta-sep-entry-date"> | </span>';
-    $postmeta .= '<span class="meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
+    $postmeta .= '</a></span><span class="meta-sep meta-sep-entry-date"> | </span>';
+    $postmeta .= '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
     $postmeta .= '<span class="entry-date"><abbr class="published" title="';
     $postmeta .= get_the_time(thematic_time_title()) . '">';
     $postmeta .= get_the_time(thematic_time_display());
     $postmeta .= '</abbr></span>';
     // Display edit link
     if (current_user_can('edit_posts')) {
-        $postmeta .= ' <span class="meta-sep-edit">|</span> ' . '<span class="entry-edit">' . $posteditlink . '</span>';
+        $postmeta .= ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . $posteditlink . '</span>';
     }               
     $postmeta .= "</div><!-- .entry-meta -->\n";
     $postmeta = apply_filters('thematic_postheader_postmeta',$postmeta); 
@@ -542,9 +542,9 @@ function thematic_postfooter() {
     global $id, $post;
 
     // Create $posteditlink    
-    $posteditlink .= '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+    $posteditlink .= '<span class="edit"><a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
     $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
-    $posteditlink .= __('Edit', 'thematic') . '</a>';
+    $posteditlink .= __('Edit', 'thematic') . '</a></span>';
     $posteditlink = apply_filters('thematic_postfooter_posteditlink',$posteditlink); 
     
     // Display the post categories  
@@ -554,10 +554,10 @@ function thematic_postfooter() {
         $postcategory .= '</span>';
     } elseif ( is_category() && $cats_meow = thematic_cats_meow(', ') ) { /* Returns categories other than the one queried */
         $postcategory .= __('Also posted in ', 'thematic') . $cats_meow;
-        $postcategory .= '</span> <span class="meta-sep">|</span>';
+        $postcategory .= '</span> <span class="meta-sep meta-sep-tag-links">|</span>';
     } else {
         $postcategory .= __('Posted in ', 'thematic') . get_the_category_list(', ');
-        $postcategory .= '</span> <span class="meta-sep">|</span>';
+        $postcategory .= '</span> <span class="meta-sep meta-sep-tag-links">|</span>';
     }
     $postcategory = apply_filters('thematic_postfooter_postcategory',$postcategory); 
     
@@ -566,10 +566,10 @@ function thematic_postfooter() {
         $tagtext = __(' and tagged', 'thematic');
         $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span>');
     } elseif ( is_tag() && $tag_ur_it = thematic_tag_ur_it(', ') ) { /* Returns tags other than the one queried */
-        $posttags = '<span class="tag-links">' . __(' Also tagged ', 'thematic') . $tag_ur_it . '</span> <span class="meta-sep">|</span>';
+        $posttags = '<span class="tag-links">' . __(' Also tagged ', 'thematic') . $tag_ur_it . '</span> <span class="meta-sep meta-sep-comments-link">|</span>';
     } else {
         $tagtext = __('Tagged', 'thematic');
-        $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span> <span class="meta-sep">|</span>');
+        $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span> <span class="meta-sep meta-sep-comments-link">|</span>');
     }
     $posttags = apply_filters('thematic_postfooter_posttags',$posttags); 
     
@@ -587,11 +587,11 @@ function thematic_postfooter() {
             $postcomments .= __('Leave a comment', 'thematic') . '</a></span>';
         }
     } else {
-        $postcomments = ' <span class="comments-link">' . __('Comments closed', 'thematic') .'</span>';
+        $postcomments = ' <span class="comments-link comments-closed-link">' . __('Comments closed', 'thematic') .'</span>';
     }
     // Display edit link
     if (current_user_can('edit_posts')) {
-        $postcomments .= ' <span class="meta-sep">|</span> ' . $posteditlink;
+        $postcomments .= ' <span class="meta-sep meta-sep-edit">|</span> ' . $posteditlink;
     }               
     $postcomments = apply_filters('thematic_postfooter_postcomments',$postcomments); 
     
@@ -620,7 +620,7 @@ function thematic_postfooter() {
     
     // Add it all up
     if ($post->post_type == 'page' && current_user_can('edit_posts')) { /* For logged-in "page" search results */
-        $postfooter = '<div class="entry-utility">' . $posteditlink;
+        $postfooter = '<div class="entry-utility">' . '<span class="edit">' . $posteditlink . '</span>';
         $postfooter .= "</div><!-- .entry-utility -->\n";    
     } elseif ($post->post_type == 'page') { /* For logged-out "page" search results */
         $postfooter = '';
