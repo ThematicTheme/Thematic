@@ -12,6 +12,16 @@ function is_sidebar_active( $index ){
 	return false;
 }
 
+function thematic_before_title() {
+	$content = "<h3 class=\"widgettitle\">";
+	return apply_filters('thematic_before_title', $content);
+}
+
+function thematic_after_title() {
+	$content = "</h3>\n";
+	return apply_filters('thematic_after_title', $content);
+}
+
 // Widget: Thematic Search
 function widget_thematic_search($args) {
 	extract($args);
@@ -19,7 +29,7 @@ function widget_thematic_search($args) {
 		$title = __('Search', 'thematic');
 ?>
 			<?php echo $before_widget ?>
-				<?php echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title ?>
+				<?php echo thematic_before_title() ?><label for="s"><?php echo $title ?></label><?php echo thematic_after_title() ?>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
 						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="20" tabindex="1" />
@@ -38,7 +48,7 @@ function widget_thematic_meta($args) {
 		$title = __('Meta', 'thematic');
 ?>
 			<?php echo $before_widget; ?>
-				<?php echo $before_title . $title . $after_title; ?>
+				<?php echo thematic_before_title() . $title . thematic_after_title(); ?>
 				<ul>
 					<?php wp_register() ?>
 					<li><?php wp_loginout() ?></li>
@@ -55,7 +65,7 @@ function widget_thematic_rsslinks($args) {
 	$title = empty($options['title']) ? __('RSS Links', 'thematic') : $options['title'];
 ?>
 		<?php echo $before_widget; ?>
-			<?php echo $before_title . $title . $after_title; ?>
+			<?php echo thematic_before_title() . $title . thematic_after_title(); ?>
 			<ul>
 				<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>
 				<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(bloginfo('name'), 1) ?> <?php _e('Comments RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'thematic') ?></a></li>
@@ -93,8 +103,8 @@ function thematic_widgets_init() {
        	'id' => 'primary-aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));
 
 	// Area 2
@@ -103,8 +113,8 @@ function thematic_widgets_init() {
        	'id' => 'secondary-aside', 
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));
 
 	// Area 3
@@ -113,8 +123,8 @@ function thematic_widgets_init() {
        	'id' => '1st-subsidiary-aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));  
 
 	// Area 4
@@ -123,8 +133,8 @@ function thematic_widgets_init() {
        	'id' => '2nd-subsidiary-aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));  
    
 	// Area 5
@@ -133,8 +143,8 @@ function thematic_widgets_init() {
        	'id' => '3rd-subsidiary-aside',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));  
 
 	// Area 6
@@ -143,8 +153,8 @@ function thematic_widgets_init() {
        	'id' => 'index-top',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));  
 
 	// Area 7
@@ -153,8 +163,8 @@ function thematic_widgets_init() {
        	'id' => 'index-insert',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));
 
 	// Area 8
@@ -163,8 +173,8 @@ function thematic_widgets_init() {
        	'id' => 'index-bottom',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));      
 
 	// Area 9
@@ -173,8 +183,8 @@ function thematic_widgets_init() {
        	'id' => 'single-top',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));  
 
 	// Area 10
@@ -183,8 +193,8 @@ function thematic_widgets_init() {
        	'id' => 'single-insert',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));      
     
 	// Area 11
@@ -193,8 +203,8 @@ function thematic_widgets_init() {
        	'id' => 'single-bottom',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));      
       
 	// Area 12
@@ -203,8 +213,8 @@ function thematic_widgets_init() {
        	'id' => 'page-top',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));      
    
 	// Area 13
@@ -213,8 +223,8 @@ function thematic_widgets_init() {
        	'id' => 'page-bottom',
        	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
        	'after_widget' => "</li>",
-		'before_title' => "<h3 class=\"widgettitle\">",
-		'after_title' => "</h3>\n",
+		'before_title' => thematic_before_title(),
+		'after_title' => thematic_after_title(),
     ));      
 	  
     // we will check for a Thematic widgets directory and and add and activate additional widgets
