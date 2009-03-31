@@ -21,7 +21,7 @@ msgstr "Beklagar, men vi kunde inte hitta vad du letar efter. Prova att s&ouml;k
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/404.php:15
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:58
 msgid "Find"
-msgstr "S&ouml;k"
+msgstr "Sök"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:16
 #, php-format
@@ -31,7 +31,7 @@ msgstr "Arkiv (dagligen): <span>%s</span>"
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:18
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
-msgstr "M&aring;natliga arkiv: <span>%s</span>"
+msgstr "Månatliga arkiv: <span>%s</span>"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:20
 #, php-format
@@ -184,7 +184,7 @@ msgstr "Du kan anv&auml;nda dessa <abbr title=\"HyperText Markup Language\">HTML
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:120
 msgid "Post Comment"
-msgstr "L&auml;mna kommentar"
+msgstr "Lämna kommentar"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/page.php:14
 msgid "Pages: "
@@ -330,11 +330,11 @@ msgstr "Publicerat i "
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:564
 msgid " and tagged"
-msgstr "och taggat"
+msgstr " och taggat"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:567
 msgid " Also tagged "
-msgstr "Ocks&aring; taggat"
+msgstr " Ocks&aring; taggat "
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:569
 msgid "Tagged"
@@ -403,7 +403,7 @@ msgstr "l&auml;mna en kommentar"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:610
 msgid " Both comments and trackbacks are currently closed."
-msgstr "St&auml;ngt f&ouml;r kommentarer och trackbacks."
+msgstr " St&auml;ngt f&ouml;r kommentarer och trackbacks."
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/shortcodes.php:16
 msgid "Login"
@@ -423,7 +423,7 @@ msgstr "Det widgetbaserade Index kommer f&ouml;lja efter detta antal inl&auml;gg
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:19
 msgid "Info on Author Page"
-msgstr "Information p&aring; F&ouml;rfattarsidan"
+msgstr "Information på F&ouml;rfattarsidan"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:20
 msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
