@@ -17,7 +17,7 @@ foreach ($options as $value) {
     			<?php thematic_postheader(); ?>
 				<div class="entry-content">
 					<div class="entry-attachment"><?php the_attachment_link($post->post_ID, true) ?></div>
-<?php the_content(''.__('Read More <span class="meta-nav">&raquo;</span>', 'thematic').''); ?>
+<?php the_content(more_text()); ?>
 
 					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
 				</div>

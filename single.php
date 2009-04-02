@@ -21,7 +21,7 @@ foreach ($options as $value) {
 			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
     			<?php thematic_postheader(); ?>
 				<div class="entry-content">
-<?php the_content(''.__('Read More <span class="meta-nav">&raquo;</span>', 'thematic').''); ?>
+<?php the_content(more_text()); ?>
 
 					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
 				</div>
