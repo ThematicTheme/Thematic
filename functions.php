@@ -46,6 +46,9 @@ require_once(THEMELIB . '/extensions/hooks-filters.php');
 // Load custom content filters
 require_once(THEMELIB . '/extensions/content-filters.php');
 
+// Load custom Comments filters
+require_once(THEMELIB . '/extensions/comments-filters.php');
+
 // Load the Comments Template functions and callbacks
 require_once(THEMELIB . '/extensions/discussion.php');
 
