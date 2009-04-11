@@ -80,4 +80,10 @@ add_filter('the_generator','thematic_remove_generators');
 // Translate, if applicable
 load_theme_textdomain('thematic', THEMELIB . '/languages');
 
+$locale = get_locale();
+$locale_file = THEMELIB . "/languages/$locale.php";
+if ( is_readable($locale_file) )
+	require_once($locale_file);
+
+
 ?>
