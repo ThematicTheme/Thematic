@@ -43,6 +43,9 @@ require_once(THEMELIB . '/extensions/widgets.php');
 // Load custom theme hooks and filters
 require_once(THEMELIB . '/extensions/hooks-filters.php');
 
+// Load custom header extensions
+require_once(THEMELIB . '/extensions/header-extensions.php');
+
 // Load custom content filters
 require_once(THEMELIB . '/extensions/content-extensions.php');
 
