@@ -6,7 +6,7 @@ function thmfooter_wp_link() {
 add_shortcode('wp-link', 'thmfooter_wp_link');		  
 		  
 function thmfooter_theme_link() {
-    $themelink = '<a class="theme-link" href="http://themeshaper.com/thematic-for-wordpress" title="Thematic Theme Framework" rel="designer">Thematic Theme Framework</a>';
+    $themelink = '<a class="theme-link" href="http://themeshaper.com/thematic/" title="Thematic Theme Framework" rel="designer">Thematic Theme Framework</a>';
     return apply_filters('thematic_theme_link',$themelink);
 }
 add_shortcode('theme-link', 'thmfooter_theme_link');	
