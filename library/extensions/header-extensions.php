@@ -10,7 +10,7 @@ add_action('thematic_header','thematic_brandingopen',1);
 // Create the blog title
 // In the header div
 function thematic_blogtitle() { ?>
-    		<div id="blog-title"><span><a href="<?php echo get_option('home') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+    		<div id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
 <?php }
 add_action('thematic_header','thematic_blogtitle',3);
 
