@@ -120,13 +120,39 @@ function thematic_body_class( $print = true ) {
         $c[] = 'slug-' . $wp_query->post->post_name;
 
 		$c[] = 'page pageid-' . $pageID;
+		
 		$c[] = 'page-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
+		
 		// Checks to see if the page has children and/or is a child page; props to Adam
 		if ( $page_children )
 			$c[] = 'page-parent';
 		if ( $wp_query->post->post_parent )
 			$c[] = 'page-child parent-pageid-' . $wp_query->post->post_parent;
-		if ( is_page_template() ) // Hat tip to Ian, themeshaper.com
+			
+		// For pages with excerpts
+		if (has_excerpt())
+			$c[] = 'page-has-excerpt';
+			
+		// For pages with comments open or closed
+		if (comments_open()) {
+			$c[] = 'page-comments-open';		
+		} else {
+			$c[] = 'page-comments-closed';
+		}
+	
+		// For pages with pings open or closed
+		if (pings_open()) {
+			$c[] = 'page-pings-open';
+		} else {
+			$c[] = 'page-pings-closed';
+		}
+	
+		// For password-protected pages
+		if ( $post->post_password )
+			$c[] = 'page-protected';			
+			
+		// Checks to see if the page is using a template	
+		if ( is_page_template() & !is_page_template('default') )
 			$c[] = 'page-template page-template-' . str_replace( '.php', '-php', get_post_meta( $pageID, '_wp_page_template', true ) );
 		rewind_posts();
 	}
