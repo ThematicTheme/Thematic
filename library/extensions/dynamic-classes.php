@@ -234,6 +234,20 @@ function thematic_post_class( $print = true ) {
 	// For posts with excerpts
 	if (has_excerpt())
 		$c[] = 'has-excerpt';
+		
+	// For posts with comments open or closed
+	if (comments_open()) {
+		$c[] = 'comments-open';		
+	} else {
+		$c[] = 'comments-closed';
+	}
+
+	// For posts with pings open or closed
+	if (pings_open()) {
+		$c[] = 'pings-open';
+	} else {
+		$c[] = 'pings-closed';
+	}
 
 	// For password-protected posts
 	if ( $post->post_password )
