@@ -42,7 +42,15 @@ function widget_thematic_search($args) {
 				<?php echo thematic_before_title() ?><label for="s"><?php echo $title ?></label><?php echo thematic_after_title() ?>
 				<form id="searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
-						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="20" tabindex="1" />
+			<?php if (is_search()) { ?>
+						<input id="s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="32" tabindex="1" />
+			<?php } else { ?>
+						<?php
+							$value = __('To search, type and hit enter', 'thematic');
+							$value = apply_filters('search_field_value',$value);
+						?>
+						<input id="s" name="s" type="text" value="<?php echo $value ?>" onfocus="if (this.value == '<?php echo $value ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php echo $value ?>';}" size="32" tabindex="1" />
+			<?php } ?>						
 						<input id="searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Search', 'thematic') ?>" tabindex="2" />
 					</div>
 				</form>
