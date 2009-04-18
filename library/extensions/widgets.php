@@ -1,5 +1,15 @@
 <?php
 
+// Pre-set Widgets
+$preset_widgets = array (
+	'primary-aside'  => array( 'search', 'pages', 'categories', 'archives' ),
+	'secondary-aside'  => array( 'links', 'RSS Links', 'meta' )
+);
+if ( isset( $_GET['activated'] ) ) {
+	update_option( 'sidebars_widgets', $preset_widgets );
+}
+
+
 // Check for static widgets in widget-ready areas
 
 function is_sidebar_active( $index ){
