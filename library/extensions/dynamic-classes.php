@@ -231,6 +231,10 @@ function thematic_post_class( $print = true ) {
 			$c[] = 'tag-' . $tag->slug;
 	}
 
+	// For posts with excerpts
+	if (has_excerpt())
+		$c[] = 'has-excerpt';
+
 	// For password-protected posts
 	if ( $post->post_password )
 		$c[] = 'protected';
