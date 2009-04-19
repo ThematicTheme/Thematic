@@ -12,8 +12,8 @@ foreach ($options as $value) {
 
 <?php the_post(); ?>
 			<div id="nav-above" class="navigation">
-				<div class="nav-previous"><?php previous_post_link('%link', '<span class="meta-nav">&laquo;</span> %title') ?></div>
-				<div class="nav-next"><?php next_post_link('%link', '%title <span class="meta-nav">&raquo;</span>') ?></div>
+				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
+				<div class="nav-next"><?php thematic_next_post_link() ?></div>
 			</div>
 
 <?php get_sidebar('single-top') ?>
@@ -31,8 +31,8 @@ foreach ($options as $value) {
 <?php get_sidebar('single-insert') ?>
 
 			<div id="nav-below" class="navigation">
-				<div class="nav-previous"><?php previous_post_link('%link', '<span class="meta-nav">&laquo;</span> %title') ?></div>
-				<div class="nav-next"><?php next_post_link('%link', '%title <span class="meta-nav">&raquo;</span>') ?></div>
+				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
+				<div class="nav-next"><?php thematic_next_post_link() ?></div>
 			</div>
 
 <?php comments_template('', true); ?>
