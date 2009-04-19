@@ -279,7 +279,7 @@ function thematic_create_description() {
                 }
             }
         }
-    } elseif(is_home()) {
+    } elseif ( is_home() || is_front_page() ) {
         $content ="\t";
         $content .= "<meta name=\"description\" content=\"";
         $content .= get_bloginfo('description');
