@@ -52,6 +52,9 @@ require_once(THEMELIB . '/extensions/content-extensions.php');
 // Load custom Comments filters
 require_once(THEMELIB . '/extensions/comments-extensions.php');
 
+// Load custom Comments filters
+require_once(THEMELIB . '/extensions/widgets-extensions.php');
+
 // Load the Comments Template functions and callbacks
 require_once(THEMELIB . '/extensions/discussion.php');
 
