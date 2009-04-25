@@ -8,12 +8,12 @@ function thematic_content() {
 	$content = apply_filters('thematic_content', $content);
 
 	if ( strtolower($content) == 'full' ) {
-		the_content(moretext());
+		the_content(more_text());
 	} elseif ( strtolower($content) == 'excerpt') {
 		the_excerpt();
 	} elseif ( strtolower($content) == 'none') {
 	} else {
-		the_content(moretext());
+		the_content(more_text());
 	}
 }
 
