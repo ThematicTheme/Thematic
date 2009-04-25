@@ -1,11 +1,29 @@
 <?php
 
+//creates the content
+function thematic_content() {
+
+	if (is_home() || is_front_page()) { $content = 'full';}
+	
+	$content = apply_filters('thematic_content', $content);
+
+	if ( strtolower($content) == 'full' ) {
+		the_content(moretext());
+	} elseif ( strtolower($content) == 'excerpt') {
+		the_excerpt();
+	} elseif ( strtolower($content) == 'none') {
+	} else {
+		the_content(moretext());
+	}
+}
+
 // creates the $more_link_text for the_content
 function more_text() {
 	$content = ''.__('Read More <span class="meta-nav">&raquo;</span>', 'thematic').'';
 	return apply_filters('more_text', $content);
 } // end more_text
 
+// creates the previous_post_link
 function thematic_previous_post_link() {
 	$args = array ('format'              => '%link',
 								 'link'                => '<span class="meta-nav">&laquo;</span> %title',
@@ -15,6 +33,7 @@ function thematic_previous_post_link() {
 	previous_post_link($args['format'], $args['link'], $args['in_same_cat'], $args['excluded_categories']);
 } // end thematic_previous_post_link
 
+// creates the next_post_link
 function thematic_next_post_link() {
 	$args = array ('format'              => '%link',
 								 'link'                => '%title <span class="meta-nav">&raquo;</span>',
