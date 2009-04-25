@@ -67,9 +67,6 @@ require_once(THEMELIB . '/extensions/helpers.php');
 // Load scripts
 require_once(THEMELIB . '/extensions/scripts.php');
 
-// Produces an avatar image with the hCard-compliant photo class for author info
-require_once(THEMELIB . '/extensions/author-info-avatar.php');
-
 // Load shortcodes
 require_once(THEMELIB . '/extensions/shortcodes.php');
 
