@@ -11,6 +11,8 @@ function thematic_content() {
 		$content = 'excerpt';	
 	} elseif (is_category()) {
 		$content = 'excerpt';
+	} elseif (is_author()) {
+		$content = 'excerpt';
 	}
 	
 	$content = apply_filters('thematic_content', $content);
