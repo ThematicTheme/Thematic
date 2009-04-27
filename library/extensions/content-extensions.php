@@ -9,6 +9,8 @@ function thematic_content() {
 		$content = 'excerpt';
 	} elseif (is_search()) {
 		$content = 'excerpt';	
+	} elseif (is_category()) {
+		$content = 'excerpt';
 	}
 	
 	$content = apply_filters('thematic_content', $content);
