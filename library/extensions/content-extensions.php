@@ -13,6 +13,8 @@ function thematic_content() {
 		$content = 'excerpt';
 	} elseif (is_author()) {
 		$content = 'excerpt';
+	} elseif (is_archive()) {
+		$content = 'excerpt';
 	}
 	
 	$content = apply_filters('thematic_content', $content);
