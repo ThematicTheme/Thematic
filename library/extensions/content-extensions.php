@@ -3,7 +3,11 @@
 //creates the content
 function thematic_content() {
 
-	if (is_home() || is_front_page()) { $content = 'full';}
+	if (is_home() || is_front_page()) { 
+		$content = 'full';
+	} elseif (is_tag()) {
+		$content = 'excerpt';
+	}
 	
 	$content = apply_filters('thematic_content', $content);
 
