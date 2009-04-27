@@ -28,7 +28,7 @@ foreach ($options as $value) {
 			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
     			<?php thematic_postheader(); ?>
 				<div class="entry-content">
-<?php the_excerpt(''.__('Read More <span class="meta-nav">&raquo;</span>', 'thematic').'') ?>
+<?php thematic_content(); ?>
 
 				</div>
 				<?php thematic_postfooter(); ?>

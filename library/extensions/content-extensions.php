@@ -7,6 +7,8 @@ function thematic_content() {
 		$content = 'full';
 	} elseif (is_tag()) {
 		$content = 'excerpt';
+	} elseif (is_search()) {
+		$content = 'excerpt';	
 	}
 	
 	$content = apply_filters('thematic_content', $content);
