@@ -82,7 +82,7 @@ function thematic_doctitle() {
     }
     
     $doctitle = "\t" . "<title>" . $doctitle . "</title>" . "\n\n";
-      
+    
     echo $doctitle;
 } // end thematic_doctitle
 
@@ -94,8 +94,7 @@ function thematic_create_contenttype() {
     $content .= get_bloginfo('html_type'); 
     $content .= "; charset=";
     $content .= get_bloginfo('charset');
-    $content .= "\"";
-    $content .= "/>";
+    $content .= "\" />";
     $content .= "\n\n";
     echo apply_filters('thematic_create_contenttype', $content);
 } // end thematic_create_contenttype
@@ -104,8 +103,8 @@ function thematic_create_contenttype() {
 // Creates the canonical URL
 function thematic_canonical_url() {
     if ( is_singular() ) {
-        $canonical_url ="\t";
-        $canonical_url .= '<link rel="canonical" href="' . get_permalink() . '"/>';
+        $canonical_url = "\t";
+        $canonical_url .= '<link rel="canonical" href="' . get_permalink() . '" />';
         $canonical_url .= "\n\n";        
         echo apply_filters('thematic_canonical_url', $canonical_url);
     }
