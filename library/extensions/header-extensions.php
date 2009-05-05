@@ -243,7 +243,7 @@ function thematic_show_commentsrss() {
         $content .= " " . __('Comments RSS feed', 'thematic');
         $content .= "\" />";
         $content .= "\n\n";
-        echo apply_filters('thematic_commentrss', $content);
+        echo apply_filters('thematic_commentsrss', $content);
     }
 } // end thematic_show_commentsrss
 
