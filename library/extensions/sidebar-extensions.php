@@ -1,5 +1,20 @@
 <?php
 
+// Filter to create the sidebar
+function thematic_sidebar() {
+
+  $show = TRUE;
+
+	// Filters should return Boolean 
+	$show = apply_filters('thematic_sidebar', $show);
+	
+	if ($show) {
+    get_sidebar();}
+	
+	return;
+}
+
+
 // Located in sidebar.php 
 // Just before the main asides (commonly used as sidebars)
 function thematic_abovemainasides() {
