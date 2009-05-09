@@ -23,6 +23,8 @@ function thematic_body_class( $print = true ) {
 	// Special classes for BODY element when a singular post
 	if ( is_singular() ) {
 		$c[] = 'singular';
+	} else {
+		$c[] = 'not-singular';
 	}
 
 	// Special classes for BODY element when a single post
