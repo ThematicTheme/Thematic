@@ -20,13 +20,14 @@ function thematic_content() {
 	$content = apply_filters('thematic_content', $content);
 
 	if ( strtolower($content) == 'full' ) {
-		the_content(more_text());
+		$post = get_the_content(more_text());
 	} elseif ( strtolower($content) == 'excerpt') {
-		the_excerpt();
+		$post = get_the_excerpt();
 	} elseif ( strtolower($content) == 'none') {
 	} else {
-		the_content(more_text());
+		$post = get_the_content(more_text());
 	}
+	echo apply_filters('thematic_post', $post);
 }
 
 // creates the $more_link_text for the_content
