@@ -8,6 +8,14 @@ function thematic_abovefooter() {
 } // end thematic_abovefooter
 
 
+// located in footer.php
+// the footer text can now be filtered and controlled from your own functions.php
+function thematic_footertext($thm_footertext) {
+    $thm_footertext = apply_filters('thematic_footertext', $thm_footertext);
+    return $thm_footertext;
+} // end thematic_footertext
+
+
 // Located in footer.php
 // Just after the footer div
 function thematic_belowfooter() {

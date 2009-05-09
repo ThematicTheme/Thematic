@@ -66,4 +66,18 @@ function list_comments_arg() {
 	return apply_filters('list_comments_arg', $content);
 }
 
+// Produces an avatar image with the hCard-compliant photo class
+function thematic_commenter_link() {
+	$commenter = get_comment_author_link();
+	if ( ereg( '<a[^>]* class=[^>]+>', $commenter ) ) {
+		$commenter = ereg_replace( '(<a[^>]* class=[\'"]?)', '\\1url ' , $commenter );
+	} else {
+		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
+	}
+	$avatar_email = get_comment_author_email();
+	$avatar_size = apply_filters( 'avatar_size', '80' ); // Available filter: avatar_size
+	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( $avatar_email, $avatar_size ) );
+	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
+} // end thematic_commenter_link
+
 ?>
