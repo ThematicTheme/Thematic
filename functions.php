@@ -34,9 +34,6 @@ define('THEMELIB', TEMPLATEPATH . '/library');
 // Create Theme Options Page
 require_once(THEMELIB . '/extensions/theme-options.php');
 
-// Get the page number
-require_once(THEMELIB . '/extensions/page-numbers.php');
-
 // Load widgets
 require_once(THEMELIB . '/extensions/widgets.php');
 
@@ -52,20 +49,23 @@ require_once(THEMELIB . '/extensions/content-extensions.php');
 // Load custom Comments filters
 require_once(THEMELIB . '/extensions/comments-extensions.php');
 
-// Load custom Comments filters
+// Load custom Widgets
 require_once(THEMELIB . '/extensions/widgets-extensions.php');
 
 // Load the Comments Template functions and callbacks
 require_once(THEMELIB . '/extensions/discussion.php');
+
+// Load custom sidebar hooks
+require_once(THEMELIB . '/extensions/sidebar-extensions.php');
+
+// Load custom footer hooks
+require_once(THEMELIB . '/extensions/footer-extensions.php');
 
 // Add Dynamic Contextual Semantic Classes
 require_once(THEMELIB . '/extensions/dynamic-classes.php');
 
 // Need a little help from our helper functions
 require_once(THEMELIB . '/extensions/helpers.php');
-
-// Load scripts
-require_once(THEMELIB . '/extensions/scripts.php');
 
 // Load shortcodes
 require_once(THEMELIB . '/extensions/shortcodes.php');
