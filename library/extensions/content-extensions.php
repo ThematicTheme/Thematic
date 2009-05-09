@@ -21,11 +21,15 @@ function thematic_content() {
 
 	if ( strtolower($content) == 'full' ) {
 		$post = get_the_content(more_text());
+		$post = apply_filters('the_content', $post);
+		$post = str_replace(']]>', ']]&gt;', $post);
 	} elseif ( strtolower($content) == 'excerpt') {
 		$post = get_the_excerpt();
 	} elseif ( strtolower($content) == 'none') {
 	} else {
 		$post = get_the_content(more_text());
+		$post = apply_filters('the_content', $post);
+		$post = str_replace(']]>', ']]&gt;', $post);
 	}
 	echo apply_filters('thematic_post', $post);
 }
