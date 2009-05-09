@@ -1,48 +1,5 @@
 <?php
 
-//
-// Thematic Theme hooks
-//
-
-
-
-
-
-// Located in sidebar.php 
-// Just before the main asides (commonly used as sidebars)
-function thematic_abovemainasides() {
-    do_action('thematic_abovemainasides');
-}
-
-// Located in sidebar.php 
-// Between the main asides (commonly used as sidebars)
-function thematic_betweenmainasides() {
-    do_action('thematic_betweenmainasides');
-}
-
-// Located in sidebar.php 
-// after the main asides (commonly used as sidebars)
-function thematic_belowmainasides() {
-    do_action('thematic_belowmainasides');
-}
-
-// Located in footer.php
-// Just before the footer div
-function thematic_abovefooter() {
-    do_action('thematic_abovefooter');
-}
-
-// Located in footer.php
-// Just after the footer div
-function thematic_belowfooter() {
-    do_action('thematic_belowfooter');
-}
-
-// Located in footer.php 
-// Just before the closing body tag, after everything else.
-function thematic_after() {
-    do_action('thematic_after');
-}
 
 //
 // Thematic Theme Filters
