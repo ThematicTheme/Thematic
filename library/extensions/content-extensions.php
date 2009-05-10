@@ -1,5 +1,17 @@
 <?php
 
+// Located in archive.php, author.php, category.php, index.php, search.php, single.php, tag.php
+// Just before the content
+function thematic_navigation_above() {
+		do_action('thematic_navigation_above');
+} // end thematic_navigation_above
+
+// Located in archive.php, author.php, category.php, index.php, search.php, single.php, tag.php
+// Just after the content
+function thematic_navigation_below() {
+		do_action('thematic_navigation_below');
+} // end thematic_navigation_below
+
 // Located in index.php 
 // Just before the loop
 function thematic_above_indexloop() {
@@ -55,6 +67,31 @@ function thematic_below_tagloop() {
     do_action('thematic_below_tagloop');
 } // end thematic_below_tagloop
 
+// Action to create the above navigation
+function thematic_nav_above() {
+		if (is_single()) { ?>
+
+			<div id="nav-above" class="navigation">
+				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
+				<div class="nav-next"><?php thematic_next_post_link() ?></div>
+			</div>
+
+<?php
+		} else { ?>
+
+			<div id="nav-above" class="navigation">
+                <?php if(function_exists('wp_pagenavi')) { ?>
+                <?php wp_pagenavi(); ?>
+                <?php } else { ?>  
+				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
+				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+				<?php } ?>
+			</div>	
+	
+<?php
+		}
+}
+add_action('thematic_navigation_above', 'thematic_nav_above', 2);
 
 // Filter to create the time url title displayed in Post Header
 function thematic_time_title() {
@@ -277,6 +314,33 @@ function thematic_postfooter() {
     // Put it on the screen
     echo apply_filters( 'thematic_postfooter', $postfooter ); // Filter to override default post footer
 } // end thematic_postfooter
+
+
+// Action to create the above navigation
+function thematic_nav_below() {
+		if (is_single()) { ?>
+
+			<div id="nav-below" class="navigation">
+				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
+				<div class="nav-next"><?php thematic_next_post_link() ?></div>
+			</div>
+
+<?php
+		} else { ?>
+
+			<div id="nav-below" class="navigation">
+                <?php if(function_exists('wp_pagenavi')) { ?>
+                <?php wp_pagenavi(); ?>
+                <?php } else { ?>  
+				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
+				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+				<?php } ?>
+			</div>	
+	
+<?php
+		}
+}
+add_action('thematic_navigation_below', 'thematic_nav_below', 2);
 
 
 // creates the previous_post_link
