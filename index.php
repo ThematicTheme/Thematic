@@ -21,6 +21,8 @@ foreach ($options as $value) {
 			
 <?php get_sidebar('index-top') ?>
 
+<?php thematic_above_indexloop() ?>
+
 <?php /* Count the number of posts so we can insert a widgetized area */ $count = 1 ?>
 <?php while ( have_posts() ) : the_post() ?>
 
@@ -39,6 +41,8 @@ foreach ($options as $value) {
 <?php if ($count==$thm_insert_position) { ?><?php get_sidebar('index-insert') ?><?php } ?>
 <?php $count = $count + 1; ?>
 <?php endwhile ?>
+
+<?php thematic_below_indexloop() ?>
 
 <?php get_sidebar('index-bottom') ?>
 
