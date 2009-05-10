@@ -12,7 +12,7 @@ foreach ($options as $value) {
 
 <?php the_post() ?>
 
-			<h2 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" rev="attachment"><span class="meta-nav">&laquo; </span><?php echo get_the_title($post->post_parent) ?></a></h2>
+			<?php thematic_page_title() ?>
 			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
     			<?php thematic_postheader(); ?>
 				<div class="entry-content">

@@ -10,8 +10,7 @@ foreach ($options as $value) {
 	<div id="container">
 		<div id="content">
 
-		<h1 class="page-title"><?php _e('Category Archives:', 'thematic') ?> <span><?php echo single_cat_title(); ?></span></h1>
-			<div class="archive-meta"><?php if ( !(''== category_description()) ) : echo apply_filters('archive_meta', category_description()); endif; ?></div>
+		<?php thematic_page_title() ?>
 
 			<?php thematic_navigation_above();?>
 			
