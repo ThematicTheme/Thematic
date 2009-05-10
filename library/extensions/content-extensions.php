@@ -142,8 +142,8 @@ function thematic_nav_above() {
                 <?php if(function_exists('wp_pagenavi')) { ?>
                 <?php wp_pagenavi(); ?>
                 <?php } else { ?>  
-				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
-				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+				<div class="nav-previous"><?php previous_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
+				<div class="nav-next"><?php next_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
 				<?php } ?>
 			</div>	
 	
@@ -391,8 +391,8 @@ function thematic_nav_below() {
                 <?php if(function_exists('wp_pagenavi')) { ?>
                 <?php wp_pagenavi(); ?>
                 <?php } else { ?>  
-				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
-				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+				<div class="nav-previous"><?php previous_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
+				<div class="nav-next"><?php next_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
 				<?php } ?>
 			</div>	
 	
