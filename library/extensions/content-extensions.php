@@ -1,5 +1,61 @@
 <?php
 
+// Located in index.php 
+// Just before the loop
+function thematic_above_indexloop() {
+    do_action('thematic_above_indexloop');
+} // end thematic_above_indexloop
+
+
+// Located in index.php 
+// Just after the loop
+function thematic_below_indexloop() {
+    do_action('thematic_below_indexloop');
+} // end thematic_below_indexloop
+
+
+// Located in category.php 
+// Just before the loop
+function thematic_above_categoryloop() {
+    do_action('thematic_above_categoryloop');
+} // end thematic_above_categoryloop
+
+
+// Located in category.php 
+// Just after the loop
+function thematic_below_categoryloop() {
+    do_action('thematic_below_categoryloop');
+} // end thematic_below_categoryloop
+
+
+// Located in search.php 
+// Just before the loop
+function thematic_above_searchloop() {
+    do_action('thematic_above_searchloop');
+} // end thematic_above_searchloop
+
+
+// Located in search.php 
+// Just after the loop
+function thematic_below_searchloop() {
+    do_action('thematic_below_searchloop');
+} // end thematic_below_searchloop
+
+
+// Located in tag.php 
+// Just before the loop
+function thematic_above_tagloop() {
+    do_action('thematic_above_tagloop');
+} // end thematic_above_tagloop
+
+
+// Located in tag.php 
+// Just after the loop
+function thematic_below_tagloop() {
+    do_action('thematic_below_tagloop');
+} // end thematic_below_tagloop
+
+
 // Filter to create the time url title displayed in Post Header
 function thematic_time_title() {
 
