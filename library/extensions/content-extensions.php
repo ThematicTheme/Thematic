@@ -237,6 +237,8 @@ function thematic_content() {
 
 	if (is_home() || is_front_page()) { 
 		$content = 'full';
+	} elseif (is_single()) {
+		$content = 'full';
 	} elseif (is_tag()) {
 		$content = 'excerpt';
 	} elseif (is_search()) {
