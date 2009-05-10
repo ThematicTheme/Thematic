@@ -12,7 +12,7 @@ foreach ($options as $value) {
 
 <?php the_post() ?>
 
-            <h1 class="page-title author"><?php $author = get_the_author(); ?><?php _e('Author Archives: ', 'thematic'); ?><span><?php echo $author ?></span></h1>		
+            <?php thematic_page_title() ?>		
             
 			<?php thematic_navigation_above();?>
 

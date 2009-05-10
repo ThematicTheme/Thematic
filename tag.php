@@ -10,7 +10,7 @@ foreach ($options as $value) {
 	<div id="container">
 		<div id="content">
 
-	<h1 class="page-title"><?php _e('Tag Archives:', 'thematic') ?> <span><?php _e(thematic_tag_query()); ?></span></h1>
+	<?php thematic_page_title() ?>
 
 			<?php thematic_navigation_above();?>
 			

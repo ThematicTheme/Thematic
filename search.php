@@ -12,7 +12,7 @@ foreach ($options as $value) {
 
 <?php if (have_posts()) : ?>
 
-		<h1 class="page-title"><?php _e('Search Results for:', 'thematic') ?> <span id="search-terms"><?php echo wp_specialchars(stripslashes($_GET['s']), true); ?></span></h1>
+		<?php thematic_page_title() ?>
 
 			<?php thematic_navigation_above();?>
 			
