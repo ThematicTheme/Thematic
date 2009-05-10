@@ -20,6 +20,8 @@ foreach ($options as $value) {
 				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
 				<?php } ?>
 			</div>
+			
+<?php thematic_above_tagloop() ?>			
 
 <?php while (have_posts()) : the_post(); ?>
 
@@ -33,6 +35,8 @@ foreach ($options as $value) {
 			</div><!-- .post -->
 
 <?php endwhile; ?>
+
+<?php thematic_below_tagloop() ?>			
 
 			<div id="nav-below" class="navigation">
                 <?php if(function_exists('wp_pagenavi')) { ?>
