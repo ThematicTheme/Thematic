@@ -377,7 +377,7 @@ function thematic_postfooter() {
 } // end thematic_postfooter
 
 
-// Action to create the above navigation
+// Action to create the below navigation
 function thematic_nav_below() {
 		if (is_single()) { ?>
 
