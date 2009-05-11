@@ -94,7 +94,7 @@ function mytheme_admin() {
 		<tr valign="top"> 
 			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
 			<td>
-				<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo get_settings( $value['id'] ); } else { echo $value['std']; } ?>" />
+				<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" />
 				<?php echo __($value['desc'],'thematic'); ?>
 
 			</td>
@@ -109,7 +109,7 @@ function mytheme_admin() {
 				<td>
 					<select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
 					<?php foreach ($value['options'] as $option) { ?>
-					<option<?php if ( get_settings( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option>
+					<option<?php if ( get_option( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option>
 					<?php } ?>
 				</select>
 			</td>
@@ -123,8 +123,8 @@ function mytheme_admin() {
 		<tr valign="top"> 
 			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
 			<td><textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="<?php echo $ta_options['cols']; ?>" rows="<?php echo $ta_options['rows']; ?>"><?php 
-				if( get_settings($value['id']) != "") {
-						echo __(stripslashes(get_settings($value['id'])),'thematic');
+				if( get_option($value['id']) != "") {
+						echo __(stripslashes(get_option($value['id'])),'thematic');
 					}else{
 						echo __($value['std'],'thematic');
 				}?></textarea><br /><?php echo __($value['desc'],'thematic'); ?></td>
@@ -138,9 +138,9 @@ function mytheme_admin() {
 			<th scope="row"><?php echo __($value['name'],'thematic'); ?></th>
 			<td>
 				<?php foreach ($value['options'] as $key=>$option) { 
-				$radio_setting = get_settings($value['id']);
+				$radio_setting = get_option($value['id']);
 				if($radio_setting != ''){
-					if ($key == get_settings($value['id']) ) {
+					if ($key == get_option($value['id']) ) {
 						$checked = "checked=\"checked\"";
 						} else {
 							$checked = "";
@@ -165,7 +165,7 @@ function mytheme_admin() {
 			<th scope="row"><?php echo __($value['name'],'thematic'); ?></th>
 			<td>
 				<?php
-					if(get_settings($value['id'])){
+					if(get_option($value['id'])){
 						$checked = "checked=\"checked\"";
 					}else{
 						$checked = "";
