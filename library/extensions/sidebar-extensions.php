@@ -79,7 +79,7 @@ function thematic_sidebar() {
 	} // end thematic_belowindexbottom	
 	
 	
-// Single Post Aside Hooks
+// Single Post Asides
 
 
 	// Located in sidebar-single-top.php
@@ -120,6 +120,30 @@ function thematic_sidebar() {
 
 
 // Page Aside Hooks
+
+
+	// Located in sidebar-page-top.php
+	function thematic_abovepagetop() {
+		do_action('thematic_abovepagetop');
+	} // end thematic_abovepagetop
+	
+	
+	// Located in sidebar-page-top.php
+	function thematic_belowpagetop() {
+		do_action('thematic_belowpagetop');
+	} // end thematic_belowpagetop
+
+	// Located in sidebar-page-bottom.php
+	function thematic_abovepagebottom() {
+		do_action('thematic_abovepagebottom');
+	} // end thematic_abovepagebottom
+	
+	
+	// Located in sidebar-page-bottom.php
+	function thematic_belowpagebottom() {
+		do_action('thematic_belowpagebottom');
+	} // end thematic_belowpagebottom	
+
 
 
 // Subsidiary Aside Hooks
