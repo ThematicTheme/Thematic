@@ -78,6 +78,45 @@ function thematic_sidebar() {
 		do_action('thematic_belowindexbottom');
 	} // end thematic_belowindexbottom	
 	
+	
+// Single Post Aside Hooks
+
+
+	// Located in sidebar-single-top.php
+	function thematic_abovesingletop() {
+		do_action('thematic_abovesingletop');
+	} // end thematic_abovesingletop
+	
+	
+	// Located in sidebar-single-top.php
+	function thematic_belowsingletop() {
+		do_action('thematic_belowsingletop');
+	} // end thematic_belowsingletop
+	
+	
+	// Located in sidebar-single-insert.php
+	function thematic_abovesingleinsert() {
+		do_action('thematic_abovesingleinsert');
+	} // end thematic_abovesingleinsert
+	
+	
+	// Located in sidebar-single-insert.php
+	function thematic_belowsingleinsert() {
+		do_action('thematic_belowsingleinsert');
+	} // end thematic_belowsingleinsert	
+	
+
+	// Located in sidebar-single-bottom.php
+	function thematic_abovesinglebottom() {
+		do_action('thematic_abovesinglebottom');
+	} // end thematic_abovesinglebottom
+	
+	
+	// Located in sidebar-single-bottom.php
+	function thematic_belowsinglebottom() {
+		do_action('thematic_belowsinglebottom');
+	} // end thematic_belowsinglebottom	
+	
 
 
 // Page Aside Hooks
