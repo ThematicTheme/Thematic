@@ -150,37 +150,37 @@ function thematic_sidebar() {
 
 
 	// Located in sidebar-subsidiary.php
-	functin thematic_abovesubasides() {
+	function thematic_abovesubasides() {
 		do_action('thematic_abovesubasides');
 	} // end thematic_abovesubasides
 	
 
 	// Located in sidebar-subsidiary.php
-	functin thematic_belowsubasides() {
+	function thematic_belowsubasides() {
 		do_action('thematic_belowsubasides');
 	} // end thematic_belowsubasides
 	
 
 	// Located in sidebar-subsidiary.php
-	functin thematic_before_first_sub() {
+	function thematic_before_first_sub() {
 		do_action('thematic_before_first_sub');
 	} // end thematic_before_first_sub
 
 
 	// Located in sidebar-subsidiary.php
-	functin thematic_between_firstsecond_sub() {
+	function thematic_between_firstsecond_sub() {
 		do_action('thematic_between_firstsecond_sub');
 	} // end thematic_between_firstsecond_sub
 
 
 	// Located in sidebar-subsidiary.php
-	functin thematic_between_secondthird_sub() {
+	function thematic_between_secondthird_sub() {
 		do_action('thematic_between_secondthird_sub');
 	} // end thematic_between_secondthird_sub
 	
 	
 	// Located in sidebar-subsidiary.php
-	functin thematic_after_third_sub() {
+	function thematic_after_third_sub() {
 		do_action('thematic_after_third_sub');
 	} // end thematic_after_third_sub	
 
