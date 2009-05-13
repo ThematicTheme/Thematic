@@ -29,7 +29,7 @@ foreach ($options as $value) {
 
 			<?php thematic_navigation_below();?>
 
-<?php comments_template('', true); ?>
+<?php thematic_comments_template(); ?>
 
 <?php get_sidebar('single-bottom') ?>
 
