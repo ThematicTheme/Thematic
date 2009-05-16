@@ -301,6 +301,13 @@ function more_text() {
 } // end more_text
 
 
+// creates the $more_link_text for the_content
+function list_bookmarks_args() {
+	$content = 'title_before=<h2>&title_after=</h2>';
+	return apply_filters('list_bookmarks_args', $content);
+} // end more_text
+
+
 // Information in Post Footer
 function thematic_postfooter() {
     global $id, $post;
