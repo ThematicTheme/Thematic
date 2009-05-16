@@ -1,5 +1,12 @@
 <?php
 
+// Located in archives.php
+// Just after the content
+function thematic_archives() {
+		do_action('thematic_archives');
+} // end thematic_archives
+
+
 // Located in archive.php, author.php, category.php, index.php, search.php, single.php, tag.php
 // Just before the content
 function thematic_navigation_above() {
@@ -66,6 +73,7 @@ function thematic_above_tagloop() {
 function thematic_below_tagloop() {
     do_action('thematic_below_tagloop');
 } // end thematic_below_tagloop
+
 
 // Filter the page title
 // located in archive.php, attachement.php, author.php, category.php, search.php, tag.php
@@ -267,6 +275,44 @@ function thematic_content() {
 	}
 	echo apply_filters('thematic_post', $post);
 } // end thematic_content
+
+// Functions that hook into thematic_archives()
+
+		// Open .archives-page
+		function thematic_archivesopen() { ?>
+				<ul id="archives-page" class="xoxo">
+		<?php }
+		add_action('thematic_archives', 'thematic_archivesopen', 1);
+
+		// Display the Category Archives
+		function thematic_category_archives() { ?>
+						<li id="category-archives" class="content-column">
+							<h2><?php _e('Archives by Category', 'thematic') ?></h2>
+							<ul>
+								<?php wp_list_categories('optioncount=1&feed=RSS&title_li=&show_count=1') ?> 
+							</ul>
+						</li>
+		<?php }
+		add_action('thematic_archives', 'thematic_category_archives', 3);
+
+		// Display the Monthly Archives
+		function thematic_monthly_archives() { ?>
+						<li id="monthly-archives" class="content-column">
+							<h2><?php _e('Archives by Month', 'thematic') ?></h2>
+							<ul>
+								<?php wp_get_archives('type=monthly&show_post_count=1') ?>
+							</ul>
+						</li>
+		<?php }
+		add_action('thematic_archives', 'thematic_monthly_archives', 5);
+
+		// Close .archives-page
+		function thematic_archivesclose() { ?>
+				</ul>
+		<?php }
+		add_action('thematic_archives', 'thematic_archivesclose', 9);
+		
+// End of functions that hook into thematic_archives()
 
 
 // Action hook called in 404.php
