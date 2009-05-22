@@ -37,6 +37,12 @@ function thematic_authorloop() {
 		do_action('thematic_authorloop');
 } // end thematic_authorloop
 
+// Located in category.php
+// The Loop
+function thematic_categoryloop() {
+		do_action('thematic_categoryloop');
+} // end thematic_categoryloop
+
 // Located in index.php
 // The Loop
 function thematic_indexloop() {
@@ -211,6 +217,23 @@ function thematic_author_loop() {
 		<?php endwhile;
 }
 add_action('thematic_authorloop', 'thematic_author_loop');
+
+// The Category Loop
+function thematic_category_loop() {
+		while (have_posts()) : the_post(); ?>
+
+			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
+    			<?php thematic_postheader(); ?>
+				<div class="entry-content">
+<?php thematic_content(); ?>
+
+				</div>
+				<?php thematic_postfooter(); ?>
+			</div><!-- .post -->
+
+		<?php endwhile;
+}
+add_action('thematic_categoryloop', 'thematic_category_loop');
 
 // The Index Loop
 function thematic_index_loop() {
