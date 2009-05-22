@@ -25,6 +25,11 @@ function thematic_above_indexloop() {
     do_action('thematic_above_indexloop');
 } // end thematic_above_indexloop
 
+// Located in index.php
+// The Loop
+function thematic_indexloop() {
+		do_action('thematic_indexloop');
+} // end thematic_indexloop
 
 // Located in index.php 
 // Just after the loop
@@ -159,6 +164,31 @@ function thematic_nav_above() {
 		}
 }
 add_action('thematic_navigation_above', 'thematic_nav_above', 2);
+
+// The Index Loop
+function thematic_index_loop() {
+		/* Count the number of posts so we can insert a widgetized area */ $count = 1;
+		while ( have_posts() ) : the_post() ?>
+
+			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
+    			<?php thematic_postheader(); ?>
+				<div class="entry-content">
+<?php thematic_content(); ?>
+
+				<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+				</div>
+				<?php thematic_postfooter(); ?>
+			</div><!-- .post -->
+
+				<?php comments_template();
+
+				if ($count==$thm_insert_position) {
+						get_sidebar('index-insert');
+				}
+				$count = $count + 1;
+		endwhile;
+}
+add_action('thematic_indexloop', 'thematic_index_loop');
 
 // Filter to create the time url title displayed in Post Header
 function thematic_time_title() {
