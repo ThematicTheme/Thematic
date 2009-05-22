@@ -49,6 +49,12 @@ function thematic_indexloop() {
 		do_action('thematic_indexloop');
 } // end thematic_indexloop
 
+// Located in search.php
+// The Loop
+function thematic_searchloop() {
+		do_action('thematic_searchloop');
+} // end thematic_searchloop
+
 // Located in index.php 
 // Just after the loop
 function thematic_below_indexloop() {
@@ -259,6 +265,23 @@ function thematic_index_loop() {
 		endwhile;
 }
 add_action('thematic_indexloop', 'thematic_index_loop');
+
+// The Search Loop
+function thematic_search_loop() {
+		while ( have_posts() ) : the_post(); ?>
+
+			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
+    			<?php thematic_postheader(); ?>
+				<div class="entry-content">
+<?php thematic_content(); ?>
+
+				</div>
+				<?php thematic_postfooter(); ?>
+			</div><!-- .post -->
+
+		<?php endwhile;
+}
+add_action('thematic_searchloop', 'thematic_search_loop');
 
 // Filter to create the time url title displayed in Post Header
 function thematic_time_title() {
