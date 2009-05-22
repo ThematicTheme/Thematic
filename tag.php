@@ -16,18 +16,7 @@ foreach ($options as $value) {
 			
 <?php thematic_above_tagloop() ?>			
 
-<?php while (have_posts()) : the_post(); ?>
-
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content">
-<?php thematic_content() ?>
-
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
-
-<?php endwhile; ?>
+<?php thematic_tagloop() ?>
 
 <?php thematic_below_tagloop() ?>			
 
