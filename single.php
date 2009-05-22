@@ -15,15 +15,7 @@ foreach ($options as $value) {
 
 <?php get_sidebar('single-top') ?>
 
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content">
-<?php thematic_content(); ?>
-
-					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
+<?php thematic_singlepost() ?>
 			
 <?php get_sidebar('single-insert') ?>
 

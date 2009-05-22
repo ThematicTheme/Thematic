@@ -55,6 +55,12 @@ function thematic_searchloop() {
 		do_action('thematic_searchloop');
 } // end thematic_searchloop
 
+// Located in single.php
+// The Post
+function thematic_singlepost() {
+		do_action('thematic_singlepost');
+} //end thematic_singlepost
+
 // Located in tag.php
 // The Loop
 function thematic_tagloop() {
@@ -271,6 +277,21 @@ function thematic_index_loop() {
 		endwhile;
 }
 add_action('thematic_indexloop', 'thematic_index_loop');
+
+// The Single Post
+function thematic_single_post() { ?>
+			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
+    			<?php thematic_postheader(); ?>
+				<div class="entry-content">
+<?php thematic_content(); ?>
+
+					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+				</div>
+				<?php thematic_postfooter(); ?>
+			</div><!-- .post -->
+<?php
+}
+add_action('thematic_singlepost', 'thematic_single_post');
 
 // The Search Loop
 function thematic_search_loop() {
