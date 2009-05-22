@@ -30,18 +30,7 @@ foreach ($options as $value) {
 			</div><!-- #author-info -->
 <?php } ?>
 			
-<?php rewind_posts(); while (have_posts()) : the_post(); ?>
-
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content ">
-<?php thematic_content(); ?>
-
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
-
-<?php endwhile ?>
+<?php thematic_author_loop() ?>
 
 			<?php thematic_navigation_below();?>
 	

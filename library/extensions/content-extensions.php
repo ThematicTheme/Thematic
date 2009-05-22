@@ -25,6 +25,12 @@ function thematic_above_indexloop() {
     do_action('thematic_above_indexloop');
 } // end thematic_above_indexloop
 
+// Located in author.php
+// The Loop
+function thematic_authorloop() {
+		do_action('thematic_authorloop');
+} // end thematic_indexloop
+
 // Located in index.php
 // The Loop
 function thematic_indexloop() {
@@ -164,6 +170,24 @@ function thematic_nav_above() {
 		}
 }
 add_action('thematic_navigation_above', 'thematic_nav_above', 2);
+
+// The Author Loop
+function thematic_author_loop() {
+		rewind_posts();
+		while (have_posts()) : the_post(); ?>
+
+			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
+    			<?php thematic_postheader(); ?>
+				<div class="entry-content ">
+<?php thematic_content(); ?>
+
+				</div>
+				<?php thematic_postfooter(); ?>
+			</div><!-- .post -->
+
+<?php endwhile;
+}
+add_action('thematic_authorloop', 'thematic_author_loop');
 
 // The Index Loop
 function thematic_index_loop() {
