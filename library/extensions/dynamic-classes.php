@@ -176,6 +176,8 @@ function thematic_body_class( $print = true ) {
 
 	// Paged classes; for 'page X' classes of index, single, etc.
 	if ( ( ( $page = $wp_query->get('paged') ) || ( $page = $wp_query->get('page') ) ) && $page > 1 ) {
+	// Thanks to Prentiss Riddle, twitter.com/pzriddle, for the security fix below. 
+ 			$page = intval($page); // Ensures that an integer (not some dangerous script) is passed for the variable
 		$c[] = 'paged-' . $page;
 		if ( is_single() ) {
 			$c[] = 'single-paged-' . $page;
