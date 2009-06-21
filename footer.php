@@ -20,7 +20,7 @@ foreach ($options as $value) {
 
 </div><!-- #wrapper .hfeed -->
 
-<?php wp_footer() ?>
+<?php wp_footer(); ?>
 
 <?php thematic_after(); ?>
 </body>
