@@ -244,7 +244,7 @@ msgstr "Meta"
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/tag.php:13
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:207
 msgid "Tag Archives:"
-msgstr "Archivio dei tags:"
+msgstr "Archivio delle etichette:"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:10
 #, php-format
@@ -326,15 +326,15 @@ msgstr "Pubblicato in "
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:564
 msgid " and tagged"
-msgstr " e ha i tag"
+msgstr " e ha le etichette"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:567
 msgid " Also tagged "
-msgstr " Altri termini collegati "
+msgstr " Altre etichette"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:569
 msgid "Tagged"
-msgstr "Termini collegati:"
+msgstr "Etichette:"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:578
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:581
@@ -415,7 +415,7 @@ msgstr "Inserisci la posizione della pagina INDEX"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:14
 msgid "The widgetized Index Insert will follow after this post number."
-msgstr "L' inserimento dell' INDEX delle widget seguira dopo0 questo numero di articolo."
+msgstr "La widget INDEX INSERT apparirà dopo il numero di post qui indicato."
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:19
 msgid "Info on Author Page"
