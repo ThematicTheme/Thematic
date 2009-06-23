@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-15 11:44+0100\n"
+"POT-Creation-Date: 2009-06-21 19:25+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: danny <dannydamnboy@gmail.com>\n"
 "Language-Team: \n"
@@ -10,99 +10,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/404.php:10
-msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Ci dispiace, ma quello che cercavi non è stato trovato. Prova con la ricerca."
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/404.php:15
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:58
-msgid "Find"
-msgstr "Trova"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:16
-#, php-format
-msgid "Daily Archives: <span>%s</span>"
-msgstr "Archivio Giornaliero: <span>%s</span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:18
-#, php-format
-msgid "Monthly Archives: <span>%s</span>"
-msgstr "Archivio Mensile: <span>%s</span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:20
-#, php-format
-msgid "Yearly Archives: <span>%s</span>"
-msgstr "Archivio Annuale: <span>%s</span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:22
-msgid "Blog Archives"
-msgstr "Archivi del Blog"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:31
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:53
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:21
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:57
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:20
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:42
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:17
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:49
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:21
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:43
-msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> Articoli Precedenti"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:32
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:54
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:22
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:58
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:21
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:43
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:18
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:50
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:22
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:44
-msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Articoli successivi <span class=\"meta-nav\">&raquo;</span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:41
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/attachment.php:20
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:45
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:30
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:30
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:31
-msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Continua a leggere <span class=\"meta-nav\">&raquo;</span>"
-
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/archives.php:20
-msgid "Archives by Category"
-msgstr "Archivo per Categorie"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archives.php:26
-msgid "Archives by Month"
-msgstr "Archivio per Mese"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archives.php:32
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/links.php:20
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/page.php:16
 msgid "Edit"
 msgstr "Modifica"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/attachment.php:22
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:32
 msgid "Pages:"
 msgstr "Pagine:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:15
-msgid "Author Archives: "
-msgstr "Archivio dell'Autore: "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:34
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:27
 msgid "Email "
 msgstr "Email"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:13
-msgid "Category Archives:"
-msgstr "Archivo delle Categorie:"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:10
 msgid "This post is password protected. Enter the password to view any comments."
@@ -133,7 +53,7 @@ msgstr "Scrivi un Commento"
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:67
 #, php-format
 msgid "Post a Reply to %s"
-msgstr "Rispondi su %s"
+msgstr "Rispondi a %s"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:72
 #, php-format
@@ -151,7 +71,7 @@ msgstr "Il tuo indirizzo Email non verra' <em>mai</em> pubblicato e/o condiviso.
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:90
 msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "I Campi obbligatori sono contrassegnati con <span class=\"required\">*</span>"
+msgstr "I campi obbligatori sono contrassegnati con <span class=\"required\">*</span>"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:93
 msgid "Name"
@@ -186,65 +106,193 @@ msgstr "Commenta"
 msgid "Pages: "
 msgstr "Pagine: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:15
-msgid "Search Results for:"
-msgstr "Risultato della ricerca per:"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:51
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:30
 msgid "Nothing Found"
 msgstr "Nessun Risultato"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:53
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:32
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "Nessun risultato per i termini utilizzati. Prova ancora con termini differenti."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:6
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:10
-msgid "Search"
-msgstr "Cerca"
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:37
+msgid "Find"
+msgstr "Trova"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:16
-msgid "Pages"
-msgstr "Pagine"
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:132
+msgid "Author Archives: "
+msgstr "Archivio dell'Autore: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:23
-msgid "Categories"
-msgstr "Categorie"
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:138
+msgid "Category Archives:"
+msgstr "Archivo delle Categorie:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:31
-msgid "Archives"
-msgstr "Archivi"
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:147
+msgid "Search Results for:"
+msgstr "Risultato della ricerca per:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:50
-msgid "RSS Feeds"
-msgstr "Feeds RSS"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:52
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:390
-msgid "Posts RSS feed"
-msgstr "Feed RSS Articoli"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:52
-msgid "All posts"
-msgstr "Tutti gli articoli"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:53
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:408
-msgid "Comments RSS feed"
-msgstr "Feed RSS Commenti"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:53
-msgid "All comments"
-msgstr "Tutti i commenti"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:58
-msgid "Meta"
-msgstr "Meta"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/tag.php:13
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:207
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:153
 msgid "Tag Archives:"
 msgstr "Archivio delle etichette:"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:159
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Archivio Giornaliero: <span>%s</span>"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:163
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Archivio Mensile: <span>%s</span>"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:167
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Archivio Annuale: <span>%s</span>"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:171
+msgid "Blog Archives"
+msgstr "Archivi del Blog"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:194
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:641
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Articoli Precedenti"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:195
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:642
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Articoli successivi <span class=\"meta-nav\">&raquo;</span>"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:360
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:530
+msgid "Edit post"
+msgstr "Modifica articolo"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:368
+msgid "Not Found"
+msgstr "Non Trovato"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:373
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:583
+msgid "Permalink to "
+msgstr "Link permanente a "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:381
+msgid "By "
+msgstr "Scritto da "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:384
+msgid "View all posts by "
+msgstr "Leggi tutti gli articoli scritti da "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:387
+msgid "Published: "
+msgstr "Pubblicato: "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:457
+msgid "Archives by Category"
+msgstr "Archivo per Categorie"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:468
+msgid "Archives by Month"
+msgstr "Archivio per Mese"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:496
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
+msgstr "Ci dispiace, ma quello che cercavi non è stato trovato. Prova con la ricerca."
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:512
+msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Continua a leggere <span class=\"meta-nav\">&raquo;</span>"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:537
+msgid "This entry was posted in "
+msgstr "Questo articolo è stato pubblicato in "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:540
+msgid "Also posted in "
+msgstr "Pubblicato anche in "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:543
+msgid "Posted in "
+msgstr "Pubblicato in "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:550
+msgid " and tagged"
+msgstr " e ha le etichette"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:553
+msgid " Also tagged "
+msgstr " Altre etichette"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:555
+msgid "Tagged"
+msgstr "Etichette:"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:564
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:567
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:570
+msgid "Comment on "
+msgstr "Commenta "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:565
+msgid " Comments"
+msgstr " Commenti"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:568
+msgid " Comment"
+msgstr " Commento"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:571
+msgid "Leave a comment"
+msgstr "Scrivi un commento"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:574
+msgid "Comments closed"
+msgstr "Commenti chiusi"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:583
+msgid ". Bookmark the "
+msgstr ". Aggiungi ai preferiti: "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:584
+msgid "permalink"
+msgstr "link permanente"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:586
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:594
+msgid "Post a comment"
+msgstr "Scrivi un commento"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:587
+msgid " or leave a trackback: "
+msgstr " o lascia un trackback: "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:588
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:591
+msgid "Trackback URL for your post"
+msgstr "Trackback URL per il tuo articolo"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:588
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:591
+msgid "Trackback URL"
+msgstr "Trackback URL"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:590
+msgid " Comments are closed, but you can leave a trackback: "
+msgstr " I commenti sono chiusi ma puoi lasciare un trackback: "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:593
+msgid " Trackbacks are closed, but you can "
+msgstr " I trackbacks sono chiusi ma puoi "
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:594
+msgid "post a comment"
+msgstr "scrivi un commento"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:596
+msgid " Both comments and trackbacks are currently closed."
+msgstr " I commenti ed i trackbacks sono attualmente chiusi."
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:10
 #, php-format
@@ -272,134 +320,28 @@ msgstr "Scritto da %1$s il %2$s alle %3$s"
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
 msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Il tuo trackback è in attesa di autorizzazione.</span>\\n"
 
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/header-extensions.php:244
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:73
+msgid "Posts RSS feed"
+msgstr "Feed RSS Articoli"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/header-extensions.php:262
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:74
+msgid "Comments RSS feed"
+msgstr "Feed RSS Commenti"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/header-extensions.php:394
+msgid "Skip navigation to the content"
+msgstr "Salta la navigazione e vai al contenuto"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/header-extensions.php:394
+msgid "Skip to content"
+msgstr "Vai al contenuto"
+
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/helpers.php:31
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/helpers.php:44
 msgid "There is no excerpt because this is a protected post."
 msgstr "Non esiste un riassunto poiche' questo articolo e' protetto."
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:61
-msgid "Skip navigation to the content"
-msgstr "Salta la navigazione e vai al contenuto"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:61
-msgid "Skip to content"
-msgstr "Vai al contenuto"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:211
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:497
-msgid "Not Found"
-msgstr "Non Trovato"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:489
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:544
-msgid "Edit post"
-msgstr "Modifica articolo"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:502
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:597
-msgid "Permalink to "
-msgstr "Link permanente a "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:511
-msgid "By "
-msgstr "Scritto da "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:513
-msgid "View all posts by "
-msgstr "Leggi tutti gli articoli scritti da "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:516
-msgid "Published: "
-msgstr "Pubblicato: "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:551
-msgid "This entry was posted in "
-msgstr "Questo articolo è stato pubblicato in "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:554
-msgid "Also posted in "
-msgstr "Pubblicato anche in "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:557
-msgid "Posted in "
-msgstr "Pubblicato in "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:564
-msgid " and tagged"
-msgstr " e ha le etichette"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:567
-msgid " Also tagged "
-msgstr " Altre etichette"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:569
-msgid "Tagged"
-msgstr "Etichette:"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:578
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:581
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:584
-msgid "Comment on "
-msgstr "Commenta "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:579
-msgid " Comments"
-msgstr " Commenti"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:582
-msgid " Comment"
-msgstr " Commento"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:585
-msgid "Leave a comment"
-msgstr "Scrivi un commento"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:588
-msgid "Comments closed"
-msgstr "Commenti chiusi"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:597
-msgid ". Bookmark the "
-msgstr ". Aggiungi ai preferiti: "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:598
-msgid "permalink"
-msgstr "link permanente"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:600
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:608
-msgid "Post a comment"
-msgstr "Scrivi un commento"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:601
-msgid " or leave a trackback: "
-msgstr " o lascia un trackback: "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:602
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:605
-msgid "Trackback URL for your post"
-msgstr "Trackback URL per il tuo articolo"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:602
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:605
-msgid "Trackback URL"
-msgstr "Trackback URL"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:604
-msgid " Comments are closed, but you can leave a trackback: "
-msgstr " I commenti sono chiusi ma puoi lasciare un trackback: "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:607
-msgid " Trackbacks are closed, but you can "
-msgstr " I trackbacks sono chiusi ma puoi "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:608
-msgid "post a comment"
-msgstr "scrivi un commento"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:610
-msgid " Both comments and trackbacks are currently closed."
-msgstr " I commenti ed i trackbacks sono attualmente chiusi."
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/shortcodes.php:16
 msgid "Login"
@@ -415,7 +357,7 @@ msgstr "Inserisci la posizione della pagina INDEX"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:14
 msgid "The widgetized Index Insert will follow after this post number."
-msgstr "La widget INDEX INSERT apparirà dopo il numero di post qui indicato."
+msgstr "La widget INDEX INSERT apparirà dopo il numero di articoli qui indicato."
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:19
 msgid "Info on Author Page"
@@ -465,16 +407,47 @@ msgstr "Ripristina le Widget"
 msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
 msgstr "Per maggiori informazioni su questo tema, <a href=\"http://themeshaper.com\">visita ThemeShaper</a>. Visita i <a href=\"http://themeshaper.com/forums/\">Forums ThemeShaper</a> se hai domande su Thematic."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:55
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:245
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:246
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets-extensions.php:11
+msgid "To search, type and hit enter"
+msgstr "Per cercare, scrivi e premi invio"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets-extensions.php:17
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:39
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:254
+msgid "Search"
+msgstr "Cerca"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:51
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:256
+msgid "Meta"
+msgstr "Meta"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:68
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:258
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:259
 msgid "RSS Links"
 msgstr "Links RSS"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:79
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:73
+msgid "All posts"
+msgstr "Tutti gli articoli"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:74
+msgid "All comments"
+msgstr "Tutti i commenti"
+
+#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:92
 msgid "Title:"
 msgstr "Titolo:"
 
+#~ msgid "Pages"
+#~ msgstr "Pagine"
+#~ msgid "Categories"
+#~ msgstr "Categorie"
+#~ msgid "Archives"
+#~ msgstr "Archivi"
+#~ msgid "RSS Feeds"
+#~ msgstr "Feeds RSS"
 #~ msgid ""
 #~ "Enter the HTML text that will appear in the bottom of your footer. Feel "
 #~ "free to remove or change any links. <strong>Hint:</strong> <a href="
