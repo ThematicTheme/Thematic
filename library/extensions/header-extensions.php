@@ -234,7 +234,7 @@ function thematic_create_stylesheet() {
 // rss usage is switchable using a filter
 function thematic_show_rss() {
     $display = TRUE;
-    apply_filters('thematic_show_rss', $display);
+    $display = apply_filters('thematic_show_rss', $display);
     if ($display) {
         $content = "\t";
         $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
@@ -252,7 +252,7 @@ function thematic_show_rss() {
 // comments rss usage is switchable using a filter
 function thematic_show_commentsrss() {
     $display = TRUE;
-    apply_filters('thematic_show_commentsrss', $display);
+    $display = apply_filters('thematic_show_commentsrss', $display);
     if ($display) {
         $content = "\t";
         $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
@@ -270,7 +270,7 @@ function thematic_show_commentsrss() {
 // pingback usage is switchable using a filter
 function thematic_show_pingback() {
     $display = TRUE;
-    apply_filters('thematic_show_pingback', $display);
+    $display = apply_filters('thematic_show_pingback', $display);
     if ($display) {
         $content = "\t";
         $content .= "<link rel=\"pingback\" href=\"";
@@ -285,7 +285,7 @@ function thematic_show_pingback() {
 // comment reply usage is switchable using a filter
 function thematic_show_commentreply() {
     $display = TRUE;
-    apply_filters('thematic_show_commentreply', $display);
+    $display = apply_filters('thematic_show_commentreply', $display);
     if ($display)
         if ( is_singular() ) 
             wp_enqueue_script( 'comment-reply' ); // support for comment threading
