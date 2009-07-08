@@ -1,12 +1,18 @@
 <?php
 
-
 // Creates the DOCTYPE section
 function thematic_create_doctype() {
     $content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
     $content .= '<html xmlns="http://www.w3.org/1999/xhtml"';
     echo apply_filters('thematic_create_doctype', $content);
 } // end thematic_create_doctype
+
+
+// Creates the HEAD Profile
+function thematic_head_profile() {
+    $content = '<head profile="http://gmpg.org/xfn/11">' . "\n";
+    echo apply_filters('thematic_head_profile', $content);
+} // end thematic_head_profile
 
 
 // Get the page number adapted from http://efficienttips.com/wordpress-seo-title-description-tag/
