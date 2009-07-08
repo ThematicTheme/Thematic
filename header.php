@@ -1,5 +1,5 @@
 <?php thematic_create_doctype(); echo " "; language_attributes(); echo ">\n";?>
-<head profile="http://gmpg.org/xfn/11">
+<?php thematic_head_profile();?>
 
 <?php 
 
