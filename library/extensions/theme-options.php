@@ -57,11 +57,32 @@ function mytheme_add_admin() {
             header("Location: themes.php?page=theme-options.php&reset=true");
             die;
 
-        } else if ( 'reset_widgets' == $_REQUEST['action'] ) {
-            $null = null;
-            update_option('sidebars_widgets',$null);
-            header("Location: themes.php?page=theme-options.php&reset=true");
+        } else if ( 'resetwidgets' == $_REQUEST['action'] ) {
+            update_option('sidebars_widgets',NULL);
+            header("Location: themes.php?page=theme-options.php&resetwidgets=true");
             die;
+        } else if ( 'createdefinitions' == $_REQUEST['action']) {
+			$filename = STYLESHEETPATH . '/settings/';
+			if (!file_exists($filename)) {
+				$handle = mkdir(STYLESHEETPATH . '/settings', 0755);
+				if (!$handle) {
+            		header("Location: themes.php?page=theme-options.php&directoryfailed=true");
+					die;
+				}  
+			}
+        	$filename = STYLESHEETPATH . '/settings/definitions.php';
+			$content = 'DEFINE(\'BLOGINFO_NAME\', \'' . get_bloginfo('name') . '\');';
+ 			$handle = fopen($filename, 'w');
+			if (!$handle) {
+            	header("Location: themes.php?page=theme-options.php&filefailed=true");
+					die;
+			}  
+			fwrite($handle, '<?php' . "\n");
+			fwrite($handle, $content . "\n");
+			fwrite($handle, '?>' . "\n");
+			fclose($handle);
+            header("Location: themes.php?page=theme-options.php&createdefinitions=true");
+			die;
         }
     }
 
@@ -75,7 +96,10 @@ function mytheme_admin() {
 
     if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings saved.','thematic').'</strong></p></div>';
     if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings reset.','thematic').'</strong></p></div>';
-    if ( $_REQUEST['reset_widgets'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('widgets reset.','thematic').'</strong></p></div>';
+    if ( $_REQUEST['resetwidgets'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('widgets reset.','thematic').'</strong></p></div>';
+    if ( $_REQUEST['createdefinitions'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('definitions created.','thematic').'</strong></p></div>';
+    if ( $_REQUEST['directoryfailed'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('failed to create directory:','thematic').' '.STYLESHEETPATH . '/settings/'.'</strong></p></div>';
+    if ( $_REQUEST['filefailed'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('failed to create the file:','thematic').' '.STYLESHEETPATH . '/settings/settings.php'.'</strong></p></div>';
     
 ?>
 <div class="wrap">
@@ -201,7 +225,13 @@ function mytheme_admin() {
 <form method="post" action="">
 	<p class="submit">
 		<input name="reset_widgets" type="submit" value="<?php _e('Reset Widgets','thematic'); ?>" />
-		<input type="hidden" name="action" value="reset_widgets" />
+		<input type="hidden" name="action" value="resetwidgets" />
+	</p>
+</form>
+<form method="post" action="">
+	<p class="submit">
+		<input name="create_definitions" type="submit" value="<?php _e('Create Definitions','thematic'); ?>" />
+		<input type="hidden" name="action" value="createdefinitions" />
 	</p>
 </form>
 
