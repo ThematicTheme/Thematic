@@ -162,7 +162,7 @@ function thematic_body_class( $print = true ) {
 	// Search classes for results or no results
 	elseif ( is_search() ) {
 		the_post();
-		if ( have_posts() ) {
+		if ( $wp_query->found_posts > 0 ) {
 			$c[] = 'search-results';
 		} else {
 			$c[] = 'search-no-results';
