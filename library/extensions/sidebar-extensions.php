@@ -24,6 +24,13 @@ function thematic_sidebar() {
 	function thematic_abovemainasides() {
 	    do_action('thematic_abovemainasides');
 	} // end thematic_abovemainasides
+
+
+	// Located in sidebar.php 
+	// regular hook for primary asides
+	function widget_area_primary_aside() {
+	    do_action('widget_area_primary_aside');
+	} // end widget_area_primary_aside
 	
 	
 	// Located in sidebar.php 
@@ -31,6 +38,13 @@ function thematic_sidebar() {
 	function thematic_betweenmainasides() {
 	    do_action('thematic_betweenmainasides');
 	} // end thematic_betweenmainasides
+
+
+	// Located in sidebar.php 
+	// regular hook for primary asides
+	function widget_area_secondary_aside() {
+	    do_action('widget_area_secondary_aside');
+	} // end widget_area_secondary_aside
 	
 	
 	// Located in sidebar.php 
@@ -48,6 +62,12 @@ function thematic_sidebar() {
 		do_action('thematic_aboveindextop');
 	} // end thematic_aboveindextop
 	
+
+	// Located in sidebar-index-top.php
+	function widget_area_index_top() {
+		do_action('widget_area_index_top');
+	} // end widget_area_index_top
+	
 	
 	// Located in sidebar-index-top.php
 	function thematic_belowindextop() {
@@ -60,6 +80,11 @@ function thematic_sidebar() {
 		do_action('thematic_aboveindexinsert');
 	} // end thematic_aboveindexinsert
 	
+	// ocated in sidebar-index-insert.php
+	function widget_area_index_insert() {
+		do_action('widget_area_index_insert');
+	} // end widget_area_index_insert
+	
 	
 	// Located in sidebar-index-insert.php
 	function thematic_belowindexinsert() {
@@ -71,6 +96,11 @@ function thematic_sidebar() {
 	function thematic_aboveindexbottom() {
 		do_action('thematic_aboveindexbottom');
 	} // end thematic_aboveindexbottom
+	
+	// Located in sidebar-index-bottom.php
+	function widget_area_index_bottom() {
+		do_action('widget_area_index_bottom');
+	} // end widget_area_index_bottom
 	
 	
 	// Located in sidebar-index-bottom.php
@@ -85,6 +115,12 @@ function thematic_sidebar() {
 	// Located in sidebar-single-top.php
 	function thematic_abovesingletop() {
 		do_action('thematic_abovesingletop');
+	} // end thematic_abovesingletop
+
+
+	// Located in sidebar-single-top.php
+	function widget_area_single_top() {
+		do_action('widget_area_single_top');
 	} // end thematic_abovesingletop
 	
 	
@@ -101,6 +137,12 @@ function thematic_sidebar() {
 	
 	
 	// Located in sidebar-single-insert.php
+	function widget_area_single_insert() {
+		do_action('widget_area_single_insert');
+	} // end thematic_abovesingleinsert
+	
+	
+	// Located in sidebar-single-insert.php
 	function thematic_belowsingleinsert() {
 		do_action('thematic_belowsingleinsert');
 	} // end thematic_belowsingleinsert	
@@ -110,6 +152,12 @@ function thematic_sidebar() {
 	function thematic_abovesinglebottom() {
 		do_action('thematic_abovesinglebottom');
 	} // end thematic_abovesinglebottom
+	
+
+	// Located in sidebar-single-bottom.php
+	function widget_area_single_bottom() {
+		do_action('widget_area_single_bottom');
+	} // end widget_area_single_bottom
 	
 	
 	// Located in sidebar-single-bottom.php
@@ -126,6 +174,12 @@ function thematic_sidebar() {
 	function thematic_abovepagetop() {
 		do_action('thematic_abovepagetop');
 	} // end thematic_abovepagetop
+
+
+	// Located in sidebar-page-top.php
+	function widget_area_page_top() {
+		do_action('widget_area_page_top');
+	} // end widget_area_page_top
 	
 	
 	// Located in sidebar-page-top.php
@@ -133,11 +187,18 @@ function thematic_sidebar() {
 		do_action('thematic_belowpagetop');
 	} // end thematic_belowpagetop
 
+
 	// Located in sidebar-page-bottom.php
 	function thematic_abovepagebottom() {
 		do_action('thematic_abovepagebottom');
 	} // end thematic_abovepagebottom
-	
+
+
+	// Located in sidebar-page-bottom.php
+	function widget_area_page_bottom() {
+		do_action('widget_area_page_bottom');
+	} // end widget_area_page_bottom
+
 	
 	// Located in sidebar-page-bottom.php
 	function thematic_belowpagebottom() {
@@ -168,15 +229,33 @@ function thematic_sidebar() {
 
 
 	// Located in sidebar-subsidiary.php
+	function widget_area_1st_subsidiary_aside() {
+		do_action('widget_area_1st_subsidiary_aside');
+	} // end widget_area_1st_subsidiary_aside
+
+
+	// Located in sidebar-subsidiary.php
 	function thematic_between_firstsecond_sub() {
 		do_action('thematic_between_firstsecond_sub');
 	} // end thematic_between_firstsecond_sub
 
 
 	// Located in sidebar-subsidiary.php
+	function widget_area_2nd_subsidiary_aside() {
+		do_action('widget_area_2nd_subsidiary_aside');
+	} // end widget_area_1st_subsidiary_aside
+
+
+	// Located in sidebar-subsidiary.php
 	function thematic_between_secondthird_sub() {
 		do_action('thematic_between_secondthird_sub');
 	} // end thematic_between_secondthird_sub
+
+
+	// Located in sidebar-subsidiary.php
+	function widget_area_3rd_subsidiary_aside() {
+		do_action('widget_area_3rd_subsidiary_aside');
+	} // end widget_area_1st_subsidiary_aside
 	
 	
 	// Located in sidebar-subsidiary.php
