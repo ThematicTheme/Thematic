@@ -20,8 +20,8 @@ function thmfooter_login_link() {
 }
 add_shortcode('loginout-link', 'thmfooter_login_link');		  	  
 
-function thmfooter_blog_title() {   
-    return '<span class="blog-title">' . get_bloginfo('name') . '</span>';
+function thmfooter_blog_title() {
+	return '<span class="blog-title">' . thm_bloginfo('name', FALSE) . '</span>';
 }
 add_shortcode('blog-title', 'thmfooter_blog_title');
 

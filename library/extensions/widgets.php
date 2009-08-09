@@ -22,6 +22,16 @@ function is_sidebar_active( $index ){
 	return false;
 }
 
+function thematic_before_widget() {
+	$content = '<li id="%1$s" class="widgetcontainer %2$s">';
+	return apply_filters('thematic_before_widget', $content);
+}
+
+function thematic_after_widget() {
+	$content = '</li>';
+	return apply_filters('thematic_after_widget', $content);
+}
+
 function thematic_before_title() {
 	$content = "<h3 class=\"widgettitle\">";
 	return apply_filters('thematic_before_title', $content);
@@ -70,8 +80,8 @@ function widget_thematic_rsslinks($args) {
 		<?php echo $before_widget; ?>
 			<?php echo thematic_before_title() . $title . thematic_after_title(); ?>
 			<ul>
-				<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>
-				<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(bloginfo('name'), 1) ?> <?php _e('Comments RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'thematic') ?></a></li>
+				<li><a href="<?php thm_bloginfo('rss2_url', TRUE) ?>" title="<?php echo wp_specialchars(thm_bloginfo('name', FALSE), 1) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>
+				<li><a href="<?php thm_bloginfo('comments_rss2_url', TRUE) ?>" title="<?php echo wp_specialchars(thm_bloginfo('name', FALSE), 1) ?> <?php _e('Comments RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'thematic') ?></a></li>
 			</ul>
 		<?php echo $after_widget; ?>
 <?php
@@ -101,134 +111,43 @@ function thematic_widgets_init() {
 
 	// Register Widgetized areas.
 	// Area 1
-    register_sidebar(array(
-       	'name' => 'Primary Aside',
-       	'id' => 'primary-aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));
+	thematic_create_widget_area('Primary Aside', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_primary_aside');
 
 	// Area 2
-    register_sidebar(array(
-       	'name' => 'Secondary Aside',
-       	'id' => 'secondary-aside', 
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));
+    thematic_create_widget_area('Secondary Aside', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_secondary_aside');
 
 	// Area 3
-    register_sidebar(array(
-       	'name' => '1st Subsidiary Aside',
-       	'id' => '1st-subsidiary-aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
+    thematic_create_widget_area('1st Subsidiary Aside', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_1st_subsidiary_aside');
 
 	// Area 4
-    register_sidebar(array(
-       	'name' => '2nd Subsidiary Aside',
-       	'id' => '2nd-subsidiary-aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
+    thematic_create_widget_area('2nd Subsidiary Aside', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_2nd_subsidiary_aside');  
    
 	// Area 5
-    register_sidebar(array(
-       	'name' => '3rd Subsidiary Aside',
-       	'id' => '3rd-subsidiary-aside',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
+    thematic_create_widget_area('3rd Subsidiary Aside', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_3rd_subsidiary_aside');  
 
 	// Area 6
-    register_sidebar(array(
-       	'name' => 'Index Top',
-       	'id' => 'index-top',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
+    thematic_create_widget_area('Index Top', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_index_top');  
 
 	// Area 7
-    register_sidebar(array(
-       	'name' => 'Index Insert',
-       	'id' => 'index-insert',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));
+    thematic_create_widget_area('Index Insert', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_index_insert');
 
 	// Area 8
-    register_sidebar(array(
-       	'name' => 'Index Bottom',
-       	'id' => 'index-bottom',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
+    thematic_create_widget_area('Index Bottom', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_index_bottom');      
 
 	// Area 9
-    register_sidebar(array(
-       	'name' => 'Single Top',
-       	'id' => 'single-top',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));  
+    thematic_create_widget_area('Single Top', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_single_top');  
 
 	// Area 10
-    register_sidebar(array(
-       	'name' => 'Single Insert',
-       	'id' => 'single-insert',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
+    thematic_create_widget_area('Single Insert', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_single_insert');      
     
 	// Area 11
-    register_sidebar(array(
-       	'name' => 'Single Bottom',
-       	'id' => 'single-bottom',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
+    thematic_create_widget_area('Single Bottom', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_single_bottom');      
       
 	// Area 12
-    register_sidebar(array(
-       	'name' => 'Page Top',
-       	'id' => 'page-top',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
+    thematic_create_widget_area('Page Top', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_page_top');      
    
 	// Area 13
-    register_sidebar(array(
-       	'name' => 'Page Bottom',
-       	'id' => 'page-bottom',
-       	'before_widget' => '<li id="%1$s" class="widgetcontainer %2$s">',
-       	'after_widget' => "</li>",
-		'before_title' => thematic_before_title(),
-		'after_title' => thematic_after_title(),
-    ));      
+    thematic_create_widget_area('Page Bottom', thematic_before_widget(), thematic_after_widget(), thematic_before_title(), thematic_after_title(), 'widget_area_page_bottom');      
 	  
     // we will check for a Thematic widgets directory and and add and activate additional widgets
     // Thanks to Joern Kretzschmar

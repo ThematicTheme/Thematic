@@ -28,6 +28,14 @@ define('TEMPLATEVERSION', $templateversion);
 // load jQuery
 wp_enqueue_script('jquery');
 
+// Check if settings.php is available and load it
+if (file_exists(STYLESHEETPATH . '/settings/definitions.php')) {
+	define('THEMATIC_SETTINGS', TRUE);
+	require_once(STYLESHEETPATH . '/settings/definitions.php');
+} else {
+	define('THEMATIC_SETTINGS', FALSE);
+}
+
 // Path constants
 define('THEMELIB', TEMPLATEPATH . '/library');
 

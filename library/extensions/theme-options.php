@@ -71,7 +71,33 @@ function mytheme_add_admin() {
 				}  
 			}
         	$filename = STYLESHEETPATH . '/settings/definitions.php';
-			$content = 'DEFINE(\'BLOGINFO_NAME\', \'' . get_bloginfo('name') . '\');';
+        	$content = 'if(preg_match(\'#\' . basename(__FILE__) . \'#\', $_SERVER[\'PHP_SELF\'])) { die(\'You are not allowed to call this page directly.\'); }' . "\n";
+			$content .= '$thm_settings = array (' . "\n";
+			$content .= '						\'url\' => "' . get_bloginfo('url') . '",' . "\n";
+			$content .= '						\'home\' => "' . get_bloginfo('home') . '",' . "\n";
+			$content .= '						\'siteurl\' => "' . get_bloginfo('siteurl') . '",' . "\n";
+			$content .= '						\'wpurl\' => "' . get_bloginfo('wpurl') . '",' . "\n";
+			$content .= '						\'description\' => "' . get_bloginfo('description') . '",' . "\n";
+			$content .= '						\'rdf_url\' => "' . get_bloginfo('rdf_url') . '",' . "\n";
+			$content .= '						\'rss_url\' => "' . get_bloginfo('rss_url') . '",' . "\n";
+			$content .= '						\'rss2_url\' => "' . get_bloginfo('rss2_url') . '",' . "\n";
+			$content .= '						\'atom_url\' => "' . get_bloginfo('atom_url') . '",' . "\n";
+			$content .= '						\'comments_atom_url\' => "' . get_bloginfo('comments_atom_url') . '",' . "\n";
+			$content .= '						\'comments_rss2_url\' => "' . get_bloginfo('comments_rss2_url') . '",' . "\n";
+			$content .= '						\'pingback_url\' => "' . get_bloginfo('pingback_url') . '",' . "\n";
+			$content .= '						\'stylesheet_url\' => "' . get_bloginfo('stylesheet_url') . '",' . "\n";
+			$content .= '						\'stylesheet_directory\' => "' . get_bloginfo('stylesheet_directory') . '",' . "\n";
+			$content .= '						\'template_directory\' => "' . get_bloginfo('template_directory') . '",' . "\n";
+			$content .= '						\'template_url\' => "' . get_bloginfo('template_url') . '",' . "\n";
+			$content .= '						\'admin_email\' => "' . get_bloginfo('admin_email') . '",' . "\n";
+			$content .= '						\'charset\' => "' . get_bloginfo('charset') . '",' . "\n";
+			$content .= '						\'html_type\' => "' . get_bloginfo('html_type') . '",' . "\n";
+			$content .= '						\'version\' => "' . get_bloginfo('version') . '",' . "\n";
+			$content .= '						\'language\' => "' . get_bloginfo('language') . '",' . "\n";
+			$content .= '						\'text_direction\' => "' . get_bloginfo('text_direction') . '",' . "\n";
+			$content .= '						\'name\' => "' . get_bloginfo('name') . '",' . "\n";
+
+			$content .= ');' . "\n";
  			$handle = fopen($filename, 'w');
 			if (!$handle) {
             	header("Location: themes.php?page=theme-options.php&filefailed=true");

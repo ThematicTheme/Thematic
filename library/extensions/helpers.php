@@ -78,4 +78,25 @@ function thematic_tag_query() {
 	 return $nice_tag_query;
 }
 
+// the faster edition of get_boginfo if definitions.php exists
+function thm_bloginfo($command = '', $echo = FALSE) {
+	global $thm_settings;
+	if (THEMATIC_SETTINGS) {
+		if ($command == '') {
+			$command = 'name';
+		}
+		if ($echo) {
+			echo $thm_settings[$command];
+		} else {
+			return $thm_settings[$command];
+		}
+	} else {
+		if ($echo) {
+			bloginfo($command);
+		} else {
+			return get_bloginfo($command);
+		}
+	}
+} 
+
 ?>
