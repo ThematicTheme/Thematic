@@ -119,6 +119,7 @@ function thematic_below_tagloop() {
 // Filter the page title
 // located in archive.php, attachement.php, author.php, category.php, search.php, tag.php
 function thematic_page_title() {
+		global $post;
 		$content = '';
 		if (is_attachment()) {
 				$content .= '<h2 class="page-title"><a href="';
