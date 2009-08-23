@@ -2,13 +2,14 @@
 
 // Pre-set Widgets
 $preset_widgets = array (
-	'primary-aside'  => array( 'search', 'pages', 'categories', 'archives' ),
-	'secondary-aside'  => array( 'links', 'RSS Links', 'meta' )
+	'primary-aside'  => array( 'search', 'pages-2', 'categories-2', 'archives-2' ),
+	'secondary-aside'  => array( 'links-2', 'rss-links', 'meta' )
 );
-if ( isset( $_GET['activated'] ) ) {
-	update_option( 'sidebars_widgets', $preset_widgets );
-}
 
+if ( isset( $_GET['activated'] ) ) {
+	update_option( 'sidebars_widgets', apply_filters('thematic_preset_widgets',$preset_widgets ));
+}
+	
 
 // Check for static widgets in widget-ready areas
 
