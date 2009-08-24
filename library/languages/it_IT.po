@@ -120,7 +120,7 @@ msgstr "Trova"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:132
 msgid "Author Archives: "
-msgstr "Archivio dell'Autore: "
+msgstr "Archivio dell' Autore: "
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:138
 msgid "Category Archives:"
@@ -191,7 +191,7 @@ msgstr "Pubblicato: "
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:457
 msgid "Archives by Category"
-msgstr "Archivo per Categorie"
+msgstr "Archivio per Categorie"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:468
 msgid "Archives by Month"
@@ -361,7 +361,7 @@ msgstr "La widget INDEX INSERT apparirà dopo il numero di articoli qui indicato
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:19
 msgid "Info on Author Page"
-msgstr "Info sull'Autore della Pagina"
+msgstr "Informazioni sull'Autore della Pagina"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:20
 msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
