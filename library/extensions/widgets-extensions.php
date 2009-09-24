@@ -1,4 +1,5 @@
 <?php
+
 function thematic_search_form() {
 				$search_form = "\n" . "\t";
 				$search_form .= '<form id="searchform" method="get" action="' . thm_bloginfo('home', FALSE) .'">';
@@ -28,55 +29,355 @@ function thematic_search_form() {
 
 }
 
-// Easy creation of widget areas
-// Credits:   Nathan Rice
-// Additions: Chris Gossmann
+// Widgets plugin: intializes the plugin after the widgets above have passed snuff
 
-function thematic_create_widget_area($sidebar_name, $before_widget = null, $after_widget = NULL, $before_title = null, $after_title = NULL, $action_hook, $function = 'thematic_standard_widget_area', $priority = 10) {
+function thematic_widgets_init() {
 
-	// if $sidebar_name is empty we will stop any further processing
-	if ($sidebar_name == NULL) {
-		return;
-	}
+	// Define array for the widgetized areas
+	$thematic_widgetized_areas = array(
+		'Primary Aside' => array(
+			'args' => array (
+				'name' => 'Primary Aside',
+				'id' => 'primary-aside',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_primary_aside',
+			'function'		=> 'thematic_primary_aside',
+			'priority'		=> 10,
+			),
+		'Secondary Aside' => array(
+			'args' => array (
+				'name' => 'Secondary Aside',
+				'id' => 'secondary-aside',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_secondary_aside',
+			'function'		=> 'thematic_secondary_aside',
+			'priority'		=> 10,
+			),
+		'1st Subsidiary Aside' => array(
+			'args' => array (
+				'name' => '1st Subsidiary Aside',
+				'id' => '1st-subsidiary-aside',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_1st_subsidiary_aside',
+			'function'		=> 'thematic_1st_subsidiary_aside',
+			'priority'		=> 10,
+			),
+		'2nd Subsidiary Aside' => array(
+			'args' => array (
+				'name' => '2nd Subsidiary Aside',
+				'id' => '2nd-subsidiary-aside',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_2nd_subsidiary_aside',
+			'function'		=> 'thematic_2nd_subsidiary_aside',
+			'priority'		=> 10,
+			),
+		'3rd Subsidiary Aside' => array(
+			'args' => array (
+				'name' => '3rd Subsidiary Aside',
+				'id' => '3rd-subsidiary-aside',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_3rd_subsidiary_aside',
+			'function'		=> 'thematic_3rd_subsidiary_aside',
+			'priority'		=> 10,
+		),
+		'Index Top' => array(
+			'args' => array (
+				'name' => 'Index Top',
+				'id' => 'index-top',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_index_top',
+			'function'		=> 'thematic_index_top',
+			'priority'		=> 10,
+			),
+		'Index Insert' => array(
+			'args' => array (
+				'name' => 'Index Insert',
+				'id' => 'index-insert',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_index_insert',
+			'function'		=> 'thematic_index_insert',
+			'priority'		=> 10,
+			),
+		'Index Bottom' => array(
+			'args' => array (
+				'name' => 'Index Bottom',
+				'id' => 'index-bottom',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_index_bottom',
+			'function'		=> 'thematic_index_bottom',
+			'priority'		=> 10,
+			),
+		'Single Top' => array(
+			'args' => array (
+				'name' => 'Single Top',
+				'id' => 'single-top',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_single_top',
+			'function'		=> 'thematic_single_top',
+			'priority'		=> 10,
+			),
+		'Single Insert' => array(
+			'args' => array (
+				'name' => 'Single Insert',
+				'id' => 'single-insert',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_single_insert',
+			'function'		=> 'thematic_single_insert',
+			'priority'		=> 10,
+			),
+		'Single Bottom' => array(
+			'args' => array (
+				'name' => 'Single Bottom',
+				'id' => 'single-bottom',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_single_bottom',
+			'function'		=> 'thematic_single_bottom',
+			'priority'		=> 10,
+			),
+		'Page Top' => array(
+			'args' => array (
+				'name' => 'Page Top',
+				'id' => 'page-top',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_page_top',
+			'function'		=> 'thematic_page_top',
+			'priority'		=> 10,
+			),
+		'Page Bottom' => array(
+			'args' => array (
+				'name' => 'Page Bottom',
+				'id' => 'page-bottom',
+				'before_widget' => thematic_before_widget(),
+				'after_widget' => thematic_after_widget(),
+				'before_title' => thematic_before_title(),
+				'after_title' => thematic_after_title(),
+				),
+			'action_hook'	=> 'widget_area_page_bottom',
+			'function'		=> 'thematic_page_bottom',
+			'priority'		=> 10,
+			),
+		);
 	
-	// if $before_widget is empty we assign the default value
-	if ($before_widget == NULL) {
-		$before_widget = thematic_before_widget();
-	}
+	$thematic_widgetized_areas = apply_filters('thematic_widgetized_areas', $thematic_widgetized_areas);
 	
-	// if $after_widget is empty we assign the default value
-	if ($after_widget == NULL) {
-		$after_widget = thematic_after_widget();
+	if ( !function_exists('register_sidebars') )
+			return;
+
+	foreach ($thematic_widgetized_areas as $key => $value) {
+		register_sidebar($thematic_widgetized_areas[$key]['args']);
+		if (!has_action($thematic_widgetized_areas[$key]['action_hook'], $thematic_widgetized_areas[$key]['function'])) {
+			add_action($thematic_widgetized_areas[$key]['action_hook'], $thematic_widgetized_areas[$key]['function'], $thematic_widgetized_areas[$key]['priority']);	
+		}
 	}
-	
-	// if $before_title is empty we assign the default value
-	if ($before_title == NULL) {
-		$before_title = thematic_before_title();
+	  
+    // we will check for a Thematic widgets directory and and add and activate additional widgets
+    // Thanks to Joern Kretzschmar
+	  $widgets_dir = @ dir(ABSPATH . '/wp-content/themes/' . get_template() . '/widgets');
+	  if ($widgets_dir)	{
+		  while(($widgetFile = $widgets_dir->read()) !== false) {
+			 if (!preg_match('|^\.+$|', $widgetFile) && preg_match('|\.php$|', $widgetFile))
+				  include(ABSPATH . '/wp-content/themes/' . get_template() . '/widgets/' . $widgetFile);
+		  }
+	  }
+
+	  // we will check for the child themes widgets directory and add and activate additional widgets
+    // Thanks to Joern Kretzschmar 
+	  $widgets_dir = @ dir(ABSPATH . '/wp-content/themes/' . get_stylesheet() . '/widgets');
+	  if ((TEMPLATENAME != THEMENAME) && ($widgets_dir)) {
+		  while(($widgetFile = $widgets_dir->read()) !== false) {
+			 if (!preg_match('|^\.+$|', $widgetFile) && preg_match('|\.php$|', $widgetFile))
+				  include(ABSPATH . '/wp-content/themes/' . get_stylesheet() . '/widgets/' . $widgetFile);
+		  }
+	  }   
+   
+	// Finished intializing Widgets plugin, now let's load the thematic default widgets
+	register_sidebar_widget(__('Search', 'thematic'), 'widget_thematic_search', null, 'search');
+	unregister_widget_control('search');
+	register_sidebar_widget(__('Meta', 'thematic'), 'widget_thematic_meta', null, 'meta');
+	unregister_widget_control('meta');
+	register_sidebar_widget(array(__('RSS Links', 'thematic'), 'widgets'), 'widget_thematic_rsslinks');
+	register_widget_control(array(__('RSS Links', 'thematic'), 'widgets'), 'widget_thematic_rsslinks_control', 300, 90);
+
+	// Pre-set Widgets
+	$preset_widgets = array (
+		'primary-aside'  => array( 'search', 'pages-2', 'categories-2', 'archives-2' ),
+		'secondary-aside'  => array( 'links-2', 'rss-links', 'meta' )
+		);
+
+	if ( isset( $_GET['activated'] ) ) {
+		update_option( 'sidebars_widgets', apply_filters('thematic_preset_widgets',$preset_widgets ));
 	}
 
-	// if $after_title is empty we assign the default value
-	if ($after_title == NULL) {
-		$after_title = thematic_after_title();
-	}
-	
-	// now we register our new widget area
-	register_sidebar(array(
-       	'name' => $sidebar_name,
-       	'id' => strtolower(str_replace(' ', '-', $sidebar_name)),
-       	'before_widget' => $before_widget,
-       	'after_widget' => $after_widget,
-		'before_title' => $before_title,
-		'after_title' => $after_title,
-    ));
-    
-    add_action($action_hook, $function, $priority);
 }
 
-// this wil transform the content of $hook into the ID of the widget area
-function thematic_process_hook($hook) {
-	$hook = str_replace('widget_area_','', $hook);
-	$hook = str_replace('_', '-', $hook);
-	return apply_filters('thematic_process_hook', $hook);	
+// Runs our code at the end to check that everything needed has loaded
+add_action( 'init', 'thematic_widgets_init' );
+
+// We start our functions for the widgetized areas here
+
+// Define the Primary Aside 
+function thematic_primary_aside() {
+	if (is_sidebar_active('primary-aside')) {
+		echo thematic_before_widget_area('primary-aside');
+		dynamic_sidebar('primary-aside');
+		echo thematic_after_widget_area('primary-aside');
+	}
+}
+
+// Define the Secondary Aside
+function thematic_secondary_aside() {
+	if (is_sidebar_active('secondary-aside')) {
+		echo thematic_before_widget_area('secondary-aside');
+		dynamic_sidebar('secondary-aside');
+		echo thematic_after_widget_area('secondary-aside');
+	}
+}
+
+// Define the 1st Subsidiary Aside
+function thematic_1st_subsidiary_aside() {
+	if (is_sidebar_active('1st-subsidiary-aside')) {
+		echo thematic_before_widget_area('1st-subsidiary-aside');
+		dynamic_sidebar('1st-subsidiary-aside');
+		echo thematic_after_widget_area('1st-subsidiary-aside');
+	}
+}
+
+// Define the 2nd Subsidiary Aside
+function thematic_2nd_subsidiary_aside() {
+	if (is_sidebar_active('2nd-subsidiary-aside')) {
+		echo thematic_before_widget_area('2nd-subsidiary-aside');
+		dynamic_sidebar('2nd-subsidiary-aside');
+		echo thematic_after_widget_area('2nd-subsidiary-aside');
+	}
+}
+
+// Define the 3rd Subsidiary Aside
+function thematic_3rd_subsidiary_aside() {
+	if (is_sidebar_active('3rd-subsidiary-aside')) {
+		echo thematic_before_widget_area('3rd-subsidiary-aside');
+		dynamic_sidebar('3rd-subsidiary-aside');
+		echo thematic_after_widget_area('3rd-subsidiary-aside');
+	}
+}
+
+// Define the Index Top
+function thematic_index_top() {
+	if (is_sidebar_active('index-top')) {
+		echo thematic_before_widget_area('index-top');
+		dynamic_sidebar('index-top');
+		echo thematic_after_widget_area('index-top');
+	}
+}
+
+// Define the Index Insert
+function thematic_index_insert() {
+	if (is_sidebar_active('index-insert')) {
+		echo thematic_before_widget_area('index-insert');
+		dynamic_sidebar('index-insert');
+		echo thematic_after_widget_area('index-insert');
+	}
+}
+
+// Define the Index Bottom
+function thematic_index_bottom() {
+	if (is_sidebar_active('index-bottom')) {
+		echo thematic_before_widget_area('index-bottom');
+		dynamic_sidebar('index-bottom');
+		echo thematic_after_widget_area('index-bottom');
+	}
+}
+
+// Define the Single Top
+function thematic_single_top() {
+	if (is_sidebar_active('single-top')) {
+		echo thematic_before_widget_area('single-top');
+		dynamic_sidebar('single-top');
+		echo thematic_after_widget_area('single-top');
+	}
+}
+
+// Define the Single Insert
+function thematic_single_insert() {
+	if (is_sidebar_active('single-insert')) {
+		echo thematic_before_widget_area('single-insert');
+		dynamic_sidebar('single-insert');
+		echo thematic_after_widget_area('single-insert');
+	}
+}
+
+// Define the Single Bottom
+function thematic_single_bottom() {
+	if (is_sidebar_active('single-bottom')) {
+		echo thematic_before_widget_area('single-bottom');
+		dynamic_sidebar('single-bottom');
+		echo thematic_after_widget_area('single-bottom');
+	}
+}
+
+// Define the Page Top
+function thematic_page_top() {
+	if (is_sidebar_active('page-top')) {
+		echo thematic_before_widget_area('page-top');
+		dynamic_sidebar('page-top');
+		echo thematic_after_widget_area('page-top');
+	}
+}
+
+// Define the Page Bottom
+function thematic_page_bottom() {
+	if (is_sidebar_active('page-bottom')) {
+		echo thematic_before_widget_area('page-bottom');
+		dynamic_sidebar('page-bottom');
+		echo thematic_after_widget_area('page-bottom');
+	}
 }
 
 // this function returns the opening CSS markup for the widget area 
@@ -118,14 +419,4 @@ function thematic_after_widget_area($hook) {
 	return apply_filters('thematic_after_widget_area', $content);
 }
 
-// this is our standard function for a widget area
-function thematic_standard_widget_area() {
-	$hook = current_filter();
-	$hook = thematic_process_hook($hook);
-	if (is_sidebar_active($hook)) {
-		echo thematic_before_widget_area($hook);
-		dynamic_sidebar($hook);
-		echo thematic_after_widget_area($hook);
-	}
-}
 ?>
