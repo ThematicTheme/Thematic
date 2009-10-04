@@ -36,6 +36,7 @@ function thematic_widgets_init() {
 	// Define array for the widgetized areas
 	$thematic_widgetized_areas = array(
 		'Primary Aside' => array(
+			'admin_menu_order' => 100,
 			'args' => array (
 				'name' => 'Primary Aside',
 				'id' => 'primary-aside',
@@ -49,6 +50,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'Secondary Aside' => array(
+			'admin_menu_order' => 200,
 			'args' => array (
 				'name' => 'Secondary Aside',
 				'id' => 'secondary-aside',
@@ -62,6 +64,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'1st Subsidiary Aside' => array(
+			'admin_menu_order' => 300,
 			'args' => array (
 				'name' => '1st Subsidiary Aside',
 				'id' => '1st-subsidiary-aside',
@@ -75,6 +78,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'2nd Subsidiary Aside' => array(
+			'admin_menu_order' => 400,
 			'args' => array (
 				'name' => '2nd Subsidiary Aside',
 				'id' => '2nd-subsidiary-aside',
@@ -88,6 +92,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'3rd Subsidiary Aside' => array(
+			'admin_menu_order' => 500,
 			'args' => array (
 				'name' => '3rd Subsidiary Aside',
 				'id' => '3rd-subsidiary-aside',
@@ -101,6 +106,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 		),
 		'Index Top' => array(
+			'admin_menu_order' => 600,
 			'args' => array (
 				'name' => 'Index Top',
 				'id' => 'index-top',
@@ -114,6 +120,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'Index Insert' => array(
+			'admin_menu_order' => 700,
 			'args' => array (
 				'name' => 'Index Insert',
 				'id' => 'index-insert',
@@ -127,6 +134,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'Index Bottom' => array(
+			'admin_menu_order' => 800,
 			'args' => array (
 				'name' => 'Index Bottom',
 				'id' => 'index-bottom',
@@ -140,6 +148,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'Single Top' => array(
+			'admin_menu_order' => 900,
 			'args' => array (
 				'name' => 'Single Top',
 				'id' => 'single-top',
@@ -153,6 +162,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'Single Insert' => array(
+			'admin_menu_order' => 1000,
 			'args' => array (
 				'name' => 'Single Insert',
 				'id' => 'single-insert',
@@ -166,6 +176,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'Single Bottom' => array(
+			'admin_menu_order' => 1100,
 			'args' => array (
 				'name' => 'Single Bottom',
 				'id' => 'single-bottom',
@@ -179,6 +190,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'Page Top' => array(
+			'admin_menu_order' => 1200,
 			'args' => array (
 				'name' => 'Page Top',
 				'id' => 'page-top',
@@ -192,6 +204,7 @@ function thematic_widgets_init() {
 			'priority'		=> 10,
 			),
 		'Page Bottom' => array(
+			'admin_menu_order' => 1300,
 			'args' => array (
 				'name' => 'Page Bottom',
 				'id' => 'page-bottom',
@@ -260,6 +273,13 @@ function thematic_widgets_init() {
 
 // Runs our code at the end to check that everything needed has loaded
 add_action( 'init', 'thematic_widgets_init' );
+
+// We sort our array of widgetized areas to get a nice list display under wp-admin
+function thematic_sort_widgetized_areas($content) {
+	asort($content);
+	return $content;
+}
+add_filter('thematic_widgetized_areas', 'thematic_sort_widgetized_areas', 100);
 
 // We start our functions for the widgetized areas here
 
