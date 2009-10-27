@@ -70,6 +70,19 @@ function thematic_belowcomments() {
     do_action('thematic_belowcomments');
 }
 
+// Located in comments.php
+// Creates the standard text for one comment
+function thematic_singlecomment_text() {
+    $content = '<span>One</span> Comment';
+    return apply_filters(thematic_singlecomment_text, $content);
+}
+
+// Located in comments.php
+// Creates the standard text for more than one comment
+function thematic_multiplecomments_text() {
+    $content = '<span>%d</span> Comments';
+    return apply_filters(thematic_multiplecomments_text, $content);
+}
 
 // creates the list comments arguments
 function list_comments_arg() {
@@ -77,6 +90,33 @@ function list_comments_arg() {
 	return apply_filters('list_comments_arg', $content);
 }
 
+// Located in comments.php
+// Creates the standard text 'Post a Comment'
+function thematic_postcomment_text() {
+    $content = 'Post a Comment';
+    return apply_filters(thematic_postcomment_text, $content);
+}
+
+// Located in comments.php
+// Creates the standard text 'Post a Reply to %s'
+function thematic_postreply_text() {
+    $content = 'Post a Reply to %s';
+    return apply_filters(thematic_postreply_text, $content);
+}
+
+// Located in comments.php
+// Creates the standard text 'Comment' for the text box
+function thematic_commentbox_text() {
+    $content = 'Comment';
+    return apply_filters(thematic_commentbox_text, $content);
+}
+
+// Located in comments.php
+// Creates the standard text 'Post Comment' for the send button
+function thematic_commentbutton_text() {
+    $content = 'Post Comment';
+    return apply_filters(thematic_commentbutton_text, $content);
+}
 
 // Produces an avatar image with the hCard-compliant photo class
 function thematic_commenter_link() {

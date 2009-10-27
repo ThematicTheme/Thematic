@@ -28,7 +28,7 @@ foreach ( $comments as $comment )
 <?php thematic_abovecommentslist() ?>
 
 				<div id="comments-list" class="comments">
-					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'thematic') : __('<span>One</span> Comment', 'thematic'), $comment_count) ?></h3>
+					<h3><?php printf($comment_count > 1 ? __(thematic_multiplecomments_text(), 'thematic') : __(thematic_singlecomment_text(), 'thematic'), $comment_count) ?></h3>
 				
 					<ol>
 <?php wp_list_comments(list_comments_arg()); ?>
@@ -64,7 +64,7 @@ foreach ( $comments as $comment )
 
 <?php if ( 'open' == $post->comment_status ) : ?>
 				<div id="respond">
-    				<h3><?php comment_form_title( __('Post a Comment', 'thematic'), __('Post a Reply to %s', 'thematic') ); ?></h3>
+    				<h3><?php comment_form_title( __(thematic_postcomment_text(), 'thematic'), __(thematic_postreply_text(), 'thematic') ); ?></h3>
     				
     				<div id="cancel-comment-reply"><?php cancel_comment_reply_link() ?></div>
 
@@ -107,7 +107,7 @@ foreach ( $comments as $comment )
 <?php endif /* if ( $user_ID ) */ ?>
 
                             <div id="form-section-comment" class="form-section">
-    							<div class="form-label"><label for="comment"><?php _e('Comment', 'thematic') ?></label></div>
+    							<div class="form-label"><label for="comment"><?php _e(thematic_commentbox_text(), 'thematic') ?></label></div>
     							<div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
                             </div><!-- #form-section-comment .form-section -->
                             
@@ -117,7 +117,7 @@ foreach ( $comments as $comment )
 							
                   <?php do_action('comment_form', $post->ID); ?>
                   
-							<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php _e('Post Comment', 'thematic') ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
+							<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php _e(thematic_commentbutton_text(), 'thematic') ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
 
                             <?php comment_id_fields(); ?>    
 
