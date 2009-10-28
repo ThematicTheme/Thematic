@@ -198,6 +198,7 @@ function thematic_show_description() {
 
 // create meta-tag robots
 function thematic_create_robots() {
+        global $paged;
 		if (thematic_seo()) {
     		$content = "\t";
     		if((is_home() && ($paged < 2 )) || is_front_page() || is_single() || is_page() || is_attachment()) {
