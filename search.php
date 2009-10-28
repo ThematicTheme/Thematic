@@ -5,8 +5,13 @@ foreach ($options as $value) {
     else { $$value['id'] = get_option( $value['id'] ); }
     }
 ?>
-<?php get_header() ?>
+<?php
 
+get_header();
+
+thematic_container_above();
+
+?>
 	<div id="container">
 		<div id="content">
 

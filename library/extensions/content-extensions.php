@@ -1,5 +1,12 @@
 <?php
 
+// Located in 404.php, archive.php, archives.php, attachement.php, author.php, category.php index.php, 
+// links.php, page.php, search.php, single.php, tag.php
+// Just between #main and #container
+function thematic_container_above() {
+    do_action('thematic_container_above');
+} // end thematic_container_above
+
 // Located in archives.php
 // Just after the content
 function thematic_archives() {

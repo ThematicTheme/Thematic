@@ -1,5 +1,11 @@
 <?php @header("HTTP/1.1 404 Not found", TRUE, 404); ?>
-<?php get_header() ?>
+<?php
+
+get_header();
+
+thematic_container_above();
+
+?>
 
 	<div id="container">
 		<div id="content">
