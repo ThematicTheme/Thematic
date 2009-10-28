@@ -393,7 +393,7 @@ function thematic_postheader() {
     $postmeta = '<div class="entry-meta">';
     $postmeta .= '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
     $postmeta .= '<span class="author vcard">'. '<a class="url fn n" href="';
-    $postmeta .= get_author_link(false, $authordata->ID, $authordata->user_nicename);
+    $postmeta .= get_author_posts_url($authordata->ID, $authordata->user_nicename);
     $postmeta .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
     $postmeta .= get_the_author();
     $postmeta .= '</a></span><span class="meta-sep meta-sep-entry-date"> | </span>';
