@@ -539,13 +539,13 @@ function thematic_postfooter() {
     global $id, $post;
 
     // Create $posteditlink    
-    $posteditlink .= '<span class="edit"><a href="' . thm_bloginfo('wpurl', FALSE) . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+    $posteditlink = '<span class="edit"><a href="' . thm_bloginfo('wpurl', FALSE) . '/wp-admin/post.php?action=edit&amp;post=' . $id;
     $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
     $posteditlink .= __('Edit', 'thematic') . '</a></span>';
     $posteditlink = apply_filters('thematic_postfooter_posteditlink',$posteditlink); 
     
     // Display the post categories  
-    $postcategory .= '<span class="cat-links">';
+    $postcategory = '<span class="cat-links">';
     if (is_single()) {
         $postcategory .= __('This entry was posted in ', 'thematic') . get_the_category_list(', ');
         $postcategory .= '</span>';
@@ -593,7 +593,7 @@ function thematic_postfooter() {
     $postcomments = apply_filters('thematic_postfooter_postcomments',$postcomments); 
     
     // Display permalink, comments link, and RSS on single posts
-    $postconnect .= __('. Bookmark the ', 'thematic') . '<a href="' . get_permalink() . '" title="' . __('Permalink to ', 'thematic') . the_title_attribute('echo=0') . '">';
+    $postconnect = __('. Bookmark the ', 'thematic') . '<a href="' . get_permalink() . '" title="' . __('Permalink to ', 'thematic') . the_title_attribute('echo=0') . '">';
     $postconnect .= __('permalink', 'thematic') . '</a>.';
     if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) { /* Comments are open */
         $postconnect .= ' <a class="comment-link" href="#respond" title ="' . __('Post a comment', 'thematic') . '">' . __('Post a comment', 'thematic') . '</a>';
