@@ -366,15 +366,33 @@ function thematic_time_display() {
 
 // Information in Post Header
 function thematic_postheader() {
-    global $id, $post, $authordata;
+
+    global $post;
+  
+    if ($post->post_type == 'page' || is_404()) {
+        $postheader = thematic_postheader_posttitle();        
+    } else {
+        $postheader = thematic_postheader_posttitle() . thematic_postheader_postmeta();    
+    }
     
-    // Create $posteditlink    
-    $posteditlink .= '<a href="' . thm_bloginfo('wpurl', FALSE) . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+    echo apply_filters( 'thematic_postheader', $postheader ); // Filter to override default post header
+} // end thematic_postheader
+
+// Create the post edit link
+function thematic_postheader_posteditlink() {
+    
+    global $id;
+    
+    $posteditlink = '<a href="' . thm_bloginfo('wpurl', FALSE) . '/wp-admin/post.php?action=edit&amp;post=' . $id;
     $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
     $posteditlink .= __('Edit', 'thematic') . '</a>';
-    $posteditlink = apply_filters('thematic_postheader_posteditlink',$posteditlink); 
+    return apply_filters('thematic_postheader_posteditlink',$posteditlink); 
 
-    
+} // end thematic_postheader_posteditlink
+
+// Create post title
+function thematic_postheader_posttitle() {
+
     if (is_single() || is_page()) {
         $posttitle = '<h1 class="entry-title">' . get_the_title() . "</h1>\n";
     } elseif (is_404()) {    
@@ -388,8 +406,15 @@ function thematic_postheader() {
         $posttitle .= get_the_title();   
         $posttitle .= "</a></h2>\n";
     }
-    $posttitle = apply_filters('thematic_postheader_posttitle',$posttitle); 
-    
+    return apply_filters('thematic_postheader_posttitle',$posttitle); 
+
+} // end thematic_postheader_posttitle
+
+// Create post meta
+function thematic_postheader_postmeta() {
+
+    global $authordata;
+
     $postmeta = '<div class="entry-meta">';
     $postmeta .= '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
     $postmeta .= '<span class="author vcard">'. '<a class="url fn n" href="';
@@ -404,21 +429,12 @@ function thematic_postheader() {
     $postmeta .= '</abbr></span>';
     // Display edit link
     if (current_user_can('edit_posts')) {
-        $postmeta .= ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . $posteditlink . '</span>';
+        $postmeta .= ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . thematic_postheader_posteditlink() . '</span>';
     }               
     $postmeta .= "</div><!-- .entry-meta -->\n";
-    $postmeta = apply_filters('thematic_postheader_postmeta',$postmeta); 
+    return apply_filters('thematic_postheader_postmeta',$postmeta); 
 
-    
-    if ($post->post_type == 'page' || is_404()) {
-        $postheader = $posttitle;        
-    } else {
-        $postheader = $posttitle . $postmeta;    
-    }
-    
-    echo apply_filters( 'thematic_postheader', $postheader ); // Filter to override default post header
-} // end thematic_postheader
-
+} // end thematic_postheader_postmeta
 
 //creates the content
 function thematic_content() {
