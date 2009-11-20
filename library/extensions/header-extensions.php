@@ -284,7 +284,7 @@ function thematic_show_pingback() {
         $content .= thm_bloginfo('pingback_url', FALSE);
         $content .= "\" />";
         $content .= "\n\n";
-        echo $content;
+        echo apply_filters('thematic_pingback_url',$content);
     }
 } // end thematic_show_pingback
 
