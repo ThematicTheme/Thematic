@@ -553,14 +553,46 @@ function list_bookmarks_args() {
 // Information in Post Footer
 function thematic_postfooter() {
     global $id, $post;
+    
+   // Display comments link and edit link
+    
+    // Display permalink, comments link, and RSS on single posts
+    
+    
+    // Add it all up
+    if ($post->post_type == 'page' && current_user_can('edit_posts')) { /* For logged-in "page" search results */
+        $postfooter = '<div class="entry-utility">' . '<span class="edit">' . thematic_postfooter_posteditlink() . '</span>';
+        $postfooter .= "</div><!-- .entry-utility -->\n";    
+    } elseif ($post->post_type == 'page') { /* For logged-out "page" search results */
+        $postfooter = '';
+    } else {
+        if (is_single()) {
+            $postfooter = '<div class="entry-utility">' . thematic_postfooter_postcategory() . thematic_postfooter_posttags() . thematic_postfooter_postconnect();
+        } else {
+            $postfooter = '<div class="entry-utility">' . thematic_postfooter_postcategory() . thematic_postfooter_posttags() . thematic_postfooter_postcomments();
+        }
+        $postfooter .= "</div><!-- .entry-utility -->\n";    
+    }
+    
+    // Put it on the screen
+    echo apply_filters( 'thematic_postfooter', $postfooter ); // Filter to override default post footer
+} // end thematic_postfooter
 
-    // Create $posteditlink    
+// Create the post edit link
+function thematic_postfooter_posteditlink() {
+
+    global $id;
+    
     $posteditlink = '<span class="edit"><a href="' . thm_bloginfo('wpurl', FALSE) . '/wp-admin/post.php?action=edit&amp;post=' . $id;
     $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
     $posteditlink .= __('Edit', 'thematic') . '</a></span>';
-    $posteditlink = apply_filters('thematic_postfooter_posteditlink',$posteditlink); 
+    return apply_filters('thematic_postfooter_posteditlink',$posteditlink); 
     
-    // Display the post categories  
+} // end thematic_postfooter_posteditlink
+
+// Create post category
+function thematic_postfooter_postcategory() {
+    
     $postcategory = '<span class="cat-links">';
     if (is_single()) {
         $postcategory .= __('This entry was posted in ', 'thematic') . get_the_category_list(', ');
@@ -572,9 +604,13 @@ function thematic_postfooter() {
         $postcategory .= __('Posted in ', 'thematic') . get_the_category_list(', ');
         $postcategory .= '</span> <span class="meta-sep meta-sep-tag-links">|</span>';
     }
-    $postcategory = apply_filters('thematic_postfooter_postcategory',$postcategory); 
+    return apply_filters('thematic_postfooter_postcategory',$postcategory); 
     
-    // Display the tags
+} // end thematic_postfooter_postcategory
+
+// Create post tags
+function thematic_postfooter_posttags() {
+
     if (is_single()) {
         $tagtext = __(' and tagged', 'thematic');
         $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span>');
@@ -584,9 +620,13 @@ function thematic_postfooter() {
         $tagtext = __('Tagged', 'thematic');
         $posttags = get_the_tag_list("<span class=\"tag-links\"> $tagtext ",', ','</span> <span class="meta-sep meta-sep-comments-link">|</span>');
     }
-    $posttags = apply_filters('thematic_postfooter_posttags',$posttags); 
+    return apply_filters('thematic_postfooter_posttags',$posttags); 
+
+} // end thematic_postfooter_posttags
+
+// Create comments link and edit link
+function thematic_postfooter_postcomments() {
     
-    // Display comments link and edit link
     if (comments_open()) {
         $postcommentnumber = get_comments_number();
         if ($postcommentnumber > '1') {
@@ -604,11 +644,15 @@ function thematic_postfooter() {
     }
     // Display edit link
     if (current_user_can('edit_posts')) {
-        $postcomments .= ' <span class="meta-sep meta-sep-edit">|</span> ' . $posteditlink;
+        $postcomments .= ' <span class="meta-sep meta-sep-edit">|</span> ' . thematic_postfooter_posteditlink();
     }               
-    $postcomments = apply_filters('thematic_postfooter_postcomments',$postcomments); 
+    return apply_filters('thematic_postfooter_postcomments',$postcomments); 
     
-    // Display permalink, comments link, and RSS on single posts
+} // end thematic_postfooter_postcomments
+
+// Create permalink, comments link, and RSS on single posts
+function thematic_postfooter_postconnect() {
+    
     $postconnect = __('. Bookmark the ', 'thematic') . '<a href="' . get_permalink() . '" title="' . __('Permalink to ', 'thematic') . the_title_attribute('echo=0') . '">';
     $postconnect .= __('permalink', 'thematic') . '</a>.';
     if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) { /* Comments are open */
@@ -626,30 +670,11 @@ function thematic_postfooter() {
     }
     // Display edit link on single posts
     if (current_user_can('edit_posts')) {
-        $postconnect .= ' ' . $posteditlink;
+        $postconnect .= ' ' . thematic_postfooter_posteditlink();
     }
-    $postconnect = apply_filters('thematic_postfooter_postconnect',$postconnect); 
-    
-    
-    // Add it all up
-    if ($post->post_type == 'page' && current_user_can('edit_posts')) { /* For logged-in "page" search results */
-        $postfooter = '<div class="entry-utility">' . '<span class="edit">' . $posteditlink . '</span>';
-        $postfooter .= "</div><!-- .entry-utility -->\n";    
-    } elseif ($post->post_type == 'page') { /* For logged-out "page" search results */
-        $postfooter = '';
-    } else {
-        if (is_single()) {
-            $postfooter = '<div class="entry-utility">' . $postcategory . $posttags . $postconnect;
-        } else {
-            $postfooter = '<div class="entry-utility">' . $postcategory . $posttags . $postcomments;
-        }
-        $postfooter .= "</div><!-- .entry-utility -->\n";    
-    }
-    
-    // Put it on the screen
-    echo apply_filters( 'thematic_postfooter', $postfooter ); // Filter to override default post footer
-} // end thematic_postfooter
+    return apply_filters('thematic_postfooter_postconnect',$postconnect); 
 
+} // end thematic_postfooter_postconnect
 
 // Action to create the below navigation
 function thematic_nav_below() {
