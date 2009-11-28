@@ -3,9 +3,9 @@
 // Located in 404.php, archive.php, archives.php, attachement.php, author.php, category.php index.php, 
 // links.php, page.php, search.php, single.php, tag.php
 // Just between #main and #container
-function thematic_container_above() {
-    do_action('thematic_container_above');
-} // end thematic_container_above
+function thematic_abovecontainer() {
+    do_action('thematic_abovecontainer');
+} // end thematic_abovecontainer
 
 // Located in archives.php
 // Just after the content
@@ -121,6 +121,13 @@ function thematic_above_tagloop() {
 function thematic_below_tagloop() {
     do_action('thematic_below_tagloop');
 } // end thematic_below_tagloop
+
+// Located in 404.php, archive.php, archives.php, attachement.php, author.php, category.php index.php, 
+// links.php, page.php, search.php, single.php, tag.php
+// Just below #container
+function thematic_belowcontainer() {
+    do_action('thematic_belowcontainer');
+} // end thematic_belowcontainer
 
 
 // Filter the page title
