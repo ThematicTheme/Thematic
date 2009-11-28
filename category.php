@@ -9,7 +9,7 @@ foreach ($options as $value) {
 
 get_header();
 
-thematic_container_above();
+thematic_abovecontainer();
 
 ?>	
 	<div id="container">
@@ -30,5 +30,11 @@ thematic_container_above();
 		</div><!-- #content -->
 	</div><!-- #container -->
 
-<?php thematic_sidebar() ?>
-<?php get_footer() ?>
+<?php 
+
+    thematic_belowcontainer();
+
+    thematic_sidebar();
+    
+    get_footer();
+?>

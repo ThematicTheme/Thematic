@@ -3,7 +3,7 @@
 
 get_header();
 
-thematic_container_above();
+thematic_abovecontainer();
 
 ?>
 
