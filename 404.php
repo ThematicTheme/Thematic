@@ -18,6 +18,12 @@ thematic_abovecontainer();
 
 		</div><!-- #content -->
 	</div><!-- #container -->
+    
+<?php 
 
-<?php thematic_sidebar() ?>
-<?php get_footer() ?>
+    thematic_belowcontainer();
+
+    thematic_sidebar();
+    
+    get_footer();
+?>
