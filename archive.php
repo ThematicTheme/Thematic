@@ -31,5 +31,11 @@ thematic_abovecontainer();
 		</div><!-- #content .hfeed -->
 	</div><!-- #container -->
 
-<?php thematic_sidebar() ?>
-<?php get_footer() ?>
+<?php 
+
+    thematic_belowcontainer();
+
+    thematic_sidebar();
+    
+    get_footer();
+?>
