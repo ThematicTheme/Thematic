@@ -747,7 +747,7 @@ function thematic_cats_meow($glue) {
 	$separator = "\n";
 	$cats = explode( $separator, get_the_category_list($separator) );
 	foreach ( $cats as $i => $str ) {
-		if ( strstr( $str, ">$current_cat<" ) ) {
+		if ( strpos( $str, ">$current_cat<" ) > 0) {
 			unset($cats[$i]);
 			break;
 		}
@@ -765,7 +765,7 @@ function thematic_tag_ur_it($glue) {
 	$separator = "\n";
 	$tags = explode( $separator, get_the_tag_list( "", "$separator", "" ) );
 	foreach ( $tags as $i => $str ) {
-		if ( strstr( $str, ">$current_tag<" ) ) {
+		if ( strpos( $str, ">$current_tag<" ) > 0 ) {
 			unset($tags[$i]);
 			break;
 		}
