@@ -38,7 +38,7 @@ function thematic_body_class( $print = true ) {
     }
 
 	// Special classes for BODY element when a single post
-	if ( is_single() ) {
+	if ( is_single() && apply_filters('thematic_show_bc_singlepost', TRUE)) {
 		$postID = $wp_query->post->ID;
 		the_post();
 
