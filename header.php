@@ -18,8 +18,10 @@ wp_head(); ?>
 
 </head>
 
+<?php if (apply_filters('thematic_show_bodyclass',TRUE)) { ?>
 <body class="<?php thematic_body_class() ?>">
-<?php thematic_before(); ?>
+<?php }
+thematic_before(); ?>
 
 <div id="wrapper" class="hfeed">
 
