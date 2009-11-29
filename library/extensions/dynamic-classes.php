@@ -102,7 +102,7 @@ function thematic_body_class( $print = true ) {
 	}
 
 	// Author name classes for BODY on author archives
-	elseif ( is_author() ) {
+	elseif ( is_author() && apply_filters('thematic_show_bc_authorarchive', TRUE)) {
 		$author = $wp_query->get_queried_object();
 		$c[] = 'author';
 		$c[] = 'author-' . $author->user_nicename;
