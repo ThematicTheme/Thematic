@@ -208,46 +208,47 @@ function thematic_body_class( $print = true ) {
 		}
 	}
 	
-	// A little Browser detection shall we?
-	$browser = $_SERVER[ 'HTTP_USER_AGENT' ];
+	if (apply_filters('thematic_show_bc_browser', TRUE)) {
+        // A little Browser detection shall we?
+        $browser = $_SERVER[ 'HTTP_USER_AGENT' ];
 	
-	// Mac, PC ...or Linux
-	if ( preg_match( "/Mac/", $browser ) ){
+        // Mac, PC ...or Linux
+        if ( preg_match( "/Mac/", $browser ) ){
 			$c[] = 'mac';
 		
-	} elseif ( preg_match( "/Windows/", $browser ) ){
+        } elseif ( preg_match( "/Windows/", $browser ) ){
 			$c[] = 'windows';
 		
-	} elseif ( preg_match( "/Linux/", $browser ) ) {
+        } elseif ( preg_match( "/Linux/", $browser ) ) {
 			$c[] = 'linux';
 
-	} else {
+        } else {
 			$c[] = 'unknown-os';
-	}
+        }
 	
-	// Checks browsers in this order: Chrome, Safari, Opera, MSIE, FF
-	if ( preg_match( "/Chrome/", $browser ) ) {
+        // Checks browsers in this order: Chrome, Safari, Opera, MSIE, FF
+        if ( preg_match( "/Chrome/", $browser ) ) {
 			$c[] = 'chrome';
 
 			preg_match( "/Chrome\/(\d.\d)/si", $browser, $matches);
 			$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );      
 			$c[] = $ch_version;
 
-	} elseif ( preg_match( "/Safari/", $browser ) ) {
+        } elseif ( preg_match( "/Safari/", $browser ) ) {
 			$c[] = 'safari';
 			
 			preg_match( "/Version\/(\d.\d)/si", $browser, $matches);
 			$sf_version = 'sf' . str_replace( '.', '-', $matches[1] );      
 			$c[] = $sf_version;
 			
-	} elseif ( preg_match( "/Opera/", $browser ) ) {
+        } elseif ( preg_match( "/Opera/", $browser ) ) {
 			$c[] = 'opera';
 			
 			preg_match( "/Opera\/(\d.\d)/si", $browser, $matches);
 			$op_version = 'op' . str_replace( '.', '-', $matches[1] );      
 			$c[] = $op_version;
 			
-	} elseif ( preg_match( "/MSIE/", $browser ) ) {
+        } elseif ( preg_match( "/MSIE/", $browser ) ) {
 			$c[] = 'msie';
 			
 			if( preg_match( "/MSIE 6.0/", $browser ) ) {
@@ -258,17 +259,17 @@ function thematic_body_class( $print = true ) {
 					$c[] = 'ie8';
 			}
 			
-	} elseif ( preg_match( "/Firefox/", $browser ) && preg_match( "/Gecko/", $browser ) ) {
+        } elseif ( preg_match( "/Firefox/", $browser ) && preg_match( "/Gecko/", $browser ) ) {
 			$c[] = 'firefox';
 			
 			preg_match( "/Firefox\/(\d)/si", $browser, $matches);
 			$ff_version = 'ff' . str_replace( '.', '-', $matches[1] );      
 			$c[] = $ff_version;
 			
-	} else {
+        } else {
 			$c[] = 'unknown-browser';
+        }
 	}
-	
 	
 
 	// Separates classes with a single space, collates classes for BODY
