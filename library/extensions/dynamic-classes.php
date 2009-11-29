@@ -102,14 +102,14 @@ function thematic_body_class( $print = true ) {
 	}
 
 	// Author name classes for BODY on author archives
-	elseif ( is_author() && apply_filters('thematic_show_bc_authorarchive', TRUE)) {
+	elseif ( is_author() && apply_filters('thematic_show_bc_authorarchives', TRUE)) {
 		$author = $wp_query->get_queried_object();
 		$c[] = 'author';
 		$c[] = 'author-' . $author->user_nicename;
 	}
 
 	// Category name classes for BODY on category archvies
-	elseif ( is_category() ) {
+	elseif ( is_category()  && apply_filters('thematic_show_bc_categoryarchives', TRUE)) {
 		$cat = $wp_query->get_queried_object();
 		$c[] = 'category';
 		$c[] = 'category-' . $cat->slug;
