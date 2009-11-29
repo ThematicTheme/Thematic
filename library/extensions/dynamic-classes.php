@@ -16,22 +16,26 @@ function thematic_body_class( $print = true ) {
         thematic_date_classes( time(), $c );
     }
 
-	// Generic semantic classes for what type of content is displayed
-	is_front_page()  ? $c[] = 'home'       : null; // For the front page, if set
-	is_home()        ? $c[] = 'blog'       : null; // For the blog posts page, if set
-	is_archive()     ? $c[] = 'archive'    : null;
-	is_date()        ? $c[] = 'date'       : null;
-	is_search()      ? $c[] = 'search'     : null;
-	is_paged()       ? $c[] = 'paged'      : null;
-	is_attachment()  ? $c[] = 'attachment' : null;
-	is_404()         ? $c[] = 'four04'     : null; // CSS does not allow a digit as first character
+    if (apply_filters('thematic_show_bc_contenttype', TRUE)) {
+        // Generic semantic classes for what type of content is displayed
+        is_front_page()  ? $c[] = 'home'       : null; // For the front page, if set
+        is_home()        ? $c[] = 'blog'       : null; // For the blog posts page, if set
+        is_archive()     ? $c[] = 'archive'    : null;
+        is_date()        ? $c[] = 'date'       : null;
+        is_search()      ? $c[] = 'search'     : null;
+        is_paged()       ? $c[] = 'paged'      : null;
+        is_attachment()  ? $c[] = 'attachment' : null;
+        is_404()         ? $c[] = 'four04'     : null; // CSS does not allow a digit as first character
+    }
 
-	// Special classes for BODY element when a singular post
-	if ( is_singular() ) {
-		$c[] = 'singular';
-	} else {
-		$c[] = 'not-singular';
-	}
+    if (apply_filters('thematic_show_bc_singular', TRUE)) {
+        // Special classes for BODY element when a singular post
+        if ( is_singular() ) {
+            $c[] = 'singular';
+        } else {
+            $c[] = 'not-singular';
+        }
+    }
 
 	// Special classes for BODY element when a single post
 	if ( is_single() ) {
