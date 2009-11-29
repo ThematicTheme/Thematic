@@ -123,7 +123,7 @@ function thematic_body_class( $print = true ) {
 	}
 
 	// Page author for BODY on 'pages'
-	elseif ( is_page()  && apply_filters('thematic_show_bc_pages', TRUE)) {
+	elseif ( is_page() && apply_filters('thematic_show_bc_pages', TRUE)) {
 		$pageID = $wp_query->post->ID;
 		$page_children = wp_list_pages("child_of=$pageID&echo=0");
 		the_post();
@@ -170,7 +170,7 @@ function thematic_body_class( $print = true ) {
 	}
 
 	// Search classes for results or no results
-	elseif ( is_search() ) {
+	elseif ( is_search() && apply_filters('thematic_show_bc_search', TRUE)) {
 		the_post();
 		if ( $wp_query->found_posts > 0 ) {
 			$c[] = 'search-results';
@@ -180,9 +180,11 @@ function thematic_body_class( $print = true ) {
 		rewind_posts();
 	}
 
-	// For when a visitor is logged in while browsing
-	if ( $current_user->ID )
-		$c[] = 'loggedin';
+	if (apply_filters('thematic_show_bc_loggedin', TRUE)) {
+        // For when a visitor is logged in while browsing
+        if ( $current_user->ID )
+            $c[] = 'loggedin';
+    }
 
 	// Paged classes; for 'page X' classes of index, single, etc.
 	if ( ( ( $page = $wp_query->get('paged') ) || ( $page = $wp_query->get('page') ) ) && $page > 1 ) {
