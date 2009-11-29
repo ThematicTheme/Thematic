@@ -109,21 +109,21 @@ function thematic_body_class( $print = true ) {
 	}
 
 	// Category name classes for BODY on category archvies
-	elseif ( is_category()  && apply_filters('thematic_show_bc_categoryarchives', TRUE)) {
+	elseif ( is_category() && apply_filters('thematic_show_bc_categoryarchives', TRUE)) {
 		$cat = $wp_query->get_queried_object();
 		$c[] = 'category';
 		$c[] = 'category-' . $cat->slug;
 	}
 
 	// Tag name classes for BODY on tag archives
-	elseif ( is_tag() ) {
+	elseif ( is_tag() && apply_filters('thematic_show_bc_tagarchives', TRUE)) {
 		$tags = $wp_query->get_queried_object();
 		$c[] = 'tag';
 		$c[] = 'tag-' . $tags->slug;
 	}
 
 	// Page author for BODY on 'pages'
-	elseif ( is_page() ) {
+	elseif ( is_page()  && apply_filters('thematic_show_bc_pages', TRUE)) {
 		$pageID = $wp_query->post->ID;
 		$page_children = wp_list_pages("child_of=$pageID&echo=0");
 		the_post();
