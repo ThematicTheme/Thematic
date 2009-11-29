@@ -11,8 +11,10 @@ function thematic_body_class( $print = true ) {
         $c = array('wordpress');
     }
 
-	// Applies the time- and date-based classes (below) to BODY element
-	thematic_date_classes( time(), $c );
+	if (apply_filters('thematic_show_bc_datetime', TRUE)) {
+        // Applies the time- and date-based classes (below) to BODY element
+        thematic_date_classes( time(), $c );
+    }
 
 	// Generic semantic classes for what type of content is displayed
 	is_front_page()  ? $c[] = 'home'       : null; // For the front page, if set
