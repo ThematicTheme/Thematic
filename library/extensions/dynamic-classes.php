@@ -3,9 +3,13 @@
 // Generates semantic classes for BODY element
 function thematic_body_class( $print = true ) {
 	global $wp_query, $current_user;
+    
+    $c = '';
 
-	// It's surely a WordPress blog, right?
-	$c = array('wordpress');
+	if (apply_filters('thematic_show_bc_wordpress', TRUE)) {
+        // It's surely a WordPress blog, right?
+        $c = array('wordpress');
+    }
 
 	// Applies the time- and date-based classes (below) to BODY element
 	thematic_date_classes( time(), $c );
