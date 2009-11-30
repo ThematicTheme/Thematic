@@ -82,8 +82,10 @@ add_filter( 'archive_meta', 'convert_chars' );
 add_filter( 'archive_meta', 'wpautop' );
 
 // Remove the WordPress Generator – via http://blog.ftwr.co.uk/archives/2007/10/06/improving-the-wordpress-generator/
-function thematic_remove_generators() { return ''; }  
-add_filter('the_generator','thematic_remove_generators');
+function thematic_remove_generators() { return ''; }
+if (apply_filters('thematic_hide_generators', TRUE)) {  
+    add_filter('the_generator','thematic_remove_generators');
+}
 
 // Translate, if applicable
 load_theme_textdomain('thematic', THEMELIB . '/languages');
