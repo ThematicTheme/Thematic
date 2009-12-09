@@ -54,7 +54,7 @@ function widget_thematic_meta($args) {
 	if ( empty($title) )
 		$title = __('Meta', 'thematic');
 ?>
-			<?php echo $before_widget; ?>
+			<?php echo $before_widget ?>
 				<?php echo thematic_before_title() . $title . thematic_after_title(); ?>
 				<ul>
 					<?php wp_register() ?>
@@ -71,13 +71,13 @@ function widget_thematic_rsslinks($args) {
 	$options = get_option('widget_thematic_rsslinks');
 	$title = empty($options['title']) ? __('RSS Links', 'thematic') : $options['title'];
 ?>
-		<?php echo $before_widget; ?>
+		<?php echo $before_widget ?>
 			<?php echo thematic_before_title() . $title . thematic_after_title(); ?>
 			<ul>
 				<li><a href="<?php thm_bloginfo('rss2_url', TRUE) ?>" title="<?php echo wp_specialchars(thm_bloginfo('name', FALSE), 1) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>
 				<li><a href="<?php thm_bloginfo('comments_rss2_url', TRUE) ?>" title="<?php echo wp_specialchars(thm_bloginfo('name', FALSE), 1) ?> <?php _e('Comments RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'thematic') ?></a></li>
 			</ul>
-		<?php echo $after_widget; ?>
+		<?php echo $after_widget ?>
 <?php
 }
 
