@@ -208,7 +208,7 @@ function thematic_sidebar() {
 
 
 // Subsidiary Aside Hooks
-
+	
 
 	// Located in sidebar-subsidiary.php
 	function thematic_abovesubasides() {
@@ -220,42 +220,59 @@ function thematic_sidebar() {
 	function thematic_belowsubasides() {
 		do_action('thematic_belowsubasides');
 	} // end thematic_belowsubasides
+    
+    function thematic_subsidiaryopen() {
+        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget ?>
+            
+            <div id="subsidiary">
+            
+        <?php
+        }
+    }
+    add_action('widget_area_subsidiaries', 'thematic_subsidiaryopen', 10);
 	
 
 	// Located in sidebar-subsidiary.php
 	function thematic_before_first_sub() {
 		do_action('thematic_before_first_sub');
 	} // end thematic_before_first_sub
-
+    
+    function add_before_first_sub() {
+        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
+            thematic_before_first_sub();
+        }
+    }
+    add_action('widget_area_subsidiaries', 'add_before_first_sub',20);
 
 	// Located in sidebar-subsidiary.php
-	function widget_area_1st_subsidiary_aside() {
-		do_action('widget_area_1st_subsidiary_aside');
+	function widget_area_subsidiaries() {
+		do_action('widget_area_subsidiaries');
 	} // end widget_area_1st_subsidiary_aside
-
 
 	// Located in sidebar-subsidiary.php
 	function thematic_between_firstsecond_sub() {
 		do_action('thematic_between_firstsecond_sub');
 	} // end thematic_between_firstsecond_sub
-
-
-	// Located in sidebar-subsidiary.php
-	function widget_area_2nd_subsidiary_aside() {
-		do_action('widget_area_2nd_subsidiary_aside');
-	} // end widget_area_1st_subsidiary_aside
+    
+    function add_between_firstsecond_sub() {
+        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
+            thematic_between_firstsecond_sub();
+        }
+    }
+    add_action('widget_area_subsidiaries', 'add_between_firstsecond_sub',40);
 
 
 	// Located in sidebar-subsidiary.php
 	function thematic_between_secondthird_sub() {
 		do_action('thematic_between_secondthird_sub');
 	} // end thematic_between_secondthird_sub
-
-
-	// Located in sidebar-subsidiary.php
-	function widget_area_3rd_subsidiary_aside() {
-		do_action('widget_area_3rd_subsidiary_aside');
-	} // end widget_area_1st_subsidiary_aside
+    
+    function add_between_secondthird_sub() {
+        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
+            thematic_between_secondthird_sub();
+        }
+    }
+    add_action('widget_area_subsidiaries', 'add_between_secondthird_sub',60);
 	
 	
 	// Located in sidebar-subsidiary.php
@@ -263,3 +280,20 @@ function thematic_sidebar() {
 		do_action('thematic_after_third_sub');
 	} // end thematic_after_third_sub	
 
+    
+    function add_after_third_sub() {
+        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
+            thematic_after_third_sub();
+        }
+    }
+    add_action('widget_area_subsidiaries', 'add_after_third_sub',80);
+    
+    function thematic_subsidiaryclose() {
+        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget ?>
+            
+            </div><!-- #subsidiary -->
+            
+        <?php
+        }
+    }
+    add_action('widget_area_subsidiaries', 'thematic_subsidiaryclose', 200);

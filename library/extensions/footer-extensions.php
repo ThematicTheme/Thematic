@@ -39,7 +39,7 @@ function thematic_after() {
 // Functions that hook into thematic_footer()
 
     function thematic_subsidiaries() {
-        get_sidebar('subsidiary');
+        widget_area_subsidiaries();
     }
     add_action('thematic_footer', 'thematic_subsidiaries', 10);
     
