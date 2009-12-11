@@ -23,7 +23,7 @@ $options = array (
 						"type" => "checkbox"),
 
 				array(	"name" => __('Text in Footer','thematic'),
-						"desc" => __("You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]",'thematic'),
+						"desc" => __("You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]",'thematic'),
 						"id" => $shortname."_footertext",
 						"std" => __("Powered by [wp-link]. Built on the [theme-link].", 'thematic'),
 						"type" => "textarea",
