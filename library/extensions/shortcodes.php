@@ -25,6 +25,11 @@ function thmfooter_blog_title() {
 }
 add_shortcode('blog-title', 'thmfooter_blog_title');
 
+function thmfooter_blog_link() {
+	return '<a href="' . get_option('siteurl') . '" title="' . get_option('blogname') . '" >' . get_option('blogname') . "</a>";
+}
+add_shortcode('blog-link', 'thmfooter_blog_link');
+
 function thmfooter_year() {   
     return '<span class="the-year">' . date('Y') . '</span>';
 }
