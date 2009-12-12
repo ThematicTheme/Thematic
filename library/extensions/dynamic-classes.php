@@ -70,7 +70,7 @@ function thematic_body_class( $print = true ) {
 		}
 
 		// Adds author class for the post author
-		$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author_login()));
+		$c[] = 's-author-' . sanitize_title_with_dashes(strtolower(get_the_author_meta('user_nicename', $post->post_author)));
 		rewind_posts();
 		
 		// For posts with excerpts
@@ -133,7 +133,7 @@ function thematic_body_class( $print = true ) {
 
 		$c[] = 'page pageid-' . $pageID;
 		
-		$c[] = 'page-author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
+		$c[] = 'page-author-' . sanitize_title_with_dashes(strtolower(get_the_author_meta('user_nicename', $post->post_author)));
 		
 		// Checks to see if the page has children and/or is a child page; props to Adam
 		if ( $page_children )
