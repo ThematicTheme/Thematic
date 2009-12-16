@@ -263,7 +263,19 @@ function thematic_widgets_init() {
 				  include(ABSPATH . '/wp-content/themes/' . get_stylesheet() . '/widgets/' . $widgetFile);
 		  }
 	  }   
-   
+
+	// Remove WP default Widgets
+	// WP 2.8 function using $widget_class
+	if (function_exists('unregister_widget')) {
+		unregister_widget('WP_Widget_Meta');
+		unregister_widget('WP_Widget_Search');
+	
+	// pre WP 2.8 function using $id
+	} else {
+		unregister_widget_control('meta');
+		unregister_widget_control('search');	
+	}
+
 	// Finished intializing Widgets plugin, now let's load the thematic default widgets
 	register_sidebar_widget(__('Search', 'thematic'), 'widget_thematic_search', null, 'search');
 	unregister_widget_control('search');
@@ -285,7 +297,7 @@ function thematic_widgets_init() {
 }
 
 // Runs our code at the end to check that everything needed has loaded
-add_action( 'init', 'thematic_widgets_init' );
+add_action( 'widgets_init', 'thematic_widgets_init' );
 
 // We sort our array of widgetized areas to get a nice list display under wp-admin
 function thematic_sort_widgetized_areas($content) {
