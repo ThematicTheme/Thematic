@@ -633,7 +633,6 @@ function thematic_postfooter_posttags() {
 
 // Create comments link and edit link
 function thematic_postfooter_postcomments() {
-    
     if (comments_open()) {
         $postcommentnumber = get_comments_number();
         if ($postcommentnumber > '1') {
@@ -662,17 +661,17 @@ function thematic_postfooter_postconnect() {
     
     $postconnect = __('. Bookmark the ', 'thematic') . '<a href="' . get_permalink() . '" title="' . __('Permalink to ', 'thematic') . the_title_attribute('echo=0') . '">';
     $postconnect .= __('permalink', 'thematic') . '</a>.';
-    if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) { /* Comments are open */
+    if ((comments_open()) && (pings_open())) { /* Comments are open */
         $postconnect .= ' <a class="comment-link" href="#respond" title ="' . __('Post a comment', 'thematic') . '">' . __('Post a comment', 'thematic') . '</a>';
         $postconnect .= __(' or leave a trackback: ', 'thematic');
         $postconnect .= '<a class="trackback-link" href="' . trackback_url(FALSE) . '" title ="' . __('Trackback URL for your post', 'thematic') . '" rel="trackback">' . __('Trackback URL', 'thematic') . '</a>.';
-    } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) { /* Only trackbacks are open */
+    } elseif (!(comments_open()) && (pings_open())) { /* Only trackbacks are open */
         $postconnect .= __(' Comments are closed, but you can leave a trackback: ', 'thematic');
         $postconnect .= '<a class="trackback-link" href="' . trackback_url(FALSE) . '" title ="' . __('Trackback URL for your post', 'thematic') . '" rel="trackback">' . __('Trackback URL', 'thematic') . '</a>.';
-    } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) { /* Only comments open */
+    } elseif ((comments_open()) && !(pings_open())) { /* Only comments open */
         $postconnect .= __(' Trackbacks are closed, but you can ', 'thematic');
         $postconnect .= '<a class="comment-link" href="#respond" title ="' . __('Post a comment', 'thematic') . '">' . __('post a comment', 'thematic') . '</a>.';
-    } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) { /* Comments and trackbacks closed */
+    } elseif (!(comments_open()) && !(pings_open())) { /* Comments and trackbacks closed */
         $postconnect .= __(' Both comments and trackbacks are currently closed.', 'thematic');
     }
     // Display edit link on single posts
