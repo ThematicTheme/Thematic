@@ -423,11 +423,7 @@ function thematic_postheader_postmeta() {
     $postmeta = '<div class="entry-meta">';
     $postmeta .= thematic_postmeta_authorlink();
     $postmeta .= '<span class="meta-sep meta-sep-entry-date"> | </span>';
-    $postmeta .= '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
-    $postmeta .= '<span class="entry-date"><abbr class="published" title="';
-    $postmeta .= get_the_time(thematic_time_title()) . '">';
-    $postmeta .= get_the_time(thematic_time_display());
-    $postmeta .= '</abbr></span>';
+    $postmeta .= thematic_postmeta_entrydate();
     // Display edit link
     if (current_user_can('edit_posts')) {
         $postmeta .= ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . thematic_postheader_posteditlink() . '</span>';
@@ -452,6 +448,21 @@ function thematic_postmeta_authorlink() {
     return apply_filters('thematic_post_meta_authorlink', $authorlink);
    
 } // end thematic_postmeta_authorlink()
+
+// Create entry date for post meta
+function thematic_postmeta_entrydate() {
+
+    global $authordata;
+
+    $entrydate = '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
+    $entrydate .= '<span class="entry-date"><abbr class="published" title="';
+    $entrydate .= get_the_time(thematic_time_title()) . '">';
+    $entrydate .= get_the_time(thematic_time_display());
+    $entrydate .= '</abbr></span>';
+    
+    return apply_filters('thematic_post_meta_entrydate', $entrydate);
+   
+} // end thematic_postmeta_entrydate()
 
 //creates the content
 function thematic_content() {
