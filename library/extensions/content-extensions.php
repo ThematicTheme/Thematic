@@ -420,15 +420,9 @@ function thematic_postheader_posttitle() {
 // Create post meta
 function thematic_postheader_postmeta() {
 
-    global $authordata;
-
     $postmeta = '<div class="entry-meta">';
-    $postmeta .= '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
-    $postmeta .= '<span class="author vcard">'. '<a class="url fn n" href="';
-    $postmeta .= get_author_posts_url($authordata->ID, $authordata->user_nicename);
-    $postmeta .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
-    $postmeta .= get_the_author();
-    $postmeta .= '</a></span><span class="meta-sep meta-sep-entry-date"> | </span>';
+    $postmeta .= thematic_postmeta_authorlink();
+    $postmeta .= '<span class="meta-sep meta-sep-entry-date"> | </span>';
     $postmeta .= '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
     $postmeta .= '<span class="entry-date"><abbr class="published" title="';
     $postmeta .= get_the_time(thematic_time_title()) . '">';
@@ -442,6 +436,22 @@ function thematic_postheader_postmeta() {
     return apply_filters('thematic_postheader_postmeta',$postmeta); 
 
 } // end thematic_postheader_postmeta
+
+// Create author link for post meta
+function thematic_postmeta_authorlink() {
+
+    global $authordata;
+
+    $authorlink = '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
+    $authorlink .= '<span class="author vcard">'. '<a class="url fn n" href="';
+    $authorlink .= get_author_posts_url($authordata->ID, $authordata->user_nicename);
+    $authorlink .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
+    $authorlink .= get_the_author();
+    $authorlink .= '</a></span>';
+    
+    return apply_filters('thematic_post_meta_authorlink', $authorlink);
+   
+} // end thematic_postmeta_authorlink()
 
 //creates the content
 function thematic_content() {
