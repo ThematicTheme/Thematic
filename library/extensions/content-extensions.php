@@ -591,14 +591,8 @@ function list_bookmarks_args() {
 function thematic_postfooter() {
     global $id, $post;
     
-   // Display comments link and edit link
-    
-    // Display permalink, comments link, and RSS on single posts
-    
-    
-    // Add it all up
     if ($post->post_type == 'page' && current_user_can('edit_posts')) { /* For logged-in "page" search results */
-        $postfooter = '<div class="entry-utility">' . '<span class="edit">' . thematic_postfooter_posteditlink() . '</span>';
+        $postfooter = '<div class="entry-utility">' . thematic_postfooter_posteditlink();
         $postfooter .= "</div><!-- .entry-utility -->\n";    
     } elseif ($post->post_type == 'page') { /* For logged-out "page" search results */
         $postfooter = '';
