@@ -424,11 +424,11 @@ function thematic_postheader_postmeta() {
     $postmeta .= thematic_postmeta_authorlink();
     $postmeta .= '<span class="meta-sep meta-sep-entry-date"> | </span>';
     $postmeta .= thematic_postmeta_entrydate();
-    // Display edit link
-    if (current_user_can('edit_posts')) {
-        $postmeta .= ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . thematic_postheader_posteditlink() . '</span>';
-    }               
+    
+    $postmeta .= thematic_postmeta_editlink();
+                   
     $postmeta .= "</div><!-- .entry-meta -->\n";
+    
     return apply_filters('thematic_postheader_postmeta',$postmeta); 
 
 } // end thematic_postheader_postmeta
@@ -452,8 +452,6 @@ function thematic_postmeta_authorlink() {
 // Create entry date for post meta
 function thematic_postmeta_entrydate() {
 
-    global $authordata;
-
     $entrydate = '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
     $entrydate .= '<span class="entry-date"><abbr class="published" title="';
     $entrydate .= get_the_time(thematic_time_title()) . '">';
@@ -463,6 +461,17 @@ function thematic_postmeta_entrydate() {
     return apply_filters('thematic_post_meta_entrydate', $entrydate);
    
 } // end thematic_postmeta_entrydate()
+
+// Create edit link for post meta
+function thematic_postmeta_editlink() {
+    
+    // Display edit link
+    if (current_user_can('edit_posts')) {
+        $editlink = ' <span class="meta-sep meta-sep-edit">|</span> ' . '<span class="edit">' . thematic_postheader_posteditlink() . '</span>';
+        return apply_filters('thematic_post_meta_editlink', $editlink);
+    }               
+
+}
 
 //creates the content
 function thematic_content() {
