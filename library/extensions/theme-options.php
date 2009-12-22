@@ -34,7 +34,7 @@ $options = array (
 
 function mytheme_add_admin() {
 
-    global $themename, $shortname, $options;
+    global $themename, $shortname, $options, $blog_id;
 
     if ( $_GET['page'] == basename(__FILE__) ) {
     
@@ -70,7 +70,7 @@ function mytheme_add_admin() {
 					die;
 				}  
 			}
-        	$filename = STYLESHEETPATH . '/settings/definitions.php';
+        	$filename = STYLESHEETPATH . "/settings/blog-{$blog_id}-definitions.php";
         	$content = 'if(preg_match(\'#\' . basename(__FILE__) . \'#\', $_SERVER[\'PHP_SELF\'])) { die(\'You are not allowed to call this page directly.\'); }' . "\n";
 			$content .= '$thm_settings = array (' . "\n";
 			$content .= '						\'url\' => "' . get_bloginfo('url') . '",' . "\n";
@@ -104,8 +104,7 @@ function mytheme_add_admin() {
 					die;
 			}  
 			fwrite($handle, '<?php' . "\n");
-			fwrite($handle, $content . "\n");
-			fwrite($handle, '?>' . "\n");
+			fwrite($handle, $content);
 			fclose($handle);
             header("Location: themes.php?page=theme-options.php&createdefinitions=true");
 			die;
