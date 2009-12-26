@@ -269,6 +269,7 @@ function thematic_widgets_init() {
 	if (function_exists('unregister_widget')) {
 		unregister_widget('WP_Widget_Meta');
 		unregister_widget('WP_Widget_Search');
+        unregister_widget('');
 	
 	// pre WP 2.8 function using $id
 	} else {
@@ -286,8 +287,8 @@ function thematic_widgets_init() {
 
 	// Pre-set Widgets
 	$preset_widgets = array (
-		'primary-aside'  => array( 'search', 'pages-2', 'categories-2', 'archives-2' ),
-		'secondary-aside'  => array( 'links-2', 'rss-links', 'meta' )
+		'primary-aside'  => array( 'search', 'pages', 'categories', 'archives' ),
+		'secondary-aside'  => array( 'links', 'rss-links', 'meta' )
 		);
 
 	if ( isset( $_GET['activated'] ) ) {
