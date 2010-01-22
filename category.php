@@ -1,40 +1,59 @@
 <?php
-global $options;
-foreach ($options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    else { $$value['id'] = get_option( $value['id'] ); }
+    // calling the theme options
+    global $options;
+    foreach ($options as $value) {
+        if (get_option( $value['id'] ) === FALSE) { 
+            $$value['id'] = $value['std']; 
+        } else {
+            $$value['id'] = get_option( $value['id'] );
+        }
     }
+
+    // calling the header.php
+    get_header();
+
+    // action hook for placing content above #container
+    thematic_abovecontainer();
+
 ?>
-<?php
 
-get_header();
-
-thematic_abovecontainer();
-
-?>	
 	<div id="container">
 		<div id="content">
 
-		<?php thematic_page_title() ?>
+            <?php
+        
+            // displays the page title
+            thematic_page_title();
 
-			<?php thematic_navigation_above();?>
+            // create the navigation above the content
+            thematic_navigation_above();
 			
-<?php thematic_above_categoryloop() ?>			
+            // action hook for placing content above the category loop
+            thematic_above_categoryloop();			
 
-<?php thematic_categoryloop() ?>
+            // action hook creating the category loop
+            thematic_categoryloop();
 
-<?php thematic_below_categoryloop() ?>			
+            // action hook for placing content below the category loop
+            thematic_below_categoryloop();			
 
-			<?php thematic_navigation_below();?>
+            // create the navigation below the content
+            thematic_navigation_below();
+            
+            ?>
 
 		</div><!-- #content -->
 	</div><!-- #container -->
 
 <?php 
 
+    // action hook for placing content below #container
     thematic_belowcontainer();
 
+    // calling the standard sidebar 
     thematic_sidebar();
-    
+
+    // calling footer.php
     get_footer();
+
 ?>
