@@ -1,43 +1,63 @@
 <?php
-global $options;
-foreach ($options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    else { $$value['id'] = get_option( $value['id'] ); }
+    // calling the theme options
+    global $options;
+    foreach ($options as $value) {
+        if (get_option( $value['id'] ) === FALSE) { 
+            $$value['id'] = $value['std']; 
+        } else {
+            $$value['id'] = get_option( $value['id'] );
+        }
     }
+
+    // calling the header.php
+    get_header();
+
+    // action hook for placing content above #container
+    thematic_abovecontainer();
+
 ?>
-<?php
 
-get_header();
-
-thematic_abovecontainer();
-
-?>
 
 	<div id="container">
 		<div id="content">
 
-			<?php thematic_navigation_above();?>
+			<?php 
+            
+            // create the navigation above the content
+            thematic_navigation_above();
 			
-<?php get_sidebar('index-top') ?>
+            // calling the widget area 'index-top'
+            get_sidebar('index-top');
 
-<?php thematic_above_indexloop() ?>
+            // action hook for placing content above the index loop
+            thematic_above_indexloop();
 
-<?php thematic_indexloop() ?>
+            // action hook creating the index loop
+            thematic_indexloop();
 
-<?php thematic_below_indexloop() ?>
+            // action hook for placing content below the index loop
+            thematic_below_indexloop();
 
-<?php get_sidebar('index-bottom') ?>
+            // calling the widget area 'index-bottom'
+            get_sidebar('index-bottom');
 
-			<?php thematic_navigation_below();?>
+            // create the navigation below the content
+            thematic_navigation_below();
+            
+            ?>
 
 		</div><!-- #content -->
 	</div><!-- #container -->
 
 <?php 
 
+    // action hook for placing content below #container
     thematic_belowcontainer();
 
+    // calling the standard sidebar 
     thematic_sidebar();
     
+    // calling footer.php
     get_footer();
+
 ?>
