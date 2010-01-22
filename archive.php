@@ -1,14 +1,15 @@
 <?php
+// calling the theme options
 global $options;
 foreach ($options as $value) {
     if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
     else { $$value['id'] = get_option( $value['id'] ); }
     }
-?>
-<?php
 
+// calling the header.php
 get_header();
 
+// action hook for placing content above #container
 thematic_abovecontainer();
 
 ?>
@@ -16,26 +17,38 @@ thematic_abovecontainer();
 	<div id="container">
 		<div id="content">
 
-<?php the_post() ?>
+            <?php 
 
-<?php thematic_page_title() ?>
+            the_post();
 
-<?php rewind_posts() ?>
+            // displays the page title
+            thematic_page_title();
 
-			<?php thematic_navigation_above();?>
+            rewind_posts();
 
-<?php thematic_archiveloop() ?>
+            // create the navigation above the content
+            thematic_navigation_above();
 
-			<?php thematic_navigation_below();?>
+            // action hook creating the archive loop
+            thematic_archiveloop();
+
+            // create the navigation below the content
+            thematic_navigation_below();
+
+            ?>
 
 		</div><!-- #content .hfeed -->
 	</div><!-- #container -->
 
 <?php 
 
-    thematic_belowcontainer();
+// action hook for placing content below #container
+thematic_belowcontainer();
 
-    thematic_sidebar();
+// calling the standard sidebar 
+thematic_sidebar();
     
-    get_footer();
+// calling footer.php
+get_footer();
+
 ?>
