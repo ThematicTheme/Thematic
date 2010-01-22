@@ -1,16 +1,19 @@
 <?php
-// calling the theme options
-global $options;
-foreach ($options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    else { $$value['id'] = get_option( $value['id'] ); }
+    // calling the theme options
+    global $options;
+    foreach ($options as $value) {
+        if (get_option( $value['id'] ) === FALSE) { 
+            $$value['id'] = $value['std']; 
+        } else {
+            $$value['id'] = get_option( $value['id'] );
+        }
     }
 
-// calling the header.php
-get_header();
+    // calling the header.php
+    get_header();
 
-// action hook for placing content above #container
-thematic_abovecontainer();
+    // action hook for placing content above #container
+    thematic_abovecontainer();
 
 ?>
 
@@ -42,13 +45,13 @@ thematic_abovecontainer();
 
 <?php 
 
-// action hook for placing content below #container
-thematic_belowcontainer();
+    // action hook for placing content below #container
+    thematic_belowcontainer();
 
-// calling the standard sidebar 
-thematic_sidebar();
+    // calling the standard sidebar 
+    thematic_sidebar();
     
-// calling footer.php
-get_footer();
+    // calling footer.php
+    get_footer();
 
 ?>
