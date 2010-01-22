@@ -1,8 +1,11 @@
-<?php @header("HTTP/1.1 404 Not found", TRUE, 404); ?>
 <?php
 
+@header("HTTP/1.1 404 Not found", true, 404);
+
+// calling the header.php
 get_header();
 
+// action hook for placing content above #container
 thematic_abovecontainer();
 
 ?>
@@ -12,18 +15,27 @@ thematic_abovecontainer();
 
 			<div id="post-0" class="post error404">
 			
-			<?php thematic_404() ?>
+			<?php
+
+                // action hook for the 404 content
+                thematic_404()
+
+            ?>
 			
 			</div><!-- .post -->
 
 		</div><!-- #content -->
 	</div><!-- #container -->
     
-<?php 
+<?php
 
-    thematic_belowcontainer();
+// action hook for placing content below #container
+thematic_belowcontainer();
 
-    thematic_sidebar();
-    
-    get_footer();
+// calling the standard sidebar 
+thematic_sidebar();
+
+// calling footer.php
+get_footer();
+
 ?>
