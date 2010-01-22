@@ -1,14 +1,15 @@
 <?php
+// calling the theme options
 global $options;
 foreach ($options as $value) {
     if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
     else { $$value['id'] = get_option( $value['id'] ); }
     }
-?>
-<?php
 
+// calling the header.php
 get_header();
 
+// action hook for placing content above #container
 thematic_abovecontainer();
 
 ?>
@@ -16,30 +17,64 @@ thematic_abovecontainer();
 	<div id="container">
 		<div id="content">
 
-<?php the_post() ?>
-
-			<?php thematic_page_title() ?>
+            <?php
+            
+            the_post();
+            
+            // displays the page title
+			thematic_page_title();
+            
+            ?>
+            
 			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
-    			<?php thematic_postheader(); ?>
+            
+    			<?php
+                
+                // creating the post header
+                thematic_postheader();
+                
+                ?>
+                
 				<div class="entry-content">
 					<div class="entry-attachment"><?php the_attachment_link($post->post_ID, true) ?></div>
-<?php the_content(more_text()); ?>
+                    
+                        <?php 
+                        
+                        the_content(more_text());
 
-					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+                        wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>');
+                        
+                        ?>
+                        
 				</div>
-				<?php thematic_postfooter(); ?>
+                
+				<?php
+                
+                // creating the post footer
+                thematic_postfooter();
+                
+                ?>
+                
 			</div><!-- .post -->
 
-<?php comments_template(); ?>
+            <?php
+            
+            comments_template();
+            
+            ?>
 
 		</div><!-- #content -->
 	</div><!-- #container -->
 
 <?php 
 
-    thematic_belowcontainer();
+// action hook for placing content below #container
+thematic_belowcontainer();
 
-    thematic_sidebar();
+// calling the standard sidebar 
+thematic_sidebar();
     
-    get_footer();
+// calling footer.php
+get_footer();
+
 ?>
