@@ -38,17 +38,11 @@ if (file_exists(STYLESHEETPATH . "/settings/blog-{$blog_id}-definitions.php")) {
 // Path constants
 define('THEMELIB', TEMPLATEPATH . '/library');
 
-// Create Theme Settings Page
-// require_once(THEMELIB . '/admin/theme-settings.php');
-
 // Create Theme Options Page
 require_once(THEMELIB . '/extensions/theme-options.php');
 
 // Load widgets
 require_once(THEMELIB . '/extensions/widgets.php');
-
-// Load custom admin extensions
-// require_once(THEMELIB . '/extensions/admin-extensions.php');
 
 // Load custom header extensions
 require_once(THEMELIB . '/extensions/header-extensions.php');
