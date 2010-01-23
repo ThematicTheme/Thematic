@@ -1,3 +1,6 @@
 <?php
-		thematic_search_form()
+    
+    // calls the search form
+	thematic_search_form();
+    
 ?>

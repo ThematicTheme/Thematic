@@ -1,5 +1,12 @@
-<?php thematic_aboveindexbottom() ?>
+<?php 
 
-<?php widget_area_index_bottom() ?>
+    // action hook for placing content above the 'index-bottom' widget area
+    thematic_aboveindexbottom();
 
-<?php thematic_belowindexbottom() ?>
+    // action hook creating the 'index-bottom' widget area
+    widget_area_index_bottom();
+
+    // action hook for placing content below the 'index-bottom' widget area
+    thematic_belowindexbottom();
+    
+?>
