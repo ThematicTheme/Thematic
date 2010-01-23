@@ -1,5 +1,12 @@
-<?php thematic_abovesinglebottom() ?>
+<?php
 
-<?php widget_area_single_bottom() ?>
+    // action hook for placing content above the 'single-bottom' widget area
+    thematic_abovesinglebottom();
 
-<?php thematic_belowsinglebottom() ?>
+    // action hook for creating the 'single-bottom' widget area
+    widget_area_single_bottom();
+
+    // action hook for placing content below the 'single-bottom' widget area
+    thematic_belowsinglebottom();
+    
+?>
