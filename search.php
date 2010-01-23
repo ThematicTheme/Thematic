@@ -1,35 +1,50 @@
 <?php
-global $options;
-foreach ($options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    else { $$value['id'] = get_option( $value['id'] ); }
+    // calling the theme options
+    global $options;
+    foreach ($options as $value) {
+        if (get_option( $value['id'] ) === FALSE) { 
+            $$value['id'] = $value['std']; 
+        } else {
+            $$value['id'] = get_option( $value['id'] );
+        }
     }
+
+    // calling the header.php
+    get_header();
+
+    // action hook for placing content above #container
+    thematic_abovecontainer();
+
 ?>
-<?php
 
-get_header();
-
-thematic_abovecontainer();
-
-?>
 	<div id="container">
 		<div id="content">
 
-<?php if (have_posts()) : ?>
+            <?php 
+            
+            if (have_posts()) {
 
-		<?php thematic_page_title() ?>
+                // displays the page title
+                thematic_page_title();
 
-			<?php thematic_navigation_above();?>
+                // create the navigation above the content
+                thematic_navigation_above();
 			
-<?php thematic_above_searchloop() ?>			
+                // action hook for placing content above the search loop
+                thematic_above_searchloop();			
 
-<?php thematic_searchloop() ?>
+                // action hook creating the search loop
+                thematic_searchloop();
 
-<?php thematic_below_searchloop() ?>			
+                // action hook for placing content below the search loop
+                thematic_below_searchloop();			
 
-			<?php thematic_navigation_below();?>
+                // create the navigation below the content
+                thematic_navigation_below();
 
-<?php else : ?>
+            } else { 
+                
+                ?>
 
 			<div id="post-0" class="post noresults">
 				<h1 class="entry-title"><?php _e('Nothing Found', 'thematic') ?></h1>
@@ -44,16 +59,24 @@ thematic_abovecontainer();
 				</form>
 			</div><!-- .post -->
 
-<?php endif; ?>
+            <?php
+            
+            }
+            
+            ?>
 
 		</div><!-- #content -->
 	</div><!-- #container -->
 
 <?php 
 
+    // action hook for placing content below #container
     thematic_belowcontainer();
 
+    // calling the standard sidebar 
     thematic_sidebar();
     
+    // calling footer.php
     get_footer();
+
 ?>
