@@ -25,6 +25,7 @@ Template Name: Links Page
 			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
     			<?php
                 
+                // creating the post header
                 thematic_postheader();
                 
                 ?>
