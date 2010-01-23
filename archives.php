@@ -49,7 +49,7 @@ Template Name: Archives Page
         <?php
         
         if ( get_post_custom_values('comments') ) 
-            comments_template() // Add a key/value of "comments" to enable comments on pages!
+            comments_template(); // Add a key/value of "comments" to enable comments on pages!
         
         ?>
 
