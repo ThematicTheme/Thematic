@@ -1,5 +1,12 @@
-<?php thematic_abovepagebottom() ?>
+<?php
 
-<?php widget_area_page_bottom() ?>
+    // action hook for placing content above the 'page-bottom' widget area
+    thematic_abovepagebottom();
 
-<?php thematic_belowpagebottom() ?>
+    // action hook for creating the 'page-bottom' widget area
+    widget_area_page_bottom();
+
+    // action hook for placing content below the 'page-bottom' widget area
+    thematic_belowpagebottom();
+
+?>
