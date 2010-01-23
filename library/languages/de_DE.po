@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thematic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-21 19:25+0100\n"
-"PO-Revision-Date: 2009-06-27 13:35+0100\n"
+"POT-Creation-Date: 2010-01-23 22:16+0100\n"
+"PO-Revision-Date: 2010-01-23 22:40+0100\n"
 "Last-Translator: Chris Gossmann <chris.gossmann@googlemail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,436 +20,490 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archives.php:20
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/links.php:20
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/page.php:16
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/archives.php:42
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/links.php:53
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/page.php:40
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/attachment.php:22
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:48
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:27
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/author.php:53
 msgid "Email "
 msgstr "E-Mail "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:10
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:10
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Dieser Beitrag ist passwortgesch&uuml;tzt. Bitte geben Sie das Passwort ein, um Kommentare lesen zu k&ouml;nnen."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:31
-#, php-format
-msgid "<span>%d</span> Comments"
-msgstr "<span>%d</span> Kommentare"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:31
-msgid "<span>One</span> Comment"
-msgstr "<span>Ein</span> Kommentar"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:52
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:52
 #, php-format
 msgid "<span>%d</span> Trackbacks"
 msgstr "<span>%d</span> Trackbacks"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:52
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:52
 msgid "<span>One</span> Trackback"
 msgstr "<span>Ein</span> Trackback"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:67
-msgid "Post a Comment"
-msgstr "Ihr Kommentar"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:67
-#, php-format
-msgid "Post a Reply to %s"
-msgstr "Schreibe eine Antwort an %s"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:72
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:72
 #, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
 msgstr "Sie m&uuml;ssen <a href=\"%s\" title=\"Anmelden\">angemeldet</a> sein, um kommentieren zu k&ouml;nnen."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:83
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:83
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
 msgstr "<span class=\"loggedin\">Angemeldet als <a href=\"%1$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\">Abmelden?</a></span>"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:90
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:90
 msgid "Your email is <em>never</em> published nor shared."
 msgstr "Ihre E-Mail wird <em>niemals</em> veröffentlicht oder verteilt."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:90
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:90
 msgid "Required fields are marked <span class=\"required\">*</span>"
 msgstr "Benötigte Felder sind mit <span class=\"required\">*</span> markiert"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:93
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:93
 msgid "Name"
 msgstr "Name"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:93
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:98
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:93
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:98
 msgid "<span class=\"required\">*</span>"
 msgstr "<span class=\"required\">*</span>"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:98
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:98
 msgid "Email"
 msgstr "E-Mail"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:103
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:103
 msgid "Website"
 msgstr "Website"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:110
-msgid "Comment"
-msgstr "Kommentar"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:115
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:115
 msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
 msgstr "Du kannst diese <abbr title=\"HyperText Markup Language\">HTML</abbr> Tags und Attribute verwenden:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:120
-msgid "Post Comment"
-msgstr "Absenden"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/page.php:14
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/page.php:38
 msgid "Pages: "
 msgstr "Seiten: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:30
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:50
 msgid "Nothing Found"
 msgstr "Nichts gefunden"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:32
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:52
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "Entschuldigung, aber Nichts passt auf Ihre Suchkriterien. Bitte versuchen Sie es noch einmal mit anderen Schlüsselwörtern."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:37
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:57
 msgid "Find"
 msgstr "Suchen"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:132
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:147
 msgid "Author Archives: "
 msgstr "Autorenarchiv: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:138
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:153
 msgid "Category Archives:"
 msgstr "Kategorien-Archiv:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:147
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:162
 msgid "Search Results for:"
 msgstr "Suchergebnisse für:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:153
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:168
 msgid "Tag Archives:"
 msgstr "Tag-Archiv:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:159
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:174
 #, php-format
 msgid "Daily Archives: <span>%s</span>"
 msgstr "Tägliches Archiv: <span>%s</span>"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:163
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:178
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
 msgstr "Monatliches Archiv: <span>%s</span>"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:167
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:182
 #, php-format
 msgid "Yearly Archives: <span>%s</span>"
 msgstr "Jährliches Archiv: <span>%s</span>"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:171
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:186
 msgid "Blog Archives"
 msgstr "Blog-Archiv"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:194
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:641
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:209
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:725
 msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&laquo;</span> Ältere Beiträge"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:195
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:642
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:210
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:726
 msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
 msgstr "Neuere Beiträge <span class=\"meta-nav\">&raquo;</span>"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:360
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:530
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:394
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:618
 msgid "Edit post"
 msgstr "Bearbeiten"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:368
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:406
 msgid "Not Found"
 msgstr "Nicht gefunden"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:373
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:583
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:411
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
 msgid "Permalink to "
 msgstr "Permanent-Link zu "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:381
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:441
 msgid "By "
 msgstr "Von "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:384
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:444
 msgid "View all posts by "
 msgstr "Alle Beiträge zeigen von "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:387
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:455
 msgid "Published: "
 msgstr "Veröffentlicht am: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:457
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:523
 msgid "Archives by Category"
 msgstr "Archive nach Monat"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:468
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:534
 msgid "Archives by Month"
 msgstr "Archive nach Monat"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:496
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:562
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
 msgstr "Es tut uns Leid, aber wir konnten nicht finden, was Sie gewünscht haben. Vielleicht hilft eine Suche."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:512
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:578
 msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
 msgstr "Mehr lesen <span class=\"meta-nav\">&raquo;</span>"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:537
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:629
 msgid "This entry was posted in "
 msgstr "Dieser Eintrag wurde veröffentlicht in "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:540
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:632
 msgid "Also posted in "
 msgstr "Ver&ouml;ffentlicht in "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:543
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:635
 msgid "Posted in "
 msgstr "Ver&ouml;ffentlicht in "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:550
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:646
 msgid " and tagged"
 msgstr " und getagged "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:553
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:649
 msgid " Also tagged "
 msgstr " Auch getagged "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:555
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:651
 msgid "Tagged"
 msgstr "Getagged"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:564
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:567
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:570
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:663
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:666
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:669
 msgid "Comment on "
 msgstr "Kommentar"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:565
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:664
 msgid " Comments"
 msgstr " Kommentare"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:568
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:667
 msgid " Comment"
 msgstr " Kommentar"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:571
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:670
 msgid "Leave a comment"
 msgstr "Kommentieren"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:574
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:673
 msgid "Comments closed"
 msgstr "Kommentare geschlossen"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:583
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
 msgid ". Bookmark the "
 msgstr ". Bookmarken: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:584
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:687
 msgid "permalink"
 msgstr "Permanent-Link"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:586
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:594
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:689
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:697
 msgid "Post a comment"
 msgstr "Kommentieren"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:587
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:690
 msgid " or leave a trackback: "
 msgstr " oder ein Trackback hinterlassen: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:588
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:591
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:691
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:694
 msgid "Trackback URL for your post"
 msgstr "Trackback-URL für Ihren Beitrag"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:588
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:591
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:691
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:694
 msgid "Trackback URL"
 msgstr "Trackback-URL"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:590
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:693
 msgid " Comments are closed, but you can leave a trackback: "
 msgstr " Kommentare sind geschlossen, aber Sie können ein Trackback hinterlassen: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:593
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:696
 msgid " Trackbacks are closed, but you can "
 msgstr " Trackbacks sind geschlossen, aber sie können "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:594
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:697
 msgid "post a comment"
 msgstr "Kommentieren"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/content-extensions.php:596
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:699
 msgid " Both comments and trackbacks are currently closed."
 msgstr " Momentan ist weder das Kommentieren noch das Setzen eines Trackbacks m&ouml;glich."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:10
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:10
 #, php-format
 msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
 msgstr "Erstellt am %1$s um %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\">Permanent-Link</a>"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:15
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:15
 msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
 msgstr "\t\t\t\t\t<span class='unapproved'>Ihr Kommentar wartet auf Freischaltung.</span>\n"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:22
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:22
 msgid "Reply"
 msgstr "Antworten"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:23
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:23
 msgid "Log in to reply."
 msgstr "Sie müssen eingeloggt sein, um antworten zu können."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:37
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:37
 #, php-format
 msgid "By %1$s on %2$s at %3$s"
 msgstr "Von %1$s am %2$s um %3$s"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:42
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:42
 msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
 msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Ihr Trackback wartet auf Freischaltung.</span>\\n"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/header-extensions.php:244
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:73
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:251
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:77
 msgid "Posts RSS feed"
 msgstr "RSS-Feed der Beiträge"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/header-extensions.php:262
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:74
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:269
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:78
 msgid "Comments RSS feed"
 msgstr "RSS-Feed der Kommentare"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/header-extensions.php:394
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:401
 msgid "Skip navigation to the content"
 msgstr "Navigation zu Inhalt überspringen"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/header-extensions.php:394
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:401
 msgid "Skip to content"
 msgstr "Zu Inhalt springen"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/helpers.php:31
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/helpers.php:44
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/helpers.php:31
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/helpers.php:44
 msgid "There is no excerpt because this is a protected post."
 msgstr "Es existiert kein Auszug, da dieser Beitrag geschützt ist."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/shortcodes.php:16
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/shortcodes.php:16
 msgid "Login"
 msgstr "Anmelden"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/shortcodes.php:18
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/shortcodes.php:18
 msgid "Logout"
 msgstr "Abmelden &raquo;"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:13
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:13
 msgid "Index Insert Position"
 msgstr "Index Position zum Einfügen"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:14
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:14
 msgid "The widgetized Index Insert will follow after this post number."
 msgstr "The widgetized Index Insert erfolgt nach dem Beitrag Nummer (wie angegeben). "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:19
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:19
 msgid "Info on Author Page"
 msgstr "Info auf der Autorenseite"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:20
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:20
 msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
 msgstr "Zeige eine <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">vCard</a>—mit dem Avatar, Bio und E-Mail Adresse auf der Seite des Autors an."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:25
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:25
 msgid "Text in Footer"
 msgstr "Text im Footer"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:26
-msgid "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:26
+msgid "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
 msgstr "Sie können die folgenden Shortcodes verwenden: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:28
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:28
 msgid "Powered by [wp-link]. Built on the [theme-link]."
 msgstr "Angetrieben von [wp-link]. Darstellung basiert auf [theme-link]."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:76
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:122
 msgid "settings saved."
 msgstr "Einstellungen gespeichert."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:77
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:123
 msgid "settings reset."
 msgstr "Einstellungen zur&uuml;ckgesetzt"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:78
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:124
 msgid "widgets reset."
 msgstr "Widgets zur&uuml;ckgesetzt"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:191
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:125
+msgid "definitions created."
+msgstr "Definitionen erstellt."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:126
+msgid "failed to create directory:"
+msgstr "Erstellen des Verzeichnisses fehlgeschlagen:"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:127
+msgid "failed to create the file:"
+msgstr "Erstellen der Datei fehlgeschlagen:"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:240
 msgid "Save changes"
 msgstr "Änderungen speichern"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:197
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:246
 msgid "Reset"
 msgstr "Zur&uuml;cksetzen"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:203
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:252
 msgid "Reset Widgets"
 msgstr "Widgets zur&uuml;cksetzen"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:208
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:258
+msgid "Create Definitions"
+msgstr "Erstelle Definitionen"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:263
 msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
 msgstr "Um mehr Information über dieses Thema zu erhalten, <a href=\"http://themeshaper.com\">besuchen Sie ThemeShaper</a>. Bitte besuchen Sie die <a href=\"http://themeshaper.com/forums/\">ThemeShaper Foren</a> falls Sie irgendwelche Fragen zu Thematic haben."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets-extensions.php:11
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:12
 msgid "To search, type and hit enter"
 msgstr "Suchtext eingeben"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets-extensions.php:17
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:39
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:254
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:18
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:281
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:43
 msgid "Search"
 msgstr "Suchen"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:51
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:256
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:43
+msgid "The primary widget area, most often used as a sidebar."
+msgstr "Der primäre Widget Bereich, hauptsächlich als Sidebar verwendet."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:58
+msgid "The secondary widget area, most often used as a sidebar."
+msgstr "Der sekundäre Widget Bereich, hauptsächlich als Sidebar verwendet."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:73
+msgid "The 1st widget area in the footer."
+msgstr "Der erste Widget Bereich im Footer."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:88
+msgid "The 2nd widget area in the footer."
+msgstr "Der zweite Widget Bereich im Footer."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:103
+msgid "The 3rd widget area in the footer."
+msgstr "Der dritte Widget Bereich im Footer."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:118
+msgid "The top widget area displayed on the index page."
+msgstr "Der Widget Bereich oberhalb des Contents der Index Seite."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:133
+msgid "The widget area inserted after x posts on the index page."
+msgstr "Der eingeschobene Widget Bereich auf der Index Seite."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:148
+msgid "The bottom widget area displayed on the index page."
+msgstr "Der Widget Bereich unterhalb des Contents der Index Seite."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:163
+msgid "The top widget area displayed on a single post."
+msgstr "Der Widget Bereich oberhalb des COntents einer Single Post."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:178
+msgid "The widget area inserted between the post and the comments on a single post."
+msgstr "Der eingeschobene Widget Bereich einer Single Post."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:193
+msgid "The bottom widget area displayed on a single post."
+msgstr "Der Widget Bereich unterhalb des Contents einer Single Post."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:208
+msgid "The top widget area displayed on a page."
+msgstr "Der Widget Bereich oberhalb des Contents einer Page."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:223
+msgid "The bottom widget area displayed on a page."
+msgstr "Der Widget Bereich unterhalb des Contents einer Page."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:283
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:55
 msgid "Meta"
 msgstr "Meta"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:68
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:258
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:259
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:285
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:286
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:72
 msgid "RSS Links"
 msgstr "RSS-Links:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:73
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:77
 msgid "All posts"
 msgstr "Alle Beiträge"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:74
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:78
 msgid "All comments"
 msgstr "Alle Kommentare"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:92
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:96
 msgid "Title:"
 msgstr "Titel:"
 
+#~ msgid "<span>%d</span> Comments"
+#~ msgstr "<span>%d</span> Kommentare"
+#~ msgid "<span>One</span> Comment"
+#~ msgstr "<span>Ein</span> Kommentar"
+#~ msgid "Post a Comment"
+#~ msgstr "Ihr Kommentar"
+#~ msgid "Post a Reply to %s"
+#~ msgstr "Schreibe eine Antwort an %s"
+#~ msgid "Comment"
+#~ msgstr "Kommentar"
+#~ msgid "Post Comment"
+#~ msgstr "Absenden"
 #~ msgid "Pages"
 #~ msgstr "Seiten"
 #~ msgid "Categories"
