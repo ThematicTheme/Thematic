@@ -1,43 +1,64 @@
 <?php
-global $options;
-foreach ($options as $value) {
-    if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    else { $$value['id'] = get_option( $value['id'] ); }
+    // calling the theme options
+    global $options;
+    foreach ($options as $value) {
+        if (get_option( $value['id'] ) === FALSE) { 
+            $$value['id'] = $value['std']; 
+        } else {
+            $$value['id'] = get_option( $value['id'] );
+        }
     }
+
+    // calling the header.php
+    get_header();
+
+    // action hook for placing content above #container
+    thematic_abovecontainer();
+
 ?>
-<?php
 
-get_header();
-
-thematic_abovecontainer();
-
-?>
 	<div id="container">
 		<div id="content">
 
-<?php the_post(); ?>
-			<?php thematic_navigation_above();?>
+            <?php 
+            
+            the_post();
+            
+            // create the navigation above the content
+			thematic_navigation_above();
 
-<?php get_sidebar('single-top') ?>
+            // calling the widget area 'single-top'
+            get_sidebar('single-top');
 
-<?php thematic_singlepost() ?>
+            // action hook creating the single post
+            thematic_singlepost();
 			
-<?php get_sidebar('single-insert') ?>
+            // calling the widget area 'single-insert'
+            get_sidebar('single-insert');
 
-			<?php thematic_navigation_below();?>
+            // create the navigation below the content
+			thematic_navigation_below();
 
-<?php thematic_comments_template(); ?>
+            // calling the comments template
+            thematic_comments_template();
 
-<?php get_sidebar('single-bottom') ?>
+            // calling the widget area 'single-bottom'
+            get_sidebar('single-bottom');
+            
+            ?>
 
 		</div><!-- #content -->
 	</div><!-- #container -->
 
 <?php 
 
+    // action hook for placing content below #container
     thematic_belowcontainer();
 
+    // calling the standard sidebar 
     thematic_sidebar();
     
+    // calling footer.php
     get_footer();
+
 ?>
