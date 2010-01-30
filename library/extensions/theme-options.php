@@ -237,26 +237,26 @@ function mytheme_admin() {
 	</table>
 
 	<p class="submit">
-		<input name="save" type="submit" value="<?php _e('Save changes','thematic'); ?>" />    
+		<input class="button-primary" name="save" type="submit" value="<?php _e('Save changes','thematic'); ?>" />    
 		<input type="hidden" name="action" value="save" />
 	</p>
 </form>
 <form method="post" action="">
 	<p class="submit">
-		<input name="reset" type="submit" value="<?php _e('Reset','thematic'); ?>" />
+		<input class="button-primary" name="create_definitions" type="submit" value="<?php _e('Create Definitions','thematic'); ?>" />
+		<input type="hidden" name="action" value="createdefinitions" />
+	</p>
+</form>
+<form method="post" action="">
+	<p class="submit">
+		<input class="button-secondary" name="reset" type="submit" value="<?php _e('Reset','thematic'); ?>" />
 		<input type="hidden" name="action" value="reset" />
 	</p>
 </form>
 <form method="post" action="">
 	<p class="submit">
-		<input name="reset_widgets" type="submit" value="<?php _e('Reset Widgets','thematic'); ?>" />
+		<input class="button-secondary" name="reset_widgets" type="submit" value="<?php _e('Reset Widgets','thematic'); ?>" />
 		<input type="hidden" name="action" value="resetwidgets" />
-	</p>
-</form>
-<form method="post" action="">
-	<p class="submit">
-		<input name="create_definitions" type="submit" value="<?php _e('Create Definitions','thematic'); ?>" />
-		<input type="hidden" name="action" value="createdefinitions" />
 	</p>
 </form>
 
