@@ -390,7 +390,7 @@ function thematic_postheader_posteditlink() {
     
     global $id;
     
-    $posteditlink = '<a href="' . thm_bloginfo('wpurl', FALSE) . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+    $posteditlink = '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
     $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
     $posteditlink .= __('Edit', 'thematic') . '</a>';
     return apply_filters('thematic_postheader_posteditlink',$posteditlink); 
@@ -562,7 +562,7 @@ function thematic_404() {
 					<p><?php _e('Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'thematic') ?></p>
 				</div>
 				
-				<form id="error404-searchform" method="get" action="<?php thm_bloginfo('home', TRUE) ?>">
+				<form id="error404-searchform" method="get" action="<?php bloginfo('home') ?>">
 					<div>
 						<input id="error404-s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="40" />
 						<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'thematic') ?>" />
@@ -614,7 +614,7 @@ function thematic_postfooter_posteditlink() {
 
     global $id;
     
-    $posteditlink = '<span class="edit"><a href="' . thm_bloginfo('wpurl', FALSE) . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+    $posteditlink = '<span class="edit"><a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
     $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
     $posteditlink .= __('Edit', 'thematic') . '</a></span>';
     return apply_filters('thematic_postfooter_posteditlink',$posteditlink); 

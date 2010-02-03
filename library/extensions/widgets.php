@@ -74,8 +74,8 @@ function widget_thematic_rsslinks($args) {
 		<?php echo $before_widget ?>
 			<?php echo thematic_before_title() . $title . thematic_after_title(); ?>
 			<ul>
-				<li><a href="<?php thm_bloginfo('rss2_url', TRUE) ?>" title="<?php echo wp_specialchars(thm_bloginfo('name', FALSE), 1) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>
-				<li><a href="<?php thm_bloginfo('comments_rss2_url', TRUE) ?>" title="<?php echo wp_specialchars(thm_bloginfo('name', FALSE), 1) ?> <?php _e('Comments RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'thematic') ?></a></li>
+				<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>
+				<li><a href="<?php bloginfo('comments_rss2_url') ?>" title="<?php echo wp_specialchars(get_bloginfo('name'), 1) ?> <?php _e('Comments RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All comments', 'thematic') ?></a></li>
 			</ul>
 		<?php echo $after_widget ?>
 <?php

@@ -27,14 +27,14 @@ function pageGetPageNo() {
 // Creates the content of the Title tag
 // Credits: Tarski Theme
 function thematic_doctitle() {
-	$site_name = thm_bloginfo('name', FALSE);
+	$site_name = get_bloginfo('name');
     $separator = '|';
         	
     if ( is_single() ) {
       $content = single_post_title('', FALSE);
     }
     elseif ( is_home() || is_front_page() ) { 
-      $content = thm_bloginfo('description', FALSE);
+      $content = get_bloginfo('description');
     }
     elseif ( is_page() ) { 
       $content = single_post_title('', FALSE); 
@@ -55,7 +55,7 @@ function thematic_doctitle() {
       $content = __('Not Found', 'thematic'); 
     }
     else { 
-      $content = thm_bloginfo('description', FALSE);
+      $content = get_bloginfo('description');
     }
 
     if (get_query_var('paged')) {
@@ -105,9 +105,9 @@ function thematic_doctitle() {
 function thematic_create_contenttype() {
     $content  = "\t";
     $content .= "<meta http-equiv=\"Content-Type\" content=\"";
-    $content .= thm_bloginfo('html_type', FALSE); 
+    $content .= get_bloginfo('html_type'); 
     $content .= "; charset=";
-    $content .= thm_bloginfo('charset', FALSE);
+    $content .= get_bloginfo('charset');
     $content .= "\" />";
     $content .= "\n\n";
     echo apply_filters('thematic_create_contenttype', $content);
@@ -177,7 +177,7 @@ function thematic_create_description() {
     		} elseif ( is_home() || is_front_page() ) {
         		$content ="\t";
         		$content .= "<meta name=\"description\" content=\"";
-        		$content .= thm_bloginfo('description', FALSE);
+        		$content .= get_bloginfo('description');
         		$content .= "\" />";
         		$content .= "\n\n";
     		}
@@ -231,7 +231,7 @@ function thematic_show_robots() {
 function thematic_create_stylesheet() {
     $content = "\t";
     $content .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"";
-    $content .= thm_bloginfo('stylesheet_url', FALSE);
+    $content .= get_bloginfo('stylesheet_url');
     $content .= "\" />";
     $content .= "\n\n";
     echo apply_filters('thematic_create_stylesheet', $content);
@@ -245,9 +245,9 @@ function thematic_show_rss() {
     if ($display) {
         $content = "\t";
         $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
-        $content .= thm_bloginfo('rss2_url', FALSE);
+        $content .= get_bloginfo('rss2_url');
         $content .= "\" title=\"";
-        $content .= wp_specialchars(thm_bloginfo('name', FALSE), 1);
+        $content .= wp_specialchars(get_bloginfo('name'), 1);
         $content .= " " . __('Posts RSS feed', 'thematic');
         $content .= "\" />";
         $content .= "\n";
@@ -263,9 +263,9 @@ function thematic_show_commentsrss() {
     if ($display) {
         $content = "\t";
         $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
-        $content .= thm_bloginfo('comments_rss2_url', FALSE);
+        $content .= get_bloginfo('comments_rss2_url');
         $content .= "\" title=\"";
-        $content .= wp_specialchars(thm_bloginfo('name', FALSE), 1);
+        $content .= wp_specialchars(get_bloginfo('name'), 1);
         $content .= " " . __('Comments RSS feed', 'thematic');
         $content .= "\" />";
         $content .= "\n\n";
@@ -281,7 +281,7 @@ function thematic_show_pingback() {
     if ($display) {
         $content = "\t";
         $content .= "<link rel=\"pingback\" href=\"";
-        $content .= thm_bloginfo('pingback_url', FALSE);
+        $content .= get_bloginfo('pingback_url');
         $content .= "\" />";
         $content .= "\n\n";
         echo apply_filters('thematic_pingback_url',$content);
@@ -303,7 +303,7 @@ function thematic_show_commentreply() {
 function thematic_head_scripts() {
     $scriptdir_start = "\t";
 		$scriptdir_start .= '<script type="text/javascript" src="';
-    $scriptdir_start .= thm_bloginfo('template_directory', FALSE);
+    $scriptdir_start .= get_bloginfo('template_directory');
     $scriptdir_start .= '/library/scripts/';
     
     $scriptdir_end = '"></script>';
@@ -369,7 +369,7 @@ function thematic_header() {
 		// Create the blog title
 		// In the header div
 		function thematic_blogtitle() { ?>
-		    		<div id="blog-title"><span><a href="<?php thm_bloginfo('url', TRUE) ?>/" title="<?php thm_bloginfo('name', TRUE) ?>" rel="home"><?php thm_bloginfo('name', TRUE) ?></a></span></div>
+		    		<div id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
 		<?php }
 		add_action('thematic_header','thematic_blogtitle',3);
 		
@@ -378,9 +378,9 @@ function thematic_header() {
 		// In the header div
 		function thematic_blogdescription() {
 		    		if (is_home() || is_front_page()) { ?>
-		    		<h1 id="blog-description"><?php thm_bloginfo('description', TRUE) ?></h1>
+		    		<h1 id="blog-description"><?php bloginfo('description') ?></h1>
 		    		<?php } else { ?>	
-		    		<div id="blog-description"><?php thm_bloginfo('description', TRUE) ?></div>
+		    		<div id="blog-description"><?php bloginfo('description') ?></div>
 		    		<?php }
 		}
 		add_action('thematic_header','thematic_blogdescription',5);

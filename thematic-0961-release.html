@@ -1,0 +1,286 @@
+<h2>What's new in Thematic 0.9.6.1</h2>
+
+ 
+<ul>
+
+<li><p>Added two new hooks:</p>
+	<ul>
+
+		<li><code>thematic_abovecontainer()</code></li>
+		<li><code>thematic_belowcontainer()</code></li>
+	</ul>
+</li>
+
+<li><p>Thematic prevents the creation of the WordPress Generator. This can be filtered using a filter for <code>thematic_hide_generators</code>. Return <code>TRUE</code> and the WordPress Generator will be created.</p></li> 
+
+<li><p>Added some filters to <code>comments.php</code>:</p>
+	<ul>
+
+	<li>The standard text 'One Comment' can be filtered using <code>thematic_singlecomment_text</code>.</li>
+
+	<li>The standard text 'n Comments' can be filtered using <code>thematic_multiplecomments_text</code>.</li>
+
+	<li>The standard text 'Post a Comment' can be filtered using <code>thematic_postcomment_text</code>.</li>
+
+	<li>The standard text 'Post a Reply to %s' can be filtered using <code>thematic_postreply_text</code>.</li>
+
+	<li>The standard text 'Comment' for the text box can be filtered using <code>thematic_commentbox_text</code>.</li>
+
+	<li>The standard text 'Post Comment' for the send button can be filtered using <code>thematic_commentbutton_text</code>.</li>
+	
+	</ul> 
+</li>
+
+<li><p>Split up <code>thematic_postheader()</code> and <code>thematic_postfooter()</code> into sub-functions. With these new functions it is easier to rearrange the displayed data.</p>
+
+	<ul>
+	<li><code>thematic_postheader()</code></li>
+
+	<li><code>thematic_postheader_posttitle()</code></li>
+
+	<li><code>thematic_postheader_postmeta()</code></li>
+	</ul>
+
+	<ul>
+	<li><code>thematic_postmeta_authorlink()</code></li>
+	
+	<li><code>thematic_postmeta_entrydate()</code></li>
+	
+	<li><code>thematic_postmeta_editlink()</code></li>
+	</ul>
+
+	<ul>
+	<li><code>thematic_postfooter()</code></li>
+
+	<li><code>thematic_postfooter_posteditlink()</code></li>
+
+	<li><code>thematic_postfooter_postcategory()</code></li>
+
+	<li><code>thematic_postfooter_posttags()</code></li>
+
+	<li><code>thematic_postfooter_postconnect()</code></li>
+
+	<li><code>thematic_postfooter_postcomments()</code></li>
+	</ul>
+ </li>
+
+<li><p>The several parts of the body class can be switched off using the following filters:</p>
+	<ul>
+	<li><code>thematic_show_bodyclass</code> (master switch)</li>
+
+	<li><code>thematic_show_bc_wordpress</code></li>
+
+	<li><code>thematic_show_bc_datetime</code></li>
+
+	<li><code>thematic_show_bc_contenttype</code></li>
+
+	<li><code>thematic_show_bc_singular</code></li>
+
+	<li><code>thematic_show_bc_singlepost</code></li>
+
+	<li><code>thematic_show_bc_authorarchives</code></li>
+
+	<li><code>thematic_show_bc_categoryarchives</code></li>
+
+	<li><code>thematic_show_bc_tagarchives</code></li>
+
+	<li><code>thematic_show_bc_pages</code></li>
+
+	<li><code>thematic_show_bc_search</code></li>
+
+	<li><code>thematic_show_bc_loggedin</code></li>
+
+	<li><code>thematic_show_bc_browser</code></li>
+	</ul>
+
+</li>
+ 
+
+<li><p><code>&lt;head profile="http://gmpg.org/xfn/11"&gt;</code> can be filtered using <code>thematic_head_profile</code>.</p></li>
+ 
+
+<li><p>Complete rewrite of the widget areas:</p>
+
+	<p>The widget areas are now controlled by the <code>$thematic_widgetized_areas</code> array. This is the basic layout:</p>
+	<pre lang="php">
+$thematic_widgetized_areas = array(
+
+               'Primary Aside' => array(
+
+                               'admin_menu_order' => 100,
+
+                               'args' => array (
+
+                                               'name' => 'Primary Aside',
+
+                                               'id' => 'primary-aside',
+
+                                               'description' => __('The primary widget area, most often used as a sidebar.', 'thematic'),
+
+                                               'before_widget' => thematic_before_widget(),
+
+                                               'after_widget' => thematic_after_widget(),
+
+                                               'before_title' => thematic_before_title(),
+
+                                               'after_title' => thematic_after_title(),
+
+                                               ),
+
+                               'action_hook'    => 'widget_area_primary_aside',
+
+                               'function'                            => 'thematic_primary_aside',
+
+                               'priority'                              => 10,
+
+                               ),
+
+               )
+	</pre>              
+
+	<p>Using this array you can remove unnecessary widget areas with a filter before these are created:</p>	
+	<pre lang="php">
+function remove_widget_area($content) {
+
+         unset($content['Primary Aside']);
+
+         return $content;
+
+}
+
+add_filter('thematic_widgetized_areas', 'remove_widget_area');
+	</pre> 
+
+	<p><strong>Note:</strong> This will completely remove a widget area. Do not use this functionality with conditional tags to remove a widget area from a certain page / post.</p> 
+
+	<p>A widget area can be renamed:</p>
+
+	<pre lang="php">
+function rename_widget_area($content) {
+
+         $content['Primary Aside']['args']['name'] = 'My first Sidebar';
+
+         return $content;
+
+}
+
+add_filter('thematic_widgetized_areas', 'rename_widget_area');
+	</pre>
+
+	<p>Display a widget area based on a conditional tag:</p>
+	<pre lang="php">
+// First we create a new function to display the secondary aside only on pages:
+
+function childtheme_secondary_aside() {
+
+         if (is_page()) {
+
+                 if (is_sidebar_active('secondary-aside')) {
+
+                          echo thematic_before_widget_area('secondary-aside');
+
+                          dynamic_sidebar('secondary-aside');
+
+                          echo thematic_after_widget_area('secondary-aside');
+
+                 }
+
+         }
+
+}
+
+// ... and then ... without removing an action or so:
+
+function change_secondary_aside($content) {
+
+         $content['Secondary Aside']['function'] = 'childtheme_secondary_aside';
+
+         return $content;
+
+}
+
+add_filter('thematic_widgetized_areas','change_secondary_aside');
+</pre>
+ 
+<p>Create several widget areas that will be displayed on a certain position based on conditional tags:</p>
+
+	<pre lang="php">
+function change_secondary_aside($content) {
+
+         $content['Secondary Aside']['function'] = 'childtheme_secondary_aside';
+
+         $content['Secondary Aside Pages'] = array(
+
+                 'admin_menu_order' => 201,
+
+                 'args' => array (
+
+                          'name' => 'Secondary Aside Pages',
+
+                          'id' => 'secondary-aside-pages',
+
+                          'description' => __('The secondary widget area for pages.', 'childtheme'),
+
+                          'before_widget' => thematic_before_widget(),
+
+                          'after_widget' => thematic_after_widget(),
+
+                          'before_title' => thematic_before_title(),
+
+                          'after_title' => thematic_after_title(),
+
+                 ),
+
+                 'action_hook'    => 'thematic_secondary_aside',
+
+                 'function'                => 'childtheme_secondary_aside',
+
+                 'priority'                => 10,
+
+         );
+
+ 
+
+         return $content;
+
+}
+
+add_filter('thematic_widgetized_areas','change_secondary_aside');
+
+ 
+
+function childtheme_secondary_aside() {
+
+         if (is_sidebar_active('secondary-aside') && is_sidebar_active('secondary-aside-pages')) {
+
+                 echo thematic_before_widget_area('secondary-aside');
+
+                 if (is_page()) {
+
+                          dynamic_sidebar('secondary-aside-pages');
+
+                 } else {
+
+                          dynamic_sidebar('secondary-aside');
+
+                 }
+
+                 echo thematic_after_widget_area('secondary-aside');
+
+         }
+
+}
+	</pre>
+
+ 
+
+<li><h3>Fixed:</h3>
+	<ul> 
+		<li>Fixed a bug in <code>thematic_page_title()</code> not displaying a correct title in attachement.php</li>
+		
+		<li>Fixed the widget area 'Index Insert'.</li>
+		
+		<li>Fixed a bug in <code>thematic_create_robots()</code>.</li>
+	</ul>
+</li>
+</ul>

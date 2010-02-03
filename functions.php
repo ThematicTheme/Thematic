@@ -28,18 +28,14 @@ define('TEMPLATEVERSION', $templateversion);
 // load jQuery
 wp_enqueue_script('jquery');
 
-// Check if settings.php is available and load it
-if (file_exists(STYLESHEETPATH . "/settings/blog-{$blog_id}-definitions.php")) {
-	define('THEMATIC_SETTINGS', TRUE);
-	require_once(STYLESHEETPATH . "/settings/blog-{$blog_id}-definitions.php");
-} else {
-	define('THEMATIC_SETTINGS', FALSE);
-}
 // Path constants
 define('THEMELIB', TEMPLATEPATH . '/library');
 
 // Create Theme Options Page
 require_once(THEMELIB . '/extensions/theme-options.php');
+
+// Load legacy functions
+require_once(THEMELIB . '/legacy/deprecated.php');
 
 // Load widgets
 require_once(THEMELIB . '/extensions/widgets.php');
