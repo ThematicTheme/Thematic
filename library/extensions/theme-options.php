@@ -61,54 +61,7 @@ function mytheme_add_admin() {
             update_option('sidebars_widgets',NULL);
             header("Location: themes.php?page=theme-options.php&resetwidgets=true");
             die;
-        } else if ( 'createdefinitions' == $_REQUEST['action']) {
-			$filename = STYLESHEETPATH . '/settings/';
-			if (!file_exists($filename)) {
-				$handle = mkdir(STYLESHEETPATH . '/settings', 0755);
-				if (!$handle) {
-            		header("Location: themes.php?page=theme-options.php&directoryfailed=true");
-					die;
-				}  
-			}
-        	$filename = STYLESHEETPATH . "/settings/blog-{$blog_id}-definitions.php";
-        	$content = 'if(preg_match(\'#\' . basename(__FILE__) . \'#\', $_SERVER[\'PHP_SELF\'])) { die(\'You are not allowed to call this page directly.\'); }' . "\n";
-			$content .= '$thm_settings = array (' . "\n";
-			$content .= '						\'url\' => "' . get_bloginfo('url') . '",' . "\n";
-			$content .= '						\'home\' => "' . get_bloginfo('home') . '",' . "\n";
-			$content .= '						\'siteurl\' => "' . get_bloginfo('siteurl') . '",' . "\n";
-			$content .= '						\'wpurl\' => "' . get_bloginfo('wpurl') . '",' . "\n";
-			$content .= '						\'description\' => "' . get_bloginfo('description') . '",' . "\n";
-			$content .= '						\'rdf_url\' => "' . get_bloginfo('rdf_url') . '",' . "\n";
-			$content .= '						\'rss_url\' => "' . get_bloginfo('rss_url') . '",' . "\n";
-			$content .= '						\'rss2_url\' => "' . get_bloginfo('rss2_url') . '",' . "\n";
-			$content .= '						\'atom_url\' => "' . get_bloginfo('atom_url') . '",' . "\n";
-			$content .= '						\'comments_atom_url\' => "' . get_bloginfo('comments_atom_url') . '",' . "\n";
-			$content .= '						\'comments_rss2_url\' => "' . get_bloginfo('comments_rss2_url') . '",' . "\n";
-			$content .= '						\'pingback_url\' => "' . get_bloginfo('pingback_url') . '",' . "\n";
-			$content .= '						\'stylesheet_url\' => "' . get_bloginfo('stylesheet_url') . '",' . "\n";
-			$content .= '						\'stylesheet_directory\' => "' . get_bloginfo('stylesheet_directory') . '",' . "\n";
-			$content .= '						\'template_directory\' => "' . get_bloginfo('template_directory') . '",' . "\n";
-			$content .= '						\'template_url\' => "' . get_bloginfo('template_url') . '",' . "\n";
-			$content .= '						\'admin_email\' => "' . get_bloginfo('admin_email') . '",' . "\n";
-			$content .= '						\'charset\' => "' . get_bloginfo('charset') . '",' . "\n";
-			$content .= '						\'html_type\' => "' . get_bloginfo('html_type') . '",' . "\n";
-			$content .= '						\'version\' => "' . get_bloginfo('version') . '",' . "\n";
-			$content .= '						\'language\' => "' . get_bloginfo('language') . '",' . "\n";
-			$content .= '						\'text_direction\' => "' . get_bloginfo('text_direction') . '",' . "\n";
-			$content .= '						\'name\' => "' . get_bloginfo('name') . '",' . "\n";
-
-			$content .= ');' . "\n";
- 			$handle = fopen($filename, 'w');
-			if (!$handle) {
-            	header("Location: themes.php?page=theme-options.php&filefailed=true");
-					die;
-			}  
-			fwrite($handle, '<?php' . "\n");
-			fwrite($handle, $content);
-			fclose($handle);
-            header("Location: themes.php?page=theme-options.php&createdefinitions=true");
-			die;
-        }
+        } 
     }
 
     add_theme_page($themename." Options", "Thematic Options", 'edit_themes', basename(__FILE__), 'mytheme_admin');
@@ -122,9 +75,6 @@ function mytheme_admin() {
     if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings saved.','thematic').'</strong></p></div>';
     if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings reset.','thematic').'</strong></p></div>';
     if ( $_REQUEST['resetwidgets'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('widgets reset.','thematic').'</strong></p></div>';
-    if ( $_REQUEST['createdefinitions'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('definitions created.','thematic').'</strong></p></div>';
-    if ( $_REQUEST['directoryfailed'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('failed to create directory:','thematic').' '.STYLESHEETPATH . '/settings/'.'</strong></p></div>';
-    if ( $_REQUEST['filefailed'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('failed to create the file:','thematic').' '.STYLESHEETPATH . '/settings/settings.php'.'</strong></p></div>';
     
 ?>
 <div class="wrap">
@@ -239,12 +189,6 @@ function mytheme_admin() {
 	<p class="submit">
 		<input class="button-primary" name="save" type="submit" value="<?php _e('Save changes','thematic'); ?>" />    
 		<input type="hidden" name="action" value="save" />
-	</p>
-</form>
-<form method="post" action="">
-	<p class="submit">
-		<input class="button-primary" name="create_definitions" type="submit" value="<?php _e('Create Definitions','thematic'); ?>" />
-		<input type="hidden" name="action" value="createdefinitions" />
 	</p>
 </form>
 <form method="post" action="">
