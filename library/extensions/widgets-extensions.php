@@ -290,24 +290,10 @@ function thematic_widgets_init() {
 		'primary-aside'  => array( 'search', 'pages', 'categories', 'archives' ),
 		'secondary-aside'  => array( 'links', 'rss-links', 'meta' )
 		);
-        
-    $preset_widgets = apply_filters('thematic_preset_widgets',$preset_widgets );
-    
-    $existing_widgets = array();
-    
-    $existing_widgets = get_option( 'sidebars_widgets' );
 
-	if ( isset( $_GET['activated'] ) ) {
-	   
-        foreach ($thematic_widgetized_areas as $key => $value) {
-            if (is_sidebar_active( $thematic_widgetized_areas[$key]['args']['id'] )) {
-                $preset_widgets[$thematic_widgetized_areas[$key]['args']['id']] = $existing_widgets[$thematic_widgetized_areas[$key]['args']['id']];
-            }
-        }
-       
-        update_option( 'sidebars_widgets', $preset_widgets );
-	
-    }
+    if ( isset( $_GET['activated'] ) ) {
+  		update_option( 'sidebars_widgets', apply_filters('thematic_preset_widgets',$preset_widgets ));
+  	}
 
 }
 
