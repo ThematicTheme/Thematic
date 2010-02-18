@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thematic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-23 22:16+0100\n"
+"POT-Creation-Date: 2010-02-18 20:58+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Chris Gossmann <chris.gossmann@googlemail.com>\n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:48
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:39
 msgid "Pages:"
 msgstr ""
 
@@ -84,16 +84,42 @@ msgstr ""
 msgid "Pages: "
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:50
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:41
 msgid "Nothing Found"
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:52
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:43
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:57
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:48
 msgid "Find"
+msgstr ""
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:76
+msgid "<span>One</span> Comment"
+msgstr ""
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:83
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr ""
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:96
+msgid "Post a Comment"
+msgstr ""
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:103
+#, php-format
+msgid "Post a Reply to %s"
+msgstr ""
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:110
+msgid "Comment"
+msgstr ""
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:117
+msgid "Post Comment"
 msgstr ""
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:147
@@ -357,47 +383,31 @@ msgstr ""
 msgid "Powered by [wp-link]. Built on the [theme-link]."
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:122
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:75
 msgid "settings saved."
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:123
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:76
 msgid "settings reset."
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:124
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:77
 msgid "widgets reset."
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:125
-msgid "definitions created."
-msgstr ""
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:126
-msgid "failed to create directory:"
-msgstr ""
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:127
-msgid "failed to create the file:"
-msgstr ""
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:240
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:190
 msgid "Save changes"
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:246
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:196
 msgid "Reset"
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:252
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:202
 msgid "Reset Widgets"
 msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:258
-msgid "Create Definitions"
-msgstr ""
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:263
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:207
 msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
 msgstr ""
 
