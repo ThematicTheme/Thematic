@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-23 22:16+0100\n"
+"POT-Creation-Date: 2010-02-18 20:58+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: danny <dannydamnboy@gmail.com>\n"
+"Last-Translator: Chris Gossmann <chris.gossmann@googlemail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +16,7 @@ msgstr ""
 msgid "Edit"
 msgstr "Modifica"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:48
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:39
 msgid "Pages:"
 msgstr "Pagine:"
 
@@ -80,17 +80,43 @@ msgstr "Puoi usare questi <abbr title=\"HyperText Markup Language\">HTML</abbr> 
 msgid "Pages: "
 msgstr "Pagine: "
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:50
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:41
 msgid "Nothing Found"
 msgstr "Nessun Risultato"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:52
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:43
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "Nessun risultato per i termini utilizzati. Prova ancora con termini differenti."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:57
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:48
 msgid "Find"
 msgstr "Trova"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:76
+msgid "<span>One</span> Comment"
+msgstr "<span>Un</span> Commento"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:83
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span> Commenti"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:96
+msgid "Post a Comment"
+msgstr "Scrivi un Commento"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:103
+#, php-format
+msgid "Post a Reply to %s"
+msgstr "Rispondi a %s"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:110
+msgid "Comment"
+msgstr "Commenta"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:117
+msgid "Post Comment"
+msgstr "Commenta"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:147
 msgid "Author Archives: "
@@ -353,47 +379,31 @@ msgstr "Puoi usare i seguenti shortcodes nel footer: [wp-link] [theme-link] [log
 msgid "Powered by [wp-link]. Built on the [theme-link]."
 msgstr "Powered by [wp-link]. Realizzato con [theme-link]."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:122
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:75
 msgid "settings saved."
 msgstr "impostazioni salvate."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:123
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:76
 msgid "settings reset."
 msgstr "impostazioni ripristinate."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:124
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:77
 msgid "widgets reset."
 msgstr "widget ripristinate."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:125
-msgid "definitions created."
-msgstr "definitions create."
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:126
-msgid "failed to create directory:"
-msgstr "creazione directory non riuscita:"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:127
-msgid "failed to create the file:"
-msgstr "creazione del file non riuscita:"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:240
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:190
 msgid "Save changes"
 msgstr "Salva le modifiche"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:246
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:196
 msgid "Reset"
 msgstr "Ripristina"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:252
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:202
 msgid "Reset Widgets"
 msgstr "Ripristina le Widget"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:258
-msgid "Create Definitions"
-msgstr "Crea Definitions"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:263
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:207
 msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
 msgstr "Per maggiori informazioni su questo tema, <a href=\"http://themeshaper.com\">visita ThemeShaper</a>. Visita i <a href=\"http://themeshaper.com/forums/\">Forums ThemeShaper</a> se hai domande su Thematic."
 
@@ -482,18 +492,14 @@ msgstr "Tutti i commenti"
 msgid "Title:"
 msgstr "Titolo:"
 
-#~ msgid "<span>%d</span> Comments"
-#~ msgstr "<span>%d</span> Commenti"
-#~ msgid "<span>One</span> Comment"
-#~ msgstr "<span>Un</span> Commento"
-#~ msgid "Post a Comment"
-#~ msgstr "Scrivi un Commento"
-#~ msgid "Post a Reply to %s"
-#~ msgstr "Rispondi a %s"
-#~ msgid "Comment"
-#~ msgstr "Commenta"
-#~ msgid "Post Comment"
-#~ msgstr "Commenta"
+#~ msgid "definitions created."
+#~ msgstr "definitions create."
+#~ msgid "failed to create directory:"
+#~ msgstr "creazione directory non riuscita:"
+#~ msgid "failed to create the file:"
+#~ msgstr "creazione del file non riuscita:"
+#~ msgid "Create Definitions"
+#~ msgstr "Crea Definitions"
 #~ msgid "Pages"
 #~ msgstr "Pagine"
 #~ msgid "Categories"
