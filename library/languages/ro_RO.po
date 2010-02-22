@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thematic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-23 22:16+0100\n"
-"PO-Revision-Date: 2010-01-25 12:36+0200\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2010-02-18 20:58+0100\n"
+"PO-Revision-Date: 2010-02-22 20:11+0100\n"
+"Last-Translator: Chris Gossmann <chris.gossmann@googlemail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Edit"
 msgstr "Editare"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:48
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:39
 msgid "Pages:"
 msgstr "Pagini:"
 
@@ -90,17 +90,43 @@ msgstr "Puteţi folosi următoarele etichete şi atribute <abbr title=\"HyperTex
 msgid "Pages: "
 msgstr "Pagini: "
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:50
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:41
 msgid "Nothing Found"
 msgstr "Nu s-a găsit nimic"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:52
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:43
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "Ne pare rau, dar nimic nu se potriveşte cu căutarea dumneavoastră. Va rugăm să reîncercati cu alte cuvinte."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:57
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:48
 msgid "Find"
 msgstr "Caută"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:76
+msgid "<span>One</span> Comment"
+msgstr "<span>Un</span> Comentariu"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:83
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span> Comentarii"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:96
+msgid "Post a Comment"
+msgstr "Publicaţi un comentariu"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:103
+#, php-format
+msgid "Post a Reply to %s"
+msgstr "Publicaţi un raspuns la %s"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:110
+msgid "Comment"
+msgstr "Comentariu"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:117
+msgid "Post Comment"
+msgstr "Publicaţi comentariul"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:147
 msgid "Author Archives: "
@@ -363,47 +389,31 @@ msgstr "Puteţi folosi următoarele coduri scurte în textul din footer: [wp-lin
 msgid "Powered by [wp-link]. Built on the [theme-link]."
 msgstr "Propulsat de [wp-link]. Construit pe [theme-link]."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:122
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:75
 msgid "settings saved."
 msgstr "opţiuni salvate."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:123
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:76
 msgid "settings reset."
 msgstr "setări resetate."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:124
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:77
 msgid "widgets reset."
 msgstr "widget-uri resetate."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:125
-msgid "definitions created."
-msgstr "definiţii au fost create."
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:126
-msgid "failed to create directory:"
-msgstr "s-a eşuat în crearea directorului:"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:127
-msgid "failed to create the file:"
-msgstr "s-a eşuat în crearea fişierului:"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:240
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:190
 msgid "Save changes"
 msgstr "Salvare modificări"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:246
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:196
 msgid "Reset"
 msgstr "Resetare"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:252
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:202
 msgid "Reset Widgets"
 msgstr "Resetare Widget-uri"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:258
-msgid "Create Definitions"
-msgstr "Creare Definiţii"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:263
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:207
 msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
 msgstr "Pentru mai multe informaţii despre această temă, <a href=\"http://themeshaper.com\">vizitaţi ThemeShaper</a>. Vă rugăm vizitaţi <a href=\"http://themeshaper.com/forums/\">Forumurile ThemeShaper</a> dacă aveţi întrebări despre Thematic."
 
@@ -492,18 +502,14 @@ msgstr "Toate comentarile"
 msgid "Title:"
 msgstr "Titlu:"
 
-#~ msgid "<span>%d</span> Comments"
-#~ msgstr "<span>%d</span> Comentarii"
-#~ msgid "<span>One</span> Comment"
-#~ msgstr "<span>Un</span> Comentariu"
-#~ msgid "Post a Comment"
-#~ msgstr "Publicaţi un comentariu"
-#~ msgid "Post a Reply to %s"
-#~ msgstr "Publicaţi un raspuns la %s"
-#~ msgid "Comment"
-#~ msgstr "Comentariu"
-#~ msgid "Post Comment"
-#~ msgstr "Publicaţi comentariul"
+#~ msgid "definitions created."
+#~ msgstr "definiţii au fost create."
+#~ msgid "failed to create directory:"
+#~ msgstr "s-a eşuat în crearea directorului:"
+#~ msgid "failed to create the file:"
+#~ msgstr "s-a eşuat în crearea fişierului:"
+#~ msgid "Create Definitions"
+#~ msgstr "Creare Definiţii"
 #~ msgid "Pages"
 #~ msgstr "Pagini"
 #~ msgid "Categories"
