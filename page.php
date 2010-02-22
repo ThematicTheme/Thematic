@@ -45,7 +45,7 @@
         <?php
         
         if ( get_post_custom_values('comments') ) 
-            comments_template(); // Add a key/value of "comments" to enable comments on pages!
+            thematic_comments_template(); // Add a key/value of "comments" to enable comments on pages!
         
         // calling the widget area 'page-bottom'
         get_sidebar('page-bottom');
