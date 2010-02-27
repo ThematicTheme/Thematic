@@ -266,24 +266,15 @@ function thematic_widgets_init() {
 
 	// Remove WP default Widgets
 	// WP 2.8 function using $widget_class
-	if (function_exists('unregister_widget')) {
-		unregister_widget('WP_Widget_Meta');
-		unregister_widget('WP_Widget_Search');
-        unregister_widget('');
 	
-	// pre WP 2.8 function using $id
-	} else {
-		unregister_widget_control('meta');
-		unregister_widget_control('search');	
-	}
+    unregister_widget('WP_Widget_Meta');
+    unregister_widget('WP_Widget_Search');
 
 	// Finished intializing Widgets plugin, now let's load the thematic default widgets
-	register_sidebar_widget(__('Search', 'thematic'), 'widget_thematic_search', null, 'search');
-	unregister_widget_control('search');
-	register_sidebar_widget(__('Meta', 'thematic'), 'widget_thematic_meta', null, 'meta');
-	unregister_widget_control('meta');
-	register_sidebar_widget(array(__('RSS Links', 'thematic'), 'widgets'), 'widget_thematic_rsslinks');
-	register_widget_control(array(__('RSS Links', 'thematic'), 'widgets'), 'widget_thematic_rsslinks_control', 300, 90);
+	
+	register_widget('THM_Widget_Search');
+	register_widget('THM_Widget_Meta');
+	register_widget('THM_Widget_RSSlinks');
 
 	// Pre-set Widgets
 	$preset_widgets = array (
