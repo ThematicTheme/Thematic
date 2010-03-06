@@ -29,10 +29,8 @@ function thematic_search_form() {
 
 }
 
-// Widgets plugin: intializes the plugin after the widgets above have passed snuff
-
-function thematic_widgets_init() {
-
+function thematic_widgets_array()
+{
 	// Define array for the widgetized areas
 	$thematic_widgetized_areas = array(
 		'Primary Aside' => array(
@@ -232,16 +230,19 @@ function thematic_widgets_init() {
 			),
 		);
 	
-	$thematic_widgetized_areas = apply_filters('thematic_widgetized_areas', $thematic_widgetized_areas);
+	return apply_filters('thematic_widgetized_areas', $thematic_widgetized_areas);
+	
+}
+
+function thematic_widgets_init() {
+
+	$thematic_widgetized_areas = thematic_widgets_array();
 	
 	if ( !function_exists('register_sidebars') )
 			return;
 
 	foreach ($thematic_widgetized_areas as $key => $value) {
 		register_sidebar($thematic_widgetized_areas[$key]['args']);
-		if (!has_action($thematic_widgetized_areas[$key]['action_hook'], $thematic_widgetized_areas[$key]['function'])) {
-			add_action($thematic_widgetized_areas[$key]['action_hook'], $thematic_widgetized_areas[$key]['function'], $thematic_widgetized_areas[$key]['priority']);	
-		}
 	}
 	  
     // we will check for a Thematic widgets directory and and add and activate additional widgets
@@ -290,6 +291,20 @@ function thematic_widgets_init() {
 
 // Runs our code at the end to check that everything needed has loaded
 add_action( 'widgets_init', 'thematic_widgets_init' );
+
+// We connect the relevant functions to the action hooks
+function thematic_connect_functions() {
+
+	$thematic_widgetized_areas = thematic_widgets_array();
+
+	foreach ($thematic_widgetized_areas as $key => $value) {
+		if (!has_action($thematic_widgetized_areas[$key]['action_hook'], $thematic_widgetized_areas[$key]['function'])) {
+			add_action($thematic_widgetized_areas[$key]['action_hook'], $thematic_widgetized_areas[$key]['function'], $thematic_widgetized_areas[$key]['priority']);	
+		}
+	}
+
+}
+add_action('template_redirect', 'thematic_connect_functions');
 
 // We sort our array of widgetized areas to get a nice list display under wp-admin
 function thematic_sort_widgetized_areas($content) {
