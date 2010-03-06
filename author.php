@@ -1,11 +1,18 @@
 <?php
     // calling the theme options
-    global $options;
+    global $options, $blog_id;
     foreach ($options as $value) {
         if (get_option( $value['id'] ) === FALSE) { 
             $$value['id'] = $value['std']; 
         } else {
-            $$value['id'] = get_option( $value['id'] );
+        	if (THEMATIC_MB) 
+			{
+            	$$value['id'] = get_blog_option($blog_id, $value['id'] );
+			}
+			else
+			{
+            	$$value['id'] = get_option( $value['id'] );
+  			}
         }
     }
 

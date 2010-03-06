@@ -25,6 +25,9 @@ define('TEMPLATEAUTHOR', $ct['Author']);
 define('TEMPLATEURI', $ct['URI']);
 define('TEMPLATEVERSION', $templateversion);
 
+// Check for WordPress mu or WordPress 3.0
+define('THEMATIC_MB', function_exists(get_blog_option));
+
 // load jQuery
 wp_enqueue_script('jquery');
 

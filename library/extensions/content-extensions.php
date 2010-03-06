@@ -137,7 +137,7 @@ function thematic_page_title() {
 		$content = '';
 		if (is_attachment()) {
 				$content .= '<h2 class="page-title"><a href="';
-				$content .= get_permalink($post->post_parent);
+				$content .= apply_filters('the_permalink',get_permalink($post->post_parent));
 				$content .= '" rev="attachment"><span class="meta-nav">&laquo; </span>';
 				$content .= get_the_title($post->post_parent);
 				$content .= '</a></h2>';
@@ -270,10 +270,20 @@ add_action('thematic_categoryloop', 'thematic_category_loop');
 
 // The Index Loop
 function thematic_index_loop() {
-	global $options;
-	foreach ($options as $value) {
-    	if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; }
-    	else { $$value['id'] = get_option( $value['id'] ); }
+	global $options, $blog_id;
+    foreach ($options as $value) {
+        if (get_option( $value['id'] ) === FALSE) { 
+            $$value['id'] = $value['std']; 
+        } else {
+        	if (THEMATIC_MB) 
+			{
+            	$$value['id'] = get_option($blog_id,  $value['id'] );
+			}
+			else
+			{
+            	$$value['id'] = get_option( $value['id'] );
+  			}
+        }
     }
 		/* Count the number of posts so we can insert a widgetized area */ $count = 1;
 		while ( have_posts() ) : the_post() ?>
@@ -406,7 +416,7 @@ function thematic_postheader_posttitle() {
         $posttitle = '<h1 class="entry-title">' . __('Not Found', 'thematic') . "</h1>\n";
     } else {
         $posttitle = '<h2 class="entry-title"><a href="';
-        $posttitle .= get_permalink();
+        $posttitle .= apply_filters('the_permalink', get_permalink());
         $posttitle .= '" title="';
         $posttitle .= __('Permalink to ', 'thematic') . the_title_attribute('echo=0');
         $posttitle .= '" rel="bookmark">';
@@ -660,13 +670,13 @@ function thematic_postfooter_postcomments() {
     if (comments_open()) {
         $postcommentnumber = get_comments_number();
         if ($postcommentnumber > '1') {
-            $postcomments = ' <span class="comments-link"><a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
+            $postcomments = ' <span class="comments-link"><a href="' . apply_filters('the_permalink', get_permalink()) . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
             $postcomments .= get_comments_number() . __(' Comments', 'thematic') . '</a></span>';
         } elseif ($postcommentnumber == '1') {
-            $postcomments = ' <span class="comments-link"><a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
+            $postcomments = ' <span class="comments-link"><a href="' . apply_filters('the_permalink', get_permalink()) . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
             $postcomments .= get_comments_number() . __(' Comment', 'thematic') . '</a></span>';
         } elseif ($postcommentnumber == '0') {
-            $postcomments = ' <span class="comments-link"><a href="' . get_permalink() . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
+            $postcomments = ' <span class="comments-link"><a href="' . apply_filters('the_permalink', get_permalink()) . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
             $postcomments .= __('Leave a comment', 'thematic') . '</a></span>';
         }
     } else {
@@ -683,7 +693,7 @@ function thematic_postfooter_postcomments() {
 // Create permalink, comments link, and RSS on single posts
 function thematic_postfooter_postconnect() {
     
-    $postconnect = __('. Bookmark the ', 'thematic') . '<a href="' . get_permalink() . '" title="' . __('Permalink to ', 'thematic') . the_title_attribute('echo=0') . '">';
+    $postconnect = __('. Bookmark the ', 'thematic') . '<a href="' . apply_filters('the_permalink', get_permalink()) . '" title="' . __('Permalink to ', 'thematic') . the_title_attribute('echo=0') . '">';
     $postconnect .= __('permalink', 'thematic') . '</a>.';
     if ((comments_open()) && (pings_open())) { /* Comments are open */
         $postconnect .= ' <a class="comment-link" href="#respond" title ="' . __('Post a comment', 'thematic') . '">' . __('Post a comment', 'thematic') . '</a>';

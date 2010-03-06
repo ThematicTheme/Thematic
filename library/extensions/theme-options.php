@@ -41,10 +41,52 @@ function mytheme_add_admin() {
         if ( 'save' == $_REQUEST['action'] ) {
 
                 foreach ($options as $value) {
-                    update_option( $value['id'], $_REQUEST[ $value['id'] ] ); }
-
-                foreach ($options as $value) {
-                    if( isset( $_REQUEST[ $value['id'] ] ) ) { update_option( $value['id'], $_REQUEST[ $value['id'] ]  ); } else { delete_option( $value['id'] ); } }
+                	if (THEMATIC_MB) 
+					{
+						update_blog_option( $blog_id, $value['id'], $_REQUEST[ $value['id'] ] );
+					} 
+					
+					else 
+					
+					{
+						update_option( $value['id'], $_REQUEST[ $value['id'] ] );
+					}
+					
+				}			
+	
+                foreach ($options as $value)
+				{
+                    if( isset( $_REQUEST[ $value['id'] ] ) ) 
+					{
+						if (THEMATIC_MB) 
+						{
+							update_blog_option( $blog_id, $value['id'], $_REQUEST[ $value['id'] ] );
+						} 
+					
+						else 
+					
+						{
+							update_option( $value['id'], $_REQUEST[ $value['id'] ] );
+						}
+						
+					}
+					
+					else
+						
+					{
+						if (THEMATIC_MB) 
+						{
+							delete_blog_option( $blog_id, $value['id'] );
+						} 
+					
+						else 
+					
+						{
+							delete_option( $value['id'] );
+						}
+					}
+					
+				}
 
                 header("Location: themes.php?page=theme-options.php&saved=true");
                 die;
@@ -52,7 +94,17 @@ function mytheme_add_admin() {
         } else if( 'reset' == $_REQUEST['action'] ) {
 
             foreach ($options as $value) {
-                delete_option( $value['id'] ); }
+				if (THEMATIC_MB) 
+				{
+					delete_blog_option( $blog_id, $value['id'] );
+				} 
+					
+				else 
+					
+				{
+					delete_option( $value['id'] );
+				}
+			}
 
             header("Location: themes.php?page=theme-options.php&reset=true");
             die;
@@ -93,7 +145,7 @@ function mytheme_admin() {
 		<tr valign="top"> 
 			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
 			<td>
-				<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" />
+				<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if (THEMATIC_MB) {if ( get_blog_option( $blog_id, $value['id'] ) != "") { echo get_blog_option( $blogid, $value['id'] ); } else { echo $value['std']; }} else {if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; }} ?>" />
 				<?php echo __($value['desc'],'thematic'); ?>
 
 			</td>
@@ -108,7 +160,7 @@ function mytheme_admin() {
 				<td>
 					<select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
 					<?php foreach ($value['options'] as $option) { ?>
-					<option<?php if ( get_option( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option>
+					<option<?php if(THEMATIC_MB){ if ( get_blog_option( $blog_id, $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; }} else { if ( get_option( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; }} ?>><?php echo $option; ?></option>
 					<?php } ?>
 				</select>
 			</td>
@@ -121,12 +173,31 @@ function mytheme_admin() {
 		?>
 		<tr valign="top"> 
 			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
-			<td><textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="<?php echo $ta_options['cols']; ?>" rows="<?php echo $ta_options['rows']; ?>"><?php 
-				if( get_option($value['id']) != "") {
-						echo __(stripslashes(get_option($value['id'])),'thematic');
-					}else{
+			<td><textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="<?php echo $ta_options['cols']; ?>" rows="<?php echo $ta_options['rows']; ?>"><?php
+				if (THEMATIC_MB)
+				{
+					if( get_blog_option($blog_id, $value['id']) != "") 
+					{
+						echo __(stripslashes(get_blog_option($blog_id, $value['id'])),'thematic');
+					}
+					else
+					{
 						echo __($value['std'],'thematic');
-				}?></textarea><br /><?php echo __($value['desc'],'thematic'); ?></td>
+					}
+				} 
+				else
+				{ 
+					if( get_option($value['id']) != "") 
+					{
+						echo __(stripslashes(get_option($value['id'])),'thematic');
+					}
+					else
+					{
+						echo __($value['std'],'thematic');
+					}
+				}
+				
+				?></textarea><br /><?php echo __($value['desc'],'thematic'); ?></td>
 		</tr>
 		<?php
 		break;
@@ -136,23 +207,58 @@ function mytheme_admin() {
 		<tr valign="top"> 
 			<th scope="row"><?php echo __($value['name'],'thematic'); ?></th>
 			<td>
-				<?php foreach ($value['options'] as $key=>$option) { 
-				$radio_setting = get_option($value['id']);
-				if($radio_setting != ''){
-					if ($key == get_option($value['id']) ) {
-						$checked = "checked=\"checked\"";
-						} else {
+				<?php
+				
+				foreach ($value['options'] as $key=>$option)
+				{
+					if (THEMATIC_MB)
+					{
+						$radio_setting = get_blog_option($blog_id, $value['id']);						
+					}
+					else
+					{
+						$radio_setting = get_option($value['id']);						
+					}
+					if($radio_setting != '')
+					{
+						if (THEMATIC_MB)
+						{
+							if ($key == get_blog_option($blog_id, $value['id']) ) 
+							{
+								$checked = "checked=\"checked\"";
+							}
+							else
+							{
+								$checked = "";
+							}
+						}
+						else
+						{
+							if ($key == get_option($value['id']) ) 
+							{
+								$checked = "checked=\"checked\"";
+							}
+							else
+							{
+								$checked = "";
+							}
+						}
+					}
+					else
+					{
+						if($key == $value['std'])
+						{
+							$checked = "checked=\"checked\"";
+						}
+						else
+						{
 							$checked = "";
 						}
-				}else{
-					if($key == $value['std']){
-						$checked = "checked=\"checked\"";
-					}else{
-						$checked = "";
 					}
-				}?>
+				?>
 				<input type="radio" name="<?php echo $value['id']; ?>" id="<?php echo $value['id'] . $key; ?>" value="<?php echo $key; ?>" <?php echo $checked; ?> /><label for="<?php echo $value['id'] . $key; ?>"><?php echo $option; ?></label><br />
-				<?php } ?>
+				<?php 
+				} ?>
 			</td>
 		</tr>
 		<?php
