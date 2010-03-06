@@ -52,14 +52,21 @@ function thematic_after() {
     add_action('thematic_footer', 'thematic_siteinfoopen', 20);
     
     function thematic_siteinfo() {
-        global $options;
-        foreach ($options as $value) {
-            if (get_option( $value['id'] ) === FALSE) { 
-                $$value['id'] = $value['std'];
-            } else { 
-                $$value['id'] = get_option( $value['id'] );
-            }
-        }
+        global $options, $blog_id;
+    	foreach ($options as $value) {
+        	if (get_option( $value['id'] ) === FALSE) { 
+            	$$value['id'] = $value['std']; 
+        	} else {
+        		if (THEMATIC_MB) 
+				{
+            		$$value['id'] = get_blog_option( $blog_id, $value['id'] );
+				}
+				else
+				{
+            		$$value['id'] = get_option( $value['id'] );
+  				}
+        	}
+    	}
         /* footer text set in theme options */
         echo do_shortcode(__(stripslashes(thematic_footertext($thm_footertext)), 'thematic'));    }
     add_action('thematic_footer', 'thematic_siteinfo', 30);
