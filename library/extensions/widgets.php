@@ -54,7 +54,7 @@ class THM_Widget_Search extends WP_Widget {
 
 		echo $before_widget;
 		if ( $title )
-			echo thematic_before_title() ?><label for="s"><?php echo $title ?></label><?php echo thematic_after_title();
+			echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title;
 
 		// Use current theme search form if it exists
 		get_search_form();
