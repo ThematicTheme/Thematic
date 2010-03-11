@@ -4,9 +4,9 @@
 // Credits: Joern Kretzschmar
 
 $themeData = get_theme_data(TEMPLATEPATH . '/style.css');
-$version = trim($themeData['Version']);
-if(!$version)
-    $version = "unknown";
+$thm_version = trim($themeData['Version']);
+if(!$thm_version)
+    $thm_version = "unknown";
 
 $ct=get_theme_data(STYLESHEETPATH . '/style.css');
 $templateversion = trim($ct['Version']);
@@ -17,7 +17,7 @@ if(!$templateversion)
 define('THEMENAME', $themeData['Title']);
 define('THEMEAUTHOR', $themeData['Author']);
 define('THEMEURI', $themeData['URI']);
-define('THEMATICVERSION', $version);
+define('THEMATICVERSION', $thm_version);
 
 // set child theme constants
 define('TEMPLATENAME', $ct['Title']);
