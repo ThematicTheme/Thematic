@@ -1,15 +1,11 @@
-# kubrick theme pot file.
-# Copyright (C) 2007 WordPress
-# This file is distributed under the same license as the kubrick theme package.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Thematic en Español\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-18 20:58+0100\n"
-"PO-Revision-Date: 2010-02-22 20:02+0100\n"
-"Last-Translator: Chris Gossmann <chris.gossmann@googlemail.com>\n"
-"Language-Team: Moskis <jose@moskis.net>\n"
+"PO-Revision-Date: 2010-03-16 14:43+0100\n"
+"Last-Translator: José Pardilla <info@josepardilla.com>\n"
+"Language-Team: Moskis <info@josepardilla.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,7 +51,7 @@ msgstr "Debes <a href=\"%s\" title=\"iniciar sesión\">iniciar sesión</a> para 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:83
 #, php-format
 msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "Logueado como <a href=\"%1$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Salir de esta cuenta\" >¿Salir?</a></span>"
+msgstr "Sesión iniciada como <a href=\"%1$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Salir de esta cuenta\" >¿Salir?</a></span>"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:90
 msgid "Your email is <em>never</em> published nor shared."
@@ -122,7 +118,7 @@ msgstr "Publica una respuesta para %s"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:110
 msgid "Comment"
-msgstr "Comentar"
+msgstr "Comentario"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:117
 msgid "Post Comment"
@@ -134,7 +130,7 @@ msgstr "Archivos del autor: "
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:153
 msgid "Category Archives:"
-msgstr "Archivos por categoría:"
+msgstr "Categoría:"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:162
 msgid "Search Results for:"
@@ -142,22 +138,22 @@ msgstr "Resultados de la búsqueda:"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:168
 msgid "Tag Archives:"
-msgstr "Archivos de etiquetas:"
+msgstr "Etiqueta:"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:174
 #, php-format
 msgid "Daily Archives: <span>%s</span>"
-msgstr "Archivos diarios: <span>%s</span>"
+msgstr "Archivos del día: <span>%s</span>"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:178
 #, php-format
 msgid "Monthly Archives: <span>%s</span>"
-msgstr "Archivos mensuales: <span>%s</span>"
+msgstr "Archivos del mes: <span>%s</span>"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:182
 #, php-format
 msgid "Yearly Archives: <span>%s</span>"
-msgstr "Archivos anuales: <span>%s</span>"
+msgstr "Archivos del año: <span>%s</span>"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:186
 msgid "Blog Archives"
@@ -185,7 +181,7 @@ msgstr "No Encontrado"
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:411
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
 msgid "Permalink to "
-msgstr "Enlace permanente a"
+msgstr "Enlace permanente a "
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:441
 msgid "By "
@@ -193,7 +189,7 @@ msgstr "Por "
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:444
 msgid "View all posts by "
-msgstr "Ver todas las entradas por "
+msgstr "Ver todas las entradas escritas por "
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:455
 msgid "Published: "
@@ -213,7 +209,7 @@ msgstr "Lo sentimos, pero no hemos podido encontrar lo que buscas. Prueba usando
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:578
 msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Leer Más  <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Leer Más <span class=\"meta-nav\">&raquo;</span>"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:629
 msgid "This entry was posted in "
@@ -233,7 +229,7 @@ msgstr " y clasificada en"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:649
 msgid " Also tagged "
-msgstr "También etiquetada con "
+msgstr " También etiquetada con "
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:651
 msgid "Tagged"
@@ -243,7 +239,7 @@ msgstr "Etiquetas:"
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:666
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:669
 msgid "Comment on "
-msgstr "Comentar en"
+msgstr "Comentar en "
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:664
 msgid " Comments"
@@ -251,7 +247,7 @@ msgstr " Comentarios"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:667
 msgid " Comment"
-msgstr " Comentar"
+msgstr " Comentario"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:670
 msgid "Leave a comment"
@@ -302,12 +298,12 @@ msgstr "publicar un comentario"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:699
 msgid " Both comments and trackbacks are currently closed."
-msgstr "Tanto los comentarios como los trackbacks están cerrados."
+msgstr " Tanto los comentarios como los trackbacks están cerrados."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:10
 #, php-format
 msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "Publicado %1$s en %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Enlace permanente a este comentario\">Permalink</a>"
+msgstr "Publicado: %1$s a las %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Enlace permanente a este comentario\">Permalink</a>"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:15
 msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
@@ -363,11 +359,11 @@ msgstr "Cerrar Sesión"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:13
 msgid "Index Insert Position"
-msgstr "Posición del Widget del Índice"
+msgstr "Widget incrustado de la Portada"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:14
 msgid "The widgetized Index Insert will follow after this post number."
-msgstr "El widget del índice se colocará a partir de esta entrada"
+msgstr "El widget de la Portada se colocará a partir de esta entrada."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:19
 msgid "Info on Author Page"
@@ -375,7 +371,7 @@ msgstr "Info en Página de Autor"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:20
 msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
-msgstr "Mostrar una <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">vCard</a>—con el avatar, biografía y email del autor—en la página de autor."
+msgstr "Mostrar una <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">vCard microformateada</a>—con el avatar, biografía y email del autor—en la página de autor."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:25
 msgid "Text in Footer"
@@ -419,7 +415,7 @@ msgstr "Para más información sobre este tema, <a href=\"http://themeshaper.com
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:12
 msgid "To search, type and hit enter"
-msgstr "Para buscar, escribe y dale al enter"
+msgstr "Para buscar, escribe y pulsa enter"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:18
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:281
@@ -429,11 +425,11 @@ msgstr "Buscar"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:43
 msgid "The primary widget area, most often used as a sidebar."
-msgstr "El area de widgets principal, generalmente usarda para como una barra lateral."
+msgstr "El area de widgets principal, generalmente usada como barra lateral."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:58
 msgid "The secondary widget area, most often used as a sidebar."
-msgstr "El area de widgets secundaria, generalmente usarda para como una barra lateral."
+msgstr "El area de widgets secundaria, generalmente usada como barra lateral secundaria."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:73
 msgid "The 1st widget area in the footer."
@@ -449,35 +445,35 @@ msgstr "La tercera &aacute;rea de widgets del pie de p&aacute;gina."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:118
 msgid "The top widget area displayed on the index page."
-msgstr "El &aacute;rea de widgets superior mostrada en el &iacute;ndice."
+msgstr "El &aacute;rea de widgets superior mostrada en la portada."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:133
 msgid "The widget area inserted after x posts on the index page."
-msgstr "El &aacute;rea de widgets inferior mostrada en el &iacute;ndice."
+msgstr "El &aacute;rea de widgets insertada después de X entradas en la portada."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:148
 msgid "The bottom widget area displayed on the index page."
-msgstr "El &aacute;rea de widgets inferior mostrada en el &iacute;ndice."
+msgstr "El &aacute;rea de widgets inferior mostrada en la portada."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:163
 msgid "The top widget area displayed on a single post."
-msgstr "El &aacute;rea de widgets superior mostrada en las entradas."
+msgstr "El &aacute;rea de widgets superior mostrada en una entrada."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:178
 msgid "The widget area inserted between the post and the comments on a single post."
-msgstr "El &aacute;rea de widgets insertada entre la entrada y los comentarios en las entradas."
+msgstr "El &aacute;rea de widgets insertada entre una entrada y sus comentarios."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:193
 msgid "The bottom widget area displayed on a single post."
-msgstr "El &aacute;rea de widgets inferior mostrada en las entradas."
+msgstr "El &aacute;rea de widgets inferior mostrada en una entrada."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:208
 msgid "The top widget area displayed on a page."
-msgstr "El &aacute;rea de widgets superior mostrada en las p&aacute;ginas."
+msgstr "El &aacute;rea de widgets superior mostrada en una p&aacute;gina."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:223
 msgid "The bottom widget area displayed on a page."
-msgstr "El &aacute;rea de widgets inferior mostrada en las p&aacute;ginas."
+msgstr "El &aacute;rea de widgets inferior mostrada en una p&aacute;gina."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:283
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:55
@@ -501,23 +497,4 @@ msgstr "Todos los comentarios"
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:96
 msgid "Title:"
 msgstr "Título:"
-
-#~ msgid "definitions created."
-#~ msgstr "definiciones creadas."
-#~ msgid "failed to create directory:"
-#~ msgstr "error al crear directorio:"
-#~ msgid "failed to create the file:"
-#~ msgstr "error al crear el archivo:"
-#~ msgid "Create Definitions"
-#~ msgstr "Crear Definiciones"
-#~ msgid "Pages"
-#~ msgstr "Páginas"
-#~ msgid "Categories"
-#~ msgstr "Categorías"
-#~ msgid "Archives"
-#~ msgstr "Archivos"
-#~ msgid "RSS Feeds"
-#~ msgstr "Canales RSS"
-#~ msgid "Blog Index"
-#~ msgstr "Índice del blog"
 
