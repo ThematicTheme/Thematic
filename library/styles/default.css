@@ -559,7 +559,7 @@ li.content-column {
 }
 #trackbacks-list .comment-content {
     position:absolute;
-    left:-9000px;
+    left:-10000px;
 }
 #respond {
     background:#fff;
