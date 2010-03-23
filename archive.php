@@ -9,6 +9,9 @@
 ?>
 
 	<div id="container">
+	
+		<?php thematic_abovecontent(); ?>
+	
 		<div id="content">
 
             <?php 
@@ -31,7 +34,10 @@
 
             ?>
 
-		</div><!-- #content .hfeed -->
+		</div><!-- #content -->
+		
+		<?php thematic_belowcontent(); ?> 
+		
 	</div><!-- #container -->
 
 <?php 

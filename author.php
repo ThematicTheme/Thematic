@@ -25,6 +25,9 @@
 ?>
 
 	<div id="container">
+	
+		<?php thematic_abovecontent(); ?>
+	
 		<div id="content">
 
             <?php
@@ -71,6 +74,9 @@
 			thematic_navigation_below(); ?>
 	
 		</div><!-- #content -->
+		
+		<?php thematic_belowcontent(); ?> 
+		
 	</div><!-- #container -->
 
 <?php 

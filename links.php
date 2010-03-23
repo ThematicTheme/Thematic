@@ -14,6 +14,9 @@ Template Name: Links Page
 ?>
 
 	<div id="container">
+	
+		<?php thematic_abovecontent(); ?>
+	
 		<div id="content">
 
             <?php
@@ -65,6 +68,9 @@ Template Name: Links Page
             ?>
 
 		</div><!-- #content -->
+		
+		<?php thematic_belowcontent(); ?> 
+		
 	</div><!-- #container -->
 
 <?php 
