@@ -7,6 +7,13 @@ function thematic_abovecontainer() {
     do_action('thematic_abovecontainer');
 } // end thematic_abovecontainer
 
+// Located in 404.php, archive.php, archives.php, attachement.php, author.php, category.php index.php, 
+// links.php, page.php, search.php, single.php, tag.php
+// Just between #main and #container
+function thematic_abovecontent() {
+    do_action('thematic_abovecontent');
+} // end thematic_abovecontent
+
 // Located in archives.php
 // Just after the content
 function thematic_archives() {
@@ -121,6 +128,13 @@ function thematic_above_tagloop() {
 function thematic_below_tagloop() {
     do_action('thematic_below_tagloop');
 } // end thematic_below_tagloop
+
+// Located in 404.php, archive.php, archives.php, attachement.php, author.php, category.php index.php, 
+// links.php, page.php, search.php, single.php, tag.php
+// Just below #content
+function thematic_belowcontent() {
+    do_action('thematic_belowcontent');
+} // end thematic_belowcontent
 
 // Located in 404.php, archive.php, archives.php, attachement.php, author.php, category.php index.php, 
 // links.php, page.php, search.php, single.php, tag.php

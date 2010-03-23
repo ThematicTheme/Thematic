@@ -11,6 +11,9 @@
 ?>
 
 	<div id="container">
+	
+		<?php thematic_abovecontent(); ?>
+	
 		<div id="content">
 
 			<div id="post-0" class="post error404">
@@ -25,6 +28,9 @@
 			</div><!-- .post -->
 
 		</div><!-- #content -->
+		
+		<?php thematic_belowcontent(); ?> 
+		
 	</div><!-- #container -->
     
 <?php
