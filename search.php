@@ -36,7 +36,9 @@
                 // create the navigation below the content
                 thematic_navigation_below();
 
-            } else { 
+            } else {
+            	
+           		thematic_abovepost();
                 
                 ?>
 
@@ -54,6 +56,8 @@
 			</div><!-- .post -->
 
             <?php
+            
+            	thematic_belowpost();
             
             }
             

@@ -23,6 +23,8 @@ Template Name: Links Page
             
             the_post();
             
+            thematic_abovepost();
+            
             ?>
             
 			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
@@ -61,6 +63,8 @@ Template Name: Links Page
 			</div><!-- .post -->
 
             <?php 
+            
+            thematic_belowpost();
         
             if ( get_post_custom_values('comments') ) 
                 comments_template() // Add a key/value of "comments" to enable comments on pages!
