@@ -15,6 +15,8 @@
 		<?php thematic_abovecontent(); ?>
 	
 		<div id="content">
+		
+			<?php thematic_abovepost(); ?>
 
 			<div id="post-0" class="post error404">
 			
@@ -26,6 +28,8 @@
             ?>
 			
 			</div><!-- .post -->
+			
+			<?php thematic_belowpost(); ?>
 
 		</div><!-- #content -->
 		

@@ -20,6 +20,8 @@
             
             // displays the page title
 			thematic_page_title();
+			
+			thematic_abovepost();
             
             ?>
             
@@ -55,6 +57,8 @@
 			</div><!-- .post -->
 
             <?php
+            
+            thematic_belowpost();
             
             comments_template();
             

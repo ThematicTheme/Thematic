@@ -20,6 +20,8 @@
             get_sidebar('page-top');
 
             the_post();
+            
+            thematic_abovepost();
         
             ?>
             
@@ -46,6 +48,8 @@
 			</div><!-- .post -->
 
         <?php
+        
+        thematic_belowpost();
         
         if ( get_post_custom_values('comments') ) 
             thematic_comments_template(); // Add a key/value of "comments" to enable comments on pages!

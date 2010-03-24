@@ -14,6 +14,13 @@ function thematic_abovecontent() {
     do_action('thematic_abovecontent');
 } // end thematic_abovecontent
 
+// Located in 404.php, archive.php, archives.php, attachement.php, author.php, category.php index.php, 
+// links.php, page.php, search.php, single.php, tag.php
+// Just between #main and #container
+function thematic_abovepost() {
+    do_action('thematic_abovepost');
+} // end thematic_abovepost
+
 // Located in archives.php
 // Just after the content
 function thematic_archives() {
@@ -132,6 +139,13 @@ function thematic_below_tagloop() {
 // Located in 404.php, archive.php, archives.php, attachement.php, author.php, category.php index.php, 
 // links.php, page.php, search.php, single.php, tag.php
 // Just below #content
+function thematic_belowpost() {
+    do_action('thematic_belowpost');
+} // end thematic_belowpost
+
+// Located in 404.php, archive.php, archives.php, attachement.php, author.php, category.php index.php, 
+// links.php, page.php, search.php, single.php, tag.php
+// Just below #content
 function thematic_belowcontent() {
     do_action('thematic_belowcontent');
 } // end thematic_belowcontent
@@ -232,7 +246,9 @@ add_action('thematic_navigation_above', 'thematic_nav_above', 2);
 
 // The Archive Loop
 function thematic_archive_loop() {
-		while ( have_posts() ) : the_post(); ?>
+		while ( have_posts() ) : the_post(); 
+		
+			thematic_abovepost(); ?>
 
 			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
     			<?php thematic_postheader(); ?>
@@ -243,14 +259,20 @@ function thematic_archive_loop() {
 				<?php thematic_postfooter(); ?>
 			</div><!-- .post -->
 
-		<?php endwhile;
+		<?php 
+			
+			thematic_belowpost();
+		
+		endwhile;
 }
 add_action('thematic_archiveloop', 'thematic_archive_loop');
 
 // The Author Loop
 function thematic_author_loop() {
 		rewind_posts();
-		while (have_posts()) : the_post(); ?>
+		while (have_posts()) : the_post(); 
+		
+			thematic_abovepost(); ?>
 
 			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
     			<?php thematic_postheader(); ?>
@@ -261,13 +283,19 @@ function thematic_author_loop() {
 				<?php thematic_postfooter(); ?>
 			</div><!-- .post -->
 
-		<?php endwhile;
+		<?php 
+		
+			thematic_belowpost();
+		
+		endwhile;
 }
 add_action('thematic_authorloop', 'thematic_author_loop');
 
 // The Category Loop
 function thematic_category_loop() {
-		while (have_posts()) : the_post(); ?>
+		while (have_posts()) : the_post(); 
+		
+			thematic_abovepost(); ?>
 
 			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
     			<?php thematic_postheader(); ?>
@@ -278,7 +306,11 @@ function thematic_category_loop() {
 				<?php thematic_postfooter(); ?>
 			</div><!-- .post -->
 
-		<?php endwhile;
+		<?php 
+		
+			thematic_belowpost();
+		
+		endwhile;
 }
 add_action('thematic_categoryloop', 'thematic_category_loop');
 
@@ -300,7 +332,9 @@ function thematic_index_loop() {
         }
     }
 		/* Count the number of posts so we can insert a widgetized area */ $count = 1;
-		while ( have_posts() ) : the_post() ?>
+		while ( have_posts() ) : the_post();
+		
+			thematic_abovepost(); ?>
 
 			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
     			<?php thematic_postheader(); ?>
@@ -312,7 +346,11 @@ function thematic_index_loop() {
 				<?php thematic_postfooter(); ?>
 			</div><!-- .post -->
 
-				<?php comments_template();
+				<?php 
+				
+				thematic_belowpost();
+				
+				comments_template();
 
 				if ($count==$thm_insert_position) {
 						get_sidebar('index-insert');
@@ -323,7 +361,8 @@ function thematic_index_loop() {
 add_action('thematic_indexloop', 'thematic_index_loop');
 
 // The Single Post
-function thematic_single_post() { ?>
+function thematic_single_post() { 
+	thematic_abovepost(); ?>
 			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
     			<?php thematic_postheader(); ?>
 				<div class="entry-content">
@@ -334,12 +373,17 @@ function thematic_single_post() { ?>
 				<?php thematic_postfooter(); ?>
 			</div><!-- .post -->
 <?php
+
+	thematic_belowpost();
+
 }
 add_action('thematic_singlepost', 'thematic_single_post');
 
 // The Search Loop
 function thematic_search_loop() {
-		while ( have_posts() ) : the_post(); ?>
+		while ( have_posts() ) : the_post(); 
+		
+			thematic_abovepost(); ?>
 
 			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
     			<?php thematic_postheader(); ?>
@@ -350,13 +394,19 @@ function thematic_search_loop() {
 				<?php thematic_postfooter(); ?>
 			</div><!-- .post -->
 
-		<?php endwhile;
+		<?php 
+		
+			thematic_belowpost();
+		
+		endwhile;
 }
 add_action('thematic_searchloop', 'thematic_search_loop');
 
 // The Tag Loop
 function thematic_tag_loop() {
-		while (have_posts()) : the_post(); ?>
+		while (have_posts()) : the_post(); 
+		
+			thematic_abovepost(); ?>
 
 			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
     			<?php thematic_postheader(); ?>
@@ -367,7 +417,11 @@ function thematic_tag_loop() {
 				<?php thematic_postfooter(); ?>
 			</div><!-- .post -->
 
-		<?php endwhile;
+		<?php 
+		
+			thematic_belowpost();
+		
+		endwhile;
 }
 add_action('thematic_tagloop', 'thematic_tag_loop');
 
