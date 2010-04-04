@@ -2,13 +2,18 @@
 
 // Generates semantic classes for BODY element
 function thematic_body_class( $print = true ) {
-	global $wp_query, $current_user;
+	global $wp_query, $current_user, $blog_id;
     
-    $c = '';
+    $c = array();
 
 	if (apply_filters('thematic_show_bc_wordpress', TRUE)) {
         // It's surely a WordPress blog, right?
-        $c = array('wordpress');
+        $c[] = 'wordpress';
+    }
+    
+    if (apply_filters('thematic_show_bc_blogid', TRUE)) {
+    	// Applies the blog id to BODY element .. blog-id1 for WordPress < 3.0
+    	$c[] = 'blogid-' . $blog_id;
     }
 
 	if (apply_filters('thematic_show_bc_datetime', TRUE)) {
