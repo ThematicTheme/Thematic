@@ -349,6 +349,26 @@ function thematic_page_menu_args() {
 	return apply_filters('thematic_page_menu_args', $args);
 }
 
+// Create the default arguments for wp_page_menu()
+function thematic_nav_menu_args() {
+	$args = array (
+		'menu'				=> '',
+		'container'			=> 'div',
+		'container_class'	=> 'menu',
+		'menu_class'		=> 'sf-menu',
+		'echo'				=> FALSE,
+		'fallback_cb'		=> 'wp_page_menu',
+		'before'			=> '',
+		'after'				=> '',
+		'link_before'		=> '',
+		'link_after'		=> '',
+		'depth'				=> 0,
+		'walker'			=> ''
+	);
+	
+	return apply_filters('thematic_nav_menu_args', $args);
+}
+
 // Add ID and CLASS attributes to the first <ul> occurence in wp_page_menu
 function thematic_add_menuclass($ulclass) {
 	if (apply_filters('thematic_use_superfish', TRUE)) {
@@ -419,7 +439,17 @@ function thematic_header() {
 		function thematic_access() { ?>
 		    	<div id="access">
 		    		<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
-		            <?php echo thematic_add_menuclass(wp_page_menu(thematic_page_menu_args())) ?>
+		            <?php 
+					
+					if (strtolower(apply_filters('thematic_menu_type', 'wp_page_menu)')) == 'wp_page_menu') {
+						echo thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));
+					} elseif ((strtolower(apply_filters('thematic_menu_type', 'wp_page_menu)')) == 'wp_nav_menu') AND (function_exists('wp_nav_menu'))) {
+						echo wp_nav_menu(thematic_nav_menu_args());
+					} else {
+						echo thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));
+					}
+					
+					?>
 		        </div><!-- #access -->
 		<?php }
 		add_action('thematic_header','thematic_access',9);
