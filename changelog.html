@@ -4,6 +4,7 @@
 
 <li><h3>Added:</h3>
 	<ul>
+		<li>New filter <code>thematic_page_menu_args</code> to filter the arguments for wp_page_menu(). 
 		<li>New filter <code>thematic_use_superfish</code> to prevent the use of Superfish for the menu. 
 		<li>New filter <code>thematic_show_bc_blogid</code> to prevent the BODY class <code>blogid-n</code>. 
 		<li>New BODY class <code>blogid-n</code>. 
@@ -15,6 +16,7 @@
 
 <li><h3>Fixed:</h3>
 	<ul> 
+		<li>The UL Class <code>sf-menu</code> will be created only for the wp_page_menu() in the header.</li>
 		<li>Changed <code>#trackbacks-list .comment-content</code> to <code>left:-10000px;</code> in <code>default.css</code>. Fixes a glitch with the 'Many Tackbacks' post (WordPress Test Data).</li>
 		<li>Changed <code>$version</code> to <code>$thm_version</code> to prevent a collision with WP E-Commerce.</li>
 		<li>Widget areas can now be moved based on a conditional tag.</li>
