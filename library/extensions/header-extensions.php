@@ -328,15 +328,19 @@ function thematic_head_scripts() {
     print apply_filters('thematic_head_scripts', $scripts);
 
 }
-add_action('wp_head','thematic_head_scripts');
 
+if (apply_filters('thematic_use_superfish', TRUE)) {
+	add_action('wp_head','thematic_head_scripts');
+}
 
 // Add ID and CLASS attributes to the first <ul> occurence in wp_page_menu
 function thematic_add_menuclass($ulclass) {
 	return preg_replace('/<ul>/', '<ul class="sf-menu">', $ulclass, 1);
 } // end thematic_add_menuclass
-add_filter('wp_page_menu','thematic_add_menuclass');
 
+if (apply_filters('thematic_use_superfish', TRUE)) {
+	add_filter('wp_page_menu','thematic_add_menuclass');
+}
 
 // Just after the opening body tag, before anything else.
 function thematic_before() {
