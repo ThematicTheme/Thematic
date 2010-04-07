@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-18 20:58+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Chris Gossmann <chris.gossmann@googlemail.com>\n"
+"Last-Translator: Danny <dannydamnboy@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +40,7 @@ msgstr "<span>Un</span> Trackback"
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:72
 #, php-format
 msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Devi esssere <a href=\"%s\" title=\"Autenticazione\">autenticato</a> per scrivere un commento."
+msgstr "Devi esssere <a href=\"%s\" title=\"Autenticazione\">autenticato</a> per commentare."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:83
 #, php-format
@@ -86,7 +86,7 @@ msgstr "Nessun Risultato"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:43
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Nessun risultato per i termini utilizzati. Prova ancora con termini differenti."
+msgstr "Nessun risultato per i termini ricercati. Prova ancora con termini differenti."
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:48
 msgid "Find"
@@ -170,7 +170,7 @@ msgstr "Modifica articolo"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:406
 msgid "Not Found"
-msgstr "Non Trovato"
+msgstr "Non trovato"
 
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:411
 #: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
