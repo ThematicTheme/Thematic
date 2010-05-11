@@ -4,6 +4,45 @@
 
 <li><h3>Added:</h3>
 	<ul>
+		<li>Added new filter <code>thematic_close_wrapper</code> to the <code>footer.php</code>. This filter defaults to <code>true</code>.</li>
+		<li>Added override functionality:
+			<ul>
+				<li><code>childtheme_override_page_title()</code> overrides <code>thematic_page_title()</code></li>
+				<li><code>childtheme_override_nav_above()</code> overrides <code>thematic_nav_above()</code></li>
+				<li><code>childtheme_override_archive_loop()</code> overrides <code>thematic_archive_loop()</code></li>
+				<li><code>childtheme_override_author_loop()</code> overrides <code>thematic_author_loop()</code></li>
+				<li><code>childtheme_override_category_loop()</code> overrides <code>thematic_category_loop()</code></li>
+				<li><code>childtheme_override_index_loop()</code> overrides <code>thematic_index_loop()</code></li>
+				<li><code>childtheme_override_single_post()</code> overrides <code>thematic_single_post()</code></li>
+				<li><code>childtheme_override_search_loop()</code> overrides <code>thematic_search_loop()</code></li>
+				<li><code>childtheme_override_tag_loop()</code> overrides <code>thematic_tag_loop()</code></li>
+				<li><code>childtheme_override_postheader()</code> overrides <code>thematic_postheader()</code></li>
+				<li><code>childtheme_override_postheader_posteditlink()</code> overrides <code>thematic_postheader_posteditlink()</code></li>
+				<li><code>childtheme_override_postheader_posttitle()</code> overrides <code>thematic_postheader_posttitle()</code></li>
+				<li><code>childtheme_override_postheader_postmeta()</code> overrides <code>thematic_postheader_postmeta()</code></li>
+				<li><code>childtheme_override_postmeta_authorlink()</code> overrides <code>thematic_postmeta_authorlink()</code></li>
+				<li><code>childtheme_override_postmeta_entrydate()</code> overrides <code>thematic_postmeta_entrydate()</code></li>
+				<li><code>childtheme_override_postmeta_editlink()</code> overrides <code>thematic_postmeta_editlink()</code></li>
+				<li><code>childtheme_override_content()</code> overrides <code>thematic_content()</code></li>
+				<li><code>childtheme_override_archivesopen()</code> overrides <code>thematic_archivesopen()</code></li>
+				<li><code>childtheme_override_category_archives()</code> overrides <code>thematic_category_archives()</code></li>
+				<li><code>childtheme_override_monthly_archives()</code> overrides <code>thematic_monthly_archives()</code></li>
+				<li><code>childtheme_override_archivesclose()</code> overrides <code>thematic_archivesclose()</code></li>
+				<li><code>childtheme_override_404_content()</code> overrides <code>thematic_404_content()</code></li>
+				<li><code>childtheme_override_postfooter()</code> overrides <code>thematic_postfooter()</code></li>
+				<li><code>childtheme_override_postfooter_posteditlink()</code> overrides <code>thematic_postfooter_posteditlink()</code></li>
+				<li><code>childtheme_override_postfooter_postcategory()</code> overrides <code>thematic_postfooter_postcategory()</code></li>
+				<li><code>childtheme_override_postfooter_posttags()</code> overrides <code>thematic_postfooter_posttags()</code></li>
+				<li><code>childtheme_override_postfooter_postcomments()</code> overrides <code>thematic_postfooter_postcomments()</code></li>
+				<li><code>childtheme_override_postfooter_postconnect()</code> overrides <code>thematic_postfooter_postconnect()</code></li>
+				<li><code>childtheme_override_nav_below()</code> overrides <code>thematic_nav_below()</code></li>
+				<li><code>childtheme_override_previous_post_link()</code> overrides <code>thematic_previous_post_link()</code></li>
+				<li><code>childtheme_override_next_post_link()</code> overrides <code>thematic_next_post_link()</code></li>
+				<li><code>childtheme_override_author_info_avatar()</code> overrides <code>thematic_author_info_avatar()</code></li>
+				<li><code>childtheme_override_cats_meow()</code> overrides <code>thematic_cats_meow()</code></li>
+				<li><code>childtheme_override_tag_ur_it()</code> overrides <code>thematic_tag_ur_it()</code></li>
+			</ul>
+		</li>
 		<li>Experimental: Support for <code>wp_nav_menu()</code>.</li>
 		<li>Experimental: New filter <code>thematic_menu_type</code> to switch between <code>wp_page_menu()</code> and <code>wp_nav_menu()</code>. Defaults to <code>wp_page_menu()</code>.</li>
 		<li>Experimental: New filter <code>thematic_nav_menu_args</code> to filter the arguments for <code>wp_nav_menu()</code>.</li>

@@ -21,12 +21,14 @@
 	
     <?php
     
-    // actio hook for placing content below the footer
+    // action hook for placing content below the footer
     thematic_belowfooter();
     
+    if (apply_filters('thematic_close_wrapper', true)) {
+    	echo '</div><!-- #wrapper .hfeed -->';
+    }
+    
     ?>  
-
-</div><!-- #wrapper .hfeed -->
 
 <?php 
 
