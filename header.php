@@ -57,11 +57,11 @@ if (apply_filters('thematic_show_bodyclass',TRUE)) {
 <?php }
 
 // action hook for placing content before opening #wrapper
-thematic_before(); ?>
+thematic_before(); 
 
-<div id="wrapper" class="hfeed">
-
-    <?php
+if (apply_filters('thematic_open_wrapper', true)) {
+	echo '<div id="wrapper" class="hfeed">';
+}
     
     // action hook for placing content above the theme header
     thematic_aboveheader(); 
