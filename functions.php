@@ -56,6 +56,9 @@ require_once(THEMELIB . '/extensions/content-extensions.php');
 
 // Load custom Comments filters
 require_once(THEMELIB . '/extensions/comments-extensions.php');
+ 
+// Load custom discussion filters
+require_once(THEMELIB . '/extensions/discussion-extensions.php');
 
 // Load custom Widgets
 require_once(THEMELIB . '/extensions/widgets-extensions.php');
