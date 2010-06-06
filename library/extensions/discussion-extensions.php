@@ -25,4 +25,19 @@ if (function_exists('childtheme_override_commentmeta'))  {
 
 	} // end thematic_commentmeta
 }
+
+
+// Located in discussion.php
+// At the beginning of li#comment-[id]. Note that this is *per comment*.
+function thematic_abovecomment() {
+	do_action('thematic_abovecomment');
+}
+
+
+// Located in discussion.php
+// Just after the comment reply link. Note that this is *per comment*.
+function thematic_belowcomment() {
+	do_action('thematic_belowcomment');
+}
+
 ?>

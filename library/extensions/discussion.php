@@ -6,6 +6,7 @@ function thematic_comments($comment, $args, $depth) {
 	$GLOBALS['comment_depth'] = $depth;
     ?>
     	<li id="comment-<?php comment_ID() ?>" class="<?php thematic_comment_class() ?>">
+    		<?php thematic_abovecomment() ?>
     		<div class="comment-author vcard"><?php thematic_commenter_link() ?></div>
     		<?php thematic_commentmeta(TRUE); ?>
     <?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'thematic') ?>
@@ -23,6 +24,7 @@ function thematic_comments($comment, $args, $depth) {
 					)));
 				endif;
 			?>
+			<?php thematic_belowcomment() ?>
 <?php }
 
 // Custom callback to list pings in the Thematic style
