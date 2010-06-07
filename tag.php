@@ -8,40 +8,40 @@
 
 ?>
 
-	<div id="container">
+		<div id="container">
+		
+			<?php thematic_abovecontent(); ?>
+		
+			<div id="content">
 	
-		<?php thematic_abovecontent(); ?>
+	            <?php
+	        
+	            // displays the page title
+	            thematic_page_title();
 	
-		<div id="content">
-
-            <?php
-        
-            // displays the page title
-            thematic_page_title();
-
-            // create the navigation above the content
-            thematic_navigation_above();
+	            // create the navigation above the content
+	            thematic_navigation_above();
+				
+	            // action hook for placing content above the tag loop
+	            thematic_above_tagloop();		
+	
+	            // action hook creating the tag loop
+	            thematic_tagloop();
+	
+	            // action hook for placing content below the tag loop
+	            thematic_below_tagloop();
+	
+	            // create the navigation below the content
+	            thematic_navigation_below();
+	            
+	            ?>
+	
+			</div><!-- #content -->
 			
-            // action hook for placing content above the tag loop
-            thematic_above_tagloop();		
-
-            // action hook creating the tag loop
-            thematic_tagloop();
-
-            // action hook for placing content below the tag loop
-            thematic_below_tagloop();
-
-            // create the navigation below the content
-            thematic_navigation_below();
-            
-            ?>
-
-		</div><!-- #content -->
-		
-		<?php thematic_belowcontent(); ?> 
-		
-	</div><!-- #container -->
-
+			<?php thematic_belowcontent(); ?> 
+			
+		</div><!-- #container -->
+	
 <?php 
 
     // action hook for placing content below #container

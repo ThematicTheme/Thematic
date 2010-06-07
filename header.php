@@ -76,15 +76,13 @@ if (apply_filters('thematic_open_wrapper', true)) {
         thematic_header();
         
         ?>
-        
-    </div><!-- #header-->
-    
+
+	</div><!-- #header-->
     <?php
     
     // action hook for placing content below the theme header
     thematic_belowheader();
     
     ?>   
-
     <div id="main">
     
