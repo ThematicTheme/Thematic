@@ -37,44 +37,66 @@ function thematic_after() {
 
 
 // Functions that hook into thematic_footer()
-
-    function thematic_subsidiaries() {
-        widget_area_subsidiaries();
+	
+	if (function_exists('childtheme_override_subsidiaries'))  {
+		function thematic_subsidiaries() {
+			childtheme_override_subsidiaries();
+		}
+	} else {
+    	function thematic_subsidiaries() {
+       	 widget_area_subsidiaries();
+    	}
+    	add_action('thematic_footer', 'thematic_subsidiaries', 10);
     }
-    add_action('thematic_footer', 'thematic_subsidiaries', 10);
     
-    function thematic_siteinfoopen() { ?>
+	if (function_exists('childtheme_override_siteinfoopen'))  {
+		function thematic_siteinfoopen() {
+			childtheme_override_siteinfoopen();
+		}
+	} else {
+	    function thematic_siteinfoopen() { ?>
     
         <div id="siteinfo">        
 
-    <?php
-    }
-    add_action('thematic_footer', 'thematic_siteinfoopen', 20);
-    
-    function thematic_siteinfo() {
-        global $options, $blog_id;
-    	foreach ($options as $value) {
-        	if (get_option( $value['id'] ) === FALSE) { 
-            	$$value['id'] = $value['std']; 
-        	} else {
-        		if (THEMATIC_MB) 
-				{
-            		$$value['id'] = get_blog_option( $blog_id, $value['id'] );
-				}
-				else
-				{
-            		$$value['id'] = get_option( $value['id'] );
-  				}
-        	}
+    	<?php
     	}
-        /* footer text set in theme options */
-        echo do_shortcode(__(stripslashes(thematic_footertext($thm_footertext)), 'thematic'));    }
-    add_action('thematic_footer', 'thematic_siteinfo', 30);
+    	add_action('thematic_footer', 'thematic_siteinfoopen', 20);
+    }
     
-    function thematic_siteinfoclose() { ?>
+	if (function_exists('childtheme_override_siteinfo'))  {
+		function thematic_siteinfo() {
+			childtheme_override_siteinfo();
+		}
+	} else {
+	    function thematic_siteinfo() {
+        	global $options, $blog_id;
+			foreach ($options as $value) {
+        		if (get_option( $value['id'] ) === FALSE) { 
+            		$$value['id'] = $value['std']; 
+        		} else {
+        			if (THEMATIC_MB) {
+            			$$value['id'] = get_blog_option( $blog_id, $value['id'] );
+					} else {
+            			$$value['id'] = get_option( $value['id'] );
+  					}
+        		}
+			}
+        	/* footer text set in theme options */
+        	echo do_shortcode(__(stripslashes(thematic_footertext($thm_footertext)), 'thematic'));
+        }
+    	add_action('thematic_footer', 'thematic_siteinfo', 30);
+    }
+    
+	if (function_exists('childtheme_override_siteinfoclose'))  {
+		function thematic_siteinfoclose() {
+			childtheme_override_siteinfoclose();
+		}
+	} else {
+	    function thematic_siteinfoclose() { ?>
     
 		</div><!-- #siteinfo -->
     
-    <?php
-    }
-    add_action('thematic_footer', 'thematic_siteinfoclose', 40);
+    	<?php
+    	}
+    	add_action('thematic_footer', 'thematic_siteinfoclose', 40);
+	}
