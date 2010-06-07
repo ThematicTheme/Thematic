@@ -8,67 +8,67 @@
 
 ?>
 
-	<div id="container">
+		<div id="container">
+		
+			<?php thematic_abovecontent(); ?>
+		
+			<div id="content">
 	
-		<?php thematic_abovecontent(); ?>
+	            <?php
+	            
+	            the_post();
+	            
+	            // displays the page title
+				thematic_page_title();
+				
+				thematic_abovepost();
+	            
+	            ?>
+	            
+				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
+	            
+	    			<?php
+	                
+	                // creating the post header
+	                thematic_postheader();
+	                
+	                ?>
+	                
+					<div class="entry-content">
+						<div class="entry-attachment"><?php the_attachment_link($post->post_ID, true) ?></div>
+	                    
+	                        <?php 
+	                        
+	                        the_content(more_text());
 	
-		<div id="content">
-
-            <?php
-            
-            the_post();
-            
-            // displays the page title
-			thematic_page_title();
+	                        wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>');
+	                        
+	                        ?>
+	                        
+					</div>
+	                
+					<?php
+	                
+	                // creating the post footer
+	                thematic_postfooter();
+	                
+	                ?>
+	                
+				</div><!-- .post -->
+	
+	            <?php
+	            
+	            thematic_belowpost();
+	            
+	            comments_template();
+	            
+	            ?>
+	
+			</div><!-- #content -->
 			
-			thematic_abovepost();
-            
-            ?>
-            
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
-            
-    			<?php
-                
-                // creating the post header
-                thematic_postheader();
-                
-                ?>
-                
-				<div class="entry-content">
-					<div class="entry-attachment"><?php the_attachment_link($post->post_ID, true) ?></div>
-                    
-                        <?php 
-                        
-                        the_content(more_text());
-
-                        wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>');
-                        
-                        ?>
-                        
-				</div>
-                
-				<?php
-                
-                // creating the post footer
-                thematic_postfooter();
-                
-                ?>
-                
-			</div><!-- .post -->
-
-            <?php
-            
-            thematic_belowpost();
-            
-            comments_template();
-            
-            ?>
-
-		</div><!-- #content -->
-		
-		<?php thematic_belowcontent(); ?> 
-		
-	</div><!-- #container -->
+			<?php thematic_belowcontent(); ?> 
+			
+		</div><!-- #container -->
 
 <?php 
 

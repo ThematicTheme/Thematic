@@ -252,22 +252,23 @@ if (function_exists('childtheme_override_nav_above'))  {
 	function thematic_nav_above() {
 		if (is_single()) { ?>
 
-			<div id="nav-above" class="navigation">
-				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
-				<div class="nav-next"><?php thematic_next_post_link() ?></div>
-			</div>
+				<div id="nav-above" class="navigation">
+					<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
+					<div class="nav-next"><?php thematic_next_post_link() ?></div>
+				</div>
 
 <?php
 		} else { ?>
 
-			<div id="nav-above" class="navigation">
-                <?php if(function_exists('wp_pagenavi')) { ?>
-                <?php wp_pagenavi(); ?>
-                <?php } else { ?>  
-				<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
-				<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
-				<?php } ?>
-			</div>	
+				<div id="nav-above" class="navigation">
+               		<?php if(function_exists('wp_pagenavi')) { ?>
+                	<?php wp_pagenavi(); ?>
+					<?php } else { ?>  
+					<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
+					<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+					<?php } ?>
+					
+				</div>	
 	
 <?php
 		}
@@ -286,20 +287,20 @@ if (function_exists('childtheme_override_archive_loop'))  {
 	function thematic_archive_loop() {
 		while ( have_posts() ) : the_post(); 
 		
-			thematic_abovepost(); ?>
+				thematic_abovepost(); ?>
 
-			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content">
+				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
+    				<?php thematic_postheader(); ?>
+					<div class="entry-content">
 <?php thematic_content(); ?>
 
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
+					</div>
+					<?php thematic_postfooter(); ?>
+				</div><!-- .post -->
 
-		<?php 
+			<?php 
 			
-			thematic_belowpost();
+				thematic_belowpost();
 		
 		endwhile;
 	}
@@ -318,20 +319,20 @@ if (function_exists('childtheme_override_author_loop'))  {
 		rewind_posts();
 		while (have_posts()) : the_post(); 
 		
-			thematic_abovepost(); ?>
+				thematic_abovepost(); ?>
 
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content ">
+				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
+	    			<?php thematic_postheader(); ?>
+					<div class="entry-content ">
 <?php thematic_content(); ?>
 
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
+					</div>
+					<?php thematic_postfooter(); ?>
+				</div><!-- .post -->
 
-		<?php 
+			<?php 
 		
-			thematic_belowpost();
+				thematic_belowpost();
 		
 		endwhile;
 	}
@@ -349,20 +350,20 @@ if (function_exists('childtheme_override_category_loop'))  {
 	function thematic_category_loop() {
 		while (have_posts()) : the_post(); 
 		
-			thematic_abovepost(); ?>
-
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content">
+				thematic_abovepost(); ?>
+	
+				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
+	    			<?php thematic_postheader(); ?>
+					<div class="entry-content">
 <?php thematic_content(); ?>
+	
+					</div>
+					<?php thematic_postfooter(); ?>
+				</div><!-- .post -->
 
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
-
-		<?php 
+			<?php 
 		
-			thematic_belowpost();
+				thematic_belowpost();
 		
 		endwhile;
 	}
@@ -399,19 +400,19 @@ if (function_exists('childtheme_override_index_loop'))  {
 		/* Count the number of posts so we can insert a widgetized area */ $count = 1;
 		while ( have_posts() ) : the_post();
 		
-			thematic_abovepost(); ?>
+				thematic_abovepost(); ?>
 
-			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content">
+				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
+    				<?php thematic_postheader(); ?>
+					<div class="entry-content">
 <?php thematic_content(); ?>
 
-				<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
+					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+					</div>
+					<?php thematic_postfooter(); ?>
+				</div><!-- .post -->
 
-				<?php 
+			<?php 
 				
 				thematic_belowpost();
 				
@@ -435,19 +436,21 @@ if (function_exists('childtheme_override_single_post'))  {
 	}
 } else {
 	function thematic_single_post() { 
-		thematic_abovepost(); ?>
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content">
+		
+				thematic_abovepost(); ?>
+			
+				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
+    				<?php thematic_postheader(); ?>
+					<div class="entry-content">
 <?php thematic_content(); ?>
 
-					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
-<?php
+						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+					</div>
+					<?php thematic_postfooter(); ?>
+				</div><!-- .post -->
+		<?php
 
-		thematic_belowpost();
+			thematic_belowpost();
 	}
 } // end single_post
 
@@ -463,20 +466,20 @@ if (function_exists('childtheme_override_search_loop'))  {
 	function thematic_search_loop() {
 		while ( have_posts() ) : the_post(); 
 		
-			thematic_abovepost(); ?>
+				thematic_abovepost(); ?>
 
-			<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content">
+				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
+    				<?php thematic_postheader(); ?>
+					<div class="entry-content">
 <?php thematic_content(); ?>
 
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
+					</div>
+					<?php thematic_postfooter(); ?>
+				</div><!-- .post -->
 
-		<?php 
+			<?php 
 		
-			thematic_belowpost();
+				thematic_belowpost();
 		
 		endwhile;
 	}
@@ -494,20 +497,20 @@ if (function_exists('childtheme_override_tag_loop'))  {
 	function thematic_tag_loop() {
 		while (have_posts()) : the_post(); 
 		
-			thematic_abovepost(); ?>
+				thematic_abovepost(); ?>
 
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-    			<?php thematic_postheader(); ?>
-				<div class="entry-content">
+				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
+    				<?php thematic_postheader(); ?>
+					<div class="entry-content">
 <?php thematic_content() ?>
 
-				</div>
-				<?php thematic_postfooter(); ?>
-			</div><!-- .post -->
+					</div>
+					<?php thematic_postfooter(); ?>
+				</div><!-- .post -->
 
-		<?php 
+			<?php 
 		
-			thematic_belowpost();
+				thematic_belowpost();
 		
 		endwhile;
 	}

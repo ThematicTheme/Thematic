@@ -13,69 +13,69 @@ Template Name: Links Page
 
 ?>
 
-	<div id="container">
-	
-		<?php thematic_abovecontent(); ?>
-	
-		<div id="content">
-
-            <?php
-            
-            the_post();
-            
-            thematic_abovepost();
-            
-            ?>
-            
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
-    			<?php
-                
-                // creating the post header
-                thematic_postheader();
-                
-                ?>
-                
-				<div class="entry-content">
-                
-                    <?php
-                    
-                    the_content();
-                    
-                    ?>
-
-					<ul id="links-page" class="xoxo">
-                    
-                        <?php
-                        
-                        wp_list_bookmarks(list_bookmarks_args());
-                        
-                        ?>
-                        
-					</ul>
-                    
-                    <?php
-                    
-                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>');
-                    
-                    ?>
-
-				</div>
-			</div><!-- .post -->
-
-            <?php 
-            
-            thematic_belowpost();
-        
-            if ( get_post_custom_values('comments') ) 
-                comments_template() // Add a key/value of "comments" to enable comments on pages!
-        
-            ?>
-
-		</div><!-- #content -->
+		<div id="container">
 		
-		<?php thematic_belowcontent(); ?> 
+			<?php thematic_abovecontent(); ?>
 		
-	</div><!-- #container -->
+			<div id="content">
+		
+    	        <?php
+    	        
+    	        the_post();
+    	        
+    	        thematic_abovepost();
+    	        
+    	        ?>
+    	        
+				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
+    				<?php
+    	            
+    	            // creating the post header
+    	            thematic_postheader();
+    	            
+    	            ?>
+    	            
+					<div class="entry-content">
+    	            
+    	                <?php
+    	                
+    	                the_content();
+    	                
+    	                ?>
+		
+						<ul id="links-page" class="xoxo">
+    	                
+    	                    <?php
+    	                    
+    	                    wp_list_bookmarks(list_bookmarks_args());
+    	                    
+    	                    ?>
+    	                    
+						</ul>
+    	                
+    	                <?php
+    	                
+    	                edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>');
+    	                
+    	                ?>
+		
+					</div>
+				</div><!-- .post -->
+		
+    	        <?php 
+    	        
+    	        thematic_belowpost();
+    	    
+    	        if ( get_post_custom_values('comments') ) 
+    	            comments_template() // Add a key/value of "comments" to enable comments on pages!
+    	    
+    	        ?>
+		
+			</div><!-- #content -->
+			
+			<?php thematic_belowcontent(); ?> 
+			
+		</div><!-- #container -->
 
 <?php 
 

@@ -8,62 +8,62 @@
 
 ?>
 
-	<div id="container">
-	
-		<?php thematic_abovecontent(); ?>
-	
-		<div id="content">
-
-            <?php
-        
-            // calling the widget area 'page-top'
-            get_sidebar('page-top');
-
-            the_post();
-            
-            thematic_abovepost();
-        
-            ?>
-            
-			<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
-            
-                <?php 
-                
-                // creating the post header
-                thematic_postheader();
-                
-                ?>
-                
-				<div class="entry-content">
-
-                    <?php
-                    
-                    the_content();
-                    
-                    wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'thematic'), "</div>\n", 'number');
-                    
-                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
-
-				</div>
-			</div><!-- .post -->
-
-        <?php
-        
-        thematic_belowpost();
-        
-        if ( get_post_custom_values('comments') ) 
-            thematic_comments_template(); // Add a key/value of "comments" to enable comments on pages!
-        
-        // calling the widget area 'page-bottom'
-        get_sidebar('page-bottom');
-        
-        ?>
-
-		</div><!-- #content -->
+		<div id="container">
 		
-		<?php thematic_belowcontent(); ?> 
+			<?php thematic_abovecontent(); ?>
 		
-	</div><!-- #container -->
+			<div id="content">
+	
+	            <?php
+	        
+	            // calling the widget area 'page-top'
+	            get_sidebar('page-top');
+	
+	            the_post();
+	            
+	            thematic_abovepost();
+	        
+	            ?>
+	            
+				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
+	            
+	                <?php 
+	                
+	                // creating the post header
+	                thematic_postheader();
+	                
+	                ?>
+	                
+					<div class="entry-content">
+	
+	                    <?php
+	                    
+	                    the_content();
+	                    
+	                    wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'thematic'), "</div>\n", 'number');
+	                    
+	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
+	
+					</div>
+				</div><!-- .post -->
+	
+	        <?php
+	        
+	        thematic_belowpost();
+	        
+	        if ( get_post_custom_values('comments') ) 
+	            thematic_comments_template(); // Add a key/value of "comments" to enable comments on pages!
+	        
+	        // calling the widget area 'page-bottom'
+	        get_sidebar('page-bottom');
+	        
+	        ?>
+	
+			</div><!-- #content -->
+			
+			<?php thematic_belowcontent(); ?> 
+			
+		</div><!-- #container -->
 
 <?php 
 
