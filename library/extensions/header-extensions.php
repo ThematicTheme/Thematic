@@ -26,80 +26,85 @@ function pageGetPageNo() {
 // Located in header.php 
 // Creates the content of the Title tag
 // Credits: Tarski Theme
-function thematic_doctitle() {
-	$site_name = get_bloginfo('name');
-    $separator = '|';
-        	
-    if ( is_single() ) {
-      $content = single_post_title('', FALSE);
+if (function_exists('childtheme_override_doctitle'))  {
+    function thematic_doctitle() {
+    	childtheme_override_doctitle();
     }
-    elseif ( is_home() || is_front_page() ) { 
-      $content = get_bloginfo('description');
-    }
-    elseif ( is_page() ) { 
-      $content = single_post_title('', FALSE); 
-    }
-    elseif ( is_search() ) { 
-      $content = __('Search Results for:', 'thematic'); 
-      $content .= ' ' . wp_specialchars(stripslashes(get_search_query()), true);
-    }
-    elseif ( is_category() ) {
-      $content = __('Category Archives:', 'thematic');
-      $content .= ' ' . single_cat_title("", false);;
-    }
-    elseif ( is_tag() ) { 
-      $content = __('Tag Archives:', 'thematic');
-      $content .= ' ' . thematic_tag_query();
-    }
-    elseif ( is_404() ) { 
-      $content = __('Not Found', 'thematic'); 
-    }
-    else { 
-      $content = get_bloginfo('description');
-    }
-
-    if (get_query_var('paged')) {
-      $content .= ' ' .$separator. ' ';
-      $content .= 'Page';
-      $content .= ' ';
-      $content .= get_query_var('paged');
-    }
-
-    if($content) {
-      if ( is_home() || is_front_page() ) {
-          $elements = array(
-            'site_name' => $site_name,
-            'separator' => $separator,
-            'content' => $content
-          );
-      }
-      else {
-          $elements = array(
-            'content' => $content
-          );
-      }  
-    } else {
-      $elements = array(
-        'site_name' => $site_name
-      );
-    }
-
-    // Filters should return an array
-    $elements = apply_filters('thematic_doctitle', $elements);
+} else {
+	function thematic_doctitle() {
+		$site_name = get_bloginfo('name');
+	    $separator = '|';
+	        	
+	    if ( is_single() ) {
+	      $content = single_post_title('', FALSE);
+	    }
+	    elseif ( is_home() || is_front_page() ) { 
+	      $content = get_bloginfo('description');
+	    }
+	    elseif ( is_page() ) { 
+	      $content = single_post_title('', FALSE); 
+	    }
+	    elseif ( is_search() ) { 
+	      $content = __('Search Results for:', 'thematic'); 
+	      $content .= ' ' . wp_specialchars(stripslashes(get_search_query()), true);
+	    }
+	    elseif ( is_category() ) {
+	      $content = __('Category Archives:', 'thematic');
+	      $content .= ' ' . single_cat_title("", false);;
+	    }
+	    elseif ( is_tag() ) { 
+	      $content = __('Tag Archives:', 'thematic');
+	      $content .= ' ' . thematic_tag_query();
+	    }
+	    elseif ( is_404() ) { 
+	      $content = __('Not Found', 'thematic'); 
+	    }
+	    else { 
+	      $content = get_bloginfo('description');
+	    }
 	
-    // But if they don't, it won't try to implode
-    if(is_array($elements)) {
-      $doctitle = implode(' ', $elements);
-    }
-    else {
-      $doctitle = $elements;
-    }
-    
-    $doctitle = "\t" . "<title>" . $doctitle . "</title>" . "\n\n";
-    
-    echo $doctitle;
-} // end thematic_doctitle
-
+	    if (get_query_var('paged')) {
+	      $content .= ' ' .$separator. ' ';
+	      $content .= 'Page';
+	      $content .= ' ';
+	      $content .= get_query_var('paged');
+	    }
+	
+	    if($content) {
+	      if ( is_home() || is_front_page() ) {
+	          $elements = array(
+	            'site_name' => $site_name,
+	            'separator' => $separator,
+	            'content' => $content
+	          );
+	      }
+	      else {
+	          $elements = array(
+	            'content' => $content
+	          );
+	      }  
+	    } else {
+	      $elements = array(
+	        'site_name' => $site_name
+	      );
+	    }
+	
+	    // Filters should return an array
+	    $elements = apply_filters('thematic_doctitle', $elements);
+		
+	    // But if they don't, it won't try to implode
+	    if(is_array($elements)) {
+	      $doctitle = implode(' ', $elements);
+	    }
+	    else {
+	      $doctitle = $elements;
+	    }
+	    
+	    $doctitle = "\t" . "<title>" . $doctitle . "</title>" . "\n\n";
+	    
+	    echo $doctitle;
+	} // end thematic_doctitle
+}
 
 // Creates the content-type section
 function thematic_create_contenttype() {
@@ -202,7 +207,7 @@ function thematic_create_robots() {
 		if (thematic_seo()) {
     		$content = "\t";
     		if((is_home() && ($paged < 2 )) || is_front_page() || is_single() || is_page() || is_attachment()) {
-						$content .= "<meta name=\"robots\" content=\"index,follow\" />";
+				$content .= "<meta name=\"robots\" content=\"index,follow\" />";
     		} elseif (is_search()) {
         		$content .= "<meta name=\"robots\" content=\"noindex,nofollow\" />";
     		} else {	
@@ -300,37 +305,42 @@ function thematic_show_commentreply() {
 
 
 // Load scripts for the jquery Superfish plugin http://users.tpg.com.au/j_birch/plugins/superfish/#examples
-function thematic_head_scripts() {
-    $scriptdir_start = "\t";
-		$scriptdir_start .= '<script type="text/javascript" src="';
-    $scriptdir_start .= get_bloginfo('template_directory');
-    $scriptdir_start .= '/library/scripts/';
-    
-    $scriptdir_end = '"></script>';
-    
-    $scripts = "\n";
-    $scripts .= $scriptdir_start . 'hoverIntent.js' . $scriptdir_end . "\n";
-    $scripts .= $scriptdir_start . 'superfish.js' . $scriptdir_end . "\n";
-    $scripts .= $scriptdir_start . 'supersubs.js' . $scriptdir_end . "\n";
-    $dropdown_options = $scriptdir_start . 'thematic-dropdowns.js' . $scriptdir_end . "\n";
-    
-    $scripts = $scripts . apply_filters('thematic_dropdown_options', $dropdown_options);
+if (function_exists('childtheme_override_head_scripts'))  {
+    function thematic_head_scripts() {
+    	childtheme_override_head_scripts();
+    }
+} else {
+    function thematic_head_scripts() {
+	    $scriptdir_start = "\t";
+	    $scriptdir_start .= '<script type="text/javascript" src="';
+	    $scriptdir_start .= get_bloginfo('template_directory');
+	    $scriptdir_start .= '/library/scripts/';
+	    
+	    $scriptdir_end = '"></script>';
+	    
+	    $scripts = "\n";
+	    $scripts .= $scriptdir_start . 'hoverIntent.js' . $scriptdir_end . "\n";
+	    $scripts .= $scriptdir_start . 'superfish.js' . $scriptdir_end . "\n";
+	    $scripts .= $scriptdir_start . 'supersubs.js' . $scriptdir_end . "\n";
+	    $dropdown_options = $scriptdir_start . 'thematic-dropdowns.js' . $scriptdir_end . "\n";
+	    
+	    $scripts = $scripts . apply_filters('thematic_dropdown_options', $dropdown_options);
+	
+	    	$scripts .= "\n";
+	    	$scripts .= "\t";
+	    	$scripts .= '<script type="text/javascript">' . "\n";
+	    	$scripts .= "\t\t";
+	    	$scripts .= 'jQuery.noConflict();' . "\n";
+	    	$scripts .= "\t";
+	    	$scripts .= '</script>' . "\n";
+	
+	    // Print filtered scripts
+	    print apply_filters('thematic_head_scripts', $scripts);
+	}
 
-		$scripts .= "\n";
-		$scripts .= "\t";
-		$scripts .= '<script type="text/javascript">' . "\n";
-		$scripts .= "\t\t";
-		$scripts .= 'jQuery.noConflict();' . "\n";
-		$scripts .= "\t";
-		$scripts .= '</script>' . "\n";
-
-    // Print filtered scripts
-    print apply_filters('thematic_head_scripts', $scripts);
-
-}
-
-if (apply_filters('thematic_use_superfish', TRUE)) {
-	add_action('wp_head','thematic_head_scripts');
+	if (apply_filters('thematic_use_superfish', TRUE)) {
+		add_action('wp_head','thematic_head_scripts');
+	}
 }
 
 // Create the default arguments for wp_page_menu()
@@ -398,62 +408,94 @@ function thematic_header() {
 
 // Functions that hook into thematic_header()
 
-		// Open #branding
-		// In the header div
-		function thematic_brandingopen() { ?>
-		    	<div id="branding">
-		<?php }
-		add_action('thematic_header','thematic_brandingopen',1);
-		
-		
-		// Create the blog title
-		// In the header div
-		function thematic_blogtitle() { ?>
-		    		<div id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
-		<?php }
-		add_action('thematic_header','thematic_blogtitle',3);
-		
-		
-		// Create the blog description
-		// In the header div
-		function thematic_blogdescription() {
-		    		if (is_home() || is_front_page()) { ?>
-		    		<h1 id="blog-description"><?php bloginfo('description') ?></h1>
-		    		<?php } else { ?>	
-		    		<div id="blog-description"><?php bloginfo('description') ?></div>
-		    		<?php }
+	// Open #branding
+	// In the header div
+	if (function_exists('childtheme_override_brandingopen'))  {
+	    function thematic_brandingopen() {
+	    	childtheme_override_brandingopen();
+	    }
+	} else {
+		function thematic_brandingopen() {
+			echo "<div id=\"branding\">\n";
 		}
-		add_action('thematic_header','thematic_blogdescription',5);
+	    add_action('thematic_header','thematic_brandingopen',1);
+	}	
+	
+	// Create the blog title
+	// In the header div
+	if (function_exists('childtheme_override_blogtitle'))  {
+	    function thematic_blogtitle() {
+	    	childtheme_override_blogtitle();
+	    }
+	} else {
+	    function thematic_blogtitle() { ?>
+	    		
+	    		<div id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+	    		
+	    <?php }
+	    add_action('thematic_header','thematic_blogtitle',3);
+	}
+	
+	// Create the blog description
+	// In the header div
+	if (function_exists('childtheme_override_blogdescription'))  {
+	    function thematic_blogdescription() {
+	    	childtheme_override_blogdescription();
+	    }
+	} else {
+	    function thematic_blogdescription() {
+	    	$blogdesc = '"blog-description">' . get_bloginfo('description');
+			if (is_home() || is_front_page()) { 
+	        	echo "\t\t<h1 id=$blogdesc</h1>\n\n";
+	        } else {	
+	        	echo "\t\t<div id=$blogdesc</div>\n\n";
+	        }
+	    }
+	    add_action('thematic_header','thematic_blogdescription',5);
+	}
+	
+	// Close #branding
+	// In the header div
+	if (function_exists('childtheme_override_brandingclose'))  {
+	    function thematic_brandingclose() {
+	    	childtheme_override_brandingclose();
+	    }
+	} else {
+	    function thematic_brandingclose() {
+	    	echo "\t\t</div><!--  #branding -->\n";
+	    }
+	    add_action('thematic_header','thematic_brandingclose',7);
+	}
+	
+	// Create #access
+	// In the header div
+	if (function_exists('childtheme_override_access'))  {
+	    function thematic_access() {
+	    	childtheme_override_access();
+	    }
+	} else {
+	    function thematic_access() { ?>
+	    
+	    <div id="access">
+	    		
+	    	<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
+	    		
+	    	<?php 
+	    		
+	    	if (strtolower(apply_filters('thematic_menu_type', 'wp_page_menu)')) == 'wp_page_menu') {
+	    		echo thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));
+	    	} elseif ((strtolower(apply_filters('thematic_menu_type', 'wp_page_menu)')) == 'wp_nav_menu') AND (function_exists('wp_nav_menu'))) {
+	    		echo  wp_nav_menu(thematic_nav_menu_args());
+	    	} else {
+	    		echo  thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));
+	    	}
+	    	?>
+	        
+		</div><!-- #access -->
 		
-		
-		// Close #branding
-		// In the header div
-		function thematic_brandingclose() { ?>
-		    	</div><!--  #branding -->
 		<?php }
-		add_action('thematic_header','thematic_brandingclose',7);
-		
-		
-		// Create #access
-		// In the header div
-		function thematic_access() { ?>
-		    	<div id="access">
-		    		<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
-		            <?php 
-					
-					if (strtolower(apply_filters('thematic_menu_type', 'wp_page_menu)')) == 'wp_page_menu') {
-						echo thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));
-					} elseif ((strtolower(apply_filters('thematic_menu_type', 'wp_page_menu)')) == 'wp_nav_menu') AND (function_exists('wp_nav_menu'))) {
-						echo wp_nav_menu(thematic_nav_menu_args());
-					} else {
-						echo thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));
-					}
-					
-					?>
-		        </div><!-- #access -->
-		<?php }
-		add_action('thematic_header','thematic_access',9);
-		
+	    add_action('thematic_header','thematic_access',9);
+	}
 
 // End of functions that hook into thematic_header()
 
