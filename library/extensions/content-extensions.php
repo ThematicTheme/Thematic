@@ -695,14 +695,17 @@ if (function_exists('childtheme_override_postmeta_editlink'))  {
 } // end postmeta_editlink
 
 
-// Creates the content
-if (function_exists('childtheme_override_content'))  {
-	function thematic_content() {
-		childtheme_override_content();
+// Sets up the post content 
+if (function_exists('childtheme_override_content_init'))  {
+	function thematic_content_init() {
+		childtheme_override_content_init();
 	}
 } else {
-	function thematic_content() {
-
+	function thematic_content_init() {
+		global $thematic_content_length;
+		
+		$thematic_content_length = '';
+		
 		if (is_home() || is_front_page()) { 
 			$content = 'full';
 		} elseif (is_single()) {
@@ -716,18 +719,32 @@ if (function_exists('childtheme_override_content'))  {
 		} elseif (is_author()) {
 			$content = 'excerpt';
 		} elseif (is_archive()) {
-			$content = 'excerpt';
+			$content = 'excerpt'; 
 		}
 		
-		$content = apply_filters('thematic_content', $content);
+		$thematic_content_length = apply_filters('thematic_content', $content);
+		
+	}
+	add_action('thematic_abovepost','thematic_content_init');
+}
+
+// Creates the post content 
+if (function_exists('childtheme_override_content'))  {
+	function thematic_content() {
+		childtheme_override_content();
+	}
+} else {
+	function thematic_content() {
+		global $thematic_content_length;
 	
-		if ( strtolower($content) == 'full' ) {
+		if ( strtolower($thematic_content_length) == 'full' ) {
 			$post = get_the_content(more_text());
 			$post = apply_filters('the_content', $post);
 			$post = str_replace(']]>', ']]&gt;', $post);
-		} elseif ( strtolower($content) == 'excerpt') {
+		} elseif ( strtolower($thematic_content_length) == 'excerpt') {
 			$post = get_the_excerpt();
-		} elseif ( strtolower($content) == 'none') {
+			$post = apply_filters('thematic_get_excerpt',$post);
+		} elseif ( strtolower($thematic_content_length) == 'none') {
 		} else {
 			$post = get_the_content(more_text());
 			$post = apply_filters('the_content', $post);

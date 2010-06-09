@@ -4,6 +4,14 @@
 
 <li><h3>Added:</h3>
 	<ul>
+		<li>Added new function: <code>thematic_content_init()</code> to set up new post classes.</li>
+		<li>Added override functionality:
+			<ul>
+				<li><code>childtheme_override_content_init()</code> overrides <code>thematic_content_init</code></li>
+			</ul>
+		</li>
+		<li>Added new post classes: is-full is-excerpt custom-excerpt auto-excerpt wp-teaser has-more wp-more has-teaser</li>
+		<li>Added new filter <code>thematic_get_excerpt</code> to <code>thematic_content()</code></li>
 		<li>Added filter to customize the length of<code>thematic_search_form()</code> in <code>widgets-extensions.php</code>. Credits: Aaron Jorbin</li>
 		<li>Added override functionality:
 			<ul>
@@ -29,7 +37,7 @@
 		<li>Added new filter <code>thematic_commentmeta()</code> to <code>discussion.php</code>. Credits: heaven</li>
 		<li>Added override functionality:
 			<ul>
-				<li><code>childtheme_override_body_class()</code> overrides <code>thematic_body_class</code></li>
+				<li><code>childtheme_override_body_class()</code> overrides <code>thematic_body_class()</code></li>
 				<li><code>childtheme_override_post_class()</code> overrides <code>thematic_post_class()</code></li>
 				<li><code>childtheme_override_comment_class()</code> overrides <code>thematic_archive_loop()</code></li>
 				<li><code>childtheme_override_author_loop()</code> overrides <code>thematic_comment_class()</code></li>
