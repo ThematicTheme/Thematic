@@ -297,7 +297,7 @@ if (function_exists('childtheme_override_post_class'))  {
 } else {
 	// Generates semantic classes for each post DIV element
 	function thematic_post_class( $print = true ) {
-		global $post, $thematic_post_alt;
+		global $post, $thematic_post_alt, $thematic_content_length;
 	
 		// hentry for hAtom compliace, gets 'alt' for every other post DIV, describes the post type and p[n]
 		$c = array( 'hentry', "p$thematic_post_alt", $post->post_type, $post->post_status );
@@ -317,12 +317,37 @@ if (function_exists('childtheme_override_post_class'))  {
 				$c[] = 'tag-' . $tag->slug;
 		}
 	
-		// For posts with excerpts
-		if (has_excerpt())
+		// For posts displayed as full content
+		if ($thematic_content_length == 'full')
+			$c[] = 'is-full';
+				
+		// For posts displayed as excerpts
+		if ($thematic_content_length == 'excerpt') {
+			$c[] = 'is-excerpt';
+			if ( has_excerpt() && !preg_match('/<!--more(.*?)?-->/', $post->post_content) ) {
+				// For wp-admin Write Page generated excerpts
+				$c[] = 'custom-excerpt';
+			} else {
+				// For automatically generated excerpts
+				$c[] = 'auto-excerpt';
+			}
+		}
+		
+		// For single posts that had a wp-admin Write Page generated excerpt  
+		if ( has_excerpt() && is_single() )
 			$c[] = 'has-excerpt';
 			
+		//	For posts using more tag
+		if ( preg_match('/<!--more(.*?)?-->/', $post->post_content) ) {	
+			if ( !is_single() ) {
+				$c[] = 'wp-teaser has-more';
+			} elseif ( is_single() ) {
+				$c[] = 'wp-more has-teaser';
+			}
+		}
+						
 		// For posts with comments open or closed
-		if (comments_open()) {
+		if ( comments_open() ) {
 			$c[] = 'comments-open';		
 		} else {
 			$c[] = 'comments-closed';
