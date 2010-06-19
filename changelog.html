@@ -4,7 +4,7 @@
 
 <li><h3>Added:</h3>
 	<ul>
-		<li>Added new body classes: page-paged-1 single-paged-1</li>
+		<li>Added new function: <code>thematic_init_presetwidgets()</code> to initialize the preset widgets. Override function: <code>childtheme_override_init_presetwidgets()</code></li>
 		<li>Added new function: <code>thematic_content_init()</code> to set up new post classes.</li>
 		<li>Added override functionality:
 			<ul>
@@ -123,6 +123,8 @@
 
 <li><h3>Fixed:</h3>
 	<ul> 
+		<li>Fixed a bug in widgets-extensions.php not loading the preset widgets after switching themes.</li>
+		
 		<li>Fixed a bug in page.php not loading <code>thematic_comments_template()</code></li>
 		
 		<li>Fixed missing gettext in comments-extensions.php</li>

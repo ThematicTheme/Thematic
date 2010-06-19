@@ -280,11 +280,12 @@ function thematic_widgets_init() {
 
 	// Pre-set Widgets
 	$preset_widgets = array (
-		'primary-aside'  => array( 'search', 'pages', 'categories', 'archives' ),
-		'secondary-aside'  => array( 'links', 'rss-links', 'meta' )
+		'primary-aside'  => array( 'search-2', 'pages-2', 'categories-2', 'archives-2' ),
+		'secondary-aside'  => array( 'links-2', 'rss-links-2', 'meta-2' )
 		);
 
     if ( isset( $_GET['activated'] ) ) {
+    	thematic_presetwidgets();
   		update_option( 'sidebars_widgets', apply_filters('thematic_preset_widgets',$preset_widgets ));
   	}
 
@@ -292,6 +293,29 @@ function thematic_widgets_init() {
 
 // Runs our code at the end to check that everything needed has loaded
 add_action( 'widgets_init', 'thematic_widgets_init' );
+
+// Action hook for initializing the preset widgets
+function thematic_presetwidgets() {
+	do_action( 'thematic_presetwidgets' );
+}
+
+// Initialize the preset widgets
+if (function_exists('childtheme_override_init_presetwidgets'))  {
+    function thematic_init_presetwidgets() {
+    	childtheme_override_init_presetwidgets();
+    }
+} else {
+	function thematic_init_presetwidgets() {
+		update_option( 'widget_search', array( 2 => array( 'title' => '' ), '_multiwidget' => 1 ) );
+		update_option( 'widget_pages', array( 2 => array( 'title' => ''), '_multiwidget' => 1 ) );
+		update_option( 'widget_categories', array( 2 => array( 'title' => '', 'count' => 0, 'hierarchical' => 0, 'dropdown' => 0 ), '_multiwidget' => 1 ) );
+		update_option( 'widget_archives', array( 2 => array( 'title' => '', 'count' => 0, 'dropdown' => 0 ), '_multiwidget' => 1 ) );
+	}
+		update_option( 'widget_links', array( 2 => array( 'title' => ''), '_multiwidget' => 1 ) );
+		update_option( 'widget_rss-links', array( 2 => array( 'title' => ''), '_multiwidget' => 1 ) );
+		update_option( 'widget_meta', array( 2 => array( 'title' => ''), '_multiwidget' => 1 ) );
+}
+add_action( 'thematic_presetwidgets', 'thematic_init_presetwidgets' );
 
 // We connect the relevant functions to the action hooks
 function thematic_connect_functions() {
