@@ -7,7 +7,7 @@ if (function_exists('childtheme_override_body_class'))  {
 } else {
 	// Generates semantic classes for BODY element
 	function thematic_body_class( $print = true ) {
-		global $wp_query, $current_user, $blog_id;
+		global $wp_query, $current_user, $blog_id, $post;
 	    
 	    $c = array();
 	
@@ -196,27 +196,33 @@ if (function_exists('childtheme_override_body_class'))  {
 	            $c[] = 'loggedin';
 	    }
 	
-		// Paged classes; for 'page X' classes of index, single, etc.
-		if ( (( ( $page = $wp_query->get('paged') ) || ( $page = $wp_query->get('page') ) ) && $page > 1) && apply_filters('thematic_show_bc_pagex', TRUE)) {
-		// Thanks to Prentiss Riddle, twitter.com/pzriddle, for the security fix below. 
-	 			$page = intval($page); // Ensures that an integer (not some dangerous script) is passed for the variable
-			$c[] = 'paged-' . $page;
-			if ( is_single() ) {
-				$c[] = 'single-paged-' . $page;
-			} elseif ( is_page() ) {
-				$c[] = 'page-paged-' . $page;
-			} elseif ( is_category() ) {
-				$c[] = 'category-paged-' . $page;
-			} elseif ( is_tag() ) {
-				$c[] = 'tag-paged-' . $page;
-			} elseif ( is_date() ) {
-				$c[] = 'date-paged-' . $page;
-			} elseif ( is_author() ) {
-				$c[] = 'author-paged-' . $page;
-			} elseif ( is_search() ) {
-				$c[] = 'search-paged-' . $page;
-			}
-		}
+	 // Paged classes; for 'page X' classes of index, single, etc.
+		if (apply_filters('tthematic_show_bc_pagex', TRUE)) {
+						if ( (( ( $page = $wp_query->get('paged') ) || ( $page = $wp_query->get('page') ) ) && $page > 1 ) ) {
+						// Thanks to Prentiss Riddle, twitter.com/pzriddle, for the security fix below. 
+						    $page = intval($page); // Ensures that an integer (not some dangerous script) is passed for the variable
+ 				     $c[] = 'paged-' . $page;
+ 				     if ( is_single() ) {
+								      $c[] = 'single-paged-' . $page;
+							   } elseif ( is_page() ) {
+								      $c[] = 'page-paged-' . $page;
+						    } elseif ( is_category() ) {
+								      $c[] = 'category-paged-' . $page;
+							   } elseif ( is_tag() ) {
+								      $c[] = 'tag-paged-' . $page;
+							   } elseif ( is_date() ) {
+								      $c[] = 'date-paged-' . $page;
+							   } elseif ( is_author() ) {
+								      $c[] = 'author-paged-' . $page;
+							   } elseif ( is_search() ) {
+								      $c[] = 'search-paged-' . $page;
+							   }
+ 				  } elseif (is_page() && strpos($post->post_content, '<!--nextpage-->') )  {
+							   $c[] = 'page-paged-1';
+ 				  } elseif (is_single() && strpos($post->post_content, '<!--nextpage-->') )  {
+								  $c[] = 'single-paged-1';
+						 }		
+  	}
 		
 		if (apply_filters('thematic_show_bc_browser', TRUE)) {
 	        // A little Browser detection shall we?
