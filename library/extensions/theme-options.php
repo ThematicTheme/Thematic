@@ -37,9 +37,11 @@ function mytheme_add_admin() {
     global $themename, $shortname, $options, $blog_id;
 
     if ( $_GET['page'] == basename(__FILE__) ) {
-    
+    	
         if ( 'save' == $_REQUEST['action'] ) {
 
+			check_admin_referer('thematic-theme-options');
+    
                 foreach ($options as $value) {
                 	if (THEMATIC_MB) 
 					{
@@ -93,6 +95,8 @@ function mytheme_add_admin() {
 
         } else if( 'reset' == $_REQUEST['action'] ) {
 
+			check_admin_referer('thematic-theme-options');
+
             foreach ($options as $value) {
 				if (THEMATIC_MB) 
 				{
@@ -110,6 +114,7 @@ function mytheme_add_admin() {
             die;
 
         } else if ( 'resetwidgets' == $_REQUEST['action'] ) {
+			check_admin_referer('thematic-theme-options');
             update_option('sidebars_widgets',NULL);
             header("Location: themes.php?page=theme-options.php&resetwidgets=true");
             die;
@@ -134,6 +139,8 @@ function mytheme_admin() {
 <h2><?php echo $themename; ?> Options</h2>
 
 <form method="post" action="">
+
+	<?php wp_nonce_field('thematic-theme-options'); ?>
 
 	<table class="form-table">
 
