@@ -95,7 +95,7 @@ function mytheme_add_admin() {
 
         } else if( 'reset' == $_REQUEST['action'] ) {
 
-			check_admin_referer('thematic-theme-options');
+			check_admin_referer('thematic-reset');
 
             foreach ($options as $value) {
 				if (THEMATIC_MB) 
@@ -114,7 +114,7 @@ function mytheme_add_admin() {
             die;
 
         } else if ( 'resetwidgets' == $_REQUEST['action'] ) {
-			check_admin_referer('thematic-theme-options');
+			check_admin_referer('thematic-reset-widgets');
             update_option('sidebars_widgets',NULL);
             header("Location: themes.php?page=theme-options.php&resetwidgets=true");
             die;
@@ -305,12 +305,14 @@ function mytheme_admin() {
 	</p>
 </form>
 <form method="post" action="">
+	<?php wp_nonce_field('thematic-reset'); ?>
 	<p class="submit">
 		<input class="button-secondary" name="reset" type="submit" value="<?php _e('Reset','thematic'); ?>" />
 		<input type="hidden" name="action" value="reset" />
 	</p>
 </form>
 <form method="post" action="">
+	<?php wp_nonce_field('thematic-reset-widgets'); ?>
 	<p class="submit">
 		<input class="button-secondary" name="reset_widgets" type="submit" value="<?php _e('Reset Widgets','thematic'); ?>" />
 		<input type="hidden" name="action" value="resetwidgets" />
