@@ -29,8 +29,8 @@ define('TEMPLATEVERSION', $templateversion);
 define('THEMATIC_MB', function_exists('get_blog_option'));
 
 // Check for WordPress 3.0 add_theme_support()
-if (function_exists('add_theme_support')) {
-	add_theme_support( 'nav-menus' );
+if (function_exists('wp_login_form')) {
+	add_theme_support( 'menus' );
 }
 
 // load jQuery
