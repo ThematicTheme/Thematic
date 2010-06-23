@@ -1,7 +1,18 @@
 <h2>What's new in Thematic 0.9.7.2</h2>
 
+<li><h3>Added:</h3>
+	<ul>
+		<li>Fallback to <code>wp_page_menu</code> if theme location has no menu</li>
+		<li><code>thematic_init_navmenu</code> registers the theme location for our menu. Override: <code>childtheme_override_init_navmenu</code>
+		<li><code>thematic_primary_menu_name</code> filters the menu name 'Primary Menu'.</li>
+		<li><code>thematic_primary_menu_id</code> filters the  menu id 'primary-menu'.</li>
+		<li>The main menu uses the menu id 'primary-menu' and the menu name 'Primary Menu'.</li>
+	</ul>
+</li>
+
 <li><h3>Fixed:</h3>
 	<ul> 
+		<li>Changed <code>add_theme_support( 'nav-menus' )</code> to <code>add_theme_support( 'menus' )</code>.</li>
 		<li>Fixed a bug that prevents the 'Reset Widgets'.</li>
 	</ul>
 </li>
