@@ -367,7 +367,6 @@ function thematic_nav_menu_args() {
 		'container'			=> 'div',
 		'container_class'	=> 'menu',
 		'menu_class'		=> 'sf-menu',
-		'echo'				=> FALSE,
 		'fallback_cb'		=> 'wp_page_menu',
 		'before'			=> '',
 		'after'				=> '',
