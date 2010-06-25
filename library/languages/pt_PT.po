@@ -24,7 +24,7 @@ msgstr "Lamentamos, mas não foi possível encontrar o que procura. Tente usar a
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/404.php:15
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:58
 msgid "Find"
-msgstr "Procura"
+msgstr "Pesquisar"
 
 #: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:16
 #, php-format
@@ -484,6 +484,6 @@ msgstr "Título:"
 
 #~ msgid "Site Meta"
 #~ msgstr "Meta do Site"
+
 #~ msgid "Blog Index"
 #~ msgstr "Index do Blog"
-
