@@ -46,7 +46,7 @@ if (function_exists('childtheme_override_doctitle'))  {
 	    }
 	    elseif ( is_search() ) { 
 	      $content = __('Search Results for:', 'thematic'); 
-	      $content .= ' ' . wp_specialchars(stripslashes(get_search_query()), true);
+	      $content .= ' ' . esc_html(stripslashes(get_search_query()));
 	    }
 	    elseif ( is_category() ) {
 	      $content = __('Category Archives:', 'thematic');
@@ -252,7 +252,7 @@ function thematic_show_rss() {
         $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
         $content .= get_bloginfo('rss2_url');
         $content .= "\" title=\"";
-        $content .= wp_specialchars(get_bloginfo('name'), 1);
+        $content .= esc_html(get_bloginfo('name'));
         $content .= " " . __('Posts RSS feed', 'thematic');
         $content .= "\" />";
         $content .= "\n";
@@ -270,7 +270,7 @@ function thematic_show_commentsrss() {
         $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
         $content .= get_bloginfo('comments_rss2_url');
         $content .= "\" title=\"";
-        $content .= wp_specialchars(get_bloginfo('name'), 1);
+        $content .= esc_html(get_bloginfo('name'));
         $content .= " " . __('Comments RSS feed', 'thematic');
         $content .= "\" />";
         $content .= "\n\n";
