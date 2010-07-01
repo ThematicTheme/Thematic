@@ -212,7 +212,7 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '<h1 class="page-title">';
 				$content .= __('Search Results for:', 'thematic');
 				$content .= ' <span id="search-terms">';
-				$content .= wp_specialchars(stripslashes($_GET['s']), true);
+				$content .= esc_html(stripslashes($_GET['s']));
 				$content .= '</span></h1>';
 		} elseif (is_tag()) {
 				$content .= '<h1 class="page-title">';
@@ -846,9 +846,9 @@ function thematic_404() {
 					<p><?php _e('Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'thematic') ?></p>
 				</div>
 				
-				<form id="error404-searchform" method="get" action="<?php bloginfo('home') ?>">
+				<form id="error404-searchform" method="get" action="<?php bloginfo( 'url' ) ?>">
 					<div>
-						<input id="error404-s" name="s" type="text" value="<?php echo wp_specialchars(stripslashes($_GET['s']), true) ?>" size="40" />
+						<input id="error404-s" name="s" type="text" value="<?php echo esc_html(stripslashes($_GET['s'])) ?>" size="40" />
 						<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'thematic') ?>" />
 					</div>
 				</form>

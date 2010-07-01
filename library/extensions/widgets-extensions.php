@@ -3,12 +3,12 @@
 function thematic_search_form() {
 				$search_form_length = apply_filters('thematic_search_form_length', '32');
 				$search_form = "\n" . "\t";
-				$search_form .= '<form id="searchform" method="get" action="' . get_bloginfo('home') .'">';
+				$search_form .= '<form id="searchform" method="get" action="' . get_bloginfo( 'url' ) .'">';
 				$search_form .= "\n" . "\t" . "\t";
 				$search_form .= '<div>';
 				$search_form .= "\n" . "\t" . "\t". "\t";
 				if (is_search()) {
-						$search_form .= '<input id="s" name="s" type="text" value="' . wp_specialchars(stripslashes($_GET['s']), true) .'" size="' . $search_form_length . '" tabindex="1" />';
+						$search_form .= '<input id="s" name="s" type="text" value="' . esc_html(stripslashes($_GET['s'])) .'" size="' . $search_form_length . '" tabindex="1" />';
 				} else {
 						$value = __('To search, type and hit enter', 'thematic');
 						$value = apply_filters('search_field_value',$value);
