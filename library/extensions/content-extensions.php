@@ -1014,10 +1014,10 @@ if (function_exists('childtheme_override_postfooter_postconnect'))  {
 	    if ((comments_open()) && (pings_open())) { /* Comments are open */
 	        $postconnect .= ' <a class="comment-link" href="#respond" title ="' . __('Post a comment', 'thematic') . '">' . __('Post a comment', 'thematic') . '</a>';
 	        $postconnect .= __(' or leave a trackback: ', 'thematic');
-	        $postconnect .= '<a class="trackback-link" href="' . trackback_url(FALSE) . '" title ="' . __('Trackback URL for your post', 'thematic') . '" rel="trackback">' . __('Trackback URL', 'thematic') . '</a>.';
+	        $postconnect .= '<a class="trackback-link" href="' . get_trackback_url() . '" title ="' . __('Trackback URL for your post', 'thematic') . '" rel="trackback">' . __('Trackback URL', 'thematic') . '</a>.';
 	    } elseif (!(comments_open()) && (pings_open())) { /* Only trackbacks are open */
 	        $postconnect .= __(' Comments are closed, but you can leave a trackback: ', 'thematic');
-	        $postconnect .= '<a class="trackback-link" href="' . trackback_url(FALSE) . '" title ="' . __('Trackback URL for your post', 'thematic') . '" rel="trackback">' . __('Trackback URL', 'thematic') . '</a>.';
+	        $postconnect .= '<a class="trackback-link" href="' . get_trackback_url() . '" title ="' . __('Trackback URL for your post', 'thematic') . '" rel="trackback">' . __('Trackback URL', 'thematic') . '</a>.';
 	    } elseif ((comments_open()) && !(pings_open())) { /* Only comments open */
 	        $postconnect .= __(' Trackbacks are closed, but you can ', 'thematic');
 	        $postconnect .= '<a class="comment-link" href="#respond" title ="' . __('Post a comment', 'thematic') . '">' . __('post a comment', 'thematic') . '</a>.';
