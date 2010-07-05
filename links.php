@@ -66,8 +66,8 @@ Template Name: Links Page
     	        
     	        thematic_belowpost();
     	    
-    	        if ( get_post_custom_values('comments') ) 
-    	            comments_template() // Add a key/value of "comments" to enable comments on pages!
+	        	// calling the comments template
+	        	thematic_comments_template();
     	    
     	        ?>
 		

@@ -342,7 +342,7 @@ add_filter('thematic_widgetized_areas', 'thematic_sort_widgetized_areas', 100);
 
 // Define the Primary Aside 
 function thematic_primary_aside() {
-	if (is_sidebar_active('primary-aside')) {
+	if (is_active_sidebar('primary-aside')) {
 		echo thematic_before_widget_area('primary-aside');
 		dynamic_sidebar('primary-aside');
 		echo thematic_after_widget_area('primary-aside');
@@ -351,7 +351,7 @@ function thematic_primary_aside() {
 
 // Define the Secondary Aside
 function thematic_secondary_aside() {
-	if (is_sidebar_active('secondary-aside')) {
+	if (is_active_sidebar('secondary-aside')) {
 		echo thematic_before_widget_area('secondary-aside');
 		dynamic_sidebar('secondary-aside');
 		echo thematic_after_widget_area('secondary-aside');
@@ -360,7 +360,7 @@ function thematic_secondary_aside() {
 
 // Define the 1st Subsidiary Aside
 function thematic_1st_subsidiary_aside() {
-	if (is_sidebar_active('1st-subsidiary-aside')) {
+	if (is_active_sidebar('1st-subsidiary-aside')) {
 		echo thematic_before_widget_area('1st-subsidiary-aside');
 		dynamic_sidebar('1st-subsidiary-aside');
 		echo thematic_after_widget_area('1st-subsidiary-aside');
@@ -369,7 +369,7 @@ function thematic_1st_subsidiary_aside() {
 
 // Define the 2nd Subsidiary Aside
 function thematic_2nd_subsidiary_aside() {
-	if (is_sidebar_active('2nd-subsidiary-aside')) {
+	if (is_active_sidebar('2nd-subsidiary-aside')) {
 		echo thematic_before_widget_area('2nd-subsidiary-aside');
 		dynamic_sidebar('2nd-subsidiary-aside');
 		echo thematic_after_widget_area('2nd-subsidiary-aside');
@@ -378,7 +378,7 @@ function thematic_2nd_subsidiary_aside() {
 
 // Define the 3rd Subsidiary Aside
 function thematic_3rd_subsidiary_aside() {
-	if (is_sidebar_active('3rd-subsidiary-aside')) {
+	if (is_active_sidebar('3rd-subsidiary-aside')) {
 		echo thematic_before_widget_area('3rd-subsidiary-aside');
 		dynamic_sidebar('3rd-subsidiary-aside');
 		echo thematic_after_widget_area('3rd-subsidiary-aside');
@@ -387,7 +387,7 @@ function thematic_3rd_subsidiary_aside() {
 
 // Define the Index Top
 function thematic_index_top() {
-	if (is_sidebar_active('index-top')) {
+	if (is_active_sidebar('index-top')) {
 		echo thematic_before_widget_area('index-top');
 		dynamic_sidebar('index-top');
 		echo thematic_after_widget_area('index-top');
@@ -396,7 +396,7 @@ function thematic_index_top() {
 
 // Define the Index Insert
 function thematic_index_insert() {
-	if (is_sidebar_active('index-insert')) {
+	if (is_active_sidebar('index-insert')) {
 		echo thematic_before_widget_area('index-insert');
 		dynamic_sidebar('index-insert');
 		echo thematic_after_widget_area('index-insert');
@@ -405,7 +405,7 @@ function thematic_index_insert() {
 
 // Define the Index Bottom
 function thematic_index_bottom() {
-	if (is_sidebar_active('index-bottom')) {
+	if (is_active_sidebar('index-bottom')) {
 		echo thematic_before_widget_area('index-bottom');
 		dynamic_sidebar('index-bottom');
 		echo thematic_after_widget_area('index-bottom');
@@ -414,7 +414,7 @@ function thematic_index_bottom() {
 
 // Define the Single Top
 function thematic_single_top() {
-	if (is_sidebar_active('single-top')) {
+	if (is_active_sidebar('single-top')) {
 		echo thematic_before_widget_area('single-top');
 		dynamic_sidebar('single-top');
 		echo thematic_after_widget_area('single-top');
@@ -423,7 +423,7 @@ function thematic_single_top() {
 
 // Define the Single Insert
 function thematic_single_insert() {
-	if (is_sidebar_active('single-insert')) {
+	if (is_active_sidebar('single-insert')) {
 		echo thematic_before_widget_area('single-insert');
 		dynamic_sidebar('single-insert');
 		echo thematic_after_widget_area('single-insert');
@@ -432,7 +432,7 @@ function thematic_single_insert() {
 
 // Define the Single Bottom
 function thematic_single_bottom() {
-	if (is_sidebar_active('single-bottom')) {
+	if (is_active_sidebar('single-bottom')) {
 		echo thematic_before_widget_area('single-bottom');
 		dynamic_sidebar('single-bottom');
 		echo thematic_after_widget_area('single-bottom');
@@ -441,7 +441,7 @@ function thematic_single_bottom() {
 
 // Define the Page Top
 function thematic_page_top() {
-	if (is_sidebar_active('page-top')) {
+	if (is_active_sidebar('page-top')) {
 		echo thematic_before_widget_area('page-top');
 		dynamic_sidebar('page-top');
 		echo thematic_after_widget_area('page-top');
@@ -450,7 +450,7 @@ function thematic_page_top() {
 
 // Define the Page Bottom
 function thematic_page_bottom() {
-	if (is_sidebar_active('page-bottom')) {
+	if (is_active_sidebar('page-bottom')) {
 		echo thematic_before_widget_area('page-bottom');
 		dynamic_sidebar('page-bottom');
 		echo thematic_after_widget_area('page-bottom');

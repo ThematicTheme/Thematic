@@ -74,14 +74,14 @@ function thematic_belowcomments() {
 // Creates the standard text for one comment
 function thematic_singlecomment_text() {
     $content = __('<span>One</span> Comment', 'thematic');
-    return apply_filters(thematic_singlecomment_text, $content);
+    return apply_filters( 'thematic_singlecomment_text', $content );
 }
 
 // Located in comments.php
 // Creates the standard text for more than one comment
 function thematic_multiplecomments_text() {
     $content = __('<span>%d</span> Comments', 'thematic');
-    return apply_filters(thematic_multiplecomments_text, $content);
+    return apply_filters( 'thematic_multiplecomments_text', $content );
 }
 
 // creates the list comments arguments
@@ -94,28 +94,28 @@ function list_comments_arg() {
 // Creates the standard text 'Post a Comment'
 function thematic_postcomment_text() {
     $content = __('Post a Comment', 'thematic');
-    return apply_filters(thematic_postcomment_text, $content);
+    return apply_filters( 'thematic_postcomment_text', $content );
 }
 
 // Located in comments.php
 // Creates the standard text 'Post a Reply to %s'
 function thematic_postreply_text() {
     $content = __('Post a Reply to %s', 'thematic');
-    return apply_filters(thematic_postreply_text, $content);
+    return apply_filters( 'thematic_postreply_text', $content );
 }
 
 // Located in comments.php
 // Creates the standard text 'Comment' for the text box
 function thematic_commentbox_text() {
     $content = __('Comment', 'thematic');
-    return apply_filters(thematic_commentbox_text, $content);
+    return apply_filters( 'thematic_commentbox_text', $content );
 }
 
 // Located in comments.php
 // Creates the standard text 'Post Comment' for the send button
 function thematic_commentbutton_text() {
     $content = __('Post Comment', 'thematic');
-    return apply_filters(thematic_commentbutton_text, $content);
+    return apply_filters( 'thematic_commentbutton_text', $content );
 }
 
 // Produces an avatar image with the hCard-compliant photo class

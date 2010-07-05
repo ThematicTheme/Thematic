@@ -363,8 +363,36 @@ li.content-column {
     width:45%;
 }
 .gallery {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	margin: 0 auto;
     padding:0 0 22px 0;
-}
+	}
+.gallery .gallery-row {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	margin: 0;
+	}
+.gallery .gallery-item {
+	overflow: hidden;
+	float: left;
+	margin: 0;
+	text-align: center;
+	list-style: none;
+	padding: 0;
+	}
+.gallery .gallery-item img, .gallery .gallery-item img.thumbnail {
+	max-width: 89%;
+	height: auto;
+	padding: 1%;
+	margin: 0 auto;
+	border: none !important;
+	}
+.gallery-caption {
+	margin-left: 0;
+	}
 .wp-caption-text,
 .gallery-caption {
     color:#666;

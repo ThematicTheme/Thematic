@@ -704,6 +704,7 @@ if (function_exists('childtheme_override_content_init'))  {
 	function thematic_content_init() {
 		global $thematic_content_length;
 		
+		$content = '';
 		$thematic_content_length = '';
 		
 		if (is_home() || is_front_page()) { 
