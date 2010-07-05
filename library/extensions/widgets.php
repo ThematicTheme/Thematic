@@ -1,16 +1,5 @@
 <?php
 
-// Check for static widgets in widget-ready areas
-
-function is_sidebar_active( $index ){
-  global $wp_registered_sidebars;
-
-  $widgetcolums = wp_get_sidebars_widgets();
-		 
-  if ($widgetcolums[$index]) return true;
-  
-	return false;
-}
 
 // CSS markup before the widget
 function thematic_before_widget() {

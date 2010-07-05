@@ -222,7 +222,7 @@ function thematic_sidebar() {
 	} // end thematic_belowsubasides
     
     function thematic_subsidiaryopen() {
-        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget ?>
+        if ( is_active_sidebar('1st-subsidiary-aside') || is_active_sidebar('2nd-subsidiary-aside') || is_active_sidebar('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget ?>
             
             <div id="subsidiary">
             
@@ -238,7 +238,7 @@ function thematic_sidebar() {
 	} // end thematic_before_first_sub
     
     function add_before_first_sub() {
-        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
+        if ( is_active_sidebar('1st-subsidiary-aside') || is_active_sidebar('2nd-subsidiary-aside') || is_active_sidebar('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
             thematic_before_first_sub();
         }
     }
@@ -255,7 +255,7 @@ function thematic_sidebar() {
 	} // end thematic_between_firstsecond_sub
     
     function add_between_firstsecond_sub() {
-        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
+        if ( is_active_sidebar('1st-subsidiary-aside') || is_active_sidebar('2nd-subsidiary-aside') || is_active_sidebar('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
             thematic_between_firstsecond_sub();
         }
     }
@@ -268,7 +268,7 @@ function thematic_sidebar() {
 	} // end thematic_between_secondthird_sub
     
     function add_between_secondthird_sub() {
-        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
+        if ( is_active_sidebar('1st-subsidiary-aside') || is_active_sidebar('2nd-subsidiary-aside') || is_active_sidebar('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
             thematic_between_secondthird_sub();
         }
     }
@@ -282,14 +282,14 @@ function thematic_sidebar() {
 
     
     function add_after_third_sub() {
-        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
+        if ( is_active_sidebar('1st-subsidiary-aside') || is_active_sidebar('2nd-subsidiary-aside') || is_active_sidebar('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget
             thematic_after_third_sub();
         }
     }
     add_action('widget_area_subsidiaries', 'add_after_third_sub',80);
     
     function thematic_subsidiaryclose() {
-        if ( is_sidebar_active('1st-subsidiary-aside') || is_sidebar_active('2nd-subsidiary-aside') || is_sidebar_active('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget ?>
+        if ( is_active_sidebar('1st-subsidiary-aside') || is_active_sidebar('2nd-subsidiary-aside') || is_active_sidebar('3rd-subsidiary-aside') ) { // one of the subsidiary asides has a widget ?>
             
             </div><!-- #subsidiary -->
             

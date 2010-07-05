@@ -155,6 +155,7 @@ function thematic_use_autoexcerpt() {
 
 // Creates the meta-tag description
 function thematic_create_description() {
+		$content = '';
 		if (thematic_seo()) {
     		if (is_single() || is_page() ) {
       		  if ( have_posts() ) {
