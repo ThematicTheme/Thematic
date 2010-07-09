@@ -1,0 +1,270 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cecececececec\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-08-02 17:26+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Gene Robinson <emhr@submersible.me>\n"
+"Language-Team: edcedcdecedcedce <edcececedc@vfrvfr.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: /Users/heinmaas/Downloads/wordpress/wp-content/themes/thematic/\n"
+"X-Poedit-SearchPath-0: /Users/heinmaas/Downloads/wordpress/wp-content/themes/thematic\n"
+
+msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>Uw commentaar is in afwachting van goedkeuring.</span>\n"
+
+msgid " Also tagged "
+msgstr " Ook tagged "
+
+msgid " Both comments and trackbacks are currently closed."
+msgstr " Trackbacks en Reacties zijn beide tijdelijk gesloten."
+
+msgid " Comment"
+msgstr " Reactie"
+
+msgid " Comments"
+msgstr " Reacties"
+
+msgid " Comments are closed, but you can leave a trackback: "
+msgstr " Reacties zijn gesloten, maar je kan een trackback achter laten: "
+
+msgid " Trackbacks are closed, but you can "
+msgstr " Trackbacks zijn gesloten, maar je kan "
+
+msgid " and tagged"
+msgstr " en tagged als"
+
+msgid " or leave a trackback: "
+msgstr " of laat een trackback achter: "
+
+msgid ". Bookmark the "
+msgstr ". Bookmark de "
+
+msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"Ingelogd\">Ingelogd als <a href=\"%1$s\" title=\"Ingelogd als %2$s\">%2$s</a>.</span> <span class=\"Log uit\"><a href=\"%3$s\" title=\"Log uit\">Log uit?</a></span>"
+
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Oudere berichten"
+
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span> Reacties"
+
+msgid "<span>%d</span> Trackbacks"
+msgstr "<span>%d</span> Trackbacks"
+
+msgid "<span>One</span> Comment"
+msgstr "<span>Een</span> Reactie"
+
+msgid "<span>One</span> Trackback"
+msgstr "<span>One</span> Trackback"
+
+msgid "All comments"
+msgstr "Alle reacties"
+
+msgid "All posts"
+msgstr "Alle berichten"
+
+msgid "Also posted in "
+msgstr "Ook geplaatst in "
+
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
+msgstr "Onze excuses, maar we konden niet vinden wat je zocht. Misschien dat verder komt door het op te zoeken."
+
+msgid "Archives"
+msgstr "Archieven"
+
+msgid "Archives by Category"
+msgstr "Archieven per Categorie "
+
+msgid "Archives by Month"
+msgstr "Archieven per Maand"
+
+msgid "Author Archives: "
+msgstr "Auteur Archieven:"
+
+msgid "Blog Archives"
+msgstr "Blog Archief"
+
+msgid "Blog Index"
+msgstr "Blog index"
+
+msgid "By "
+msgstr "Door "
+
+msgid "By %1$s on %2$s at %3$s"
+msgstr "By %1$s op %2$s om %3$s"
+
+msgid "Categories"
+msgstr "Categorieen"
+
+msgid "Category Archives:"
+msgstr "Categorie Archieven:"
+
+msgid "Comment"
+msgstr "Reactie"
+
+msgid "Comment on "
+msgstr "Reacties op "
+
+msgid "Comments RSS feed"
+msgstr "Reacties RSS Feed"
+
+msgid "Comments closed"
+msgstr "Reacties gesloten "
+
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Dagelijks Archief: <span>%s</span>"
+
+msgid "Edit"
+msgstr "Bewerk"
+
+msgid "Edit post"
+msgstr "Bewerk bericht"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Email "
+msgstr "Email"
+
+msgid "Find"
+msgstr "Zoek"
+
+msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
+msgstr "Voor meer informatie over dit thema, <a href=\"http://themeshaper.com\"> bezoek ThemeShaper </ a>. Bezoek het <a href=\"http://themeshaper.com/forums/\"> ThemeShaper Forum </ a> als u vragen heeft over thematic."
+
+msgid "Leave a comment"
+msgstr "Laat een reactie achter. "
+
+msgid "Meta"
+msgstr "Meta"
+
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Maandelijks Archief: <span>%s</span>"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Nieuwe berichten <span class=\"meta-nav\">&raquo;</span>"
+
+msgid "Not Found"
+msgstr "Niet gevonden"
+
+msgid "Nothing Found"
+msgstr "Niks gevonden"
+
+msgid "Pages"
+msgstr "Pagina's"
+
+msgid "Pages:"
+msgstr "Pagina's"
+
+msgid "Pages: "
+msgstr "Pagina's:"
+
+msgid "Permalink to "
+msgstr "Permalink naar"
+
+msgid "Post Comment"
+msgstr "Plaats een reactie"
+
+msgid "Post a Comment"
+msgstr "Plaats een reactie"
+
+msgid "Post a comment"
+msgstr "Plaats een reactie "
+
+msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
+msgstr "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink naar dit bericht\">Permalink</a>"
+
+msgid "Posted in "
+msgstr "Geplaatst in "
+
+msgid "Posts RSS feed"
+msgstr "Plaats een RSS feed"
+
+msgid "RSS Feeds"
+msgstr "RSS Feeds"
+
+msgid "RSS Links"
+msgstr "RSS links"
+
+msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Lees meer <span class=\"meta-nav\">&raquo;</span>"
+
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "Verplichte velden zijn gemarkeerd  <span class=\"required\">*</span>"
+
+msgid "Search"
+msgstr "Zoek"
+
+msgid "Search Results for:"
+msgstr "Zoek resultaten voor:"
+
+msgid "Site Meta"
+msgstr "Site Meta"
+
+msgid "Skip navigation to the content"
+msgstr "Sla de navigatie over en ga naar de inhoud"
+
+msgid "Skip to content"
+msgstr "Ga naar de inhoud"
+
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Sorry, we hebben niets gevonden wat aan uw zoekcriteria voldoet. Probeer het opnieuw met andere zoekwoorden."
+
+msgid "Tag Archives:"
+msgstr "Zoekwoorden Archief"
+
+msgid "Tagged"
+msgstr "Tagged "
+
+msgid "This entry was posted in "
+msgstr "Dit bericht is geplaatst in "
+
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Dit bericht is beveiligd met een wachtwoord. Voer het wachtwoord in om het bericht te bekijken."
+
+msgid "Title:"
+msgstr "Titel"
+
+msgid "Trackback URL"
+msgstr "Trackback URL"
+
+msgid "Trackback URL for your post"
+msgstr "Trackback URL voor jouw bericht"
+
+msgid "View all posts by "
+msgstr "Bekijk alle berichten van "
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Jaarlijks Archief: <span>%s</span>"
+
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Je moet <a href=\"%s\" title=\"Ingelogd\">Ingelogd</a> om een reactie te plaatsen."
+
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "Je email zal  <em>nooit</em> geplubiceerd of gedeeld worden."
+
+msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Uw trackback is in afwachting van goedkeuring.</span>\\n"
+
+msgid "permalink"
+msgstr "permalink "
+
+msgid "post a comment"
+msgstr "een reactie plaatsen"
+
