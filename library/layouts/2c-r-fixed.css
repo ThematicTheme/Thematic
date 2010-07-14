@@ -66,3 +66,24 @@ body {
     width:940px;
     margin:0 auto;
 }
+
+/* =Page Templates
+-------------------------------------------------------------- */
+
+/*
+    Full Width Template
+*/
+
+.page-template-page-fullwidth-php #container {
+	margin:0;
+	width:940px;
+}
+
+.page-template-page-fullwidth-php #content {
+	margin: 0 0 0 10px;
+	width:940px;
+}
+
+.page-template-page-fullwidth-php #comments {
+    width:540px;
+}
