@@ -294,9 +294,9 @@ if (function_exists('childtheme_override_archive_loop'))  {
 					<div class="entry-content">
 <?php thematic_content(); ?>
 
-					</div>
+					</div><!-- .entry-content -->
 					<?php thematic_postfooter(); ?>
-				</div><!-- .post -->
+				</div><!-- #post -->
 
 			<?php 
 			
@@ -326,9 +326,9 @@ if (function_exists('childtheme_override_author_loop'))  {
 					<div class="entry-content ">
 <?php thematic_content(); ?>
 
-					</div>
+					</div><!-- .entry-content -->
 					<?php thematic_postfooter(); ?>
-				</div><!-- .post -->
+				</div><!-- #post -->
 
 			<?php 
 		
@@ -357,9 +357,9 @@ if (function_exists('childtheme_override_category_loop'))  {
 					<div class="entry-content">
 <?php thematic_content(); ?>
 	
-					</div>
+					</div><!-- .entry-content -->
 					<?php thematic_postfooter(); ?>
-				</div><!-- .post -->
+				</div><!-- #post -->
 
 			<?php 
 		
@@ -408,9 +408,9 @@ if (function_exists('childtheme_override_index_loop'))  {
 <?php thematic_content(); ?>
 
 					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
-					</div>
+					</div><!-- .entry-content -->
 					<?php thematic_postfooter(); ?>
-				</div><!-- .post -->
+				</div><!-- #post -->
 
 			<?php 
 				
@@ -445,9 +445,9 @@ if (function_exists('childtheme_override_single_post'))  {
 <?php thematic_content(); ?>
 
 						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
-					</div>
+					</div><!-- .entry-content -->
 					<?php thematic_postfooter(); ?>
-				</div><!-- .post -->
+				</div><!-- #post -->
 		<?php
 
 			thematic_belowpost();
@@ -473,9 +473,9 @@ if (function_exists('childtheme_override_search_loop'))  {
 					<div class="entry-content">
 <?php thematic_content(); ?>
 
-					</div>
+					</div><!-- .entry-content -->
 					<?php thematic_postfooter(); ?>
-				</div><!-- .post -->
+				</div><!-- #post -->
 
 			<?php 
 		
@@ -504,9 +504,9 @@ if (function_exists('childtheme_override_tag_loop'))  {
 					<div class="entry-content">
 <?php thematic_content() ?>
 
-					</div>
+					</div><!-- .entry-content -->
 					<?php thematic_postfooter(); ?>
-				</div><!-- .post -->
+				</div><!-- #post -->
 
 			<?php 
 		
@@ -845,7 +845,7 @@ function thematic_404() {
    			
 				<div class="entry-content">
 					<p><?php _e('Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'thematic') ?></p>
-				</div>
+				</div><!-- .entry-content -->
 				
 				<form id="error404-searchform" method="get" action="<?php bloginfo( 'url' ) ?>">
 					<div>

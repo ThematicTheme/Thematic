@@ -48,8 +48,8 @@ Template Name: Archives Page
 	                    
 	                    ?>
 	
-					</div>
-				</div><!-- .post -->
+					</div><!-- .entry-content -->
+				</div><!-- #post -->
 	
 	        <?php
 	        

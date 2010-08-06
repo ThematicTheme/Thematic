@@ -45,7 +45,7 @@
 	                        
 	                        ?>
 	                        
-					</div>
+					</div><!-- .entry-content -->
 	                
 					<?php
 	                
@@ -54,7 +54,7 @@
 	                
 	                ?>
 	                
-				</div><!-- .post -->
+				</div><!-- #post -->
 	
 	            <?php
 	            
