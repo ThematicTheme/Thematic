@@ -26,12 +26,14 @@
     
     // Loading the stylesheet
     thematic_create_stylesheet();
+
+	if (!function_exists('wp_login_form')) {    
+    	// Creating the internal RSS links
+    	thematic_show_rss();
     
-    // Creating the internal RSS links
-    thematic_show_rss();
-    
-    // Creating the comments RSS links
-    thematic_show_commentsrss();
+    	// Creating the comments RSS links
+    	thematic_show_commentsrss();
+   	}
     
     // Creating the pingback adress
     thematic_show_pingback();
