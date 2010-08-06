@@ -59,8 +59,8 @@ Template Name: Links Page
     	                
     	                ?>
 		
-					</div>
-				</div><!-- .post -->
+					</div><!-- .entry-content -->
+				</div><!-- #post -->
 		
     	        <?php 
     	        

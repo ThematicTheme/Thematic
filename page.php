@@ -44,8 +44,8 @@
 	                    
 	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
 	
-					</div>
-				</div><!-- .post -->
+					</div><!-- .entry-content -->
+				</div><!-- #post -->
 	
 	        <?php
 	        
