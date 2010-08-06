@@ -194,7 +194,7 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '</a></h2>';
 		} elseif (is_author()) {
 				$content .= '<h1 class="page-title author">';
-				$author = get_the_author();
+				$author = get_the_author_meta( 'displayname' );
 				$content .= __('Author Archives: ', 'thematic');
 				$content .= '<span>';
 				$content .= $author;
@@ -648,8 +648,8 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	    $authorlink = '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
 	    $authorlink .= '<span class="author vcard">'. '<a class="url fn n" href="';
 	    $authorlink .= get_author_posts_url($authordata->ID, $authordata->user_nicename);
-	    $authorlink .= '" title="' . __('View all posts by ', 'thematic') . get_the_author() . '">';
-	    $authorlink .= get_the_author();
+	    $authorlink .= '" title="' . __('View all posts by ', 'thematic') . get_the_author_meta( 'display_name' ) . '">';
+	    $authorlink .= get_the_author_meta( 'user_url' );
 	    $authorlink .= '</a></span>';
 	    
 	    return apply_filters('thematic_post_meta_authorlink', $authorlink);

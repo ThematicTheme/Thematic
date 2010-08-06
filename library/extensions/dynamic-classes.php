@@ -309,7 +309,7 @@ if (function_exists('childtheme_override_post_class'))  {
 		$c = array( 'hentry', "p$thematic_post_alt", $post->post_type, $post->post_status );
 	
 		// Author for the post queried
-		$c[] = 'author-' . sanitize_title_with_dashes(strtolower(get_the_author('login')));
+		$c[] = 'author-' . sanitize_title_with_dashes(strtolower(get_the_author_meta('user_login')));
 	
 		// Category for the post queried
 		foreach ( (array) get_the_category() as $cat )
