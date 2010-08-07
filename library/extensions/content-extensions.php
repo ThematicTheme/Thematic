@@ -194,7 +194,7 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '</a></h2>';
 		} elseif (is_author()) {
 				$content .= '<h1 class="page-title author">';
-				$author = get_the_author_meta( 'displayname' );
+				$author = get_the_author_meta( 'display_name' );
 				$content .= __('Author Archives: ', 'thematic');
 				$content .= '<span>';
 				$content .= $author;
