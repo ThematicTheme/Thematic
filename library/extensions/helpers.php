@@ -78,4 +78,9 @@ function thematic_tag_query() {
 	 return $nice_tag_query;
 }
 
+function thematic_get_term_name() {
+	// Credits: Justin Tadlock Theme Hybrid
+	$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
+	return $term->name;
+}
 ?>

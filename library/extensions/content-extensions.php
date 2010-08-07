@@ -194,7 +194,7 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '</a></h2>';
 		} elseif (is_author()) {
 				$content .= '<h1 class="page-title author">';
-				$author = get_the_author_meta( 'display_name' );
+				$author = get_the_author_meta( 'displayname' );
 				$content .= __('Author Archives: ', 'thematic');
 				$content .= '<span>';
 				$content .= $author;
@@ -219,6 +219,12 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= __('Tag Archives:', 'thematic');
 				$content .= ' <span>';
 				$content .= __(thematic_tag_query());
+				$content .= '</span></h1>';
+		} elseif (is_tax()) {
+				$content .= '<h1 class="page-title">';
+				$content .= __('Taxonomy Archives:', 'thematic');
+				$content .= ' <span>';
+				$content .= thematic_get_term_name();
 				$content .= '</span></h1>';
 		}	elseif (is_day()) {
 				$content .= '<h1 class="page-title">';
