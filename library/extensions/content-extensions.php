@@ -559,7 +559,7 @@ if (function_exists('childtheme_override_postheader'))  {
  	   
  	   global $post;
  	 
- 	   if ($post->post_type == 'page' || is_404()) {
+ 	   if ( is_404() || $post->post_type == 'page') {
  	       $postheader = thematic_postheader_posttitle();        
  	   } else {
  	       $postheader = thematic_postheader_posttitle() . thematic_postheader_postmeta();    
@@ -855,7 +855,7 @@ function thematic_404() {
 				
 				<form id="error404-searchform" method="get" action="<?php bloginfo( 'url' ) ?>">
 					<div>
-						<input id="error404-s" name="s" type="text" value="<?php echo esc_html(stripslashes($_GET['s'])) ?>" size="40" />
+						<input id="error404-s" name="s" type="text" value="<?php echo esc_html(stripslashes(get_query_var('s'))) ?>" size="40" />
 						<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'thematic') ?>" />
 					</div>
 				</form>
