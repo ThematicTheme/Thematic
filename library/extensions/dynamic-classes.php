@@ -7,7 +7,7 @@ if (function_exists('childtheme_override_body_class'))  {
 } else {
 	// Generates semantic classes for BODY element
 	function thematic_body_class( $print = true ) {
-		global $wp_query, $current_user, $blog_id, $post;
+		global $wp_query, $current_user, $blog_id, $post, $taxonomy;
 	    
 	    $c = array();
 	
@@ -66,12 +66,23 @@ if (function_exists('childtheme_override_body_class'))  {
 			if ( $cats = get_the_category() )
 				foreach ( $cats as $cat )
 					$c[] = 's-category-' . $cat->slug;
-	
+
 			// Adds tag classes for each tags on single posts
 			if ( $tags = get_the_tags() )
 				foreach ( $tags as $tag )
 					$c[] = 's-tag-' . $tag->slug;
-	
+
+			// Adds tag classes for each tags on single posts
+			if ( $tax = get_the_terms($post->ID, get_post_taxonomies() )) 
+				foreach ( $tax  as $term )   { 
+					if  ( $term->taxonomy != 'post_tag' )	{
+						if  ( $term->taxonomy != 'category' )   { 
+							$c[] = 's-tax-' . $term->taxonomy;
+							$c[] = 's-' . $term->taxonomy . '-' . $term->slug;
+						}
+					}
+			}
+			
 			// Adds MIME-specific classes for attachments
 			if ( is_attachment() ) {
 				$mime_type = get_post_mime_type();
@@ -130,6 +141,14 @@ if (function_exists('childtheme_override_body_class'))  {
 			$tags = $wp_query->get_queried_object();
 			$c[] = 'tag';
 			$c[] = 'tag-' . $tags->slug;
+		}
+		
+		// Taxonomy name classes for BODY on tag archives
+		
+		elseif ( is_tax() && apply_filters('thematic_show_bc_taxonomyarchives', TRUE)) {
+			$c[] = 'taxonomy';
+			$c[] = 'tax-' . $taxonomy;
+			$c[] = $taxonomy . '-' . strtolower(thematic_get_term_name());
 		}
 	
 		// Page author for BODY on 'pages'
@@ -197,7 +216,7 @@ if (function_exists('childtheme_override_body_class'))  {
 	    }
 	
 	 // Paged classes; for 'page X' classes of index, single, etc.
-		if (apply_filters('tthematic_show_bc_pagex', TRUE)) {
+		if (apply_filters('thematic_show_bc_pagex', TRUE)) {
 						if ( (( ( $page = $wp_query->get('paged') ) || ( $page = $wp_query->get('page') ) ) && $page > 1 ) ) {
 						// Thanks to Prentiss Riddle, twitter.com/pzriddle, for the security fix below. 
 						    $page = intval($page); // Ensures that an integer (not some dangerous script) is passed for the variable
@@ -206,10 +225,12 @@ if (function_exists('childtheme_override_body_class'))  {
 								      $c[] = 'single-paged-' . $page;
 							   } elseif ( is_page() ) {
 								      $c[] = 'page-paged-' . $page;
-						    } elseif ( is_category() ) {
+							   } elseif ( is_category() ) {
 								      $c[] = 'category-paged-' . $page;
 							   } elseif ( is_tag() ) {
 								      $c[] = 'tag-paged-' . $page;
+							   } elseif ( is_tax() ) {
+								      $c[] = 'taxonomy-paged-' . $page;
 							   } elseif ( is_date() ) {
 								      $c[] = 'date-paged-' . $page;
 							   } elseif ( is_author() ) {
@@ -303,7 +324,7 @@ if (function_exists('childtheme_override_post_class'))  {
 } else {
 	// Generates semantic classes for each post DIV element
 	function thematic_post_class( $print = true ) {
-		global $post, $thematic_post_alt, $thematic_content_length;
+		global $post, $thematic_post_alt, $thematic_content_length, $taxonomy;
 	
 		// hentry for hAtom compliace, gets 'alt' for every other post DIV, describes the post type and p[n]
 		$c = array( 'hentry', "p$thematic_post_alt", $post->post_type, $post->post_status );
@@ -314,7 +335,7 @@ if (function_exists('childtheme_override_post_class'))  {
 		// Category for the post queried
 		foreach ( (array) get_the_category() as $cat )
 			$c[] = 'category-' . $cat->slug;
-	
+		
 		// Tags for the post queried; if not tagged, use .untagged
 		if ( get_the_tags() == null ) {
 			$c[] = 'untagged';
@@ -326,7 +347,17 @@ if (function_exists('childtheme_override_post_class'))  {
 		// For posts displayed as full content
 		if ($thematic_content_length == 'full')
 			$c[] = 'is-full';
-				
+		
+		// Taxonomies for the post queried
+			foreach ( (array) get_the_terms( $post->ID, get_post_taxonomies() )  as $term  )   {
+				if  ( $term->taxonomy != 'category' )	{
+					if  ( $term->taxonomy != 'post_tag' )   { 
+						$c[] = 'p-tax-' . $term->taxonomy;
+						$c[] = 'p-' . $term->taxonomy . '-' . $term->slug;
+					}
+				}
+			}
+
 		// For posts displayed as excerpts
 		if ($thematic_content_length == 'excerpt') {
 			$c[] = 'is-excerpt';
@@ -346,9 +377,9 @@ if (function_exists('childtheme_override_post_class'))  {
 		//	For posts using more tag
 		if ( preg_match('/<!--more(.*?)?-->/', $post->post_content) ) {	
 			if ( !is_single() ) {
-				$c[] = 'wp-teaser has-more';
+				$c[] = 'wp-teaser';
 			} elseif ( is_single() ) {
-				$c[] = 'wp-more has-teaser';
+				$c[] = 'has-teaser';
 			}
 		}
 						
