@@ -221,8 +221,11 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= __(thematic_tag_query());
 				$content .= '</span></h1>';
 		} elseif (is_tax()) {
+			    global $taxonomy;
 				$content .= '<h1 class="page-title">';
-				$content .= __('Taxonomy Archives:', 'thematic');
+				$tax = get_taxonomy($taxonomy);
+				$content .= $tax->labels->name . ' ';
+				$content .= __('Archives:', 'thematic');
 				$content .= ' <span>';
 				$content .= thematic_get_term_name();
 				$content .= '</span></h1>';
