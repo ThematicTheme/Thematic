@@ -67,20 +67,27 @@ if (function_exists('childtheme_override_body_class'))  {
 				foreach ( $cats as $cat )
 					$c[] = 's-category-' . $cat->slug;
 
-			// Adds tag classes for each tags on single posts
+			// Adds tag classes for each tag on single posts
 			if ( $tags = get_the_tags() )
 				foreach ( $tags as $tag )
 					$c[] = 's-tag-' . $tag->slug;
 
-			// Adds tag classes for each tags on single posts
-			if ( $tax = get_the_terms($post->ID, get_post_taxonomies() )) 
-				foreach ( $tax  as $term )   { 
-					if  ( $term->taxonomy != 'post_tag' )	{
-						if  ( $term->taxonomy != 'category' )   { 
-							$c[] = 's-tax-' . $term->taxonomy;
-							$c[] = 's-' . $term->taxonomy . '-' . $term->slug;
-						}
-					}
+			// Adds taxonomy classes for each term on single posts
+			$single_post_type = get_post_type_object(get_post_type($post->ID));
+			
+			// Check for post types without taxonomy inclusion
+			if ( isset($single_post_type->taxonomy) ) {
+			    if ( $tax = get_the_terms($post->ID, get_post_taxonomies() )) {
+			    	foreach ( $tax as $term )   { 
+			    		// Remove tags and categories from results
+			    		if  ( $term->taxonomy != 'post_tag' )	{
+			    			if  ( $term->taxonomy != 'category' )   { 
+			    				$c[] = 's-tax-' . $term->taxonomy;
+			    				$c[] = 's-' . $term->taxonomy . '-' . $term->slug;
+			    			}
+			    		}
+			    	}
+			    }
 			}
 			
 			// Adds MIME-specific classes for attachments
@@ -215,35 +222,42 @@ if (function_exists('childtheme_override_body_class'))  {
 	            $c[] = 'loggedin';
 	    }
 	
-	 // Paged classes; for 'page X' classes of index, single, etc.
+	 // Paged classes; for page x > 1 classes of index and all post types etc.
 		if (apply_filters('thematic_show_bc_pagex', TRUE)) {
-						if ( (( ( $page = $wp_query->get('paged') ) || ( $page = $wp_query->get('page') ) ) && $page > 1 ) ) {
-						// Thanks to Prentiss Riddle, twitter.com/pzriddle, for the security fix below. 
-						    $page = intval($page); // Ensures that an integer (not some dangerous script) is passed for the variable
- 				     $c[] = 'paged-' . $page;
- 				     if ( is_single() ) {
-								      $c[] = 'single-paged-' . $page;
-							   } elseif ( is_page() ) {
-								      $c[] = 'page-paged-' . $page;
-							   } elseif ( is_category() ) {
-								      $c[] = 'category-paged-' . $page;
-							   } elseif ( is_tag() ) {
-								      $c[] = 'tag-paged-' . $page;
-							   } elseif ( is_tax() ) {
-								      $c[] = 'taxonomy-paged-' . $page;
-							   } elseif ( is_date() ) {
-								      $c[] = 'date-paged-' . $page;
-							   } elseif ( is_author() ) {
-								      $c[] = 'author-paged-' . $page;
-							   } elseif ( is_search() ) {
-								      $c[] = 'search-paged-' . $page;
-							   }
- 				  } elseif (is_page() && strpos($post->post_content, '<!--nextpage-->') )  {
-							   $c[] = 'page-paged-1';
- 				  } elseif (is_single() && strpos($post->post_content, '<!--nextpage-->') )  {
-								  $c[] = 'single-paged-1';
-						 }		
-  	}
+			if ( (( ( $page = $wp_query->get('paged') ) || ( $page = $wp_query->get('page') ) ) && $page > 1 ) ) {
+				// Thanks to Prentiss Riddle, twitter.com/pzriddle, for the security fix below. 
+				$page = intval($page); // Ensures that an integer (not some dangerous script) is passed for the variable
+ 					$c[] = 'paged-' . $page;
+ 				if (thematic_is_custom_post_type()) {
+ 							$c[] = str_replace('_','-',$post->post_type) . '-paged-' . $page;
+ 					} elseif ( is_single() && $post->post_type=="post"  ) {
+				        $c[] = 'single-paged-' . $page;
+					} elseif ( is_page() ) {
+				        $c[] = 'page-paged-' . $page;
+					} elseif ( is_category() ) {
+				        $c[] = 'category-paged-' . $page;
+					} elseif ( is_tag() ) {
+				        $c[] = 'tag-paged-' . $page;
+					} elseif ( is_tax() ) {
+				        $c[] = 'taxonomy-paged-' . $page;
+					} elseif ( is_date() ) {
+				        $c[] = 'date-paged-' . $page;
+					} elseif ( is_author() ) {
+				        $c[] = 'author-paged-' . $page;
+					} elseif ( is_search() ) {
+				        $c[] = 'search-paged-' . $page;
+ 				} 
+ 			// Paged classes; for page x = 1	For all post types
+ 			} elseif (strpos($post->post_content, '<!--nextpage-->') )  { 
+ 				if (thematic_is_custom_post_type()) {
+				    	$c[] = str_replace('_','-',$post->post_type) . '-paged-1';
+ 				    } elseif (is_page()) {
+				    	$c[] = 'page-paged-1';
+ 				    } elseif (is_single())  {
+				    	$c[] = 'single-paged-1';
+				}
+  			}
+  		}
 		
 		if (apply_filters('thematic_show_bc_browser', TRUE)) {
 	        // A little Browser detection shall we?
@@ -327,7 +341,7 @@ if (function_exists('childtheme_override_post_class'))  {
 		global $post, $thematic_post_alt, $thematic_content_length, $taxonomy;
 	
 		// hentry for hAtom compliace, gets 'alt' for every other post DIV, describes the post type and p[n]
-		$c = array( 'hentry', "p$thematic_post_alt", $post->post_type, $post->post_status );
+		$c = array( 'hentry', "p$thematic_post_alt", str_replace('_','-',$post->post_type), $post->post_status );
 	
 		// Author for the post queried
 		$c[] = 'author-' . sanitize_title_with_dashes(strtolower(get_the_author_meta('user_login')));
@@ -343,13 +357,13 @@ if (function_exists('childtheme_override_post_class'))  {
 			foreach ( (array) get_the_tags() as $tag )
 				$c[] = 'tag-' . $tag->slug;
 		}
-	
-		// For posts displayed as full content
-		if ($thematic_content_length == 'full')
-			$c[] = 'is-full';
 		
-		// Taxonomies for the post queried
+		// Taxonomies and terms for the post queried
+		$single_post_type = get_post_type_object(get_post_type($post->ID));
+		// Check for post types without taxonomy inclusion
+		if ( isset($single_post_type->taxonomy) ) {
 			foreach ( (array) get_the_terms( $post->ID, get_post_taxonomies() )  as $term  )   {
+				// Remove tags and categories from results
 				if  ( $term->taxonomy != 'category' )	{
 					if  ( $term->taxonomy != 'post_tag' )   { 
 						$c[] = 'p-tax-' . $term->taxonomy;
@@ -357,6 +371,11 @@ if (function_exists('childtheme_override_post_class'))  {
 					}
 				}
 			}
+		}
+
+		// For posts displayed as full content
+		if ($thematic_content_length == 'full')
+			$c[] = 'is-full';
 
 		// For posts displayed as excerpts
 		if ($thematic_content_length == 'excerpt') {
