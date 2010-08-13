@@ -310,10 +310,10 @@ if (function_exists('childtheme_override_init_presetwidgets'))  {
 		update_option( 'widget_pages', array( 2 => array( 'title' => ''), '_multiwidget' => 1 ) );
 		update_option( 'widget_categories', array( 2 => array( 'title' => '', 'count' => 0, 'hierarchical' => 0, 'dropdown' => 0 ), '_multiwidget' => 1 ) );
 		update_option( 'widget_archives', array( 2 => array( 'title' => '', 'count' => 0, 'dropdown' => 0 ), '_multiwidget' => 1 ) );
-	}
 		update_option( 'widget_links', array( 2 => array( 'title' => ''), '_multiwidget' => 1 ) );
 		update_option( 'widget_rss-links', array( 2 => array( 'title' => ''), '_multiwidget' => 1 ) );
 		update_option( 'widget_meta', array( 2 => array( 'title' => ''), '_multiwidget' => 1 ) );
+	}
 }
 add_action( 'thematic_presetwidgets', 'thematic_init_presetwidgets' );
 
