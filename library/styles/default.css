@@ -332,6 +332,10 @@ ul.sf-menu li li li.sfHover ul {
 .entry-utility a:hover {
     color: #FF4B33;
 }
+.edit-link {
+display:block;
+clear:left;
+}
 .page-link {
     font-size:13px;
     font-weight:bold;
@@ -478,6 +482,7 @@ li.content-column {
 -------------------------------------------------------------- */
 
 #comments {
+	clear:left;
     padding:22px 0 0 0;
 }
 #comments,
