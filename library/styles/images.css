@@ -3,9 +3,15 @@
    Default styles for Images
   
 -------------------------------------------------------------- */   
-
+.entry-content .wp-post-image {
+	border: 1px solid #ccc;
+	float:right;
+	margin: 0 0 20px 18px;
+	padding: 5px;
+}
 .entry-content img {
     margin: 0 0 18px 0;
+    max-width:100%;
 }
 .alignleft,
 img.alignleft {
@@ -26,20 +32,30 @@ img.aligncenter {
 	clear: both;
 }
 .wp-caption {
+	border:1px solid #ccc;
 	text-align: center;
 	margin-bottom:18px;
+	padding:9px 5px 0;
 }
 .wp-caption img {
+	border: 1px solid #ccc;
 	margin: 0;
 	padding: 0;
-	border: 0 none;
 }
 .wp-caption p.wp-caption-text {
 	margin: 0;
-	padding:5px;
+	padding:18px 5px;
+}
+.gallery-icon {
+	border: 1px solid #ccc;
+	margin: 0 5px;
+	padding-top: 6px;
 }
 .gallery img {
     margin:0;
+}
+.gallery-caption {
+	padding:6px 6px 0 0;
 }
 .wp-smiley { /* Prevent the smileys from breaking line-height */
 	max-height:12px;
