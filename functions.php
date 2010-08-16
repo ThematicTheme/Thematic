@@ -34,7 +34,13 @@ if (function_exists('wp_login_form')) {
 	add_theme_support( 'automatic-feed-links' );
 }
 
-// load jQuery
+// Check for WordPress 2.9 add_theme_support()
+if ( apply_filters( 'thematic_post_thumbs', TRUE) ) {
+	if ( function_exists( 'add_theme_support' ) )
+	add_theme_support( 'post-thumbnails' );
+}
+
+// Load jQuery
 wp_enqueue_script('jquery');
 
 // Path constants
