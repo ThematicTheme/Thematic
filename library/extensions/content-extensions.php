@@ -752,8 +752,17 @@ if (function_exists('childtheme_override_content'))  {
 			$post = apply_filters('the_content', $post);
 			$post = str_replace(']]>', ']]&gt;', $post);
 		} elseif ( strtolower($thematic_content_length) == 'excerpt') {
-			$post = get_the_excerpt();
-			$post = apply_filters('thematic_get_excerpt',$post);
+			$post = '';
+			if ( apply_filters( 'thematic_post_thumbs', TRUE) ) {
+				$post_title = get_the_title();
+				$size = apply_filters( 'thematic_post_thumb_size' , array(100,100) );
+				$attr = apply_filters( 'thematic_post_thumb_attr', array('title'	=> 'Permalink to ' . $post_title) );
+				if ( has_post_thumbnail() ) {
+					$post .= '<a class="entry-thumb" href="' . get_permalink() . '" title="Permalink to ' . get_the_title() . '" >' . get_the_post_thumbnail(get_the_ID(), $size, $attr) . '</a>';
+					}
+			}
+			$post .= get_the_excerpt();
+			$post = apply_filters('the_excerpt',$post);
 		} elseif ( strtolower($thematic_content_length) == 'none') {
 		} else {
 			$post = get_the_content(more_text());
