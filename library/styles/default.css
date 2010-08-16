@@ -3,7 +3,7 @@
 -------------------------------------------------------------- */
 
 body, input, textarea {
-    font: 15px Georgia,serif;
+    font:15px Georgia,serif;
     line-height:22px;
 }
 p, ul, ol, dd, pre {
@@ -154,12 +154,19 @@ ul.sf-menu li li li.sfHover ul {
     border-right:1px solid #ccc;
 	float:left;
 }
+.ie6 .sf-menu {
+	margin-bottom: -1px;
+}
 .sf-menu a {
 	border-left:1px solid #ccc;
 	border-top:1px solid #ccc;
 	border-bottom:1px solid #ccc;
 	padding:9px 13px;
 	text-decoration:none;
+}
+.windows .sf-menu a {
+	font-size: 12px;
+	padding:9px 13px 10px;
 }
 .sf-menu .current_page_item a,
 .sf-menu .current_page_ancestor a,
@@ -318,6 +325,7 @@ ul.sf-menu li li li.sfHover ul {
     margin:0 0 22px 0;
 }
 .entry-utility {
+	clear:both;
     color:#666;
     font-size:13px;
     line-height:18px;
@@ -333,8 +341,8 @@ ul.sf-menu li li li.sfHover ul {
     color: #FF4B33;
 }
 .edit-link {
-display:block;
-clear:left;
+	clear:both;
+	display:block;
 }
 .page-link {
     font-size:13px;
@@ -482,7 +490,7 @@ li.content-column {
 -------------------------------------------------------------- */
 
 #comments {
-	clear:left;
+	clear:both;
     padding:22px 0 0 0;
 }
 #comments,
