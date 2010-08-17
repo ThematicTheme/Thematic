@@ -67,7 +67,14 @@ Template Name: Links Page
     	        thematic_belowpost();
     	    
 	        	// calling the comments template
-	        	thematic_comments_template();
+        		if (THEMATIC_COMPATIBLE_COMMENT_HANDLING) {
+       				if ( get_post_custom_values('comments') ) {
+						// Add a key/value of "comments" to enable comments on pages!
+	        			thematic_comments_template();
+        			}
+        		} else {
+       				thematic_comments_template();
+        		}
     	    
     	        ?>
 		

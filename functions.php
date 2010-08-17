@@ -25,6 +25,10 @@ define('TEMPLATEAUTHOR', $ct['Author']);
 define('TEMPLATEURI', $ct['URI']);
 define('TEMPLATEVERSION', $templateversion);
 
+// set comments handling for pages, archives and links
+// If you set this to TRUE, comments only show up on pages with a key/value of "comments"
+define('THEMATIC_COMPATIBLE_COMMENT_HANDLING', false);
+
 // Check for WordPress mu or WordPress 3.0
 define('THEMATIC_MB', function_exists('get_blog_option'));
 
