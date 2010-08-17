@@ -358,16 +358,18 @@ if (function_exists('childtheme_override_post_class'))  {
 				$c[] = 'tag-' . $tag->slug;
 		}
 		
-		// Taxonomies and terms for the post queried
-		$single_post_type = get_post_type_object(get_post_type($post->ID));
-		// Check for post types without taxonomy inclusion
-		if ( isset($single_post_type->taxonomy) ) {
-			foreach ( (array) get_the_terms( $post->ID, get_post_taxonomies() )  as $term  )   {
-				// Remove tags and categories from results
-				if  ( $term->taxonomy != 'category' )	{
-					if  ( $term->taxonomy != 'post_tag' )   { 
-						$c[] = 'p-tax-' . $term->taxonomy;
-						$c[] = 'p-' . $term->taxonomy . '-' . $term->slug;
+		if (function_exists(get_post_type_object)) {
+			// Taxonomies and terms for the post queried
+			$single_post_type = get_post_type_object(get_post_type($post->ID));
+			// Check for post types without taxonomy inclusion
+			if ( isset($single_post_type->taxonomy) ) {
+				foreach ( (array) get_the_terms( $post->ID, get_post_taxonomies() )  as $term  )   {
+					// Remove tags and categories from results
+					if  ( $term->taxonomy != 'category' )	{
+						if  ( $term->taxonomy != 'post_tag' )   { 
+							$c[] = 'p-tax-' . $term->taxonomy;
+							$c[] = 'p-' . $term->taxonomy . '-' . $term->slug;
+						}
 					}
 				}
 			}
