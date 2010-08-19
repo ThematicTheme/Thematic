@@ -29,12 +29,18 @@ define('TEMPLATEVERSION', $templateversion);
 // If you set this to TRUE, comments only show up on pages with a key/value of "comments"
 define('THEMATIC_COMPATIBLE_COMMENT_HANDLING', false);
 
+// which comment form should be used
+if (function_exists('comment_form')) {
+	define('THEMATIC_COMPATIBLE_COMMENT_FORM', false); // WordPress 3.0
+} else {
+	define('THEMATIC_COMPATIBLE_COMMENT_FORM', true); // below WordPress 3.0
+}
+
 // Check for WordPress mu or WordPress 3.0
 define('THEMATIC_MB', function_exists('get_blog_option'));
 
 // Check for WordPress 3.0 add_theme_support()
 if (function_exists('wp_login_form')) {
-	add_theme_support( 'menus' );
 	add_theme_support( 'automatic-feed-links' );
 }
 
