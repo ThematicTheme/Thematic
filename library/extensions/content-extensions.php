@@ -302,6 +302,7 @@ if (function_exists('childtheme_override_archive_loop'))  {
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();
+						echo '>';
 					} else {
 						echo 'class="';
 						thematic_post_class();
@@ -342,6 +343,7 @@ if (function_exists('childtheme_override_author_loop'))  {
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();
+						echo '>';
 					} else {
 						echo 'class="';
 						thematic_post_class();
@@ -381,6 +383,7 @@ if (function_exists('childtheme_override_category_loop'))  {
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();
+						echo '>';
 					} else {
 						echo 'class="';
 						thematic_post_class();
@@ -439,6 +442,7 @@ if (function_exists('childtheme_override_index_loop'))  {
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();
+						echo '>';
 					} else {
 						echo 'class="';
 						thematic_post_class();
@@ -484,6 +488,7 @@ if (function_exists('childtheme_override_single_post'))  {
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();
+						echo '>';
 					} else {
 						echo 'class="';
 						thematic_post_class();
@@ -521,6 +526,7 @@ if (function_exists('childtheme_override_search_loop'))  {
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();
+						echo '>';
 					} else {
 						echo 'class="';
 						thematic_post_class();
@@ -560,6 +566,7 @@ if (function_exists('childtheme_override_tag_loop'))  {
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();
+						echo '>';
 					} else {
 						echo 'class="';
 						thematic_post_class();
