@@ -31,6 +31,7 @@ Template Name: Links Page
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();
+						echo '>';
 					} else {
 						echo 'class="';
 						thematic_post_class();
