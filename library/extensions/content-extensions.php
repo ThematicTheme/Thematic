@@ -298,8 +298,16 @@ if (function_exists('childtheme_override_archive_loop'))  {
 		
 				thematic_abovepost(); ?>
 
-				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
-    				<?php thematic_postheader(); ?>
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_postheader(); ?>
 					<div class="entry-content">
 <?php thematic_content(); ?>
 
@@ -330,8 +338,16 @@ if (function_exists('childtheme_override_author_loop'))  {
 		
 				thematic_abovepost(); ?>
 
-				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-	    			<?php thematic_postheader(); ?>
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_postheader(); ?>
 					<div class="entry-content ">
 <?php thematic_content(); ?>
 
@@ -361,8 +377,16 @@ if (function_exists('childtheme_override_category_loop'))  {
 		
 				thematic_abovepost(); ?>
 	
-				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-	    			<?php thematic_postheader(); ?>
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_postheader(); ?>
 					<div class="entry-content">
 <?php thematic_content(); ?>
 	
@@ -411,8 +435,16 @@ if (function_exists('childtheme_override_index_loop'))  {
 		
 				thematic_abovepost(); ?>
 
-				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
-    				<?php thematic_postheader(); ?>
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_postheader(); ?>
 					<div class="entry-content">
 <?php thematic_content(); ?>
 
@@ -448,8 +480,16 @@ if (function_exists('childtheme_override_single_post'))  {
 		
 				thematic_abovepost(); ?>
 			
-				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-    				<?php thematic_postheader(); ?>
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_postheader(); ?>
 					<div class="entry-content">
 <?php thematic_content(); ?>
 
@@ -477,8 +517,16 @@ if (function_exists('childtheme_override_search_loop'))  {
 		
 				thematic_abovepost(); ?>
 
-				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?>">
-    				<?php thematic_postheader(); ?>
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_postheader(); ?>
 					<div class="entry-content">
 <?php thematic_content(); ?>
 
@@ -508,8 +556,16 @@ if (function_exists('childtheme_override_tag_loop'))  {
 		
 				thematic_abovepost(); ?>
 
-				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class(); ?>">
-    				<?php thematic_postheader(); ?>
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_postheader(); ?>
 					<div class="entry-content">
 <?php thematic_content() ?>
 
