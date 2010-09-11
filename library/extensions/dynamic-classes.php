@@ -324,7 +324,7 @@ if (function_exists('childtheme_override_body_class'))  {
 		
 	
 		// Separates classes with a single space, collates classes for BODY
-		$c = join( ' ', apply_filters( 'body_class',  $c ) ); // Available filter: body_class
+		$c = join( ' ', apply_filters( 'thematic_body_class',  $c ) ); // Available filter: thematic_body_class
 	
 		// And tada!
 		return $print ? print($c) : $c;

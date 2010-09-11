@@ -21,5 +21,9 @@
 //}
 //add_filter('wp_page_menu_args','childtheme_menu_args');
 
+// Unleash the power of Thematic's dynamic classes'
+// 
+// define('THEMATIC_COMPATIBLE_BODY_CLASS', true);
+// define('THEMATIC_COMPATIBLE_POST_CLASS', true);
 
 ?>

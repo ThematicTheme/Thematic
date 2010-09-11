@@ -52,11 +52,18 @@
 
 if (apply_filters('thematic_show_bodyclass',TRUE)) { 
     // Creating the body class
-    ?>
-
-<body class="<?php thematic_body_class() ?>">
-    
-<?php }
+	if (!(THEMATIC_COMPATIBLE_BODY_CLASS)) { 
+		echo '<body ';
+		body_class();
+		echo '>' . "\n\n";
+	} else { 
+		echo '<body class="';
+		thematic_body_class();
+		echo '">' . "\n\n";
+	}
+} else {
+	echo '<body>' . "\n\n";
+}
 
 // action hook for placing content before opening #wrapper
 thematic_before(); 
