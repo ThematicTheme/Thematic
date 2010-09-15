@@ -271,12 +271,12 @@ if (function_exists('childtheme_override_body_class'))  {
 // Add browser CSS class to the end (queuing through priority) of the body classes 
 
 if ( THEMATIC_COMPATIBLE_BODY_CLASS && ( apply_filters('thematic_show_bc_browser', TRUE) ) ) { 
-	$body_class_filter = "thematic_body_class";
+	add_filter('thematic_body_class', 'browser_class_names', 20); 
 } elseif (!(THEMATIC_COMPATIBLE_BODY_CLASS) ) {
-	$body_class_filter = "body_class";
-}
+	add_filter('body_class', 'browser_class_names', 20);
+} 
 
-add_filter($body_class_filter, 'browser_class_names', 20); 
+
 
 function browser_class_names($classes) {
 	// add 'class-name' to the $classes array
