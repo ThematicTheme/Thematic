@@ -259,69 +259,6 @@ if (function_exists('childtheme_override_body_class'))  {
   			}
   		}
 		
-		if (apply_filters('thematic_show_bc_browser', TRUE)) {
-	        // A little Browser detection shall we?
-	        $browser = $_SERVER[ 'HTTP_USER_AGENT' ];
-		
-	        // Mac, PC ...or Linux
-	        if ( preg_match( "/Mac/", $browser ) ){
-				$c[] = 'mac';
-			
-	        } elseif ( preg_match( "/Windows/", $browser ) ){
-				$c[] = 'windows';
-			
-	        } elseif ( preg_match( "/Linux/", $browser ) ) {
-				$c[] = 'linux';
-	
-	        } else {
-				$c[] = 'unknown-os';
-	        }
-		
-	        // Checks browsers in this order: Chrome, Safari, Opera, MSIE, FF
-	        if ( preg_match( "/Chrome/", $browser ) ) {
-				$c[] = 'chrome';
-	
-				preg_match( "/Chrome\/(\d.\d)/si", $browser, $matches);
-				$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );      
-				$c[] = $ch_version;
-	
-	        } elseif ( preg_match( "/Safari/", $browser ) ) {
-				$c[] = 'safari';
-				
-				preg_match( "/Version\/(\d.\d)/si", $browser, $matches);
-				$sf_version = 'sf' . str_replace( '.', '-', $matches[1] );      
-				$c[] = $sf_version;
-				
-	        } elseif ( preg_match( "/Opera/", $browser ) ) {
-				$c[] = 'opera';
-				
-				preg_match( "/Opera\/(\d.\d)/si", $browser, $matches);
-				$op_version = 'op' . str_replace( '.', '-', $matches[1] );      
-				$c[] = $op_version;
-				
-	        } elseif ( preg_match( "/MSIE/", $browser ) ) {
-				$c[] = 'msie';
-				
-				if( preg_match( "/MSIE 6.0/", $browser ) ) {
-						$c[] = 'ie6';
-				} elseif ( preg_match( "/MSIE 7.0/", $browser ) ){
-						$c[] = 'ie7';
-				} elseif ( preg_match( "/MSIE 8.0/", $browser ) ){
-						$c[] = 'ie8';
-				}
-				
-	        } elseif ( preg_match( "/Firefox/", $browser ) && preg_match( "/Gecko/", $browser ) ) {
-				$c[] = 'firefox';
-				
-				preg_match( "/Firefox\/(\d)/si", $browser, $matches);
-				$ff_version = 'ff' . str_replace( '.', '-', $matches[1] );      
-				$c[] = $ff_version;
-				
-	        } else {
-				$c[] = 'unknown-browser';
-	        }
-		}
-		
 	
 		// Separates classes with a single space, collates classes for BODY
 		$c = join( ' ', apply_filters( 'thematic_body_class',  $c ) ); // Available filter: thematic_body_class
@@ -331,11 +268,19 @@ if (function_exists('childtheme_override_body_class'))  {
 	}
 }
 
-// Add browser CSS class to body_class()
-add_filter('body_class','browser_class_names');
+// Add browser CSS class to the end (queuing through priority) of the body classes 
+
+if ( THEMATIC_COMPATIBLE_BODY_CLASS && ( apply_filters('thematic_show_bc_browser', TRUE) ) ) { 
+	$body_class_filter = "thematic_body_class";
+} elseif (!(THEMATIC_COMPATIBLE_BODY_CLASS) ) {
+	$body_class_filter = "body_class";
+}
+
+add_filter($body_class_filter, 'browser_class_names', 20); 
+
 function browser_class_names($classes) {
 	// add 'class-name' to the $classes array
-	$classes[] = 'class-name';
+	// $classes[] = 'class-name';
 	$browser = $_SERVER[ 'HTTP_USER_AGENT' ];
 		
 	// Mac, PC ...or Linux
