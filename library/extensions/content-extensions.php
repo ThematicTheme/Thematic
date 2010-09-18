@@ -928,7 +928,7 @@ function thematic_404() {
 					<p><?php _e('Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'thematic') ?></p>
 				</div><!-- .entry-content -->
 				
-				<form id="error404-searchform" method="get" action="<?php echo home_url() ?>/">
+				<form id="error404-searchform" method="get" action="<?php bloginfo('url') ?>/">
 					<div>
 						<input id="error404-s" name="s" type="text" value="<?php echo esc_html(stripslashes(get_query_var('s'))) ?>" size="40" />
 						<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'thematic') ?>" />

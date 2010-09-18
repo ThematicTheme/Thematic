@@ -47,7 +47,7 @@
 					<div class="entry-content">
 						<p><?php _e('Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'thematic') ?></p>
 					</div><!-- .entry-content -->
-					<form id="noresults-searchform" method="get" action="<?php echo home_url() ?>/">
+					<form id="noresults-searchform" method="get" action="<?php blog_info('url') ?>/">
 						<div>
 							<input id="noresults-s" name="s" type="text" value="<?php echo esc_html(stripslashes($_GET['s'])) ?>" size="40" />
 							<input id="noresults-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'thematic') ?>" />

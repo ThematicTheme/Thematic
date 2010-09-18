@@ -13,7 +13,7 @@ add_shortcode('theme-link', 'thmfooter_theme_link');
 
 function thmfooter_login_link() {
     if ( ! is_user_logged_in() )
-        $link = '<a href="' . get_option('siteurl') . '/wp-login.php">' . __('Login','thematic') . '</a>';
+        $link = '<a href="' . site_url('/wp-login.php') . '">' . __('Login','thematic') . '</a>';
     else
     $link = '<a href="' . wp_logout_url($redirect) . '">' . __('Logout','thematic') . '</a>';
     return apply_filters('loginout', $link);
@@ -26,7 +26,7 @@ function thmfooter_blog_title() {
 add_shortcode('blog-title', 'thmfooter_blog_title');
 
 function thmfooter_blog_link() {
-	return '<a href="' . get_option('siteurl') . '" title="' . get_option('blogname') . '" >' . get_option('blogname') . "</a>";
+	return '<a href="' . site_url('/') . '" title="' . get_option('blogname') . '" >' . get_option('blogname') . "</a>";
 }
 add_shortcode('blog-link', 'thmfooter_blog_link');
 
