@@ -3,7 +3,7 @@
 function thematic_search_form() {
 				$search_form_length = apply_filters('thematic_search_form_length', '32');
 				$search_form = "\n" . "\t";
-				$search_form .= '<form id="searchform" method="get" action="' . home_url() .'/">';
+				$search_form .= '<form id="searchform" method="get" action="' . get_bloginfo('url') .'/">';
 				$search_form .= "\n" . "\t" . "\t";
 				$search_form .= '<div>';
 				$search_form .= "\n" . "\t" . "\t". "\t";

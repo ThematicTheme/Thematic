@@ -70,18 +70,18 @@ foreach ( $comments as $comment )
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 					<p id="login-req"><?php printf(__('You must be <a href="%s" title="Log in">logged in</a> to post a comment.', 'thematic'),
-					get_option('siteurl') . '/wp-login.php?redirect_to=' . get_permalink() ) ?></p>
+					site_url('/wp-login.php?redirect_to=' . get_permalink() ) )  ?></p>
 
 <?php else : ?>
 					<div class="formcontainer">	
 					
 <?php thematic_abovecommentsform() ?>					
 
-						<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
+						<form id="commentform" action="<?php echo site_url('/wp-comments-post.php') ?>" method="post">
 
 <?php if ( $user_ID ) : ?>
 							<p id="login"><?php printf(__('<span class="loggedin">Logged in as <a href="%1$s" title="Logged in as %2$s">%2$s</a>.</span> <span class="logout"><a href="%3$s" title="Log out of this account">Log out?</a></span>', 'thematic'),
-								get_option('siteurl') . '/wp-admin/profile.php',
+								site_url('/wp-admin/profile.php'),
 								esc_html($user_identity),
 								wp_logout_url(get_permalink()) ) ?></p>
 
