@@ -55,7 +55,7 @@ img.aligncenter {
     margin:0;
 }
 .gallery-caption {
-	padding:6px 6px 0 0;
+	padding:6px 6px 0;
 }
 .wp-smiley { /* Prevent the smileys from breaking line-height */
 	max-height:12px;
