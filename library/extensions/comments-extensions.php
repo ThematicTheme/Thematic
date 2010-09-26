@@ -111,11 +111,56 @@ function thematic_commentbox_text() {
     return apply_filters( 'thematic_commentbox_text', $content );
 }
 
+
+// Located in comments-extensions.php
+// Creates the standard text 'Cancel reply'
+function thematic_cancelreply_text() {
+    $content = __('Cancel reply', 'thematic');
+    return apply_filters( 'thematic_cancelreply_text', $content );
+}
+
 // Located in comments.php
 // Creates the standard text 'Post Comment' for the send button
 function thematic_commentbutton_text() {
     $content = __('Post Comment', 'thematic');
     return apply_filters( 'thematic_commentbutton_text', $content );
+}
+
+// Located in comments.php
+// Creates the standard arguments for comment_form()
+function thematic_comment_form_args() {
+	
+	global $user_identity;
+	
+	$req = get_option( 'require_name_email' );
+	
+	$commenter = wp_get_current_commenter();
+	
+	$fields =  array(
+		'author' => '<div id="form-section-author" class="form-section"><div class="form-label">' . '<label for="author">' . __( 'Name', 'thematic' ) . '</label> ' . ( $req ? __('<span class="required">*</span>', 'thematic') : '' ) . '</div>' . '<div class="form-input">' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' .  ' maxlength="20" tabindex="3"' . $aria_req . ' /></div></div><!-- #form-section-author .form-section -->',
+		'email'  => '<div id="form-section-email" class="form-section"><div class="form-label"><label for="email">' . __( 'Email', 'thematic' ) . '</label> ' . ( $req ? __('<span class="required">*</span>', 'thematic') : '' ) . '</div><div class="form-input">' . '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="50" tabindex="4"' . $aria_req . ' /></div></div><!-- #form-section-email .form-section -->',
+		'url'    => '<div id="form-section-url" class="form-section"><div class="form-label"><label for="url">' . __( 'Website', 'thematic' ) . '</label></div>' . '<div class="form-input"><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="50" tabindex="5" /></div></div><!-- #form-section-url .form-section -->',
+	);
+
+	
+	$args = array(
+		'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
+		'comment_field'        => '<div id="form-section-comment" class="form-section"><div class="form-label"><label for="comment">' . __(thematic_commentbox_text(), 'thematic') . '</label></div><div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6" aria-required="true"></textarea></div></div><!-- #form-section-comment .form-section -->',
+		'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email is <em>never</em> published nor shared.', 'thematic' ) . ( $req ? ' ' . __('Required fields are marked <span class="required">*</span>', 'thematic') : '' ) . '</p>',
+		'must_log_in'          => '<p id="login-req">' .  sprintf( __('You must be <a href="%s" title="Log in">logged in</a> to post a comment.', 'thematic' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
+		'logged_in_as'         => '<p id="login">' . sprintf( __('<span class="loggedin">Logged in as <a href="%1$s" title="Logged in as %2$s">%2$s</a>.</span> <span class="logout"><a href="%3$s" title="Log out of this account">Log out?</a></span>', 'thematic'),  admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
+		'comment_notes_after'  => '<div id="form-allowed-tags" class="form-section"><p><span>' . __('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'thematic') . '</span> <code>' . allowed_tags() . '</code></p></div>',
+
+
+		'id_form'              => 'commentform',
+		'id_submit'            => 'submit',
+		'title_reply'          => thematic_postcomment_text(),
+		'title_reply_to'       => thematic_postreply_text(),
+		'cancel_reply_link'    => thematic_cancelreply_text(),
+		'label_submit'         => thematic_commentbutton_text(),
+
+	);
+	return apply_filters( 'thematic_comment_form_args', $args );	
 }
 
 // Produces an avatar image with the hCard-compliant photo class
