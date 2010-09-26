@@ -62,7 +62,9 @@ foreach ( $comments as $comment )
 <?php endif /* if ( $ping_count ) */ ?>
 <?php endif /* if ( $comments ) */ ?>
 
-<?php if ( 'open' == $post->comment_status ) : ?>
+<?php
+	if ( 'open' == $post->comment_status ) : 
+		if (THEMATIC_COMPATIBLE_COMMENT_FORM) {?>
 				<div id="respond">
     				<h3><?php comment_form_title( __(thematic_postcomment_text(), 'thematic'), __(thematic_postreply_text(), 'thematic') ); ?></h3>
     				
@@ -123,13 +125,17 @@ foreach ( $comments as $comment )
 
 						</form><!-- #commentform -->
 						
-<?php thematic_belowcommentsform() ?>											
+<?php thematic_belowcommentsform() ?>
 						
 					</div><!-- .formcontainer -->
 <?php endif /* if ( get_option('comment_registration') && !$user_ID ) */ ?>
 
 				</div><!-- #respond -->
-<?php endif /* if ( 'open' == $post->comment_status ) */ ?>
+<?php
+		} else {
+			comment_form(thematic_comment_form_args());
+		}
+	endif /* if ( 'open' == $post->comment_status ) */ ?>
 
 			</div><!-- #comments -->
 <?php thematic_belowcomments() ?>
