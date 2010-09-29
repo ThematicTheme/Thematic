@@ -510,9 +510,10 @@ function thematic_header() {
 		</div><!-- #access -->
 		
 		<?php }
-	    add_action('thematic_header','thematic_access',9);
 	}
 
+    add_action('thematic_header','thematic_access',9);
+    
 // End of functions that hook into thematic_header()
 
 		
