@@ -1,80 +1,115 @@
 <h2>What's new in Thematic 0.9.7.5</h2>
 
+<ul>
+	<li><h3>Added:</h3>
+		<ul>
+			<li>Added the constant <code>THEMATIC_COMPATIBLE_COMMENT_FORM</code> which defaults to <code>false</code>. In this case the WordPress function <code>comment_form()</code> is used. If you set it to TRUE, Thematic will use its own functionality. This is a requirement by the Theme Review Team.</li>		<li>Added Thematic's browser / OS class to WorpPress' <code>body_class()</code>. Menu will now display properly with the Test Data.</li>
+			<li>Added the constant <code>THEMATIC_COMPATIBLE_POST_CLASS</code> which defaults to <code>false</code>. In this case the WordPress function <code>post_class()</code> is used. If you set it to TRUE, Thematic will use its own function <code>thematic_post_class()</code>. This is a requirement by the Theme Review Team.</li>
+			<li>Added the constant <code>THEMATIC_COMPATIBLE_BODY_CLASS</code> which defaults to <code>false</code>. In this case the WordPress function <code>body_class()</code> is used. If you set it to TRUE, Thematic will use its own function <code>thematic_body_class()</code>. This is a requirement by the Theme Review Team.</li>
+			<li>Added: Better SSL support by replacing <code>bloginfo('siteurl')</code> & <code>get_bloginfo('siteurl')</code> with <code>site_url()</code></li>
+		</ul>
+	</li>
+	<li><h3>Changed:</h3>
+		<ul>
+			<li>Changed the filter <code>body_class</code> to <code>thematic_body_class</code>.</li>
+		</ul>
+	</li>
+	<li><h3>Fixed:</h3>
+		<ul>
+			<li>Fixed: Trailing slashes in the search forms of search.php and <code>thematic_404()</code></li>
+			<li>Fixed <code>childtheme_override_access()</code>.</li>
+			<li>Fixed the closing <code>></code> for the post_class part.</li>
+			<li>Fixed behaviour of <code>thematic_show_bodyclass</code>. The body tag will now be created, if a filter returns <code>false</code>.</li>
+			<li>Removed <code>add_theme_support('menu')</code> according to Andrew Nacin.</li>
+			<li>Comment handling for archives.php, links.php and page.php can be made compatible with old handling controlled by a key/value of "comments".</li>
+			<li>Wrapped some WP 3.0 function calls. Thematic still supports WP 2.9.x.</li>
+		</ul>
+	</li>
+</ul>
 
-<li><h3>Added:</h3>
-	<ul>
-		<li>Added the constant <code>THEMATIC_COMPATIBLE_COMMENT_FORM</code> which defaults to <code>false</code>. In this case the WordPress function <code>comment_form()</code> is used. If you set it to TRUE, Thematic will use its own functionality. This is a requirement by the Theme Review Team.</li>		<li>Added Thematic's browser / OS class to WorpPress' <code>body_class()</code>. Menu will now display properly with the Test Data.</li>
-		<li>Added the constant <code>THEMATIC_COMPATIBLE_POST_CLASS</code> which defaults to <code>false</code>. In this case the WordPress function <code>post_class()</code> is used. If you set it to TRUE, Thematic will use its own function <code>thematic_post_class()</code>. This is a requirement by the Theme Review Team.</li>
-		<li>Added the constant <code>THEMATIC_COMPATIBLE_BODY_CLASS</code> which defaults to <code>false</code>. In this case the WordPress function <code>body_class()</code> is used. If you set it to TRUE, Thematic will use its own function <code>thematic_body_class()</code>. This is a requirement by the Theme Review Team.</li>
-	</ul>
-</li>
-<li><h3>Changed:</h3>
-	<ul>
-		<li>Changed the filter <code>body_class</code> to <code>theamtic_body_class</code>.</li>
-	</ul>
-</li>
-<li><h3>Fixed:</h3>
-	<ul>
-		<li>Fixed <code>childtheme_override_access()</code>.</li>
-		<li>Fixed the closing <code>></code> for the post_class part.</li>
-		<li>Fixed behaviour of <code>thematic_show_bodyclass</code>. The body tag will now be created, if a filter returns <code>false</code>.</li>
-		<li>Removed <code>add_theme_support('menu')</code> according to Andrew Nacin.</li>
-		<li>Comment handling for archives.php, links.php and page.php can be made compatible with old handling controlled by a key/value of "comments".</li>
-		<li>Wrapped some WP 3.0 function calls. Thematic still supports WP 2.9.x.</li>
-	</ul>
-</li>
 <h2>What's new in Thematic 0.9.7.4</h2>
-
-
-<li><h3>Fixed:</h3>
-	<ul>
-		<li>Added <code>add_theme_support( 'automatic-feed-links' )</code>.</li>
-		<li>Removed the deprecated function call <code>get_the_author()</code>.</li>
-		<li>Renamed template files <code>page-...</code> to <code>template-page-...</code> according to <a href="http://codex.wordpress.org/Theme_Review#Custom_Template_Naming_Conventions">4.5.4 Custom Template Naming Conventions</a> and adjusted the CSS files.</li>
+<ul>
+	<li><h3>Added:</h3>
+		<ul>
+			<li>Added: Filter <code>thematic_post_thumb_size</code> in thematic_content()</li>
+			<li>Added: Filter <code>thematic_post_thumb_attr</code> in thematic_content()</li>
+			<li>Added: Filter <code>thematic_post_thumbs</code> Default TRUE in thematic_content()</li>
+			<li>Added: Post Thumbnails to <code>thematic_content()</code> excerpts</li>
+			<li>Added: <code>add_theme_support( 'post-thumbnails' )</code> as required by WP Theme Dev Checklist</li> 
+			<li>Added: Post and Body classes for custom post types</li>
+			<li>Added: Helper function <code>thematic_is_custom_post_type()</code></li>
+			<li>Added: Czech language files Credits: JanJan Feřtek</li>
+			<li>Added: Filter <code>thematic_show_bc_taxonomyarchives</code> Default True</li>
+			<li>Added: Post and Body classes for custom taxonomies</li>
+			<li>Added: Custom taxonomy support for archives in <code>thematic_page_title()</code></li>
+			<li>Added: Helper function <code>thematic_get_term_name()</code> for retrieving custom taxonomy name Credit Justin Tadlock </li>
+			<li>Added: CDATA encoding to JavaScript</li>
+			<li>Added: Blog template page-blog.php	</li>
+			<li>Added: Page template page-fullwidth.php	 and relative styles in thematic>library>layouts *.css files for full width content</li>
+		</ul>
+	<li><h3>Fixed:</h3>
+		<ul>
+			<li>Fixed: Clearing Floats issues in compliance with Theme_Unit_Test WordPress Theme Review Guidelines</li>
+			<li>Fixed: Conditional display of comment-edit anchor tag and meta separator</li>
+			<li>Fixed: Trailing slash in <code>thematic_search_form()</code></li>
+			<li>Fixed: Missing Dutch nl_NL.po</li>
+			<li>Added <code>add_theme_support( 'automatic-feed-links' )</code>.</li>
+			<li>Removed the deprecated function call <code>get_the_author()</code>.</li>
+			<li>Renamed template files <code>page-...</code> to <code>template-page-...</code> according to <a href="http://codex.wordpress.org/Theme_Review#Custom_Template_Naming_Conventions">4.5.4 Custom Template Naming Conventions</a> and adjusted the CSS files.</li>
+		</ul>
+	</li>
+	<li><h3>Updated:</h3>
+		<ul>
+			<li>Updated: PT lang files Thanks to: Bernardo Maciel</li>
+			<li>Updated: Dutch translation props: Fili</li>
+		</ul>
+	</li>
 	</ul>
-</li>
-
-<h2>What's new in Thematic 0.9.7.3</h2>
-
-<li><h3>Fixed:</h3>
+	
+	<h2>What's new in Thematic 0.9.7.3</h2>
 	<ul>
-		<li>Changed <code>trackback_url()</code> to <code>get_trackback_url()</code>.</li>
-		<li>Displaying WordPress Galleries is fixed.</li>
-		<li>Cleaned up theme-options.php.</li>
-		<li>Cleaned up comments-extensions.php.</li>
-		<li>Removed the custom field check to display the comments template for page.php, archives.php and links.php.</li>
-		<li>Deprecated <code>is_sidebar_active()</code> in favor of <code>is_active_sidebar()</code>.</li>
-		<li>Cleaned up the deprecated function calls</li>
-		<li>Fixed duplicate key in <code>thematic_nav_menu_args()</code>.</li>
-		<li>The deprecated function uses WordPress' functionality for reporting.</li>
-	</ul>
-</li>
+	<li><h3>Fixed:</h3>
+		<ul>
+			<li>Changed <code>trackback_url()</code> to <code>get_trackback_url()</code>.</li>
+			<li>Displaying WordPress Galleries is fixed.</li>
+			<li>Cleaned up theme-options.php.</li>
+			<li>Cleaned up comments-extensions.php.</li>
+			<li>Removed the custom field check to display the comments template for page.php, archives.php and links.php.</li>
+			<li>Deprecated <code>is_sidebar_active()</code> in favor of <code>is_active_sidebar()</code>.</li>
+			<li>Cleaned up the deprecated function calls</li>
+			<li>Fixed duplicate key in <code>thematic_nav_menu_args()</code>.</li>
+			<li>The deprecated function uses WordPress' functionality for reporting.</li>
+		</ul>
+	</li>
+</ul>
+
 <h2>What's new in Thematic 0.9.7.2</h2>
-
-<li><h3>Added:</h3>
-	<ul>
-		<li>Fallback to <code>wp_page_menu</code> if theme location has no menu</li>
-		<li><code>thematic_init_navmenu</code> registers the theme location for our menu. Override: <code>childtheme_override_init_navmenu</code>
-		<li><code>thematic_primary_menu_name</code> filters the menu name 'Primary Menu'.</li>
-		<li><code>thematic_primary_menu_id</code> filters the  menu id 'primary-menu'.</li>
-		<li>The main menu uses the menu id 'primary-menu' and the menu name 'Primary Menu'.</li>
-	</ul>
-</li>
-
-<li><h3>Fixed:</h3>
-	<ul> 
-		<li>Changed <code>add_theme_support( 'nav-menus' )</code> to <code>add_theme_support( 'menus' )</code>.</li>
-		<li>Fixed a bug that prevents the 'Reset Widgets'.</li>
-	</ul>
-</li>
-
-<h2>What's new in Thematic 0.9.7.1</h2>
-
-<li><h3>Fixed:</h3>
-	<ul> 
-		<li>Potential security issue in <code>theme-options.php</code>.</li>
-	</ul>
-</li>
+<ul>
+	<li><h3>Added:</h3>
+		<ul>
+			<li>Fallback to <code>wp_page_menu</code> if theme location has no menu</li>
+			<li><code>thematic_init_navmenu</code> registers the theme location for our menu. Override: <code>childtheme_override_init_navmenu</code>
+			<li><code>thematic_primary_menu_name</code> filters the menu name 'Primary Menu'.</li>
+			<li><code>thematic_primary_menu_id</code> filters the  menu id 'primary-menu'.</li>
+			<li>The main menu uses the menu id 'primary-menu' and the menu name 'Primary Menu'.</li>
+		</ul>
+	</li>
+	
+	<li><h3>Fixed:</h3>
+		<ul> 
+			<li>Changed <code>add_theme_support( 'nav-menus' )</code> to <code>add_theme_support( 'menus' )</code>.</li>
+			<li>Fixed a bug that prevents the 'Reset Widgets'.</li>
+		</ul>
+	</li>
+	
+	<h2>What's new in Thematic 0.9.7.1</h2>
+	
+	<li><h3>Fixed:</h3>
+		<ul> 
+			<li>Potential security issue in <code>theme-options.php</code>.</li>
+		</ul>
+	</li>
+</ul>
 
 <h2>What's new in Thematic 0.9.7</h2>
 
