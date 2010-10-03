@@ -1,5 +1,32 @@
 <?php
 
+if (function_exists('childtheme_override_body'))  {
+	function thematic_body() {
+		childtheme_override_body();
+	}
+} else {
+	function thematic_body() {
+		thematic_bodyopen();
+	}
+}
+
+function thematic_bodyopen() {
+    if (apply_filters('thematic_show_bodyclass',TRUE)) { 
+        // Creating the body class
+    	if (!(THEMATIC_COMPATIBLE_BODY_CLASS)) { 
+    		echo '<body ';
+    		body_class();
+    		echo '>' . "\n\n";
+    	} else { 
+    		echo '<body class="';
+    		thematic_body_class();
+    		echo '">' . "\n\n";
+    	}
+    } else {
+    	echo '<body>' . "\n\n";
+    }
+}
+
 if (function_exists('childtheme_override_body_class'))  {
 	function thematic_body_class() {
 		childtheme_override_body_class();
@@ -270,11 +297,14 @@ if (function_exists('childtheme_override_body_class'))  {
 
 // Add browser CSS class to the end (queuing through priority) of the body classes 
 
-if ( THEMATIC_COMPATIBLE_BODY_CLASS && ( apply_filters('thematic_show_bc_browser', TRUE) ) ) { 
-	add_filter('thematic_body_class', 'browser_class_names', 20); 
-} elseif (!(THEMATIC_COMPATIBLE_BODY_CLASS) ) {
+if (!(THEMATIC_COMPATIBLE_BODY_CLASS) ) {
 	add_filter('body_class', 'browser_class_names', 20);
-} 
+	}
+	
+if (apply_filters('thematic_show_bc_browser', TRUE) ) {
+	add_filter('thematic_body_class', 'browser_class_names', 20); 
+	}
+
 
 
 

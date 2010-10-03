@@ -50,20 +50,7 @@
 
 <?php 
 
-if (apply_filters('thematic_show_bodyclass',TRUE)) { 
-    // Creating the body class
-	if (!(THEMATIC_COMPATIBLE_BODY_CLASS)) { 
-		echo '<body ';
-		body_class();
-		echo '>' . "\n\n";
-	} else { 
-		echo '<body class="';
-		thematic_body_class();
-		echo '">' . "\n\n";
-	}
-} else {
-	echo '<body>' . "\n\n";
-}
+thematic_body();
 
 // action hook for placing content before opening #wrapper
 thematic_before(); 
