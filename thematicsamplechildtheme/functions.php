@@ -30,4 +30,8 @@
 //
 // define('THEMATIC_COMPATIBLE_COMMENT_FORM', true);
 
+// Unleash the power of Thematic's feed link functions
+//
+// define('THEMATIC_COMPATIBLE_FEEDLINKS', true);
+
 ?>
