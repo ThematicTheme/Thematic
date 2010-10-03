@@ -25,6 +25,16 @@ define('TEMPLATEAUTHOR', $ct['Author']);
 define('TEMPLATEURI', $ct['URI']);
 define('TEMPLATEVERSION', $templateversion);
 
+
+// set feed links handling
+// If you set this to TRUE, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
+if (function_exists('comment_form')) {
+	define('THEMATIC_COMPATIBLE_FEEDLINKS', false); // WordPress 3.0
+} else {
+	define('THEMATIC_COMPATIBLE_FEEDLINKS', true); // below WordPress 3.0
+}
+
+
 // set comments handling for pages, archives and links
 // If you set this to TRUE, comments only show up on pages with a key/value of "comments"
 define('THEMATIC_COMPATIBLE_COMMENT_HANDLING', false);
@@ -47,8 +57,8 @@ if (function_exists('comment_form')) {
 // Check for WordPress mu or WordPress 3.0
 define('THEMATIC_MB', function_exists('get_blog_option'));
 
-// Check for WordPress 3.0 add_theme_support()
-if (function_exists('wp_login_form')) {
+// Create the feedlinks
+if (!(THEMATIC_COMPATIBLE_FEEDLINKS)) {
 	add_theme_support( 'automatic-feed-links' );
 }
 

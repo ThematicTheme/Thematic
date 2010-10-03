@@ -27,7 +27,7 @@
     // Loading the stylesheet
     thematic_create_stylesheet();
 
-	if (!function_exists('wp_login_form')) {    
+	if (THEMATIC_COMPATIBLE_FEEDLINKS) {    
     	// Creating the internal RSS links
     	thematic_show_rss();
     
