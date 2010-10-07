@@ -128,13 +128,19 @@ function thematic_commentbutton_text() {
 
 // Located in comments.php
 // Creates the standard arguments for comment_form()
-function thematic_comment_form_args() {
+function thematic_comment_form_args( $post_id = null ) {
+	global $user_identity, $id;
 	
-	global $user_identity;
+	if ( null === $post_id )
+          $post_id = $id;
+      else
+          $id = $post_id;
 	
 	$req = get_option( 'require_name_email' );
 	
 	$commenter = wp_get_current_commenter();
+	
+	$aria_req = ( $req ? " aria-required='true'" : '' );
 	
 	$fields =  array(
 		'author' => '<div id="form-section-author" class="form-section"><div class="form-label">' . '<label for="author">' . __( 'Name', 'thematic' ) . '</label> ' . ( $req ? __('<span class="required">*</span>', 'thematic') : '' ) . '</div>' . '<div class="form-input">' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' .  ' maxlength="20" tabindex="3"' . $aria_req . ' /></div></div><!-- #form-section-author .form-section -->',
