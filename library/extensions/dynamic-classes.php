@@ -402,7 +402,7 @@ if (function_exists('childtheme_override_post_class'))  {
 				$c[] = 'tag-' . $tag->slug;
 		}
 		
-		if (function_exists(get_post_type_object)) {
+		if (function_exists('get_post_type_object')) {
 			// Taxonomies and terms for the post queried
 			$single_post_type = get_post_type_object(get_post_type($post->ID));
 			// Check for post types without taxonomy inclusion
