@@ -10,6 +10,7 @@
 	padding: 5px;
 }
 .entry-content img {
+    height:auto;
     margin: 0 0 18px 0;
     max-width:100%;
 }
