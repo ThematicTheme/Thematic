@@ -340,10 +340,12 @@ if (function_exists('childtheme_override_head_scripts'))  {
 	    print apply_filters('thematic_head_scripts', $scripts);
 	}
 
-	if (apply_filters('thematic_use_superfish', TRUE)) {
-		add_action('wp_head','thematic_head_scripts');
-	}
 }
+
+if (apply_filters('thematic_use_superfish', TRUE)) {
+	add_action('wp_head','thematic_head_scripts');
+}
+
 
 // Create the default arguments for wp_page_menu()
 function thematic_page_menu_args() {
@@ -435,8 +437,9 @@ function thematic_header() {
 		function thematic_brandingopen() {
 			echo "<div id=\"branding\">\n";
 		}
-	    add_action('thematic_header','thematic_brandingopen',1);
-	}	
+	}
+	
+	add_action('thematic_header','thematic_brandingopen',1);
 	
 	// Create the blog title
 	// In the header div
@@ -450,8 +453,10 @@ function thematic_header() {
 	    		<div id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
 	    		
 	    <?php }
-	    add_action('thematic_header','thematic_blogtitle',3);
+	    
 	}
+	
+	add_action('thematic_header','thematic_blogtitle',3);
 	
 	// Create the blog description
 	// In the header div
@@ -468,8 +473,9 @@ function thematic_header() {
 	        	echo "\t\t<div id=$blogdesc</div>\n\n";
 	        }
 	    }
-	    add_action('thematic_header','thematic_blogdescription',5);
 	}
+
+	add_action('thematic_header','thematic_blogdescription',5);
 	
 	// Close #branding
 	// In the header div
@@ -481,8 +487,9 @@ function thematic_header() {
 	    function thematic_brandingclose() {
 	    	echo "\t\t</div><!--  #branding -->\n";
 	    }
-	    add_action('thematic_header','thematic_brandingclose',7);
 	}
+
+	add_action('thematic_header','thematic_brandingclose',7);
 	
 	// Create #access
 	// In the header div
