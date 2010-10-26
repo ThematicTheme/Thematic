@@ -346,45 +346,6 @@ if (apply_filters('thematic_use_superfish', TRUE)) {
 	add_action('wp_head','thematic_head_scripts');
 }
 
-
-// Create the default arguments for wp_page_menu()
-function thematic_page_menu_args() {
-	$args = array (
-		'sort_column' => 'menu_order',
-		'menu_class'  => 'menu',
-		'include'     => '',
-		'exclude'     => '',
-		'echo'        => FALSE,
-		'show_home'   => FALSE,
-		'link_before' => '',
-		'link_after'  => ''
-	);
-	return $args;
-}
-add_filter('wp_page_menu_args','thematic_page_menu_args');
-
-
-// Create the default arguments for wp_page_menu()
-function thematic_nav_menu_args() {
-	$args = array (
-		'theme_location'	=> apply_filters('thematic_primary_menu_id', 'primary-menu'),
-		'menu'				=> '',
-		'container'			=> 'div',
-		'container_class'	=> 'menu',
-		'menu_class'		=> 'sf-menu',
-		'fallback_cb'		=> 'wp_page_menu',
-		'before'			=> '',
-		'after'				=> '',
-		'link_before'		=> '',
-		'link_after'		=> '',
-		'depth'				=> 0,
-		'walker'			=> '',
-		'echo'				=> false
-	);
-	
-	return apply_filters('thematic_nav_menu_args', $args);
-}
-
 if (function_exists('childtheme_override_init_navmenu'))  {
     function thematic_init_navmenu() {
     	childtheme_override_init_navmenu();
@@ -507,9 +468,9 @@ function thematic_header() {
 	    	<?php 
 	    		
 	    	if ((function_exists("has_nav_menu")) && (has_nav_menu(apply_filters('thematic_primary_menu_id', 'primary-menu')))) {
-	    		echo  wp_nav_menu(thematic_nav_menu_args());
+	    		echo  wp_nav_menu(array ( 'theme_location'	=> 'primary-menu', 'container_class' => 'menu', 'menu_class' => 'sf-menu', 'echo' => false ));
     		} else {
-    			echo  thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));	
+    			echo  thematic_add_menuclass(wp_page_menu(array ( 'sort_column' => 'menu_order', 'echo' => false )));	
     		}
     		
 	    	?>
