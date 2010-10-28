@@ -15,7 +15,7 @@ function thmfooter_login_link() {
     if ( ! is_user_logged_in() )
         $link = '<a href="' . site_url('/wp-login.php') . '">' . __('Login','thematic') . '</a>';
     else
-    $link = '<a href="' . wp_logout_url($redirect) . '">' . __('Logout','thematic') . '</a>';
+    $link = '<a href="' . wp_logout_url() . '">' . __('Logout','thematic') . '</a>';
     return apply_filters('loginout', $link);
 }
 add_shortcode('loginout-link', 'thmfooter_login_link');		  	  
