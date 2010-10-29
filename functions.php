@@ -1,8 +1,20 @@
 <?php
 
-// Getting Theme and Child Theme Data
-// Credits: Joern Kretzschmar
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ *
+ * Used to set the width of images and content. Should be equal to the width the theme
+ * is designed for, generally via the style.css stylesheet.
+ */
+if ( ! isset( $content_width ) )
+	$content_width = 540;
 
+/**
+ * Get Theme and Child Theme Data.
+ * Credits: Joern Kretzschmar
+ * 
+ * Used to get title, version, author, URI of the parent and the child theme.
+ */
 $themeData = get_theme_data(TEMPLATEPATH . '/style.css');
 $thm_version = trim($themeData['Version']);
 if(!$thm_version)
@@ -13,13 +25,11 @@ $templateversion = trim($ct['Version']);
 if(!$templateversion)
     $templateversion = "unknown";
 
-// set theme constants
 define('THEMENAME', $themeData['Title']);
 define('THEMEAUTHOR', $themeData['Author']);
 define('THEMEURI', $themeData['URI']);
 define('THEMATICVERSION', $thm_version);
 
-// set child theme constants
 define('TEMPLATENAME', $ct['Title']);
 define('TEMPLATEAUTHOR', $ct['Author']);
 define('TEMPLATEURI', $ct['URI']);
