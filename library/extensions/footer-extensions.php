@@ -46,8 +46,8 @@ function thematic_after() {
     	function thematic_subsidiaries() {
        	 widget_area_subsidiaries();
     	}
-    	add_action('thematic_footer', 'thematic_subsidiaries', 10);
     }
+    add_action('thematic_footer', 'thematic_subsidiaries', 10);
     
 	if (function_exists('childtheme_override_siteinfoopen'))  {
 		function thematic_siteinfoopen() {
@@ -60,8 +60,8 @@ function thematic_after() {
 
     	<?php
     	}
-    	add_action('thematic_footer', 'thematic_siteinfoopen', 20);
     }
+    add_action('thematic_footer', 'thematic_siteinfoopen', 20);
     
 	if (function_exists('childtheme_override_siteinfo'))  {
 		function thematic_siteinfo() {
@@ -84,8 +84,8 @@ function thematic_after() {
         	/* footer text set in theme options */
         	echo do_shortcode(__(stripslashes(thematic_footertext($thm_footertext)), 'thematic'));
         }
-    	add_action('thematic_footer', 'thematic_siteinfo', 30);
     }
+    add_action('thematic_footer', 'thematic_siteinfo', 30);
     
 	if (function_exists('childtheme_override_siteinfoclose'))  {
 		function thematic_siteinfoclose() {
@@ -98,5 +98,5 @@ function thematic_after() {
     
     	<?php
     	}
-    	add_action('thematic_footer', 'thematic_siteinfoclose', 40);
 	}
+	add_action('thematic_footer', 'thematic_siteinfoclose', 40);
