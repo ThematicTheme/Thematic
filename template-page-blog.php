@@ -16,11 +16,10 @@
 
 		<div id="container">
 	
-			<?php thematic_abovecontent(); ?>
-	
-			<div id="content">
-            
-            <?php
+			<?php thematic_abovecontent();
+		
+			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
+			
 			$wp_query = new WP_Query();
 			$wp_query->query( array( 'posts_per_page' => get_option( 'posts_per_page' ), 'paged' => $paged ) );
 			$more = 0;

@@ -10,13 +10,11 @@
 
 		<div id="container">
 		
-			<?php thematic_abovecontent(); ?>
+			<?php thematic_abovecontent();
 		
-			<div id="content">
-	
-	            <?php
-	        
-	            // displays the page title
+			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
+			
+				// displays the page title
 	            thematic_page_title();
 	
 	            // create the navigation above the content

@@ -10,13 +10,11 @@
 
 		<div id="container">
 		
-			<?php thematic_abovecontent(); ?>
+			<?php thematic_abovecontent();
 		
-			<div id="content">
-	
-	            <?php 
-	            
-	            if (have_posts()) {
+			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
+			
+				if (have_posts()) {
 	
 	                // displays the page title
 	                thematic_page_title();
