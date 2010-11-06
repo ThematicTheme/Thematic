@@ -12,11 +12,11 @@
 
 		<div id="container">
 		
-			<?php thematic_abovecontent(); ?>
+			<?php thematic_abovecontent();
 		
-			<div id="content">
+			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
 			
-				<?php thematic_abovepost(); ?>
+				thematic_abovepost(); ?>
 		
 				<div id="post-0" class="post error404">
 				

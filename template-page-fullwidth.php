@@ -18,13 +18,11 @@
 
 		<div id="container">
 		
-			<?php thematic_abovecontent(); ?>
+			<?php thematic_abovecontent();
 		
-			<div id="content">
-	
-	            <?php
-	        
-	            // calling the widget area 'page-top'
+			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
+			
+				// calling the widget area 'page-top'
 	            get_sidebar('page-top');
 	
 	            the_post();

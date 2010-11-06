@@ -10,11 +10,9 @@
 
 		<div id="container">
 		
-		    <?php thematic_abovecontent(); ?>
+		    <?php thematic_abovecontent();
 		
-		    <div id="content">
-		
-		        <?php 
+			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" ); 
 		
 		        the_post();
 		

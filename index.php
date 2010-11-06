@@ -10,13 +10,11 @@
 
 		<div id="container">
 	
-			<?php thematic_abovecontent(); ?>
-	
-			<div id="content">
-
-				<?php 
-            	
-            	// create the navigation above the content
+			<?php thematic_abovecontent();
+		
+			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
+			
+				// create the navigation above the content
             	thematic_navigation_above();
 				
             	// calling the widget area 'index-top'

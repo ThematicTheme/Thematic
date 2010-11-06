@@ -10,13 +10,11 @@
 
 		<div id="container">
 			
-			<?php thematic_abovecontent(); ?>
-			
-			<div id="content">
+			<?php thematic_abovecontent();
 		
-    	        <?php 
-    	        
-    	        the_post();
+			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
+			
+				the_post();
     	        
     	        // create the navigation above the content
 				thematic_navigation_above();
