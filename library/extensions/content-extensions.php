@@ -798,8 +798,8 @@ if (function_exists('childtheme_override_content_init'))  {
 		$thematic_content_length = apply_filters('thematic_content', $content);
 		
 	}
-	add_action('thematic_abovepost','thematic_content_init');
 }
+add_action('thematic_abovepost','thematic_content_init');
 
 // Creates the post content 
 if (function_exists('childtheme_override_content'))  {
