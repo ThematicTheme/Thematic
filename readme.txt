@@ -30,6 +30,8 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Added: Thematic Compatible Comment Handling comment to sample child theme functions.php.
+* Added: Thematic Compatible Comment Handling to full page template.
 * Added: New filter thematic_open_id_content. Defaults to: <code>'<div id="content">' . "\n"</code>.
 * Added: $content_width defines the max image width.
 * Added: Farsi language files. Credits: Ehsan
