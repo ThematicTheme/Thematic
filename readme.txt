@@ -1,5 +1,5 @@
 === Thematic ===
-Contributors: iandstewart, chris\@\thematic4you.com
+Contributors: iandstewart, chrisgossmann, emhr
 Tags: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
 Requires at least: 2.9.2
 Tested up to: 3.0.1
@@ -36,6 +36,7 @@ Features:
 * Added: $content_width defines the max image width.
 * Added: Farsi language files. Credits: Ehsan
 * Changed: Removed changelog.html in favor of the new readme.txt.
+* Fixed: An E_NOTICE in dynamic_classes.php (occured while displaying a 404 page). Credits: markauk
 * Fixed: childtheme_override_content_init() is now working.
 * Fixed: Updated Brazilian Portuguese language files. Credits: Eduardo Zulian.
 * Fixed: Removed sidebar-subsidiary.php. Code is created using action hooks.
