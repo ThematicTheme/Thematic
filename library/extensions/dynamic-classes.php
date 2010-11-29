@@ -250,7 +250,7 @@ if (function_exists('childtheme_override_body_class'))  {
 	    }
 	
 	 // Paged classes; for page x > 1 classes of index and all post types etc.
-		if (apply_filters('thematic_show_bc_pagex', TRUE)) {
+		if ( isset( $post ) && apply_filters('thematic_show_bc_pagex', TRUE)) {
 			if ( (( ( $page = $wp_query->get('paged') ) || ( $page = $wp_query->get('page') ) ) && $page > 1 ) ) {
 				// Thanks to Prentiss Riddle, twitter.com/pzriddle, for the security fix below. 
 				$page = intval($page); // Ensures that an integer (not some dangerous script) is passed for the variable
