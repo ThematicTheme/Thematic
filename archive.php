@@ -23,9 +23,15 @@
 		
 		        // create the navigation above the content
 		        thematic_navigation_above();
-		
+			
+            	// action hook for placing content above the index loop
+            	thematic_above_archiveloop();
+
 		        // action hook creating the archive loop
 		        thematic_archiveloop();
+				
+            	// action hook for placing content below the index loop
+            	thematic_below_archiveloop();
 		
 		        // create the navigation below the content
 		        thematic_navigation_below();

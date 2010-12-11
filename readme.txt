@@ -33,6 +33,7 @@ Features:
 * Added: New filter thematic_open_id_content. Defaults to: <code>'<div id="content">' . "\n"</code>.
 * Added: $content_width defines the max image width.
 * Added: Farsi language files. Credits: Ehsan
+* Added: The action hooks <code>thematic_above_archiveloop</code> and <code>thematic_below_archivloop</code>. Credits: Kathy
 * Changed: Removed changelog.html in favor of the new readme.txt.
 * Fixed: <code>childtheme_menu_args</code> in Thematic Sample Childtheme (the value for echo is FALSE).
 * Fixed: An E_NOTICE in dynamic_classes.php (occured while displaying a 404 page). Credits: markauk
