@@ -52,6 +52,13 @@ function thematic_above_indexloop() {
 } // end thematic_above_indexloop
 
 
+// Located in archive.php 
+// Just before the loop
+function thematic_above_archiveloop() {
+    do_action('thematic_above_archiveloop');
+} // end thematic_above_archiveloop
+
+
 // Located in archive.php
 // The Loop
 function thematic_archiveloop() {
@@ -106,6 +113,13 @@ function thematic_tagloop() {
 function thematic_below_indexloop() {
     do_action('thematic_below_indexloop');
 } // end thematic_below_indexloop
+
+
+// Located in archive.php 
+// Just after the loop
+function thematic_below_archiveloop() {
+    do_action('thematic_below_archiveloop');
+} // end thematic_below_archiveloop
 
 
 // Located in category.php 
