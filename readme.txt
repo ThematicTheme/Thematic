@@ -30,12 +30,11 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
-* Added: Thematic Compatible Comment Handling comment to sample child theme functions.php.
-* Added: Thematic Compatible Comment Handling to full page template.
 * Added: New filter thematic_open_id_content. Defaults to: <code>'<div id="content">' . "\n"</code>.
 * Added: $content_width defines the max image width.
 * Added: Farsi language files. Credits: Ehsan
 * Changed: Removed changelog.html in favor of the new readme.txt.
+* Fixed: <code>childtheme_menu_args</code> in Thematic Sample Childtheme (the value for echo is FALSE).
 * Fixed: An E_NOTICE in dynamic_classes.php (occured while displaying a 404 page). Credits: markauk
 * Fixed: childtheme_override_content_init() is now working.
 * Fixed: Updated Brazilian Portuguese language files. Credits: Eduardo Zulian.
