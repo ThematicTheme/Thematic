@@ -120,7 +120,11 @@ function thematic_create_contenttype() {
 
 // The master switch for SEO functions
 function thematic_seo() {
-		$content = TRUE;
+	if ( class_exists( 'All_in_One_SEO_Pack' ) || class_exists( 'HeadSpace_Plugin' ) || class_exists( 'Platinum_SEO_Pack' ) || class_exists( 'wpSEO' ) || defined( 'WPSEO_VERSION' )) {
+		$content = FALSE;
+	} else {
+		$content = true;
+	}
 		return apply_filters('thematic_seo', $content);
 }
 

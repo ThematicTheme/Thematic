@@ -34,6 +34,7 @@ Features:
 * Added: $content_width defines the max image width.
 * Added: Farsi language files. Credits: Ehsan
 * Added: The action hooks <code>thematic_above_archiveloop</code> and <code>thematic_below_archivloop</code>. Credits: Kathy
+* Added: Automatic support for All in One SEO Pack, HeadSpace Plugin, Platinum SEO Pack, wpSEO, and WordPress SEO.
 * Changed: Removed changelog.html in favor of the new readme.txt.
 * Fixed: <code>childtheme_menu_args</code> in Thematic Sample Childtheme (the value for echo is FALSE).
 * Fixed: An E_NOTICE in dynamic_classes.php (occured while displaying a 404 page). Credits: markauk
@@ -60,7 +61,8 @@ Features:
 * Added: New function thematic_body_open() defined in dynamic-classes.php
 * Added: Added Estonian language files. Credits: Peeter Marvet
 * Added: Thematic's browser / OS class to WorpPress' body_class(). Menu will now display properly with the Test Data.
-* Added: the constant THEMATIC_COMPATIBLE_COMMENT_FORM which defaults to false. In this case the WordPress function comment_form() is used. If you set it to TRUE, Thematic will use its own functionality. This is a requirement by the Theme Review Team. * Added: Added: Thematic's browser / OS class to WorpPress' body_class(). Menu will now display properly with the Test Data.
+* Added: the constant THEMATIC_COMPATIBLE_COMMENT_FORM which defaults to false. In this case the WordPress function comment_form() is used. If you set it to TRUE, Thematic will use its own functionality. This is a requirement by the Theme Review Team. 
+* Added: Added: Thematic's browser / OS class to WorpPress' body_class(). Menu will now display properly with the Test Data.
 * Added: the constant THEMATIC_COMPATIBLE_POST_CLASS which defaults to false. In this case the WordPress function post_class() is used. If you set it to TRUE, Thematic will use its own function thematic_post_class(). This is a requirement by the Theme Review Team.
 * Added: the constant THEMATIC_COMPATIBLE_BODY_CLASS which defaults to false. In this case the WordPress function body_class() is used. If you set it to TRUE, Thematic will use its own function thematic_body_class(). This is a requirement by the Theme Review Team.
 * Added: Better SSL support by replacing bloginfo('siteurl') & get_bloginfo('siteurl') with site_url()
