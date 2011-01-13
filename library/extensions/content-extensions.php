@@ -660,7 +660,7 @@ if (function_exists('childtheme_override_postheader_posteditlink'))  {
     	
     	global $id;
     
-		$posteditlink = '<a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+		$posteditlink = '<a href="' . site_url() . '/wp-admin/post.php?action=edit&amp;post=' . $id;
 		$posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
 		$posteditlink .= __('Edit', 'thematic') . '</a>';
 		
@@ -942,7 +942,7 @@ function thematic_404() {
 					<p><?php _e('Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'thematic') ?></p>
 				</div><!-- .entry-content -->
 				
-				<form id="error404-searchform" method="get" action="<?php bloginfo('url') ?>/">
+				<form id="error404-searchform" method="get" action="<?php echo home_url() ?>/">
 					<div>
 						<input id="error404-s" name="s" type="text" value="<?php echo esc_html(stripslashes(get_query_var('s'))) ?>" size="40" />
 						<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'thematic') ?>" />
@@ -1008,7 +1008,7 @@ if (function_exists('childtheme_override_postfooter_posteditlink'))  {
 
 	    global $id;
 	    
-	    $posteditlink = '<span class="edit"><a href="' . get_bloginfo('wpurl') . '/wp-admin/post.php?action=edit&amp;post=' . $id;
+	    $posteditlink = '<span class="edit"><a href="' . site_url() . '/wp-admin/post.php?action=edit&amp;post=' . $id;
 	    $posteditlink .= '" title="' . __('Edit post', 'thematic') .'">';
 	    $posteditlink .= __('Edit', 'thematic') . '</a></span>';
 	    return apply_filters('thematic_postfooter_posteditlink',$posteditlink); 

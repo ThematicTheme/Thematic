@@ -35,6 +35,7 @@ Features:
 * Added: Farsi language files. Credits: Ehsan
 * Added: The action hooks <code>thematic_above_archiveloop</code> and <code>thematic_below_archivloop</code>. Credits: Kathy
 * Added: Automatic support for All in One SEO Pack, HeadSpace Plugin, Platinum SEO Pack, wpSEO, and WordPress SEO.
+* Added: Icelandic language files. Credits: Stefán Vignir Skarphéðinsson
 * Changed: Removed changelog.html in favor of the new readme.txt.
 * Fixed: <code>childtheme_menu_args</code> in Thematic Sample Childtheme (the value for echo is FALSE).
 * Fixed: An E_NOTICE in dynamic_classes.php (occured while displaying a 404 page). Credits: markauk
