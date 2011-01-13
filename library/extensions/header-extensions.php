@@ -318,7 +318,7 @@ if (function_exists('childtheme_override_head_scripts'))  {
     function thematic_head_scripts() {
 	    $scriptdir_start = "\t";
 	    $scriptdir_start .= '<script type="text/javascript" src="';
-	    $scriptdir_start .= get_bloginfo('template_directory');
+	    $scriptdir_start .= get_template_directory_uri();
 	    $scriptdir_start .= '/library/scripts/';
 	    
 	    $scriptdir_end = '"></script>';
@@ -453,7 +453,7 @@ function thematic_header() {
 	} else {
 	    function thematic_blogtitle() { ?>
 	    		
-	    		<div id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+	    		<div id="blog-title"><span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
 	    		
 	    <?php }
 	    

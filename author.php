@@ -59,7 +59,7 @@
     	                </div>  			
     				<div id="author-email">
     	                <a class="email" title="<?php echo antispambot($authordata->user_email); ?>" href="mailto:<?php echo antispambot($authordata->user_email); ?>"><?php _e('Email ', 'thematic') ?><span class="fn n"><span class="given-name"><?php echo $authordata->first_name; ?></span> <span class="family-name"><?php echo $authordata->last_name; ?></span></span></a>
-    	                <a class="url"  style="display:none;" href="<?php bloginfo( 'url' ) ?>/"><?php bloginfo('name') ?></a>   
+    	                <a class="url"  style="display:none;" href="<?php echo home_url() ?>/"><?php bloginfo('name') ?></a>   
     	            </div>
 				</div><!-- #author-info -->
     	        <?php 
