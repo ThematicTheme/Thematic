@@ -30,6 +30,15 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Fixed: thematic_page_title() Tag archive display name of queried tag
+* Changed: thematic_page_title() now supports for custom post type archives
+* Changed: thematic_postfooter(), thematic_postfooter_postcategory(), thematic_postfooter_posttags() , thematic_postfooter_postcomments(), function thematic_postfooter_postconnect() to provide support for custom post types and custom taxonomies.
+* Added: thematic_postfooter_posttax() providing a looping structure for post taxonomies
+* Added: New override childtheme_override_postfooter_posttax() 
+* Added: New filter thematic_postfooter_posttax
+* Added: thematic_postfooter_postterms($tax) for assembling the term list for individual taxonomies
+* Added: New override childtheme_override_postfooter_postterms($tax) 
+* Added: New filter thematic_postfooter_postterms
 * Added: New filter thematic_open_id_content. Defaults to: <code>'<div id="content">' . "\n"</code>.
 * Added: $content_width defines the max image width.
 * Added: Farsi language files. Credits: Ehsan
