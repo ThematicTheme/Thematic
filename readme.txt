@@ -30,6 +30,15 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Changed: Function <code>thematic_head_scripts</code> to <code>wp_enqueue_script</code>. 
+* Removed: Filter <code>thematic_dropdown_options</code>.
+* Removed: Variable <code>thematic_use_superfish</code>. 
+* Changed: Function <code>thematic_create_stylesheet</code> to <code>wp_enqueue_style</code>.
+* Removed: filter <code>thematic_create_stylesheet</code>.
+* Added: New hook <code>thematic_child_init</code> used for <code>remove_theme_support</code>.
+* Added: <code>add_theme_support('thematic_superfish')</code>
+* Changed: Started to clean up the functions.php.
+* Fixed: Missing text domain.
 * Fixed: thematic_page_title() Tag archive display name of queried tag
 * Changed: thematic_page_title() now supports for custom post type archives
 * Changed: thematic_postfooter(), thematic_postfooter_postcategory(), thematic_postfooter_posttags() , thematic_postfooter_postcomments(), function thematic_postfooter_postconnect() to provide support for custom post types and custom taxonomies.
