@@ -239,12 +239,13 @@ function thematic_show_robots() {
 // Located in header.php
 // creates link to style.css
 function thematic_create_stylesheet() {
-    $content = "\t";
-    $content .= "<link rel=\"stylesheet\" type=\"text/css\" href=\"";
-    $content .= get_bloginfo('stylesheet_url');
-    $content .= "\" />";
-    $content .= "\n\n";
-    echo apply_filters('thematic_create_stylesheet', $content);
+	wp_register_style('thematic_style', get_bloginfo('stylesheet_url'));
+    wp_enqueue_style('thematic_style');
+    if (!current_theme_supports('thematic_superfish')) { 
+    	return; 
+	}
+	wp_register_style('thematic_menu', get_template_directory_uri() . '/library/styles/menu.css');
+ 	wp_enqueue_style( 'thematic_menu');
 }
 
 
@@ -307,48 +308,6 @@ function thematic_show_commentreply() {
         if ( is_singular() ) 
             wp_enqueue_script( 'comment-reply' ); // support for comment threading
 } // end thematic_show_commentreply
-
-
-// Load scripts for the jquery Superfish plugin http://users.tpg.com.au/j_birch/plugins/superfish/#examples
-if (function_exists('childtheme_override_head_scripts'))  {
-    function thematic_head_scripts() {
-    	childtheme_override_head_scripts();
-    }
-} else {
-    function thematic_head_scripts() {
-	    $scriptdir_start = "\t";
-	    $scriptdir_start .= '<script type="text/javascript" src="';
-	    $scriptdir_start .= get_template_directory_uri();
-	    $scriptdir_start .= '/library/scripts/';
-	    
-	    $scriptdir_end = '"></script>';
-	    
-	    $scripts = "\n";
-	    $scripts .= $scriptdir_start . 'hoverIntent.js' . $scriptdir_end . "\n";
-	    $scripts .= $scriptdir_start . 'superfish.js' . $scriptdir_end . "\n";
-	    $scripts .= $scriptdir_start . 'supersubs.js' . $scriptdir_end . "\n";
-	    $dropdown_options = $scriptdir_start . 'thematic-dropdowns.js' . $scriptdir_end . "\n";
-	    
-	    $scripts = $scripts . apply_filters('thematic_dropdown_options', $dropdown_options);
-	
-	    	$scripts .= "\n";
-	    	$scripts .= "\t";
-	    	$scripts .= '<script type="text/javascript">' . "\n";
-	    	$scripts .= "\t\t" . '/*<![CDATA[*/' . "\n";
-	    	$scripts .= "\t\t" . 'jQuery.noConflict();' . "\n";
-	    	$scripts .= "\t\t" . '/*]]>*/' . "\n";
-	    	$scripts .= "\t";
-	    	$scripts .= '</script>' . "\n";
-	
-	    // Print filtered scripts
-	    print apply_filters('thematic_head_scripts', $scripts);
-	}
-
-}
-
-if (apply_filters('thematic_use_superfish', TRUE)) {
-	add_action('wp_head','thematic_head_scripts');
-}
 
 
 // Create the default arguments for wp_page_menu()
