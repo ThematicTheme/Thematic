@@ -3,34 +3,6 @@
 // Theme options adapted from "A Theme Tip For WordPress Theme Authors"
 // http://literalbarrage.org/blog/archives/2007/05/03/a-theme-tip-for-wordpress-theme-authors/
 
-$themename = "Thematic";
-$shortname = "thm";
-
-// Create theme options
-
-$options = array (
-
-				array(	"name" => __('Index Insert Position','thematic'),
-						"desc" => __('The widgetized Index Insert will follow after this post number.','thematic'),
-						"id" => $shortname."_insert_position",
-						"std" => "2",
-						"type" => "text"),
-
-				array(	"name" => __('Info on Author Page','thematic'),
-						"desc" => __("Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a> - with the author's avatar, bio and email - on the author page.", 'thematic'),
-						"id" => $shortname."_authorinfo",
-						"std" => false,
-						"type" => "checkbox"),
-
-				array(	"name" => __('Text in Footer','thematic'),
-						"desc" => __("You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]",'thematic'),
-						"id" => $shortname."_footertext",
-						"std" => __("Powered by [wp-link]. Built on the [theme-link].", 'thematic'),
-						"type" => "textarea",
-						"options" => array(	"rows" => "5",
-											"cols" => "94") ),
-
-		);
 
 function mytheme_add_admin() {
 
