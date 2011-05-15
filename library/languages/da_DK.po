@@ -1,0 +1,576 @@
+# Danske oversættelse af Thematic
+# Copyright 2010 Ask Hjorth Larsen m.fl.
+#
+# (Anders Jenbo?)
+# Ask Hjorth Larsen, 2010.
+#
+# Konventioner
+#
+# author page -> forfatterside
+#
+# trackback -> trackback.  I hvertfald indtil jeg finder ud af hvad det er
+#
+# comment -> kommentar
+# post -> indlæg
+# footer -> sidefod.  Kan måske referere til signaturtekstområdet ... ændres?
+msgid ""
+msgstr ""
+"Project-Id-Version: Thematic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-27 15:18+0100\n"
+"PO-Revision-Date: 2011-05-15 20:30+0100\n"
+"Last-Translator: Chris Goßmann <chris@thematictheme.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: c:\\xampp\\htdocs\\development\\wp-content\\themes\\thematic\n"
+
+#: c:\users\Chris\Desktop\thematic/archives.php:52
+#: c:\users\Chris\Desktop\thematic/links.php:64
+#: c:\users\Chris\Desktop\thematic/page.php:50
+msgid "Edit"
+msgstr "Rediger"
+
+#: c:\users\Chris\Desktop\thematic/attachment.php:49
+msgid "Pages:"
+msgstr "Sider:"
+
+#: c:\users\Chris\Desktop\thematic/author.php:61
+msgid "Email "
+msgstr "E-mail "
+
+#: c:\users\Chris\Desktop\thematic/comments.php:10
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Dette indlæg er beskyttet med adgangskode. Indtast adgangskoden for at se kommentarer."
+
+#: c:\users\Chris\Desktop\thematic/comments.php:52
+#, php-format
+msgid "<span>%d</span> Trackbacks"
+msgstr "<span>%d</span> trackbacks"
+
+#: c:\users\Chris\Desktop\thematic/comments.php:52
+msgid "<span>One</span> Trackback"
+msgstr "<span>Et</span> trackback"
+
+#: c:\users\Chris\Desktop\thematic/comments.php:74
+#, php-format
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Du skal være <a href=\"%s\" title=\"Log ind\">logget ind</a> for at skrive en kommentar."
+
+#: c:\users\Chris\Desktop\thematic/comments.php:85
+#, php-format
+msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"loggedin\">Logget ind som <a href=\"%1$s\" title=\"Logget ind som %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log denne konto ud\">Log ud?</a></span>"
+
+#: c:\users\Chris\Desktop\thematic/comments.php:92
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "Din e-mail vil <em>aldrig</em> blive vist eller delt med andre."
+
+#: c:\users\Chris\Desktop\thematic/comments.php:92
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "Obligatoriske felter er markeret med <span class=\"required\">*</span>"
+
+#: c:\users\Chris\Desktop\thematic/comments.php:95
+msgid "Name"
+msgstr "Navn"
+
+#: c:\users\Chris\Desktop\thematic/comments.php:95
+#: c:\users\Chris\Desktop\thematic/comments.php:100
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: c:\users\Chris\Desktop\thematic/comments.php:100
+msgid "Email"
+msgstr "E-mail"
+
+#: c:\users\Chris\Desktop\thematic/comments.php:105
+msgid "Website"
+msgstr "Website"
+
+#: c:\users\Chris\Desktop\thematic/comments.php:117
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
+msgstr "Du kan bruge disse <abbr title=\"HyperText Markup Language\">HTML</abbr>-mærker og -attributter:"
+
+#: c:\users\Chris\Desktop\thematic/page.php:48
+msgid "Pages: "
+msgstr "Sider: "
+
+#: c:\users\Chris\Desktop\thematic/search.php:44
+msgid "Nothing Found"
+msgstr "Intet fundet"
+
+#: c:\users\Chris\Desktop\thematic/search.php:46
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Beklager, men dine søgeord gav ingen resultater. Prøv venligst igen med nogle andre nøgleord."
+
+#: c:\users\Chris\Desktop\thematic/search.php:51
+msgid "Find"
+msgstr "Find"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:76
+msgid "<span>One</span> Comment"
+msgstr "<span>En</span> kommentar"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:83
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span> kommentarer"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:96
+msgid "Post a Comment"
+msgstr "Skriv en kommentar"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:103
+#, php-format
+msgid "Post a Reply to %s"
+msgstr "Skriv et svar til %s"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:110
+msgid "Comment"
+msgstr "Kommentar"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:118
+msgid "Cancel reply"
+msgstr ""
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:125
+msgid "Post Comment"
+msgstr "Skriv kommentar"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:212
+msgid "Author Archives: "
+msgstr "Forfatterarkiver: "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:218
+msgid "Category Archives:"
+msgstr "Kategoriarkiver:"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:227
+msgid "Search Results for:"
+msgstr "Søgeresultater for:"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:233
+msgid "Tag Archives:"
+msgstr "Mærkearkiver:"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:242
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:250
+#, fuzzy
+msgid "Archives:"
+msgstr "Mærkearkiver:"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:256
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Daglige arkiver: <span>%s</span>"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:260
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Månedlige arkiver: <span>%s</span>"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:264
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Årlige arkiver: <span>%s</span>"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:268
+msgid "Blog Archives"
+msgstr "Blogarkiver"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:298
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1243
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Ældre indlæg"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:299
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1244
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Nyere indlæg <span class=\"meta-nav\">&raquo;</span>"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:672
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1041
+msgid "Edit post"
+msgstr "Rediger indlæg"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:692
+msgid "Not Found"
+msgstr "Ikke fundet"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:697
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1001
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1006
+msgid "Permalink to "
+msgstr "Permalink til "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:742
+msgid "By "
+msgstr "Af "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:745
+msgid "View all posts by "
+msgstr "Vis alle indlæg af "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:763
+msgid "Published: "
+msgstr "Udgivet: "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:888
+msgid "Archives by Category"
+msgstr "Arkiver efter kategori"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:907
+msgid "Archives by Month"
+msgstr "Arkiver efter måned"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:950
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
+msgstr "Beklager, men vi kunne ikke finde det, du ledte efter. Måske vil en søgning kunne hjælpe."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:967
+msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Læs mere <span class=\"meta-nav\">&raquo;</span>"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1001
+msgid "Browse the "
+msgstr ""
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1001
+#, fuzzy
+msgid " Archive"
+msgstr "Mærkearkiver:"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1002
+#, fuzzy
+msgid " archive"
+msgstr "Mærkearkiver:"
+
+# bruger ubestemt på dansk -- dette ødelægger næppe noget
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1006
+#, fuzzy
+msgid "Bookmark the "
+msgstr ". Bogmærk "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1007
+msgid "permalink"
+msgstr "permalink"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1123
+msgid "This entry was posted in "
+msgstr "Dette indlæg blev sendt til "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1131
+msgid "Also posted in "
+msgstr "Også sendt til "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1134
+msgid "Posted in "
+msgstr "Sendt til "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1152
+#, fuzzy
+msgid " This entry is tagged"
+msgstr "Dette indlæg blev sendt til "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1155
+msgid " and tagged"
+msgstr " og mærket"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1158
+msgid " Also tagged "
+msgstr " Også mærket "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1160
+msgid "Tagged"
+msgstr "Mærket"
+
+# Bemærk at 'Comment on <something>' -> 'Kommentér <noget>'
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1179
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1182
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1185
+msgid "Comment on "
+msgstr "Kommentér "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1180
+msgid " Comments"
+msgstr " Kommentarer"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1183
+msgid " Comment"
+msgstr " Kommentar"
+
+# leave ~ skriv
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1186
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1189
+msgid "Comments closed"
+msgstr "Kommentarer lukket"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1205
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1213
+msgid "Post a comment"
+msgstr "Skriv en kommentar"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1206
+msgid " or leave a trackback: "
+msgstr " eller efterlad en trackback: "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1207
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1210
+msgid "Trackback URL for your post"
+msgstr "Trackback-adresse til dit indlæg"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1207
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1210
+msgid "Trackback URL"
+msgstr "Trackback-adresse"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1209
+msgid " Comments are closed, but you can leave a trackback: "
+msgstr " Der er lukket for kommentarer, men du kan efterlade et trackback: "
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1212
+msgid " Trackbacks are closed, but you can "
+msgstr " Der er lukket for trackbacks, men du kan "
+
+# Bemærk.  Lader til at være fortsat fra " Trackbacks are closed, but you can "
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1213
+msgid "post a comment"
+msgstr "skrive en kommentar"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1215
+msgid " Both comments and trackbacks are currently closed."
+msgstr " Der er nu lukket for både kommentarer og trackbacks."
+
+# Ikke sikker, kan nogen (Anders?) tjekke at dette er meningsfuldt?
+# Tror det begynder i stil med "Skrevet 17/7 14:23..."
+#: c:\users\Chris\Desktop\thematic/library/extensions/discussion-extensions.php:13
+#, php-format
+msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
+msgstr "Skrevet %1$s kl. %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink til denne kommentar\">Permalink</a>"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/discussion-extensions.php:21
+#, fuzzy
+msgid "Edit comment"
+msgstr " Kommentar"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:12
+msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>Din kommentar afventer godkendelse fra moderator.</span>\n"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:19
+msgid "Reply"
+msgstr "Svar"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:20
+msgid "Log in to reply."
+msgstr "Log ind for at svare."
+
+# navn, dato, tid - velsagtens
+#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:35
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr "Af %1$s, %2$s kl. %3$s"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:40
+msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Din trackback afventer godkendelse fra moderator.</span>\\n"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:262
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:138
+msgid "Posts RSS feed"
+msgstr "RSS-kilde for indlæg"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:280
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:139
+msgid "Comments RSS feed"
+msgstr "RSS-kilde for kommentarer"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:357
+msgid "Primary Menu"
+msgstr ""
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:467
+msgid "Skip navigation to the content"
+msgstr "Hop til indholdet"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:467
+msgid "Skip to content"
+msgstr "Hop til indhold"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/helpers.php:31
+#: c:\users\Chris\Desktop\thematic/library/extensions/helpers.php:44
+msgid "There is no excerpt because this is a protected post."
+msgstr "Der er intet uddrag, da dette er et beskyttet indlæg."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/shortcodes.php:16
+msgid "Login"
+msgstr "Log ind"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/shortcodes.php:18
+msgid "Logout"
+msgstr "Log af"
+
+# ???
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:13
+msgid "Index Insert Position"
+msgstr "Position af indeksindsættelse"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:14
+msgid "The widgetized Index Insert will follow after this post number."
+msgstr "Kontrollen for indeksindsættelse (Index Insert) vil følge efter dette antal indlæg."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:19
+msgid "Info on Author Page"
+msgstr "Side til information om forfatter"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:20
+#, fuzzy
+msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a> - with the author's avatar, bio and email - on the author page."
+msgstr "Vis et <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">mikroformateret vCard</a> — med forfatterens profilbillede, biografi og e-mail — på forfattersiden."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:25
+msgid "Text in Footer"
+msgstr "Tekst i sidefod"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:26
+msgid "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
+msgstr "Du kan bruge følgende forkortelseskoder i din sidefodstekst: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:28
+msgid "Powered by [wp-link]. Built on the [theme-link]."
+msgstr "Kører på [wp-link]. Bygget med [theme-link]."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:115
+msgid "settings saved."
+msgstr "indstillinger gemt."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:116
+msgid "settings reset."
+msgstr "indstillinger nulstillet."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:117
+msgid "widgets reset."
+msgstr "kontroller nulstillet."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:286
+msgid "Save changes"
+msgstr "Gem ændringer"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:293
+msgid "Reset"
+msgstr "Nulstil"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:300
+msgid "Reset Widgets"
+msgstr "Nulstil kontroller"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:305
+msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
+msgstr "Besøg <a href=\"http://themeshaper.com\">ThemeShaper</a> for at få yderligere oplysninger om dette tema. Besøg <a href=\"http://themeshaper.com/forums/\">ThemeShapers forum</a> hvis du har spørgsmål om Thematic."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:13
+msgid "To search, type and hit enter"
+msgstr "Skriv og tryk enter for at søge"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:19
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:37
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:42
+msgid "Search"
+msgstr "Søg"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:42
+msgid "The primary widget area, most often used as a sidebar."
+msgstr "Det primære kontrolområde, der oftest bruges som en sidebjælke."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:57
+msgid "The secondary widget area, most often used as a sidebar."
+msgstr "Det sekundære kontrolområde, der oftest bruges som en sidebjælke."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:72
+msgid "The 1st widget area in the footer."
+msgstr "Det første kontrolområde i sidefoden."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:87
+msgid "The 2nd widget area in the footer."
+msgstr "Det andet kontrolområde i sidefoden."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:102
+msgid "The 3rd widget area in the footer."
+msgstr "Det tredje kontrolområde i sidefoden."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:117
+msgid "The top widget area displayed on the index page."
+msgstr "Det øverste kontrolområde, der vises på indekssiden."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:132
+msgid "The widget area inserted after x posts on the index page."
+msgstr "Kontrolområdet, der indsætes efter x indlæg på indekssiden."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:147
+msgid "The bottom widget area displayed on the index page."
+msgstr "Det nederste kontrolområde, der vises på indekssiden."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:162
+msgid "The top widget area displayed on a single post."
+msgstr "Det øverste kontrolområde, der vises på et enkelt indlæg."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:177
+msgid "The widget area inserted between the post and the comments on a single post."
+msgstr "Kontrolområdet, der indsættes mellem et indlæg og dets kommentarer."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:192
+msgid "The bottom widget area displayed on a single post."
+msgstr "Det nederste kontrolområde, der vises på et enkelt indlæg."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:207
+msgid "The top widget area displayed on a page."
+msgstr "Det øverste kontrolområde, der vises på en side."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:222
+msgid "The bottom widget area displayed on a page."
+msgstr "Det nederste kontrolområde, der vises på en side."
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:36
+msgid "A search form for your blog"
+msgstr ""
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:58
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:113
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:156
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:174
+msgid "Title:"
+msgstr "Titel:"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:81
+msgid "Log in/out and admin"
+msgstr ""
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:82
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:87
+msgid "Meta"
+msgstr "Meta"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:126
+msgid "Links to your posts and comments feed"
+msgstr ""
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:127
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:132
+msgid "RSS Links"
+msgstr "RSS-links"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:138
+msgid "All posts"
+msgstr "Alle indlæg"
+
+#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:139
+msgid "All comments"
+msgstr "Alle kommentarer"
+
