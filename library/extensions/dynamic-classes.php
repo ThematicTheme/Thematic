@@ -330,9 +330,14 @@ function browser_class_names($classes) {
 	// Checks browsers in this order: Chrome, Safari, Opera, MSIE, FF
 	if ( preg_match( "/Chrome/", $browser ) ) {
 		$classes[] = 'chrome';
-	
-		preg_match( "/Chrome\/(\d.\d)/si", $browser, $matches);
-		$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );      
+		
+		if (!current_theme_supports('minorbrowserversion_ch')) {
+			preg_match( "/Chrome\/(\d+)/si", $browser, $matches);
+			$ch_version = 'ch' . $matches[1];
+		} else {
+			preg_match( "/Chrome\/(\d+.\d+)/si", $browser, $matches);
+			$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );
+		}      
 		$classes[] = $ch_version;
 	
 	} elseif ( preg_match( "/Safari/", $browser ) ) {

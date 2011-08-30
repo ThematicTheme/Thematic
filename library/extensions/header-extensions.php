@@ -33,7 +33,7 @@ if (function_exists('childtheme_override_doctitle'))  {
 } else {
 	function thematic_doctitle() {
 		$site_name = get_bloginfo('name');
-	    $separator = '|';
+	    $separator = apply_filters('thematic_doctitle_separator', '|');
 	        	
 	    if ( is_single() ) {
 	      $content = single_post_title('', FALSE);
@@ -241,11 +241,6 @@ function thematic_show_robots() {
 function thematic_create_stylesheet() {
 	wp_register_style('thematic_style', get_bloginfo('stylesheet_url'));
     wp_enqueue_style('thematic_style');
-    if (!current_theme_supports('thematic_superfish')) { 
-    	return; 
-	}
-	wp_register_style('thematic_menu', get_template_directory_uri() . '/library/styles/menu.css');
- 	wp_enqueue_style( 'thematic_menu');
 }
 
 

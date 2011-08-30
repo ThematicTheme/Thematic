@@ -30,6 +30,9 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Added: <code>add_theme_support('minorbrowserversion_ch')</code> to display major and minor Chrome version in the body class.
+* Changed: By default only the major browser version will be used in the body class.
+* Added: Filter <code>thematic_doctitle_separator</code>.
 * Fixed: Thematic Options is working again.
 * Changed: Function <code>thematic_head_scripts</code> to <code>wp_enqueue_script</code>. 
 * Changed: Filter <code>thematic_dropdown_options</code>.
