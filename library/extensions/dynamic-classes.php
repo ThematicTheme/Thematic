@@ -331,12 +331,12 @@ function browser_class_names($classes) {
 	if ( preg_match( "/Chrome/", $browser ) ) {
 		$classes[] = 'chrome';
 		
-		if (!current_theme_supports('minorbrowserversion_ch')) {
-			preg_match( "/Chrome\/(\d+)/si", $browser, $matches);
-			$ch_version = 'ch' . $matches[1];
-		} else {
+		if ((current_theme_supports( 'minorbrowserversion_all' )) || (current_theme_supports( 'minorbrowserversion_ch' ))) {
 			preg_match( "/Chrome\/(\d+.\d+)/si", $browser, $matches);
 			$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );
+		} else {
+			preg_match( "/Chrome\/(\d+)/si", $browser, $matches);
+			$ch_version = 'ch' . $matches[1];
 		}      
 		$classes[] = $ch_version;
 	

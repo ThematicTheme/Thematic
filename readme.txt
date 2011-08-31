@@ -30,6 +30,7 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Added: <code>add_theme_support('minorbrowserversion_all')</code> to display major and minor version for all browsers in the body class.
 * Added: <code>add_theme_support('minorbrowserversion_ch')</code> to display major and minor Chrome version in the body class.
 * Changed: By default only the major browser version will be used in the body class.
 * Added: Filter <code>thematic_doctitle_separator</code>.
