@@ -75,9 +75,12 @@ function thematic_tag_query() {
 		if ( isset( $tag_ops[$tag_ops_counter] ) ) {
 			$nice_tag_query = $nice_tag_query.$tag->name.$tag_ops[$tag_ops_counter];
 			$tag_ops_counter += 1;
+		} else {
+			$nice_tag_query = $nice_tag_query.$tag->name;
+			$tag_ops_counter += 1;
 		}
 	}
-	 return $nice_tag_query;
+	return $nice_tag_query;
 }
 
 function thematic_get_term_name() {
