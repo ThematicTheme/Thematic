@@ -30,6 +30,10 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* FIXED: <code>thematic_tag_query()</code>.
+* REMOVED: <code>thematic_canonical_url()</code> (no longer needed).
+* Added: Add <code>add_theme_support('minorbrowserversion_ff')</code> to display major and minor Firefox version in the body class.
+* Added: Add <code>add_theme_support('minorbrowserversion_ie')</code> to display major and minor IE version in the body class.
 * Added: Add <code>add_theme_support('minorbrowserversion_op')</code> to display major and minor Opera version in the body class.
 * Added: Add <code>add_theme_support('minorbrowserversion_sf')</code> to display major and minor Safari version in the body class.
 * Added: Add <code>add_theme_support('minorbrowserversion_all')</code> to display major and minor version for all browsers in the body class.

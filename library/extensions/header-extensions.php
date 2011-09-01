@@ -128,18 +128,6 @@ function thematic_seo() {
 		return apply_filters('thematic_seo', $content);
 }
 
-// Creates the canonical URL
-function thematic_canonical_url() {
-		if (thematic_seo()) {
-    		if ( is_singular() ) {
-        		$canonical_url = "\t";
-        		$canonical_url .= '<link rel="canonical" href="' . get_permalink() . '" />';
-        		$canonical_url .= "\n\n";        
-        		echo apply_filters('thematic_canonical_url', $canonical_url);
-				}
-    }
-} // end thematic_canonical_url
-
 
 // switch use of thematic_the_excerpt() - default: ON
 function thematic_use_excerpt() {

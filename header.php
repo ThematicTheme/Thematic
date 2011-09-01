@@ -21,9 +21,6 @@
     // Creating the robots tags
     thematic_show_robots();
     
-    // Creating the canonical URL
-    thematic_canonical_url();
-    
     // Loading the stylesheet
     thematic_create_stylesheet();
 
