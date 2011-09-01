@@ -153,10 +153,8 @@ if (function_exists('childtheme_override_theme_setup'))
 			add_theme_support('automatic-feed-links');
 		}
 
-		// Check for WordPress 2.9 add_theme_support()
 		if (apply_filters('thematic_post_thumbs', true))
 		{
-			if (function_exists('add_theme_support'))
 				add_theme_support('post-thumbnails');
 		}
 

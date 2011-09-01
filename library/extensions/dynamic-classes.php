@@ -330,41 +330,64 @@ function browser_class_names($classes) {
 	// Checks browsers in this order: Chrome, Safari, Opera, MSIE, FF
 	if ( preg_match( "/Chrome/", $browser ) ) {
 		$classes[] = 'chrome';
-	
-		preg_match( "/Chrome\/(\d.\d)/si", $browser, $matches);
-		$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );      
+		
+		if ((current_theme_supports( 'minorbrowserversion_all' )) || (current_theme_supports( 'minorbrowserversion_ch' ))) {
+			preg_match( "/Chrome\/(\d+.\d+)/si", $browser, $matches);
+			$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );
+		} else {
+			preg_match( "/Chrome\/(\d+)/si", $browser, $matches);
+			$ch_version = 'ch' . $matches[1];
+		}      
 		$classes[] = $ch_version;
 	
 	} elseif ( preg_match( "/Safari/", $browser ) ) {
 		$classes[] = 'safari';
 				
-		preg_match( "/Version\/(\d.\d)/si", $browser, $matches);
-		$sf_version = 'sf' . str_replace( '.', '-', $matches[1] );      
+		if ((current_theme_supports( 'minorbrowserversion_all' )) || (current_theme_supports( 'minorbrowserversion_sf' ))) {
+			preg_match( "/Version\/(\d+.\d+)/si", $browser, $matches);
+			$sf_version = 'sf' . str_replace( '.', '-', $matches[1] );
+		} else {
+			preg_match( "/Version\/(\d+)/si", $browser, $matches);
+			$sf_version = 'sf' . $matches[1];
+			
+		}     
 		$classes[] = $sf_version;
 				
 	} elseif ( preg_match( "/Opera/", $browser ) ) {
 		$classes[] = 'opera';
 				
-		preg_match( "/Opera\/(\d.\d)/si", $browser, $matches);
-		$op_version = 'op' . str_replace( '.', '-', $matches[1] );      
+		if ((current_theme_supports( 'minorbrowserversion_all' )) || (current_theme_supports( 'minorbrowserversion_op' ))) {
+			preg_match( "/Version\/(\d+.\d+)/si", $browser, $matches);
+			$op_version = 'op' . str_replace( '.', '-', $matches[1] );      
+		} else {
+			preg_match( "/Version\/(\d+)/si", $browser, $matches);
+			$op_version = 'op' . $matches[1];      			
+		}
 		$classes[] = $op_version;
 				
 	} elseif ( preg_match( "/MSIE/", $browser ) ) {
 		$classes[] = 'msie';
-				
-		if( preg_match( "/MSIE 6.0/", $browser ) ) {
-			$classes[] = 'ie6';
-		} elseif ( preg_match( "/MSIE 7.0/", $browser ) ){
-			$classes[] = 'ie7';
-		} elseif ( preg_match( "/MSIE 8.0/", $browser ) ){
-			$classes[] = 'ie8';
+		
+		if ((current_theme_supports( 'minorbrowserversion_all' )) || (current_theme_supports( 'minorbrowserversion_ie' ))) {
+			preg_match( "/MSIE (\d+.\d+)/si", $browser, $matches);
+			$ie_version = 'ie' . str_replace( '.', '-', $matches[1] );
+		} else {
+			preg_match( "/MSIE (\d+)/si", $browser, $matches);
+			$ie_version = 'ie' . $matches[1];
+			
 		}
+		$classes[] = $ie_version;
 				
 	} elseif ( preg_match( "/Firefox/", $browser ) && preg_match( "/Gecko/", $browser ) ) {
 			$classes[] = 'firefox';
 				
-			preg_match( "/Firefox\/(\d)/si", $browser, $matches);
-			$ff_version = 'ff' . str_replace( '.', '-', $matches[1] );      
+			if ((current_theme_supports( 'minorbrowserversion_all' )) || (current_theme_supports( 'minorbrowserversion_ff' ))) {
+				preg_match( "/Firefox\/(\d+.\d+)/si", $browser, $matches);
+				$ff_version = 'ff' . str_replace( '.', '-', $matches[1] );
+			} else {
+				preg_match( "/Firefox\/(\d+)/si", $browser, $matches);
+				$ff_version = 'ff' . $matches[1];
+			}      
 			$classes[] = $ff_version;
 				
 	} else {

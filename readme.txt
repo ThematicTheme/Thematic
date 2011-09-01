@@ -30,6 +30,14 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Added: Add <code>add_theme_support('minorbrowserversion_ff')</code> to display major and minor Firefox version in the body class.
+* Added: Add <code>add_theme_support('minorbrowserversion_ie')</code> to display major and minor IE version in the body class.
+* Added: Add <code>add_theme_support('minorbrowserversion_op')</code> to display major and minor Opera version in the body class.
+* Added: Add <code>add_theme_support('minorbrowserversion_sf')</code> to display major and minor Safari version in the body class.
+* Added: Add <code>add_theme_support('minorbrowserversion_all')</code> to display major and minor version for all browsers in the body class.
+* Added: Add <code>add_theme_support('minorbrowserversion_ch')</code> to display major and minor Chrome version in the body class.
+* Changed: By default only the major browser version will be used in the body class.
+* Added: Filter <code>thematic_doctitle_separator</code>.
 * Fixed: Thematic Options is working again.
 * Changed: Function <code>thematic_head_scripts</code> to <code>wp_enqueue_script</code>. 
 * Changed: Filter <code>thematic_dropdown_options</code>.
