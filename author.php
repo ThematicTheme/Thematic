@@ -1,20 +1,4 @@
 <?php
-    // calling the theme options
-    global $options, $blog_id;
-    foreach ($options as $value) {
-        if (get_option( $value['id'] ) === FALSE) { 
-            $$value['id'] = $value['std']; 
-        } else {
-        	if (THEMATIC_MB) 
-			{
-            	$$value['id'] = get_blog_option($blog_id, $value['id'] );
-			}
-			else
-			{
-            	$$value['id'] = get_option( $value['id'] );
-  			}
-        }
-    }
 
     // calling the header.php
     get_header();
@@ -39,7 +23,7 @@
     	        thematic_navigation_above();
 		
     	        /* if display author bio is selected */ 
-    	        if($thm_authorinfo == 'true' & !is_paged()) { ?>
+    	        if( thematic_get_theme_opt('author_info') == 1 & !is_paged()) { ?>
     	        
     	            <div id="author-info" class="vcard">
     	                <h2 class="entry-title"><?php echo $authordata->first_name; ?> <?php echo $authordata->last_name; ?></h2> 

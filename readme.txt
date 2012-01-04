@@ -30,6 +30,39 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Fixed: Override childtheme_override_theme_setup
+* Added: Function thematic_opt_init()
+* Added: Function thematic_get_wp_opt()
+* Added: Override: childtheme_override_opt_init()
+* Added: Function thematic_get_theme_opt()
+* Added: Function thematic_convert_legacy_opt()
+* Added: Filter thematic_theme_convert_legacy_opt
+* Added: Function thematic_default_opt()
+* Added: Filter thematic_theme_default_opt
+* Added: Function thematic_opt_add_page()
+* Added: Filter thematic_theme_add_opt_page
+* Added: Function thematic_opt_page_help()
+* Added: Filter thematic_theme_opt_help_sidebar
+* Added: Filter thematic_theme_opt_help_txt
+* Added: Function thematic_legacy_help()
+* Added: Override childtheme_override_opt_page_help
+* Added: Function thematic_do_legacy_help_section()
+* Added: Function thematic_do_opt_page()
+* Added: Function thematic_do_opt_section_main()
+* Added: Filter thematic_theme_opt_section_main
+* Added: Function thematic_do_insert_opt()
+* Added: Function thematic_do_auth_opt()
+* Added: Function thematic_do_footer_opt()
+* Added: Function thematic_do_legacy_opt()
+* Added: Function thematic_validate_opt()
+* Added: Override childtheme_override_validate_opt
+* Added: Filter thematic_theme_opt_validation
+* Changed Template author.php to use new thematic_get_theme_opt()
+* Changed Function thematic_index_loop() to use new thematic_get_theme_opt()
+* Changed Function thematic_siteinfo() to use new thematic_get_theme_opt()
+* Removed: Global $options array
+* Removed: Function mytheme_add_admin()
+* Removed: Function mytheme_admin()
 * FIXED: <code>thematic_tag_query()</code>.
 * REMOVED: <code>thematic_canonical_url()</code> (no longer needed).
 * Added: Add <code>add_theme_support('minorbrowserversion_ff')</code> to display major and minor Firefox version in the body class.

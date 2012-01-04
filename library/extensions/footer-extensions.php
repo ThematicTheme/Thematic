@@ -69,20 +69,8 @@ function thematic_after() {
 		}
 	} else {
 	    function thematic_siteinfo() {
-        	global $options, $blog_id;
-			foreach ($options as $value) {
-        		if (get_option( $value['id'] ) === FALSE) { 
-            		$$value['id'] = $value['std']; 
-        		} else {
-        			if (THEMATIC_MB) {
-            			$$value['id'] = get_blog_option( $blog_id, $value['id'] );
-					} else {
-            			$$value['id'] = get_option( $value['id'] );
-  					}
-        		}
-			}
-        	/* footer text set in theme options */
-        	echo do_shortcode(__(stripslashes(thematic_footertext($thm_footertext)), 'thematic'));
+        	// footer text set in theme options
+        	echo do_shortcode( thematic_get_theme_opt( 'footer_txt' ) ) ;
         }
     }
     add_action('thematic_footer', 'thematic_siteinfo', 30);

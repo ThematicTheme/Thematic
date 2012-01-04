@@ -438,23 +438,6 @@ if (function_exists('childtheme_override_index_loop'))  {
 } else {
 	function thematic_index_loop() {
 		
-		global $options, $blog_id;
-		
-		foreach ($options as $value) {
-		    if (get_option( $value['id'] ) === FALSE) { 
-		        $$value['id'] = $value['std']; 
-		    } else {
-		    	if (THEMATIC_MB) 
-		    	{
-		        	$$value['id'] = get_option($blog_id,  $value['id'] );
-		    	}
-		    	else
-		    	{
-		        	$$value['id'] = get_option( $value['id'] );
-		    	}
-		    }
-		}
-		
 		/* Count the number of posts so we can insert a widgetized area */ $count = 1;
 		while ( have_posts() ) : the_post();
 		
@@ -485,8 +468,8 @@ if (function_exists('childtheme_override_index_loop'))  {
 				
 				comments_template();
 
-				if ($count==$thm_insert_position) {
-						get_sidebar('index-insert');
+				if ( $count == thematic_get_theme_opt( 'index_insert' ) ) {
+					get_sidebar('index-insert');
 				}
 				$count = $count + 1;
 		endwhile;

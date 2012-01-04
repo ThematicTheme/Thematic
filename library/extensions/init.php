@@ -1,52 +1,47 @@
 <?php
 
+/**
+ * Theme initialization
+ *
+ * @package Thematic
+ * @subpackage init
+ */
 
+
+
+
+/**
+ * legacy options global variables
+ * likely not needed anymore...
+ * need to test further before removing
+ */
 $themename = "Thematic";
 $shortname = "thm";
 
-// Create theme options
 
-$options = array (
-
-				array(	"name" => __('Index Insert Position','thematic'),
-						"desc" => __('The widgetized Index Insert will follow after this post number.','thematic'),
-						"id" => $shortname."_insert_position",
-						"std" => "2",
-						"type" => "text"),
-
-				array(	"name" => __('Info on Author Page','thematic'),
-						"desc" => __("Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a> - with the author's avatar, bio and email - on the author page.", 'thematic'),
-						"id" => $shortname."_authorinfo",
-						"std" => false,
-						"type" => "checkbox"),
-
-				array(	"name" => __('Text in Footer','thematic'),
-						"desc" => __("You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]",'thematic'),
-						"id" => $shortname."_footertext",
-						"std" => __("Powered by [wp-link]. Built on the [theme-link].", 'thematic'),
-						"type" => "textarea",
-						"options" => array(	"rows" => "5",
-											"cols" => "94") ),
-
-		);
-
-
-function thematic_init()
-{
+/**
+ * Registers action hook: thematic_init 
+ * 
+ * @since Thematic 0.9.7.8
+ */
+function thematic_init() {
 	do_action('thematic_init');
 }
 
-if (function_exists('childtheme_override_theme_setup'))
-{
-	function thematic_access()
-	{
+
+/**
+ * thematic_theme_setup & childtheme_override_theme_setup
+ *
+ * define's, require_once's, and add_filters'
+ *
+ * @since Thematic 0.9.7.8
+ */
+if (function_exists('childtheme_override_theme_setup')) {
+	function thematic_theme_setup() {
 		childtheme_override_theme_setup();
 	}
-} else
-{
-
-	function thematic_theme_setup()
-	{
+} else {
+	function thematic_theme_setup() {
 		global $content_width;
 
 		/**
@@ -165,7 +160,7 @@ if (function_exists('childtheme_override_theme_setup'))
 
 		// Create Theme Options Page
 		require_once (THEMELIB . '/extensions/theme-options.php');
-
+		
 		// Load legacy functions
 		require_once (THEMELIB . '/legacy/deprecated.php');
 
@@ -228,18 +223,31 @@ if (function_exists('childtheme_override_theme_setup'))
 		$locale_file = THEMELIB . "/languages/$locale.php";
 		if (is_readable($locale_file))
 			require_once ($locale_file);
-
 	}
 }
+
 add_action('after_setup_theme', 'thematic_theme_setup', 10);
 
+
+/**
+ * adds action hook: thematic_child_init
+ * 
+ * @since Thematic 0.9.7.8
+ */
 function thematic_child_init() {
 	do_action('thematic_child_init');
 }
+
 add_action('after_setup_theme', 'thematic_child_init', 20);
 
 
-// Load scripts for the jquery Superfish plugin http://users.tpg.com.au/j_birch/plugins/superfish/#examples
+/**
+ * thematic_head_scripts & childtheme_override_head_scripts
+ * 
+ * registers & enqueues head scripts
+ * 
+ * @since Thematic 0.9.7.8
+ */
 if (function_exists('childtheme_override_head_scripts'))  {
     function thematic_head_scripts() {
     	childtheme_override_head_scripts();
@@ -268,16 +276,10 @@ if (function_exists('childtheme_override_head_scripts'))  {
     	wp_register_script('supersubs', $scriptdir . 'supersubs.js');
     	wp_enqueue_script('supersubs');
 
-    	
     	wp_register_script('thematic-dropdowns', apply_filters('thematic_dropdown_options', $scriptdir . 'thematic-dropdowns.js'));
     	wp_enqueue_script('thematic-dropdowns');
     	
 	}
-
 }
 
 add_action('get_header','thematic_head_scripts');
-
-
-
-?>

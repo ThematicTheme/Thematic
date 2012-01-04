@@ -1,285 +1,429 @@
 <?php
 
-// Theme options adapted from "A Theme Tip For WordPress Theme Authors"
-// http://literalbarrage.org/blog/archives/2007/05/03/a-theme-tip-for-wordpress-theme-authors/
+/**
+ * Thematic Theme Options
+ *
+ * An improved theme options page using the WP Settings API
+ *
+ * Child themes can use the WP settings api and the filters provided here to customize 
+ * their child theme's options and settings validation.
+ * 
+ * Props to the Twenty-Eleven theme for giving an excellent 
+ * example of using the settings API for theme options
+ *
+ * @link http://codex.wordpress.org/Settings_API
+ *
+ * @package Thematic
+ * @subpackage extensions
+ */
+ 
+ 
+ 
 
-
-function mytheme_add_admin() {
-
-    global $themename, $shortname, $options, $blog_id;
-    
-    $page ='';
-
-	if (isset($_GET["page"]) && !empty($_GET["page"])) $page = $_GET["page"];
-	
-    if ( $page == basename(__FILE__) ) {
-    	
-    	$action = '';
-    	
-    	if (isset($_REQUEST["action"]) && !empty($_REQUEST["action"])) $action = $_REQUEST["action"];
-    	
-        if ( 'save' == $action ) {
-
-			check_admin_referer('thematic-theme-options');
-    
-                foreach ($options as $value) {
-					
-                	if (THEMATIC_MB) 
-					{
-						if (isset($_REQUEST[ $value['id'] ])) {
-							update_blog_option( $blog_id, $value['id'], $_REQUEST[ $value['id'] ] );
-						} else {
-							update_blog_option( $blog_id, $value['id'], $value['std'] );
-						}
-					} 
-					
-					else 
-					
-					{
-						if (isset($_REQUEST[ $value['id'] ])) {
-							update_option( $value['id'], $_REQUEST[ $value['id'] ] );
-						} else {
-							update_option( $value['id'], $value['std'] );
-						}
-					}
-					
-				}			
-	
-                header("Location: themes.php?page=theme-options.php&saved=true");
-                die;
-
-        } else if( 'reset' == $action ) {
-
-			check_admin_referer('thematic-reset');
-
-            foreach ($options as $value) {
-				if (THEMATIC_MB) 
-				{
-					delete_blog_option( $blog_id, $value['id'] );
-				} 
-					
-				else 
-					
-				{
-					delete_option( $value['id'] );
-				}
+/**
+ * Function: thematic_opt_init
+ * Override: childtheme_override_opt_init
+ *
+ * Sets default options in database if not pre-existent.
+ * Registers with WP settings API, adds a main section with three settings fields
+ * 
+ * @since Thematic 0.9.7.8
+ */
+if (function_exists('childtheme_override_opt_init')) {
+	function thematic_opt_init() {
+		childtheme_override_opt_init();
+	}
+} else {
+	function thematic_opt_init() {
+		
+		// Retrieve current options from database	
+		$current_options = thematic_get_wp_opt('thematic_theme_opt');
+		$legacy_options = thematic_convert_legacy_opt();
+		
+		// If no current settings exist
+		if ( false === $current_options )  {
+			// Check for legacy options
+			if ( false !== ( $legacy_options ) )  {
+				// Theme upgrade: Convert legacy to current format and add to database 
+				add_option( 'thematic_theme_opt', $legacy_options );
+			} else {
+				// Fresh theme installation: Add default settings to database
+				add_option( 'thematic_theme_opt', thematic_default_opt() );
 			}
-
-            header("Location: themes.php?page=theme-options.php&reset=true");
-            die;
-
-        } else if ( 'resetwidgets' == $action ) {
-			check_admin_referer('thematic-reset-widgets');
-            update_option('sidebars_widgets',NULL);
-            header("Location: themes.php?page=theme-options.php&resetwidgets=true");
-            die;
-        } 
-    }
-
-    add_theme_page($themename." Options", "Thematic Options", 'edit_themes', basename(__FILE__), 'mytheme_admin');
-
-}
-
-function mytheme_admin() {
-
-    global $themename, $shortname, $options;
-
-    if (isset($_REQUEST["saved"]) && !empty($_REQUEST["saved"])) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings saved.','thematic').'</strong></p></div>';
-    if (isset($_REQUEST["reset"]) && !empty($_REQUEST["reset"])) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('settings reset.','thematic').'</strong></p></div>';
-    if (isset($_REQUEST["resetwidgets"]) && !empty($_REQUEST["resetwidgets"])) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' '.__('widgets reset.','thematic').'</strong></p></div>';
-    
-?>
-<div class="wrap">
-<?php if ( function_exists('screen_icon') ) screen_icon(); ?>
-<h2><?php echo $themename; ?> Options</h2>
-
-<form method="post" action="">
-
-	<?php wp_nonce_field('thematic-theme-options'); ?>
-
-	<table class="form-table">
-
-<?php foreach ($options as $value) { 
+		}
+		
+		register_setting ('thematic_opt_group', 'thematic_theme_opt', 'thematic_validate_opt');
+		
+		add_settings_section ('thematic_opt_section_main', '', 'thematic_do_opt_section_main', 'thematic_theme_opt');
 	
-	switch ( $value['type'] ) {
-		case 'text':
-		?>
-		<tr valign="top"> 
-			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
-			<td>
-				<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if (THEMATIC_MB) {if ( get_blog_option( $blog_id, $value['id'] ) != "") { echo get_blog_option( $blogid, $value['id'] ); } else { echo $value['std']; }} else {if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; }} ?>" />
-				<?php echo __($value['desc'],'thematic'); ?>
-
-			</td>
-		</tr>
-		<?php
-		break;
+		add_settings_field ('thematic_insert_opt', __('Index Insert Position', 'thematic')	, 'thematic_do_insert_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		add_settings_field ('thematic_auth_opt',   __('Info on Author Page'	, 'thematic')	, 'thematic_do_auth_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		add_settings_field ('thematic_footer_opt', __('Text in Footer'	, 'thematic')		, 'thematic_do_footer_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 		
-		case 'select':
-		?>
-		<tr valign="top">
-			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
-			<td>
-				<select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
-					<?php foreach ($value['options'] as $option) { ?>
-						<option<?php if(THEMATIC_MB){ if ( get_blog_option($blog_id, $value['id']) == $option) { echo ' selected="selected"'; } elseif (!get_option($value['id']) && $value['std'] == $option) { echo ' selected="selected"'; }} else { if ( get_option( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif (!get_option($value['id']) && $value['std'] == $option) { echo ' selected="selected"'; }} ?>><?php echo $option; ?></option>
-					<?php } ?>
-				</select>
-			</td>
-		</tr>
-		<?php
-		break;
-		
-		case 'textarea':
-		$ta_options = $value['options'];
-		?>
-		<tr valign="top"> 
-			<th scope="row"><label for="<?php echo $value['id']; ?>"><?php echo __($value['name'],'thematic'); ?></label></th>
-			<td><textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="<?php echo $ta_options['cols']; ?>" rows="<?php echo $ta_options['rows']; ?>"><?php
-				if (THEMATIC_MB)
-				{
-					if( get_blog_option($blog_id, $value['id']) != "") 
-					{
-						echo __(stripslashes(get_blog_option($blog_id, $value['id'])),'thematic');
-					}
-					else
-					{
-						echo __($value['std'],'thematic');
-					}
-				} 
-				else
-				{ 
-					if( get_option($value['id']) != "") 
-					{
-						echo __(stripslashes(get_option($value['id'])),'thematic');
-					}
-					else
-					{
-						echo __($value['std'],'thematic');
-					}
-				}
-				
-				?></textarea><br /><?php echo __($value['desc'],'thematic'); ?></td>
-		</tr>
-		<?php
-		break;
-
-		case 'radio':
-		?>
-		<tr valign="top"> 
-			<th scope="row"><?php echo __($value['name'],'thematic'); ?></th>
-			<td>
-				<?php
-				
-				foreach ($value['options'] as $key=>$option)
-				{
-					if (THEMATIC_MB)
-					{
-						$radio_setting = get_blog_option($blog_id, $value['id']);						
-					}
-					else
-					{
-						$radio_setting = get_option($value['id']);						
-					}
-					if($radio_setting != '')
-					{
-						if (THEMATIC_MB)
-						{
-							if ($key == get_blog_option($blog_id, $value['id']) ) 
-							{
-								$checked = "checked=\"checked\"";
-							}
-							else
-							{
-								$checked = "";
-							}
-						}
-						else
-						{
-							if ($key == get_option($value['id']) ) 
-							{
-								$checked = "checked=\"checked\"";
-							}
-							else
-							{
-								$checked = "";
-							}
-						}
-					}
-					else
-					{
-						if($key == $value['std'])
-						{
-							$checked = "checked=\"checked\"";
-						}
-						else
-						{
-							$checked = "";
-						}
-					}
-				?>
-				<input type="radio" name="<?php echo $value['id']; ?>" id="<?php echo $value['id'] . $key; ?>" value="<?php echo $key; ?>" <?php echo $checked; ?> /><label for="<?php echo $value['id'] . $key; ?>"><?php echo $option; ?></label><br />
-				<?php 
-				} ?>
-			</td>
-		</tr>
-		<?php
-		break;
-		
-		case 'checkbox':
-		?>
-		<tr valign="top"> 
-			<th scope="row"><?php echo __($value['name'],'thematic'); ?></th>
-			<td>
-				<?php
-					if(get_option($value['id'])){
-						$checked = "checked=\"checked\"";
-					}else{
-						$checked = "";
-					}
-				?>
-				<input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
-				<label for="<?php echo $value['id']; ?>"><?php echo __($value['desc'],'thematic'); ?></label>
-			</td>
-		</tr>
-		<?php
-		break;
-
-		default:
-
-		break;
+		// Show checkbox option for removing old options from database
+		if ( isset( $legacy_options ) && false !== $legacy_options ) {
+			add_settings_field ('thematic_legacy_opt', __('Remove Legacy Options'	, 'thematic'), 'thematic_do_legacy_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		} 
+	
 	}
 }
+
+add_action ('admin_init', 'thematic_opt_init');
+
+	
+/**
+ * A wrapper for get_option that provides WP multi site compatibility
+ * Returns an option's value from wp_otions table in database
+ * or returns false if no value is found for that row 
+ *
+ * @since Thematic 0.9.7.8
+ */
+function thematic_get_wp_opt( $option_name, $default = false ) {
+	global $blog_id;
+	
+	if (THEMATIC_MB) {
+		$opt = get_blog_option( $blog_id, $show, $default );
+	} else {
+		$opt = get_option( $option_name, $default );
+	}
+	
+	return $opt;
+}
+
+
+/**
+ * Returns or echoes a theme option value by its key
+ * or returns false if no value is found
+ *
+ * Uses: thematic_get_wp_opt()
+ * 
+ * @since Thematic 0.9.7.8
+ */
+function thematic_get_theme_opt( $opt_key, $echo = false ) {
+	
+	$theme_opt = thematic_get_wp_opt( 'thematic_theme_opt' );
+	
+	if ( isset( $theme_opt[$opt_key] ) ) {
+		if ( false === $echo ) {
+			return $theme_opt[$opt_key] ;
+		} else { 
+			echo $theme_opt[$opt_key];
+		}
+	} else {
+		return false;
+	}
+}
+
+
+/**
+ * Retrieves legacy Thematic options from database
+ * Returns them as a sanitized array or false
+ *
+ * Filter: thematic_theme_convert_legacy_opt
+ * 
+ * @since Thematic 0.9.7.8
+ */
+function thematic_convert_legacy_opt() {
+    $thm_insert_position = thematic_get_wp_opt( 'thm_insert_position' );
+    $thm_authorinfo = thematic_get_wp_opt( 'thm_authorinfo' );
+    $thm_footertext = thematic_get_wp_opt( 'thm_footertext' );
+    
+    // Return false if no options found
+    if ( false === $thm_insert_position && false === $thm_authorinfo && false === $thm_footertext )
+    	return false; 
+    	
+    // Return a sanitized array from legacy options if found
+    $legacy_sanitized_opt = array(
+    		'index_insert' 	=> intval( $thm_insert_position ),
+    		'author_info'  	=> ( $thm_authorinfo == "true" ) ? 1 : 0,
+    		'footer_txt' 	=> wp_kses_post( $thm_footertext ),
+    		'del_legacy_opt'=> 0
+    	);
+
+    return apply_filters( 'thematic_theme_convert_legacy_opt', $legacy_sanitized_opt );
+}
+
+/**
+ * Returns default theme options.
+ *
+ * Filter: thematic_theme_default_opt
+ * 
+ * @since Thematic 0.9.7.8
+ *
+ */
+function thematic_default_opt() {
+	$thematic_default_opt = array(
+		'index_insert' 	=> 2,
+		'author_info'  	=> 0, // 0 = not checked 1 = checked
+		'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
+		'del_legacy_opt'=> 0  // 0 = not checked 1 = check
+	);
+
+	return apply_filters( 'thematic_theme_default_opt', $thematic_default_opt );
+}	
+
+	
+/**
+ * Adds the theme option page as an admin menu item, 
+ * and queues the contextual help on theme options page load
+ *
+ * Filter: thematic_theme_add_opt_page
+ * filter provide the ability for child themes to customize or remove and add 
+ * thier own options page and queue contextual help in one function
+ * 
+ * @since Thematic 0.9.7.8
+ */
+ 
+function thematic_opt_add_page() {
+
+	$thematic_opt_page = add_theme_page ('Theme Options', 'Theme Options', 'edit_theme_options', 'thematic_opt', 'thematic_do_opt_page');
+	$thematic_opt_page = apply_filters ('thematic_theme_add_opt_page', $thematic_opt_page );
+	
+	if ( ! $thematic_opt_page ) {
+		return;
+	}
+	
+	add_action( "load-$thematic_opt_page", 'thematic_opt_page_help' );
+}
+
+add_action( 'admin_menu', 'thematic_opt_add_page' );
+
+
+/**
+ * Function: thematic_opt_page_help
+ * Override: childtheme_override_opt_page_help
+ *
+ * Generates the help texts and help sidebar items for the options screen
+ *
+ * Filter: thematic_theme_opt_help_txt 
+ * Filter: thematic_theme_opt_help_sidebar
+ *
+ * Conditional WP compatibilty 3.3 & 3.2
+ * Legacy compatibilty WP 3.0 
+ * 
+ * @since Thematic 0.9.7.8 
+ */
+if (function_exists('childtheme_override_opt_page_help')) {
+	function thematic_opt_page_help() {
+		childtheme_override_opt_page_help();
+	}
+} else {
+	function thematic_opt_page_help() {	
+		
+		$screen = get_current_screen();
+		
+		$sidebar  = '<p><strong>' . __( 'For more information:', 'thematic') . '</strong></p>';
+		$sidebar .= '<a href="http://thematictheme.com">ThematicTheme.com</a></p>';
+		$sidebar .= '<p><strong>' . __('For support:', 'thematic') . '</strong></p>';
+		$sidebar .= '<a href="http://thematictheme.com/forums/"> Thematic ';
+		$sidebar .= __('forums', 'thematic' ) . '</a></p>';
+		
+		$sidebar = apply_filters ( 'thematic_theme_opt_help_sidebar', $sidebar );
+		
+		$help =  '<p>' . __('The options below are enabled by the Thematic Theme framework and/or a child theme.', 'thematic') .' ';
+		$help .= __('New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also.', 'thematic') . '</p>';
+		
+		$help = apply_filters ( 'thematic_theme_opt_help_txt', $help );
+	
+		if ( method_exists( $screen, 'add_help_tab' ) ) {
+			// WordPress 3.3
+			$screen->add_help_tab( array( 'title' => __( 'Overview', 'thematic' ), 'id' => 'theme-opt-help', 'content' => $help, ) );
+			$screen->set_help_sidebar( $sidebar );
+			
+		} elseif ( function_exists('add_contextual_help') ) {
+			// WordPress 3.2
+			add_contextual_help( $screen, $help . $sidebar );
+		} else {
+			// WordPress 3.0
+			thematic_legacy_help();
+		}
+	}
+}
+
+/**
+ * Adds a settings section to display legacy help text and theme links
+ *
+ * Legacy compatibilty WP 3.0
+ *
+ * @since Thematic 0.9.7.8
+ */
+function thematic_legacy_help() {
+	add_settings_section ('thematic_opt_help_section', '', 'thematic_do_legacy_help_section', 'thematic_opt_page');
+}
+
+
+/**
+ * Renders the legacy help text and theme links
+ *
+ * Legacy compatibilty WP 3.0
+ * 
+ * @since Thematic 0.9.7.8
+ */
+function thematic_do_legacy_help_section() { 
+	echo ('<p>'. __( 'For more information about this theme, <a href="http://themeshaper.com">visit ThemeShaper</a>. Please visit the <a href="http://themeshaper.com/forums/">ThemeShaper Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
+}
+
+
+/**
+ * Renders the them options page
+ *
+ * Conditional WP compatibilty 3.1
+ * Legacy compatibilty WP 3.0
+ *
+ * @since Thematic 0.9.7.8 
+ */
+function thematic_do_opt_page() { ?>
+
+ <div class="wrap">
+	<?php screen_icon(); ?>
+	<h2><?php printf( __( '%s Theme Options', 'thematic' ), get_current_theme() ); ?></h2>
+	<?php settings_errors(); ?>
+	
+	<form action="options.php" method="post" >
+		<?php
+			settings_fields( 'thematic_opt_group' );
+			do_settings_sections( 'thematic_theme_opt' );
+			if ( function_exists('submit_button') ) {
+			// WordPress 3.1
+				submit_button();
+			} else {
+			// WordPress 3.0
+			?>
+			 	<p class="submit">
+ 					<input name="submit" type="submit" class="button-primary" value="<?php esc_attr_e('Save Changes') ?>" />
+ 				</p>
+ 			<?php
+			}
+			
+		?>
+		</form>
+ 
+ </div>
+ 
+<?php 
+}
+
+
+/**
+ * Renders the "Main" settings section. This is left blank in Theamatic and outputs nothin\
+ *
+ * Filter: thematic_theme_opt_section_main
+ *
+ * @since Thematic 0.9.7.8
+ */
+function thematic_do_opt_section_main() {
+	$thematic_opt_section_main = '';
+	echo ( apply_filters( 'thematic_theme_opt_section_main' , $thematic_opt_section_main ) );
+}
+
+
+/**
+ * Renders Index Insert elements
+ *
+ * @since Thematic 0.9.7.8
+ */
+function thematic_do_insert_opt() { 
 ?>
+	<input type="text" maxlength="4" size="4" value="<?php esc_attr_e( (thematic_get_theme_opt('index_insert') ) ) ;  ?>" id="thm_insert_position" name="thematic_theme_opt[index_insert]">
+	<label for="thm_insert_position"><?php _e('The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature.','thematic'); ?></label>
+<?php 
+}
 
-	</table>
 
-	<p class="submit">
-		<input class="button-primary" name="save" type="submit" value="<?php _e('Save changes','thematic'); ?>" />    
-		<input type="hidden" name="action" value="save" />
-	</p>
-</form>
-<form method="post" action="">
-	<?php wp_nonce_field('thematic-reset'); ?>
-	<p class="submit">
-		<input class="button-secondary" name="reset" type="submit" value="<?php _e('Reset','thematic'); ?>" />
-		<input type="hidden" name="action" value="reset" />
-	</p>
-</form>
-<form method="post" action="">
-	<?php wp_nonce_field('thematic-reset-widgets'); ?>
-	<p class="submit">
-		<input class="button-secondary" name="reset_widgets" type="submit" value="<?php _e('Reset Widgets','thematic'); ?>" />
-		<input type="hidden" name="action" value="resetwidgets" />
-	</p>
-</form>
-
-<p><?php _e('For more information about this theme, <a href="http://themeshaper.com">visit ThemeShaper</a>. Please visit the <a href="http://themeshaper.com/forums/">ThemeShaper Forums</a> if you have any questions about Thematic.', 'thematic'); ?></p>
-</div>
+/**
+ * Renders Author Info elements
+ *
+ * @since Thematic 0.9.7.8
+ */
+function thematic_do_auth_opt() { 
+?>
+	<input id="thm_authorinfo" type="checkbox"  value="1" name="thematic_theme_opt[author_info]"  <?php checked( thematic_get_theme_opt('author_info') , 1 ); ?> />
+	<label for="thm_authorinfo"><?php _e('Display a', 'thematic') ?> <a target="_blank" href="http://microformats.org/wiki/hcard">microformatted vCard</a> <?php _e("with the author's avatar, bio and email on the author page.", 'thematic') ?></label>
 <?php
 }
 
-add_action('admin_menu' , 'mytheme_add_admin'); 
 
-
+/**
+ * Renders Footer Text elements
+ *
+ * @since Thematic 0.9.7.8
+ */
+function thematic_do_footer_opt() { 
 ?>
+	<textarea rows="5" cols="94" id="thm_footertext" name="thematic_theme_opt[footer_txt]"><?php thematic_get_theme_opt('footer_txt', true ); ?></textarea>
+	<br><?php _e('You can use HTML and shortcodes in your footer text. Shortcode examples', 'thematic'); ?>: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]
+<?php
+}
+
+
+/**
+ * Renders Leagcy Options elements
+ *
+ * @since Thematic 0.9.7.8
+ */
+function thematic_do_legacy_opt() {
+?>
+	<input id="thm_legacy_opt" type="checkbox" value="1" name="thematic_theme_opt[del_legacy_opt]"  <?php checked( thematic_get_theme_opt('del_legacy_opt'), 1 ); ?> />
+	<label for="thm_legacy_opt"><?php printf( __( '%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database.', 'thematic' ), get_current_theme() ); ?></label>
+<?php
+}
+
+
+/**
+ * Function: thematic_validate_opt
+ * Override: childtheme_override_validate_opt
+ *
+ * Validates theme options form post data.
+ * Provides error reporting for invalid input.
+ *
+ * Filter: thematic_theme_opt_validation
+ * 
+ * @since Thematic 0.9.7.8 
+ */
+if (function_exists('childtheme_override_validate_opt')) {
+	function thematic_thematic_validate_opt() {
+		childtheme_override_validate_opt();
+	}
+} else {
+ 	function thematic_validate_opt($input){
+ 	   $output = thematic_get_wp_opt( 'thematic_theme_opt', thematic_default_opt() );	
+ 	   
+ 	   // Index Insert position must be a non-negative number
+ 	   if ( !is_numeric( $input['index_insert'] ) || $input['index_insert'] < 0 )  {
+ 	   		add_settings_error(
+ 	   		'thematic_theme_opt',
+ 	   		'thematic_insert_opt',
+ 	   		__('The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value.', 'thematic' ),
+ 	   		'error'
+ 	   		);
+ 	   } else {
+ 	   	// A sanitize numeric value to ensure a whole number
+ 	   	$output['index_insert'] = intval( $input['index_insert'] );
+ 	   }
+ 	   
+ 	   // Author Info CheckBox value either 1(yes) or 0(no)
+ 	   	$output['author_info'] =  ( $input['author_info'] == 0 ? 0 : 1 );
+ 	 
+ 	   // Footer Text sanitized allowing HTML and WP shortcodes
+ 	   if ( isset( $input['footer_txt'] ) ) {
+ 	   	$output['footer_txt'] = wp_kses_post( $input['footer_txt'] ) ;	
+ 	   }
+ 	   
+ 	   // Remove Legacy Options CheckBox value either 1(yes) or 0(no)
+ 	   $output['del_legacy_opt'] = ( $input['del_legacy_opt'] == 0 ? 0 : 1 );
+ 	   
+ 	   if ( 1 == $output['del_legacy_opt'] ) {
+ 	   	
+ 	   	// Remove options if the choice is yes
+ 	   	delete_option('thm_insert_position');
+ 	   	delete_option('thm_authorinfo');
+ 	   	delete_option('thm_footertext');
+ 	   	
+ 	   	// Reset checkbox value to unchecked in case a legacy set of options is ever saved to database again
+ 	   	$output['del_legacy_opt'] = 0;
+ 	   }
+ 	   	
+ 	   return apply_filters( 'thematic_theme_opt_validation', $output, $input );
+ 	}
+} 
+ 
