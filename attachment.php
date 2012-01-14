@@ -1,5 +1,19 @@
 <?php
 
+/**
+ * Attachments Template
+ *
+ * Displays singular WordPress Media Library items.
+ *
+ * @link http://codex.wordpress.org/Using_Image_and_File_Attachments
+ *
+ * @package Thematic
+ * @subpackage Templates
+ */
+
+
+
+
     // calling the header.php
     get_header();
 

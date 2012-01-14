@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Error 404 Page Template
+ *
+ * Displays a "Not Found" message and a search form
+ *
+ * @link http://codex.wordpress.org/Creating_an_Error_404_Pag
+ *
+ * @package Thematic
+ * @subpackage Templates
+ */
+
     @header("HTTP/1.1 404 Not found", true, 404);
 
     // calling the header.php

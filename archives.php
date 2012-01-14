@@ -1,7 +1,17 @@
 <?php
-/*
-Template Name: Archives Page
-*/
+
+/**
+ * Template Name: Archives Page
+ *
+ * This is a custom Page template for creating an index of Archives.
+ * It will display the page content above an uordered list of the different types of Post archives that are available.
+ *
+ * @link http://codex.wordpress.org/Creating_an_Archive_Index
+ *
+ * @package Thematic
+ * @subpackage Templates
+ */
+ 
 ?>
 <?php
 
@@ -58,7 +68,7 @@ Template Name: Archives Page
 	
 	        <?php
 	        
-	        thematic_belowpost();
+	       thematic_belowpost();
 	        
 	        // calling the comments template
 	        	// calling the comments template

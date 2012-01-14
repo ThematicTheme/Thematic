@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * Archive Template 
+ *
+ * Displays an Archive index for archives that do not have an unique template.
+ *
+ * @link http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Thematic
+ * @subpackage Templates
+ */
+ 
+
     // calling the header.php
     get_header();
 
