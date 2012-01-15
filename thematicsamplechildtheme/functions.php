@@ -12,7 +12,8 @@
  * More ideas can be found on "A Guide To Customizing The Thematic Theme Framework" 
  * @link http://themeshaper.com/thematic-for-wordpress/guide-customizing-thematic-theme-framework/
  *
- * @package SampleChildTheme
+ * @package ThematicSampleChildTheme
+ * @subpackage ThemeInit
  */
 
 
