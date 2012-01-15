@@ -1,4 +1,16 @@
-<?php thematic_abovecomments() ?>
+<?php
+/**
+ * Comments Template
+ *
+ * Lists the comments and displays the comments form. 
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
+
+	// action hook for inserting content above #comments
+	thematic_abovecomments() 
+?>
 			<div id="comments">
 <?php
 	$req = get_option('require_name_email'); // Checks if fields are required.
@@ -25,7 +37,10 @@ foreach ( $comments as $comment )
 
 <?php if ( ! empty($comments_by_type['comment']) ) : ?>
 
-<?php thematic_abovecommentslist() ?>
+<?php 
+	// action hook for inserting content above #comments-list
+	thematic_abovecommentslist() 
+?>
 
 				<div id="comments-list" class="comments">
 					<h3><?php printf($comment_count > 1 ? __(thematic_multiplecomments_text(), 'thematic') : __(thematic_singlecomment_text(), 'thematic'), $comment_count) ?></h3>
@@ -40,13 +55,19 @@ foreach ( $comments as $comment )
 					
 				</div><!-- #comments-list .comments -->
 
-<?php thematic_belowcommentslist() ?>			
+<?php 
+	// action hook for inserting content below #comments-list
+	thematic_belowcommentslist() 
+?>			
 
 <?php endif; /* if ( $comment_count ) */ ?>
 
 <?php if ( ! empty($comments_by_type['pings']) ) : ?>
 
-<?php thematic_abovetrackbackslist() ?>
+<?php
+	// action hook for inserting content above #trackbacks-list
+	thematic_abovetrackbackslist() 
+?>
 
 				<div id="trackbacks-list" class="comments">
 					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'thematic') : __('<span>One</span> Trackback', 'thematic'), $ping_count) ?></h3>
@@ -57,7 +78,10 @@ foreach ( $comments as $comment )
 					
 				</div><!-- #trackbacks-list .comments -->			
 
-<?php thematic_belowtrackbackslist() ?>				
+<?php
+	// action hook for inserting content below #trackbacks-list
+	thematic_belowtrackbackslist() 
+?>				
 
 <?php endif /* if ( $ping_count ) */ ?>
 <?php endif /* if ( $comments ) */ ?>
@@ -77,7 +101,10 @@ foreach ( $comments as $comment )
 <?php else : ?>
 					<div class="formcontainer">	
 					
-<?php thematic_abovecommentsform() ?>					
+<?php
+	// action hook for inserting content above #commentform
+	thematic_abovecommentsform() 
+?>					
 
 						<form id="commentform" action="<?php echo site_url('/wp-comments-post.php') ?>" method="post">
 
@@ -125,7 +152,10 @@ foreach ( $comments as $comment )
 
 						</form><!-- #commentform -->
 						
-<?php thematic_belowcommentsform() ?>
+<?php
+	// action hook for inserting content below #commentform
+	thematic_belowcommentsform()
+?>
 						
 					</div><!-- .formcontainer -->
 <?php endif /* if ( get_option('comment_registration') && !$user_ID ) */ ?>
@@ -138,4 +168,7 @@ foreach ( $comments as $comment )
 	endif /* if ( 'open' == $post->comment_status ) */ ?>
 
 			</div><!-- #comments -->
-<?php thematic_belowcomments() ?>
+<?php
+	// action hook for inserting content below #comments
+	thematic_belowcomments()
+?>

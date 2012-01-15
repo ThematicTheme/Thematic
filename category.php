@@ -1,18 +1,29 @@
 <?php
-
+/**
+ * Category Template
+ *
+ * Displays an archive index of posts assigned to a Category. 
+ *
+ * @package Thematic
+ * @subpackage Templates
+ *
+ * @link http://codex.wordpress.org/Category_Templates Codex: Category Templates
+ */
+ 
     // calling the header.php
     get_header();
 
     // action hook for placing content above #container
     thematic_abovecontainer();
-
 ?>
-
 		<div id="container">
 		
-			<?php thematic_abovecontent();
-		
-			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
+			<?php
+				// action hook for placing content above #content
+				thematic_abovecontent();
+
+				// filter for manipulating the element that wraps the content 
+				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
 			
 				// displays the page title
 	            thematic_page_title();
@@ -36,12 +47,14 @@
 	
 			</div><!-- #content -->
 			
-			<?php thematic_belowcontent(); ?> 
+			<?php 
+				// action hook for placing content below #content
+				thematic_belowcontent();
+			?> 
 			
 		</div><!-- #container -->
 
 <?php 
-
     // action hook for placing content below #container
     thematic_belowcontainer();
 
@@ -50,5 +63,4 @@
 
     // calling footer.php
     get_footer();
-
 ?>
