@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Deprecated Fuctions
+ *
+ * @package ThematicLegacy
+ */
+ 
 /**
  * Function for handling the bloginfo / get_bloginfo data using our own 'cache'.
  *
@@ -10,7 +15,6 @@
  * @since 0.9.6
  * @deprecated 0.9.6.1
  */
-
 function thm_bloginfo($command = '', $echo = FALSE) {
 
 	_deprecated_function( __FUNCTION__, '0.9.6.1', 'bloginfo() or get_bloginfo()' );
@@ -22,7 +26,6 @@ function thm_bloginfo($command = '', $echo = FALSE) {
     }
 }
 
-
 /**
  * Function for testing, if a sidebar has registered widgets.
  *
@@ -32,8 +35,6 @@ function thm_bloginfo($command = '', $echo = FALSE) {
  * @since 0.9.6
  * @deprecated 0.9.7.3
  */
-
-
 function is_sidebar_active( $index ){
 
 	_deprecated_function( __FUNCTION__, '0.9.7.3', 'is_active_sidebar()' );
@@ -41,5 +42,3 @@ function is_sidebar_active( $index ){
 	return is_active_sidebar( $index );
 
 }
-
-?>
