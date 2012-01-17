@@ -59,9 +59,10 @@ function thematic_after() {
 			childtheme_override_siteinfoopen();
 		}
 	} else {
-	    function thematic_siteinfoopen() { ?>
-    
-        <div id="siteinfo">        
+	    function thematic_siteinfoopen() {
+	    ?>
+	    
+		<div id="siteinfo">        
 
     	<?php
     	}
@@ -75,7 +76,7 @@ function thematic_after() {
 	} else {
 	    function thematic_siteinfo() {
         	// footer text set in theme options
-        	echo do_shortcode( thematic_get_theme_opt( 'footer_txt' ) ) ;
+        	echo "\t\t" . do_shortcode( thematic_get_theme_opt( 'footer_txt' ) ) . "\n";
         }
     }
     add_action('thematic_footer', 'thematic_siteinfo', 30);
@@ -85,10 +86,11 @@ function thematic_after() {
 			childtheme_override_siteinfoclose();
 		}
 	} else {
-	    function thematic_siteinfoclose() { ?>
-    
+	    function thematic_siteinfoclose() {
+	    ?>
+
 		</div><!-- #siteinfo -->
-    
+		
     	<?php
     	}
 	}

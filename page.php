@@ -22,7 +22,7 @@
 				thematic_abovecontent();
 
 				// filter for manipulating the element that wraps the content 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
+				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
 			
 				// calling the widget area 'page-top'
 	            get_sidebar('page-top');
@@ -51,19 +51,19 @@
 	                
 					<div class="entry-content">
 	
-	                    <?php
+						<?php
 	                    	the_content();
 	                    
 	                    	wp_link_pages( "\t\t\t\t\t<div class='page-link'>" . __( 'Pages: ', 'thematic' ), "</div>\n", 'number' );
 	                    
-	                    	edit_post_link( __( 'Edit', 'thematic' ), '<span class="edit-link">','</span>' );
+	                    	edit_post_link( __( 'Edit', 'thematic' ), "\n\t\t\t\t\t\t" . '<span class="edit-link">' , '</span>' . "\n" );
 	                    ?>
-	
+
 					</div><!-- .entry-content -->
 					
 				</div><!-- #post -->
 	
-	        <?php
+			<?php
 				// action hook for inserting content below #post
 	        	thematic_belowpost();
 	        
@@ -72,7 +72,7 @@
         		    // Needs post-meta key/value of "comments" to call comments template on Pages!
        			    if ( get_post_custom_values( 'comments' ) ) {
 				    	// calls the comments template
-	        	    	thematic_comments_template();
+	        			thematic_comments_template();
         		    }
         		} else {
         		    // calls the comments template

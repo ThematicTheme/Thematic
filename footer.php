@@ -11,20 +11,17 @@
  * @subpackage Templates
  */
 ?>
-    </div><!-- #main -->
-    
+	</div><!-- #main -->
     <?php
 		// action hook for placing content above the footer
 		thematic_abovefooter();
     ?>    
-
 	<div id="footer">
-    
         <?php
         	// action hook creating the footer 
         	thematic_footer();
         ?>
-        
+	
 	</div><!-- #footer -->
 	
     <?php
