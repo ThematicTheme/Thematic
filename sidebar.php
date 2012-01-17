@@ -1,4 +1,12 @@
 <?php 
+/**
+ * Main Sidebar Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
 
     // action hook for placing content above the main asides
     thematic_abovemainasides();
@@ -14,5 +22,4 @@
 	
     // action hook for placing content below the main asides
     thematic_belowmainasides(); 
-    
 ?>

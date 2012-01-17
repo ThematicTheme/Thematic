@@ -10,59 +10,58 @@
  * @link http://codex.wordpress.org/Creating_an_Error_404_Page Codex: Create a 404 Page
  */
 
-    @header("HTTP/1.1 404 Not found", true, 404);
+	@header("HTTP/1.1 404 Not found", true, 404);
 
-    // calling the header.php
-    get_header();
+	// calling the header.php
+	get_header();
 
-    // action hook for placing content above #container
-    thematic_abovecontainer();
+	// action hook for placing content above #container
+	thematic_abovecontainer();
 ?>
 
 		<div id="container">
-		
+
 			<?php 
 				// action hook for placing content above #content
 				thematic_abovecontent();
-		
+
 				// filter for manipulating the element that wraps the content 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
-				
+				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
+
 				// action hook for placing content above #post
 				thematic_abovepost(); 
 			?>
-		
+
 				<div id="post-0" class="post error404">
-				
+
 				<?php
-		    	    // action hook for placing the 404 content
-    	            thematic_404()
+		    		// action hook for placing the 404 content
+    	        	thematic_404()
     	        ?>
-				
+
 				</div><!-- .post -->
-				
+
 				<?php 
 					// action hook for placing content below #post
 					thematic_belowpost(); 
 				?>
-		
+
 			</div><!-- #content -->
-			
-			
+
 			<?php 
 				// action hook for placing content below #content
 				thematic_belowcontent(); 
 			?> 
-			
+
 		</div><!-- #container -->
     
 <?php
-    // action hook for placing content below #container
-    thematic_belowcontainer();
+	// action hook for placing content below #container
+	thematic_belowcontainer();
 
-    // calling the standard sidebar 
-    thematic_sidebar();
+	// calling the standard sidebar 
+	thematic_sidebar();
 
-    // calling footer.php
-    get_footer();
+	// calling footer.php
+	get_footer();
 ?>

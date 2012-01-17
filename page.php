@@ -1,31 +1,42 @@
 <?php
-
+/**
+ * Page Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
+ 
     // calling the header.php
     get_header();
 
     // action hook for placing content above #container
     thematic_abovecontainer();
-
 ?>
 
 		<div id="container">
 		
-			<?php thematic_abovecontent();
-		
-			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
+			<?php
+				// action hook for placing content above #content
+				thematic_abovecontent();
+
+				// filter for manipulating the element that wraps the content 
+				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 			
 				// calling the widget area 'page-top'
 	            get_sidebar('page-top');
 	
 	            the_post();
-	            
+
+				// action hook for placing content above #post
 	            thematic_abovepost();
-	        
-	            ?>
-	            
-				<div id="post-<?php the_ID();
-					echo '" ';
-					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+	        ?>
+    	        
+				<?php
+					echo '<div id="post-' . get_the_ID() . '" ';
+					// Checking for defined constant to enable Thematic's post classes
+					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
 						post_class();
 						echo '>';
 					} else {
@@ -36,49 +47,52 @@
 	                
 	                // creating the post header
 	                thematic_postheader();
-	                
-	                ?>
+				?>
 	                
 					<div class="entry-content">
 	
 	                    <?php
+	                    	the_content();
 	                    
-	                    the_content();
+	                    	wp_link_pages( "\t\t\t\t\t<div class='page-link'>" . __( 'Pages: ', 'thematic' ), "</div>\n", 'number' );
 	                    
-	                    wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'thematic'), "</div>\n", 'number');
-	                    
-	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
+	                    	edit_post_link( __( 'Edit', 'thematic' ), '<span class="edit-link">','</span>' );
+	                    ?>
 	
 					</div><!-- .entry-content -->
+					
 				</div><!-- #post -->
 	
 	        <?php
+				// action hook for inserting content below #post
+	        	thematic_belowpost();
 	        
-	        thematic_belowpost();
+	        	// Checking for defined constant to enable conditional comment display for Pages
+        		if ( THEMATIC_COMPATIBLE_COMMENT_HANDLING ) {
+        		    // Needs post-meta key/value of "comments" to call comments template on Pages!
+       			    if ( get_post_custom_values( 'comments' ) ) {
+				    	// calls the comments template
+	        	    	thematic_comments_template();
+        		    }
+        		} else {
+        		    // calls the comments template
+       			    thematic_comments_template();
+        		}
 	        
-	        // calling the comments template
-       		if (THEMATIC_COMPATIBLE_COMMENT_HANDLING) {
-				if ( get_post_custom_values('comments') ) {
-					// Add a key/value of "comments" to enable comments on pages!
-					thematic_comments_template();
-				}
-			} else {
-				thematic_comments_template();
-			}
-	        
-	        // calling the widget area 'page-bottom'
-	        get_sidebar('page-bottom');
-	        
+	        	// calling the widget area 'page-bottom'
+	        	get_sidebar( 'page-bottom' );
 	        ?>
 	
 			</div><!-- #content -->
 			
-			<?php thematic_belowcontent(); ?> 
+			<?php 
+				// action hook for placing content below #content
+				thematic_belowcontent(); 
+			?> 
 			
 		</div><!-- #container -->
 
 <?php 
-
     // action hook for placing content below #container
     thematic_belowcontainer();
 
@@ -87,5 +101,4 @@
     
     // calling footer.php
     get_footer();
-
 ?>

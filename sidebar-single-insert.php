@@ -1,5 +1,13 @@
 <?php
-    
+/**
+ * Sidebar Single Insert Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
+   
     // action hook for placing content above the 'single-insert' widget area
     thematic_abovesingleinsert();
 
@@ -7,6 +15,5 @@
     widget_area_single_insert();
 
     // action hook for placing content below the 'single-insert' widget area
-    thematic_belowsingleinsert();
-    
+    thematic_belowsingleinsert(); 
 ?>

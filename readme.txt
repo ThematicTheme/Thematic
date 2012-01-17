@@ -30,6 +30,7 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Added: docblocks to all templates
 * Fixed: Override childtheme_override_theme_setup
 * Added: Function thematic_opt_init()
 * Added: Function thematic_get_wp_opt()
