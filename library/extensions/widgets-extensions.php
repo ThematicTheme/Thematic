@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Widgets Extensions
+ *
+ * @package ThematicCoreLibrary
+ * @subpackage WidgetsExtensions
+ */
+ 
 function thematic_search_form() {
 				$search_form_length = apply_filters('thematic_search_form_length', '32');
 				$search_form = "\n" . "\t";

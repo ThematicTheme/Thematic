@@ -1,6 +1,11 @@
 <?php
-
-
+/**
+ * Footer Extensions
+ *
+ * @package ThematicCoreLibrary
+ * @subpackage FooterExtensions
+ */
+ 
 // Located in footer.php
 // Just before the footer div
 function thematic_abovefooter() {

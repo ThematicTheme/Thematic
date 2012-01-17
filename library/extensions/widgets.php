@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Widgets
+ *
+ * @package ThematicCoreLibrary
+ * @subpackage Widgets
+ */
 
 // CSS markup before the widget
 function thematic_before_widget() {
@@ -33,7 +38,7 @@ function thematic_after_title() {
 class THM_Widget_Search extends WP_Widget {
 
 	function THM_Widget_Search() {
-		$widget_ops = array('classname' => 'widget_search', 'description' => __( "A search form for your blog") );
+		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'thematic') );
 		$this->WP_Widget('search', __('Search', 'thematic'), $widget_ops);
 	}
 

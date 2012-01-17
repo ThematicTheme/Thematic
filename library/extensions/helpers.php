@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * Helper Functions
+ *
+ * @package ThematicCoreLibrary
+ * @subpackage Helpers
+ */
+ 
+ 
 // create bullet-proof excerpt for meta name="description"
 
 function thematic_trim_excerpt($text) {

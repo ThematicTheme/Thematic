@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Sidebars Extensions
+ *
+ * @package ThematicCoreLibrary
+ * @subpackage SidebarExtensions
+ */
 
 // Filter to create the sidebar
 function thematic_sidebar() {

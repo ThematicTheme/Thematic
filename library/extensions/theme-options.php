@@ -1,31 +1,24 @@
 <?php
-
 /**
  * Thematic Theme Options
  *
  * An improved theme options page using the WP Settings API
+ * Child themes can use the WP settings api and the filters provided here to 
+ * customize their child theme's options and settings validation.
  *
- * Child themes can use the WP settings api and the filters provided here to customize 
- * their child theme's options and settings validation.
- * 
- * Props to the Twenty-Eleven theme for giving an excellent 
- * example of using the settings API for theme options
+ * @link http://codex.wordpress.org/Creating_an_Archive_Index
  *
- * @link http://codex.wordpress.org/Settings_API
- *
- * @package Thematic
- * @subpackage extensions
+ * @package ThematicCoreLibrary
+ * @subpackage ThemeOptions
  */
  
- 
- 
-
 /**
  * Function: thematic_opt_init
- * Override: childtheme_override_opt_init
  *
+ * Available override: childtheme_override_opt_init
+ * 
  * Sets default options in database if not pre-existent.
- * Registers with WP settings API, adds a main section with three settings fields
+ * Registers with WP settings API, adds a main section with three settings fields.
  * 
  * @since Thematic 0.9.7.8
  */
@@ -72,6 +65,8 @@ add_action ('admin_init', 'thematic_opt_init');
 
 	
 /**
+ * Function: thematic_get_wp_opt
+ *
  * A wrapper for get_option that provides WP multi site compatibility
  * Returns an option's value from wp_otions table in database
  * or returns false if no value is found for that row 
@@ -82,7 +77,7 @@ function thematic_get_wp_opt( $option_name, $default = false ) {
 	global $blog_id;
 	
 	if (THEMATIC_MB) {
-		$opt = get_blog_option( $blog_id, $show, $default );
+		$opt = get_blog_option( $blog_id, $option_name, $default );
 	} else {
 		$opt = get_option( $option_name, $default );
 	}
@@ -95,8 +90,7 @@ function thematic_get_wp_opt( $option_name, $default = false ) {
  * Returns or echoes a theme option value by its key
  * or returns false if no value is found
  *
- * Uses: thematic_get_wp_opt()
- * 
+ * @uses thematic_get_wp_opt()
  * @since Thematic 0.9.7.8
  */
 function thematic_get_theme_opt( $opt_key, $echo = false ) {
@@ -119,7 +113,7 @@ function thematic_get_theme_opt( $opt_key, $echo = false ) {
  * Retrieves legacy Thematic options from database
  * Returns them as a sanitized array or false
  *
- * Filter: thematic_theme_convert_legacy_opt
+ * @uses thematic_theme_convert_legacy_opt
  * 
  * @since Thematic 0.9.7.8
  */

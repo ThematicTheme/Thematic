@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Header Extensions
+ *
+ * @package ThematicCoreLibrary
+ * @subpackage HeaderExtensions
+ */
+  
 // Creates the DOCTYPE section
 function thematic_create_doctype() {
     $content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
@@ -100,7 +106,7 @@ if (function_exists('childtheme_override_doctitle'))  {
 	      $doctitle = $elements;
 	    }
 	    
-	    $doctitle = "\t" . "<title>" . $doctitle . "</title>" . "\n\n";
+	    $doctitle = "<title>" . $doctitle . "</title>" . "\n";
 	    
 	    echo $doctitle;
 	} // end thematic_doctitle
@@ -108,13 +114,12 @@ if (function_exists('childtheme_override_doctitle'))  {
 
 // Creates the content-type section
 function thematic_create_contenttype() {
-    $content  = "\t";
-    $content .= "<meta http-equiv=\"Content-Type\" content=\"";
+    $content = "<meta http-equiv=\"Content-Type\" content=\"";
     $content .= get_bloginfo('html_type'); 
     $content .= "; charset=";
     $content .= get_bloginfo('charset');
     $content .= "\" />";
-    $content .= "\n\n";
+    $content .= "\n";
     echo apply_filters('thematic_create_contenttype', $content);
 } // end thematic_create_contenttype
 
@@ -147,37 +152,34 @@ function thematic_use_autoexcerpt() {
 
 // Creates the meta-tag description
 function thematic_create_description() {
-		$content = '';
-		if (thematic_seo()) {
-    		if (is_single() || is_page() ) {
-      		  if ( have_posts() ) {
-          		  while ( have_posts() ) {
-            		    the_post();
-										if (thematic_the_excerpt() == "") {
+	$content = '';
+	if (thematic_seo()) {
+    	if (is_single() || is_page() ) {
+      		if ( have_posts() ) {
+          		while ( have_posts() ) {
+            		the_post();
+						if (thematic_the_excerpt() == "") {
                     		if (thematic_use_autoexcerpt()) {
-                        		$content ="\t";
-														$content .= "<meta name=\"description\" content=\"";
+								$content = '<meta name="description" content="';
                         		$content .= thematic_excerpt_rss();
-                        		$content .= "\" />";
-                        		$content .= "\n\n";
+                        		$content .= '" />';
+                        		$content .= "\n";
                     		}
                 		} else {
                     		if (thematic_use_excerpt()) {
-                        		$content ="\t";
-                        		$content .= "<meta name=\"description\" content=\"";
+                        		$content = '<meta name="description" content="';
                         		$content .= thematic_the_excerpt();
-                        		$content .= "\" />";
-                        		$content .= "\n\n";
+                        		$content .= '" />';
+                        		$content .= "\n";
                     		}
                 		}
             		}
         		}
     		} elseif ( is_home() || is_front_page() ) {
-        		$content ="\t";
-        		$content .= "<meta name=\"description\" content=\"";
+        		$content = '<meta name="description" content="';
         		$content .= get_bloginfo('description');
-        		$content .= "\" />";
-        		$content .= "\n\n";
+        		$content .= '" />';
+        		$content .= "\n";
     		}
     		echo apply_filters ('thematic_create_description', $content);
 		}
@@ -198,15 +200,14 @@ function thematic_show_description() {
 function thematic_create_robots() {
         global $paged;
 		if (thematic_seo()) {
-    		$content = "\t";
     		if((is_home() && ($paged < 2 )) || is_front_page() || is_single() || is_page() || is_attachment()) {
-				$content .= "<meta name=\"robots\" content=\"index,follow\" />";
+				$content = "<meta name=\"robots\" content=\"index,follow\" />";
     		} elseif (is_search()) {
-        		$content .= "<meta name=\"robots\" content=\"noindex,nofollow\" />";
+        		$content = "<meta name=\"robots\" content=\"noindex,nofollow\" />";
     		} else {	
-        		$content .= "<meta name=\"robots\" content=\"noindex,follow\" />";
+        		$content = "<meta name=\"robots\" content=\"noindex,follow\" />";
     		}
-    		$content .= "\n\n";
+    		$content .= "\n";
     		if (get_option('blog_public')) {
     				echo apply_filters('thematic_create_robots', $content);
     		}
@@ -227,25 +228,24 @@ function thematic_show_robots() {
 // Located in header.php
 // creates link to style.css
 function thematic_create_stylesheet() {
-	wp_register_style('thematic_style', get_bloginfo('stylesheet_url'));
-    wp_enqueue_style('thematic_style');
+	wp_register_style( 'thematic_style', get_bloginfo('stylesheet_url') );
+    wp_enqueue_style( 'thematic_style' );
 }
 
 
 // rss usage is switchable using a filter
 function thematic_show_rss() {
     $display = TRUE;
-    $display = apply_filters('thematic_show_rss', $display);
+    $display = apply_filters( 'thematic_show_rss', $display );
     if ($display) {
-        $content = "\t";
-        $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
+        $content = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
         $content .= get_bloginfo('rss2_url');
         $content .= "\" title=\"";
-        $content .= esc_html(get_bloginfo('name'));
-        $content .= " " . __('Posts RSS feed', 'thematic');
+        $content .= esc_html( get_bloginfo('name') );
+        $content .= " " . __( 'Posts RSS feed', 'thematic' );
         $content .= "\" />";
         $content .= "\n";
-        echo apply_filters('thematic_rss', $content);
+        echo apply_filters( 'thematic_rss', $content );
     }
 } // end thematic_show_rss
 
@@ -255,14 +255,13 @@ function thematic_show_commentsrss() {
     $display = TRUE;
     $display = apply_filters('thematic_show_commentsrss', $display);
     if ($display) {
-        $content = "\t";
-        $content .= "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
+        $content = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
         $content .= get_bloginfo('comments_rss2_url');
         $content .= "\" title=\"";
         $content .= esc_html(get_bloginfo('name'));
         $content .= " " . __('Comments RSS feed', 'thematic');
         $content .= "\" />";
-        $content .= "\n\n";
+        $content .= "\n";
         echo apply_filters('thematic_commentsrss', $content);
     }
 } // end thematic_show_commentsrss
@@ -273,11 +272,10 @@ function thematic_show_pingback() {
     $display = TRUE;
     $display = apply_filters('thematic_show_pingback', $display);
     if ($display) {
-        $content = "\t";
-        $content .= "<link rel=\"pingback\" href=\"";
+        $content = "<link rel=\"pingback\" href=\"";
         $content .= get_bloginfo('pingback_url');
         $content .= "\" />";
-        $content .= "\n\n";
+        $content .= "\n";
         echo apply_filters('thematic_pingback_url',$content);
     }
 } // end thematic_show_pingback
@@ -380,7 +378,7 @@ function thematic_header() {
 	    }
 	} else {
 		function thematic_brandingopen() {
-			echo "<div id=\"branding\">\n";
+			echo "\t<div id=\"branding\">\n";
 		}
 	}
 	
@@ -393,12 +391,13 @@ function thematic_header() {
 	    	childtheme_override_blogtitle();
 	    }
 	} else {
-	    function thematic_blogtitle() { ?>
-	    		
-	    		<div id="blog-title"><span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
-	    		
-	    <?php }
+	    function thematic_blogtitle() { 
+	    ?>
 	    
+			<div id="blog-title"><span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+		
+		<?php 
+		}
 	}
 	
 	add_action('thematic_header','thematic_blogtitle',3);
@@ -413,9 +412,9 @@ function thematic_header() {
 	    function thematic_blogdescription() {
 	    	$blogdesc = '"blog-description">' . get_bloginfo('description');
 			if (is_home() || is_front_page()) { 
-	        	echo "\t\t<h1 id=$blogdesc</h1>\n\n";
+	        	echo "\t<h1 id=$blogdesc</h1>\n\n";
 	        } else {	
-	        	echo "\t\t<div id=$blogdesc</div>\n\n";
+	        	echo "\t<div id=$blogdesc</div>\n\n";
 	        }
 	    }
 	}
@@ -443,25 +442,24 @@ function thematic_header() {
 	    	childtheme_override_access();
 	    }
 	} else {
-	    function thematic_access() { ?>
+	    function thematic_access() { 
+	    ?>
 	    
-	    <div id="access">
-	    		
-	    	<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
-	    		
-	    	<?php 
-	    		
-	    	if ((function_exists("has_nav_menu")) && (has_nav_menu(apply_filters('thematic_primary_menu_id', 'primary-menu')))) {
-	    		echo  wp_nav_menu(thematic_nav_menu_args());
-    		} else {
-    			echo  thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));	
-    		}
-    		
-	    	?>
-	        
-		</div><!-- #access -->
+		<div id="access">
 		
-		<?php }
+			<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
+			
+			<?php 
+			if ((function_exists("has_nav_menu")) && (has_nav_menu(apply_filters('thematic_primary_menu_id', 'primary-menu')))) {
+			    echo  wp_nav_menu(thematic_nav_menu_args());
+			} else {
+			    echo  thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));	
+			}
+			?>
+			
+		</div><!-- #access -->
+		<?php 
+		}
 	}
 
     add_action('thematic_header','thematic_access',9);

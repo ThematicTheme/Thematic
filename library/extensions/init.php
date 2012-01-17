@@ -1,20 +1,13 @@
 <?php
-
 /**
  * Theme initialization
  *
- * @package Thematic
- * @subpackage init
+ * @package ThematicCoreLibrary
+ * @subpackage ThemeInit
  */
 
-
-
-
-/**
- * legacy options global variables
- * likely not needed anymore...
- * need to test further before removing
- */
+// legacy options global variables likely not needed anymore...
+// need to test further before removing
 $themename = "Thematic";
 $shortname = "thm";
 
