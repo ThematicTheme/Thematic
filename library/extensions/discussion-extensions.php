@@ -1,4 +1,11 @@
 <?php
+/**
+ * Discussion Extensions
+ *
+ * @package ThematicCoreLibrary
+ * @subpackage DiscussionExtensions
+ */
+ 
 
 // Located in discussion.php
 // after comment-author
@@ -18,7 +25,7 @@ if (function_exists('childtheme_override_commentmeta'))  {
 		if ( get_edit_comment_link() ) {
 			$content .=	sprintf(' <span class="meta-sep">|</span><span class="edit-link"> <a class="comment-edit-link" href="%1$s" title="%2$s">%3$s</a></span>',
 						get_edit_comment_link(),
-						__( 'Edit comment' ),
+						__( 'Edit comment' , 'thematic' ),
 						__( 'Edit', 'thematic' ) );
 			}
 		
