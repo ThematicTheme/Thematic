@@ -10,8 +10,6 @@
  * @link http://codex.wordpress.org/Creating_an_Error_404_Page Codex: Create a 404 Page
  */
 
-	@header("HTTP/1.1 404 Not found", true, 404);
-
 	// calling the header.php
 	get_header();
 
