@@ -38,7 +38,7 @@ body {
     margin: 0 0 0 320px;
 }
 .hentry {
-    width:620px;
+    width: auto;
 }
 .main-aside {
     width:300px;
