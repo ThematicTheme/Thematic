@@ -139,7 +139,7 @@ function thematic_multiplecomments_text() {
  */
 function list_comments_arg() {
 	$content = 'type=comment&callback=thematic_comments';
-	return apply_s('list_comments_arg', $content);
+	return apply_filters('list_comments_arg', $content);
 }
 
 /**
