@@ -167,6 +167,10 @@ ul.sf-menu li li li.sfHover ul {
 	font-size: 12px;
 	padding:9px 13px 10px;
 }
+.sf-menu .current-menu-item a,
+.sf-menu .current-menu-parent a,
+.sf-menu .current-menu-ancestor a,
+.sf-menu .current-post-ancestor a,
 .sf-menu .current_page_item a,
 .sf-menu .current_page_ancestor a,
 .sf-menu .current_page_parent a {
@@ -697,14 +701,18 @@ li.content-column {
     font-size:12px;
     line-height:18px;
 }
+.aside .current-menu-item a,
 .aside .current_page_item a {
     color: #FF4B33;
 }
-.aside .current_page_item .page_item a {
+.aside .current-menu-item .menu-item a,
+.aside .current_page_item .menu-item a {
     color:#666;
 }
-.aside .current_page_item .page_item a:hover,
-.aside .current_page_item .page_item a:active {
+.aside .current-menu-item .menu-item a:hover,
+.aside .current-menu-item .menu-item a:active,
+.aside .current_page_item .menu-item a:hover,
+.aside .current_page_item .menu-item a:active {
     color: #FF4B33;
 }
 .aside {

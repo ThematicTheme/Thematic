@@ -30,6 +30,7 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Added: WP Nav Menu compatibility to default sylesheet
 * Fixed: 2c-l-fixed.css .hentry width bug
 * Added: docblocks to all templates
 * Fixed: Override childtheme_override_theme_setup
