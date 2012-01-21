@@ -1040,17 +1040,25 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	 * Filter: thematic_post_meta_authorlink
 	 */
 	function thematic_postmeta_authorlink() {
-	    
-	    global $authordata;
+		global $authordata;
 	
-	    $authorlink = '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
-	    $authorlink .= '<span class="author vcard">'. '<a class="url fn n" href="';
-	    $authorlink .= get_author_posts_url($authordata->ID, $authordata->user_nicename);
-	    $authorlink .= '" title="' . __('View all posts by ', 'thematic') . get_the_author_meta( 'display_name' ) . '">';
-	    $authorlink .= get_the_author_meta( 'display_name' );
-	    $authorlink .= '</a></span>';
+	    $author_open = '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
+	    $author_close = '</span>';
 	    
-	    return apply_filters('thematic_post_meta_authorlink', $authorlink);
+	    if ( thematic_is_custom_post_type() && !current_theme_supports( 'thematic_support_post_type_author_link' ) ) {
+	    	$author_info  = '<span class="vcard"><span class="fn nickname">';
+	    	$author_info .= get_the_author_meta( 'display_name' ) ;
+	    	$author_info .= '</span></span>';
+	    } else {
+	    	$author_info  = '<span class="author vcard">'. '<a class="url fn n" href="';
+	    	$author_info .= get_author_posts_url( $authordata->ID, $authordata->user_nicename );
+	    	$author_info .= '" title="' . __( 'View all posts by ', 'thematic' ) . get_the_author_meta( 'display_name' ) . '">';
+	    	$author_info .= get_the_author_meta( 'display_name' ) . '</a>';
+	    }
+	    
+	    $author_credit = $author_open . $author_info . $author_close ;
+	    
+	    return apply_filters('thematic_post_meta_authorlink', $author_credit);
 	   
 	}
 } // end postmeta_authorlink
@@ -1406,12 +1414,10 @@ if (function_exists('childtheme_override_postfooter'))  {
 	    } else {
 	    	$postfooter = '<div class="entry-utility">';
 	        if ( is_single() ) {
+	        	$post_tpye_archive_link = ( function_exists( 'get_post_type_archive_link' )  ? get_post_type_archive_link( $post_type ) :  home_url( '/?post_type=' . $post_type ) );
 	        	if ( thematic_is_custom_post_type() && $post_type_obj->has_archive ) {
-	        		
-	        		// Help? need better permalink functionality for archives of post types
-	        		$postfooter .= __('Browse the ', 'thematic') . '<a href="' . home_url( '/?post_type=' . $post_type ) . '" title="' . __('Permalink to ', 'thematic') . $post_type_obj->labels->singular_name . __(' Archive', 'thematic') . '">';
+	        		$postfooter .= __('Browse the ', 'thematic') . '<a href="' . $post_tpye_archive_link . '" title="' . __('Permalink to ', 'thematic') . $post_type_obj->labels->singular_name . __(' Archive', 'thematic') . '">';
 	        		$postfooter .= $post_type_obj->labels->singular_name . '</a>' . __(' archive', 'thematic') . '. ';
-	        		
 	        	}
 	        	$postfooter .= thematic_postfooter_posttax();
 	        	$postfooter .= __('Bookmark the ', 'thematic') . '<a href="' . apply_filters('the_permalink', get_permalink()) . '" title="' . __('Permalink to ', 'thematic') . the_title_attribute('echo=0') . '">';
