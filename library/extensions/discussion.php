@@ -6,8 +6,15 @@
  * @subpackage Discussion
  */
  
-
-// Custom callback to list comments in the Thematic style
+/**
+ * Custom callback function to list comments in the Thematic style. 
+ * 
+ * If you want to use your own comments callback for wp_list_comments, filter list_comments_arg
+ *
+ * @param object $comment 
+ * @param array $args 
+ * @param int $depth 
+ */
 function thematic_comments($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
 	$GLOBALS['comment_depth'] = $depth;
@@ -56,7 +63,13 @@ function thematic_comments($comment, $args, $depth) {
 			?>
 <?php }
 
-// Custom callback to list pings in the Thematic style
+/**
+ * Custom callback to list pings in the Thematic style
+ *
+ * @param object $comment 
+ * @param array $args 
+ * @param int $depth 
+ */
 function thematic_pings($comment, $args, $depth) {
        $GLOBALS['comment'] = $comment;
         ?>
