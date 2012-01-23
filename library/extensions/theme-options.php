@@ -20,7 +20,7 @@
  * Sets default options in database if not pre-existent.
  * Registers with WP settings API, adds a main section with three settings fields.
  * 
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 if (function_exists('childtheme_override_opt_init')) {
 	function thematic_opt_init() {
@@ -71,7 +71,7 @@ add_action ('admin_init', 'thematic_opt_init');
  * Returns an option's value from wp_otions table in database
  * or returns false if no value is found for that row 
  *
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_get_wp_opt( $option_name, $default = false ) {
 	global $blog_id;
@@ -91,7 +91,7 @@ function thematic_get_wp_opt( $option_name, $default = false ) {
  * or returns false if no value is found
  *
  * @uses thematic_get_wp_opt()
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_get_theme_opt( $opt_key, $echo = false ) {
 	
@@ -115,7 +115,7 @@ function thematic_get_theme_opt( $opt_key, $echo = false ) {
  *
  * @uses thematic_theme_convert_legacy_opt
  * 
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_convert_legacy_opt() {
     $thm_insert_position = thematic_get_wp_opt( 'thm_insert_position' );
@@ -142,7 +142,7 @@ function thematic_convert_legacy_opt() {
  *
  * Filter: thematic_theme_default_opt
  * 
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  *
  */
 function thematic_default_opt() {
@@ -165,7 +165,7 @@ function thematic_default_opt() {
  * filter provide the ability for child themes to customize or remove and add 
  * thier own options page and queue contextual help in one function
  * 
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
  
 function thematic_opt_add_page() {
@@ -195,7 +195,7 @@ add_action( 'admin_menu', 'thematic_opt_add_page' );
  * Conditional WP compatibilty 3.3 & 3.2
  * Legacy compatibilty WP 3.0 
  * 
- * @since Thematic 0.9.7.8 
+ * @since Thematic 0.9.8 
  */
 if (function_exists('childtheme_override_opt_page_help')) {
 	function thematic_opt_page_help() {
@@ -239,7 +239,7 @@ if (function_exists('childtheme_override_opt_page_help')) {
  *
  * Legacy compatibilty WP 3.0
  *
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_legacy_help() {
 	add_settings_section ('thematic_opt_help_section', '', 'thematic_do_legacy_help_section', 'thematic_opt_page');
@@ -251,7 +251,7 @@ function thematic_legacy_help() {
  *
  * Legacy compatibilty WP 3.0
  * 
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_do_legacy_help_section() { 
 	echo ('<p>'. __( 'For more information about this theme, <a href="http://themeshaper.com">visit ThemeShaper</a>. Please visit the <a href="http://themeshaper.com/forums/">ThemeShaper Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
@@ -264,7 +264,7 @@ function thematic_do_legacy_help_section() {
  * Conditional WP compatibilty 3.1
  * Legacy compatibilty WP 3.0
  *
- * @since Thematic 0.9.7.8 
+ * @since Thematic 0.9.8 
  */
 function thematic_do_opt_page() { ?>
 
@@ -303,7 +303,7 @@ function thematic_do_opt_page() { ?>
  *
  * Filter: thematic_theme_opt_section_main
  *
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_do_opt_section_main() {
 	$thematic_opt_section_main = '';
@@ -314,7 +314,7 @@ function thematic_do_opt_section_main() {
 /**
  * Renders Index Insert elements
  *
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_do_insert_opt() { 
 ?>
@@ -327,7 +327,7 @@ function thematic_do_insert_opt() {
 /**
  * Renders Author Info elements
  *
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_do_auth_opt() { 
 ?>
@@ -340,7 +340,7 @@ function thematic_do_auth_opt() {
 /**
  * Renders Footer Text elements
  *
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_do_footer_opt() { 
 ?>
@@ -353,7 +353,7 @@ function thematic_do_footer_opt() {
 /**
  * Renders Leagcy Options elements
  *
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_do_legacy_opt() {
 ?>
@@ -372,7 +372,7 @@ function thematic_do_legacy_opt() {
  *
  * Filter: thematic_theme_opt_validation
  * 
- * @since Thematic 0.9.7.8 
+ * @since Thematic 0.9.8 
  */
 if (function_exists('childtheme_override_validate_opt')) {
 	function thematic_thematic_validate_opt() {

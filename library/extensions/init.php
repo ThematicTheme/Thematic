@@ -15,7 +15,7 @@ $shortname = "thm";
 /**
  * Registers action hook: thematic_init 
  * 
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_init() {
 	do_action('thematic_init');
@@ -27,7 +27,7 @@ function thematic_init() {
  *
  * define's, require_once's, and add_filters'
  *
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 if (function_exists('childtheme_override_theme_setup')) {
 	function thematic_theme_setup() {
@@ -225,7 +225,7 @@ add_action('after_setup_theme', 'thematic_theme_setup', 10);
 /**
  * adds action hook: thematic_child_init
  * 
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 function thematic_child_init() {
 	do_action('thematic_child_init');
@@ -239,7 +239,7 @@ add_action('after_setup_theme', 'thematic_child_init', 20);
  * 
  * registers & enqueues head scripts
  * 
- * @since Thematic 0.9.7.8
+ * @since Thematic 0.9.8
  */
 if (function_exists('childtheme_override_head_scripts'))  {
     function thematic_head_scripts() {
