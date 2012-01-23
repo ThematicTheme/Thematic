@@ -150,18 +150,19 @@ ul.sf-menu li li li.sfHover ul {
 
 /*** THEMATIC SKIN ***/
 .sf-menu {
-    border-right:1px solid #ccc;
 	float:left;
+	margin-left: 1px;
 }
 .ie6 .sf-menu {
 	margin-bottom: -1px;
 }
 .sf-menu a {
-	border-left:1px solid #ccc;
-	border-top:1px solid #ccc;
-	border-bottom:1px solid #ccc;
+  	border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
 	padding:9px 13px;
 	text-decoration:none;
+	margin-left: -1px;
 }
 .windows .sf-menu a {
 	font-size: 12px;
@@ -195,7 +196,6 @@ ul.sf-menu li li li.sfHover ul {
     border-bottom-color:#ccc;
 }
 .sf-menu ul {
-    border-right:1px solid #ccc;
     border-bottom:1px solid #ccc;
 }
 .sf-menu li:hover ul,
@@ -276,7 +276,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .entry-meta .author {
 }
-.entry-meta .n {
+.entry-meta .n, .entry-meta .nickname {
     font-size:11px;
     font-style:normal;
     letter-spacing:0.05em;
