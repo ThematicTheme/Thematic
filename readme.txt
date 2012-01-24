@@ -30,6 +30,7 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Fixed  Default title interaction for Search, Meta, and RSS Links Widgets
 * Added: Check for <code>current_theme_supports('thematic_support_post_type_author_link')</code> in <code>thematic_postmeta_authorlink</code>
 * Added: Pretty Permalink support for custom post type archives in <code>thematic_postfooter</code>
 * Added: WP Nav Menu compatibility to default sylesheet

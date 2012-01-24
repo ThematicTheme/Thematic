@@ -44,7 +44,7 @@ class THM_Widget_Search extends WP_Widget {
 
 	function widget( $args, $instance ) {
 		extract($args);
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Search', 'thematic') : $instance['title']);
+		$title = apply_filters('widget_title', $instance['title'] );
 
 		echo $before_widget;
 		if ( $title )
@@ -57,7 +57,7 @@ class THM_Widget_Search extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '') );
+		$instance = wp_parse_args( (array) $instance, array( 'title' =>  __('Search', 'thematic') ) );
 		$title = $instance['title'];
 ?>
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'thematic'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
@@ -89,7 +89,7 @@ class THM_Widget_Meta extends WP_Widget {
 
 	function widget( $args, $instance ) {
 		extract($args);
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Meta', 'thematic') : $instance['title']);
+		$title = apply_filters('widget_title', $instance['title'] );
 
 		echo $before_widget;
 		if ( $title )
@@ -112,7 +112,7 @@ class THM_Widget_Meta extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' =>  __('Meta', 'thematic')  ) );
 		$title = strip_tags($instance['title']);
 ?>
 			<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'thematic'); ?></label> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
@@ -134,7 +134,7 @@ class THM_Widget_RSSlinks extends WP_Widget {
 
 	function widget($args, $instance) {
 		extract($args);
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('RSS Links', 'thematic') : $instance['title']);
+		$title = apply_filters('widget_title', $instance['title']);
 		echo $before_widget;
 		if ( $title )
 			echo $before_title . $title . $after_title;
@@ -155,8 +155,8 @@ class THM_Widget_RSSlinks extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
-		$title = strip_tags($instance['title']);
+		$instance = wp_parse_args( (array) $instance, array( 'title' => __('RSS Links', 'thematic') ) );
+		$title = strip_tags( $instance['title'] );
 ?>
 			<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'thematic'); ?></label> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 <?php
