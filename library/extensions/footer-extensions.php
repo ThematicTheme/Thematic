@@ -6,6 +6,15 @@
  * @subpackage FooterExtensions
  */
  
+/**
+ * Register action hook: thematic_abovemainclose
+ * 
+ * Located in footer.php, just before the closing of the main div
+ */
+function thematic_abovemainclose() {
+    do_action('thematic_abovemainclose');
+} // end thematic_belowmainsidebar
+
 
 /**
  * Register action hook: thematic_abovefooter
