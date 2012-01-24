@@ -276,28 +276,8 @@ function thematic_widgets_init() {
 	$thematic_widgetized_areas = thematic_widgets_array();
 	foreach ( $thematic_widgetized_areas as $key => $value ) {
 		register_sidebar( $thematic_widgetized_areas[$key]['args'] );
-	}
-	  
-    // we will check for a Thematic widgets directory and and add and activate additional widgets
-    // Thanks to Joern Kretzschmar
-	  $widgets_dir = @ dir( get_template_directory() . '/widgets' );
-	  if ( $widgets_dir )	{
-		  while ( ( $widgetFile = $widgets_dir->read() ) !== false ) {
-			 if ( !preg_match( '|^\.+$|', $widgetFile) && preg_match( '|\.php$|', $widgetFile ) )
-				  include( get_template_directory() . '/widgets/' . $widgetFile );
-		  }
-	  }
-
-	// we will check for the child themes widgets directory and add and activate additional widgets
-	// Thanks to Joern Kretzschmar 
-	  $widgets_dir = @ dir( get_stylesheet_directory() . '/widgets' );
-	  if ( is_child_theme()  && $widgets_dir ) {
-		  while ( ( $widgetFile = $widgets_dir->read() ) !== false ) {
-			 if ( !preg_match('|^\.+$|', $widgetFile) && preg_match('|\.php$|', $widgetFile) )
-				  include( get_stylesheet_directory() . '/widgets/' . $widgetFile );
-		  }
-	  }    
-
+	}  
+	
 	// Remove WP default Widgets
 	// WP 2.8 function using $widget_class
     unregister_widget( 'WP_Widget_Meta' );
