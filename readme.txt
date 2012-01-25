@@ -34,7 +34,6 @@ Features:
 * Fixed: stylesheets to comply with WP theme unit tests
 * Changed: default.css moved .gallery styles into images.css 
 * Added: Action hook thematic_abovemainclose
-* Fixed: Default title interaction for Search, Meta, and RSS Links Widgets
 * Added: Check for <code>current_theme_supports('thematic_support_post_type_author_link')</code> in <code>thematic_postmeta_authorlink</code>
 * Added: Pretty Permalink support for custom post type archives in <code>thematic_postfooter</code>
 * Added: WP Nav Menu compatibility to default sylesheet
