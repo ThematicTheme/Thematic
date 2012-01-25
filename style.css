@@ -74,6 +74,7 @@ img.aligncenter {
 .wp-caption {
 	text-align: center;
 	margin-bottom:18px;
+	max-width: 96%;
 }
 .wp-caption img {
 	margin: 0;
