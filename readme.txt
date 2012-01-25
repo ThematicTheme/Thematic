@@ -30,6 +30,7 @@ Features:
 == Changelog ==
 
 = 0.9.8ß =
+* Deprecated: template-page-blog.php in favor of home.php
 * Fixed: stylesheets to comply with WP theme unit tests
 * Changed: default.css moved .gallery styles into images.css 
 * Added: Action hook thematic_abovemainclose

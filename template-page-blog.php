@@ -2,11 +2,24 @@
 /**
  * Template Name: Blog
  *
- * This template allows you to display the latest posts on any page of the site.
- * 
+ * This template is here for Backwards compatibility with child themes that use it.
+ * This file will be removed in a future version of thematic. <br>
+ *
+ * This was originally intended to allow you to display the latest posts on any page of the site.<br>
+ *
+ * The recommended way to do this by setting the "Front Page" and "Posts Page" options 
+ * in WP-Admin/Settings/Reading. If those options are set the index.php will be used
+ * to display the blog page.
+ *
+ * If you desire a different template for your blog page, create a home.php in a child theme.
+ *
  * @package Thematic
  * @subpackage Templates
+ * @deprecated 0.9.8
  */
+
+	// Providing deprecated file notice to be seen when WP_DEBUG is true
+	_deprecated_file( sprintf( __( 'The template %1$s' ) . ':', basename(__FILE__) ), '0.9.8', null, __('You can include a', 'thematic') . ' home.php ' . __('in a childtheme', 'thematic') . '.') ;
 
     // calling the header.php
     get_header();
