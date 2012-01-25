@@ -6,6 +6,8 @@
  * 
  * @package Thematic
  * @subpackage Templates
+ * @todo chase the invalid counts & pagination for comments/trackbacks
+ * @todo remove the THEMATIC_COMPATIBLE_COMMENT_FORM condition to a legacy function for template berevity
  */
 ?>
 				<?php
@@ -15,22 +17,26 @@
 				
 				<div id="comments">
 	
-				<?php
-					$req = get_option('require_name_email'); // Checks if fields are required.
+				<?php 
+					// Disable direct access to the comments script
 					if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) )
-					    die ( 'Please do not load this page directly. Thanks!' );
-					if ( ! empty( $post->post_password ) ) :
-						if ( $_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password ) :
+					    die ( __('Please do not load this page directly.', 'thematic')  );
+					
+					// Set required varible from options
+					$req = get_option('require_name_email');
+					
+					// Check post password and cookies
+					if ( post_password_required() ) :
 				?>
 	
 					<div class="nopassword"><?php _e('This post is password protected. Enter the password to view any comments.', 'thematic') ?></div>
 				
 				</div><!-- #comments -->
 	
-				<?php	
-							return; 
-						endif;
+				<?php 
+						return;
 					endif; 
+				
 				?>
 	
 				<?php if ( have_comments() ) : ?>
@@ -95,7 +101,7 @@
 					?>
 									
 				<?php endif /* if ( $ping_count ) */ ?>
-			<?php endif /* if ( $comments ) */ ?>
+			<?php endif     /* if ( $comments )  */  ?>
 			<?php
 				if ( 'open' == $post->comment_status ) : 
 					if ( THEMATIC_COMPATIBLE_COMMENT_FORM ) {
