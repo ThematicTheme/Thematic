@@ -347,7 +347,7 @@ function thematic_show_commentsrss() {
     $display = apply_filters('thematic_show_commentsrss', $display);
     if ($display) {
         $content = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
-        $content .= get_bloginfo( 'comments_rss2_url' );
+        $content .= get_feed_link( 'comments_rss2_url' );
         $content .= "\" title=\"";
         $content .= esc_html( get_bloginfo('name') );
         $content .= " " . __('Comments RSS feed', 'thematic');
