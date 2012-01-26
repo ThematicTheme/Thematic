@@ -53,7 +53,7 @@
 
 					<div class="entry-content">
 
-						<div class="entry-attachment"><?php the_attachment_link( $post->post_ID, true ) ?></div>
+						<div class="entry-attachment"><?php the_attachment_link( $post->ID, true ) ?></div>
 
 	                        <?php 
 	                        	the_content(more_text());
