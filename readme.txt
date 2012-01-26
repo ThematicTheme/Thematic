@@ -36,7 +36,7 @@ Features:
 * Changed: the action hook for <code>thematic_head_scripts()</code> from <code>wp_head</code> to <code>wp_enqueue_scripts</code>
 * Fixed: Valid CSS support for ie7 in default.css for hr color
 * Deprecated: template-page-blog.php in favor of home.php
-* Fixed: CSS to comply with WP theme unit testsi images, clearing floats, etc.
+* Fixed: CSS to comply with WP theme unit tests: images, clearing floats, etc.
 * Changed: default.css moved .gallery styles into images.css 
 * Added: Action hook thematic_abovemainclose
 * Added: Check for <code>current_theme_supports('thematic_support_post_type_author_link')</code> in <code>thematic_postmeta_authorlink</code>
