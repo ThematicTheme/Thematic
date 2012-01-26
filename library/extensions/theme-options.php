@@ -4,22 +4,20 @@
  *
  * An improved theme options page using the WP Settings API
  * Child themes can use the WP settings api and the filters provided here to 
- * customize their child theme's options and settings validation.
+ * customize their child theme's options and settings validation. <br>
  *
- * @link http://codex.wordpress.org/Creating_an_Archive_Index
+ * For Reference: {@link http://codex.wordpress.org/Creating_an_Archive_Index Codex-Creating an Archive Index}
  *
  * @package ThematicCoreLibrary
  * @subpackage ThemeOptions
  */
  
 /**
- * Function: thematic_opt_init
- *
- * Available override: childtheme_override_opt_init
- * 
  * Sets default options in database if not pre-existent.
  * Registers with WP settings API, adds a main section with three settings fields.
  * 
+ * Override: childtheme_override_opt_init
+ *
  * @since Thematic 0.9.8
  */
 if (function_exists('childtheme_override_opt_init')) {
@@ -65,9 +63,8 @@ add_action ('admin_init', 'thematic_opt_init');
 
 	
 /**
- * Function: thematic_get_wp_opt
+ * A wrapper for get_option that provides WP multi site compatibility.
  *
- * A wrapper for get_option that provides WP multi site compatibility
  * Returns an option's value from wp_otions table in database
  * or returns false if no value is found for that row 
  *
@@ -111,7 +108,7 @@ function thematic_get_theme_opt( $opt_key, $echo = false ) {
 
 /**
  * Retrieves legacy Thematic options from database
- * Returns them as a sanitized array or false
+ * Returns theme as a sanitized array or false
  *
  * @uses thematic_theme_convert_legacy_opt
  * 
@@ -162,8 +159,8 @@ function thematic_default_opt() {
  * and queues the contextual help on theme options page load
  *
  * Filter: thematic_theme_add_opt_page
- * filter provide the ability for child themes to customize or remove and add 
- * thier own options page and queue contextual help in one function
+ * The filter provides the ability for child themes to customize or remove and add 
+ * their own options page and queue contextual help in one function
  * 
  * @since Thematic 0.9.8
  */
@@ -184,18 +181,16 @@ add_action( 'admin_menu', 'thematic_opt_add_page' );
 
 
 /**
- * Function: thematic_opt_page_help
- * Override: childtheme_override_opt_page_help
- *
  * Generates the help texts and help sidebar items for the options screen
  *
- * Filter: thematic_theme_opt_help_txt 
- * Filter: thematic_theme_opt_help_sidebar
- *
- * Conditional WP compatibilty 3.3 & 3.2
- * Legacy compatibilty WP 3.0 
+ * Filter: thematic_theme_opt_help_txt <br>
+ * Filter: thematic_theme_opt_help_sidebar <br>
+ * Override: childtheme_override_opt_page_help <br>
+ * Conditional WP compatibilty 3.3 & 3.2 <br>
  * 
  * @since Thematic 0.9.8 
+ * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
+ * @todo removeconditional compatibilty  WP version > 3.3 or > 3.2
  */
 if (function_exists('childtheme_override_opt_page_help')) {
 	function thematic_opt_page_help() {
@@ -237,9 +232,8 @@ if (function_exists('childtheme_override_opt_page_help')) {
 /**
  * Adds a settings section to display legacy help text and theme links
  *
- * Legacy compatibilty WP 3.0
- *
  * @since Thematic 0.9.8
+ * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
  */
 function thematic_legacy_help() {
 	add_settings_section ('thematic_opt_help_section', '', 'thematic_do_legacy_help_section', 'thematic_opt_page');
@@ -248,10 +242,9 @@ function thematic_legacy_help() {
 
 /**
  * Renders the legacy help text and theme links
- *
- * Legacy compatibilty WP 3.0
  * 
  * @since Thematic 0.9.8
+ * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
  */
 function thematic_do_legacy_help_section() { 
 	echo ('<p>'. __( 'For more information about this theme, <a href="http://themeshaper.com">visit ThemeShaper</a>. Please visit the <a href="http://themeshaper.com/forums/">ThemeShaper Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
@@ -261,10 +254,9 @@ function thematic_do_legacy_help_section() {
 /**
  * Renders the them options page
  *
- * Conditional WP compatibilty 3.1
- * Legacy compatibilty WP 3.0
- *
  * @since Thematic 0.9.8 
+ * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
+ * @todo remove conditional compatibilty when min WP version > 3.1
  */
 function thematic_do_opt_page() { ?>
 
@@ -299,7 +291,7 @@ function thematic_do_opt_page() { ?>
 
 
 /**
- * Renders the "Main" settings section. This is left blank in Theamatic and outputs nothin\
+ * Renders the "Main" settings section. This is left blank in Theamatic and outputs nothing
  *
  * Filter: thematic_theme_opt_section_main
  *
@@ -364,12 +356,10 @@ function thematic_do_legacy_opt() {
 
 
 /**
- * Function: thematic_validate_opt
- * Override: childtheme_override_validate_opt
- *
  * Validates theme options form post data.
  * Provides error reporting for invalid input.
  *
+ * Override: childtheme_override_validate_opt <br>
  * Filter: thematic_theme_opt_validation
  * 
  * @since Thematic 0.9.8 

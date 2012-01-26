@@ -18,11 +18,11 @@
 	// Creating the head profile
 	thematic_head_profile();
 	
-	// Creating the doc title
-	thematic_doctitle();
-	
 	// Creating the content type
 	thematic_create_contenttype();
+	
+	// Creating the doc title
+	thematic_doctitle();
 	
 	// Creating the description
 	thematic_show_description();

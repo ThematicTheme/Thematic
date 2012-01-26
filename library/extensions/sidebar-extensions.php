@@ -86,7 +86,7 @@ function thematic_sidebar() {
 		do_action('thematic_aboveindexinsert');
 	} // end thematic_aboveindexinsert
 	
-	// ocated in sidebar-index-insert.php
+	// Located in sidebar-index-insert.php
 	function widget_area_index_insert() {
 		do_action('widget_area_index_insert');
 	} // end widget_area_index_insert

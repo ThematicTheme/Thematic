@@ -18,6 +18,7 @@ function thematic_create_doctype() {
     echo apply_filters( 'thematic_create_doctype', $content );
 }
 
+
 /**
  * Display the HEAD profile
  * 
@@ -27,6 +28,23 @@ function thematic_head_profile() {
     $content = '<head profile="http://gmpg.org/xfn/11">' . "\n";
     echo apply_filters('thematic_head_profile', $content );
 }
+
+
+/**
+ * Display the content-type section
+ * 
+ * Filter: thematic_create_contenttype
+ */
+function thematic_create_contenttype() {
+    $content = "<meta http-equiv=\"Content-Type\" content=\"";
+    $content .= get_bloginfo('html_type'); 
+    $content .= "; charset=";
+    $content .= get_bloginfo('charset');
+    $content .= "\" />";
+    $content .= "\n";
+    echo apply_filters('thematic_create_contenttype', $content);
+}
+
 
 /**
  * Get the page number
@@ -132,22 +150,6 @@ function thematic_doctitle() {
 	    
 	    echo $doctitle;
 	} // end thematic_doctitle
-}
-
-
-/**
- * Display the content-type section
- * 
- * Filter: thematic_create_contenttype
- */
-function thematic_create_contenttype() {
-    $content = "<meta http-equiv=\"Content-Type\" content=\"";
-    $content .= get_bloginfo('html_type'); 
-    $content .= "; charset=";
-    $content .= get_bloginfo('charset');
-    $content .= "\" />";
-    $content .= "\n";
-    echo apply_filters('thematic_create_contenttype', $content);
 }
 
 
@@ -304,8 +306,7 @@ function thematic_show_robots() {
  * @todo Add stylesheet to the wp_head hook instead of called directly in header
  */
 function thematic_create_stylesheet() {
-	wp_register_style( 'thematic_style', get_bloginfo('stylesheet_url') );
-    wp_enqueue_style('thematic_style');
+    wp_enqueue_style('thematic_style', get_stylesheet_uri() );
 }
 
 
@@ -322,7 +323,7 @@ function thematic_show_rss() {
     $display = apply_filters('thematic_show_rss', $display);
     if ($display) {
         $content = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
-        $content .= get_bloginfo('rss2_url');
+        $content .= get_feed_link('rss2_url');
         $content .= "\" title=\"";
         $content .= esc_html( get_bloginfo('name') );
         $content .= " " . __('Posts RSS feed', 'thematic');

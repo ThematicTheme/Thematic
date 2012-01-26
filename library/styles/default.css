@@ -37,9 +37,12 @@ th, td {
 hr {
     background-color:#ccc;
     border:0;
-    color:#ccc;
     height:1px;
     margin-bottom:22px;
+}
+.ie7 hr {
+	background-color:none;
+	color:#ccc;
 }
 a:link {
     color:#004B91;
@@ -339,7 +342,7 @@ ul.sf-menu li li li.sfHover ul {
 .entry-utility a:hover {
     color: #FF4B33;
 }
-.edit-link {
+.page .edit-link {
 	clear:both;
 	display:block;
 }
