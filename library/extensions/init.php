@@ -192,8 +192,8 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		function thematic_remove_generators() {
  			return '';
  		}
- 		//if ( apply_filters('thematic_hide_generators', true) )
- 			//add_filter('the_generator', 'thematic_remove_generators');
+ 		if ( apply_filters('thematic_hide_generators', true) )
+ 			add_filter('the_generator', 'thematic_remove_generators');
  
 		// Translate, if applicable
 		load_theme_textdomain('thematic', THEMELIB . '/languages');
