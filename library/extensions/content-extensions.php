@@ -1414,9 +1414,9 @@ if (function_exists('childtheme_override_postfooter'))  {
 	    } else {
 	    	$postfooter = '<div class="entry-utility">';
 	        if ( is_single() ) {
-	        	$post_tpye_archive_link = ( function_exists( 'get_post_type_archive_link' )  ? get_post_type_archive_link( $post_type ) :  home_url( '/?post_type=' . $post_type ) );
+	        	$post_type_archive_link = ( function_exists( 'get_post_type_archive_link' )  ? get_post_type_archive_link( $post_type ) :  home_url( '/?post_type=' . $post_type ) );
 	        	if ( thematic_is_custom_post_type() && $post_type_obj->has_archive ) {
-	        		$postfooter .= __('Browse the ', 'thematic') . '<a href="' . $post_tpye_archive_link . '" title="' . __('Permalink to ', 'thematic') . $post_type_obj->labels->singular_name . __(' Archive', 'thematic') . '">';
+	        		$postfooter .= __('Browse the ', 'thematic') . '<a href="' . $post_type_archive_link . '" title="' . __('Permalink to ', 'thematic') . $post_type_obj->labels->singular_name . __(' Archive', 'thematic') . '">';
 	        		$postfooter .= $post_type_obj->labels->singular_name . '</a>' . __(' archive', 'thematic') . '. ';
 	        	}
 	        	$postfooter .= thematic_postfooter_posttax();
