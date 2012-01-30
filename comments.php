@@ -166,7 +166,7 @@
 								
 	                  			<?php do_action( 'comment_form', $post->ID ); ?>
 	                  
-								<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php _e( thematic_commentbutton_text(), 'thematic' ) ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
+								<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php echo thematic_commentbutton_text(); ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
 	
 	                            <?php comment_id_fields(); ?>    
 	

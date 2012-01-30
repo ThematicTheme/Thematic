@@ -78,25 +78,25 @@ if ( function_exists('childtheme_override_doctitle') )  {
 	 * Filter: thematic_doctitle
 	 */
 	function thematic_doctitle() {
-		$site_name = get_bloginfo('name');
+		$site_name = get_bloginfo('name' , 'display');
 	    $separator = apply_filters('thematic_doctitle_separator', '|');
 	        	
 	    if ( is_single() ) {
 	      $content = single_post_title('', FALSE);
 	    }
 	    elseif ( is_home() || is_front_page() ) { 
-	      $content = get_bloginfo('description');
+	      $content = get_bloginfo('description', 'display');
 	    }
 	    elseif ( is_page() ) { 
 	      $content = single_post_title('', FALSE); 
 	    }
 	    elseif ( is_search() ) { 
 	      $content = __('Search Results for:', 'thematic'); 
-	      $content .= ' ' . esc_html( stripslashes( get_search_query() ) );
+	      $content .= ' ' . get_search_query();
 	    }
 	    elseif ( is_category() ) {
 	      $content = __('Category Archives:', 'thematic');
-	      $content .= ' ' . single_cat_title("", false);;
+	      $content .= ' ' . single_cat_title('', FALSE);;
 	    }
 	    elseif ( is_tag() ) { 
 	      $content = __('Tag Archives:', 'thematic');
@@ -106,7 +106,7 @@ if ( function_exists('childtheme_override_doctitle') )  {
 	      $content = __('Not Found', 'thematic'); 
 	    }
 	    else { 
-	      $content = get_bloginfo('description');
+	      $content = get_bloginfo('description', 'display');
 	    }
 	
 	    if ( get_query_var('paged') ) {
@@ -232,7 +232,7 @@ function thematic_create_description() {
         	}
         } elseif ( is_home() || is_front_page() ) {
     		$content = '<meta name="description" content="';
-    		$content .= get_bloginfo( 'description' );
+    		$content .= get_bloginfo( 'description', 'display' );
     		$content .= '" />';
     		$content .= "\n";
         }
@@ -268,11 +268,11 @@ function thematic_create_robots() {
         global $paged;
 		if ( thematic_seo() ) {
     		if ( ( is_home() && ( $paged < 2 ) ) || is_front_page() || is_single() || is_page() || is_attachment() ) {
-				$content = "<meta name=\"robots\" content=\"index,follow\" />";
+				$content = '<meta name="robots" content="index,follow" />';
     		} elseif ( is_search() ) {
-        		$content = "<meta name=\"robots\" content=\"noindex,nofollow\" />";
+        		$content = '<meta name="robots" content="noindex,nofollow" />';
     		} else {	
-        		$content = "<meta name=\"robots\" content=\"noindex,follow\" />";
+        		$content = '<meta name="robots" content="noindex,follow" />';
     		}
     		$content .= "\n";
     		if ( get_option('blog_public') ) {
@@ -309,12 +309,12 @@ function thematic_show_rss() {
     $display = TRUE;
     $display = apply_filters('thematic_show_rss', $display);
     if ($display) {
-        $content = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
+        $content = '<link rel="alternate" type="application/rss+xml" href="';
         $content .= get_feed_link('rss2_url');
-        $content .= "\" title=\"";
-        $content .= esc_html( get_bloginfo('name') );
-        $content .= " " . __('Posts RSS feed', 'thematic');
-        $content .= "\" />";
+        $content .= '" title="';
+        $content .= esc_attr( get_bloginfo('name', 'display') );
+        $content .= ' ' . __('Posts RSS feed', 'thematic');
+        $content .= '" />';
         $content .= "\n";
         echo apply_filters('thematic_rss', $content);
     }
@@ -333,12 +333,12 @@ function thematic_show_commentsrss() {
     $display = TRUE;
     $display = apply_filters('thematic_show_commentsrss', $display);
     if ($display) {
-        $content = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"";
+        $content = '<link rel="alternate" type="application/rss+xml" href="';
         $content .= get_feed_link( 'comments_rss2_url' );
-        $content .= "\" title=\"";
-        $content .= esc_html( get_bloginfo('name') );
-        $content .= " " . __('Comments RSS feed', 'thematic');
-        $content .= "\" />";
+        $content .= '" title="';
+        $content .= esc_attr( get_bloginfo('name') );
+        $content .= ' ' . __('Comments RSS feed', 'thematic');
+        $content .= '" />';
         $content .= "\n";
         echo apply_filters('thematic_commentsrss', $content);
     }
@@ -357,9 +357,9 @@ function thematic_show_pingback() {
     $display = TRUE;
     $display = apply_filters('thematic_show_pingback', $display);
     if ($display) {
-        $content = "<link rel=\"pingback\" href=\"";
+        $content = '<link rel="pingback" href="';
         $content .= get_bloginfo('pingback_url');
-        $content .= "\" />";
+        $content .= '" />';
         $content .= "\n";
         echo apply_filters('thematic_pingback_url',$content);
     }
@@ -401,7 +401,7 @@ if ( function_exists('childtheme_override_head_scripts') )  {
     function thematic_head_scripts() {
     	
     	// load comment reply script on posts and pages when option is set and check for deprecated filter
-    	if ( is_singular() && get_option( 'thread_comments' ) ) 
+    	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 			has_filter( 'thematic_show_commentreply' ) ? thematic_show_commentreply() : wp_enqueue_script( 'comment-reply' );
 		
 		// load jquery and superfish associated plugins when theme support is active and not in admin
@@ -606,7 +606,7 @@ if ( function_exists('childtheme_override_blogdescription') )  {
      * Override: childtheme_override_blogdescription
      */
     function thematic_blogdescription() {
-    	$blogdesc = '"blog-description">' . get_bloginfo('description');
+    	$blogdesc = '"blog-description">' . get_bloginfo('description', 'display');
     	if ( is_home() || is_front_page() ) { 
         	echo "\t<h1 id=$blogdesc</h1>\n\n";
         } else {	
@@ -657,7 +657,7 @@ if ( function_exists('childtheme_override_access') )  {
     
     <div id="access">
     
-    	<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
+    	<div class="skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip navigation to the content', 'thematic' ); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
     	
     	<?php 
     	if ( ( function_exists("has_nav_menu") ) && ( has_nav_menu( apply_filters('thematic_primary_menu_id', 'primary-menu') ) ) ) {

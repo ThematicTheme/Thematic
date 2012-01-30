@@ -193,7 +193,7 @@ function thematic_cancelreply_text() {
  * Located in comments.php
  */
 function thematic_commentbutton_text() {
-    $content = __('Post Comment', 'thematic');
+    $content = esc_attr( __('Post Comment', 'thematic') );
     return apply_filters( 'thematic_commentbutton_text', $content );
 }
 

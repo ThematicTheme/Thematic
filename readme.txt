@@ -30,7 +30,8 @@ Features:
 == Changelog ==
 
 = 0.9.8 =
-* Moved: enqueue of comment repy scipt to <code>thematic_head_scripts()</code>
+* Changed: thematic_commentbutton_text() to return escaped cotent
+* Moved: enqueue of comment reply script to <code>thematic_head_scripts()</code>
 * Deprecated: thematic_show_commentreply;
 * Replaced: <code>get_bloginfo(*)</code> for Theme Review required functions
 * Moved: <code>thematic_create_contenttype()</code> within header.php for Theme Review compliance

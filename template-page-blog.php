@@ -19,7 +19,7 @@
  */
 
 	// Providing deprecated file notice to be seen when WP_DEBUG is true
-	_deprecated_file( sprintf( __( 'The template %1$s' ) . ':', basename(__FILE__) ), '0.9.8', null, __('You can include a', 'thematic') . ' home.php ' . __('in a childtheme', 'thematic') . '.') ;
+	_deprecated_file( sprintf( __( 'The template %s', 'thematic' ) . ':', basename(__FILE__) ), '0.9.8', null, sprintf( __( 'You can include a %s in a childtheme', 'thematic' ) . '.', 'home.php' ) );
 
     // calling the header.php
     get_header();

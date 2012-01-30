@@ -348,7 +348,7 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '<h1 class="page-title">';
 				$content .= __('Search Results for:', 'thematic');
 				$content .= ' <span id="search-terms">';
-				$content .= esc_html(stripslashes($_GET['s']));
+				$content .= get_search_query();
 				$content .= '</span></h1>';
 		} elseif (is_tag()) {
 				$content .= '<h1 class="page-title">';
@@ -733,7 +733,7 @@ if (function_exists('childtheme_override_single_post'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+						<?php wp_link_pages('before=<div class="page-link">' . __('Pages:', 'thematic') . '&after=</div>') ?>
 						
 					</div><!-- .entry-content -->
 					
@@ -1323,7 +1323,7 @@ function thematic_404() {
 } // end thematic_404
 
 
-if (function_exists('childtheme_override_404_content'))  {
+if ( function_exists('childtheme_override_404_content') )  {
 	/**
 	 * @ignore
 	 */
@@ -1341,19 +1341,19 @@ if (function_exists('childtheme_override_404_content'))  {
   			<?php thematic_postheader(); ?>
   			
 			<div class="entry-content">
-				<p><?php _e('Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'thematic') ?></p>
+				<p><?php _e( 'Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'thematic' ) ?></p>
 			</div><!-- .entry-content -->
 			
-			<form id="error404-searchform" method="get" action="<?php echo home_url() ?>/">
+			<form id="error404-searchform" method="get" action="<?php echo home_url(); ?>/">
 				<div>
-					<input id="error404-s" name="s" type="text" value="<?php echo esc_html(stripslashes(get_query_var('s'))) ?>" size="40" />
-					<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php _e('Find', 'thematic') ?>" />
+					<input id="error404-s" name="s" type="text" value="<?php the_search_query(); ?>" size="40" />
+					<input id="error404-searchsubmit" name="searchsubmit" type="submit" value="<?php esc_attr_e( 'Find', 'thematic' ); ?>" />
 				</div>
 			</form>
 <?php }
 } // end 404_content
 
-add_action('thematic_404','thematic_404_content');
+add_action( 'thematic_404','thematic_404_content' );
 
 
 /**

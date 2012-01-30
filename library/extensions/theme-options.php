@@ -276,7 +276,7 @@ function thematic_do_opt_page() { ?>
 			// WordPress 3.0
 			?>
 			 	<p class="submit">
- 					<input name="submit" type="submit" class="button-primary" value="<?php esc_attr_e('Save Changes') ?>" />
+ 					<input name="submit" type="submit" class="button-primary" value="<?php esc_attr_e('Save Changes', 'thematic') ?>" />
  				</p>
  			<?php
 			}

@@ -62,13 +62,13 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 * 
 		 * Used to get title, version, author, URI of the parent and the child theme.
 		 */
-		$themeData = get_theme_data( TEMPLATEPATH . '/style.css' );
+		$themeData = get_theme_data(  get_template_directory() . '/style.css' );
 		$thm_version = trim( $themeData['Version'] );
 		
 		if (!$thm_version)
 			$thm_version = "unknown";
 
-		$ct = get_theme_data( STYLESHEETPATH . '/style.css' );
+		$ct = get_theme_data(  get_stylesheet_directory() . '/style.css' );
 		$templateversion = trim( $ct['Version'] );
 		
 		if ( !$templateversion )
