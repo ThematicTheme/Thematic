@@ -2,84 +2,81 @@
 /**
  * Header Template
  *
- * This template calls a series of functions that outputs the head of the document.
+ * This template calls a series of functions that output the head tag of the document.
  * The body and div #main elements are opened at the end of this file. 
  * 
  * @package Thematic
  * @subpackage Templates
  */
  
-	// Creating the doctype
+	// Create doctype
 	thematic_create_doctype();
 	echo " ";
 	language_attributes();
 	echo ">\n";
 	
-	// Creating the head profile
+	// Opens the head tag 
 	thematic_head_profile();
 	
-	// Creating the content type
+	// Create the meta content type
 	thematic_create_contenttype();
 	
-	// Creating the doc title
+	// Create the title tag 
 	thematic_doctitle();
 	
-	// Creating the description
+	// Create the meta description
 	thematic_show_description();
 	
-	// Creating the robots tags
+	// Create the tag <meta name="robots"  
 	thematic_show_robots();
 	
-	// Loading the stylesheet
-	thematic_create_stylesheet();
-	
-	// check for defined constant to enable Thematic's feedlinks functions
+	// Constant defined true by default 
 	if (THEMATIC_COMPATIBLE_FEEDLINKS) {    
 		// Creating the internal RSS links
 		thematic_show_rss();
 	
-		// Creating the comments RSS links
+		// Create comments RSS links
 		thematic_show_commentsrss();
 	}
 	
-	// Creating the pingback adress
+	// Create pingback adress
 	thematic_show_pingback();
 	
-	// Enables comment threading
-	thematic_show_commentreply();
-	
-	// Calling WordPress' header action hook
+	/* The function wp_head() loads Thematic's stylesheet and scripts.
+	 * Calling wp_head() is required to provide plugins and child themes
+	 * the ability to insert markup within the <head> tag.
+	 */
 	wp_head();
 ?>
 </head>
 
 <?php 
-	// outputs the body element and dynamic body classes
+	// Create the body element and dynamic body classes
 	thematic_body();
 
-	// action hook for placing content before opening #wrapper
+	// Action hook to place content before opening #wrapper
 	thematic_before(); 
 
-	// filter to control the output of the wrapping element that follows the body
+	// Filter provided for altering output of wrapping element follows the body tag
 	if (apply_filters('thematic_open_wrapper', true)) {
   	  echo ('<div id="wrapper" class="hfeed">' . "\n");
 	}
 
-	// action hook for placing content above the theme header
+	// Action hook for placing content above the theme header
 	thematic_aboveheader(); 
 ?>
    
 	<div id="header">
         
         <?php 
-			// action hook creating the theme header
+			// Action hook creating the theme header
 			thematic_header();
         ?>
         
 	</div><!-- #header-->
     
     <?php
-		// action hook for placing content below the theme header
+		// Action hook for placing content below the theme header
 		thematic_belowheader();
     ?>
 	<div id="main">

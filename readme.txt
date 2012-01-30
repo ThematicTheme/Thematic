@@ -24,16 +24,20 @@ Features:
 * Multiple, easy to implement, bulletproof layout options for 2, or 3 column designs
 * Modular CSS with pre-packaged resets and basic typography
 * Dynamic post and body classes make it a hyper-canvas for CSS artists
-* Editable footer text—remove the theme credit without harming the theme
+* Editable footer text to remove the theme credit without harming the theme
 * Options for multi-author blogs
 
 == Changelog ==
 
-= 0.9.8ß =
+= 0.9.8 =
+* Moved: enqueue of comment repy scipt to <code>thematic_head_scripts()</code>
+* Deprecated: thematic_show_commentreply;
 * Replaced: <code>get_bloginfo(*)</code> for Theme Review required functions
 * Moved: <code>thematic_create_contenttype()</code> within header.php for Theme Review compliance
 * Removed: <code>wp_register_*</code> because <code>wp_enqueue_*</code> registers * when the src param is set for <code>_scripts</code> and <code>_styles</code>
-* Changed: the action hook for <code>thematic_head_scripts()</code> from <code>wp_head</code> to <code>wp_enqueue_scripts</code>
+* Moved: Function <code>thematic_head_scripts</code> to header.php
+* Changed: the action hook for <code>thematic_head_scripts()</code> and <code>thematic_create_stylesheet()</code> to <code>wp_enqueue_scripts</code>
+* Changed: Function <code>thematic_head_scripts</code> to <code>wp_enqueue_script</code>.
 * Fixed: Valid CSS support for ie7 in default.css for hr color
 * Deprecated: template-page-blog.php in favor of home.php
 * Fixed: CSS to comply with WP theme unit tests: images, clearing floats, etc.
@@ -87,8 +91,7 @@ Features:
 * Added: Add <code>add_theme_support('minorbrowserversion_ch')</code> to display major and minor Chrome version in the body class.
 * Changed: By default only the major browser version will be used in the body class.
 * Added: Filter <code>thematic_doctitle_separator</code>.
-* Fixed: Thematic Options is working again.
-* Changed: Function <code>thematic_head_scripts</code> to <code>wp_enqueue_script</code>. 
+* Fixed: Thematic Options is working again. 
 * Changed: Filter <code>thematic_dropdown_options</code>.
 * Removed: Variable <code>thematic_use_superfish</code>. 
 * Changed: Function <code>thematic_create_stylesheet</code> to <code>wp_enqueue_style</code>.

@@ -8,7 +8,7 @@
   
 
 /**
- * Display the DOCTYPE section
+ * Display the DOCTYPE
  * 
  * Filter: thematic_create_doctype
  */
@@ -31,7 +31,7 @@ function thematic_head_profile() {
 
 
 /**
- * Display the content-type section
+ * Display the META content-type
  * 
  * Filter: thematic_create_contenttype
  */
@@ -71,13 +71,13 @@ if ( function_exists('childtheme_override_doctitle') )  {
 	/**
 	 * Display the content of the title tag
 	 * 
-	 * Located in header.php. Credits: Tarski Theme
+	 * Located in header.php Credits: Tarski Theme
 	 * 
 	 * Override: childtheme_override_doctitle
 	 * Filter: thematic_doctitle_separator
 	 * Filter: thematic_doctitle
 	 */
-function thematic_doctitle() {
+	function thematic_doctitle() {
 		$site_name = get_bloginfo('name');
 	    $separator = apply_filters('thematic_doctitle_separator', '|');
 	        	
@@ -213,31 +213,31 @@ function thematic_create_description() {
       		if ( have_posts() ) {
           		while ( have_posts() ) {
             		the_post();
-						if ( thematic_the_excerpt() == "" ) {
-                    		if ( thematic_use_autoexcerpt() ) {
-								$content = '<meta name="description" content="';
-                        		$content .= thematic_excerpt_rss();
-                        		$content .= '" />';
-                        		$content .= "\n";
-                    		}
-                		} else {
-                    		if ( thematic_use_excerpt() ) {
-                        		$content = '<meta name="description" content="';
-                        		$content .= thematic_the_excerpt();
-                        		$content .= '" />';
-                        		$content .= "\n";
-                    		}
-                		}
-            		}
-        		}
-    		} elseif ( is_home() || is_front_page() ) {
-        		$content = '<meta name="description" content="';
-        		$content .= get_bloginfo( 'description' );
-        		$content .= '" />';
-        		$content .= "\n";
-    		}
-    		echo apply_filters ('thematic_create_description', $content);
-		}
+					if ( thematic_the_excerpt() == "" ) {
+                        if ( thematic_use_autoexcerpt() ) {
+					    	$content = '<meta name="description" content="';
+                    		$content .= thematic_excerpt_rss();
+                    		$content .= '" />';
+                    		$content .= "\n";
+                        }
+                	} else {
+                        if ( thematic_use_excerpt() ) {
+                    		$content = '<meta name="description" content="';
+                    		$content .= thematic_the_excerpt();
+                    		$content .= '" />';
+                    		$content .= "\n";
+                        }
+                	}
+            	}
+        	}
+        } elseif ( is_home() || is_front_page() ) {
+    		$content = '<meta name="description" content="';
+    		$content .= get_bloginfo( 'description' );
+    		$content .= '" />';
+    		$content .= "\n";
+        }
+        echo apply_filters ('thematic_create_description', $content);
+	}
 } // end thematic_create_description
 
 
@@ -296,19 +296,6 @@ function thematic_show_robots() {
         thematic_create_robots();
     }
 } // end thematic_show_robots
-
-
-/**
- * Display link to stylesheet
- * 
- * Located in header.php. Register and enqueue Thematic style.css
- * 
- * @todo Add stylesheet to the wp_head hook instead of called directly in header
- */
-function thematic_create_stylesheet() {
-    wp_enqueue_style('thematic_style', get_stylesheet_uri() );
-}
-
 
 /**
  * Display links to RSS feed
@@ -378,23 +365,61 @@ function thematic_show_pingback() {
     }
 }
 
-
 /**
- * Switch adding the comment-reply script
+ * Add the default stylesheet to the head of the document.
  * 
- * Default: ON
+ * Register and enqueue Thematic style.css
  * 
- * Filter: thematic_show_commentreply
- * 
- * @todo add comment reply script to the wp_head hook instead of enqueuing directly
+ * @todo check WP versions > 3.3 for addiytion of wp_enqueue_styles
  */
-function thematic_show_commentreply() {
-    $display = TRUE;
-    $display = apply_filters('thematic_show_commentreply', $display);
-    if ($display)
-        if ( is_singular() ) 
-            wp_enqueue_script('comment-reply'); // support for comment threading
+function thematic_create_stylesheet() {
+	wp_enqueue_style( 'thematic_style', get_stylesheet_uri() );
 }
+
+add_action('wp_enqueue_scripts','thematic_create_stylesheet');
+
+if ( function_exists('childtheme_override_head_scripts') )  {
+    /**
+     * @ignore
+     */
+    function thematic_head_scripts() {
+    	childtheme_override_head_scripts();
+    }
+} else {
+    /**
+     * Adds comment reply and navigation menu scripts to the head of the document.
+     *
+     * Child themes should use wp_dequeue_scripts to remove individual scripts.
+     * Larger changes can be made using the override.
+     *
+     * Override: childtheme_override_head_scripts <br>
+     *
+     * For Reference: {@link http://users.tpg.com.au/j_birch/plugins/superfish/#getting-started Superfish Jquery Plugin}
+     *
+     * @since 0.9.8
+     */
+    function thematic_head_scripts() {
+    	
+    	// load comment reply script on posts and pages when option is set and check for deprecated filter
+    	if ( is_singular() && get_option( 'thread_comments' ) ) 
+			has_filter( 'thematic_show_commentreply' ) ? thematic_show_commentreply() : wp_enqueue_script( 'comment-reply' );
+		
+		// load jquery and superfish associated plugins when theme support is active and not in admin
+    	if ( !is_admin() && current_theme_supports('thematic_superfish') ) {
+			$scriptdir = get_template_directory_uri();
+			$scriptdir .= '/library/scripts/';
+			wp_enqueue_script('jquery');
+			wp_enqueue_script('hoverIntent');
+		
+			wp_enqueue_script('superfish', $scriptdir . 'superfish.js', array('jquery') );
+			wp_enqueue_script('supersubs', $scriptdir . 'supersubs.js', array('jquery'));
+			wp_enqueue_script('thematic-dropdowns', apply_filters('thematic_dropdown_options', $scriptdir . 'thematic-dropdowns.js') , array('jquery', 'superfish' ));
+     	
+     	}
+ 	}
+ }
+
+add_action('wp_enqueue_scripts','thematic_head_scripts');
 
 
 /**

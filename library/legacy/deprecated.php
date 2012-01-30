@@ -42,3 +42,23 @@ function is_sidebar_active( $index ){
 	return is_active_sidebar( $index );
 
 }
+
+/**
+ * Switch adding the comment-reply script 
+ * 
+ * Removed in favor of hooking into wp_enqueue_scripts over calling directly in header.php
+ * Note that in 0.9.8 the comment reply script is still enqueued by default.
+ * Use wp_dequeue_script('comment-reply') to remove the script instead of using the filter: thematic_show_commentreply.
+ *
+ * @deprecated 0.9.8
+ */
+function thematic_show_commentreply() {
+	_deprecated_function( __FUNCTION__, '0.9.8' );
+
+    $display = TRUE;
+    $display = apply_filters('thematic_show_commentreply', $display);
+    if ($display)
+        if ( is_singular() ) 
+            wp_enqueue_script('comment-reply'); 
+}
+
