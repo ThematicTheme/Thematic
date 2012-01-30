@@ -82,6 +82,14 @@ if (function_exists('childtheme_override_subsidiaries'))  {
 	 */
 	function thematic_subsidiaries() {
       	 widget_area_subsidiaries();
+		// action hook for placing content above the subsidiary widget areas
+		thematic_abovesubasides();
+		
+		// action hook for creating the subsidiary widget areas
+		widget_area_subsidiaries();
+		
+		// action hook for placing content below subsidiary widget areas
+		thematic_belowsubasides();
    	}
 }
 
