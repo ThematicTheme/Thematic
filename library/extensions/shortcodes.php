@@ -2,167 +2,145 @@
 /**
  * Shortcodes
  *
+ * A set of shortcodes that get registered with the 
+ * WordPress {@link http://codex.wordpress.org/Shortcode_API ShortCode API}.
+ *
+ * These can be used display information such as attributitive links 
+ * for the framework, the active child theme, and more.
+ *
  * @package ThematicCoreLibrary
  * @subpackage Shortcodes
- *
- * @todo review functions and revisit documentation
  */
 
 
 /**
- * thmfooter_wp_link function.
- * 
+ * Display link to WP.org.
  */
-function thmfooter_wp_link() {
+function thematic_shortcode_wp_link() {
     return '<a class="wp-link" href="http://WordPress.org/" title="WordPress" rel="generator">WordPress</a>';
 }
-add_shortcode('wp-link', 'thmfooter_wp_link');		  
+add_shortcode('wp-link', 'thematic_shortcode_wp_link');		  
 
 		  
 /**
- * thmfooter_theme_link function.
- * 
+ * Display link to Thematic.
  */
-function thmfooter_theme_link() {
+function thematic_shortcode_framework_link() {
     $themelink = '<a class="theme-link" href="http://themeshaper.com/thematic/" title="Thematic Theme Framework" rel="designer">Thematic Theme Framework</a>';
     return apply_filters('thematic_theme_link',$themelink);
 }
-add_shortcode('theme-link', 'thmfooter_theme_link');	
+add_shortcode('theme-link', 'thematic_shortcode_framework_link');	
 
 
 /**
- * thmfooter_login_link function.
- * 
+ * Display link to wp-admin of the site.
  */
-function thmfooter_login_link() {
+function thematic_shortcode_login_link() {
     if ( ! is_user_logged_in() )
         $link = '<a href="' . site_url('/wp-login.php') . '">' . __('Login','thematic') . '</a>';
     else
     $link = '<a href="' . wp_logout_url() . '">' . __('Logout','thematic') . '</a>';
     return apply_filters('loginout', $link);
 }
-add_shortcode('loginout-link', 'thmfooter_login_link');		  	  
+add_shortcode('loginout-link', 'thematic_shortcode_login_link');		  	  
 
 
 /**
- * thmfooter_blog_title function.
- * 
+ * Display the site title.
  */
-function thmfooter_blog_title() {
+function thematic_shortcode_blog_title() {
 	return '<span class="blog-title">' . get_bloginfo('name', 'display') . '</span>';
 }
-add_shortcode('blog-title', 'thmfooter_blog_title');
+add_shortcode('blog-title', 'thematic_shortcode_blog_title');
 
 
 /**
- * thmfooter_blog_link function.
- *
+ * Display the site title with a link to the site.
  */
-function thmfooter_blog_link() {
+function thematic_shortcode_blog_link() {
 	return '<a href="' . site_url('/') . '" title="' . esc_attr( get_bloginfo('name', 'display') ) . '" >' . get_bloginfo('name', 'display') . "</a>";
 }
-add_shortcode('blog-link', 'thmfooter_blog_link');
+add_shortcode('blog-link', 'thematic_shortcode_blog_link');
 
 
 /**
- * thmfooter_year function.
- * 
+ * Display the current year.
  */
-function thmfooter_year() {   
+function thematic_shortcode_year() {   
     return '<span class="the-year">' . date('Y') . '</span>';
 }
-add_shortcode('the-year', 'thmfooter_year');
-
-
-
-
-
-// Providing information about Thematic
+add_shortcode('the-year', 'thematic_shortcode_year');
 
 
 /**
- * theme_name function.
- * 
+ * Display the name of the parent theme.
  */
-function theme_name() {
+function thematic_shortcode_theme_name() {
     return THEMENAME;
 }
-add_shortcode('theme-name', 'theme_name');
+add_shortcode('theme-name', 'thematic_shortcode_theme_name');
 
 
 /**
- * theme_author function.
- * 
+ * Display the name of the parent theme author.
  */
-function theme_author() {
+function thematic_shortcode_theme_author() {
     return THEMEAUTHOR;
 }
-add_shortcode('theme-author', 'theme_author');
+add_shortcode('theme-author', 'thematic_shortcode_theme_author');
 
 
 /**
- * theme_uri function.
- * 
+ * Display the URI of the parent theme.
  */
-function theme_uri() {
+function thematic_shortcode_theme_uri() {
     return THEMEURI;
 }
-add_shortcode('theme-uri', 'theme_uri');
+add_shortcode('theme-uri', 'thematic_shortcode_theme_uri');
 
 
 /**
- * theme_version function.
- * 
+ * Display the version no. of the parent theme.
  */
-function theme_version() {
+function thematic_shortcode_theme_version() {
     return THEMATICVERSION;
 }
-add_shortcode('theme-version', 'theme_version');
+add_shortcode('theme-version', 'thematic_shortcode_theme_version');
 
-
-
-
-
-// Providing information about the child theme
 
 
 /**
- * child_name function.
- * 
+ * Display the name of the child theme.
  */
-function child_name() {
+function thematic_shortcode_child_name() {
     return TEMPLATENAME;
 }
-add_shortcode('child-name', 'child_name');
+add_shortcode('child-name', 'thematic_shortcode_child_name');
 
 
 /**
- * child_author function.
- * 
+ * Display the name of the child theme author.
  */
-function child_author() {
+function thematic_shortcode_child_author() {
     return TEMPLATEAUTHOR;
 }
-add_shortcode('child-author', 'child_author');
+add_shortcode('child-author', 'thematic_shortcode_child_author');
 
 
 /**
- * child_uri function.
- * 
+ * Display the URI of the child theme.
  */
-function child_uri() {
+function thematic_shortcode_child_uri() {
     return TEMPLATEURI;
 }
-add_shortcode('child-uri', 'child_uri');
+add_shortcode('child-uri', 'thematic_shortcode_child_uri');
 
 
 /**
- * child_version function.
+ * Display the version no. of the child theme.
  * 
  */
-function child_version() {
+function thematic_shortcode_child_version() {
     return TEMPLATEVERSION;
 }
-add_shortcode('child-version', 'child_version');
-
-?>
+add_shortcode('child-version', 'thematic_shortcode_child_version');
