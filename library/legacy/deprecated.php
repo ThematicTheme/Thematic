@@ -1,6 +1,6 @@
 <?php
 /**
- * Deprecated Fuctions
+ * Deprecated Functions
  *
  * @package ThematicLegacy
  */
@@ -26,6 +26,7 @@ function thm_bloginfo($command = '', $echo = FALSE) {
     }
 }
 
+
 /**
  * Function for testing, if a sidebar has registered widgets.
  *
@@ -42,6 +43,7 @@ function is_sidebar_active( $index ){
 	return is_active_sidebar( $index );
 
 }
+
 
 /**
  * Switch adding the comment-reply script 
@@ -62,3 +64,158 @@ function thematic_show_commentreply() {
             wp_enqueue_script('comment-reply'); 
 }
 
+
+/**
+ * Register action hook: widget_area_primary_aside
+ * 
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function widget_area_primary_aside() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_primary_aside()' );
+	
+	thematic_widget_area_primary_aside();
+}
+
+
+/**
+ * Register action hook: widget_area_secondary_aside 
+ *
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function widget_area_secondary_aside() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_secondary_aside()' );
+	
+    thematic_widget_area_secondary_aside();
+}
+
+
+/**
+ * Register action hook: widget_area_index_top
+ *
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function widget_area_index_top() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_index_top()' );
+
+    thematic_widget_area_index_top();
+}
+
+
+/**
+ * Register action hook: widget_area_index_insert
+ *
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function widget_area_index_insert() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_index_insert()' );
+	
+	thematic_widget_area_index_insert();
+}
+
+
+/**
+ * Register action hook: widget_area_index_bottom 
+ *
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */	
+function widget_area_index_bottom() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_index_bottom()' );
+	
+    thematic_widget_area_index_bottom();
+}
+
+
+/**
+ * Register action hook: widget_area_single_top 
+ *
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function widget_area_single_top() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_single_top()' );
+
+    thematic_widget_area_single_top();
+}
+
+
+/**
+ * Register action hook: widget_area_single_insert 
+ *
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function widget_area_single_insert() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_single_insert()' );
+
+    thematic_widget_area_single_insert();
+}
+
+
+/**
+ * Register action hook: widget_area_single_bottom 
+ *
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function widget_area_single_bottom() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_single_bottom()' );
+
+    thematic_widget_area_single_bottom();
+}
+
+
+/**
+ * Register action hook: widget_area_page_top 
+ *
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8	 
+ */
+function widget_area_page_top() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_page_top()' );
+	
+	thematic_widget_area_page_top();
+}
+	
+	
+/**
+ * Register action hook: widget_area_page_bottom 
+ *
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8	 
+ */
+function widget_area_page_bottom() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_page_bottom()' );
+	
+	thematic_widget_page_bottom();
+}
+
+
+/**
+ * Register action hook: widget_area_subsidiaries
+ * 
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+ function widget_area_subsidiaries() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_subsidiaries()' );
+	
+	thematic_widget_area_subsidiaries();
+}
+
+    

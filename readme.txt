@@ -30,6 +30,8 @@ Features:
 == Changelog ==
 
 = 0.9.8 =
+* Added: thematic_widget_area_*() in a function namespacing migration from widget_area_*() 
+* Deprecated: widget_area_*() functions
 * Changed: thematic_commentbutton_text() to return escaped cotent
 * Moved: enqueue of comment reply script to <code>thematic_head_scripts()</code>
 * Deprecated: thematic_show_commentreply;
