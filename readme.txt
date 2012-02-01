@@ -30,11 +30,15 @@ Features:
 == Changelog ==
 
 = 0.9.8 =
-* Added: thematic_widget_area_*() in a function namespacing migration from widget_area_*() 
-* Deprecated: widget_area_*() functions
-* Changed: thematic_commentbutton_text() to return escaped cotent
+* Changed: all of the fuunctions in shortcodes.php to namspace with <code>thematic_*</code>
+* Changed: <code>thematic_page_title()</code> to remove 'Blog Archives' 
+* Removed: <code>widget_thematic_rsslinks_control()</code>
+* Changed: Namespacing of classes from <code>THM_*</code> to <code>Thematic_*</code>
+* Changed: Namespacing of functions from <code>widget_area_*()</code> to <code>thematic_widget_area_*()</code>  
+* Deprecated: <code>widget_area_*()</code> functions <code>list_bookmarks_args(), list_comments_arg(), pageGetPageNo()</code>
+* Changed: <code>thematic_commentbutton_text()</code> to return escaped content
 * Moved: enqueue of comment reply script to <code>thematic_head_scripts()</code>
-* Deprecated: thematic_show_commentreply;
+* Deprecated: <code>thematic_show_commentreply()</code>
 * Replaced: <code>get_bloginfo(*)</code> for Theme Review required functions
 * Moved: <code>thematic_create_contenttype()</code> within header.php for Theme Review compliance
 * Removed: <code>wp_register_*</code> because <code>wp_enqueue_*</code> registers * when the src param is set for <code>_scripts</code> and <code>_styles</code>
