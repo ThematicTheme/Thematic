@@ -46,20 +46,6 @@ function thematic_create_contenttype() {
 }
 
 
-/**
- * Get the page number
- * 
- * Adapted from {@link http://efficienttips.com/wordpress-seo-title-description-tag/}
- * 
- * @todo add namespacing to pageGetPageNo
- */
-function pageGetPageNo() {
-    if ( get_query_var('paged') ) {
-        print ' | Page ' . get_query_var('paged');
-    }
-}
-
-
 if ( function_exists('childtheme_override_doctitle') )  {
 	/**
 	 * @ignore

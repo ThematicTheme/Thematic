@@ -52,7 +52,7 @@
 		
 						<ul id="links-page" class="xoxo">
     	                
-    	                    <?php wp_list_bookmarks(list_bookmarks_args() ); ?>
+    	                    <?php wp_list_bookmarks( thematic_list_bookmarks_args() ); ?>
     	                    
 						</ul>
     	                

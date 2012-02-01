@@ -304,17 +304,17 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 // Add browser CSS class to the end (queuing through priority) of the body classes 
 
 if ( ! ( THEMATIC_COMPATIBLE_BODY_CLASS ) ) {
-	add_filter( 'body_class', 'browser_class_names', 20 );
+	add_filter( 'body_class', 'thematic_browser_class_names', 20 );
 	}
 	
 if ( apply_filters( 'thematic_show_bc_browser', TRUE ) ) {
-	add_filter( 'thematic_body_class', 'browser_class_names', 20 ); 
+	add_filter( 'thematic_body_class', 'thematic_browser_class_names', 20 ); 
 	}
 
 
 
 
-function browser_class_names($classes) {
+function thematic_browser_class_names($classes) {
 	// add 'class-name' to the $classes array
 	// $classes[] = 'class-name';
 	$browser = $_SERVER[ 'HTTP_USER_AGENT' ];
@@ -581,4 +581,5 @@ if ( function_exists( 'childtheme_override_date_classes' ) )  {
 }
 
 // Remember: Thematic, like The Sandbox, is for play.
+
 ?>

@@ -137,7 +137,7 @@ function thematic_multiplecomments_text() {
  * 
  * Creates the list comments arguments
  */
-function list_comments_arg() {
+function thematic_list_comments_arg() {
 	$content = 'type=comment&callback=thematic_comments';
 	return apply_filters('list_comments_arg', $content);
 }
@@ -276,3 +276,5 @@ function thematic_include_comments() {
 }
 
 add_action('thematic_comments_template','thematic_include_comments',5);
+
+?>

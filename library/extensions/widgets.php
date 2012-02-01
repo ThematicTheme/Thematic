@@ -35,9 +35,9 @@ function thematic_after_title() {
  *
  * @since 0.9.6.3
  */
-class THM_Widget_Search extends WP_Widget {
+class Thematic_Widget_Search extends WP_Widget {
 
-	function THM_Widget_Search() {
+	function Thematic_Widget_Search() {
 		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'thematic') );
 		$this->WP_Widget('search', __('Search', 'thematic'), $widget_ops);
 	}
@@ -80,9 +80,9 @@ class THM_Widget_Search extends WP_Widget {
  *
  * @since 0.9.6.3
  */
-class THM_Widget_Meta extends WP_Widget {
+class Thematic_Widget_Meta extends WP_Widget {
 
-	function THM_Widget_Meta() {
+	function Thematic_Widget_Meta() {
 		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'thematic') );
 		$this->WP_Widget('meta', __('Meta', 'thematic'), $widget_ops);
 	}
@@ -125,9 +125,9 @@ class THM_Widget_Meta extends WP_Widget {
  *
  * @since 0.9.6.3
  */
-class THM_Widget_RSSlinks extends WP_Widget {
+class Thematic_Widget_RSSlinks extends WP_Widget {
 
-	function THM_Widget_RSSlinks() {
+	function Thematic_Widget_RSSlinks() {
 		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'thematic') );
 		$this->WP_Widget( 'rss-links', __('RSS Links', 'thematic'), $widget_ops);
 	}
@@ -161,24 +161,6 @@ class THM_Widget_RSSlinks extends WP_Widget {
 			<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'thematic'); ?></label> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 <?php
 	}
-}
-
-
-// Widget: RSS links; element controls for customizing text within Widget plugin
-function widget_thematic_rsslinks_control() {
-	$options = $newoptions = get_option('widget_thematic_rsslinks');
-	if ( $_POST["rsslinks-submit"] ) {
-		$newoptions['title'] = strip_tags(stripslashes($_POST["rsslinks-title"]));
-	}
-	if ( $options != $newoptions ) {
-		$options = $newoptions;
-		update_option('widget_thematic_rsslinks', $options);
-	}
-	$title = htmlspecialchars($options['title'], ENT_QUOTES);
-?>
-			<p><label for="rsslinks-title"><?php _e('Title:', 'thematic'); ?> <input style="width: 250px;" id="rsslinks-title" name="rsslinks-title" type="text" value="<?php echo $title; ?>" /></label></p>
-			<input type="hidden" id="rsslinks-submit" name="rsslinks-submit" value="1" />
-<?php
 }
 
 ?>

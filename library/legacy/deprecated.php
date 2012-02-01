@@ -16,9 +16,7 @@
  * @deprecated 0.9.6.1
  */
 function thm_bloginfo($command = '', $echo = FALSE) {
-
 	_deprecated_function( __FUNCTION__, '0.9.6.1', 'bloginfo() or get_bloginfo()' );
-
     if ($echo) {
 	   bloginfo($command);
     } else {
@@ -37,11 +35,8 @@ function thm_bloginfo($command = '', $echo = FALSE) {
  * @deprecated 0.9.7.3
  */
 function is_sidebar_active( $index ){
-
 	_deprecated_function( __FUNCTION__, '0.9.7.3', 'is_active_sidebar()' );
-
 	return is_active_sidebar( $index );
-
 }
 
 
@@ -56,12 +51,48 @@ function is_sidebar_active( $index ){
  */
 function thematic_show_commentreply() {
 	_deprecated_function( __FUNCTION__, '0.9.8' );
-
     $display = TRUE;
     $display = apply_filters('thematic_show_commentreply', $display);
     if ($display)
         if ( is_singular() ) 
             wp_enqueue_script('comment-reply'); 
+}
+
+/**
+ * Get the page number fro title tag
+ *
+ * This has been integrated into thematic_doctitle()
+ *
+ * @deprecated 0.9.8
+ */
+function pageGetPageNo() {
+	_deprecated_function( __FUNCTION__, '0.9.8' );
+    if ( get_query_var('paged') )
+        print ' | Page ' . get_query_var('paged');
+}
+
+/**
+ * Filter: list_comments_arg
+ * 
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function list_comments_arg() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_list_comments_arg');
+	thematic_list_comments_arg();
+}
+
+/**
+ * Create the arguments for wp_list_bookmarks in links.php
+ * 
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function list_bookmarks_args() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_list_bookmarks_args()' );
+	thematic_list_bookmarks_args();
 }
 
 
@@ -74,7 +105,6 @@ function thematic_show_commentreply() {
  */
 function widget_area_primary_aside() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_primary_aside()' );
-	
 	thematic_widget_area_primary_aside();
 }
 
@@ -88,7 +118,6 @@ function widget_area_primary_aside() {
  */
 function widget_area_secondary_aside() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_secondary_aside()' );
-	
     thematic_widget_area_secondary_aside();
 }
 
@@ -102,7 +131,6 @@ function widget_area_secondary_aside() {
  */
 function widget_area_index_top() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_index_top()' );
-
     thematic_widget_area_index_top();
 }
 
@@ -116,7 +144,6 @@ function widget_area_index_top() {
  */
 function widget_area_index_insert() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_index_insert()' );
-	
 	thematic_widget_area_index_insert();
 }
 
@@ -130,7 +157,6 @@ function widget_area_index_insert() {
  */	
 function widget_area_index_bottom() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_index_bottom()' );
-	
     thematic_widget_area_index_bottom();
 }
 
@@ -144,7 +170,6 @@ function widget_area_index_bottom() {
  */
 function widget_area_single_top() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_single_top()' );
-
     thematic_widget_area_single_top();
 }
 
@@ -158,7 +183,6 @@ function widget_area_single_top() {
  */
 function widget_area_single_insert() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_single_insert()' );
-
     thematic_widget_area_single_insert();
 }
 
@@ -172,7 +196,6 @@ function widget_area_single_insert() {
  */
 function widget_area_single_bottom() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_single_bottom()' );
-
     thematic_widget_area_single_bottom();
 }
 
@@ -186,7 +209,6 @@ function widget_area_single_bottom() {
  */
 function widget_area_page_top() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_page_top()' );
-	
 	thematic_widget_area_page_top();
 }
 	
@@ -200,7 +222,6 @@ function widget_area_page_top() {
  */
 function widget_area_page_bottom() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_page_bottom()' );
-	
 	thematic_widget_page_bottom();
 }
 
@@ -214,8 +235,7 @@ function widget_area_page_bottom() {
  */
  function widget_area_subsidiaries() {
 	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_subsidiaries()' );
-	
 	thematic_widget_area_subsidiaries();
 }
 
-    
+?>

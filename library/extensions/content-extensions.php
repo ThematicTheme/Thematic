@@ -386,10 +386,6 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '<h1 class="page-title">';
 				$content .= sprintf(__('Yearly Archives: <span>%s</span>', 'thematic'), get_the_time('Y'));
 				$content .= '</h1>';
-		} elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
-				$content .= '<h1 class="page-title">';
-				$content .= __('Blog Archives', 'thematic');
-				$content .= '</h1>';
 		}
 		$content .= "\n";
 		echo apply_filters('thematic_page_title', $content);
@@ -1376,12 +1372,11 @@ function more_text() {
  * 
  * Filter: list_bookmarks_args
  *
- * @todo add namespacing to the list_bookmarks_args() - should filter name stay the same?
  */
-function list_bookmarks_args() {
+function thematic_list_bookmarks_args() {
 	$content = 'title_before=<h2>&title_after=</h2>';
 	return apply_filters('list_bookmarks_args', $content);
-} // end list_bookmarks_args
+} // end thematic_list_bookmarks_args
 
 
 if (function_exists('childtheme_override_postfooter'))  {

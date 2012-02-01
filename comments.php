@@ -60,7 +60,7 @@
 						<h3><?php printf($comment_count > 1 ? __( thematic_multiplecomments_text(), 'thematic' ) : __( thematic_singlecomment_text(), 'thematic' ), $comment_count ) ?></h3>
 	
 						<ol>
-							<?php wp_list_comments( list_comments_arg() ); ?>
+							<?php wp_list_comments( thematic_list_comments_arg() ); ?>
 						</ol>
 	
 	        			<div id="comments-nav-below" class="comment-navigation">

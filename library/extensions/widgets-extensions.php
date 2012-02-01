@@ -18,7 +18,7 @@
  * Filter: thematic_search_submit Controls the form's "submit" input element <br>
  * Filters: thematic_search_form Controls the entire from output just before display <br>
  *
- * @see THM_Widget_Search
+ * @see Thematic_Widget_Search
  * @link http://codex.wordpress.org/Function_Reference/get_search_form Codex: get_search_form()
  */
 function thematic_search_form() {
@@ -284,9 +284,9 @@ function thematic_widgets_init() {
     unregister_widget( 'WP_Widget_Search' );
 
 	// Finished intializing Widgets plugin, now let's load the thematic default widgets
-	register_widget( 'THM_Widget_Search' );
-	register_widget( 'THM_Widget_Meta' );
-	register_widget( 'THM_Widget_RSSlinks' );
+	register_widget( 'Thematic_Widget_Search' );
+	register_widget( 'Thematic_Widget_Meta' );
+	register_widget( 'Thematic_Widget_RSSlinks' );
 
 	// Pre-set Widgets
 	$preset_widgets = array (
