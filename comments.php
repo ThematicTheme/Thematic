@@ -52,11 +52,11 @@
 						}
 						
 						// calculate comments, threads and pings
-						echo ("\n thematic_comment_count=".$thematic_comment_count = count( $wp_query->comments_by_type['comment'] ));
-						echo ("\n thematic_thread_count=".$thematic_thread_count = ( $thematic_comment_count - $thematic_reply_count ));
-						echo ("\n thematic_ping_count=".$thematic_ping_count = count( $wp_query->comments_by_type['pings'] ));
-						echo ("\n thematic_ping_cpages=".$thematic_ping_pages = get_comment_pages_count( $wp_query->comments_by_type['pings'] ));
-						echo ("\n thematic_thread_cpages=".$thematic_thread_pages = get_comment_pages_count( $wp_query->comments_by_type['comment'] ) );
+						$thematic_comment_count = count( $wp_query->comments_by_type['comment'] );
+						$thematic_thread_count = ( $thematic_comment_count - $thematic_reply_count );
+						$thematic_ping_count = count( $wp_query->comments_by_type['pings'] );
+						$thematic_ping_pages = get_comment_pages_count( $wp_query->comments_by_type['pings'] );
+						$thematic_thread_pages = get_comment_pages_count( $wp_query->comments_by_type['comment'] );
 
 						// calculate the maximum pagination number
 						if ( $thematic_thread_count > $thematic_ping_count ) {
