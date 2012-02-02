@@ -479,17 +479,16 @@ li.content-column {
 #comments-list {
     padding:0 0 18px 0;
 }
-#comments-list ol,
+#comments-list,
 #comments-list ul {
     list-style:none;
-    margin:0;
 }
-#comments-list ol {
+#comments-list {
     border:1px solid #ccc;
     border-bottom:none;
     margin:0 0 18px 0;
 }
-#comments-list li {
+#comments-list .comment {
     background:#fafafa;
     border-bottom:1px solid #ccc;
     padding:18px 1.5em 0 1.5em;
@@ -501,7 +500,7 @@ li.content-column {
 #comments-list li.bypostauthor {
     background:#FFFFCC;
 }
-#comments-list ul li {
+#comments-list ul .comment {
     border:1px solid #ccc;
     margin:0 0 18px 0;
 }

@@ -67,7 +67,7 @@
 
 						<h3><?php printf($comment_count > 1 ? __( thematic_multiplecomments_text(), 'thematic' ) : __( thematic_singlecomment_text(), 'thematic' ), $comment_count ) ?></h3>
 	
-						<ol>
+						<ol id="comments-list">
 							<?php wp_list_comments( thematic_list_comments_arg() ); ?>
 						</ol>
 										
@@ -109,9 +109,9 @@
 						
 						<h3><?php printf( $ping_count > 1 ? '<span>%d</span> ' . __( 'Trackbacks', 'thematic' ) : __( '<span>One</span> Trackback', 'thematic' ), $ping_count ) ?></h3>
 	
-						<ol>
+						<ul id="pings-list">
 							<?php wp_list_comments( 'type=pings&callback=thematic_pings'); ?>
-						</ol>				
+						</ul>				
 	
 					</div><!-- #trackbacks-list .comments -->			
 						

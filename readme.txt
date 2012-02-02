@@ -30,6 +30,8 @@ Features:
 == Changelog ==
 
 = 0.9.8 =
+* Changed: default.css for comment threading abnomalities  
+* Added: comments.php atts to #comments-list and #pings-list
 * Added: <code>thematic_add_comment_class()</code> to filter <code>comment_class()</code>
 * Deprecated: <code>childtheme_override_comment_class()</code> and <code>thematic_comment_class()</code>
 * Changed: <code>thematic_post_footer()</code> "Comments" to " Responses"
