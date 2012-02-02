@@ -64,8 +64,6 @@
 						} else {
 							$thematic_max_response_pages = ( $thematic_ping_count / get_query_var('comments_per_page') );
 						}
-						
-						echo '  thematic_max_response_pages='.$thematic_max_response_pages . ' '; echo ' '. get_option('comments_per_page') . ' ';
 					?>
 	
 					<?php if ( ! empty($comments_by_type['comment']) ) : ?>
