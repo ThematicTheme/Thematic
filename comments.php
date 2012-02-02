@@ -43,29 +43,43 @@
 				<?php if ( have_comments() ) : ?>
 	
 					<?php
-						// count the numbers of pings and comments 
-						$ping_count = $reply_count = $comment_count = 0;
+						// count the number of replies
+						$thematic_reply_count = '0';
+						
 						foreach ( $comments as $comment ) {
-							get_comment_type() == "comment" ? ++$comment_count : ++$ping_count;
 							if ( $comment->comment_parent )
-								++$reply_count;
+								++$thematic_reply_count;
 						}
-						// if threaded
-						$thread_count = ($comment_count - $reply_count);
+						
+						// calculate comments, threads and pings
+						echo ("\n thematic_comment_count=".$thematic_comment_count = count( $wp_query->comments_by_type['comment'] ));
+						echo ("\n thematic_thread_count=".$thematic_thread_count = ( $thematic_comment_count - $thematic_reply_count ));
+						echo ("\n thematic_ping_count=".$thematic_ping_count = count( $wp_query->comments_by_type['pings'] ));
+						echo ("\n thematic_ping_cpages=".$thematic_ping_pages = get_comment_pages_count( $wp_query->comments_by_type['pings'] ));
+						echo ("\n thematic_thread_cpages=".$thematic_thread_pages = get_comment_pages_count( $wp_query->comments_by_type['comment'] ) );
+
+						// calculate the maximum pagination number
+						if ( $thematic_thread_count > $thematic_ping_count ) {
+							$thematic_max_response_pages = ( $thematic_thread_count / get_query_var('comments_per_page') );
+						} else {
+							$thematic_max_response_pages = ( $thematic_ping_count / get_query_var('comments_per_page') );
+						}
+						
+						echo '  thematic_max_response_pages='.$thematic_max_response_pages . ' '; echo ' '. get_option('comments_per_page') . ' ';
 					?>
 	
 					<?php if ( ! empty($comments_by_type['comment']) ) : ?>
 							
 					<?php
 						// action hook for inserting content above #comments-list
-						thematic_abovecommentslist() 
+						thematic_abovecommentslist() ;
 					?>
 
-						<?php if ( get_query_var('cpage') <= ( $thread_count / get_query_var('comments_per_page') ) )  : ?>
+						<?php if ( $thematic_max_response_pages >= ( $thematic_thread_count / get_option('comments_per_page') ) )  : ?>
 					
 					<div class="comments-list-wrapper" class="comments">
 
-						<h3><?php printf($comment_count > 1 ? __( thematic_multiplecomments_text(), 'thematic' ) : __( thematic_singlecomment_text(), 'thematic' ), $comment_count ) ?></h3>
+						<h3><?php printf( $thematic_thread_count > 1 ? __( thematic_multiplecomments_text(), 'thematic' ) : __( thematic_singlecomment_text(), 'thematic' ), $thematic_comment_count ) ?></h3>
 	
 						<ol id="comments-list" >
 							<?php wp_list_comments( thematic_list_comments_arg() ); ?>
@@ -82,18 +96,9 @@
 					
 					<?php endif; ?>
 					
-					<?php
-						// calculate the maximum pagenation number
-						if ($comment_count > $ping_count) {
-							$thematic_max_cpages = ( $thread_count / get_query_var('comments_per_page') );
-						} else {
-							$thematic_max_cpages = ( $ping_count / get_query_var('comments_per_page') );
-						}
-					?>
-					
 					<div id="comments-nav-below" class="comment-navigation">
 	        		
-	        			<div class="paginated-comments-links"><?php paginate_comments_links('total='. $thematic_max_cpages); ?></div>
+	        			<div class="paginated-comments-links"><?php paginate_comments_links( 'total='. $thematic_max_response_pages ); ?></div>
 	                
 	                </div>	
 	                	                  
@@ -103,11 +108,11 @@
 						// action hook for inserting content above #trackbacks-list-wrapper
 						thematic_abovetrackbackslist();
 					?>
-						<?php if ( get_query_var('cpage') <= ( $ping_count / get_query_var('comments_per_page') ) ) : ?>
+						<?php if ( $thematic_max_response_pages >= ( $thematic_ping_count / get_option('comments_per_page') ) ) : ?>
 						
 					<div id="pings-list-wrapper" class="pings">
 						
-						<h3><?php printf( $ping_count > 1 ? '<span>%d</span> ' . __( 'Trackbacks', 'thematic' ) : __( '<span>One</span> Trackback', 'thematic' ), $ping_count ) ?></h3>
+						<h3><?php printf( $thematic_ping_count > 1 ? '<span>%d</span> ' . __( 'Trackbacks', 'thematic' ) : __( '<span>One</span> Trackback', 'thematic' ), $thematic_ping_count ) ?></h3>
 	
 						<ul id="trackbacks-list">
 							<?php wp_list_comments( 'type=pings&callback=thematic_pings' ); ?>

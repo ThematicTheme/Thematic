@@ -279,4 +279,19 @@ function thematic_include_comments() {
 
 add_action('thematic_comments_template','thematic_include_comments',5);
 
+function thematic_get_comment_link( $link , $comment, $args ) {
+	global  $wp_rewrite; 
+
+	$args['type'] = 'comment';
+	$args['page'] = get_page_of_comment( $comment->comment_ID, $args );
+
+	if ( $wp_rewrite->using_permalinks() )
+	   	$link = user_trailingslashit( trailingslashit( get_permalink( $comment->comment_post_ID ) ) . 'comment-page-' . $args['page'], 'comment' );
+	else
+		$link = add_query_arg( 'cpage', $args['page'] , get_permalink( $comment->comment_post_ID ) );
+
+	return $link; 
+}
+add_filter( 'get_comment_link', 'thematic_get_comment_link', 10, 3 );
+
 ?>

@@ -30,6 +30,7 @@ Features:
 == Changelog ==
 
 = 0.9.8 =
+* Added: <code>thematic_get_comment_link()</code> to filter <code>get_comment_link()</code>
 * Changed: default.css for comment threading abnomalities  
 * Added: comments.php atts to #comments-list and #pings-list
 * Added: <code>thematic_add_comment_class()</code> to filter <code>comment_class()</code>
