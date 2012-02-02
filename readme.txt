@@ -30,7 +30,11 @@ Features:
 == Changelog ==
 
 = 0.9.8 =
-* Changed: all of the fuunctions in shortcodes.php to namspace with <code>thematic_*</code>
+* Added: <code>thematic_add_comment_class()</code> to filter <code>comment_class()</code>
+* Deprecated: <code>childtheme_override_comment_class()</code> and <code>thematic_comment_class()</code>
+* Changed: <code>thematic_post_footer()</code> "Comments" to " Responses"
+* Fixed: Pagination of pings and comments when threaded.
+* Changed: All of the functions in shortcodes.php to namspace with <code>thematic_*</code>
 * Changed: <code>thematic_page_title()</code> to remove 'Blog Archives' 
 * Removed: <code>widget_thematic_rsslinks_control()</code>
 * Changed: Namespacing of classes from <code>THM_*</code> to <code>Thematic_*</code>

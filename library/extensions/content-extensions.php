@@ -1643,10 +1643,10 @@ if (function_exists('childtheme_override_postfooter_postcomments'))  {
 	        $postcommentnumber = get_comments_number();
 	        if ($postcommentnumber > '1') {
 	            $postcomments = ' <span class="comments-link"><a href="' . apply_filters('the_permalink', get_permalink()) . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
-	            $postcomments .= get_comments_number() . __(' Comments', 'thematic') . '</a></span>';
+				$postcomments .= get_comments_number() . ' ' . __('Responses', 'thematic') . '</a></span>';
 	        } elseif ($postcommentnumber == '1') {
 	            $postcomments = ' <span class="comments-link"><a href="' . apply_filters('the_permalink', get_permalink()) . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
-	            $postcomments .= get_comments_number() . __(' Comment', 'thematic') . '</a></span>';
+	            $postcomments .= get_comments_number() . ' ' . __('Response', 'thematic') . '</a></span>';
 	        } elseif ($postcommentnumber == '0') {
 	            $postcomments = ' <span class="comments-link"><a href="' . apply_filters('the_permalink', get_permalink()) . '#comments" title="' . __('Comment on ', 'thematic') . the_title_attribute('echo=0') . '">';
 	            $postcomments .= __('Leave a comment', 'thematic') . '</a></span>';

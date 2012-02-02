@@ -18,8 +18,9 @@
 function thematic_comments($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
 	$GLOBALS['comment_depth'] = $depth;
-    ?>
-    	<li id="comment-<?php comment_ID() ?>" class="<?php thematic_comment_class() ?>">
+?>
+    
+       	<li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
     	
     		<?php 
     			// action hook for inserting content above #comment
@@ -61,6 +62,7 @@ function thematic_comments($comment, $args, $depth) {
 				// action hook for inserting content above #comment
 				thematic_belowcomment() 
 			?>
+
 <?php }
 
 /**
@@ -71,9 +73,10 @@ function thematic_comments($comment, $args, $depth) {
  * @param int $depth 
  */
 function thematic_pings($comment, $args, $depth) {
-       $GLOBALS['comment'] = $comment;
-        ?>
-    		<li id="comment-<?php comment_ID() ?>" class="<?php thematic_comment_class() ?>">
+	$GLOBALS['comment'] = $comment;
+	?>
+
+    		<li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
     			<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'thematic'),
     					get_comment_author_link(),
     					get_comment_date(),
@@ -96,4 +99,6 @@ function thematic_pings($comment, $args, $depth) {
     				
 				</div>
 				
-	<?php }
+
+<?php }
+

@@ -58,8 +58,9 @@ function thematic_show_commentreply() {
             wp_enqueue_script('comment-reply'); 
 }
 
+
 /**
- * Get the page number fro title tag
+ * Get the page number for title tag
  *
  * This has been integrated into thematic_doctitle()
  *
@@ -70,6 +71,65 @@ function pageGetPageNo() {
     if ( get_query_var('paged') )
         print ' | Page ' . get_query_var('paged');
 }
+
+
+if ( function_exists( 'childtheme_override_comment_class' ) )  {
+	_deprecated_function('childtheme_override_comment_class', '0.9.8', 'comment_class()' );
+	/**
+ 	 * @ignore
+ 	 */
+ 	function thematic_comment_class() {
+		childtheme_override_comment_class();
+	}
+} else {
+	/**
+	 * Generates semantic classes for each comment LI element
+	 * 
+	 * Removed due to duplication of the core WordPress comment_class()
+	 * 
+ 	 * @deprecated 0.9.8
+	 */
+	function thematic_comment_class( $print = true ) {
+		_deprecated_function( __FUNCTION__, '0.9.8', 'comment_class()' );
+
+		global $comment, $post, $thematic_comment_alt, $comment_depth, $comment_thread_alt;
+
+		// Collects the comment type (comment, trackback),
+		$c = array( $comment->comment_type );
+
+		// Counts trackbacks (t[n]) or comments (c[n])
+		if ( $comment->comment_type == 'comment' ) {
+			$c[] = "c$thematic_comment_alt";
+		} else {
+			$c[] = "t$thematic_comment_alt";
+		}
+
+		// If the comment author has an id (registered), then print the log in name
+		if ( $comment->user_id > 0 ) {
+			$user = get_userdata($comment->user_id);
+			// For all registered users, 'byuser'; to specificy the registered user, 'commentauthor+[log in name]'
+			$c[] = 'byuser comment-author-' . sanitize_title_with_dashes(strtolower( $user->user_login ));
+			// For comment authors who are the author of the post
+			if ( $comment->user_id === $post->post_author )
+				$c[] = 'bypostauthor';
+		}
+
+		// If it's the other to the every, then add 'alt' class; collects time- and date-based classes
+		thematic_date_classes( mysql2date( 'U', $comment->comment_date ), $c, 'c-' );
+		if ( ++$thematic_comment_alt % 2 )
+			$c[] = 'alt';
+
+		// Comment depth
+		$c[] = "depth-$comment_depth";
+
+		// Separates classes with a single space, collates classes for comment LI
+		$c = join( ' ', apply_filters( 'comment_class', $c ) ); // Available filter: comment_class
+
+		// Tada again!
+		return $print ? print($c) : $c;
+	}
+}
+
 
 /**
  * Filter: list_comments_arg

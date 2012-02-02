@@ -6,6 +6,7 @@
  * 
  * @package Thematic
  * @subpackage Templates
+ *
  * @todo chase the invalid counts & pagination for comments/trackbacks
  * @todo remove the THEMATIC_COMPATIBLE_COMMENT_FORM condition to a legacy function for template berevity
  */
@@ -43,68 +44,91 @@
 	
 					<?php
 						// count the numbers of pings and comments 
-						$ping_count = $comment_count = 0;
-						foreach ( $comments as $comment )
+						$ping_count = $reply_count = $comment_count = 0;
+						foreach ( $comments as $comment ) {
 							get_comment_type() == "comment" ? ++$comment_count : ++$ping_count;
+							if ( $comment->comment_parent )
+								++$reply_count;
+						}
+						// if threaded
+						$thread_count = ($comment_count - $reply_count);
 					?>
 	
 					<?php if ( ! empty($comments_by_type['comment']) ) : ?>
-	
+							
 					<?php
 						// action hook for inserting content above #comments-list
 						thematic_abovecommentslist() 
 					?>
-	
+
+						<?php if ( get_query_var('cpage') <= ( $thread_count / get_query_var('comments_per_page') ) )  : ?>
+					
 					<div id="comments-list" class="comments">
-						
+
 						<h3><?php printf($comment_count > 1 ? __( thematic_multiplecomments_text(), 'thematic' ) : __( thematic_singlecomment_text(), 'thematic' ), $comment_count ) ?></h3>
 	
 						<ol>
 							<?php wp_list_comments( thematic_list_comments_arg() ); ?>
 						</ol>
-	
-	        			<div id="comments-nav-below" class="comment-navigation">
-	        			
-	        			     <div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
-	                    
-	                    </div>
-	
+										
 					</div><!-- #comments-list .comments -->
-	
+					
+						<?php endif; ?>
+						
 					<?php 
 						// action hook for inserting content below #comments-list
 						thematic_belowcommentslist() 
-					?>			
-	
-				<?php endif; ?>
-	
-				<?php if ( ! empty( $comments_by_type['pings'] ) ) : ?>
-	
-					<?php
-						// action hook for inserting content above #trackbacks-list
-						thematic_abovetrackbackslist() 
 					?>
+					
+					<?php endif; ?>
+					
+					<?php
+						// calculate the maximum pagenation number
+						if ($comment_count > $ping_count) {
+							$thematic_max_cpages = ( $thread_count / get_query_var('comments_per_page') );
+						} else {
+							$thematic_max_cpages = ( $ping_count / get_query_var('comments_per_page') );
+						}
+					?>
+					
+					<div id="comments-nav-below" class="comment-navigation">
+	        		
+	        			<div class="paginated-comments-links"><?php paginate_comments_links('total='. $thematic_max_cpages); ?></div>
+	                
+	                </div>	
+	                	                  
+					<?php if ( ! empty( $comments_by_type['pings'] ) ) : ?>
 	
+					<?php 
+						// action hook for inserting content above #trackbacks-list
+						thematic_abovetrackbackslist();
+					?>
+						<?php if ( get_query_var('cpage') <= ( $ping_count / get_query_var('comments_per_page') ) ) : ?>
+						
 					<div id="trackbacks-list" class="comments">
 						
-						<h3><?php printf( $ping_count > 1 ? __( '<span>%d</span> Trackbacks', 'thematic' ) : __( '<span>One</span> Trackback', 'thematic' ), $ping_count ) ?></h3>
+						<h3><?php printf( $ping_count > 1 ? '<span>%d</span> ' . __( 'Trackbacks', 'thematic' ) : __( '<span>One</span> Trackback', 'thematic' ), $ping_count ) ?></h3>
 	
 						<ol>
-							<?php wp_list_comments( 'type=pings&callback=thematic_pings' ); ?>
+							<?php wp_list_comments( 'type=pings&callback=thematic_pings'); ?>
 						</ol>				
 	
 					</div><!-- #trackbacks-list .comments -->			
-	
+						
+						<?php endif; ?>
+						
 					<?php
 						// action hook for inserting content below #trackbacks-list
-						thematic_belowtrackbackslist() 
+						thematic_belowtrackbackslist();
 					?>
 									
-				<?php endif /* if ( $ping_count ) */ ?>
-			<?php endif     /* if ( $comments )  */  ?>
+					<?php endif; ?>
+
+				<?php endif; ?>
+							
 			<?php
 				if ( 'open' == $post->comment_status ) : 
-					if ( THEMATIC_COMPATIBLE_COMMENT_FORM ) {
+					if ( !THEMATIC_COMPATIBLE_COMMENT_FORM ) {
 			?>
 			
 					<div id="respond">

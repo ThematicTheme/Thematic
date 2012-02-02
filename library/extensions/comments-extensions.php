@@ -128,9 +128,10 @@ function thematic_singlecomment_text() {
  * Located in comments.php
  */
 function thematic_multiplecomments_text() {
-    $content = __('<span>%d</span> Comments', 'thematic');
+    $content = '<span>%d</span> ' . __('Comments', 'thematic');
     return apply_filters( 'thematic_multiplecomments_text', $content );
 }
+
 
 /**
  * Filter: list_comments_arg
@@ -141,6 +142,7 @@ function thematic_list_comments_arg() {
 	$content = 'type=comment&callback=thematic_comments';
 	return apply_filters('list_comments_arg', $content);
 }
+
 
 /**
  * Filter: thematic_postcomment_text
@@ -272,7 +274,7 @@ function thematic_comments_template() {
  *  Outputs the standard comments template
  */
 function thematic_include_comments() {
-    comments_template('', true);
+	comments_template('', true);
 }
 
 add_action('thematic_comments_template','thematic_include_comments',5);
