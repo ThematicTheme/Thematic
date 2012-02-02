@@ -41,7 +41,7 @@ hr {
     margin-bottom:22px;
 }
 .ie7 hr {
-	background-color:none;
+	background-color:transparent;
 	color:#ccc;
 }
 a:link {
@@ -166,7 +166,6 @@ ul.sf-menu li li li.sfHover ul {
 }
 .ie7 .sf-menu a {
 	width:100%;
-	zoom:1;
 }
 .sf-menu .current-menu-item a,
 .sf-menu .current-menu-parent a,
@@ -477,16 +476,26 @@ li.content-column {
     padding:0 0 18px 0;
 }
 #comments-list {
-    padding:0 0 18px 0;
+    border:1px solid #ccc;
+    border-bottom:none;
+    margin:0 0 18px;
+}
+#comments-list h3 {
+	padding-bottom: 0;
 }
 #comments-list,
 #comments-list ul {
     list-style:none;
 }
-#comments-list {
-    border:1px solid #ccc;
-    border-bottom:none;
-    margin:0 0 18px 0;
+#comments-list ul,
+#comments-list ol {
+    padding-bottom: 18px;
+}
+#comments-list ul ul,
+#comments-list ol ol,
+#comments-list ul ul ul,
+#comments-list ol ol ol {
+    padding-bottom:0;
 }
 #comments-list .comment {
     background:#fafafa;
@@ -545,7 +554,7 @@ li.content-column {
 }
 .comment-navigation {
     font-weight:bold;
-    padding:0 0 18px 0;
+	padding: 18px 0 24px;
     margin-right:0.5em;
 }
 .comment-navigation a {

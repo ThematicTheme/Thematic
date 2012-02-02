@@ -63,15 +63,15 @@
 
 						<?php if ( get_query_var('cpage') <= ( $thread_count / get_query_var('comments_per_page') ) )  : ?>
 					
-					<div id="comments-list" class="comments">
+					<div class="comments-list-wrapper" class="comments">
 
 						<h3><?php printf($comment_count > 1 ? __( thematic_multiplecomments_text(), 'thematic' ) : __( thematic_singlecomment_text(), 'thematic' ), $comment_count ) ?></h3>
 	
-						<ol id="comments-list">
+						<ol id="comments-list" >
 							<?php wp_list_comments( thematic_list_comments_arg() ); ?>
 						</ol>
 										
-					</div><!-- #comments-list .comments -->
+					</div><!-- #comments-list-wrapper .comments -->
 					
 						<?php endif; ?>
 						
@@ -100,20 +100,20 @@
 					<?php if ( ! empty( $comments_by_type['pings'] ) ) : ?>
 	
 					<?php 
-						// action hook for inserting content above #trackbacks-list
+						// action hook for inserting content above #trackbacks-list-wrapper
 						thematic_abovetrackbackslist();
 					?>
 						<?php if ( get_query_var('cpage') <= ( $ping_count / get_query_var('comments_per_page') ) ) : ?>
 						
-					<div id="trackbacks-list" class="comments">
+					<div id="pings-list-wrapper" class="pings">
 						
 						<h3><?php printf( $ping_count > 1 ? '<span>%d</span> ' . __( 'Trackbacks', 'thematic' ) : __( '<span>One</span> Trackback', 'thematic' ), $ping_count ) ?></h3>
 	
-						<ul id="pings-list">
-							<?php wp_list_comments( 'type=pings&callback=thematic_pings'); ?>
+						<ul id="trackbacks-list">
+							<?php wp_list_comments( 'type=pings&callback=thematic_pings' ); ?>
 						</ul>				
 	
-					</div><!-- #trackbacks-list .comments -->			
+					</div><!-- #pings-list-wrapper .pings -->			
 						
 						<?php endif; ?>
 						
