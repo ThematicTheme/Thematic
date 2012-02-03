@@ -43,41 +43,38 @@
 				<?php if ( have_comments() ) : ?>
 	
 					<?php
-						// count the number of replies
-						$thematic_reply_count = '0';
+						// Collect the comments and pings
+						$thematic_comments = $wp_query->comments_by_type['comment'];
+						$thematic_pings = $wp_query->comments_by_type['pings'];
 						
-						foreach ( $comments as $comment ) {
-							if ( $comment->comment_parent )
-								++$thematic_reply_count;
-						}
+						// Calculate the total number of each
+						$thematic_comment_count = count( $thematic_comments );
+						$thematic_ping_count = count( $thematic_pings );
 						
-						// calculate comments, threads and pings
-						$thematic_comment_count = count( $wp_query->comments_by_type['comment'] );
-						$thematic_thread_count = ( $thematic_comment_count - $thematic_reply_count );
-						$thematic_ping_count = count( $wp_query->comments_by_type['pings'] );
-						$thematic_ping_pages = get_comment_pages_count( $wp_query->comments_by_type['pings'] );
-						$thematic_thread_pages = get_comment_pages_count( $wp_query->comments_by_type['comment'] );
-
-						// calculate the maximum pagination number
-						if ( $thematic_thread_count > $thematic_ping_count ) {
-							$thematic_max_response_pages = ( $thematic_thread_count / get_query_var('comments_per_page') );
-						} else {
-							$thematic_max_response_pages = ( $thematic_ping_count / get_query_var('comments_per_page') );
-						}
+						// Get the page count for each
+						$thematic_comment_pages = get_comment_pages_count( $thematic_comments );
+						$thematic_ping_pages = get_comment_pages_count( $thematic_pings );
+						
+						// Determine which is the greater pagination number between the two (comment,ping) paginations
+						$thematic_max_response_pages = ( $thematic_ping_pages > $thematic_comment_pages ) ? $thematic_ping_pages : $thematic_comment_pages;
+						
+						// Reset the query var to use our calculation for the maximum page (newest/oldest)
+						if ( $overridden_cpage )
+							set_query_var( 'cpage', 'newest' == get_option('default_comments_page') ? $thematic_comment_pages : 1 );
 					?>
-	
-					<?php if ( ! empty($comments_by_type['comment']) ) : ?>
+					
+					<?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>
 							
 					<?php
 						// action hook for inserting content above #comments-list
 						thematic_abovecommentslist() ;
 					?>
 
-						<?php if ( $thematic_max_response_pages >= ( $thematic_thread_count / get_option('comments_per_page') ) )  : ?>
+						<?php if ( get_query_var('cpage') <= $thematic_comment_pages )  : ?>
 					
-					<div class="comments-list-wrapper" class="comments">
+					<div id="comments-list-wrapper" class="comments">
 
-						<h3><?php printf( $thematic_thread_count > 1 ? __( thematic_multiplecomments_text(), 'thematic' ) : __( thematic_singlecomment_text(), 'thematic' ), $thematic_comment_count ) ?></h3>
+						<h3><?php printf( $thematic_comment_count > 1 ? __( thematic_multiplecomments_text(), 'thematic' ) : __( thematic_singlecomment_text(), 'thematic' ), $thematic_comment_count ) ?></h3>
 	
 						<ol id="comments-list" >
 							<?php wp_list_comments( thematic_list_comments_arg() ); ?>
@@ -96,7 +93,7 @@
 					
 					<div id="comments-nav-below" class="comment-navigation">
 	        		
-	        			<div class="paginated-comments-links"><?php paginate_comments_links( 'total='. $thematic_max_response_pages ); ?></div>
+	        			<div class="paginated-comments-links"><?php paginate_comments_links( 'total=' . $thematic_max_response_pages ); ?></div>
 	                
 	                </div>	
 	                	                  
@@ -106,7 +103,8 @@
 						// action hook for inserting content above #trackbacks-list-wrapper
 						thematic_abovetrackbackslist();
 					?>
-						<?php if ( $thematic_max_response_pages >= ( $thematic_ping_count / get_option('comments_per_page') ) ) : ?>
+						
+						<?php if ( get_query_var('cpage') <= $thematic_ping_pages ) : ?>
 						
 					<div id="pings-list-wrapper" class="pings">
 						
