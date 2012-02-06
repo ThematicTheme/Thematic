@@ -331,8 +331,8 @@ if (function_exists('childtheme_override_page_title'))  {
 		} elseif (is_author()) {
 				$content .= '<h1 class="page-title author">';
 				$author = get_the_author_meta( 'display_name' );
-				$content .= __('Author Archives: ', 'thematic');
-				$content .= '<span>';
+				$content .= __('Author Archives:', 'thematic');
+				$content .= ' <span>';
 				$content .= $author;
 				$content .= '</span></h1>';
 		} elseif (is_category()) {
@@ -663,7 +663,7 @@ if (function_exists('childtheme_override_index_loop'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+						<?php wp_link_pages('before=<div class="page-link">' . __('Pages:', 'thematic') . '&after=</div>') ?>
 					
 					</div><!-- .entry-content -->
 					
@@ -1184,7 +1184,7 @@ if (function_exists('childtheme_override_content'))  {
 		global $thematic_content_length;
 	
 		if ( strtolower($thematic_content_length) == 'full' ) {
-			$post = get_the_content(more_text());
+			$post = get_the_content( thematic_more_text() );
 			$post = apply_filters('the_content', $post);
 			$post = str_replace(']]>', ']]&gt;', $post);
 		} elseif ( strtolower($thematic_content_length) == 'excerpt') {
@@ -1201,7 +1201,7 @@ if (function_exists('childtheme_override_content'))  {
 			}
 		} elseif ( strtolower($thematic_content_length) == 'none') {
 		} else {
-			$post = get_the_content(more_text());
+			$post = get_the_content( thematic_more_text() );
 			$post = apply_filters('the_content', $post);
 			$post = str_replace(']]>', ']]&gt;', $post);
 		}
@@ -1337,7 +1337,7 @@ if ( function_exists('childtheme_override_404_content') )  {
   			<?php thematic_postheader(); ?>
   			
 			<div class="entry-content">
-				<p><?php _e( 'Apologies, but we were unable to find what you were looking for. Perhaps  searching will help.', 'thematic' ) ?></p>
+				<p><?php _e( 'Apologies, but we were unable to find what you were looking for. Perhaps searching will help.', 'thematic' ) ?></p>
 			</div><!-- .entry-content -->
 			
 			<form id="error404-searchform" method="get" action="<?php echo home_url(); ?>/">
@@ -1359,12 +1359,11 @@ add_action( 'thematic_404','thematic_404_content' );
  * 
  * Filter: more_text
  *
- * @todo add namespacing to more_text() - should filter name stay the same?
  */
-function more_text() {
-	$content = ''.__('Read More <span class="meta-nav">&raquo;</span>', 'thematic').'';
+function thematic_more_text() {
+	$content = sprintf ( __('Read More %s', 'thematic'),  '<span class="meta-nav">&raquo;</span>' ) ;
 	return apply_filters('more_text', $content);
-} // end more_text
+} // end thematic_more_text
 
 
 /**

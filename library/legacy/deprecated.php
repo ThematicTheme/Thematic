@@ -130,6 +130,17 @@ if ( function_exists( 'childtheme_override_comment_class' ) )  {
 	}
 }
 
+/**
+ * Generates the Thematic "Read more" text for excerpts 
+ * 
+ * Removed for namespacing
+ *
+ * @deprecated 0.9.8
+ */
+function more_text() {
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_more_text()');
+	thematic_more_text();
+}
 
 /**
  * Filter: list_comments_arg
@@ -139,7 +150,7 @@ if ( function_exists( 'childtheme_override_comment_class' ) )  {
  * @deprecated 0.9.8
  */
 function list_comments_arg() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_list_comments_arg');
+	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_list_comments_arg()');
 	thematic_list_comments_arg();
 }
 

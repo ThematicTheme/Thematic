@@ -56,7 +56,7 @@
 						<div class="entry-attachment"><?php the_attachment_link( $post->ID, true ) ?></div>
 
 	                        <?php 
-	                        	the_content(more_text());
+	                        	the_content( thematic_more_text() );
 
 	                        	wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'thematic' ) . '&after=</div>' );
 	                        ?>

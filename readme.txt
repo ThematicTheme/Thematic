@@ -32,7 +32,7 @@ Features:
 = 0.9.8 =
 * Added: <code>thematic_get_comment_link()</code> to filter <code>get_comment_link()</code>
 * Changed: default.css for comment threading abnomalities  
-* Added: comments.php atts to #comments-list and #pings-list
+* Added: html attributes for #comments-list and #pings-list in comments.php
 * Added: <code>thematic_add_comment_class()</code> to filter <code>comment_class()</code>
 * Deprecated: <code>childtheme_override_comment_class()</code> and <code>thematic_comment_class()</code>
 * Changed: <code>thematic_post_footer()</code> "Comments" to " Responses"
@@ -41,8 +41,9 @@ Features:
 * Changed: <code>thematic_page_title()</code> to remove 'Blog Archives' 
 * Removed: <code>widget_thematic_rsslinks_control()</code>
 * Changed: Namespacing of classes from <code>THM_*</code> to <code>Thematic_*</code>
-* Changed: Namespacing of functions from <code>widget_area_*()</code> to <code>thematic_widget_area_*()</code>  
-* Deprecated: <code>widget_area_*()</code> functions <code>list_bookmarks_args(), list_comments_arg(), pageGetPageNo()</code>
+* Changed: Namespacing of functions from <code>widget_area_*()</code> to <code>thematic_widget_area_*()</code>
+* Added: <code>thematic_list_bookmarks_args(), thematic_list_comments_arg(), thematic_more_text()</code> 
+* Deprecated: <code>widget_area_*()</code> functions <code>list_bookmarks_args(), list_comments_arg(), pageGetPageNo(), more_text()</code>
 * Changed: <code>thematic_commentbutton_text()</code> to return escaped content
 * Moved: enqueue of comment reply script to <code>thematic_head_scripts()</code>
 * Deprecated: <code>thematic_show_commentreply()</code>
