@@ -352,7 +352,7 @@ function thematic_connect_functions() {
 
 }
 
-add_action( 'template_redirect', 'thematic_connect_functions' );
+add_action( 'wp_head', 'thematic_connect_functions');
 
 
 /**
