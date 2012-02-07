@@ -460,27 +460,6 @@ function thematic_nav_menu_args() {
 	return apply_filters('thematic_nav_menu_args', $args);
 }
 
-if ( function_exists('childtheme_override_init_navmenu') )  {
-	/**
-	 * @ignore
-	 */
-	 function thematic_init_navmenu() {
-    	childtheme_override_init_navmenu();
-    }
-} else {
-	/**
-	 * Register primary nav menu
-	 * 
-	 * Override: childtheme_override_init_navmenu
-	 * Filter: thematic_primary_menu_id
-	 * Filter: thematic_primary_menu_name
-	 */
-    function thematic_init_navmenu() {
-		register_nav_menu( apply_filters('thematic_primary_menu_id', 'primary-menu'), apply_filters('thematic_primary_menu_name', __( 'Primary Menu', 'thematic' ) ) );
-	}
-}
-add_action('init', 'thematic_init_navmenu');
-
 
 /**
  * Switch adding superfish css class to wp_page_menu

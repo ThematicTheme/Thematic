@@ -30,6 +30,7 @@ Features:
 == Changelog ==
 
 = 0.9.8 =
+* Moved: thematic_init_navmenu() to functions.php for adherence to theme review guidelines
 * Added: <code>thematic_get_comment_link()</code> to filter <code>get_comment_link()</code>
 * Changed: default.css for comment threading abnomalities  
 * Added: html attributes for #comments-list and #pings-list in comments.php
