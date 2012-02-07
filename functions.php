@@ -14,7 +14,7 @@
  * @subpackage ThemeInit
  */
 
-<?php
+
 /**
  * Theme initialization
  *
