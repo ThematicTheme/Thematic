@@ -27,7 +27,7 @@
 				// calling the widget area 'page-top'
 	            get_sidebar('page-top');
 	
-	            the_post();
+	            while ( have_posts() ) : the_post();
 
 				// action hook for placing content above #post
 	            thematic_abovepost();
@@ -66,6 +66,8 @@
 			<?php
 				// action hook for inserting content below #post
 	        	thematic_belowpost();
+	        	
+	        	endwhile;
 	        
 	        	// Checking for defined constant to enable conditional comment display for Pages
         		if ( THEMATIC_COMPATIBLE_COMMENT_HANDLING ) {
