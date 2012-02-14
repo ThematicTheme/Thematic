@@ -24,7 +24,8 @@
 				// filter for manipulating the element that wraps the content 
 				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 			
-				the_post();
+	            // start the loop
+	            while ( have_posts() ) : the_post();
 
 				// action hook for placing content above #post
     	    	thematic_abovepost();
@@ -66,15 +67,11 @@
 					// action hook for placing contentbelow #post
     	        	thematic_belowpost();
     	    
-	        		// calling the comments template
-        			if ( THEMATIC_COMPATIBLE_COMMENT_HANDLING ) {
-       					if ( get_post_custom_values( 'comments' ) ) {
-							// Add a key/value of "comments" to enable comments on pages!
-	        				thematic_comments_template();
-        				}
-        			} else {
-       					thematic_comments_template();
-        			}
+       				// action hook for calling the comments_template
+        			thematic_comments_template();
+        			
+        			// end loop
+        			endwhile;
     	        ?>
 		
 			</div><!-- #content -->

@@ -28,8 +28,6 @@
 				// filter for manipulating the element that wraps the content 
 				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 
-				the_post();
-
 				// action hook for placing content above #post
 				thematic_abovepost();
 			?>
@@ -69,17 +67,8 @@
 	       		// action hook for placing contentbelow #post
 	       		thematic_belowpost();
 
-	        	// Checking for defined constant to enable conditional comment display for Pages
-        		if ( THEMATIC_COMPATIBLE_COMMENT_HANDLING ) {
-        		    // Needs post-meta key/value of "comments" to call comments template on Pages!
-       			    if ( get_post_custom_values('comments') ) {
-				    	// calls the comments template
-	        	    	thematic_comments_template();
-        		    }
-        		} else {
-        		    // calls the comments template
-       			    thematic_comments_template();
-        		}
+       			// action hook for calling the comments_template
+       			thematic_comments_template();
 	        ?>
 
 			</div><!-- #content -->

@@ -274,10 +274,18 @@ function thematic_comments_template() {
  *  Outputs the standard comments template
  */
 function thematic_include_comments() {
-	comments_template('', true);
+	// Checking for defined constant to enable conditional comment display for Pages
+    if ( THEMATIC_COMPATIBLE_COMMENT_HANDLING && is_page() ) {
+    	// Needs post-meta key/value of "comments" to call comments template on Pages!
+       	if ( get_post_custom_values('comments') )
+			comments_template('', true);	    	
+	// WordPress standard comment handling is the default if constant is not set
+	} else {
+		comments_template('', true);
+	}
 }
 
-add_action('thematic_comments_template','thematic_include_comments',5);
+add_action('thematic_comments_template','thematic_include_comments', 5);
 
 function thematic_get_comment_link( $link , $comment, $args ) {
 	global  $wp_rewrite; 

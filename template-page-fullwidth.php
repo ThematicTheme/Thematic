@@ -28,6 +28,7 @@
 				// calling the widget area 'page-top'
 	            get_sidebar('page-top');
 	
+	            // start the loop
 	            while ( have_posts() ) : the_post();
 	            
 	            // action hook for inserting content above #post
@@ -65,20 +66,11 @@
 				</div><!-- .post -->
 	
 			<?php
-				// action hook for inserting content below #post
+				// calls the do_action for inserting content below #post
 	        	thematic_belowpost();
 	        		        
-	        	// Checking for defined constant to enable conditional comment display for Pages
-        		if ( THEMATIC_COMPATIBLE_COMMENT_HANDLING ) {
-        		    // Needs post-meta key/value of "comments" to call comments template on Pages!
-       			    if ( get_post_custom_values( 'comments' ) ) {
-				    	// calls the comments template
-	        			thematic_comments_template();
-        		    }
-        		} else {
-        		    // calls the comments template
-       			    thematic_comments_template();
-        		}
+	        	// action hook for calling the comments_template
+       			thematic_comments_template();
         		
 	        	// end loop
         		endwhile;

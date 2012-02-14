@@ -330,7 +330,7 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '</a></h2>';
 		} elseif (is_author()) {
 				$content .= '<h1 class="page-title author">';
-				$author = get_the_author_meta( 'display_name' );
+				$author = get_the_author_meta( 'display_name', $post->post_author );
 				$content .= __('Author Archives:', 'thematic');
 				$content .= ' <span>';
 				$content .= $author;
@@ -1753,11 +1753,16 @@ if (function_exists('childtheme_override_previous_post_link'))  {
 	 * Filter: thematic_previous_post_link_args
 	 */
 	function thematic_previous_post_link() {
-		$args = array ('format'              => '%link',
-									 'link'                => '<span class="meta-nav">&laquo;</span> %title',
-									 'in_same_cat'         => FALSE,
-									 'excluded_categories' => '');
+	
+		$args = array ( 
+			'format'              => '%link',
+			'link'                => '<span class="meta-nav">&laquo;</span> %title',
+			'in_same_cat'         => FALSE,
+			'excluded_categories' => ''
+		);
+						
 		$args = apply_filters('thematic_previous_post_link_args', $args );
+		
 		previous_post_link($args['format'], $args['link'], $args['in_same_cat'], $args['excluded_categories']);
 	}
 } // end previous_post_link

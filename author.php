@@ -25,8 +25,6 @@
 				thematic_abovecontent();
 
 				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
-
-				the_post();
 			?>
 
     	    	<?php
@@ -37,7 +35,7 @@
     	    		thematic_navigation_above();
 
     	    		// display microformatted vCard if selected in Theme Options and display only on the first page of the archive's pagination  
-    	    		if( thematic_get_theme_opt( 'author_info' ) == 1 & !is_paged() ) :
+    	    		if ( thematic_get_theme_opt( 'author_info' ) == 1 & !is_paged() ) :
 				?>
 
     	            <div id="author-info" class="vcard">

@@ -30,7 +30,9 @@ Features:
 == Changelog ==
 
 = 0.9.8 =
-* Fixed: page templates enclosing <code>the_post()</code>loop
+
+* Moved: conditional comment handling from page templates to <code>thematic_include_comments()</code>
+* Fixed: many templates misuse of the <code>the_post()</code> 
 * Moved: thematic_init_navmenu() to functions.php for adherence to theme review guidelines
 * Added: <code>thematic_get_comment_link()</code> to filter <code>get_comment_link()</code>
 * Changed: default.css for comment threading abnomalities  

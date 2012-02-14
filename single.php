@@ -24,7 +24,8 @@
 				// filter for manipulating the element that wraps the content 
 				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 							
-				the_post();
+	            // start the loop
+	            while ( have_posts() ) : the_post();
     	        
     	        // create the navigation above the content
 				thematic_navigation_above();
@@ -41,8 +42,11 @@
     	        // create the navigation below the content
 				thematic_navigation_below();
 		
-    	        // calling the comments template
+       			// action hook for calling the comments_template
     	        thematic_comments_template();
+    	        
+    	        // end the loop
+        		endwhile;
 		
     	        // calling the widget area 'single-bottom'
     	        get_sidebar('single-bottom');

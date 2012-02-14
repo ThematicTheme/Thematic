@@ -26,7 +26,8 @@
 				// filter for manipulating the element that wraps the content 
 				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 
-				the_post();
+	            // start the loop
+	            while ( have_posts() ) : the_post();
 
 	        	// displays the page title
 				thematic_page_title();
@@ -73,8 +74,12 @@
 	            <?php
 					// action hook for placing contentbelow #post
 					thematic_belowpost();
-					// calls the comments template
-					comments_template();
+					
+       				// action hook for calling the comments_template
+					thematic_comments_template();
+					
+					// end loop
+        			endwhile;
 	            ?>
 
 			</div><!-- #content -->
