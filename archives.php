@@ -28,6 +28,9 @@
 				// filter for manipulating the element that wraps the content 
 				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 
+				// start the loop to get the page content
+				while ( have_posts() ) : the_post();
+				
 				// action hook for placing content above #post
 				thematic_abovepost();
 			?>
@@ -51,9 +54,13 @@
 					<div class="entry-content">
 
 	                    <?php 
+	                    	// displays the "Page" content 
 	                    	the_content();
+	                    	
+	                    	// ends the "Page" loop
+	                    	endwhile;
 
-	                    	// action hook for the archives content… the "Page" content is displayed followed by a list of archived posts
+	                    	// action hook for the "archives" loop which displays a lists of archive links
 	                    	thematic_archives();
 
 	                    	edit_post_link( __( 'Edit', 'thematic' ),'<span class="edit-link">','</span>' );
