@@ -28,7 +28,7 @@
 				// calling the widget area 'page-top'
 	            get_sidebar('page-top');
 	
-	            the_post();
+	            while ( have_posts() ) : the_post();
 	            
 	            // action hook for inserting content above #post
 	            thematic_abovepost();
@@ -64,12 +64,24 @@
 					
 				</div><!-- .post -->
 	
-	        <?php
-	        	// action hook for inserting content below #post
+			<?php
+				// action hook for inserting content below #post
 	        	thematic_belowpost();
-	        
-	        	// calling the comments template
-	        	thematic_comments_template();
+	        		        
+	        	// Checking for defined constant to enable conditional comment display for Pages
+        		if ( THEMATIC_COMPATIBLE_COMMENT_HANDLING ) {
+        		    // Needs post-meta key/value of "comments" to call comments template on Pages!
+       			    if ( get_post_custom_values( 'comments' ) ) {
+				    	// calls the comments template
+	        			thematic_comments_template();
+        		    }
+        		} else {
+        		    // calls the comments template
+       			    thematic_comments_template();
+        		}
+        		
+	        	// end loop
+        		endwhile;
 	        
 	        	// calling the widget area 'page-bottom'
 	        	get_sidebar( 'page-bottom' );

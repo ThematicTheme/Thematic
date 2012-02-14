@@ -66,9 +66,7 @@
 			<?php
 				// action hook for inserting content below #post
 	        	thematic_belowpost();
-	        	
-	        	endwhile;
-	        
+	        		        
 	        	// Checking for defined constant to enable conditional comment display for Pages
         		if ( THEMATIC_COMPATIBLE_COMMENT_HANDLING ) {
         		    // Needs post-meta key/value of "comments" to call comments template on Pages!
@@ -80,6 +78,9 @@
         		    // calls the comments template
        			    thematic_comments_template();
         		}
+        		
+	        	// end loop
+        		endwhile;
 	        
 	        	// calling the widget area 'page-bottom'
 	        	get_sidebar( 'page-bottom' );
