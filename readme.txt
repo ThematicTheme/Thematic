@@ -30,7 +30,6 @@ Features:
 == Changelog ==
 
 = 0.9.8 =
-
 * Moved: conditional comment handling from page templates to <code>thematic_include_comments()</code>
 * Fixed: many templates misuse of the <code>the_post()</code> 
 * Moved: thematic_init_navmenu() to functions.php for adherence to theme review guidelines
@@ -58,6 +57,7 @@ Features:
 * Changed: the action hook for <code>thematic_head_scripts()</code> and <code>thematic_create_stylesheet()</code> to <code>wp_enqueue_scripts</code>
 * Changed: Function <code>thematic_head_scripts</code> to <code>wp_enqueue_script</code>.
 * Fixed: Valid CSS support for ie7 in default.css for hr color
+* Depecated: archives.php template for proper template namespacing please use the newly added tempate-page-archives.php
 * Deprecated: template-page-blog.php in favor of home.php
 * Fixed: CSS to comply with WP theme unit tests: images, clearing floats, etc.
 * Changed: default.css moved .gallery styles into images.css 

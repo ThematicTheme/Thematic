@@ -36,11 +36,14 @@
 
     	    		// display microformatted vCard if selected in Theme Options and display only on the first page of the archive's pagination  
     	    		if ( thematic_get_theme_opt( 'author_info' ) == 1 & !is_paged() ) :
+
+						// setup the first post to acess the Author's metadata
+						the_post();
 				?>
 
     	            <div id="author-info" class="vcard">
     	            
-    	                <h2 class="entry-title"><?php echo $authordata->first_name; ?> <?php echo $authordata->last_name; ?></h2> 
+    	                <h2 class="entry-title"><?php the_author_meta( 'first_name' ); ?> <?php the_author_meta( 'last_name' ); ?></h2> 
 
     	                <?php
     	               		// display the author's avatar
@@ -49,16 +52,24 @@
 
     	                <div class="author-bio note">
 
-    	                    <?php
-    	                    	// Filterable display of author-meta->user discription if it exists
-    	                    	if ( ! ( ''== $authordata->user_description ) ) : echo apply_filters( 'archive_meta', $authordata->user_description ); endif;
+    	                    <?php    	                    		
+    	                    	// Display Author's discription if it exists
+    	                    	if ( get_the_author_meta( 'user_description' ) )
+    	                    		// Filterable use the_author_user_description *or* get_the_author_user_description
+    	                    		the_author_meta( 'user_description' );
     	                    ?>
 
     	                </div>
 
     				<div id="author-email">
     				
-    	                <a class="email" title="<?php echo antispambot($authordata->user_email); ?>" href="mailto:<?php echo antispambot($authordata->user_email); ?>"><?php _e('Email ', 'thematic') ?><span class="fn n"><span class="given-name"><?php echo $authordata->first_name; ?></span> <span class="family-name"><?php echo $authordata->last_name; ?></span></span></a>
+    	                <a class="email" title="<?php echo antispambot( get_the_author_meta( 'user_email' ) ); ?>" href="mailto:<?php echo antispambot( get_the_author_meta( 'user_email' ) ); ?>">
+    	                	<?php _e( 'Email ', 'thematic' ) ?>
+    	                	<span class="fn n">
+    	                		<span class="given-name"><?php the_author_meta( 'first_name' ); ?></span> 
+    	                		<span class="family-name"><?php the_author_meta( 'last_name' ); ?></span>
+    	                	</span>
+    	                </a>
     	                
     	                <a class="url"  style="display:none;" href="<?php echo home_url() ?>/"><?php bloginfo('name') ?></a>
     	                 
@@ -68,7 +79,9 @@
 
 				<?php
 					//end microformmatted vCard
-					endif; 
+					endif;
+					// Return to the beginning of the loop
+					rewind_posts();
 				?>
 
 				<?php

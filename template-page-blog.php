@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blog
+ * Template Name: Deprecated Blog Template
  *
  * This template is here for Backwards compatibility with child themes that use it.
  * This file will be removed in a future version of thematic. <br>
@@ -19,7 +19,7 @@
  */
 
 	// Providing deprecated file notice to be seen when WP_DEBUG is true
-	_deprecated_file( sprintf( __( 'The template %s', 'thematic' ) . ':', basename(__FILE__) ), '0.9.8', null, sprintf( __( 'You can include a %s in a childtheme', 'thematic' ) . '.', 'home.php' ) );
+	_deprecated_file( sprintf( __( 'The template %s', 'thematic' ) . ':', basename(__FILE__) ), 'Thematic 0.9.8', null, sprintf( __( 'You can include a %s in a childtheme', 'thematic' ) . '.', 'home.php' ) );
 
     // calling the header.php
     get_header();
