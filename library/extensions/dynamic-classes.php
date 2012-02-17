@@ -7,15 +7,22 @@
  */
  
 if ( function_exists( 'childtheme_override_body' ) )  {
-	function thematic_body() {
+	/**
+	 * @ignore
+	 */function thematic_body() {
 		childtheme_override_body();
 	}
 } else {
-	function thematic_body() {
+	/**
+	 * @ignore
+	 */function thematic_body() {
 		thematic_bodyopen();
 	}
 }
 
+/**
+ * thematic_bodyopen function
+ */
 function thematic_bodyopen() {
     if ( apply_filters( 'thematic_show_bodyclass',TRUE ) ) { 
         // Creating the body class
@@ -34,11 +41,17 @@ function thematic_bodyopen() {
 }
 
 if ( function_exists( 'childtheme_override_body_class' ) )  {
-	function thematic_body_class() {
+	/**
+	 * @ignore
+	 */function thematic_body_class() {
 		childtheme_override_body_class();
 	}
 } else {
-	// Generates semantic classes for BODY element
+	/**
+	 * Generates semantic classes for BODY element
+	 *
+	 * @param bool $print (default: true)
+	 */
 	function thematic_body_class( $print = true ) {
 		global $wp_query, $current_user, $blog_id, $post, $taxonomy;
 	    
@@ -314,6 +327,9 @@ if ( apply_filters( 'thematic_show_bc_browser', TRUE ) ) {
 
 
 
+/**
+ * thematic_browser_class_names function.
+ */
 function thematic_browser_class_names($classes) {
 	// add 'class-name' to the $classes array
 	// $classes[] = 'class-name';
@@ -405,11 +421,15 @@ function thematic_browser_class_names($classes) {
 
 	
 if (function_exists('childtheme_override_post_class'))  {
-	function thematic_post_class() {
+	/**
+	 * @ignore
+	 */function thematic_post_class() {
 		childtheme_override_post_class();
 	}
 } else {
-	// Generates semantic classes for each post DIV element
+	/**
+	 * Generates semantic classes for each post DIV element
+	 */
 	function thematic_post_class( $print = true ) {
 		global $post, $thematic_post_alt, $thematic_content_length, $taxonomy;
 	
@@ -517,7 +537,11 @@ if (function_exists('childtheme_override_post_class'))  {
 	}
 }
 
-// Define the num val for 'alt' classes (in post DIV and comment LI)
+/**
+ * Define the num val for 'alt' classes (in post DIV and comment LI)
+ * 
+ * @var int  (default value: 1)
+ */
 $thematic_post_alt = 1;
 
 

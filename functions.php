@@ -15,13 +15,6 @@
  */
 
 
-/**
- * Theme initialization
- *
- * @package ThematicCoreLibrary
- * @subpackage ThemeInit
- */
-
 /** 
  * Legacy options global variables likely not needed anymore…
  * Can these be removed safely?

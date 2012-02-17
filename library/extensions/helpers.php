@@ -7,8 +7,13 @@
  */
  
  
-// create bullet-proof excerpt for meta name="description"
 
+/**
+ * Create bullet-proof excerpt for meta name="description"
+ * 
+ * @param mixed $text
+ * @return $text
+ */
 function thematic_trim_excerpt($text) {
 	if ( '' == $text ) {
 		$text = get_the_content('');
@@ -29,13 +34,20 @@ function thematic_trim_excerpt($text) {
 	return $text;
 }
 
-function thematic_the_excerpt($deprecated = '') {
+
+/**
+ * thematic_the_excerpt function.
+ * 
+ * @param string $deprecated (default: '')
+ * @return $output
+ */
+function thematic_the_excerpt( $deprecated = '' ) {
 	global $post;
 	$output = '';
-	$output = strip_tags($post->post_excerpt);
-	$output = str_replace('"', '\'', $output);
+	$output = strip_tags( $post->post_excerpt );
+	$output = str_replace( '"', '\'', $output );
 	if ( post_password_required($post) ) {
-		$output = __('There is no excerpt because this is a protected post.', 'thematic');
+		$output = __( 'There is no excerpt because this is a protected post.', 'thematic');
 		return $output;
 	}
 
@@ -43,26 +55,33 @@ function thematic_the_excerpt($deprecated = '') {
 	
 }
 
+
+/**
+ * thematic_excerpt_rss function.
+ *
+ * @return $output
+ */
 function thematic_excerpt_rss() {
 	global $post;
 	$output = '';
-	$output = strip_tags($post->post_excerpt);
-	if ( post_password_required($post) ) {
-		$output = __('There is no excerpt because this is a protected post.', 'thematic');
+	$output = strip_tags( $post->post_excerpt );
+	if ( post_password_required( $post ) ) {
+		$output = __( 'There is no excerpt because this is a protected post.', 'thematic' );
 		return $output;
 }
 
-	return apply_filters('thematic_excerpt_rss', $output);
+	return apply_filters( 'thematic_excerpt_rss', $output );
 
 }
 
-add_filter('thematic_excerpt_rss', 'thematic_trim_excerpt');
+add_filter( 'thematic_excerpt_rss', 'thematic_trim_excerpt' );
 
-// create nice multi_tag_title
-// Credits: Martin Kopischke for providing this code
 
+/**
+ * Create nice multi_tag_title
+ */
 function thematic_tag_query() {
-	$nice_tag_query = get_query_var('tag'); // tags in current query
+	$nice_tag_query = get_query_var( 'tag' ); // tags in current query
 	$nice_tag_query = str_replace(' ', '+', $nice_tag_query); // get_query_var returns ' ' for AND, replace by +
 	$tag_slugs = preg_split('%[,+]%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of tag slugs
 	$tag_ops = preg_split('%[^,+]*%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of operators
@@ -90,20 +109,31 @@ function thematic_tag_query() {
 	return $nice_tag_query;
 }
 
+
+/**
+ * Gets the term name of the current post
+ *
+ * @todo deprcate when thematic_body_class becomes a filter of body_class
+ * @return $term->name
+ */
 function thematic_get_term_name() {
-	// Credits: Justin Tadlock Theme Hybrid
 	$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
 	return $term->name;
 }
 
+
+/**
+ * Check to see if the current post is a custom post type
+ * 
+ * @return bool
+ */
 function thematic_is_custom_post_type() {
 	global $post; 
-	if ($post->post_type !== "post") {
-		if ($post->post_type !== "page") {
-			return true;
-		}
-	}
-	return false;
-}
+
+	if ( !in_array(  $post->post_type , get_post_types( array( '_builtin' => true ) ) ) ) {
+		return true;
+ 	}
+ 	return false;
+ }
 
 ?>

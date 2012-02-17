@@ -6,29 +6,43 @@
  * @subpackage Widgets
  */
 
-// CSS markup before the widget
+
+/**
+ * Markup before the widget
+ */
 function thematic_before_widget() {
 	$content = '<li id="%1$s" class="widgetcontainer %2$s">';
 	return apply_filters('thematic_before_widget', $content);
 }
 
-// CSS markup after the widget
+
+/**
+ * Markup after the widget
+ */
 function thematic_after_widget() {
 	$content = '</li>';
 	return apply_filters('thematic_after_widget', $content);
 }
 
-// CSS markup before the widget title
+
+
+/**
+ * Markup before the widget title
+ */
 function thematic_before_title() {
 	$content = "<h3 class=\"widgettitle\">";
 	return apply_filters('thematic_before_title', $content);
 }
 
-// CSS markup after the widget title
+
+/**
+ * Markup after the widget title
+ */
 function thematic_after_title() {
 	$content = "</h3>\n";
 	return apply_filters('thematic_after_title', $content);
 }
+
 
 /**
  * Search widget class
