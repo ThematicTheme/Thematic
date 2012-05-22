@@ -13,11 +13,11 @@
  * @subpackage Templates
  *
  * @link http://codex.wordpress.org/Template_Hierarchy Codex: Template Hierarchy
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 
 	// Providing deprecated file notice to be seen when WP_DEBUG is true
-	_deprecated_file( sprintf( __( 'The template %s', 'thematic' ) . ':', basename(__FILE__) ), '0.9.8', 'template-page-archives.php' );
+	_deprecated_file( sprintf( __( 'The template %s', 'thematic' ) . ':', basename(__FILE__) ), '1.0', 'template-page-archives.php' );
 
 
 	// calling the header.php

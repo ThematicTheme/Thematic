@@ -549,7 +549,7 @@ $thematic_post_alt = 1;
 /** 
  * Adds classes to commment li's using the WordPress comment_class filter
  *
- * @since 0.9.8
+ * @since 1.0
  */
 function thematic_add_comment_class($classes) {
     global $comment, $post;

@@ -382,7 +382,7 @@ if ( function_exists('childtheme_override_head_scripts') )  {
      *
      * For Reference: {@link http://users.tpg.com.au/j_birch/plugins/superfish/#getting-started Superfish Jquery Plugin}
      *
-     * @since 0.9.8
+     * @since 1.0
      */
     function thematic_head_scripts() {
     	

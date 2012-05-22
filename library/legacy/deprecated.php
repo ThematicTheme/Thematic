@@ -44,13 +44,13 @@ function is_sidebar_active( $index ){
  * Switch adding the comment-reply script 
  * 
  * Removed in favor of hooking into wp_enqueue_scripts over calling directly in header.php
- * Note that in 0.9.8 the comment reply script is still enqueued by default.
+ * Note that in 1.0 the comment reply script is still enqueued by default.
  * Use wp_dequeue_script('comment-reply') to remove the script instead of using the filter: thematic_show_commentreply.
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function thematic_show_commentreply() {
-	_deprecated_function( __FUNCTION__, '0.9.8' );
+	_deprecated_function( __FUNCTION__, '1.0' );
     $display = TRUE;
     $display = apply_filters('thematic_show_commentreply', $display);
     if ($display)
@@ -64,17 +64,17 @@ function thematic_show_commentreply() {
  *
  * This has been integrated into thematic_doctitle()
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function pageGetPageNo() {
-	_deprecated_function( __FUNCTION__, '0.9.8' );
+	_deprecated_function( __FUNCTION__, '1.0' );
     if ( get_query_var('paged') )
         print ' | Page ' . get_query_var('paged');
 }
 
 
 if ( function_exists( 'childtheme_override_comment_class' ) )  {
-	_deprecated_function('childtheme_override_comment_class', '0.9.8', 'comment_class()' );
+	_deprecated_function('childtheme_override_comment_class', '1.0', 'comment_class()' );
 	/**
  	 * @ignore
  	 */
@@ -87,10 +87,10 @@ if ( function_exists( 'childtheme_override_comment_class' ) )  {
 	 * 
 	 * Removed due to duplication of the core WordPress comment_class()
 	 * 
- 	 * @deprecated 0.9.8
+ 	 * @deprecated 1.0
 	 */
 	function thematic_comment_class( $print = true ) {
-		_deprecated_function( __FUNCTION__, '0.9.8', 'comment_class()' );
+		_deprecated_function( __FUNCTION__, '1.0', 'comment_class()' );
 
 		global $comment, $post, $thematic_comment_alt, $comment_depth, $comment_thread_alt;
 
@@ -135,10 +135,10 @@ if ( function_exists( 'childtheme_override_comment_class' ) )  {
  * 
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function more_text() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_more_text()');
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_more_text()');
 	thematic_more_text();
 }
 
@@ -147,10 +147,10 @@ function more_text() {
  * 
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function list_comments_arg() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_list_comments_arg()');
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_list_comments_arg()');
 	thematic_list_comments_arg();
 }
 
@@ -159,10 +159,10 @@ function list_comments_arg() {
  * 
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function list_bookmarks_args() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_list_bookmarks_args()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_list_bookmarks_args()' );
 	thematic_list_bookmarks_args();
 }
 
@@ -172,10 +172,10 @@ function list_bookmarks_args() {
  * 
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function widget_area_primary_aside() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_primary_aside()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_primary_aside()' );
 	thematic_widget_area_primary_aside();
 }
 
@@ -185,10 +185,10 @@ function widget_area_primary_aside() {
  *
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function widget_area_secondary_aside() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_secondary_aside()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_secondary_aside()' );
     thematic_widget_area_secondary_aside();
 }
 
@@ -198,10 +198,10 @@ function widget_area_secondary_aside() {
  *
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function widget_area_index_top() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_index_top()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_index_top()' );
     thematic_widget_area_index_top();
 }
 
@@ -211,10 +211,10 @@ function widget_area_index_top() {
  *
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function widget_area_index_insert() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_index_insert()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_index_insert()' );
 	thematic_widget_area_index_insert();
 }
 
@@ -224,10 +224,10 @@ function widget_area_index_insert() {
  *
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */	
 function widget_area_index_bottom() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_index_bottom()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_index_bottom()' );
     thematic_widget_area_index_bottom();
 }
 
@@ -237,10 +237,10 @@ function widget_area_index_bottom() {
  *
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function widget_area_single_top() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_single_top()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_single_top()' );
     thematic_widget_area_single_top();
 }
 
@@ -250,10 +250,10 @@ function widget_area_single_top() {
  *
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function widget_area_single_insert() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_single_insert()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_single_insert()' );
     thematic_widget_area_single_insert();
 }
 
@@ -263,10 +263,10 @@ function widget_area_single_insert() {
  *
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 function widget_area_single_bottom() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_single_bottom()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_single_bottom()' );
     thematic_widget_area_single_bottom();
 }
 
@@ -276,10 +276,10 @@ function widget_area_single_bottom() {
  *
  * Removed for namespacing
  *
- * @deprecated 0.9.8	 
+ * @deprecated 1.0	 
  */
 function widget_area_page_top() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_page_top()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_page_top()' );
 	thematic_widget_area_page_top();
 }
 	
@@ -289,10 +289,10 @@ function widget_area_page_top() {
  *
  * Removed for namespacing
  *
- * @deprecated 0.9.8	 
+ * @deprecated 1.0	 
  */
 function widget_area_page_bottom() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_page_bottom()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_page_bottom()' );
 	thematic_widget_page_bottom();
 }
 
@@ -302,10 +302,10 @@ function widget_area_page_bottom() {
  * 
  * Removed for namespacing
  *
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
  function widget_area_subsidiaries() {
-	_deprecated_function( __FUNCTION__, '0.9.8', 'thematic_widget_area_subsidiaries()' );
+	_deprecated_function( __FUNCTION__, '1.0', 'thematic_widget_area_subsidiaries()' );
 	thematic_widget_area_subsidiaries();
 }
 

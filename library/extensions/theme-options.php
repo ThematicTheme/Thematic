@@ -18,7 +18,7 @@
  * 
  * Override: childtheme_override_opt_init
  *
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 if (function_exists('childtheme_override_opt_init')) {
 	function thematic_opt_init() {
@@ -68,7 +68,7 @@ add_action ('admin_init', 'thematic_opt_init');
  * Returns an option's value from wp_otions table in database
  * or returns false if no value is found for that row 
  *
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_get_wp_opt( $option_name, $default = false ) {
 	global $blog_id;
@@ -88,7 +88,7 @@ function thematic_get_wp_opt( $option_name, $default = false ) {
  * or returns false if no value is found
  *
  * @uses thematic_get_wp_opt()
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_get_theme_opt( $opt_key, $echo = false ) {
 	
@@ -112,7 +112,7 @@ function thematic_get_theme_opt( $opt_key, $echo = false ) {
  *
  * @uses thematic_theme_convert_legacy_opt
  * 
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_convert_legacy_opt() {
     $thm_insert_position = thematic_get_wp_opt( 'thm_insert_position' );
@@ -139,7 +139,7 @@ function thematic_convert_legacy_opt() {
  *
  * Filter: thematic_theme_default_opt
  * 
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  *
  */
 function thematic_default_opt() {
@@ -162,7 +162,7 @@ function thematic_default_opt() {
  * The filter provides the ability for child themes to customize or remove and add 
  * their own options page and queue contextual help in one function
  * 
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
  
 function thematic_opt_add_page() {
@@ -188,7 +188,7 @@ add_action( 'admin_menu', 'thematic_opt_add_page' );
  * Override: childtheme_override_opt_page_help <br>
  * Conditional WP compatibilty 3.3 & 3.2 <br>
  * 
- * @since Thematic 0.9.8 
+ * @since Thematic 1.0 
  * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
  * @todo removeconditional compatibilty  WP version > 3.3 or > 3.2
  */
@@ -232,7 +232,7 @@ if (function_exists('childtheme_override_opt_page_help')) {
 /**
  * Adds a settings section to display legacy help text and theme links
  *
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
  */
 function thematic_legacy_help() {
@@ -243,18 +243,18 @@ function thematic_legacy_help() {
 /**
  * Renders the legacy help text and theme links
  * 
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
  */
 function thematic_do_legacy_help_section() { 
-	echo ('<p>'. __( 'For more information about this theme, <a href="http://themeshaper.com">visit ThemeShaper</a>. Please visit the <a href="http://themeshaper.com/forums/">ThemeShaper Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
+	echo ('<p>'. __( 'For more information about this theme, <a href="http://thematictheme.com">visit ThemeTheme.com</a>. Please visit the <a href="http://thematictheme.com/forums/">ThematicTheme.com Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
 }
 
 
 /**
  * Renders the them options page
  *
- * @since Thematic 0.9.8 
+ * @since Thematic 1.0 
  * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
  * @todo remove conditional compatibilty when min WP version > 3.1
  */
@@ -295,7 +295,7 @@ function thematic_do_opt_page() { ?>
  *
  * Filter: thematic_theme_opt_section_main
  *
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_do_opt_section_main() {
 	$thematic_opt_section_main = '';
@@ -306,7 +306,7 @@ function thematic_do_opt_section_main() {
 /**
  * Renders Index Insert elements
  *
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_do_insert_opt() { 
 ?>
@@ -319,7 +319,7 @@ function thematic_do_insert_opt() {
 /**
  * Renders Author Info elements
  *
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_do_auth_opt() { 
 ?>
@@ -332,7 +332,7 @@ function thematic_do_auth_opt() {
 /**
  * Renders Footer Text elements
  *
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_do_footer_opt() { 
 ?>
@@ -345,7 +345,7 @@ function thematic_do_footer_opt() {
 /**
  * Renders Leagcy Options elements
  *
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_do_legacy_opt() {
 ?>
@@ -362,7 +362,7 @@ function thematic_do_legacy_opt() {
  * Override: childtheme_override_validate_opt <br>
  * Filter: thematic_theme_opt_validation
  * 
- * @since Thematic 0.9.8 
+ * @since Thematic 1.0 
  */
 if (function_exists('childtheme_override_validate_opt')) {
 	function thematic_thematic_validate_opt() {

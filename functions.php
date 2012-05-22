@@ -26,7 +26,7 @@ $shortname = "thm";
 /**
  * Registers action hook: thematic_init 
  * 
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_init() {
 	do_action('thematic_init');
@@ -38,7 +38,7 @@ function thematic_init() {
  *
  * Override: childtheme_override_theme_setup
  *
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 if ( function_exists('childtheme_override_theme_setup') ) {
 	/**
@@ -60,7 +60,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 * Used to set the width of images and content. Should be equal to the width the theme
 		 * is designed for, generally via the style.css stylesheet.
 		 *
-		 * @since Thematic 0.9.8
+		 * @since Thematic 1.0
 		 */
 		if ( !isset($content_width) )
 			$content_width = 540;
@@ -220,7 +220,7 @@ add_action('after_setup_theme', 'thematic_theme_setup', 10);
 /**
  * Registers action hook: thematic_child_init
  * 
- * @since Thematic 0.9.8
+ * @since Thematic 1.0
  */
 function thematic_child_init() {
 	do_action('thematic_child_init');

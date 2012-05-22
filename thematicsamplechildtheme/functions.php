@@ -9,8 +9,8 @@
  * functionality, as well as a sample function that will add a home link to your menu.
  * "Uncomment" or add more to cusomize the functionality of your Child Theme.
  *
- * More ideas can be found on "A Guide To Customizing The Thematic Theme Framework" 
- * @link http://themeshaper.com/thematic-for-wordpress/guide-customizing-thematic-theme-framework/
+ * More ideas can be found in the community documentation for Thematic
+ * @link http://docs.thematictheme.com
  *
  * @package ThematicSampleChildTheme
  * @subpackage ThemeInit

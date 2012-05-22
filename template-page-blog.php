@@ -15,11 +15,11 @@
  *
  * @package Thematic
  * @subpackage Templates
- * @deprecated 0.9.8
+ * @deprecated 1.0
  */
 
 	// Providing deprecated file notice to be seen when WP_DEBUG is true
-	_deprecated_file( sprintf( __( 'The template %s', 'thematic' ) . ':', basename(__FILE__) ), 'Thematic 0.9.8', null, sprintf( __( 'You can include a %s in a childtheme', 'thematic' ) . '.', 'home.php' ) );
+	_deprecated_file( sprintf( __( 'The template %s', 'thematic' ) . ':', basename(__FILE__) ), 'Thematic 1.0', null, sprintf( __( 'You can include a %s in a childtheme', 'thematic' ) . '.', 'home.php' ) );
 
     // calling the header.php
     get_header();
