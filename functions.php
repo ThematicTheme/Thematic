@@ -49,7 +49,10 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 	}
 } else {
 	/**
-	 * 
+	 * thematic_theme_setup
+	 *
+	 * @todo review for impact of deprecations on child themes & fix comment blocks?
+	 * @since Thematic 1.0?
 	 */
 	function thematic_theme_setup() {
 		global $content_width;
@@ -60,6 +63,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 * Used to set the width of images and content. Should be equal to the width the theme
 		 * is designed for, generally via the style.css stylesheet.
 		 *
+		 * @todo deprecate constant THEMELIB in favor of get_template_directory() and note that get_theme_data() will be deprecated in WP 3.4
 		 * @since Thematic 1.0
 		 */
 		if ( !isset($content_width) )
@@ -71,6 +75,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 * 
 		 * Used to get title, version, author, URI of the parent and the child theme.
 		 */
+		 
 		$themeData = get_theme_data(  get_template_directory() . '/style.css' );
 		$thm_version = trim( $themeData['Version'] );
 		
@@ -147,7 +152,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		add_theme_support('thematic_superfish');
 
 		// Path constants
-		define( 'THEMELIB', TEMPLATEPATH . '/library' );
+		define( 'THEMELIB',  get_template_directory() .  '/library' );
 
 		// Create Theme Options Page
 		require_once (THEMELIB . '/extensions/theme-options.php');

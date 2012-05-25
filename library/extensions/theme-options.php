@@ -219,9 +219,6 @@ if (function_exists('childtheme_override_opt_page_help')) {
 			$screen->add_help_tab( array( 'title' => __( 'Overview', 'thematic' ), 'id' => 'theme-opt-help', 'content' => $help, ) );
 			$screen->set_help_sidebar( $sidebar );
 			
-		} elseif ( function_exists('add_contextual_help') ) {
-			// WordPress 3.2
-			add_contextual_help( $screen, $help . $sidebar );
 		} else {
 			// WordPress 3.0
 			thematic_legacy_help();
