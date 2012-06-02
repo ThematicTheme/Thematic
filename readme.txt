@@ -29,7 +29,8 @@ Features:
 
 == Changelog ==
 = 1.0.2 =
-* Fixed: thematic.pot is in sync again
+* Updated: German language files
+* Updated: thematic.pot is in sync again
 = 1.0 =
 * Moved: conditional comment handling from page templates to <code>thematic_include_comments()</code>
 * Fixed: many templates misuse of the <code>the_post()</code> 
