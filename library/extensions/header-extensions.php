@@ -57,86 +57,104 @@ if ( function_exists('childtheme_override_doctitle') )  {
 	/**
 	 * Display the content of the title tag
 	 * 
-	 * Located in header.php Credits: Tarski Theme
-	 * 
 	 * Override: childtheme_override_doctitle
 	 * Filter: thematic_doctitle_separator
-	 * Filter: thematic_doctitle
+	 *
 	 */
 	function thematic_doctitle() {
-		$site_name = get_bloginfo('name' , 'display');
-	    $separator = apply_filters('thematic_doctitle_separator', '|');
-	        	
-	    if ( is_single() ) {
-	      $content = single_post_title('', FALSE);
-	    }
-	    elseif ( is_home() || is_front_page() ) { 
-	      $content = get_bloginfo('description', 'display');
-	    }
-	    elseif ( is_page() ) { 
-	      $content = single_post_title('', FALSE); 
-	    }
-	    elseif ( is_search() ) { 
-	      $content = __('Search Results for:', 'thematic'); 
-	      $content .= ' ' . get_search_query();
-	    }
-	    elseif ( is_category() ) {
-	      $content = __('Category Archives:', 'thematic');
-	      $content .= ' ' . single_cat_title('', FALSE);;
-	    }
-	    elseif ( is_tag() ) { 
-	      $content = __('Tag Archives:', 'thematic');
-	      $content .= ' ' . thematic_tag_query();
-	    }
-	    elseif ( is_404() ) { 
-	      $content = __('Not Found', 'thematic'); 
-	    }
-	    else { 
-	      $content = get_bloginfo('description', 'display');
-	    }
-	
-	    if ( get_query_var('paged') ) {
-	      $content .= ' ' .$separator. ' ';
-	      $content .= 'Page';
-	      $content .= ' ';
-	      $content .= get_query_var('paged');
-	    }
-	
-	    if($content) {
-	      if ( is_home() || is_front_page() ) {
-	          $elements = array(
-	            'site_name' => $site_name,
-	            'separator' => $separator,
-	            'content' => $content
-	          );
-	      }
-	      else {
-	          $elements = array(
-	            'content' => $content
-	          );
-	      }  
-	    } else {
-	      $elements = array(
-	        'site_name' => $site_name
-	      );
-	    }
-	
-	    // Filters should return an array
-	    $elements = apply_filters('thematic_doctitle', $elements);
-		
-	    // But if they don't, it won't try to implode
-	    if( is_array($elements) ) {
-	      $doctitle = implode(' ', $elements);
-	    }
-	    else {
-	      $doctitle = $elements;
-	    }
-	    
-	    $doctitle = "<title>" . $doctitle . "</title>" . "\n";
-	    
-	    echo $doctitle;
+        $separator = apply_filters('thematic_doctitle_separator', '');
+        $doctitle = '<title>' . wp_title( $separator, false, 'right' ) . '</title>' . "\n";
+        echo $doctitle;
 	} // end thematic_doctitle
 }
+
+	
+/**
+ * Filters wp_title returning the doctitle contents
+ * Located in header.php Credits: Tarski Theme
+ * 
+ * Override: childtheme_override_doctitle
+ * Filter: thematic_doctitle_separator
+ * Filter: thematic_doctitle
+ *
+ * @since 1.0.2
+ */
+function thematic_wptitle( $wp_doctitle ) {
+    // return original string if on feed or if a seo plugin is being used
+    if ( is_feed() || thematic_seo() )
+    	return $wp_doctitle;
+   	// otherwise...	
+   	$site_name = get_bloginfo('name' , 'display');
+    $separator = apply_filters('thematic_doctitle_separator', '|');
+        	
+    if ( is_single() ) {
+      $content = single_post_title('', FALSE);
+    }
+    elseif ( is_home() || is_front_page() ) { 
+      $content = get_bloginfo('description', 'display');
+    }
+    elseif ( is_page() ) { 
+      $content = single_post_title('', FALSE); 
+    }
+    elseif ( is_search() ) { 
+      $content = __('Search Results for:', 'thematic'); 
+      $content .= ' ' . get_search_query();
+    }
+    elseif ( is_category() ) {
+      $content = __('Category Archives:', 'thematic');
+      $content .= ' ' . single_cat_title('', FALSE);;
+    }
+    elseif ( is_tag() ) { 
+      $content = __('Tag Archives:', 'thematic');
+      $content .= ' ' . thematic_tag_query();
+    }
+    elseif ( is_404() ) { 
+      $content = __('Not Found', 'thematic'); 
+    }
+    else { 
+      $content = get_bloginfo('description', 'display');
+    }
+    
+    if ( get_query_var('paged') ) {
+      $content .= ' ' .$separator. ' ';
+      $content .= 'Page';
+      $content .= ' ';
+      $content .= get_query_var('paged');
+    }
+    
+    if($content) {
+      if ( is_home() || is_front_page() ) {
+          $elements = array(
+            'site_name' => $site_name,
+            'separator' => $separator,
+            'content' 	=> $content
+          );
+      }
+      else {
+          $elements = array(
+            'content' => $content
+          );
+      }  
+    } else {
+      $elements = array(
+        'site_name' => $site_name
+      );
+    }
+    
+    // Filters should return an array
+    $elements = apply_filters('thematic_doctitle', $elements);
+       
+    // But if they don't, it won't try to implode
+    if( is_array($elements) ) {
+        $thematic_doctitle = implode(' ', $elements);
+    } else {
+   	    $thematic_doctitle = $elements;
+    }
+   	
+    return $thematic_doctitle;
+}
+
+add_filter( 'wp_title', 'thematic_wptitle', 10, 3);
 
 
 /**

@@ -365,8 +365,7 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= ' <span>';
 				$content .= thematic_get_term_name();
 				$content .= '</span></h1>';
-		// thematic_is_custom_post_type can be changed to is_post_type_archive when min WP version support is = 3.1
- 		} elseif (thematic_is_custom_post_type() && is_archive() ) { 
+ 		} elseif (is_post_type_archive()) { 
 				$content .= '<h1 class="page-title">';
 				$post_type_obj = get_post_type_object( get_post_type() );
 				$post_type_name = $post_type_obj->labels->singular_name;

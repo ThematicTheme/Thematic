@@ -26,7 +26,7 @@ if (function_exists('childtheme_override_opt_init')) {
 	}
 } else {
 	function thematic_opt_init() {
-		
+
 		// Retrieve current options from database	
 		$current_options = thematic_get_wp_opt('thematic_theme_opt');
 		$legacy_options = thematic_convert_legacy_opt();
@@ -42,7 +42,7 @@ if (function_exists('childtheme_override_opt_init')) {
 				add_option( 'thematic_theme_opt', thematic_default_opt() );
 			}
 		}
-		
+
 		register_setting ('thematic_opt_group', 'thematic_theme_opt', 'thematic_validate_opt');
 		
 		add_settings_section ('thematic_opt_section_main', '', 'thematic_do_opt_section_main', 'thematic_theme_opt');
@@ -186,11 +186,9 @@ add_action( 'admin_menu', 'thematic_opt_add_page' );
  * Filter: thematic_theme_opt_help_txt <br>
  * Filter: thematic_theme_opt_help_sidebar <br>
  * Override: childtheme_override_opt_page_help <br>
- * Conditional WP compatibilty 3.3 & 3.2 <br>
  * 
  * @since Thematic 1.0 
- * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
- * @todo removeconditional compatibilty  WP version > 3.3 or > 3.2
+ * @todo remove conditional compatibilty  WP version > 3.3 and remove fallback to 3.2
  */
 if (function_exists('childtheme_override_opt_page_help')) {
 	function thematic_opt_page_help() {
@@ -218,33 +216,11 @@ if (function_exists('childtheme_override_opt_page_help')) {
 			// WordPress 3.3
 			$screen->add_help_tab( array( 'title' => __( 'Overview', 'thematic' ), 'id' => 'theme-opt-help', 'content' => $help, ) );
 			$screen->set_help_sidebar( $sidebar );
-			
 		} else {
-			// WordPress 3.0
-			thematic_legacy_help();
+			// WordPress 3.2
+			add_contextual_help( $screen, $help . $sidebar );
 		}
 	}
-}
-
-/**
- * Adds a settings section to display legacy help text and theme links
- *
- * @since Thematic 1.0
- * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
- */
-function thematic_legacy_help() {
-	add_settings_section ('thematic_opt_help_section', '', 'thematic_do_legacy_help_section', 'thematic_opt_page');
-}
-
-
-/**
- * Renders the legacy help text and theme links
- * 
- * @since Thematic 1.0
- * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
- */
-function thematic_do_legacy_help_section() { 
-	echo ('<p>'. __( 'For more information about this theme, <a href="http://thematictheme.com">visit ThemeTheme.com</a>. Please visit the <a href="http://thematictheme.com/forums/">ThematicTheme.com Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
 }
 
 
@@ -252,8 +228,6 @@ function thematic_do_legacy_help_section() {
  * Renders the them options page
  *
  * @since Thematic 1.0 
- * @todo remove Legacy compatibilty WP 3.0 when min WP version increases
- * @todo remove conditional compatibilty when min WP version > 3.1
  */
 function thematic_do_opt_page() { ?>
 
@@ -266,20 +240,9 @@ function thematic_do_opt_page() { ?>
 		<?php
 			settings_fields( 'thematic_opt_group' );
 			do_settings_sections( 'thematic_theme_opt' );
-			if ( function_exists('submit_button') ) {
-			// WordPress 3.1
-				submit_button();
-			} else {
-			// WordPress 3.0
-			?>
-			 	<p class="submit">
- 					<input name="submit" type="submit" class="button-primary" value="<?php esc_attr_e('Save Changes', 'thematic') ?>" />
- 				</p>
- 			<?php
-			}
-			
+			submit_button();			
 		?>
-		</form>
+	</form>
  
  </div>
  
@@ -407,4 +370,3 @@ if (function_exists('childtheme_override_validate_opt')) {
  	   return apply_filters( 'thematic_theme_opt_validation', $output, $input );
  	}
 } 
- 

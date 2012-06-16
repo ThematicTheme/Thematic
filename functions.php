@@ -15,14 +15,6 @@
  */
 
 
-/** 
- * Legacy options global variables likely not needed anymore…
- * Can these be removed safely?
- */
-$themename = "Thematic";
-$shortname = "thm";
-
-
 /**
  * Registers action hook: thematic_init 
  * 
@@ -63,7 +55,6 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 * Used to set the width of images and content. Should be equal to the width the theme
 		 * is designed for, generally via the style.css stylesheet.
 		 *
-		 * @todo deprecate constant THEMELIB in favor of get_template_directory() and note that get_theme_data() will be deprecated in WP 3.4
 		 * @since Thematic 1.0
 		 */
 		if ( !isset($content_width) )
@@ -75,142 +66,146 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 * 
 		 * Used to get title, version, author, URI of the parent and the child theme.
 		 */
-		 
-		$themeData = get_theme_data(  get_template_directory() . '/style.css' );
-		$thm_version = trim( $themeData['Version'] );
 		
-		if (!$thm_version)
-			$thm_version = "unknown";
-
-		$ct = get_theme_data(  get_stylesheet_directory() . '/style.css' );
-		$templateversion = trim( $ct['Version'] );
+		// WordPress 3.4 
+		if ( function_exists( 'wp_get_theme' ) ) {
+			$frameworkData = wp_get_theme(  get_template_directory() . '/style.css' );
+		// WordPress 3.3
+		} else {
+			$frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+		}
 		
-		if ( !$templateversion )
-			$templateversion = "unknown";
+		$framework_version = trim( $frameworkData['Version'] );
+		
+		if ( !$framework_version )
+			$framework_version = "unknown";
 
-		if ( !defined('THEMENAME') )
-			define('THEMENAME', $themeData['Title']);
+		// WordPress 3.4 
+		if ( function_exists( 'wp_get_theme' ) ) {
+			$childthemeData = wp_get_theme( get_stylesheet_directory() . '/style.css' );
+		// WordPress 3.3
+		} else { 
+			$childthemeData = get_theme_data( get_stylesheet_directory() . '/style.css' );
+		}
+		
+		$childtheme_version = trim( $childthemeData['Version'] );
+		
+		if ( !$childtheme_version )
+			$childtheme_version = "unknown";
+
+		if ( !defined( 'THEMENAME' ) )
+			define( 'THEMENAME', 	$frameworkData['Title'] );
 
 		if ( !defined('THEMEAUTHOR') )
-			define('THEMEAUTHOR', $themeData['Author']);
+			define( 'THEMEAUTHOR', 	$frameworkData['Author'] );
 
-		if ( !defined('THEMEURI') )
-			define('THEMEURI', $themeData['URI']);
+		if ( !defined( 'THEMEURI') )
+			define( 'THEMEURI', 	$frameworkData['URI'] );
 
-		if ( !defined('THEMATICVERSION') )
-			define('THEMATICVERSION', $thm_version);
+		if ( !defined( 'THEMATICVERSION' ) )
+			define( 'THEMATICVERSION', $framework_version );
 
-		define( 'TEMPLATENAME', $ct['Title'] );
-		define( 'TEMPLATEAUTHOR', $ct['Author'] );
-		define( 'TEMPLATEURI', $ct['URI'] );
-		define( 'TEMPLATEVERSION', $templateversion );
+		define( 'TEMPLATENAME', 	$childthemeData['Title'] );
+		define( 'TEMPLATEAUTHOR', 	$childthemeData['Author'] );
+		define( 'TEMPLATEURI', 		$childthemeData['URI'] );
+		define( 'TEMPLATEVERSION', 	$childtheme_version );
 
 		// set feed links handling
 		// If you set this to TRUE, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
-		if ( !defined('THEMATIC_COMPATIBLE_FEEDLINKS') ) {
-			if ( function_exists('comment_form') ) {
-				define('THEMATIC_COMPATIBLE_FEEDLINKS', false); // WordPress 3.0
-			} else {
-				define('THEMATIC_COMPATIBLE_FEEDLINKS', true); // below WordPress 3.0
-			}
-		}
+		if ( !defined('THEMATIC_COMPATIBLE_FEEDLINKS') ) 
+				define( 'THEMATIC_COMPATIBLE_FEEDLINKS', false );
 
 		// set comments handling for pages, archives and links
 		// If you set this to TRUE, comments only show up on pages with a key/value of "comments"
-		if ( !defined('THEMATIC_COMPATIBLE_COMMENT_HANDLING') )
-			define('THEMATIC_COMPATIBLE_COMMENT_HANDLING', false);
+		if ( !defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING') )
+			define( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING', false );
 
 		// set body class handling to WP body_class()
 		// If you set this to TRUE, Thematic will use thematic_body_class instead
-		if ( !defined('THEMATIC_COMPATIBLE_BODY_CLASS') )
-			define('THEMATIC_COMPATIBLE_BODY_CLASS', false);
+		if ( !defined( 'THEMATIC_COMPATIBLE_BODY_CLASS') )
+			define( 'THEMATIC_COMPATIBLE_BODY_CLASS', false );
 
 		// set post class handling to WP post_class()
 		// If you set this to TRUE, Thematic will use thematic_post_class instead
-		if ( !defined('THEMATIC_COMPATIBLE_POST_CLASS') )
-			define('THEMATIC_COMPATIBLE_POST_CLASS', false);
+		if ( !defined( 'THEMATIC_COMPATIBLE_POST_CLASS') )
+			define( 'THEMATIC_COMPATIBLE_POST_CLASS', false );
 
-		// which comment form should be used
-		if ( !defined('THEMATIC_COMPATIBLE_COMMENT_FORM') ) {
-			if ( function_exists('comment_form') ) {
- 				define('THEMATIC_COMPATIBLE_COMMENT_FORM', false); // WordPress 3.0
-			} else {
-				define('THEMATIC_COMPATIBLE_COMMENT_FORM', true); // below WordPress 3.0
-			}
-		}
+		// If you set this to TRUE, Thematic will use it's legacy comment form
+		if ( !defined('THEMATIC_COMPATIBLE_COMMENT_FORM') ) 
+ 				define( 'THEMATIC_COMPATIBLE_COMMENT_FORM', false ); 
 
-		// Check for WordPress mu or WordPress 3.0
-		define( 'THEMATIC_MB', function_exists('get_blog_option') );
+		// Check for MultiSite
+		define( 'THEMATIC_MB', is_multisite()  );
 
 		// Create the feedlinks
-		if ( !(THEMATIC_COMPATIBLE_FEEDLINKS) )
- 			add_theme_support('automatic-feed-links');
+		if ( !( THEMATIC_COMPATIBLE_FEEDLINKS ) )
+ 			add_theme_support( 'automatic-feed-links' );
  
-		if ( apply_filters('thematic_post_thumbs', true) )
-			add_theme_support('post-thumbnails');
+		if ( apply_filters( 'thematic_post_thumbs', true ) )
+			add_theme_support( 'post-thumbnails' );
  
-		add_theme_support('thematic_superfish');
+		add_theme_support( 'thematic_superfish' );
 
 		// Path constants
 		define( 'THEMELIB',  get_template_directory() .  '/library' );
 
 		// Create Theme Options Page
-		require_once (THEMELIB . '/extensions/theme-options.php');
+		require_once ( THEMELIB . '/extensions/theme-options.php' );
 		
 		// Load legacy functions
-		require_once (THEMELIB . '/legacy/deprecated.php');
+		require_once ( THEMELIB . '/legacy/deprecated.php' );
 
 		// Load widgets
-		require_once (THEMELIB . '/extensions/widgets.php');
+		require_once ( THEMELIB . '/extensions/widgets.php' );
 
 		// Load custom header extensions
-		require_once (THEMELIB . '/extensions/header-extensions.php');
+		require_once ( THEMELIB . '/extensions/header-extensions.php' );
 
 		// Load custom content filters
-		require_once (THEMELIB . '/extensions/content-extensions.php');
+		require_once ( THEMELIB . '/extensions/content-extensions.php' );
 
 		// Load custom Comments filters
-		require_once (THEMELIB . '/extensions/comments-extensions.php');
+		require_once ( THEMELIB . '/extensions/comments-extensions.php' );
 
 		// Load custom discussion filters
-		require_once (THEMELIB . '/extensions/discussion-extensions.php');
+		require_once ( THEMELIB . '/extensions/discussion-extensions.php' );
 
 		// Load custom Widgets
-		require_once (THEMELIB . '/extensions/widgets-extensions.php');
+		require_once ( THEMELIB . '/extensions/widgets-extensions.php' );
 
 		// Load the Comments Template functions and callbacks
-		require_once (THEMELIB . '/extensions/discussion.php');
+		require_once ( THEMELIB . '/extensions/discussion.php' );
 
 		// Load custom sidebar hooks
-		require_once (THEMELIB . '/extensions/sidebar-extensions.php');
+		require_once ( THEMELIB . '/extensions/sidebar-extensions.php' );
 
 		// Load custom footer hooks
-		require_once (THEMELIB . '/extensions/footer-extensions.php');
+		require_once ( THEMELIB . '/extensions/footer-extensions.php' );
 
 		// Add Dynamic Contextual Semantic Classes
-		require_once (THEMELIB . '/extensions/dynamic-classes.php');
+		require_once ( THEMELIB . '/extensions/dynamic-classes.php' );
 
 		// Need a little help from our helper functions
-		require_once (THEMELIB . '/extensions/helpers.php');
+		require_once ( THEMELIB . '/extensions/helpers.php' );
 
 		// Load shortcodes
-		require_once (THEMELIB . '/extensions/shortcodes.php');
+		require_once ( THEMELIB . '/extensions/shortcodes.php' );
 
-		// Adds filters for the description/meta content in archives.php
-		add_filter('archive_meta', 'wptexturize');
-		add_filter('archive_meta', 'convert_smilies');
-		add_filter('archive_meta', 'convert_chars');
-		add_filter('archive_meta', 'wpautop');
+		// Adds filters for the description/meta content in archive templates
+		add_filter( 'archive_meta', 'wptexturize' );
+		add_filter( 'archive_meta', 'convert_smilies' );
+		add_filter( 'archive_meta', 'convert_chars' );
+		add_filter( 'archive_meta', 'wpautop' );
 
 		// Remove the WordPress Generator - via http://blog.ftwr.co.uk/archives/2007/10/06/improving-the-wordpress-generator/
 		function thematic_remove_generators() {
  			return '';
  		}
- 		if ( apply_filters('thematic_hide_generators', true) )
- 			add_filter('the_generator', 'thematic_remove_generators');
+ 		if ( apply_filters( 'thematic_hide_generators', true ) )
+ 			add_filter( 'the_generator', 'thematic_remove_generators' );
  
 		// Translate, if applicable
-		load_theme_textdomain('thematic', THEMELIB . '/languages');
+		load_theme_textdomain( 'thematic', THEMELIB . '/languages' );
 
 		$locale = get_locale();
 		$locale_file = THEMELIB . "/languages/$locale.php";

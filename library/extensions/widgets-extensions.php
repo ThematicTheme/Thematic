@@ -379,10 +379,24 @@ add_filter('thematic_widgetized_areas', 'thematic_sort_widgetized_areas', 100);
  * @uses thematic_before_widget_area
  * @uses thematic_after_widget_area
  */
-function thematic_primary_aside() {
-	if (is_active_sidebar( 'primary-aside' ) ) {
+function thematic_primary_aside() {	
+	global $wp_customize;
+	$args =	array(	
+			'before_title' 	=> thematic_before_title(),
+			'after_title' 	=> thematic_after_title()
+			);
+			
+	if ( is_active_sidebar( 'primary-aside' ) ) { 
 		echo thematic_before_widget_area( 'primary-aside' );
 		dynamic_sidebar( 'primary-aside' );
+		echo thematic_after_widget_area( 'primary-aside' );
+	// WordPress 3.4
+	} elseif ( method_exists ( $wp_customize,'is_preview' ) && $wp_customize->is_preview()  ){ 
+		echo thematic_before_widget_area( 'primary-aside' );
+		the_widget('Thematic_Widget_Search', null , $args);
+		the_widget('WP_Widget_Pages', null , $args);
+		the_widget('WP_Widget_Categories', null , $args);
+		the_widget('WP_Widget_Archives', null, $args);
 		echo thematic_after_widget_area( 'primary-aside' );
 	}
 }
@@ -394,9 +408,21 @@ function thematic_primary_aside() {
  * @uses thematic_after_widget_area
  */
 function thematic_secondary_aside() {
+	global $wp_customize;
+	$args =	array(	
+			'before_title' 	=> thematic_before_title(),
+			'after_title' 	=> thematic_after_title()
+			);
+				
 	if ( is_active_sidebar( 'secondary-aside' ) ) {
 		echo thematic_before_widget_area( 'secondary-aside' );
 		dynamic_sidebar( 'secondary-aside' );
+		echo thematic_after_widget_area( 'secondary-aside' );
+	// WordPress 3.4
+	} elseif ( method_exists ( $wp_customize,'is_preview' ) && $wp_customize->is_preview()  ){ 
+		echo thematic_before_widget_area( 'secondary-aside' );
+		the_widget('Thematic_Widget_RSS', null, $args);
+		the_widget('Thematic_Widget_Meta', null, $args); 
 		echo thematic_after_widget_area( 'secondary-aside' );
 	}
 }

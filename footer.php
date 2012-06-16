@@ -11,38 +11,46 @@
  * @subpackage Templates
  */
 ?>
-	<?php // action hook for placing content above the closing of the #main div
-		thematic_abovemainclose();
+		<?php // action hook for placing content above the closing of the #main div
+			thematic_abovemainclose();
+		?>
+		
+		</div><!-- #main -->
+    	
+    	<?php
+			// action hook for placing content above the footer
+			thematic_abovefooter();
+		
+			// Filter provided for altering output of the footer opening element
+    		if ( apply_filters( 'thematic_open_footer', true ) ) 
+    			echo '<div id="footer">';
+    	?>	
+        	
+        	<?php
+        		// action hook creating the footer 
+        		thematic_footer();
+        	?>
+        	
+		<?php
+			// Filter provided for altering output of the footer closing element
+    		if ( apply_filters( 'thematic_close_footer', true )) 
+    			echo ( '</div><!-- #footer -->' . "\n" );
+   
+   			// action hook for placing content below the footer
+			thematic_belowfooter();
+    	?>
+    	
+	<?php
+		// Filter provided for altering output of wrapping element follows the body tag  
+    	if ( apply_filters( 'thematic_close_wrapper', true ) ) 
+    		echo ( '</div><!-- #wrapper .hfeed -->' . "\n" );
+	
+		// calling WordPress' footer action hook
+		wp_footer();
+
+		// action hook for placing content before closing the BODY tag
+		thematic_after(); 
 	?>
-	</div><!-- #main -->
-    <?php
-		// action hook for placing content above the footer
-		thematic_abovefooter();
-    ?>    
-	<div id="footer">
-        <?php
-        	// action hook creating the footer 
-        	thematic_footer();
-        ?>
-	
-	</div><!-- #footer -->
-	
-    <?php
-		// action hook for placing content below the footer
-		thematic_belowfooter();
-    
-    	if ( apply_filters( 'thematic_close_wrapper', true )) {
-    		echo '</div><!-- #wrapper .hfeed -->';
-    	}
-    ?>  
-
-<?php 
-	// calling WordPress' footer action hook
-	wp_footer();
-
-	// action hook for placing content before closing the BODY tag
-	thematic_after(); 
-?>
 
 </body>
 </html>
