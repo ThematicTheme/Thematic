@@ -58,30 +58,34 @@
 	thematic_before(); 
 ?>
 	<?php
-		// Filter provided for altering output of wrapping element follows the body tag
+		// Filter provided for removing output of wrapping element follows the body tag
 		if ( apply_filters( 'thematic_open_wrapper', true ) ) 
-  		  echo ( '<div id="wrapper" class="hfeed">' . "\n" );
+  		  echo ( '<div id="wrapper" class="hfeed">' );
 
 		// Action hook for placing content above the theme header
 		thematic_aboveheader(); 
 	?>
-   
+
+
 		<?php
 			// Filter provided for altering output of the header opening element
-			if ( apply_filters( 'thematic_open_header', true ) ) 
-  	  			echo ( '<div id="header">' );
-    	?>   
+			echo ( apply_filters( 'thematic_open_header',  '<div id="header">' ) );
+    	?>
+
+
         	<?php 
 				// Action hook creating the theme header
 				thematic_header();
        		?>
+       		
     	<?php  	
     		// Filter provided for altering output of the header closing element
-			if ( apply_filters( 'thematic_close_header', true ) ) 
-  	  			echo ( '</div><!-- #header-->' );
-		?>        
+			echo ( apply_filters( 'thematic_close_header', '</div><!-- #header-->' ) );
+		?>
+		        
     	<?php
 			// Action hook for placing content below the theme header
 			thematic_belowheader();
     	?>
-		<div id="main">
+    	
+	<div id="main">

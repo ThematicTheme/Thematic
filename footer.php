@@ -22,8 +22,7 @@
 			thematic_abovefooter();
 		
 			// Filter provided for altering output of the footer opening element
-    		if ( apply_filters( 'thematic_open_footer', true ) ) 
-    			echo '<div id="footer">';
+    		echo ( apply_filters( 'thematic_open_footer', '<div id="footer">' ) );
     	?>	
         	
         	<?php
@@ -33,8 +32,7 @@
         	
 		<?php
 			// Filter provided for altering output of the footer closing element
-    		if ( apply_filters( 'thematic_close_footer', true )) 
-    			echo ( '</div><!-- #footer -->' . "\n" );
+    		echo ( apply_filters( 'thematic_close_footer', '</div><!-- #footer -->' . "\n" ) );
    
    			// action hook for placing content below the footer
 			thematic_belowfooter();

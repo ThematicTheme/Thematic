@@ -62,7 +62,7 @@ if ( function_exists('childtheme_override_doctitle') )  {
 	 *
 	 */
 	function thematic_doctitle() {
-        $separator = apply_filters('thematic_doctitle_separator', '');
+        $separator = apply_filters('thematic_doctitle_separator', '|');
         $doctitle = '<title>' . wp_title( $separator, false, 'right' ) . '</title>' . "\n";
         echo $doctitle;
 	} // end thematic_doctitle
@@ -79,13 +79,12 @@ if ( function_exists('childtheme_override_doctitle') )  {
  *
  * @since 1.0.2
  */
-function thematic_wptitle( $wp_doctitle ) {
-    // return original string if on feed or if a seo plugin is being used
+function thematic_wptitle( $wp_doctitle, $separator, $sep_location ) { 
+	// return original string if on feed or if a seo plugin is being used
     if ( is_feed() || thematic_seo() )
     	return $wp_doctitle;
    	// otherwise...	
    	$site_name = get_bloginfo('name' , 'display');
-    $separator = apply_filters('thematic_doctitle_separator', '|');
         	
     if ( is_single() ) {
       $content = single_post_title('', FALSE);
