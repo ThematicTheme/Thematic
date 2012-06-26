@@ -631,7 +631,7 @@ function thematic_after_widget_area($hook) {
 	} else {
 		$content .= '</div><!-- #' . $hook . ' .aside -->' ."\n\n";
 	} 
-	return apply_filters( 'thematic_after_widget_area', $content );
+	return apply_filters( 'thematic_after_widget_area', $content, $hook );
 }
 
 ?>
