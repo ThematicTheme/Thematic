@@ -605,7 +605,7 @@ function thematic_before_widget_area($hook) {
 		$content .= '<div id="' . $hook . '" class="aside">' ."\n";
 	}
 	$content .= "\t\t\t" . '<ul class="xoxo">' . "\n\n\t\t\t\t";
-	return apply_filters( 'thematic_before_widget_area', $content );
+	return apply_filters( 'thematic_before_widget_area', $content, $hook );
 }
 
 /**
