@@ -212,15 +212,36 @@ if (function_exists('childtheme_override_opt_page_help')) {
 		
 		$help = apply_filters ( 'thematic_theme_opt_help_txt', $help );
 	
-		if ( method_exists( $screen, 'add_help_tab' ) ) {
-			// WordPress 3.3
+        if ( method_exists( $screen, 'add_help_tab' ) ) {
+        	// WordPress 3.3
 			$screen->add_help_tab( array( 'title' => __( 'Overview', 'thematic' ), 'id' => 'theme-opt-help', 'content' => $help, ) );
 			$screen->set_help_sidebar( $sidebar );
-		} else {
-			// WordPress 3.2
-			add_contextual_help( $screen, $help . $sidebar );
-		}
-	}
+                        
+			} else {
+             	thematic_legacy_help();
+           	}
+        }
+}
+
+/**
+ * Adds a settings section to display legacy help text and theme links
+ *
+ * @since Thematic 1.0
+ * @todo remove Legacy help when two point relases of WP have occurred after 3.3
+ */
+function thematic_legacy_help() {
+        add_settings_section ('thematic_opt_help_section', '', 'thematic_do_legacy_help_section', 'thematic_opt_page');
+}
+
+
+/**
+ * Renders the legacy help text and theme links
+ * 
+ * @since Thematic 1.0
+ * @todo remove Legacy help when two point relases of WP have occurred after 3.3
+ */
+function thematic_do_legacy_help_section() { 
+        echo ('<p>'. __( 'For more information about this theme, <a href="http://thematictheme.com">visit ThemeTheme.com</a>. Please visit the <a href="http://thematictheme.com/forums/">ThematicTheme.com Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
 }
 
 

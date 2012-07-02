@@ -1,9 +1,9 @@
 === Thematic ===
 Contributors: iandstewart, chrisgossmann, emhr
 Tags: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
-Requires at least: 3.0
-Tested up to: 3.3.2
-Stable tag: 1.0
+Requires at least: 3.2
+Tested up to: 3.4
+Stable tag: 1.0.2
 
 The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, &amp; a whole lot more.
 
@@ -37,7 +37,8 @@ Features:
 * Added:   <code>thematic_wptitle()</code> to filter wp_title()
 * Changed: <code>thematic_secondary_aside()</code> and <code>thematic_primary_aside()</code> to display default sidebar contents when viewed in the live theme preview.
 * Added Filters: <code>thematic_open_header thematic_close_header thematic_open_footer thematic_close_footer</code>
-* Removed: <code>thematic_legacy_help()</code>
+* Updated locales: sv_SE fr_FR
+* Added locales: lt, tr_TR, he_IL
 = 1.0 =
 * Moved: conditional comment handling from page templates to <code>thematic_include_comments()</code>
 * Fixed: many templates misuse of the <code>the_post()</code> 
