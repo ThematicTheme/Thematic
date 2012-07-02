@@ -3,7 +3,7 @@ Contributors: iandstewart, chrisgossmann, emhr
 Tags: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
 Requires at least: 3.2
 Tested up to: 3.4
-Stable tag: 1.0.2
+Stable tag: 1.0.2.1
 
 The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, &amp; a whole lot more.
 
@@ -28,6 +28,8 @@ Features:
 * Options for multi-author blogs
 
 == Changelog ==
+= 1.0.2.1 =
+* Added: $hook argument to <code>apply_filters()</code> in <code>thematic_before_widget_area()</code> and <code>thematicafter_widget_area()</code> to filter attribute id
 = 1.0.2 =
 * Updated: German language files
 * Updated: Swedish language files
