@@ -60,57 +60,70 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		if ( !isset($content_width) )
 			$content_width = 540;
 
-		/**
-		 * Get Theme and Child Theme Data.
-		 * Credits: Joern Kretzschmar
-		 * 
-		 * Used to get title, version, author, URI of the parent and the child theme.
-		 */
-		
-		// WordPress 3.4 
-		if ( function_exists( 'wp_get_theme' ) ) {
-			$frameworkData = wp_get_theme(  get_template_directory() . '/style.css' );
-		// WordPress 3.3
-		} else {
-			$frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
-		}
-		
-		$framework_version = trim( $frameworkData['Version'] );
-		
-		if ( !$framework_version )
-			$framework_version = "unknown";
+           /**
+                 * Get Theme and Child Theme Data.
+                 * 
+                 * Used to get title, version, author, URI of the parent and the child theme.
+                 * @todo: move wp_get_theme() directly to shortcodes and remove constants
+                 */
+                
+                // WordPress 3.4 
+                if ( function_exists( 'wp_get_theme' ) ) {
+                        $frameworkData = wp_get_theme(  'thematic' );
+                        $framework_version = trim( $frameworkData->display('Version', false));
+                        $framework_title =  $frameworkData->display('Name', false);
+                        $framework_author =  $frameworkData->display('Author', false);
+                        $framework_themeuri =  $frameworkData->display('ThemeURI', false);
+                        
+                        $childthemeData = wp_get_theme();
+                        $childtheme_version = trim( $childthemeData->display('Version', false) );
+                        $childtheme_title =  $childthemeData->display('Name', false);
+                        $childtheme_author =  $childthemeData->display('Author', false);
+                        $childtheme_themeuri =  $childthemeData->display('ThemeURI', false);
+                        
+                // WordPress 3.3
+                // Credits: Joern Kretzschmar
 
-		// WordPress 3.4 
-		if ( function_exists( 'wp_get_theme' ) ) {
-			$childthemeData = wp_get_theme( get_stylesheet_directory() . '/style.css' );
-		// WordPress 3.3
-		} else { 
-			$childthemeData = get_theme_data( get_stylesheet_directory() . '/style.css' );
-		}
-		
-		$childtheme_version = trim( $childthemeData['Version'] );
-		
-		if ( !$childtheme_version )
-			$childtheme_version = "unknown";
+                } else {
+                        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+                        $framework_version = trim( $frameworkData['Version'] );
+                        $framework_title =  $frameworkData['Title'];
+                        $framework_author =  $frameworkData['Author'];
+                        $framework_themeuri =  $frameworkData['URI'];
 
-		if ( !defined( 'THEMENAME' ) )
-			define( 'THEMENAME', 	$frameworkData['Title'] );
+                        $childthemeData = get_theme_data( get_stylesheet_directory() . '/style.css' );
+                        $childtheme_version = trim( $childthemeData['Version'] );
+                        $childtheme_title =  $childthemeData['Name'];
+                        $childtheme_author =  $childthemeData['Author'];
+                        $childtheme_themeuri =  $childthemeData['URI'];
+                
+                }
+                
 
-		if ( !defined('THEMEAUTHOR') )
-			define( 'THEMEAUTHOR', 	$frameworkData['Author'] );
+                if ( !$framework_version )
+                        $framework_version = "unknown";
+                
+                if ( !$childtheme_version )
+                        $childtheme_version = "unknown";
 
-		if ( !defined( 'THEMEURI') )
-			define( 'THEMEURI', 	$frameworkData['URI'] );
+                if ( !defined( 'THEMATIC_THEMENAME' ) )
+                        define( 'THEMATIC_THEMENAME',    $framework_title );
 
-		if ( !defined( 'THEMATICVERSION' ) )
-			define( 'THEMATICVERSION', $framework_version );
+                if ( !defined('THEMATIC_THEMEAUTHOR') )
+                        define( 'THEMATIC_THEMEAUTHOR',  $framework_author );
 
-		define( 'TEMPLATENAME', 	$childthemeData['Title'] );
-		define( 'TEMPLATEAUTHOR', 	$childthemeData['Author'] );
-		define( 'TEMPLATEURI', 		$childthemeData['URI'] );
-		define( 'TEMPLATEVERSION', 	$childtheme_version );
+                if ( !defined( 'THEMATIC_THEMEURI') )
+                        define( 'THEMATIC_THEMEURI',     $framework_themeuri );
 
-		// set feed links handling
+                if ( !defined( 'THEMATIC_VERSION' ) )
+                        define( 'THEMATIC_VERSION', $framework_version );
+
+                define( 'THEMATIC_TEMPLATENAME',         $childtheme_title );
+                define( 'THEMATIC_TEMPLATEAUTHOR',       $childtheme_author );
+                define( 'THEMATIC_TEMPLATEURI',          $childtheme_themeuri );
+                define( 'THEMATIC_TEMPLATEVERSION',      $childtheme_version );
+   
+   		// set feed links handling
 		// If you set this to TRUE, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
 		if ( !defined('THEMATIC_COMPATIBLE_FEEDLINKS') ) 
 				define( 'THEMATIC_COMPATIBLE_FEEDLINKS', false );
@@ -147,49 +160,49 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		add_theme_support( 'thematic_superfish' );
 
 		// Path constants
-		define( 'THEMELIB',  get_template_directory() .  '/library' );
+		define( 'THEMATIC_LIB',  get_template_directory() .  '/library' );
 
 		// Create Theme Options Page
-		require_once ( THEMELIB . '/extensions/theme-options.php' );
+		require_once ( THEMATIC_LIB . '/extensions/theme-options.php' );
 		
 		// Load legacy functions
-		require_once ( THEMELIB . '/legacy/deprecated.php' );
+		require_once ( THEMATIC_LIB . '/legacy/deprecated.php' );
 
 		// Load widgets
-		require_once ( THEMELIB . '/extensions/widgets.php' );
+		require_once ( THEMATIC_LIB . '/extensions/widgets.php' );
 
 		// Load custom header extensions
-		require_once ( THEMELIB . '/extensions/header-extensions.php' );
+		require_once ( THEMATIC_LIB . '/extensions/header-extensions.php' );
 
 		// Load custom content filters
-		require_once ( THEMELIB . '/extensions/content-extensions.php' );
+		require_once ( THEMATIC_LIB . '/extensions/content-extensions.php' );
 
 		// Load custom Comments filters
-		require_once ( THEMELIB . '/extensions/comments-extensions.php' );
+		require_once ( THEMATIC_LIB . '/extensions/comments-extensions.php' );
 
 		// Load custom discussion filters
-		require_once ( THEMELIB . '/extensions/discussion-extensions.php' );
+		require_once ( THEMATIC_LIB . '/extensions/discussion-extensions.php' );
 
 		// Load custom Widgets
-		require_once ( THEMELIB . '/extensions/widgets-extensions.php' );
+		require_once ( THEMATIC_LIB . '/extensions/widgets-extensions.php' );
 
 		// Load the Comments Template functions and callbacks
-		require_once ( THEMELIB . '/extensions/discussion.php' );
+		require_once ( THEMATIC_LIB . '/extensions/discussion.php' );
 
 		// Load custom sidebar hooks
-		require_once ( THEMELIB . '/extensions/sidebar-extensions.php' );
+		require_once ( THEMATIC_LIB . '/extensions/sidebar-extensions.php' );
 
 		// Load custom footer hooks
-		require_once ( THEMELIB . '/extensions/footer-extensions.php' );
+		require_once ( THEMATIC_LIB . '/extensions/footer-extensions.php' );
 
 		// Add Dynamic Contextual Semantic Classes
-		require_once ( THEMELIB . '/extensions/dynamic-classes.php' );
+		require_once ( THEMATIC_LIB . '/extensions/dynamic-classes.php' );
 
 		// Need a little help from our helper functions
-		require_once ( THEMELIB . '/extensions/helpers.php' );
+		require_once ( THEMATIC_LIB . '/extensions/helpers.php' );
 
 		// Load shortcodes
-		require_once ( THEMELIB . '/extensions/shortcodes.php' );
+		require_once ( THEMATIC_LIB . '/extensions/shortcodes.php' );
 
 		// Adds filters for the description/meta content in archive templates
 		add_filter( 'archive_meta', 'wptexturize' );
@@ -205,10 +218,10 @@ if ( function_exists('childtheme_override_theme_setup') ) {
  			add_filter( 'the_generator', 'thematic_remove_generators' );
  
 		// Translate, if applicable
-		load_theme_textdomain( 'thematic', THEMELIB . '/languages' );
+		load_theme_textdomain( 'thematic', THEMATIC_LIB . '/languages' );
 
 		$locale = get_locale();
-		$locale_file = THEMELIB . "/languages/$locale.php";
+		$locale_file = THEMATIC_LIB . "/languages/$locale.php";
 		if ( is_readable($locale_file) )
 			require_once ($locale_file);
 	}

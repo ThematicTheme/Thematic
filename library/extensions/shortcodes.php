@@ -76,7 +76,7 @@ add_shortcode('the-year', 'thematic_shortcode_year');
  * Display the name of the parent theme.
  */
 function thematic_shortcode_theme_name() {
-    return THEMENAME;
+    return THEMATIC_THEMENAME;
 }
 add_shortcode('theme-name', 'thematic_shortcode_theme_name');
 
@@ -85,7 +85,7 @@ add_shortcode('theme-name', 'thematic_shortcode_theme_name');
  * Display the name of the parent theme author.
  */
 function thematic_shortcode_theme_author() {
-    return THEMEAUTHOR;
+    return THEMATIC_THEMEAUTHOR;
 }
 add_shortcode('theme-author', 'thematic_shortcode_theme_author');
 
@@ -94,7 +94,7 @@ add_shortcode('theme-author', 'thematic_shortcode_theme_author');
  * Display the URI of the parent theme.
  */
 function thematic_shortcode_theme_uri() {
-    return THEMEURI;
+    return THEMATIC_THEMEURI;
 }
 add_shortcode('theme-uri', 'thematic_shortcode_theme_uri');
 
@@ -103,7 +103,7 @@ add_shortcode('theme-uri', 'thematic_shortcode_theme_uri');
  * Display the version no. of the parent theme.
  */
 function thematic_shortcode_theme_version() {
-    return THEMATICVERSION;
+    return THEMATIC_VERSION;
 }
 add_shortcode('theme-version', 'thematic_shortcode_theme_version');
 
@@ -113,7 +113,7 @@ add_shortcode('theme-version', 'thematic_shortcode_theme_version');
  * Display the name of the child theme.
  */
 function thematic_shortcode_child_name() {
-    return TEMPLATENAME;
+    return THEMATIC_TEMPLATENAME;
 }
 add_shortcode('child-name', 'thematic_shortcode_child_name');
 
@@ -122,7 +122,7 @@ add_shortcode('child-name', 'thematic_shortcode_child_name');
  * Display the name of the child theme author.
  */
 function thematic_shortcode_child_author() {
-    return TEMPLATEAUTHOR;
+    return THEMATIC_TEMPLATEAUTHOR;
 }
 add_shortcode('child-author', 'thematic_shortcode_child_author');
 
@@ -131,7 +131,7 @@ add_shortcode('child-author', 'thematic_shortcode_child_author');
  * Display the URI of the child theme.
  */
 function thematic_shortcode_child_uri() {
-    return TEMPLATEURI;
+    return THEMATIC_TEMPLATEURI;
 }
 add_shortcode('child-uri', 'thematic_shortcode_child_uri');
 
@@ -141,6 +141,6 @@ add_shortcode('child-uri', 'thematic_shortcode_child_uri');
  * 
  */
 function thematic_shortcode_child_version() {
-    return TEMPLATEVERSION;
+    return THEMATIC_TEMPLATEVERSION;
 }
 add_shortcode('child-version', 'thematic_shortcode_child_version');

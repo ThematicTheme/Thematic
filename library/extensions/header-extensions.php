@@ -81,7 +81,7 @@ if ( function_exists('childtheme_override_doctitle') )  {
  */
 function thematic_wptitle( $wp_doctitle, $separator, $sep_location ) { 
 	// return original string if on feed or if a seo plugin is being used
-    if ( is_feed() || thematic_seo() )
+    if ( is_feed() || !thematic_seo() )
     	return $wp_doctitle;
    	// otherwise...	
    	$site_name = get_bloginfo('name' , 'display');
