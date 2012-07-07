@@ -1,0 +1,96 @@
+/*
+THEME NAME: Thematic
+THEME URI: http://thematictheme.com
+DESCRIPTION: The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development.
+VERSION: 1.0.2.1
+AUTHOR: <a href="http://themeshaper.com/">Ian Stewart</a> &amp; <a href="http://thematic4you.com/">Chris Go&szlig;mann</a>
+AUTHOR URI: http://themeshaper.com/
+TAGS: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+.
+The Thematic Theme is copyright Ian Stewart http://themeshaper.com/
+This work, like WordPress, is released under GNU General Public License, version 2 (GPL).
+.
+
+*/
+
+/* Reset browser defaults */
+@import url('library/styles/reset.css');
+
+/* Apply basic typography styles */
+@import url('library/styles/typography.css');
+
+/* Apply a basic layout */
+@import url('library/layouts/2c-r-fixed.css');
+
+/* Apply basic image styles */
+@import url('library/styles/images.css');
+
+/* Apply default theme styles and colors */
+@import url('library/styles/default.css');
+
+/* Prepare theme for plugins */
+@import url('library/styles/plugins.css');
+
+/* -------------------------------------------------------------- 
+   
+   Default styles for Images
+   
+   I've duplicated these styles here from images.css in
+   order to get Thematic through the auto-checker at the
+   official WordPress Themes directory.
+   
+   When the directory can hunt though css files linked
+   through @import the styles below will no longer be
+   neccesary and will be removed.
+   
+   Cheers. --Ian Stewart
+  
+-------------------------------------------------------------- */   
+
+.entry-content img {
+    height:auto;
+    margin: 0 0 18px 0;
+    max-width:100%;
+}
+.alignleft,
+img.alignleft {
+	float: left;
+    margin-right:20px;
+}
+.alignright,
+img.alignright {
+	display: block;
+	float: right;
+    margin-left:20px;
+}
+.aligncenter,
+img.aligncenter {
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	clear: both;
+}
+.wp-caption {
+	text-align: center;
+	margin-bottom:18px;
+	max-width: 96%;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+	margin: 0;
+	padding:5px;
+}
+.gallery img {
+    margin:0;
+}
+.wp-smiley { /* Prevent the smileys from breaking line-height */
+	max-height:12px;
+	margin:0 !important;
+}

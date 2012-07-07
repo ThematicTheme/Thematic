@@ -1,0 +1,521 @@
+# Danske oversættelse af Thematic
+# Copyright 2010 Ask Hjorth Larsen m.fl.
+#
+# (Anders Jenbo?)
+# Ask Hjorth Larsen, 2010.
+#
+# Konventioner
+#
+# author page -> forfatterside
+#
+# trackback -> trackback.  I hvertfald indtil jeg finder ud af hvad det er
+#
+# comment -> kommentar
+# post -> indlæg
+# footer -> sidefod.  Kan måske referere til signaturtekstområdet ... ændres?
+msgid ""
+msgstr ""
+"Project-Id-Version: Thematic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-02-18 20:58+0100\n"
+"PO-Revision-Date: 2010-12-26 14:55+0100\n"
+"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: c:\\xampp\\htdocs\\development\\wp-content\\themes\\thematic\n"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/archives.php:42
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/links.php:53
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/page.php:40
+msgid "Edit"
+msgstr "Rediger"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:39
+msgid "Pages:"
+msgstr "Sider:"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/author.php:53
+msgid "Email "
+msgstr "E-mail "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:10
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Dette indlæg er beskyttet med adgangskode. Indtast adgangskoden for at se kommentarer."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:52
+#, php-format
+msgid "<span>%d</span> Trackbacks"
+msgstr "<span>%d</span> trackbacks"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:52
+msgid "<span>One</span> Trackback"
+msgstr "<span>Et</span> trackback"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:72
+#, php-format
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Du skal være <a href=\"%s\" title=\"Log ind\">logget ind</a> for at skrive en kommentar."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:83
+#, php-format
+msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"loggedin\">Logget ind som <a href=\"%1$s\" title=\"Logget ind som %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log denne konto ud\">Log ud?</a></span>"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:90
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "Din e-mail vil <em>aldrig</em> blive vist eller delt med andre."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:90
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "Obligatoriske felter er markeret med <span class=\"required\">*</span>"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:93
+msgid "Name"
+msgstr "Navn"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:93
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:98
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:98
+msgid "Email"
+msgstr "E-mail"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:103
+msgid "Website"
+msgstr "Website"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:115
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
+msgstr "Du kan bruge disse <abbr title=\"HyperText Markup Language\">HTML</abbr>-mærker og -attributter:"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/page.php:38
+msgid "Pages: "
+msgstr "Sider: "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:41
+msgid "Nothing Found"
+msgstr "Intet fundet"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:43
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Beklager, men dine søgeord gav ingen resultater. Prøv venligst igen med nogle andre nøgleord."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:48
+msgid "Find"
+msgstr "Find"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:76
+msgid "<span>One</span> Comment"
+msgstr "<span>En</span> kommentar"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:83
+#, php-format
+msgid "<span>%d</span> Comments"
+msgstr "<span>%d</span> kommentarer"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:96
+msgid "Post a Comment"
+msgstr "Skriv en kommentar"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:103
+#, php-format
+msgid "Post a Reply to %s"
+msgstr "Skriv et svar til %s"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:110
+msgid "Comment"
+msgstr "Kommentar"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:117
+msgid "Post Comment"
+msgstr "Skriv kommentar"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:147
+msgid "Author Archives: "
+msgstr "Forfatterarkiver: "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:153
+msgid "Category Archives:"
+msgstr "Kategoriarkiver:"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:162
+msgid "Search Results for:"
+msgstr "Søgeresultater for:"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:168
+msgid "Tag Archives:"
+msgstr "Mærkearkiver:"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:174
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Daglige arkiver: <span>%s</span>"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:178
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Månedlige arkiver: <span>%s</span>"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:182
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Årlige arkiver: <span>%s</span>"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:186
+msgid "Blog Archives"
+msgstr "Blogarkiver"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:209
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:725
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> Ældre indlæg"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:210
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:726
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Nyere indlæg <span class=\"meta-nav\">&raquo;</span>"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:394
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:618
+msgid "Edit post"
+msgstr "Rediger indlæg"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:406
+msgid "Not Found"
+msgstr "Ikke fundet"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:411
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
+msgid "Permalink to "
+msgstr "Permalink til "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:441
+msgid "By "
+msgstr "Af "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:444
+msgid "View all posts by "
+msgstr "Vis alle indlæg af "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:455
+msgid "Published: "
+msgstr "Udgivet: "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:523
+msgid "Archives by Category"
+msgstr "Arkiver efter kategori"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:534
+msgid "Archives by Month"
+msgstr "Arkiver efter måned"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:562
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
+msgstr "Beklager, men vi kunne ikke finde det, du ledte efter. Måske vil en søgning kunne hjælpe."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:578
+msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Læs mere <span class=\"meta-nav\">&raquo;</span>"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:629
+msgid "This entry was posted in "
+msgstr "Dette indlæg blev sendt til "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:632
+msgid "Also posted in "
+msgstr "Også sendt til "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:635
+msgid "Posted in "
+msgstr "Sendt til "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:646
+msgid " and tagged"
+msgstr " og mærket"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:649
+msgid " Also tagged "
+msgstr " Også mærket "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:651
+msgid "Tagged"
+msgstr "Mærket"
+
+# Bemærk at 'Comment on <something>' -> 'Kommentér <noget>'
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:663
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:666
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:669
+msgid "Comment on "
+msgstr "Kommentér "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:664
+msgid " Comments"
+msgstr " Kommentarer"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:667
+msgid " Comment"
+msgstr " Kommentar"
+
+# leave ~ skriv
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:670
+msgid "Leave a comment"
+msgstr "Skriv en kommentar"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:673
+msgid "Comments closed"
+msgstr "Kommentarer lukket"
+
+# bruger ubestemt på dansk -- dette ødelægger næppe noget
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
+msgid ". Bookmark the "
+msgstr ". Bogmærk "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:687
+msgid "permalink"
+msgstr "permalink"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:689
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:697
+msgid "Post a comment"
+msgstr "Skriv en kommentar"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:690
+msgid " or leave a trackback: "
+msgstr " eller efterlad en trackback: "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:691
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:694
+msgid "Trackback URL for your post"
+msgstr "Trackback-adresse til dit indlæg"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:691
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:694
+msgid "Trackback URL"
+msgstr "Trackback-adresse"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:693
+msgid " Comments are closed, but you can leave a trackback: "
+msgstr " Der er lukket for kommentarer, men du kan efterlade et trackback: "
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:696
+msgid " Trackbacks are closed, but you can "
+msgstr " Der er lukket for trackbacks, men du kan "
+
+# Bemærk.  Lader til at være fortsat fra " Trackbacks are closed, but you can "
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:697
+msgid "post a comment"
+msgstr "skrive en kommentar"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:699
+msgid " Both comments and trackbacks are currently closed."
+msgstr " Der er nu lukket for både kommentarer og trackbacks."
+
+# Ikke sikker, kan nogen (Anders?) tjekke at dette er meningsfuldt?
+# Tror det begynder i stil med "Skrevet 17/7 14:23..."
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:10
+#, php-format
+msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
+msgstr "Skrevet %1$s kl. %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink til denne kommentar\">Permalink</a>"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:15
+msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
+msgstr "\t\t\t\t\t<span class='unapproved'>Din kommentar afventer godkendelse fra moderator.</span>\n"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:22
+msgid "Reply"
+msgstr "Svar"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:23
+msgid "Log in to reply."
+msgstr "Log ind for at svare."
+
+# navn, dato, tid - velsagtens
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:37
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr "Af %1$s, %2$s kl. %3$s"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:42
+msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
+msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Din trackback afventer godkendelse fra moderator.</span>\\n"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:251
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:77
+msgid "Posts RSS feed"
+msgstr "RSS-kilde for indlæg"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:269
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:78
+msgid "Comments RSS feed"
+msgstr "RSS-kilde for kommentarer"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:401
+msgid "Skip navigation to the content"
+msgstr "Hop til indholdet"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:401
+msgid "Skip to content"
+msgstr "Hop til indhold"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/helpers.php:31
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/helpers.php:44
+msgid "There is no excerpt because this is a protected post."
+msgstr "Der er intet uddrag, da dette er et beskyttet indlæg."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/shortcodes.php:16
+msgid "Login"
+msgstr "Log ind"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/shortcodes.php:18
+msgid "Logout"
+msgstr "Log af"
+
+# ???
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:13
+msgid "Index Insert Position"
+msgstr "Position af indeksindsættelse"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:14
+msgid "The widgetized Index Insert will follow after this post number."
+msgstr "Kontrollen for indeksindsættelse (Index Insert) vil følge efter dette antal indlæg."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:19
+msgid "Info on Author Page"
+msgstr "Side til information om forfatter"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:20
+msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
+msgstr "Vis et <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">mikroformateret vCard</a> — med forfatterens profilbillede, biografi og e-mail — på forfattersiden."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:25
+msgid "Text in Footer"
+msgstr "Tekst i sidefod"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:26
+msgid "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
+msgstr "Du kan bruge følgende forkortelseskoder i din sidefodstekst: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:28
+msgid "Powered by [wp-link]. Built on the [theme-link]."
+msgstr "Kører på [wp-link]. Bygget med [theme-link]."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:75
+msgid "settings saved."
+msgstr "indstillinger gemt."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:76
+msgid "settings reset."
+msgstr "indstillinger nulstillet."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:77
+msgid "widgets reset."
+msgstr "kontroller nulstillet."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:190
+msgid "Save changes"
+msgstr "Gem ændringer"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:196
+msgid "Reset"
+msgstr "Nulstil"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:202
+msgid "Reset Widgets"
+msgstr "Nulstil kontroller"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:207
+msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
+msgstr "Besøg <a href=\"http://themeshaper.com\">ThemeShaper</a> for at få yderligere oplysninger om dette tema. Besøg <a href=\"http://themeshaper.com/forums/\">ThemeShapers forum</a> hvis du har spørgsmål om Thematic."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:12
+msgid "To search, type and hit enter"
+msgstr "Skriv og tryk enter for at søge"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:18
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:281
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:43
+msgid "Search"
+msgstr "Søg"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:43
+msgid "The primary widget area, most often used as a sidebar."
+msgstr "Det primære kontrolområde, der oftest bruges som en sidebjælke."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:58
+msgid "The secondary widget area, most often used as a sidebar."
+msgstr "Det sekundære kontrolområde, der oftest bruges som en sidebjælke."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:73
+msgid "The 1st widget area in the footer."
+msgstr "Det første kontrolområde i sidefoden."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:88
+msgid "The 2nd widget area in the footer."
+msgstr "Det andet kontrolområde i sidefoden."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:103
+msgid "The 3rd widget area in the footer."
+msgstr "Det tredje kontrolområde i sidefoden."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:118
+msgid "The top widget area displayed on the index page."
+msgstr "Det øverste kontrolområde, der vises på indekssiden."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:133
+msgid "The widget area inserted after x posts on the index page."
+msgstr "Kontrolområdet, der indsætes efter x indlæg på indekssiden."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:148
+msgid "The bottom widget area displayed on the index page."
+msgstr "Det nederste kontrolområde, der vises på indekssiden."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:163
+msgid "The top widget area displayed on a single post."
+msgstr "Det øverste kontrolområde, der vises på et enkelt indlæg."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:178
+msgid "The widget area inserted between the post and the comments on a single post."
+msgstr "Kontrolområdet, der indsættes mellem et indlæg og dets kommentarer."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:193
+msgid "The bottom widget area displayed on a single post."
+msgstr "Det nederste kontrolområde, der vises på et enkelt indlæg."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:208
+msgid "The top widget area displayed on a page."
+msgstr "Det øverste kontrolområde, der vises på en side."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:223
+msgid "The bottom widget area displayed on a page."
+msgstr "Det nederste kontrolområde, der vises på en side."
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:283
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:55
+msgid "Meta"
+msgstr "Meta"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:285
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:286
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:72
+msgid "RSS Links"
+msgstr "RSS-links"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:77
+msgid "All posts"
+msgstr "Alle indlæg"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:78
+msgid "All comments"
+msgstr "Alle kommentarer"
+
+#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:96
+msgid "Title:"
+msgstr "Titel:"
+

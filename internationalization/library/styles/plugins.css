@@ -1,0 +1,62 @@
+/* -------------------------------------------------------------- 
+   
+   Default plugin styles for Thematic
+  
+-------------------------------------------------------------- */  
+
+/* =Ajax Edit Comments
+-------------------------------------------------------------- */
+
+.edit-comment {
+    margin-bottom:18px;
+}
+
+/* =PageNavi
+-------------------------------------------------------------- */
+
+/* Make sure to uncheck 'Use pagenavi-css.css' in the page-navi styles */
+
+.wp-pagenavi {
+    padding:0.5em 0;    
+}
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi span {
+    border:1px solid #ccc;
+    color:#666;
+    font-style:normal;
+    margin:0 .375em;
+    padding:0.5em 0.5em;
+}
+.wp-pagenavi a:visited {
+    border:1px solid #ccc;
+    color:#666;
+}
+.wp-pagenavi a:hover {
+    border:1px solid #ccc;
+    color:#FF4B33;
+}
+.wp-pagenavi a:active {
+    border:1px solid #ccc;
+    color:#FF4B33;
+}
+.wp-pagenavi span.pages {
+    border:none;
+    color:#666;
+    margin:0;
+    padding:0;
+}
+.wp-pagenavi span.current {
+    color:#000;
+}
+.wp-pagenavi span.extend {
+    color:#000;
+}
+
+/* =WordPress Stats
+-------------------------------------------------------------- */
+
+img#wpstats {   /* hide WordPress Stats smiley */
+    width:0px;
+    height:0px;
+    overflow:hidden
+}
+

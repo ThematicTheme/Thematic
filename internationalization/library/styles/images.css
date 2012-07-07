@@ -1,0 +1,113 @@
+/* -------------------------------------------------------------- 
+   
+   Default styles for Images
+  
+-------------------------------------------------------------- */   
+.entry-content .wp-post-image {
+	border: 1px solid #ccc;
+	float:right;
+	margin: 0 0 20px 18px;
+	padding: 5px;
+}
+.entry-content img {
+    height:auto;
+    margin: 0 0 18px 0;
+    max-width:100%;
+}
+.alignleft,
+img.alignleft {
+	float: left;
+    margin-right:20px;
+}
+.alignright,
+img.alignright {
+	display: block;
+	float: right;
+    margin-left:20px;
+}
+.aligncenter,
+img.aligncenter {
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	clear: both;
+}
+.wp-caption {
+	border:1px solid #ccc;
+	text-align: center;
+	margin-bottom:18px;
+	max-width: 96%;
+	padding:9px 5px 0;
+}
+.wp-caption img {
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 0;
+}
+.wp-caption p.wp-caption-text {
+	margin: 0;
+	padding:18px 5px;
+}
+.gallery {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	margin: 0 auto;
+    padding:0 0 22px 0;
+	}
+.gallery-row {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	margin: 0;
+	}
+.gallery-item {
+	overflow: hidden;
+	float: left;
+	margin: 0;
+	text-align: center;
+	list-style: none;
+	}
+.gallery-icon {
+	margin: 0 5px;
+}
+#content .gallery img {
+    border: 1px solid #ccc;
+	margin:0;
+	padding: 6px;
+}
+.gallery-item img, .gallery-item img.thumbnail {
+	margin: 0 auto;
+	}
+.gallery-caption {
+	padding:6px 6px 0;
+}
+.wp-caption-text,
+.gallery-caption {
+    color:#666;
+    font-size:13px;
+    line-height:18px;
+}
+.wp-smiley { /* Prevent the smileys from breaking line-height */
+	max-height:12px;
+	margin:0 !important;
+}
+
+
+
+/*
+
+Adapt the following for use in your Child Themes when using
+different font-sizes and line-heights
+
+.entry-content img,
+.wp-caption {
+    margin-bottom:--px;
+}
+.wp-smiley {
+    max-height:--px;
+}
+
+All other styles can be overridden--or ignored!--in Child Theme stylesheets
+
+*/

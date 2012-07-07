@@ -1,0 +1,561 @@
+# Translation of Thematic 1.0.3 in Swedish
+# This file is distributed under the same license as the Thematic 1.0.3 package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2012-06-25 15:44:12+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Thematic 1.0.3\n"
+
+#: library/extensions/content-extensions.php:947
+#: library/extensions/content-extensions.php:1461
+#: library/extensions/discussion-extensions.php:36
+#: library/extensions/discussion.php:84 links.php:60 page.php:60
+#: template-page-archives.php:63 template-page-fullwidth.php:61
+msgid "Edit"
+msgstr "Redigera"
+
+#: attachment.php:62 library/extensions/content-extensions.php:666
+#: library/extensions/content-extensions.php:732
+msgid "Pages:"
+msgstr "Sidor:"
+
+#: author.php:67
+msgid "Email "
+msgstr "Epost"
+
+#: comments.php:33
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Detta inl&auml;gg &auml;r l&ouml;senordsskyddat. Skriv in l&ouml;senordet f&ouml;r att se kommentarer."
+
+#: comments.php:111
+msgid "<span>One</span> Trackback"
+msgstr "<span>En</span> trackback"
+
+#: comments.php:142 library/extensions/comments-extensions.php:234
+msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Du m&aring;ste vara <a href=\"%s\" title=\"Logga in\">inloggad</a> f&ouml;r att skriva en kommentar."
+
+#: comments.php:156 library/extensions/comments-extensions.php:235
+msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
+msgstr "<span class=\"loggedin\">Inloggad som <a href=\"%1$s\" title=\"Inloggad som %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Logga ut ifr&aring;n det h&auml;r kontot\">Logga ut?</a></span>"
+
+#: comments.php:164 library/extensions/comments-extensions.php:233
+msgid "Your email is <em>never</em> published nor shared."
+msgstr "Din epostadress delas eller publiceras <em>aldrig</em>"
+
+#: comments.php:164 library/extensions/comments-extensions.php:233
+msgid "Required fields are marked <span class=\"required\">*</span>"
+msgstr "Obligatoriska f&auml;lt &auml;r markerade med <span class=\"required\">*</span>"
+
+#: comments.php:167 library/extensions/comments-extensions.php:224
+msgid "Name"
+msgstr "Namn"
+
+#: comments.php:167 comments.php:172
+#: library/extensions/comments-extensions.php:224
+#: library/extensions/comments-extensions.php:225
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: comments.php:172 library/extensions/comments-extensions.php:225
+msgid "Email"
+msgstr "Epost"
+
+#: comments.php:177 library/extensions/comments-extensions.php:226
+msgid "Website"
+msgstr "Website"
+
+#: comments.php:189 library/extensions/comments-extensions.php:236
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
+msgstr "Du kan anv&auml;nda dessa <abbr title=\"HyperText Markup Language\">HTML</abbr>-taggar och attribut:"
+
+#: page.php:58 template-page-fullwidth.php:59
+msgid "Pages: "
+msgstr "Sidor:"
+
+#: search.php:56
+msgid "Nothing Found"
+msgstr "Inga tr&auml;ffar"
+
+#: search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Tyv&auml;rr, men ingenting matchar ditt s&ouml;kkriterie. F&ouml;rs&ouml;k med en annan s&ouml;kstr&auml;ng."
+
+#: library/extensions/content-extensions.php:1346 search.php:70
+msgid "Find"
+msgstr "S&ouml;k"
+
+#: library/extensions/comments-extensions.php:120
+msgid "<span>One</span> Comment"
+msgstr "<span>En</span> kommentar"
+
+#: library/extensions/comments-extensions.php:154
+msgid "Post a Comment"
+msgstr "Skriv en kommentar"
+
+#: library/extensions/comments-extensions.php:165
+msgid "Post a Reply to %s"
+msgstr "Skriv ett svar till %s"
+
+#: library/extensions/comments-extensions.php:176
+msgid "Comment"
+msgstr "Kommentar"
+
+#: library/extensions/comments-extensions.php:187
+msgid "Cancel reply"
+msgstr "Avbryt svar"
+
+#: library/extensions/comments-extensions.php:198
+msgid "Post Comment"
+msgstr "L&auml;mna kommentar"
+
+#: library/extensions/content-extensions.php:340
+#: library/extensions/header-extensions.php:84
+msgid "Category Archives:"
+msgstr "Kategori-arkiv:"
+
+#: library/extensions/content-extensions.php:349
+#: library/extensions/header-extensions.php:80
+msgid "Search Results for:"
+msgstr "S&ouml;k i resultaten efter:"
+
+#: library/extensions/content-extensions.php:355
+#: library/extensions/header-extensions.php:88
+msgid "Tag Archives:"
+msgstr "Tag-arkiv:"
+
+#: library/extensions/content-extensions.php:364
+#: library/extensions/content-extensions.php:373
+msgid "Archives:"
+msgstr "Arkiv:"
+
+#: library/extensions/content-extensions.php:379
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Arkiv (dagligen): <span>%s</span>"
+
+#: library/extensions/content-extensions.php:383
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Arkiv (m&aring;nadsvis): <span>%s</span>"
+
+#: library/extensions/content-extensions.php:387
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Arkiv (&aring;rligen): <span>%s</span>"
+
+#: library/extensions/content-extensions.php:429
+#: library/extensions/content-extensions.php:1728
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> &Auml;ldre inl&auml;gg"
+
+#: library/extensions/content-extensions.php:431
+#: library/extensions/content-extensions.php:1729
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "Senare inl&auml;gg <span class=\"meta-nav\">&raquo;</span>"
+
+#: library/extensions/content-extensions.php:946
+#: library/extensions/content-extensions.php:1460
+msgid "Edit post"
+msgstr "Redigera inl&auml;gg"
+
+#: library/extensions/content-extensions.php:975
+#: library/extensions/header-extensions.php:92
+msgid "Not Found"
+msgstr "Inte hittat"
+
+#: library/extensions/content-extensions.php:980
+#: library/extensions/content-extensions.php:1413
+#: library/extensions/content-extensions.php:1417
+msgid "Permalink to "
+msgstr "Permalink till "
+
+#: library/extensions/content-extensions.php:1041
+msgid "By "
+msgstr "Av "
+
+#: library/extensions/content-extensions.php:1051
+msgid "View all posts by "
+msgstr "Se alla inl&auml;gg av&nbsp;"
+
+#: library/extensions/content-extensions.php:1079
+msgid "Published: "
+msgstr "Publicerad: "
+
+#: library/extensions/content-extensions.php:1252
+msgid "Archives by Category"
+msgstr "Arkiv per kategori"
+
+#: library/extensions/content-extensions.php:1280
+msgid "Archives by Month"
+msgstr "Arkiv per m&aring;nad"
+
+#: library/extensions/content-extensions.php:1413
+msgid "Browse the "
+msgstr "Bl&auml;ddra i "
+
+#: library/extensions/content-extensions.php:1413
+msgid " Archive"
+msgstr "arkivet"
+
+#: library/extensions/content-extensions.php:1414
+msgid " archive"
+msgstr " arkiv"
+
+#: library/extensions/content-extensions.php:1417
+msgid "Bookmark the "
+msgstr "Bokm&auml;rk "
+
+#: library/extensions/content-extensions.php:1418
+msgid "permalink"
+msgstr "permal&auml;nk"
+
+#: library/extensions/content-extensions.php:1572
+msgid "This entry was posted in "
+msgstr "Detta inl&auml;gg &auml;r publicerat i "
+
+#: library/extensions/content-extensions.php:1580
+msgid "Also posted in "
+msgstr "Ocks&aring; publicerat i"
+
+#: library/extensions/content-extensions.php:1583
+msgid "Posted in "
+msgstr "Publicerat i "
+
+#: library/extensions/content-extensions.php:1609
+msgid " This entry is tagged"
+msgstr "Det här inlägget är taggat"
+
+#: library/extensions/content-extensions.php:1612
+msgid " and tagged"
+msgstr " och taggat"
+
+#: library/extensions/content-extensions.php:1615
+msgid " Also tagged "
+msgstr " Ocks&aring; taggat "
+
+#: library/extensions/content-extensions.php:1617
+msgid "Tagged"
+msgstr "Taggat"
+
+#: library/extensions/content-extensions.php:1644
+#: library/extensions/content-extensions.php:1647
+#: library/extensions/content-extensions.php:1650
+msgid "Comment on "
+msgstr "Kommenterat p&aring;&nbsp;"
+
+#: library/extensions/content-extensions.php:1651
+msgid "Leave a comment"
+msgstr "L&auml;mna en kommentar"
+
+#: library/extensions/content-extensions.php:1654
+msgid "Comments closed"
+msgstr "St&auml;ngt f&ouml;r kommentarer"
+
+#: library/extensions/content-extensions.php:1678
+#: library/extensions/content-extensions.php:1686
+msgid "Post a comment"
+msgstr "Skriv en kommentar"
+
+#: library/extensions/content-extensions.php:1679
+msgid " or leave a trackback: "
+msgstr "&nbsp;eller l&auml;mna en trackback: "
+
+#: library/extensions/content-extensions.php:1680
+#: library/extensions/content-extensions.php:1683
+msgid "Trackback URL for your post"
+msgstr "Trackback URL f&ouml;r ditt inl&auml;gg"
+
+#: library/extensions/content-extensions.php:1680
+#: library/extensions/content-extensions.php:1683
+msgid "Trackback URL"
+msgstr "Trackback URL"
+
+#: library/extensions/content-extensions.php:1682
+msgid " Comments are closed, but you can leave a trackback: "
+msgstr "&nbsp;St&auml;ngt f&ouml;r kommentarer, men du kan l&auml;mna trackback:"
+
+#: library/extensions/content-extensions.php:1685
+msgid " Trackbacks are closed, but you can "
+msgstr "&nbsp;St&auml;ngt f&ouml;r trackbacks, men du kan"
+
+#: library/extensions/content-extensions.php:1686
+msgid "post a comment"
+msgstr "l&auml;mna en kommentar"
+
+#: library/extensions/content-extensions.php:1688
+msgid " Both comments and trackbacks are currently closed."
+msgstr " St&auml;ngt f&ouml;r kommentarer och trackbacks."
+
+#: library/extensions/discussion-extensions.php:27
+msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
+msgstr "Skrivet %1$s klockan %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink till denna kommentar\">Permalink</a>"
+
+#: library/extensions/discussion-extensions.php:35
+msgid "Edit comment"
+msgstr "Redigera kommentar"
+
+#: library/extensions/discussion.php:52
+msgid "Reply"
+msgstr "Svar"
+
+#: library/extensions/discussion.php:53
+msgid "Log in to reply."
+msgstr "Logga in f&ouml;r att svara."
+
+#: library/extensions/discussion.php:80
+msgid "By %1$s on %2$s at %3$s"
+msgstr "Av %1$s den %2$s kl %3$s"
+
+#: library/extensions/header-extensions.php:302
+#: library/extensions/widgets.php:157
+msgid "Posts RSS feed"
+msgstr "RSS-fl&ouml;de (inl&auml;gg)"
+
+#: library/extensions/header-extensions.php:326
+#: library/extensions/widgets.php:158
+msgid "Comments RSS feed"
+msgstr "RSS-fl&ouml;de (kommentarer)"
+
+#: functions.php:253
+msgid "Primary Menu"
+msgstr "Prim&auml;r meny"
+
+#: library/extensions/header-extensions.php:625
+msgid "Skip navigation to the content"
+msgstr "Skippa navigation, vidare till inneh&aring;ll"
+
+#: library/extensions/header-extensions.php:625
+msgid "Skip to content"
+msgstr "Vidare till inneh&aring;ll"
+
+#: library/extensions/helpers.php:50 library/extensions/helpers.php:69
+msgid "There is no excerpt because this is a protected post."
+msgstr "Det finns inget utdrag f&ouml;r detta &auml;r ett skyddat inl&auml;gg."
+
+#: library/extensions/shortcodes.php:40
+msgid "Login"
+msgstr "Logga in"
+
+#: library/extensions/shortcodes.php:42
+msgid "Logout"
+msgstr "Logga ut"
+
+#: library/extensions/theme-options.php:50
+msgid "Index Insert Position"
+msgstr "Position f&ouml;r Index Insert"
+
+#: library/extensions/theme-options.php:51
+msgid "Info on Author Page"
+msgstr "Information p&aring; F&ouml;rfattarsidan"
+
+#: library/extensions/theme-options.php:52
+msgid "Text in Footer"
+msgstr "Sidfotstext"
+
+#: library/extensions/widgets-extensions.php:34
+msgid "To search, type and hit enter"
+msgstr "F&ouml;r att s&ouml;ka, skriv och tryck enter"
+
+#: library/extensions/widgets-extensions.php:40
+#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
+msgid "Search"
+msgstr "S&ouml;k"
+
+#: library/extensions/widgets-extensions.php:72
+msgid "The primary widget area, most often used as a sidebar."
+msgstr "Det prim&auml;ra widgetf&auml;ltet, oftast anv&auml;nd som sidopanel."
+
+#: library/extensions/widgets-extensions.php:87
+msgid "The secondary widget area, most often used as a sidebar."
+msgstr "Det sekund&auml;ra widgetf&auml;ltet, oftast anv&auml;nd som sidopanel."
+
+#: library/extensions/widgets-extensions.php:102
+msgid "The 1st widget area in the footer."
+msgstr "Det 1a widgetf&auml;ltet i sidfoten"
+
+#: library/extensions/widgets-extensions.php:117
+msgid "The 2nd widget area in the footer."
+msgstr "Det 2a widgetf&auml;ltet i sidfoten"
+
+#: library/extensions/widgets-extensions.php:132
+msgid "The 3rd widget area in the footer."
+msgstr "Det 3e widgetf&auml;ltet i sidfoten"
+
+#: library/extensions/widgets-extensions.php:147
+msgid "The top widget area displayed on the index page."
+msgstr "Det &ouml;vre widgetf&auml;ltet p&aring; index-sidan."
+
+#: library/extensions/widgets-extensions.php:162
+msgid "The widget area inserted after x posts on the index page."
+msgstr "Widgetf&auml;ltet som placeras efter x antal inl&auml;gg p&aring; index-sidan."
+
+#: library/extensions/widgets-extensions.php:177
+msgid "The bottom widget area displayed on the index page."
+msgstr "Det undre widgetf&auml;ltet p&aring; index-sidan."
+
+#: library/extensions/widgets-extensions.php:192
+msgid "The top widget area displayed on a single post."
+msgstr "Det &ouml;vre widgetf&auml;ltet p&aring; singel-inl&auml;ggssidan."
+
+#: library/extensions/widgets-extensions.php:207
+msgid "The widget area inserted between the post and the comments on a single post."
+msgstr "Widgetf&auml;ltet som placeras mellan inlägget och kommentarerna på singel inläggs-sidan."
+
+#: library/extensions/widgets-extensions.php:222
+msgid "The bottom widget area displayed on a single post."
+msgstr "Det undre widgetf&auml;ltet p&aring; singel-inl&auml;ggssidan."
+
+#: library/extensions/widgets-extensions.php:237
+msgid "The top widget area displayed on a page."
+msgstr "Det &ouml;vre widgetf&auml;ltet p&aring; en Sida"
+
+#: library/extensions/widgets-extensions.php:252
+msgid "The bottom widget area displayed on a page."
+msgstr "Det undre widgetf&auml;ltet p&aring; en Sida"
+
+#: library/extensions/widgets.php:55
+msgid "A search form for your blog"
+msgstr "Ett s&ouml;kformul&auml;r f&ouml;r din blogg"
+
+#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
+#: library/extensions/widgets.php:175
+msgid "Title:"
+msgstr "Titel:"
+
+#: library/extensions/widgets.php:100
+msgid "Log in/out and admin"
+msgstr "Logga in/ut och admin"
+
+#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
+msgid "Meta"
+msgstr "Meta"
+
+#: library/extensions/widgets.php:145
+msgid "Links to your posts and comments feed"
+msgstr "L&auml;nkar till inl&auml;ggs- och kommentarsfl&ouml;de"
+
+#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
+msgid "RSS Links"
+msgstr "RSS-l&auml;nkar"
+
+#: library/extensions/widgets.php:157
+msgid "All posts"
+msgstr "Alla inl&auml;gg"
+
+#: library/extensions/widgets.php:158
+msgid "All comments"
+msgstr "Alla kommentarer"
+
+#: archives.php:20 template-page-blog.php:22
+msgid "The template %s"
+msgstr "Temafilen %s"
+
+#: comments.php:24
+msgid "Please do not load this page directly."
+msgstr "Ladda inte den h&auml;r filen direkt, tack."
+
+#: comments.php:111
+msgid "Trackbacks"
+msgstr "Trackbackar"
+
+#: library/extensions/comments-extensions.php:131
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: library/extensions/content-extensions.php:334
+msgid "Author Archives:"
+msgstr "Författararkiv:"
+
+#: library/extensions/content-extensions.php:1340
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
+msgstr "Beklagar, men vi kunde inte hitta det du letar efter. Det kanske hjälper att söka."
+
+#: library/extensions/content-extensions.php:1364
+msgid "Read More %s"
+msgstr "L&auml;s mer %s"
+
+#: library/extensions/content-extensions.php:1645
+msgid "Responses"
+msgstr "Responser"
+
+#: library/extensions/content-extensions.php:1648
+msgid "Response"
+msgstr "Respons"
+
+#: library/extensions/discussion.php:37
+msgid "Your comment is awaiting moderation"
+msgstr "Din kommentar v&auml;ntar p&aring; att bli godk&auml;nd."
+
+#: library/extensions/discussion.php:90
+msgid "Your trackback is awaiting moderation"
+msgstr "Din trackback v&auml;ntar p&aring; att bli godk&auml;nd."
+
+#: library/extensions/theme-options.php:56
+msgid "Remove Legacy Options"
+msgstr "Ta bort f&ouml;r&aring;ldrade inst&auml;llningar"
+
+#: library/extensions/theme-options.php:204
+msgid "For more information:"
+msgstr "F&ouml;r mer information:"
+
+#: library/extensions/theme-options.php:206
+msgid "For support:"
+msgstr "F&ouml;r support:"
+
+#: library/extensions/theme-options.php:208
+msgid "forums"
+msgstr "forum"
+
+#: library/extensions/theme-options.php:212
+msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
+msgstr "Inst&auml;llningarna nedan &auml;r aktiverade av temat Thematic och/eller ett barntema."
+
+#: library/extensions/theme-options.php:213
+msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
+msgstr "Nya inst&auml;llningar kan l&auml;ggas till och standardinst&auml;llningarna kan tas bort genom att skapa ett barntema. Den h&auml;r hj&auml;lptexten kan ocks&aring; anpassas i ett barntema."
+
+#: library/extensions/theme-options.php:219
+msgid "Overview"
+msgstr "&Ouml;verblick"
+
+#: library/extensions/theme-options.php:247
+msgid "For more information about this theme, <a href=\"http://thematictheme.com\">visit ThemeTheme.com</a>. Please visit the <a href=\"http://thematictheme.com/forums/\">ThematicTheme.com Forums</a> if you have any questions about Thematic."
+msgstr "F&ouml;r mer information om detta tema, <a href=\"http://thematictheme.com\">bes&ouml;k ThemeTheme.com</a>. V&auml;nligen bes&ouml;k <a href=\"http://thematictheme.com/forums/\">ThematicTheme-forumet</a> om du har n&aring;gra fr&aring;gor om Thematic."
+
+#: library/extensions/theme-options.php:262
+msgid "%s Theme Options"
+msgstr "%s Temainst&auml;llningar"
+
+#: library/extensions/theme-options.php:276
+msgid "Save Changes"
+msgstr "Spara ändringar"
+
+#: library/extensions/theme-options.php:311
+msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
+msgstr "Widgetf&auml;ltet f&ouml;r Index Insert kommer att s&auml;ttas in efter s&aring; h&auml;r m&aring;nga inl&auml;gg. Om du l&auml;mnar f&auml;ltet tomt eller skriver 0 avaktiveras widgetf&auml;ltet."
+
+#: library/extensions/theme-options.php:324
+msgid "Display a"
+msgstr "Visa ett"
+
+#: library/extensions/theme-options.php:324
+msgid "with the author's avatar, bio and email on the author page."
+msgstr "med f&ouml;rfattarens avatar, presentation och email p&aring; f&ouml;rfattarsidan."
+
+#: library/extensions/theme-options.php:337
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples"
+msgstr "Du kan anv&auml;nda HTML och shortcodes i din sidfotstext. Exempel p&aring; shortcodes"
+
+#: library/extensions/theme-options.php:350
+msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
+msgstr "Temainst&auml;llningarna f&ouml;r %s  har uppgraderats till ett f&ouml;rb&auml;ttrat format. Ta bort de f&ouml;r&aring;ldrade inst&auml;llningarna fr&aring;n databasen."
+
+#: library/extensions/theme-options.php:377
+msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
+msgstr "V&auml;rdet p&aring; index insert-inst&auml;llningen m&aring;ste vara en siffra som &auml;r st&ouml;rre &auml;n eller lika med noll. Denna inst&auml;llning har &aring;terst&auml;llts till det f&ouml;reg&aring;ende v&auml;rdet."
+
+#: template-page-blog.php:22
+msgid "You can include a %s in a childtheme"
+msgstr "Du kan inkludera en %s-fil i ett barntema."

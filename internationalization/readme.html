@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>A Guide To Thematic</title>
+<style type="text/css">
+@import url('library/styles/reset.css');
+@import url('library/styles/typography.css');
+body {
+    color:#333;
+    font: 14px "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    line-height:21px;
+    margin:72px auto 53px auto;
+    width:800px;
+}
+strong, em {
+    font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+em.thankyou {
+    font-family:Georgia,serif;
+    font-size:18px;
+    margin-bottom:36px;
+}
+p, ul, ol, dd, pre {
+    margin-bottom:21px;
+}
+pre, code {
+	font:13px Monaco, monospace;
+	line-height:21px;
+}
+p.intro,
+p.intro em {
+    color:#111;
+    font-family:Georgia,serif;
+    font-size:24px;
+    line-height:36px;
+}
+ul {
+    list-style:square;
+    margin-right:3em;
+}
+h1 {
+    color:#111;
+    font-family:Georgia,serif;
+    font-size:36px;
+    line-height:36px;
+    margin-bottom:24px;
+}
+h2,h3,h4 {
+    color:#111;
+    font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+}
+h2 {
+    font-family:Georgia,serif;
+    font-size:18px;
+    letter-spacing:2px;    
+    margin-bottom:21px;
+    padding-top:21px;
+    text-transform:uppercase;
+}
+h3 {
+    color:#333;
+    font-family:Georgia,serif;
+    font-size:18px;
+    font-style:italic;
+    font-weight:normal;
+    margin-bottom:21px;
+}
+li {
+    color:#111;
+}
+li h3 {
+    color:#111;
+    font-size:14px;
+    font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    font-style:normal;
+    font-weight:bold;
+    margin:0;    
+}
+li p {
+    color:#333;
+}
+.content-column {
+    float:left;
+    margin:0 3em 0 0;
+}
+iframe {
+    border:1px solid #ccc;
+    border-top-color:#aaa;
+    margin-bottom:21px;
+}
+#ts-forums {
+	height: 300px;
+	margin-top: 10px;
+	width: 100%;
+}
+</style>
+<meta name="robots" content="index,nofollow,noodp,noydir" />
+</head>
+<body>
+<h1>A Guide To Thematic</h1>
+<p class="intro">Thematic is more than just a WordPress theme, it's also a <em>Theme Framework</em>. Now, that doesn't mean it's hard to use, bloated or overcomplicated. <em>Quite the opposite</em>. It's extremely easy to use, lean and easy to customize. This guide will show you why and how.</p>
+
+<h2>Widget-Ready Areas</h2>
+<p>Thematic has 13 widget-ready areas, called <em>Asides</em>, that can be used creatively to customize your theme.</p>
+<ul>
+<li><h3>Primary Aside</h3>
+<p>Located immediately after the content area in the markup. Typically used as a sidebar. By default it contains <em>Search</em>, <em>Pages</em>, <em>Categories</em> and <em>Archives</em> widgets. Use the widgets panel under <code>Design</code> to add your own widgets and override the default.</p></li>
+<li><h3>Secondary Aside</h3>
+<p>Located immediately after the Primary Aside in the markup. Typically used as a sidebar. By default it contains <em>Links</em>, <em>RSS Feeds</em> and <em>Meta</em> widgets. Use the widgets panel under <code>Design</code> to add your own widgets and override the default.</p></li>
+<li><h3>Subsidiary Asides</h3>
+<p>Located in the footer. Empty of widgets by default, they will not appear in the theme markup until you add a widget.</p></li>
+<li><h3>Index Asides</h3>
+<p>Located in the content area of the index, or blog page. Empty of widgets by default, they will not appear in the theme markup until you add a widget. The location of the <em>Index Insert</em>, which appears between posts, is controlled from the theme options page. The default position sets it to appear after the second post.</p></li>
+<li><h3>Single Asides</h3>
+<p>Located in the content area of single post pages. Empty of widgets by default, they will not appear in the theme markup until you add a widget.</p></li>
+<li><h3>Page Asides</h3>
+<p>Located in the content area of static pages. Empty of widgets by default, they will not appear in the theme markup until you add a widget.</p></li>
+</ul>
+
+<h2>Theme Options</h2>
+<p>Thematic currently has three options that can be set from the <code>Theme Options</code> panel under <code>Design</code>: <em>Index Insert Position</em>, <em>Info on Author Page</em> and <em>Text in Footer</em>.</p>
+<p>The <em>Index Insert Position</em> setting controls the position of a widget-ready area on the index, or blog page. You can enter the number of posts you would like to appear <em>before</em> this widget-ready area. The default number is 2.</p>
+<p>Activating the <em>Info on Author Page</em> will display a <a href="http://microformats.org/wiki/hcard">microformatted vCard</a>—with the author's avatar, bio and email—on the author page. It's turned off by default. If you want to use this option, make sure you fill out the biographical info in your WordPress profiles.</p>
+<p>The <em>Text in Footer</em> option lets you insert your own <abbr>HTML</abbr> text into the footer of the theme. The default setting links to WordPress and the Thematic project page.</p>
+
+<h2>Dynamic Contextual Body Classes</h2>
+<p>Thematic makes use of the dynamic contextual class functions developed by Scott Wallick and Andy Skelton for <a href="http://www.plaintxt.org/themes/sandbox/">The Sandbox</a>. These functions make Thematic almost endlessly customizable through <abbr title="Cascading Stylesheets">CSS</abbr> alone.</p>
+<p>To really see how these classes work, where they appear and how you can use them, I recommend the Firefox extension, <a href="http://www.getfirebug.com/">Firebug</a>.</p>
+
+<h2>Thematic Child Themes</h2>        
+<p>Thematic has been specially optimized to take advantage of the power of WordPress Child Themes. Unless you plan on making <strong>extreme</strong> modifications I recommend you use a <em>Child Theme</em> to customize Thematic.</p>
+<p>I've compiled a few Thematic Child Themes here that can help you get started.</p>
+<div class="content-column">
+    <h3>Free Child Themes</h3>
+    <ul>
+        <li><a href="http://allancole.com/wordpress/themes/boumatic/">Boumatic</a></li>
+        <li><a href="http://www.cozmoslabs.com/2008/10/25/byty-free-child-theme-built-thematic/">Byty</a></li>
+        <li><a href="http://patdryburgh.net/blamatic/">Blamatic</a></li>
+        <li><a href="http://www.cozmoslabs.com/2008/12/17/replacing-the-thematic-menu-with-a-dropdown-list-of-categories/">CatDrop</a></li>
+        <li><a href="http://patdryburgh.net/junction/">Junction</a></li>
+        <li><a href="http://www.themelab.com/2008/08/30/monochromatic-a-thematic-child-theme/">Monochromatic</a></li>
+        <li><a href="http://www.ideetransfer.de/blog/2008/01/29/the-theme/">Ideetransfer</a></li>
+        <li><a href="http://themeshaper.com/acamas-theme-clarity-elegance-power/">Acamas</a></li>
+        <li><a href="http://themeshaper.com/travailler-professional-wordpress-cms-theme/">Travailler</a></li>
+    </ul>
+</div>
+
+<h2>Theme Support</h2>
+<p>If you have a question, problem or concern with Thematic you can <a href="http://themeshaper.com/contact/">contact Ian Stewart</a>. Better yet, I recommend posting to the <a href="http://themeshaper.com/forums/" title="ThemeShaper Forums">ThemeShaper Forums</a> after looking there for an answer.</p>
+<iframe id="ts-forums" src="http://thematictheme.com/forums/"></iframe>
+<p>The latest Thematic version, updates and bug fixes are always available at the <a href="http://code.google.com/p/thematic/">Thematic Project on Google Code</a>.</p>
+
+<h2>Credit and Inspiration</h2>
+<p>Thematic is a fork of the hugely successful and amazing <a href="http://www.plaintxt.org/themes/sandbox/">Sandbox theme for WordPress</a> and inherits the bulk of that code base. I owe a huge debt of gratitude to Scott Wallick and Andy Skelton, not only for their work on The Sandbox but for their ongoing help with, and support of, my efforts. Thank you, Scott and Andy.</p>
+<p>In addition, Thematic has been inspired by and uses techniques from the following people and projects.</p>
+<ul>
+    <li><a href="http://code.google.com/p/blueprintcss/">Blueprint</a></li>
+    <li><a href="http://blog.kaizeku.com/">Avice (Chaoskaizer) De’véreux</a></li>
+    <li>Tung (Small Potato) Do</li>
+    <li><a href="http://efficienttips.com/wordpress-seo-title-description-tag/">Milan Kaneria</a></li>
+    <li><a href="http://960.gs/">960.gs</a></li>
+    <li><a href="http://www.pearsonified.com/">Chris Pearson</a></li>
+    <li><a href="http://justintadlock.com/">Justin Tadlock</a></li>
+    <li><a href="http://tarskitheme.com/">Tarski</a></li>
+    <li><a href="http://devkick.com/lab/tripoli/">Tripoli</a></li>
+</ul>
+
+<h2>Copyright &amp; License</h2>
+<p>Thematic is copyright <a href="http://themeshaper.com/">Ian Stewart</a> and released, like WordPress, under <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GNU General Public License, version 2 (GPL)</a>.
+<p>Thematic has a credit link in the footer template. You may remove or edit this link without cost or concern—although it sure is appreciated if you link back to the <a href="http://thematictheme.com/">Thematic project</a>, in some way.</p>
+
+<p><em class="thankyou">Thank you</em>.</p>
+
+</body>
+</html>
