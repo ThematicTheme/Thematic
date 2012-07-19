@@ -1,93 +1,26 @@
 <?php
-/*
-Template Name: Archives Page
-*/
-?>
-<?php
+/**
+ * Template Name: Deprecated Archives Template
+ *
+ * This tamplate has bben deprecated for proper template namespacing
+ * This file is going away.
+ * 
+ * If you wish to use Thematic's Archives page template, please set 
+ * your Page Attributes: Template to use the template named "Archives"
+ * on the WP-Admin Edit Page screen.
+ *
+ * @package Thematic
+ * @subpackage Templates
+ *
+ * @link http://codex.wordpress.org/Template_Hierarchy Codex: Template Hierarchy
+ * @deprecated 1.0
+ */
 
-    // calling the header.php
-    get_header();
+	// Providing deprecated file notice to be seen when WP_DEBUG is true
+	_deprecated_file( sprintf( __( 'The template %s', 'thematic' ) . ':', basename(__FILE__) ), '1.0', 'template-page-archives.php' );
 
-    // action hook for placing content above #container
-    thematic_abovecontainer();
 
-?>	
-		<div id="container">
-		
-			<?php thematic_abovecontent();
-		
-			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
-			
-				the_post();
-	            
-	            thematic_abovepost();
-	            
-	            ?>
-	
-				<div id="post-<?php the_ID();
-					echo '" ';
-					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
-						post_class();
-						echo '>';
-					} else {
-						echo 'class="';
-						thematic_post_class();
-						echo '">';
-					}
-	                
-	                // creating the post header
-	                thematic_postheader();
-	                
-	                ?>
-	                
-					<div class="entry-content">
-	                
-	                    <?php 
-	                    
-	                    the_content();
-	
-	                    // action hook for the 404 content
-	                    thematic_archives();
-	
-	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>');
-	                    
-	                    ?>
-	
-					</div><!-- .entry-content -->
-				</div><!-- #post -->
-	
-	        <?php
-	        
-	        thematic_belowpost();
-	        
-	        // calling the comments template
-	        	// calling the comments template
-        		if (THEMATIC_COMPATIBLE_COMMENT_HANDLING) {
-       				if ( get_post_custom_values('comments') ) {
-						// Add a key/value of "comments" to enable comments on pages!
-	        			thematic_comments_template();
-        			}
-        		} else {
-       				thematic_comments_template();
-        		}
-	        
-	        ?>
-	
-			</div><!-- #content -->
-			
-			<?php thematic_belowcontent(); ?> 
-			
-		</div><!-- #container -->
-
-<?php 
-
-    // action hook for placing content below #container
-    thematic_belowcontainer();
-
-    // calling the standard sidebar 
-    thematic_sidebar();
-    
-    // calling footer.php
-    get_footer();
+	// calling the header.php
+	get_template_part( 'template-page' , 'archives' );
 
 ?>

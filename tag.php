@@ -1,18 +1,29 @@
 <?php
+/**
+ * Tag Archive Template
+ *
+ * …
+ * 
+ * @package Thematic
+ * @subpackage Templates
+ */
+
 
     // calling the header.php
     get_header();
 
     // action hook for placing content above #container
     thematic_abovecontainer();
-
 ?>
 
 		<div id="container">
 		
-			<?php thematic_abovecontent();
-		
-			echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n" );
+			<?php
+				// action hook for placing content above #content
+				thematic_abovecontent();
+
+				// filter for manipulating the element that wraps the content 
+				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 			
 				// displays the page title
 	            thematic_page_title();
@@ -31,17 +42,18 @@
 	
 	            // create the navigation below the content
 	            thematic_navigation_below();
-	            
-	            ?>
+			?>
 	
 			</div><!-- #content -->
 			
-			<?php thematic_belowcontent(); ?> 
-			
+			<?php 
+				// action hook for placing content below #content
+				thematic_belowcontent();
+			?>
+						
 		</div><!-- #container -->
 	
 <?php 
-
     // action hook for placing content below #container
     thematic_belowcontainer();
 
@@ -50,5 +62,4 @@
     
     // calling footer.php
     get_footer();
-
 ?>

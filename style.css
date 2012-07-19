@@ -1,17 +1,19 @@
 /*
 THEME NAME: Thematic
-THEME URI: http://themeshaper.com/thematic/
+THEME URI: http://thematictheme.com
 DESCRIPTION: The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development.
-VERSION: 0.9.7.8
+VERSION: 1.0.2.1
 AUTHOR: <a href="http://themeshaper.com/">Ian Stewart</a> &amp; <a href="http://thematic4you.com/">Chris Go&szlig;mann</a>
 AUTHOR URI: http://themeshaper.com/
 TAGS: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 .
 The Thematic Theme is copyright Ian Stewart http://themeshaper.com/
 This work, like WordPress, is released under GNU General Public License, version 2 (GPL).
 .
-License: GNU General Public License v2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 */
 
 /* Reset browser defaults */
@@ -74,6 +76,7 @@ img.aligncenter {
 .wp-caption {
 	text-align: center;
 	margin-bottom:18px;
+	max-width: 96%;
 }
 .wp-caption img {
 	margin: 0;

@@ -1,13 +1,15 @@
 <?php
 /**
- * Attachments Template
+ * Template Name: Archives Page
  *
- * Displays singular WordPress Media Library items.
+ * This is a custom Page template for displaying an index of Archives.
+ * It will display the page content above an unordered list of the different 
+ * post-type archives nested with an unordered list of thier post-type items.
  *
  * @package Thematic
  * @subpackage Templates
  *
- * @link http://codex.wordpress.org/Using_Image_and_File_Attachments Codex:Using Attachments
+ * @link http://codex.wordpress.org/Creating_an_Archive_Index Codex: Creating an Archives Index
  */
 
 	// calling the header.php
@@ -26,12 +28,9 @@
 				// filter for manipulating the element that wraps the content 
 				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
 
-	            // start the loop
-	            while ( have_posts() ) : the_post();
-
-	        	// displays the page title
-				thematic_page_title();
-
+				// start the loop to get the page content
+				the_post();
+				
 				// action hook for placing content above #post
 				thematic_abovepost();
 			?>
@@ -39,7 +38,7 @@
 				<?php
 					echo '<div id="post-' . get_the_ID() . '" ';
 					// Checking for defined constant to enable Thematic's post classes
-					if ( !( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
+					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
 					    post_class();
 					    echo '>';
 					} else {
@@ -54,40 +53,35 @@
 
 					<div class="entry-content">
 
-						<div class="entry-attachment"><?php the_attachment_link( $post->ID, true ) ?></div>
+	                    <?php 
+	                    	// displays the "Page" content 
+	                    	the_content();
 
-	                        <?php 
-	                        	the_content( thematic_more_text() );
+	                    	// action hook for displaying a list of archive links
+	                    	thematic_archives();
 
-	                        	wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'thematic' ) . '&after=</div>' );
-	                        ?>
+	                    	edit_post_link( __( 'Edit', 'thematic' ),'<span class="edit-link">','</span>' );
+	                    ?>
 
 					</div><!-- .entry-content -->
 
-					<?php
-	                	// creating the post footer
-	                	thematic_postfooter();
-	                ?>
-
 				</div><!-- #post -->
 
-	            <?php
-					// action hook for placing contentbelow #post
-					thematic_belowpost();
-					
-       				// action hook for calling the comments_template
-					thematic_comments_template();
-					
-					// end loop
-        			endwhile;
-	            ?>
+	        <?php
+	       		// action hook for placing contentbelow #post
+	       		thematic_belowpost();
+
+       			// action hook for calling the comments_template
+       			thematic_comments_template();
+	        ?>
 
 			</div><!-- #content -->
 
 			<?php 
 				// action hook for placing content below #content
 				thematic_belowcontent();
-			?>		
+			?> 
+
 		</div><!-- #container -->
 
 <?php 

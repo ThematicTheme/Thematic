@@ -37,9 +37,12 @@ th, td {
 hr {
     background-color:#ccc;
     border:0;
-    color:#ccc;
     height:1px;
     margin-bottom:22px;
+}
+.ie7 hr {
+	background-color:transparent;
+	color:#ccc;
 }
 a:link {
     color:#004B91;
@@ -97,101 +100,101 @@ a:hover {
 }
 /*** ESSENTIAL STYLES ***/
 .sf-menu, .sf-menu * {
-	margin:			0;
-	padding:		0;
-	list-style:		none;
+	margin:0;
+	padding:0;
+	list-style:none;
 }
 .sf-menu {
-	line-height:	1.0;
+	line-height:1.0;
 }
 .sf-menu ul {
-	position:		absolute;
-	top:			-999em;
-	width:			10em; /* left offset of submenus need to match (see below) */
+	position:absolute;
+	top:-999em;
+	width:10em; /* left offset of submenus need to match (see below) */
 }
 .sf-menu ul li {
-	width:			100%;
+	width:100%;
 }
 .sf-menu li:hover {
-	visibility:		inherit; /* fixes IE7 'sticky bug' */
+	visibility:inherit; /* fixes IE7 'sticky bug' */
 }
 .sf-menu li {
-	float:			left;
-	position:		relative;
+	float:left;
+	position:relative;
 }
 .sf-menu a {
-	display:		block;
-	position:		relative;
+	display:block;
+	position:relative;
 }
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-	left:			0;
-	top:			2.5em; /* match top ul list item height */
-	z-index:		99;
+	left:0;
+	top:2.5em; /* match top ul list item height */
+	z-index:99;
 }
 ul.sf-menu li:hover li ul,
 ul.sf-menu li.sfHover li ul {
-	top:			-999em;
+	top:-999em;
 }
 ul.sf-menu li li:hover ul,
 ul.sf-menu li li.sfHover ul {
-	left:			10em; /* match ul width */
-	top:			0;
+	left:10em; /* match ul width */
+	top:0;
 }
 ul.sf-menu li li:hover li ul,
 ul.sf-menu li li.sfHover li ul {
-	top:			-999em;
+	top:-999em;
 }
 ul.sf-menu li li li:hover ul,
 ul.sf-menu li li li.sfHover ul {
-	left:			10em; /* match ul width */
-	top:			0;
+	left:10em; /* match ul width */
+	top:0;
 }
 
 /*** THEMATIC SKIN ***/
 .sf-menu {
-    border-right:1px solid #ccc;
 	float:left;
-}
-.ie6 .sf-menu {
-	margin-bottom: -1px;
+	margin-left:1px;
 }
 .sf-menu a {
-	border-left:1px solid #ccc;
-	border-top:1px solid #ccc;
-	border-bottom:1px solid #ccc;
+  	border-color:#CCCCCC;
+    border-style:solid;
+    border-width:1px;
 	padding:9px 13px;
 	text-decoration:none;
+	margin-left:-1px;
 }
-.windows .sf-menu a {
-	font-size: 12px;
-	padding:9px 13px 10px;
+.ie7 .sf-menu a {
+	width:100%;
 }
+.sf-menu .current-menu-item a,
+.sf-menu .current-menu-parent a,
+.sf-menu .current-menu-ancestor a,
+.sf-menu .current-post-ancestor a,
 .sf-menu .current_page_item a,
 .sf-menu .current_page_ancestor a,
 .sf-menu .current_page_parent a {
     border-bottom-color:#fff;
 }
 .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
-	color:			#666;
+	color:#666;
 }
 .sf-menu li {
-	background:		#fff;
+	background:#fff;
 }
 .sf-menu li li {
-	background:		#fff;
+	background:#fff;
 }
 .sf-menu li li li {
-	background:		#9AAEDB;
+	background:#9AAEDB;
 }
 .sf-menu li:hover, .sf-menu li.sfHover,
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
-    background:     #fafafa;
-	outline:		0;
+    background:#fafafa;
+	outline: 0;
     border-bottom-color:#ccc;
 }
 .sf-menu ul {
-    border-right:1px solid #ccc;
     border-bottom:1px solid #ccc;
 }
 .sf-menu li:hover ul,
@@ -272,7 +275,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .entry-meta .author {
 }
-.entry-meta .n {
+.entry-meta .n, .entry-meta .nickname {
     font-size:11px;
     font-style:normal;
     letter-spacing:0.05em;
@@ -338,11 +341,12 @@ ul.sf-menu li li li.sfHover ul {
 .entry-utility a:hover {
     color: #FF4B33;
 }
-.edit-link {
+.page .edit-link {
 	clear:both;
 	display:block;
 }
 .page-link {
+	clear:both;
     font-size:13px;
     font-weight:bold;
     line-height:18px;
@@ -371,43 +375,6 @@ li.content-column {
     float:left;
     margin-right:20px;
     width:45%;
-}
-.gallery {
-	display: block;
-	clear: both;
-	overflow: hidden;
-	margin: 0 auto;
-    padding:0 0 22px 0;
-	}
-.gallery .gallery-row {
-	display: block;
-	clear: both;
-	overflow: hidden;
-	margin: 0;
-	}
-.gallery .gallery-item {
-	overflow: hidden;
-	float: left;
-	margin: 0;
-	text-align: center;
-	list-style: none;
-	padding: 0;
-	}
-.gallery .gallery-item img, .gallery .gallery-item img.thumbnail {
-	max-width: 89%;
-	height: auto;
-	padding: 1%;
-	margin: 0 auto;
-	border: none !important;
-	}
-.gallery-caption {
-	margin-left: 0;
-	}
-.wp-caption-text,
-.gallery-caption {
-    color:#666;
-    font-size:13px;
-    line-height:18px;
 }
 #author-info {
     margin:0 0 44px 0;
@@ -509,19 +476,28 @@ li.content-column {
     padding:0 0 18px 0;
 }
 #comments-list {
-    padding:0 0 18px 0;
-}
-#comments-list ol,
-#comments-list ul {
-    list-style:none;
-    margin:0;
-}
-#comments-list ol {
     border:1px solid #ccc;
     border-bottom:none;
-    margin:0 0 18px 0;
+    margin:0 0 18px;
 }
-#comments-list li {
+#comments-list h3 {
+	padding-bottom: 0;
+}
+#comments-list,
+#comments-list ul {
+    list-style:none;
+}
+#comments-list ul,
+#comments-list ol {
+    padding-bottom: 18px;
+}
+#comments-list ul ul,
+#comments-list ol ol,
+#comments-list ul ul ul,
+#comments-list ol ol ol {
+    padding-bottom:0;
+}
+#comments-list .comment {
     background:#fafafa;
     border-bottom:1px solid #ccc;
     padding:18px 1.5em 0 1.5em;
@@ -533,7 +509,7 @@ li.content-column {
 #comments-list li.bypostauthor {
     background:#FFFFCC;
 }
-#comments-list ul li {
+#comments-list ul .comment {
     border:1px solid #ccc;
     margin:0 0 18px 0;
 }
@@ -578,7 +554,7 @@ li.content-column {
 }
 .comment-navigation {
     font-weight:bold;
-    padding:0 0 18px 0;
+	padding: 18px 0 24px;
     margin-right:0.5em;
 }
 .comment-navigation a {
@@ -697,14 +673,18 @@ li.content-column {
     font-size:12px;
     line-height:18px;
 }
+.aside .current-menu-item a,
 .aside .current_page_item a {
     color: #FF4B33;
 }
-.aside .current_page_item .page_item a {
+.aside .current-menu-item .menu-item a,
+.aside .current_page_item .menu-item a {
     color:#666;
 }
-.aside .current_page_item .page_item a:hover,
-.aside .current_page_item .page_item a:active {
+.aside .current-menu-item .menu-item a:hover,
+.aside .current-menu-item .menu-item a:active,
+.aside .current_page_item .menu-item a:hover,
+.aside .current_page_item .menu-item a:active {
     color: #FF4B33;
 }
 .aside {
