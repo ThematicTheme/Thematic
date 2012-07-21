@@ -1050,7 +1050,7 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	    							get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
 	    							esc_attr( __( 'View all posts by', 'thematic' ) . ' ' . get_the_author_meta( 'display_name' )),
 	    							get_the_author_meta( 'display_name' ));
-	    	$author_info = .'</span>';
+	    	$author_info .= '</span>';
 	    }
 	    
 	    $author_credit = $author_prep . $author_info ;
