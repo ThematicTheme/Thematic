@@ -1037,8 +1037,7 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	function thematic_postmeta_authorlink() {
 		global $authordata;
 	
-	    $author_open = '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
-	    $author_close = '</span>';
+	    $author_prep = '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
 	    
 	    if ( thematic_is_custom_post_type() && !current_theme_supports( 'thematic_support_post_type_author_link' ) ) {
 	    	$author_info  = '<span class="vcard"><span class="fn nickname">';
@@ -1048,10 +1047,10 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	    	$author_info  = '<span class="author vcard">'. '<a class="url fn n" href="';
 	    	$author_info .= get_author_posts_url( $authordata->ID, $authordata->user_nicename );
 	    	$author_info .= '" title="' . __( 'View all posts by ', 'thematic' ) . get_the_author_meta( 'display_name' ) . '">';
-	    	$author_info .= get_the_author_meta( 'display_name' ) . '</a>';
+	    	$author_info .= get_the_author_meta( 'display_name' ) . '</a></span>';
 	    }
 	    
-	    $author_credit = $author_open . $author_info . $author_close ;
+	    $author_credit = $author_prep . $author_info ;
 	    
 	    return apply_filters('thematic_post_meta_authorlink', $author_credit);
 	   
