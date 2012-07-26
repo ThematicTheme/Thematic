@@ -90,9 +90,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	            $c[] = 'not-singular';
 	        }
 	    }
-	
-		// Special classes for BODY element when a single post
-		if ( is_single() && apply_filters( 'thematic_show_bc_singlepost', TRUE ) ) {
+	if ( is_single() && apply_filters( 'thematic_show_bc_singlepost', TRUE ) ) {
 			$postID = $wp_query->post->ID;
 			the_post();
 	
@@ -107,6 +105,8 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 			if ( isset( $wp_query->post->post_date ) )
 				thematic_date_classes( mysql2date( 'U', $wp_query->post->post_date ), $c, 's-' );
 	
+		// Special classes for BODY element when a single post
+		
 			// Adds category classes for each category on single posts
 			if ( $cats = get_the_category() )
 				foreach ( $cats as $cat )
@@ -304,7 +304,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 				}
   			}
   		}
-  		
+
 		// And tada!
 		return array_unique(apply_filters( 'thematic_body_class', $c )); // Available filter: thematic_body_class
 	}
@@ -412,7 +412,10 @@ function thematic_browser_class_names($classes) {
 	return $classes;
 }
 
-	
+// Providing deprecated function notice to be seen when WP_DEBUG is true
+_deprecated_function( 'childtheme_override_post_class', '1.0.1.3', __('You should filter post_class() directly.', "thematic" ) );
+_deprecated_function( 'thematic_post_class', '1.0.1.3', __('You should filter post_class() directly', "thematic" ) );
+
 if (function_exists('childtheme_override_post_class'))  {
 	/**
 	 * @ignore
@@ -423,7 +426,7 @@ if (function_exists('childtheme_override_post_class'))  {
 	/**
 	 * Generates semantic classes for each post DIV element
 	 */
-	function thematic_post_class( $print = true ) {
+	function thematic_post_class( $c ) {
 		global $post, $thematic_post_alt, $thematic_content_length, $taxonomy;
 	
 		// hentry for hAtom compliace, gets 'alt' for every other post DIV, describes the post type and p[n]
@@ -520,14 +523,14 @@ if (function_exists('childtheme_override_post_class'))  {
 			$c[] = 'alt';
 	
 	    // Adds post slug class, prefixed by 'slug-'
-	    $c[] = 'slug-' . $post->post_name;
-	
-		// Separates classes with a single space, collates classes for post DIV
-		$c = join( ' ', apply_filters( 'post_class', $c ) ); // Available filter: post_class
+	    $c[] = 'slug-' . $post->post_name; 
 	
 		// And tada!
-		return $print ? print($c) : $c;
+		return array_unique(apply_filters( 'thematic_post_class', $c )); // Available filter: thematic_post_class
 	}
+}
+if ( current_theme_supports ( 'thematic_legacy_post_class' ) ) {
+	add_filter( 'post_class', 'thematic_post_class', 20 );
 }
 
 /**

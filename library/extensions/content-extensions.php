@@ -461,17 +461,9 @@ if (function_exists('childtheme_override_archive_loop'))  {
 				thematic_abovepost(); 
 				?>
 
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
 				<?php
-					echo '<div id="post-' . get_the_ID() . '" ';
-					// Checking for defined constant to enable Thematic's post classes
-					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
-					    post_class();
-					    echo '>';
-					} else {
-					    echo 'class="';
-					    thematic_post_class();
-					    echo '">';
-					}
 
 	            	// creating the post header
 	            	thematic_postheader();
@@ -521,17 +513,9 @@ if (function_exists('childtheme_override_author_loop'))  {
 				thematic_abovepost();
 				?>
 
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
 				<?php
-					echo '<div id="post-' . get_the_ID() . '" ';
-					// Checking for defined constant to enable Thematic's post classes
-					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
-					    post_class();
-					    echo '>';
-					} else {
-					    echo 'class="';
-					    thematic_post_class();
-					    echo '">';
-					}
 
 	            	// creating the post header
 	            	thematic_postheader();
@@ -580,17 +564,9 @@ if (function_exists('childtheme_override_category_loop'))  {
 				thematic_abovepost();
 				?>
 	
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
 				<?php
-					echo '<div id="post-' . get_the_ID() . '" ';
-					// Checking for defined constant to enable Thematic's post classes
-					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
-					    post_class();
-					    echo '>';
-					} else {
-					    echo 'class="';
-					    thematic_post_class();
-					    echo '">';
-					}
 
 	            	// creating the post header
 	            	thematic_postheader();
@@ -642,17 +618,9 @@ if (function_exists('childtheme_override_index_loop'))  {
 				thematic_abovepost();
 				?>
 
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
 				<?php
-					echo '<div id="post-' . get_the_ID() . '" ';
-					// Checking for defined constant to enable Thematic's post classes
-					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
-					    post_class();
-					    echo '>';
-					} else {
-					    echo 'class="';
-					    thematic_post_class();
-					    echo '">';
-					}
 
 	            	// creating the post header
 	            	thematic_postheader();
@@ -708,17 +676,9 @@ if (function_exists('childtheme_override_single_post'))  {
 				thematic_abovepost();
 				?>
 			
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
 				<?php
-					echo '<div id="post-' . get_the_ID() . '" ';
-					// Checking for defined constant to enable Thematic's post classes
-					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
-					    post_class();
-					    echo '>';
-					} else {
-					    echo 'class="';
-					    thematic_post_class();
-					    echo '">';
-					}
 
 	            	// creating the post header
 	            	thematic_postheader();
@@ -766,17 +726,9 @@ if (function_exists('childtheme_override_search_loop'))  {
 				thematic_abovepost();
 				?>
 
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
 				<?php
-					echo '<div id="post-' . get_the_ID() . '" ';
-					// Checking for defined constant to enable Thematic's post classes
-					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
-					    post_class();
-					    echo '>';
-					} else {
-					    echo 'class="';
-					    thematic_post_class();
-					    echo '">';
-					}
 
 	            	// creating the post header
 	            	thematic_postheader();
@@ -825,17 +777,9 @@ if (function_exists('childtheme_override_tag_loop'))  {
 				thematic_abovepost(); 
 				?>
 
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
 				<?php
-					echo '<div id="post-' . get_the_ID() . '" ';
-					// Checking for defined constant to enable Thematic's post classes
-					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
-					    post_class();
-					    echo '>';
-					} else {
-					    echo 'class="';
-					    thematic_post_class();
-					    echo '">';
-					}
 
 	            	// creating the post header
 	            	thematic_postheader();
