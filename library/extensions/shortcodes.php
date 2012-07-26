@@ -180,6 +180,12 @@ add_shortcode('child-uri', 'thematic_shortcode_child_uri');
  * 
  */
 function thematic_shortcode_child_version() {
-    return THEMATIC_TEMPLATEVERSION;
+    if ( function_exists( 'wp_get_theme' ) ) {
+        $frameworkData = wp_get_theme();
+        return trim( $frameworkData->display('Version', false));
+    } else { 
+        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+        return trim( $frameworkData['Version'] );
+    }
 }
 add_shortcode('child-version', 'thematic_shortcode_child_version');
