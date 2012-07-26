@@ -26,9 +26,8 @@
 //
 // define('THEMATIC_COMPATIBLE_COMMENT_FORM', true);
 
-// Unleash the power of Thematic's feed link functions
-//
-// define('THEMATIC_COMPATIBLE_FEEDLINKS', true);
+// For backwards compatibility with some older child themes
+// add_theme_support('thematic_legacy_feedlinks'); // replaces define('THEMATIC_COMPATIBLE_FEEDLINKS', true);
 
 
 // Adds a home link to your menu

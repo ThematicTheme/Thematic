@@ -61,9 +61,9 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 			$content_width = 540;
    
    		// set feed links handling
-		// If you set this to TRUE, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
-		if ( !defined('THEMATIC_COMPATIBLE_FEEDLINKS') ) 
-				define( 'THEMATIC_COMPATIBLE_FEEDLINKS', false );
+		// backcompatible feed links handling - @to be removed eventually
+		// If you add theme support for thematic_legacy_feedlinks, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
+		if ( THEMATIC_COMPATIBLE_FEEDLINKS ) add_theme_support('thematic_legacy_feedlinks');
 
 		// set comments handling for pages, archives and links
 		// If you set this to TRUE, comments only show up on pages with a key/value of "comments"
@@ -88,7 +88,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		define( 'THEMATIC_MB', is_multisite()  );
 
 		// Create the feedlinks
-		if ( !( THEMATIC_COMPATIBLE_FEEDLINKS ) )
+		if ( ! current_theme_supports('thematic_legacy_feedlinks') )
  			add_theme_support( 'automatic-feed-links' );
  
 		if ( apply_filters( 'thematic_post_thumbs', true ) )
