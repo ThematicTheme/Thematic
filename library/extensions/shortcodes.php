@@ -73,7 +73,13 @@ add_shortcode('the-year', 'thematic_shortcode_year');
  * Display the name of the parent theme.
  */
 function thematic_shortcode_theme_name() {
-    return THEMATIC_THEMENAME;
+    if ( function_exists( 'wp_get_theme' ) ) {
+        $frameworkData = wp_get_theme(  'thematic' );
+        return $frameworkData->display('Name', false);
+    } else { 
+        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+        return $frameworkData['Title'];
+    }
 }
 add_shortcode('theme-name', 'thematic_shortcode_theme_name');
 
