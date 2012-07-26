@@ -118,7 +118,13 @@ add_shortcode('theme-uri', 'thematic_shortcode_theme_uri');
  * Display the version no. of the parent theme.
  */
 function thematic_shortcode_theme_version() {
-    return THEMATIC_VERSION;
+    if ( function_exists( 'wp_get_theme' ) ) {
+        $frameworkData = wp_get_theme( 'thematic' );
+        return trim( $frameworkData->display('Version', false));
+    } else { 
+        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+        return trim( $frameworkData['Version'] );
+    }
 }
 add_shortcode('theme-version', 'thematic_shortcode_theme_version');
 
@@ -128,7 +134,13 @@ add_shortcode('theme-version', 'thematic_shortcode_theme_version');
  * Display the name of the child theme.
  */
 function thematic_shortcode_child_name() {
-    return THEMATIC_TEMPLATENAME;
+    if ( function_exists( 'wp_get_theme' ) ) {
+        $frameworkData = wp_get_theme();
+        return $frameworkData->display( 'Name', false );
+    } else { 
+        $frameworkData = get_theme_data( get_template_directory() . '/style.css' );
+        return $frameworkData['Title'];
+    }
 }
 add_shortcode('child-name', 'thematic_shortcode_child_name');
 
