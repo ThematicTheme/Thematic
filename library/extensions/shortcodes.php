@@ -149,7 +149,13 @@ add_shortcode('child-name', 'thematic_shortcode_child_name');
  * Display the name of the child theme author.
  */
 function thematic_shortcode_child_author() {
-    return THEMATIC_TEMPLATEAUTHOR;
+    if ( function_exists( 'wp_get_theme' ) ) {
+        $frameworkData = wp_get_theme();
+        return $frameworkData->display( 'Author', false );
+    } else { 
+        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+        return $frameworkData['Author'];
+    }
 }
 add_shortcode('child-author', 'thematic_shortcode_child_author');
 
