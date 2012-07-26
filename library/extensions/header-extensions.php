@@ -313,7 +313,7 @@ function thematic_show_rss() {
     $display = apply_filters('thematic_show_rss', $display);
     if ($display) {
         $content = '<link rel="alternate" type="application/rss+xml" href="';
-        $content .= get_feed_link('rss2_url');
+        $content .= get_feed_link( get_default_feed() );
         $content .= '" title="';
         $content .= esc_attr( get_bloginfo('name', 'display') );
         $content .= ' ' . __('Posts RSS feed', 'thematic');
@@ -337,7 +337,7 @@ function thematic_show_commentsrss() {
     $display = apply_filters('thematic_show_commentsrss', $display);
     if ($display) {
         $content = '<link rel="alternate" type="application/rss+xml" href="';
-        $content .= get_feed_link( 'comments_rss2_url' );
+        $content .= get_feed_link( 'comments_' . get_default_feed() );
         $content .= '" title="';
         $content .= esc_attr( get_bloginfo('name') );
         $content .= ' ' . __('Comments RSS feed', 'thematic');
