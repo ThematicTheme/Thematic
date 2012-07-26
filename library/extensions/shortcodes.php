@@ -10,6 +10,8 @@
  *
  * @package ThematicCoreLibrary
  * @subpackage Shortcodes
+ *
+ * @TODO: remove all references to deprecated function, get_theme_data()
  */
 
 
@@ -138,7 +140,7 @@ function thematic_shortcode_child_name() {
         $frameworkData = wp_get_theme();
         return $frameworkData->display( 'Name', false );
     } else { 
-        $frameworkData = get_theme_data( get_template_directory() . '/style.css' );
+        $frameworkData = get_theme_data( get_stylesheet_directory() . '/style.css' );
         return $frameworkData['Title'];
     }
 }
@@ -153,7 +155,7 @@ function thematic_shortcode_child_author() {
         $frameworkData = wp_get_theme();
         return $frameworkData->display( 'Author', false );
     } else { 
-        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+        $frameworkData = get_theme_data( get_stylesheet_directory() . '/style.css' );
         return $frameworkData['Author'];
     }
 }
@@ -168,7 +170,7 @@ function thematic_shortcode_child_uri() {
         $frameworkData = wp_get_theme();
         return $frameworkData->display( 'ThemeURI', false );
     } else { 
-        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+        $frameworkData = get_theme_data( get_stylesheet_directory() . '/style.css' );
         return $frameworkData['URI'];
     }
 }
@@ -184,7 +186,7 @@ function thematic_shortcode_child_version() {
         $frameworkData = wp_get_theme();
         return trim( $frameworkData->display('Version', false));
     } else { 
-        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+        $frameworkData = get_theme_data( get_stylesheet_directory() . '/style.css' );
         return trim( $frameworkData['Version'] );
     }
 }
