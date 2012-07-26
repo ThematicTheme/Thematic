@@ -36,10 +36,7 @@ add_shortcode('theme-link', 'thematic_shortcode_framework_link');
  * Display link to wp-admin of the site.
  */
 function thematic_shortcode_login_link() {
-    if ( ! is_user_logged_in() )
-        $link = '<a href="' . site_url('/wp-login.php') . '">' . __('Login','thematic') . '</a>';
-    else
-    $link = '<a href="' . wp_logout_url() . '">' . __('Logout','thematic') . '</a>';
+    $link = wp_loginout( get_permalink(), FALSE ); 
     return apply_filters('loginout', $link);
 }
 add_shortcode('loginout-link', 'thematic_shortcode_login_link');		  	  
