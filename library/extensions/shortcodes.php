@@ -164,7 +164,13 @@ add_shortcode('child-author', 'thematic_shortcode_child_author');
  * Display the URI of the child theme.
  */
 function thematic_shortcode_child_uri() {
-    return THEMATIC_TEMPLATEURI;
+    if ( function_exists( 'wp_get_theme' ) ) {
+        $frameworkData = wp_get_theme();
+        return $frameworkData->display( 'ThemeURI', false );
+    } else { 
+        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+        return $frameworkData['URI'];
+    }
 }
 add_shortcode('child-uri', 'thematic_shortcode_child_uri');
 
