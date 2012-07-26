@@ -75,7 +75,7 @@ add_shortcode('the-year', 'thematic_shortcode_year');
 function thematic_shortcode_theme_name() {
     if ( function_exists( 'wp_get_theme' ) ) {
         $frameworkData = wp_get_theme(  'thematic' );
-        return $frameworkData->display('Name', false);
+        return $frameworkData->display( 'Name', false );
     } else { 
         $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
         return $frameworkData['Title'];
@@ -88,7 +88,13 @@ add_shortcode('theme-name', 'thematic_shortcode_theme_name');
  * Display the name of the parent theme author.
  */
 function thematic_shortcode_theme_author() {
-    return THEMATIC_THEMEAUTHOR;
+    if ( function_exists( 'wp_get_theme' ) ) {
+        $frameworkData = wp_get_theme(  'thematic' );
+        return $frameworkData->display( 'Author', false );
+    } else { 
+        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
+        return $frameworkData['Author'];
+    }
 }
 add_shortcode('theme-author', 'thematic_shortcode_theme_author');
 
