@@ -36,16 +36,10 @@
 			?>
 
 				<?php
-					echo '<div id="post-' . get_the_ID() . '" ';
-					// Checking for defined constant to enable Thematic's post classes
-					if ( ! ( THEMATIC_COMPATIBLE_POST_CLASS ) ) {
-					    post_class();
-					    echo '>';
-					} else {
-					    echo 'class="';
-					    thematic_post_class();
-					    echo '">';
-					}
+					
+					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
+				<?php
 
 	            	// creating the post header
 	            	thematic_postheader();
