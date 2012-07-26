@@ -59,69 +59,6 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 */
 		if ( !isset($content_width) )
 			$content_width = 540;
-
-           /**
-                 * Get Theme and Child Theme Data.
-                 * 
-                 * Used to get title, version, author, URI of the parent and the child theme.
-                 * @todo: move wp_get_theme() directly to shortcodes and remove constants
-                 */
-                
-                // WordPress 3.4 
-                if ( function_exists( 'wp_get_theme' ) ) {
-                        $frameworkData = wp_get_theme(  'thematic' );
-                        $framework_version = trim( $frameworkData->display('Version', false));
-                        $framework_title =  $frameworkData->display('Name', false);
-                        $framework_author =  $frameworkData->display('Author', false);
-                        $framework_themeuri =  $frameworkData->display('ThemeURI', false);
-                        
-                        $childthemeData = wp_get_theme();
-                        $childtheme_version = trim( $childthemeData->display('Version', false) );
-                        $childtheme_title =  $childthemeData->display('Name', false);
-                        $childtheme_author =  $childthemeData->display('Author', false);
-                        $childtheme_themeuri =  $childthemeData->display('ThemeURI', false);
-                        
-                // WordPress 3.3
-                // Credits: Joern Kretzschmar
-
-                } else {
-                        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
-                        $framework_version = trim( $frameworkData['Version'] );
-                        $framework_title =  $frameworkData['Title'];
-                        $framework_author =  $frameworkData['Author'];
-                        $framework_themeuri =  $frameworkData['URI'];
-
-                        $childthemeData = get_theme_data( get_stylesheet_directory() . '/style.css' );
-                        $childtheme_version = trim( $childthemeData['Version'] );
-                        $childtheme_title =  $childthemeData['Name'];
-                        $childtheme_author =  $childthemeData['Author'];
-                        $childtheme_themeuri =  $childthemeData['URI'];
-                
-                }
-                
-
-                if ( !$framework_version )
-                        $framework_version = "unknown";
-                
-                if ( !$childtheme_version )
-                        $childtheme_version = "unknown";
-
-                if ( !defined( 'THEMATIC_THEMENAME' ) )
-                        define( 'THEMATIC_THEMENAME',    $framework_title );
-
-                if ( !defined('THEMATIC_THEMEAUTHOR') )
-                        define( 'THEMATIC_THEMEAUTHOR',  $framework_author );
-
-                if ( !defined( 'THEMATIC_THEMEURI') )
-                        define( 'THEMATIC_THEMEURI',     $framework_themeuri );
-
-                if ( !defined( 'THEMATIC_VERSION' ) )
-                        define( 'THEMATIC_VERSION', $framework_version );
-
-                define( 'THEMATIC_TEMPLATENAME',         $childtheme_title );
-                define( 'THEMATIC_TEMPLATEAUTHOR',       $childtheme_author );
-                define( 'THEMATIC_TEMPLATEURI',          $childtheme_themeuri );
-                define( 'THEMATIC_TEMPLATEVERSION',      $childtheme_version );
    
    		// set feed links handling
 		// If you set this to TRUE, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
