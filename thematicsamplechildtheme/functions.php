@@ -17,17 +17,15 @@
  */
 
 
-// Unleash the power of Thematic's dynamic classes
-// 
-// define('THEMATIC_COMPATIBLE_BODY_CLASS', true);
-// define('THEMATIC_COMPATIBLE_POST_CLASS', true);
 
 // Unleash the power of Thematic's comment form
 //
 // define('THEMATIC_COMPATIBLE_COMMENT_FORM', true);
 
 // For backwards compatibility with some older child themes
-// add_theme_support('thematic_legacy_feedlinks'); // replaces define('THEMATIC_COMPATIBLE_FEEDLINKS', true);
+// add_theme_support( 'thematic_legacy_feedlinks' ); // replaces define( 'THEMATIC_COMPATIBLE_FEEDLINKS', true );
+// add_theme_support( 'thematic_legacy_body_class' ); // replaces define( 'THEMATIC_COMPATIBLE_BODY_CLASS', true );
+// add_theme_support( 'thematic_legacy_post_class' ); // replaces define( 'THEMATIC_COMPATIBLE_POST_CLASS', true );
 
 
 // Adds a home link to your menu

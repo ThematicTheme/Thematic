@@ -60,35 +60,32 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		if ( !isset($content_width) )
 			$content_width = 540;
    
-   		// set feed links handling
-		// backcompatible feed links handling - @to be removed eventually
+		// Legacy feed links handling - @to be removed eventually
 		// If you add theme support for thematic_legacy_feedlinks, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
-		if ( THEMATIC_COMPATIBLE_FEEDLINKS ) add_theme_support('thematic_legacy_feedlinks');
+		if ( THEMATIC_COMPATIBLE_FEEDLINKS ) add_theme_support( 'thematic_legacy_feedlinks' );
 
 		// set comments handling for pages, archives and links
 		// If you set this to TRUE, comments only show up on pages with a key/value of "comments"
-		if ( !defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING') )
+		if ( !defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING' ) )
 			define( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING', false );
 
-		// set body class handling to WP body_class()
-		// If you set this to TRUE, Thematic will use thematic_body_class instead
-		if ( !defined( 'THEMATIC_COMPATIBLE_BODY_CLASS') )
-			define( 'THEMATIC_COMPATIBLE_BODY_CLASS', false );
+		// Legacy body class handling - @to be removed eventually
+		// If you add theme support for thematic_legacy_body_class, Thematic will use thematic_body_class instead of body_class()
+		if ( THEMATIC_COMPATIBLE_BODY_CLASS ) add_theme_support( 'thematic_legacy_body_class' );
 
-		// set post class handling to WP post_class()
-		// If you set this to TRUE, Thematic will use thematic_post_class instead
-		if ( !defined( 'THEMATIC_COMPATIBLE_POST_CLASS') )
-			define( 'THEMATIC_COMPATIBLE_POST_CLASS', false );
+		// Legacy post class handling - @to be removed eventually
+		// If you add theme support for thematic_legacy_post_class, Thematic will use thematic_body_class instead of post_class()
+		if ( THEMATIC_COMPATIBLE_POST_CLASS ) add_theme_support( 'thematic_legacy_post_class' );
 
 		// If you set this to TRUE, Thematic will use it's legacy comment form
-		if ( !defined('THEMATIC_COMPATIBLE_COMMENT_FORM') ) 
+		if ( !defined( 'THEMATIC_COMPATIBLE_COMMENT_FORM' ) ) 
  				define( 'THEMATIC_COMPATIBLE_COMMENT_FORM', false ); 
 
 		// Check for MultiSite
 		define( 'THEMATIC_MB', is_multisite()  );
 
 		// Create the feedlinks
-		if ( ! current_theme_supports('thematic_legacy_feedlinks') )
+		if ( ! current_theme_supports( 'thematic_legacy_feedlinks' ) )
  			add_theme_support( 'automatic-feed-links' );
  
 		if ( apply_filters( 'thematic_post_thumbs', true ) )

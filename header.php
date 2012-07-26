@@ -31,7 +31,7 @@
 	thematic_show_robots();
 	
 	// Legacy feedlink handling
-	if ( current_theme_supports('thematic_legacy_feedlinks') ) {    
+	if ( current_theme_supports( 'thematic_legacy_feedlinks' ) ) {    
 		// Creating the internal RSS links
 		thematic_show_rss();
 	
