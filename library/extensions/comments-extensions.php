@@ -275,7 +275,7 @@ function thematic_comments_template() {
  */
 function thematic_include_comments() {
 	// Checking for defined constant to enable conditional comment display for Pages
-    if ( THEMATIC_COMPATIBLE_COMMENT_HANDLING && is_page() ) {
+    if (  current_theme_supports( 'thematic_legacy_comment_handling' ) && is_page() ) {
     	// Needs post-meta key/value of "comments" to call comments template on Pages!
        	if ( get_post_custom_values('comments') )
 			comments_template('', true);	    	
