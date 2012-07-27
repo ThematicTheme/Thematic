@@ -62,7 +62,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
    
 		// Legacy feed links handling - @to be removed eventually
 		// If you add theme support for thematic_legacy_feedlinks, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
-		if ( THEMATIC_COMPATIBLE_FEEDLINKS ) add_theme_support( 'thematic_legacy_feedlinks' );
+		if ( defined( THEMATIC_COMPATIBLE_FEEDLINKS ) ) add_theme_support( 'thematic_legacy_feedlinks' );
 
 		// set comments handling for pages, archives and links
 		// If you set this to TRUE, comments only show up on pages with a key/value of "comments"
@@ -71,11 +71,11 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 
 		// Legacy body class handling - @to be removed eventually
 		// If you add theme support for thematic_legacy_body_class, Thematic will use thematic_body_class instead of body_class()
-		if ( THEMATIC_COMPATIBLE_BODY_CLASS ) add_theme_support( 'thematic_legacy_body_class' );
+		if ( defined( THEMATIC_COMPATIBLE_BODY_CLASS ) ) add_theme_support( 'thematic_legacy_body_class' );
 
 		// Legacy post class handling - @to be removed eventually
 		// If you add theme support for thematic_legacy_post_class, Thematic will use thematic_body_class instead of post_class()
-		if ( THEMATIC_COMPATIBLE_POST_CLASS ) add_theme_support( 'thematic_legacy_post_class' );
+		if ( defined( THEMATIC_COMPATIBLE_POST_CLASS ) ) add_theme_support( 'thematic_legacy_post_class' );
 
 		// Legacy post class handling - @to be removed eventually
 		// If you add theme support for thematic_legacy_post_class, Thematic will use it's legacy comment form
