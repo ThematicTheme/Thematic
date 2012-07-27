@@ -77,9 +77,9 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		// If you add theme support for thematic_legacy_post_class, Thematic will use thematic_body_class instead of post_class()
 		if ( THEMATIC_COMPATIBLE_POST_CLASS ) add_theme_support( 'thematic_legacy_post_class' );
 
-		// If you set this to TRUE, Thematic will use it's legacy comment form
-		if ( !defined( 'THEMATIC_COMPATIBLE_COMMENT_FORM' ) ) 
- 				define( 'THEMATIC_COMPATIBLE_COMMENT_FORM', false ); 
+		// Legacy post class handling - @to be removed eventually
+		// If you add theme support for thematic_legacy_post_class, Thematic will use it's legacy comment form
+		if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_FORM' ) ) add_theme_support( 'thematic_legacy_comment_form' );
 
 		// Check for MultiSite
 		define( 'THEMATIC_MB', is_multisite()  );
