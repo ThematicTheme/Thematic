@@ -33,10 +33,8 @@
 				// action hook for placing content above #post
 	            thematic_abovepost();
 	        ?>
-    	        
-				<?php
-					
-					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+    	     		
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 	                
