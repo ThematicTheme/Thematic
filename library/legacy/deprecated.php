@@ -320,16 +320,20 @@ function widget_area_page_bottom() {
 
 function thematic_legacy_comment_form(){ 
 
-	_deprecated_function( __FUNCTION__, '1.0.2.3', 'comment_form( thematic_comment_form_args() )' ); ?>
+	_deprecated_function( __FUNCTION__, '1.0.2.3', 'comment_form( thematic_comment_form_args() )' ); 
+
+	$user = wp_get_current_user();
+
+	$user_ID =  ! ( is_wp_error( $user ) ) ? $user->ID : FALSE; ?>
 			
 	<div id="respond">
 	
- 		<h3><?php comment_form_title( __( thematic_postcomment_text(), 'thematic' ), __( thematic_postreply_text(), 'thematic' ) ); ?></h3>
+ 		<h3><?php comment_form_title( thematic_postcomment_text(), thematic_postreply_text() ); ?></h3>
  		<div id="cancel-comment-reply"><?php cancel_comment_reply_link() ?></div>
 		
 		<?php if ( get_option( 'comment_registration' ) && !$user_ID ) : ?>
 		
-			<p id="login-req"><?php printf( __( 'You must be <a href="%s" title="Log in">logged in</a> to post a comment.', 'thematic' ), site_url( '/wp-login.php?redirect_to=' . permalink() ) ) ?></p>
+			<p id="login-req"><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'thematic'), sprintf('<a href="%s" title ="%s">', wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ), esc_attr__( 'Log in', 'thematic' ) ), '</a>' ) ?></p>
 			
 		<?php else : ?>
 		
@@ -342,15 +346,12 @@ function thematic_legacy_comment_form(){
 				<form id="commentform" action="<?php echo site_url( '/wp-comments-post.php' ) ?>" method="post">
 				
 				<?php if ( $user_ID ) : ?>
-					<p id="login"><?php printf( __( '<span class="loggedin">Logged in as <a href="%1$s" title="Logged in as %2$s">%2$s</a>.</span> <span class="logout"><a href="%3$s" title="Log out of this account">Log out?</a></span>', 'thematic' ),
-							site_url( '/wp-admin/profile.php' ),
-							esc_html( $user_identity ),
-							wp_logout_url( get_permalink() ) ) ?>
+					<p id="login"><span class="loggedin"><?php _e('Logged in as', 'thematic' ) . printf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'thematic'), $user_identity ) , $user_identity ) ;?></span> <span class="logout"><?php printf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'thematic' ) , __('Log out?', 'thematic' ) ); ?></span>
 					</p>
 	
 				<?php else : ?>
 
-					<p id="comment-notes"><?php _e( 'Your email is <em>never</em> published nor shared.', 'thematic' ) ?> <?php if ( $req ) _e( 'Required fields are marked <span class="required">*</span>', 'thematic' ) ?></p>
+					<p id="comment-notes"><?php printf( _x( 'Your email is %1$snever%2$s published nor shared.' , '%$1s and %$2s are <em> tags for emphasis on never', 'thematic' ), '<em>' , '</em>' ) ?></p>
 	
                     <div id="form-section-author" class="form-section">
 						<div class="form-label"><label for="author"><?php _e( 'Name', 'thematic' ) ?></label> <?php if ( $req ) _e( '<span class="required">*</span>', 'thematic' ) ?></div>
@@ -375,7 +376,7 @@ function thematic_legacy_comment_form(){
 	            </div><!-- #form-section-comment .form-section -->
 	                            
                 <div id="form-allowed-tags" class="form-section">
-                    <p><span><?php _e( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'thematic' ) ?></span> <code><?php echo allowed_tags(); ?></code></p>
+                    <p><span><?php printf( _x('You may use these %1$sHTML%2$s tags and attributes', '%$1s and %$2s are <abbr> tags', 'thematic'), '<abbr title="HyperText Markup Language">', '</abbr>' ) ?></span> <code><?php echo allowed_tags(); ?></code></p>
                 </div>
 								
        			<?php do_action( 'comment_form', $post->ID ); ?>
