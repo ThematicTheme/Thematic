@@ -167,7 +167,7 @@ function thematic_default_opt() {
  
 function thematic_opt_add_page() {
 
-	$thematic_opt_page = add_theme_page ('Theme Options', 'Theme Options', 'edit_theme_options', 'thematic_opt', 'thematic_do_opt_page');
+	$thematic_opt_page = add_theme_page ( __('Theme Options', 'thematic') , __('Theme Options', 'thematic'), 'edit_theme_options', 'thematic_opt', 'thematic_do_opt_page');
 	$thematic_opt_page = apply_filters ('thematic_theme_add_opt_page', $thematic_opt_page );
 	
 	if ( ! $thematic_opt_page ) {
@@ -241,9 +241,8 @@ function thematic_legacy_help() {
  * @todo remove Legacy help when two point relases of WP have occurred after 3.3
  */
 function thematic_do_legacy_help_section() { 
-        echo ('<p>'. __( 'For more information about this theme, <a href="http://thematictheme.com">visit ThemeTheme.com</a>. Please visit the <a href="http://thematictheme.com/forums/">ThematicTheme.com Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
+    echo '<p>'. sprintf ( _x( 'For more information about this theme, %1$svisit ThematicTheme.com%2$s', '%1$s and %2$s are <a> tags', 'thematic') , '<a href="http://thematictheme.com">', '</a>') . ' ' . sprintf ( _x( 'Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic.', '%1$s and %2$s are <a> tags', 'thematic'), '<a href="http://thematictheme.com/forums/">', '</a>' ) .'</p>' ;
 }
-
 
 /**
  * Renders the them options page
@@ -254,7 +253,7 @@ function thematic_do_opt_page() { ?>
 
  <div class="wrap">
 	<?php screen_icon(); ?>
-	<h2><?php printf( __( '%s Theme Options', 'thematic' ), get_current_theme() ); ?></h2>
+	<h2><?php printf( _x( '%s Theme Options', '{$current theme} Theme Options', 'thematic' ), get_current_theme() ); ?></h2>
 	<?php settings_errors(); ?>
 	
 	<form action="options.php" method="post" >
@@ -305,7 +304,7 @@ function thematic_do_insert_opt() {
 function thematic_do_auth_opt() { 
 ?>
 	<input id="thm_authorinfo" type="checkbox"  value="1" name="thematic_theme_opt[author_info]"  <?php checked( thematic_get_theme_opt('author_info') , 1 ); ?> />
-	<label for="thm_authorinfo"><?php _e('Display a', 'thematic') ?> <a target="_blank" href="http://microformats.org/wiki/hcard">microformatted vCard</a> <?php _e("with the author's avatar, bio and email on the author page.", 'thematic') ?></label>
+	<label for="thm_authorinfo"><?php printf( _x('Display a %1$smicroformatted vCard%2$s with the author\'s avatar, bio and email on the author page.', '%1$s and %2$s are <a> tags', 'thematic' ) , '<a target="_blank" href="http://microformats.org/wiki/hcard">', '</a>' ); ?></label>
 <?php
 }
 
@@ -331,7 +330,7 @@ function thematic_do_footer_opt() {
 function thematic_do_legacy_opt() {
 ?>
 	<input id="thm_legacy_opt" type="checkbox" value="1" name="thematic_theme_opt[del_legacy_opt]"  <?php checked( thematic_get_theme_opt('del_legacy_opt'), 1 ); ?> />
-	<label for="thm_legacy_opt"><?php printf( __( '%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database.', 'thematic' ), get_current_theme() ); ?></label>
+	<label for="thm_legacy_opt"><?php printf( _x( '%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database.', '{$current theme} Theme Options', 'thematic' ), get_current_theme() ); ?></label>
 <?php
 }
 
