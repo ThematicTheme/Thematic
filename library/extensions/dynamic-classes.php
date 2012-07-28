@@ -36,7 +36,7 @@ function thematic_bodyopen() {
 
 
 if ( function_exists( 'childtheme_override_body_class' ) )  {
-	_deprecated_function( 'childtheme_override_body_class', '1.0.1.3', __('You should filter body_class() directly.', "thematic" ) );
+	_deprecated_function( 'childtheme_override_body_class', '1.0.1.3','filter body_class()' );
 	/**
 	 * @ignore
 	 */function thematic_body_class() {
@@ -49,7 +49,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	 * @param bool $print (default: true)
 	 */
 	function thematic_body_class( $c ) {
-		_deprecated_function( 'thematic_body_class', '1.0.1.3', __('You should filter body_class() directly', "thematic" ) );
+		_deprecated_function( 'thematic_body_class', '1.0.1.3', 'filter body_class()' );
 		global $wp_query, $current_user, $blog_id, $post, $taxonomy;
 	    
 	    $c = array();
@@ -413,7 +413,7 @@ function thematic_browser_class_names($classes) {
 
 
 if (function_exists('childtheme_override_post_class'))  {
-	_deprecated_function( 'childtheme_override_post_class', '1.0.1.3', __('You should filter post_class() directly.', "thematic" ) );
+	_deprecated_function( 'childtheme_override_post_class', '1.0.1.3', 'filter post_class()' );
 	/**
 	 * @ignore
 	 */function thematic_post_class() {
@@ -424,7 +424,7 @@ if (function_exists('childtheme_override_post_class'))  {
 	 * Generates semantic classes for each post DIV element
 	 */
 	function thematic_post_class( $c ) {
-		_deprecated_function( 'thematic_post_class', '1.0.1.3', __('You should filter post_class() directly', "thematic" ) );
+		_deprecated_function( 'thematic_post_class', '1.0.1.3', 'filter post_class()' );
 
 		global $post, $thematic_post_alt, $thematic_content_length, $taxonomy;
 	
