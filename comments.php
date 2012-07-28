@@ -108,7 +108,7 @@
 						
 					<div id="pings-list-wrapper" class="pings">
 						
-						<h3><?php printf( $thematic_ping_count > 1 ? '<span>%d</span> ' . __( 'Trackbacks', 'thematic' ) : __( '<span>One</span> Trackback', 'thematic' ), $thematic_ping_count ) ?></h3>
+						<h3><?php printf( $thematic_ping_count > 1 ? '<span>%d</span> ' . __( 'Trackbacks', 'thematic' ) : sprintf( _x( '%1$sOne%2$s Trackback', '%1$ and %2$s are <span> tags', 'thematic' ), '<span>', '</span>' ), $thematic_ping_count ) ?></h3>
 	
 						<ul id="trackbacks-list">
 							<?php wp_list_comments( 'type=pings&callback=thematic_pings' ); ?>
