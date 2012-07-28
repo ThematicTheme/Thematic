@@ -28,6 +28,23 @@ Features:
 * Options for multi-author blogs
 
 == Changelog ==
+= 1.0.3 = 
+* major update of localization strings
+* deprecate all theme constants
+	- replaced THEMATIC_COMPATIBLE_FEEDLINKS with add_theme_support( 'thematic_legacy_feed_links' )
+	- replaced THEMATIC_COMPATIBLE_COMMENT_HANDLING with add_theme_support( 'thematic_legacy_comment_handling' )
+	- replaced THEMATIC_COMPATIBLE_BODY_CLASS with add_theme_support( 'thematic_legacy_body_class' )
+	- replaced THEMATIC_COMPATIBLE_POST_CLASS with add_theme_support( 'thematic_legacy_post_class' )
+	- replaced THEMATIC_COMPATIBLE_COMMENT_FORM with add_theme_support( 'thematic_legacy_comment_form' )
+	- Removed: THEMATIC_THEMENAME
+	- Removed: THEMATIC_THEMEAUTHOR
+	- Removed: THEMATIC_THEMEURI
+	- Removed: THEMATIC_VERSION
+	- Removed: THEMATIC_TEMPLATEAUTHOR
+	- Removed: THEMATIC_TEMPLATEURI
+	- Removed: THEMATIC_TEMPLATEVERSION
+* deprecated thematic_body_class() and modified it to filter body_class()
+* deprecated thematic_post_class() and modified it to filter post_class()
 = 1.0.2.2 =
 * fixed invalid markup (extra span) in thematic_postmeta_authorlink()
 * fixed broken feed links in thematic_show_rss() and thematic_show_comment_rss() 
