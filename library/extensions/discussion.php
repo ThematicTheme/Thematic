@@ -77,7 +77,7 @@ function thematic_pings($comment, $args, $depth) {
 	?>
 
     		<li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
-    			<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'thematic'),
+    			<div class="comment-author"><?php printf(_x('By %1$s on %2$s at %3$s', 'By {$authorlink} on {$date} at {$time}', 'thematic'),
     					get_comment_author_link(),
     					get_comment_date(),
     					get_comment_time() );
