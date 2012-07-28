@@ -59,99 +59,32 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 */
 		if ( !isset($content_width) )
 			$content_width = 540;
-
-           /**
-                 * Get Theme and Child Theme Data.
-                 * 
-                 * Used to get title, version, author, URI of the parent and the child theme.
-                 * @todo: move wp_get_theme() directly to shortcodes and remove constants
-                 */
-                
-                // WordPress 3.4 
-                if ( function_exists( 'wp_get_theme' ) ) {
-                        $frameworkData = wp_get_theme(  'thematic' );
-                        $framework_version = trim( $frameworkData->display('Version', false));
-                        $framework_title =  $frameworkData->display('Name', false);
-                        $framework_author =  $frameworkData->display('Author', false);
-                        $framework_themeuri =  $frameworkData->display('ThemeURI', false);
-                        
-                        $childthemeData = wp_get_theme();
-                        $childtheme_version = trim( $childthemeData->display('Version', false) );
-                        $childtheme_title =  $childthemeData->display('Name', false);
-                        $childtheme_author =  $childthemeData->display('Author', false);
-                        $childtheme_themeuri =  $childthemeData->display('ThemeURI', false);
-                        
-                // WordPress 3.3
-                // Credits: Joern Kretzschmar
-
-                } else {
-                        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
-                        $framework_version = trim( $frameworkData['Version'] );
-                        $framework_title =  $frameworkData['Title'];
-                        $framework_author =  $frameworkData['Author'];
-                        $framework_themeuri =  $frameworkData['URI'];
-
-                        $childthemeData = get_theme_data( get_stylesheet_directory() . '/style.css' );
-                        $childtheme_version = trim( $childthemeData['Version'] );
-                        $childtheme_title =  $childthemeData['Name'];
-                        $childtheme_author =  $childthemeData['Author'];
-                        $childtheme_themeuri =  $childthemeData['URI'];
-                
-                }
-                
-
-                if ( !$framework_version )
-                        $framework_version = "unknown";
-                
-                if ( !$childtheme_version )
-                        $childtheme_version = "unknown";
-
-                if ( !defined( 'THEMATIC_THEMENAME' ) )
-                        define( 'THEMATIC_THEMENAME',    $framework_title );
-
-                if ( !defined('THEMATIC_THEMEAUTHOR') )
-                        define( 'THEMATIC_THEMEAUTHOR',  $framework_author );
-
-                if ( !defined( 'THEMATIC_THEMEURI') )
-                        define( 'THEMATIC_THEMEURI',     $framework_themeuri );
-
-                if ( !defined( 'THEMATIC_VERSION' ) )
-                        define( 'THEMATIC_VERSION', $framework_version );
-
-                define( 'THEMATIC_TEMPLATENAME',         $childtheme_title );
-                define( 'THEMATIC_TEMPLATEAUTHOR',       $childtheme_author );
-                define( 'THEMATIC_TEMPLATEURI',          $childtheme_themeuri );
-                define( 'THEMATIC_TEMPLATEVERSION',      $childtheme_version );
    
-   		// set feed links handling
-		// If you set this to TRUE, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
-		if ( !defined('THEMATIC_COMPATIBLE_FEEDLINKS') ) 
-				define( 'THEMATIC_COMPATIBLE_FEEDLINKS', false );
+		// Legacy feed links handling - @to be removed eventually
+		// If you add theme support for thematic_legacy_feedlinks, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
+		if ( defined( 'THEMATIC_COMPATIBLE_FEEDLINKS' ) ) add_theme_support( 'thematic_legacy_feedlinks' );
 
-		// set comments handling for pages, archives and links
-		// If you set this to TRUE, comments only show up on pages with a key/value of "comments"
-		if ( !defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING') )
-			define( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING', false );
+		// Legacy comments handling for pages, archives and links
+		// If you add_theme_support for thematic_legacy_comment_handling, Thematic will only show comments on pages with a key/value of "comments"
+		if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING' ) ) add_theme_support( 'thematic_legacy_comment_handling' );
 
-		// set body class handling to WP body_class()
-		// If you set this to TRUE, Thematic will use thematic_body_class instead
-		if ( !defined( 'THEMATIC_COMPATIBLE_BODY_CLASS') )
-			define( 'THEMATIC_COMPATIBLE_BODY_CLASS', false );
+		// Legacy body class handling - @to be removed eventually
+		// If you add theme support for thematic_legacy_body_class, Thematic will use thematic_body_class instead of body_class()
+		if ( defined( 'THEMATIC_COMPATIBLE_BODY_CLASS' ) ) add_theme_support( 'thematic_legacy_body_class' );
 
-		// set post class handling to WP post_class()
-		// If you set this to TRUE, Thematic will use thematic_post_class instead
-		if ( !defined( 'THEMATIC_COMPATIBLE_POST_CLASS') )
-			define( 'THEMATIC_COMPATIBLE_POST_CLASS', false );
+		// Legacy post class handling - @to be removed eventually
+		// If you add theme support for thematic_legacy_post_class, Thematic will use thematic_body_class instead of post_class()
+		if ( defined( 'THEMATIC_COMPATIBLE_POST_CLASS' ) ) add_theme_support( 'thematic_legacy_post_class' );
 
-		// If you set this to TRUE, Thematic will use it's legacy comment form
-		if ( !defined('THEMATIC_COMPATIBLE_COMMENT_FORM') ) 
- 				define( 'THEMATIC_COMPATIBLE_COMMENT_FORM', false ); 
+		// Legacy post class handling - @to be removed eventually
+		// If you add theme support for thematic_legacy_post_class, Thematic will use it's legacy comment form
+		if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_FORM' ) ) add_theme_support( 'thematic_legacy_comment_form' );
 
 		// Check for MultiSite
 		define( 'THEMATIC_MB', is_multisite()  );
 
 		// Create the feedlinks
-		if ( !( THEMATIC_COMPATIBLE_FEEDLINKS ) )
+		if ( ! current_theme_supports( 'thematic_legacy_feedlinks' ) )
  			add_theme_support( 'automatic-feed-links' );
  
 		if ( apply_filters( 'thematic_post_thumbs', true ) )
