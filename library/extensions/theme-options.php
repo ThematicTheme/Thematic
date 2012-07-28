@@ -241,7 +241,7 @@ function thematic_legacy_help() {
  * @todo remove Legacy help when two point relases of WP have occurred after 3.3
  */
 function thematic_do_legacy_help_section() { 
-        echo ('<p>'. __( 'For more information about this theme, <a href="http://thematictheme.com">visit ThemeTheme.com</a>. Please visit the <a href="http://thematictheme.com/forums/">ThematicTheme.com Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
+        echo ('<p>'. __( 'For more information about this theme, <a href="http://thematictheme.com">visit ThematicTheme.com</a>. Please visit the <a href="http://thematictheme.com/forums/">ThematicTheme.com Forums</a> if you have any questions about Thematic.', 'thematic' ) .'</p>') ;
 }
 
 
