@@ -1,734 +1,728 @@
-"Project-Id-Version: Thematic v1.0.1\n"
+msgid ""
+msgstr ""
+"Project-Id-Version: Thematic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-27 15:18+0100\n"
-"PO-Revision-Date: 2012-06-02 12:13:58+0000\n"
-"Last-Translator: Chris Goßmann <chris@thematictheme.com>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2012-07-28 15:36-0600\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Kathy <helgatheviking@gmail.com>\n"
+"Language-Team: Thematic Team\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-Language: \n"
-"X-Poedit-Country: \n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-KeywordsList: __;_x;esc_attr__;_e;_n;esc_attr_\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-Bookmarks: \n"
-"X-Poedit-SearchPath-0: c:/users/Chris/Desktop/thematic\n"
-"X-Textdomain-Support: yes"
+"X-Poedit-SearchPath-0: C:\\Users\\Helga\\wamp\\www\\test\\wp-content\\themes\\thematic\n"
 
-#: library/extensions/content-extensions.php:947
-#: library/extensions/content-extensions.php:1461
-#: library/extensions/discussion-extensions.php:36
-#: library/extensions/discussion.php:84
-#: links.php:60
-#: page.php:60
-#: template-page-archives.php:63
-#: template-page-fullwidth.php:61
-#@ thematic
-msgid "Edit"
-msgstr ""
-
-#: attachment.php:62
-#: library/extensions/content-extensions.php:666
-#: library/extensions/content-extensions.php:732
-#@ thematic
-msgid "Pages:"
-msgstr ""
-
-#: author.php:67
-#@ thematic
-msgid "Email "
-msgstr ""
-
-#: comments.php:33
-#@ thematic
-msgid "This post is password protected. Enter the password to view any comments."
-msgstr ""
-
-#: comments.php:111
-#@ thematic
-msgid "<span>One</span> Trackback"
-msgstr ""
-
-#: comments.php:142
-#: library/extensions/comments-extensions.php:234
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/archives.php:20
 #, php-format
-#@ thematic
-msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr ""
-
-#: comments.php:156
-#: library/extensions/comments-extensions.php:235
-#, php-format
-#@ thematic
-msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr ""
-
-#: comments.php:164
-#: library/extensions/comments-extensions.php:233
-#@ thematic
-msgid "Your email is <em>never</em> published nor shared."
-msgstr ""
-
-#: comments.php:164
-#: library/extensions/comments-extensions.php:233
-#@ thematic
-msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr ""
-
-#: comments.php:167
-#: library/extensions/comments-extensions.php:224
-#@ thematic
-msgid "Name"
-msgstr ""
-
-#: comments.php:167
-#: comments.php:172
-#: library/extensions/comments-extensions.php:224
-#: library/extensions/comments-extensions.php:225
-#@ thematic
-msgid "<span class=\"required\">*</span>"
-msgstr ""
-
-#: comments.php:172
-#: library/extensions/comments-extensions.php:225
-#@ thematic
-msgid "Email"
-msgstr ""
-
-#: comments.php:177
-#: library/extensions/comments-extensions.php:226
-#@ thematic
-msgid "Website"
-msgstr ""
-
-#: comments.php:189
-#: library/extensions/comments-extensions.php:236
-#@ thematic
-msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
-msgstr ""
-
-#: page.php:58
-#: template-page-fullwidth.php:59
-#@ thematic
-msgid "Pages: "
-msgstr ""
-
-#: search.php:56
-#@ thematic
-msgid "Nothing Found"
-msgstr ""
-
-#: search.php:60
-#@ thematic
-msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr ""
-
-#: library/extensions/content-extensions.php:1346
-#: search.php:70
-#@ thematic
-msgid "Find"
-msgstr ""
-
-#: library/extensions/comments-extensions.php:120
-#@ thematic
-msgid "<span>One</span> Comment"
-msgstr ""
-
-#: library/extensions/comments-extensions.php:154
-#@ thematic
-msgid "Post a Comment"
-msgstr ""
-
-#: library/extensions/comments-extensions.php:165
-#, php-format
-#@ thematic
-msgid "Post a Reply to %s"
-msgstr ""
-
-#: library/extensions/comments-extensions.php:176
-#@ thematic
-msgid "Comment"
-msgstr ""
-
-#: library/extensions/comments-extensions.php:187
-#@ thematic
-msgid "Cancel reply"
-msgstr ""
-
-#: library/extensions/comments-extensions.php:198
-#@ thematic
-msgid "Post Comment"
-msgstr ""
-
-#: library/extensions/content-extensions.php:340
-#: library/extensions/header-extensions.php:84
-#@ thematic
-msgid "Category Archives:"
-msgstr ""
-
-#: library/extensions/content-extensions.php:349
-#: library/extensions/header-extensions.php:80
-#@ thematic
-msgid "Search Results for:"
-msgstr ""
-
-#: library/extensions/content-extensions.php:355
-#: library/extensions/header-extensions.php:88
-#@ thematic
-msgid "Tag Archives:"
-msgstr ""
-
-#: library/extensions/content-extensions.php:364
-#: library/extensions/content-extensions.php:373
-#@ thematic
-msgid "Archives:"
-msgstr ""
-
-#: library/extensions/content-extensions.php:379
-#, php-format
-#@ thematic
-msgid "Daily Archives: <span>%s</span>"
-msgstr ""
-
-#: library/extensions/content-extensions.php:383
-#, php-format
-#@ thematic
-msgid "Monthly Archives: <span>%s</span>"
-msgstr ""
-
-#: library/extensions/content-extensions.php:387
-#, php-format
-#@ thematic
-msgid "Yearly Archives: <span>%s</span>"
-msgstr ""
-
-#: library/extensions/content-extensions.php:429
-#: library/extensions/content-extensions.php:1728
-#@ thematic
-msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr ""
-
-#: library/extensions/content-extensions.php:431
-#: library/extensions/content-extensions.php:1729
-#@ thematic
-msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr ""
-
-#: library/extensions/content-extensions.php:946
-#: library/extensions/content-extensions.php:1460
-#@ thematic
-msgid "Edit post"
-msgstr ""
-
-#: library/extensions/content-extensions.php:975
-#: library/extensions/header-extensions.php:92
-#@ thematic
-msgid "Not Found"
-msgstr ""
-
-#: library/extensions/content-extensions.php:980
-#: library/extensions/content-extensions.php:1413
-#: library/extensions/content-extensions.php:1417
-#@ thematic
-msgid "Permalink to "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1041
-#@ thematic
-msgid "By "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1051
-#@ thematic
-msgid "View all posts by "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1079
-#@ thematic
-msgid "Published: "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1252
-#@ thematic
-msgid "Archives by Category"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1280
-#@ thematic
-msgid "Archives by Month"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1413
-#@ thematic
-msgid "Browse the "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1413
-#@ thematic
-msgid " Archive"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1414
-#@ thematic
-msgid " archive"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1417
-#@ thematic
-msgid "Bookmark the "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1418
-#@ thematic
-msgid "permalink"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1572
-#@ thematic
-msgid "This entry was posted in "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1580
-#@ thematic
-msgid "Also posted in "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1583
-#@ thematic
-msgid "Posted in "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1609
-#@ thematic
-msgid " This entry is tagged"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1612
-#@ thematic
-msgid " and tagged"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1615
-#@ thematic
-msgid " Also tagged "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1617
-#@ thematic
-msgid "Tagged"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1644
-#: library/extensions/content-extensions.php:1647
-#: library/extensions/content-extensions.php:1650
-#@ thematic
-msgid "Comment on "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1651
-#@ thematic
-msgid "Leave a comment"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1654
-#@ thematic
-msgid "Comments closed"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1678
-#: library/extensions/content-extensions.php:1686
-#@ thematic
-msgid "Post a comment"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1679
-#@ thematic
-msgid " or leave a trackback: "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1680
-#: library/extensions/content-extensions.php:1683
-#@ thematic
-msgid "Trackback URL for your post"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1680
-#: library/extensions/content-extensions.php:1683
-#@ thematic
-msgid "Trackback URL"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1682
-#@ thematic
-msgid " Comments are closed, but you can leave a trackback: "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1685
-#@ thematic
-msgid " Trackbacks are closed, but you can "
-msgstr ""
-
-#: library/extensions/content-extensions.php:1686
-#@ thematic
-msgid "post a comment"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1688
-#@ thematic
-msgid " Both comments and trackbacks are currently closed."
-msgstr ""
-
-#: library/extensions/discussion-extensions.php:27
-#, php-format
-#@ thematic
-msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr ""
-
-#: library/extensions/discussion-extensions.php:35
-#@ thematic
-msgid "Edit comment"
-msgstr ""
-
-#: library/extensions/discussion.php:52
-#@ thematic
-msgid "Reply"
-msgstr ""
-
-#: library/extensions/discussion.php:53
-#@ thematic
-msgid "Log in to reply."
-msgstr ""
-
-#: library/extensions/discussion.php:80
-#, php-format
-#@ thematic
-msgid "By %1$s on %2$s at %3$s"
-msgstr ""
-
-#: library/extensions/header-extensions.php:302
-#: library/extensions/widgets.php:157
-#@ thematic
-msgid "Posts RSS feed"
-msgstr ""
-
-#: library/extensions/header-extensions.php:326
-#: library/extensions/widgets.php:158
-#@ thematic
-msgid "Comments RSS feed"
-msgstr ""
-
-#: functions.php:253
-#@ thematic
-msgid "Primary Menu"
-msgstr ""
-
-#: library/extensions/header-extensions.php:625
-#@ thematic
-msgid "Skip navigation to the content"
-msgstr ""
-
-#: library/extensions/header-extensions.php:625
-#@ thematic
-msgid "Skip to content"
-msgstr ""
-
-#: library/extensions/helpers.php:50
-#: library/extensions/helpers.php:69
-#@ thematic
-msgid "There is no excerpt because this is a protected post."
-msgstr ""
-
-#: library/extensions/shortcodes.php:40
-#@ thematic
-msgid "Login"
-msgstr ""
-
-#: library/extensions/shortcodes.php:42
-#@ thematic
-msgid "Logout"
-msgstr ""
-
-#: library/extensions/theme-options.php:50
-#@ thematic
-msgid "Index Insert Position"
-msgstr ""
-
-#: library/extensions/theme-options.php:51
-#@ thematic
-msgid "Info on Author Page"
-msgstr ""
-
-#: library/extensions/theme-options.php:52
-#@ thematic
-msgid "Text in Footer"
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:34
-#@ thematic
-msgid "To search, type and hit enter"
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:40
-#: library/extensions/widgets.php:56
-#: library/extensions/widgets.php:61
-#@ thematic
-msgid "Search"
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:72
-#@ thematic
-msgid "The primary widget area, most often used as a sidebar."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:87
-#@ thematic
-msgid "The secondary widget area, most often used as a sidebar."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:102
-#@ thematic
-msgid "The 1st widget area in the footer."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:117
-#@ thematic
-msgid "The 2nd widget area in the footer."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:132
-#@ thematic
-msgid "The 3rd widget area in the footer."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:147
-#@ thematic
-msgid "The top widget area displayed on the index page."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:162
-#@ thematic
-msgid "The widget area inserted after x posts on the index page."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:177
-#@ thematic
-msgid "The bottom widget area displayed on the index page."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:192
-#@ thematic
-msgid "The top widget area displayed on a single post."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:207
-#@ thematic
-msgid "The widget area inserted between the post and the comments on a single post."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:222
-#@ thematic
-msgid "The bottom widget area displayed on a single post."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:237
-#@ thematic
-msgid "The top widget area displayed on a page."
-msgstr ""
-
-#: library/extensions/widgets-extensions.php:252
-#@ thematic
-msgid "The bottom widget area displayed on a page."
-msgstr ""
-
-#: library/extensions/widgets.php:55
-#@ thematic
-msgid "A search form for your blog"
-msgstr ""
-
-#: library/extensions/widgets.php:77
-#: library/extensions/widgets.php:132
-#: library/extensions/widgets.php:175
-#@ thematic
-msgid "Title:"
-msgstr ""
-
-#: library/extensions/widgets.php:100
-#@ thematic
-msgid "Log in/out and admin"
-msgstr ""
-
-#: library/extensions/widgets.php:101
-#: library/extensions/widgets.php:106
-#@ thematic
-msgid "Meta"
-msgstr ""
-
-#: library/extensions/widgets.php:145
-#@ thematic
-msgid "Links to your posts and comments feed"
-msgstr ""
-
-#: library/extensions/widgets.php:146
-#: library/extensions/widgets.php:151
-#@ thematic
-msgid "RSS Links"
-msgstr ""
-
-#: library/extensions/widgets.php:157
-#@ thematic
-msgid "All posts"
-msgstr ""
-
-#: library/extensions/widgets.php:158
-#@ thematic
-msgid "All comments"
-msgstr ""
-
-#: archives.php:20
-#: template-page-blog.php:22
-#, php-format
-#@ thematic
 msgid "The template %s"
 msgstr ""
 
-#: comments.php:24
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/attachment.php:54
+msgid "Pages:"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/author.php:67
+msgid "Email "
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/comments.php:24
 msgid "Please do not load this page directly."
 msgstr ""
 
-#: comments.php:111
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/comments.php:33
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/comments.php:111
 msgid "Trackbacks"
 msgstr ""
 
-#: library/extensions/comments-extensions.php:131
-#@ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/comments.php:111
+#, php-format
+msgid "%1$sOne%2$s Trackback"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/functions.php:194
+msgid "Primary Menu"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/links.php:54
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/page.php:52
+msgid "Edit"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/page.php:50
+msgid "Pages: "
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/search.php:56
+msgid "Nothing Found"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/template-page-blog.php:22
+#, php-format
+msgid "You can include a %s in a childtheme"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:120
+#, php-format
+msgid "%1$sOne%2$s Comment"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:131
 msgid "Comments"
 msgstr ""
 
-#: library/extensions/content-extensions.php:334
-#@ thematic
-msgid "Author Archives:"
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:154
+msgid "Post a Comment"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1340
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:165
+#, php-format
+msgid "Post a Reply to %s"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:176
+msgid "Comment"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:187
+msgid "Cancel reply"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:198
+msgid "Post Comment"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:224
+msgid "Name"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:224
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:225
+msgid "*"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:225
+msgid "Email"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:226
+msgid "Website"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:234
+#, php-format
+msgid "Your email is %1$snever%2$s published nor shared."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:234
+#, php-format
+msgid "Required fields are marked %1$s*%2$s"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:236
+#, php-format
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:236
+msgid "Log in"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:238
+msgid "Logged in as"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:238
+#, php-format
+msgid "Logged in as %s"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:238
+msgid "Log out of this account"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:238
+msgid "Log out?"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/comments-extensions.php:240
+#, php-format
+msgid "You may use these %1$sHTML%2$s tags and attributes"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:334
+msgid "Author Archives"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:339
+msgid "Category Archives"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:347
+msgid "Search Results for"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:352
+msgid "Tag Archives"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:361
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:368
+msgid "Archives"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:373
+msgid "Daily Archives"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:378
+msgid "Monthly Archives"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:383
+msgid "Yearly Archives"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:427
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1689
+msgid "Older posts"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:429
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1691
+msgid "Newer posts"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:633
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:692
+msgid "Pages"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:891
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1416
+msgid "Edit post"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:920
+msgid "Not Found"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:925
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1142
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1146
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1369
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1374
+msgid "Permalink to"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:985
+msgid "By"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:995
+msgid "View all posts by"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1024
+msgid "Published"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1200
+msgid "Archives by Category"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1231
+msgid "Archives by Month"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1292
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
 msgstr ""
 
-#: library/extensions/content-extensions.php:1364
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1316
+msgid "Read More"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1367
+msgid "Browse the"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1374
 #, php-format
-#@ thematic
-msgid "Read More %s"
+msgid "Bookmark the %1$spermalink%2$s. "
 msgstr ""
 
-#: library/extensions/content-extensions.php:1645
-#@ thematic
-msgid "Responses"
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1530
+msgid "This entry was posted in"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1648
-#@ thematic
-msgid "Response"
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1540
+msgid "Also posted in"
 msgstr ""
 
-#: library/extensions/discussion.php:37
-#@ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1543
+msgid "Posted in"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1569
+msgid "This entry is tagged"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1572
+msgid "and tagged"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1575
+msgid "Also tagged"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1577
+msgid "Tagged"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1607
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1612
+msgid "Comment on"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1608
+#, php-format
+msgid "%d Response"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1613
+msgid "Leave a comment"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1616
+msgid "Comments closed"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1640
+#, php-format
+msgid "%1$sPost a comment%2$s or leave a trackback"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1640
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1646
+msgid "Post a comment"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1641
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1644
+msgid "Trackback URL for your post"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1641
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1644
+msgid "Trackback URL"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1643
+msgid "Comments are closed, but you can leave a trackback"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1646
+#, php-format
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/content-extensions.php:1648
+msgid "Both comments and trackbacks are currently closed"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/discussion-extensions.php:27
+#, php-format
+msgid "Posted %s at %s"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/discussion-extensions.php:31
+msgid "Permalink to this comment"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/discussion-extensions.php:31
+msgid "Permalink"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/discussion-extensions.php:36
+msgid "Edit comment"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/discussion.php:37
 msgid "Your comment is awaiting moderation"
 msgstr ""
 
-#: library/extensions/discussion.php:90
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/discussion.php:52
+msgid "Reply"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/discussion.php:53
+msgid "Log in to reply."
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/discussion.php:80
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/discussion.php:90
 msgid "Your trackback is awaiting moderation"
 msgstr ""
 
-#: library/extensions/theme-options.php:56
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/header-extensions.php:99
+msgid "Search Results for:"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/header-extensions.php:103
+msgid "Category Archives:"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/header-extensions.php:107
+msgid "Tag Archives:"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/header-extensions.php:319
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:157
+msgid "Posts RSS feed"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/header-extensions.php:343
+msgid "Comments RSS feed"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/header-extensions.php:642
+msgid "Skip to content"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/helpers.php:50
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/helpers.php:69
+msgid "There is no excerpt because this is a protected post."
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:50
+msgid "Index Insert Position"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:51
+msgid "Info on Author Page"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:52
+msgid "Text in Footer"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:56
 msgid "Remove Legacy Options"
 msgstr ""
 
-#: library/extensions/theme-options.php:204
-#@ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:170
+msgid "Theme Options"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:202
 msgid "For more information:"
 msgstr ""
 
-#: library/extensions/theme-options.php:206
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:204
 msgid "For support:"
 msgstr ""
 
-#: library/extensions/theme-options.php:208
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:206
 msgid "forums"
 msgstr ""
 
-#: library/extensions/theme-options.php:212
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:210
 msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
 msgstr ""
 
-#: library/extensions/theme-options.php:213
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:211
 msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
 msgstr ""
 
-#: library/extensions/theme-options.php:219
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:217
 msgid "Overview"
 msgstr ""
 
-#: library/extensions/theme-options.php:247
-#@ thematic
-msgid "For more information about this theme, <a href=\"http://thematictheme.com\">visit ThemeTheme.com</a>. Please visit the <a href=\"http://thematictheme.com/forums/\">ThematicTheme.com Forums</a> if you have any questions about Thematic."
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:244
+#, php-format
+msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
 msgstr ""
 
-#: library/extensions/theme-options.php:262
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:244
 #, php-format
-#@ thematic
+msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:256
+#, php-format
 msgid "%s Theme Options"
 msgstr ""
 
-#: library/extensions/theme-options.php:276
-#@ thematic
-msgid "Save Changes"
-msgstr ""
-
-#: library/extensions/theme-options.php:311
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:294
 msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
 msgstr ""
 
-#: library/extensions/theme-options.php:324
-#@ thematic
-msgid "Display a"
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:307
+#, php-format
+msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
 msgstr ""
 
-#: library/extensions/theme-options.php:324
-#@ thematic
-msgid "with the author's avatar, bio and email on the author page."
-msgstr ""
-
-#: library/extensions/theme-options.php:337
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:320
 msgid "You can use HTML and shortcodes in your footer text. Shortcode examples"
 msgstr ""
 
-#: library/extensions/theme-options.php:350
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:333
 #, php-format
-#@ thematic
 msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
 msgstr ""
 
-#: library/extensions/theme-options.php:377
-#@ thematic
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/theme-options.php:360
 msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
 msgstr ""
 
-#: template-page-blog.php:22
-#, php-format
-#@ thematic
-msgid "You can include a %s in a childtheme"
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:34
+msgid "To search, type and hit enter"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:40
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:56
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:61
+msgid "Search"
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:70
+msgid "Primary Aside"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:72
+msgid "The primary widget area, most often used as a sidebar."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:85
+msgid "Secondary Aside"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:87
+msgid "The secondary widget area, most often used as a sidebar."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:100
+msgid "1st Subsidiary Aside"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:102
+msgid "The 1st widget area in the footer."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:115
+msgid "2nd Subsidiary Aside"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:117
+msgid "The 2nd widget area in the footer."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:130
+msgid "3rd Subsidiary Aside"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:132
+msgid "The 3rd widget area in the footer."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:145
+msgid "Index Top"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:147
+msgid "The top widget area displayed on the index page."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:160
+msgid "Index Insert"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:162
+msgid "The widget area inserted after x posts on the index page."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:175
+msgid "Index Bottom"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:177
+msgid "The bottom widget area displayed on the index page."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:190
+msgid "Single Top"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:192
+msgid "The top widget area displayed on a single post."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:205
+msgid "Single Insert"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:207
+msgid "The widget area inserted between the post and the comments on a single post."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:220
+msgid "Single Bottom"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:222
+msgid "The bottom widget area displayed on a single post."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:235
+msgid "Page Top"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:237
+msgid "The top widget area displayed on a page."
+msgstr ""
+
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:250
+msgid "Page Bottom"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets-extensions.php:252
+msgid "The bottom widget area displayed on a page."
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:55
+msgid "A search form for your blog"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:77
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:132
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:175
+msgid "Title:"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:100
+msgid "Log in/out and admin"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:101
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:106
+msgid "Meta"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:145
+msgid "Links to your posts and comments feed"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:146
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:151
+msgid "RSS Links"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:157
+msgid "All posts"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/extensions/widgets.php:158
+msgid "All comments"
+msgstr ""
+
+# @ thematic
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/legacy/deprecated.php:357
+#: C:\Users\Helga\wamp\www\test\wp-content\themes\thematic/library/legacy/deprecated.php:362
+msgid "<span class=\"required\">*</span>"
 msgstr ""
 
