@@ -151,6 +151,7 @@ function thematic_list_comments_arg() {
  * Located in comments.php
  */
 function thematic_postcomment_text() {
+	/* translators: comment form title */
     $content = __('Post a Comment', 'thematic');
     return apply_filters( 'thematic_postcomment_text', $content );
 }
@@ -162,6 +163,7 @@ function thematic_postcomment_text() {
  * Located in comments.php
  */
 function thematic_postreply_text() {
+	/* translators: comment reply form title, %s is author of comment */
     $content = __('Post a Reply to %s', 'thematic');
     return apply_filters( 'thematic_postreply_text', $content );
 }
@@ -173,7 +175,8 @@ function thematic_postreply_text() {
  * Located in comments.php
  */
 function thematic_commentbox_text() {
-    $content = __('Comment', 'thematic');
+	/* translators: label for comment form textarea */
+	$content = _x('Comment', 'noun', 'thematic');
     return apply_filters( 'thematic_commentbox_text', $content );
 }
 
@@ -195,6 +198,7 @@ function thematic_cancelreply_text() {
  * Located in comments.php
  */
 function thematic_commentbutton_text() {
+	/* translators: text of comment button */
     $content = esc_attr( __('Post Comment', 'thematic') );
     return apply_filters( 'thematic_commentbutton_text', $content );
 }
@@ -235,7 +239,7 @@ function thematic_comment_form_args( $post_id = null ) {
 
 		'must_log_in'          => '<p id="login-req">' .  sprintf( __('You must be %1$slogged in%2$s to post a comment.', 'thematic'), sprintf('<a href="%s" title ="%s">', esc_attr( wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ) ), esc_attr__( 'Log in', 'thematic' ) ), '</a>' ). '</p>',
 
-		'logged_in_as'         => '<p id="login"><span class="loggedin">' . __('Logged in as', 'thematic' ) . sprintf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'thematic'), $user_identity ) , $user_identity ) .'</span> <span class="logout">' . sprintf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'thematic' ) , __('Log out?', 'thematic' ) ) . '</span></p>',
+		'logged_in_as'         => '<p id="login"><span class="loggedin">' . sprintf( __('Logged in as %s', 'thematic' ), sprintf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'thematic'), $user_identity ) , $user_identity ) ) .'</span> <span class="logout">' . sprintf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'thematic' ) , __('Log out?', 'thematic' ) ) . '</span></p>',
 		
 		'comment_notes_after'  => '<div id="form-allowed-tags" class="form-section"><p><span>' . sprintf( _x('You may use these %1$sHTML%2$s tags and attributes', '%$1s and %$2s are <abbr> tags', 'thematic'), '<abbr title="HyperText Markup Language">', '</abbr>' ) . '</span> <code>' . allowed_tags() . '</code></p></div>',
 
