@@ -331,26 +331,26 @@ if (function_exists('childtheme_override_page_title'))  {
 		} elseif (is_author()) {
 				$content .= '<h1 class="page-title author">';
 				$author = get_the_author_meta( 'display_name', $post->post_author );
-				$content .= __('Author Archives', 'thematic') . ': ';
-				$content .= '<span>' . $author .'</span>';
+				$content .= __('Author Archives:', 'thematic');
+				$content .= ' <span>' . $author .'</span>';
 				$content .= '</h1>';
 		} elseif (is_category()) {
 				$content .= '<h1 class="page-title">';
-				$content .= __('Category Archives', 'thematic') . ': ';
-				$content .= '<span>' . single_cat_title('', FALSE) .'</span>';
+				$content .= __('Category Archives:', 'thematic');
+				$content .= ' <span>' . single_cat_title('', FALSE) .'</span>';
 				$content .= '</h1>' . "\n";
 				$content .= "\n\t\t\t\t" . '<div class="archive-meta">';
 				if ( !(''== category_description()) ) : $content .= apply_filters('archive_meta', category_description()); endif;
 				$content .= '</div>';
 		} elseif (is_search()) {
 				$content .= '<h1 class="page-title">';
-				$content .= __('Search Results for', 'thematic') . ': ';
-				$content .= '<span id="search-terms">' . get_search_query() .'</span>';
+				$content .= __('Search Results for:', 'thematic');
+				$content .= ' <span id="search-terms">' . get_search_query() .'</span>';
 				$content .= '</h1>';
 		} elseif (is_tag()) {
 				$content .= '<h1 class="page-title">';
-				$content .= __('Tag Archives', 'thematic') . ': ';
-				$content .= '<span>';
+				$content .= __('Tag Archives:', 'thematic');
+				$content .= ' <span>';
 				$content .= single_tag_title( '', false );
 				$content .= '</span></h1>';
 		} elseif (is_tax()) {
@@ -358,30 +358,27 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '<h1 class="page-title">';
 				$tax = get_taxonomy($taxonomy);
 				$content .= $tax->labels->singular_name . ' ';
-				$content .= __('Archives', 'thematic') . ': ';
-				$content .= '<span>' . thematic_get_term_name() .'</span>';
+				$content .= __('Archives:', 'thematic');
+				$content .= ' <span>' . thematic_get_term_name() .'</span>';
 				$content .= '</h1>';
  		} elseif (is_post_type_archive()) { 
 				$content .= '<h1 class="page-title">';
 				$post_type_obj = get_post_type_object( get_post_type() );
 				$post_type_name = $post_type_obj->labels->singular_name;
-				$content .= __('Archives', 'thematic') . ': ';
-				$content .= '<span>' . $post_type_name . '</span>';
+				$content .= __('Archives:', 'thematic');
+				$content .= ' <span>' . $post_type_name . '</span>';
 				$content .= '</h1>';	
 		} elseif (is_day()) {
 				$content .= '<h1 class="page-title">';
-				$content .= __('Daily Archives', 'thematic') . ': ';
-				$content .= '<span>' . get_the_time(get_option('date_format')) . '</span>';
+				$content .= sprintf( __('Daily Archives: %s', 'thematic'), '<span>' . get_the_time( get_option('date_format') ) . '</span>';
 				$content .= '</h1>';
 		} elseif (is_month()) {
 				$content .= '<h1 class="page-title">';
-				$content .= __('Monthly Archives', 'thematic') . ': ';
-				$content .= '<span>' . get_the_time('F Y') . '</span>';
+				$content .= sprintf( __('Monthly Archives: %s', 'thematic') , '<span>' . get_the_time('F Y') . '</span>';
 				$content .= '</h1>';
 		} elseif (is_year()) {
 				$content .= '<h1 class="page-title">';
-				$content .= __('Yearly Archives', 'thematic'). ': ';
-				$content .= '<span>' . get_the_time('Y') . '</span>';
+				$content .= sprintf( __('Yearly Archives: %s', 'thematic'), '<span>' . get_the_time('Y') . '</span>';
 				$content .= '</h1>';
 		}
 		$content .= "\n";
@@ -630,7 +627,7 @@ if (function_exists('childtheme_override_index_loop'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s:', __('Pages', 'thematic')),
+						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'thematic')),
 													'after' => '</div>')); ?>
 					
 					</div><!-- .entry-content -->
@@ -689,7 +686,7 @@ if (function_exists('childtheme_override_single_post'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s:', __('Pages', 'thematic')),
+						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'thematic')),
 													'after' => '</div>')); ?>
 						
 					</div><!-- .entry-content -->
@@ -889,6 +886,7 @@ if (function_exists('childtheme_override_postheader_posteditlink'))  {
 
 			    			get_edit_post_link(),
 			    			esc_attr__('Edit post', 'thematic'),
+							/* translators: post edit link */
 			    			__('Edit', 'thematic'));
 		
 		return apply_filters('thematic_postheader_posteditlink', $posteditlink); 
@@ -922,7 +920,7 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 	        $posttitle .= '<h2 class="entry-title">';
 	        $posttitle .= sprintf('<a href="%s" title="%s" rel="bookmark">%s</a>',
 	        						apply_filters('the_permalink', get_permalink()),
-	        						esc_attr( the_title_attribute(array( 'before' => sprintf('%s ', __('Permalink to', 'thematic')), 'echo' => FALSE ))),
+									sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
 	        						get_the_title());   
 	        $posttitle .= "</h2>\n";
 	    }
@@ -992,7 +990,8 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	    	$author_info  = '<span class="author vcard">';
 	    	$author_info .= sprintf('<a class="url fn n" href="%s" title="%s">%s</a>',
 	    							get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
-	    							esc_attr( __( 'View all posts by', 'thematic' ) . ' ' . get_the_author_meta( 'display_name' )),
+									/* translators: author name */
+	    							sprintf( esc_attr__( 'View all posts by %s', 'thematic' ), get_the_author_meta( 'display_name' ) ),
 	    							get_the_author_meta( 'display_name' ));
 	    	$author_info .= '</span>';
 	    }
@@ -1021,7 +1020,7 @@ if (function_exists('childtheme_override_postmeta_entrydate'))  {
 	 */ 
 	function thematic_postmeta_entrydate() {
 	
-	    $entrydate = '<span class="meta-prep meta-prep-entry-date">' . __('Published', 'thematic') . ': </span>';
+	    $entrydate = '<span class="meta-prep meta-prep-entry-date">' . __('Published:', 'thematic') . ' </span>';
 	    $entrydate .= '<span class="entry-date"><abbr class="published" title="';
 	    $entrydate .= get_the_time(thematic_time_title()) . '">';
 	    $entrydate .= get_the_time(thematic_time_display());
@@ -1139,11 +1138,11 @@ if (function_exists('childtheme_override_content'))  {
 			if ( apply_filters( 'thematic_post_thumbs', TRUE) ) {
 				$post_title = get_the_title();
 				$size = apply_filters( 'thematic_post_thumb_size' , array(100,100) );
-				$attr = apply_filters( 'thematic_post_thumb_attr', array('title'	=> esc_attr( the_title_attribute(array( 'before' => sprintf('%s ', __('Permalink to', 'thematic')), 'echo' => FALSE )))));
+				$attr = apply_filters( 'thematic_post_thumb_attr', array('title'	=> sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ) ) );
 				if ( has_post_thumbnail() ) {
 					$post = sprintf('<a class="entry-thumb" href="%s" title="%s">%s</a>',
 									get_permalink() ,
-									esc_attr( the_title_attribute(array( 'before' => sprintf('%s ', __('Permalink to', 'thematic')), 'echo' => FALSE ))) ,
+									sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
 									get_the_post_thumbnail(get_the_ID(), $size, $attr)) . $post;
 					}
 			}
@@ -1313,7 +1312,8 @@ add_action( 'thematic_404','thematic_404_content' );
  *
  */
 function thematic_more_text() {
-	$content = sprintf ( '%s <span class="meta-nav">&raquo;</span>', __('Read More', 'thematic'));
+	/* translators: %s is right angle brackets */
+	$content = sprintf ( __('Read More %s', 'thematic'), ' <span class="meta-nav">&raquo;</span>',);
 	return apply_filters('more_text', $content);
 } // end thematic_more_text
 
@@ -1363,15 +1363,17 @@ if (function_exists('childtheme_override_postfooter'))  {
 	        if ( is_single() ) {
 	        	$post_type_archive_link = ( function_exists( 'get_post_type_archive_link' )  ? get_post_type_archive_link( $post_type ) :  home_url( '/?post_type=' . $post_type ) );
 	        	if ( thematic_is_custom_post_type() && $post_type_obj->has_archive ) {
-	        		$postfooter .= sprintf( '%s <a href="%s" title="%s">%s</a>',
-	        						__('Browse the', 'thematic'),
-	        						$post_type_archive_link ,
-									esc_attr( __('Permalink to', 'thematic') . ' ' . $post_type_obj->labels->singular_name),
-									$post_type_obj->labels->singular_name);
+		
+					/* translators: %s is custom post type singular name, wrapped in link tags */
+					$postfooter .= sprintf( __( 'Browse the %s archive.', 'thematic' ), 
+					/* translators: %s is custom post type singular name */
+					' <a href="' . $post_type_archive_link . '" title="' . sprintf( esc_attr__( 'Permalink to %s Archive', 'thematic' ), $post_type_obj->labels->singular_name )  . '">' . $post_type_obj->labels->singular_name . '</a>'
+					);
+					$postfooter .= ' ';
 
 	        	}
 	        	$postfooter .= thematic_postfooter_posttax();
-	    		$postfooter .= sprintf( _x('Bookmark the %1$spermalink%2$s. ', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), sprintf('<a title="%s" href="%s">', esc_attr( the_title_attribute(array( 'before' => sprintf('%s ', __('Permalink to', 'thematic')), 'echo' => FALSE ))), apply_filters('the_permalink', get_permalink())) , '</a>');
+	    		$postfooter .= sprintf( _x('Bookmark the %1$spermalink%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), sprintf('<a title="%s" href="%s">', sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ), apply_filters('the_permalink', get_permalink())) , '</a>') . ' ';
 
 	    			if ( post_type_supports( $post_type, 'comments') ) {
 	            		$postfooter .= thematic_postfooter_postconnect();
@@ -1414,6 +1416,7 @@ if (function_exists('childtheme_override_postfooter_posteditlink'))  {
 	    $posteditlink = sprintf( '<a href="%s" title="%s" class="edit">%s</a>' , 
 			    			get_edit_post_link(),
 			    			esc_attr__('Edit post', 'thematic'),
+							/* translators: post edit link */
 			    			__('Edit', 'thematic'));
 
 
@@ -1527,7 +1530,8 @@ if (function_exists('childtheme_override_postfooter_postcategory'))  {
     
 	    $postcategory = "\n\n\t\t\t\t\t\t" . '<span class="cat-links">';
 	    if (is_single()) {
-	        $postcategory .= __('This entry was posted in', 'thematic') . ' ' . get_the_category_list(', ');
+			/* translators: %s is postfooter categories */
+	        $postcategory .= sprintf( __('This entry was posted in %s', 'thematic'), get_the_category_list(', ') );
 	        $postcategory .= '</span>';
 	        $posttags = get_the_tags();
 			if ( !$posttags ) {
@@ -1537,10 +1541,12 @@ if (function_exists('childtheme_override_postfooter_postcategory'))  {
 			}
 
 	    } elseif ( is_category() && $cats_meow = thematic_cats_meow(', ') ) { /* Returns categories other than the one queried */
-	        $postcategory .= __('Also posted in', 'thematic') . ' ' . $cats_meow;
+			/* translators: %s is postfooter categories */
+	        $postcategory .= sprintf( __('Also posted in %s', 'thematic'), $cats_meow );
 	        $postcategory .= '</span>' . "\n\n\t\t\t\t\t\t" . '<span class="meta-sep meta-sep-tag-links">|</span> ';
 	    } else {
-	        $postcategory .= __('Posted in', 'thematic') . ' ' . get_the_category_list(', ');
+			/* translators: %s is postfooter categories */
+	        $postcategory .= sprintf( __('Posted in %s', 'thematic'), get_the_category_list(', ') );
 	        $postcategory .= '</span>' . "\n\n\t\t\t\t\t\t" . '<span class="meta-sep meta-sep-tag-links">|</span> ';
 	    }
 	    return apply_filters('thematic_postfooter_postcategory',$postcategory); 
@@ -1603,13 +1609,14 @@ if (function_exists('childtheme_override_postfooter_postcomments'))  {
 
 	        if ($postcommentnumber > '0') {
 	        	$postcomments = sprintf('<span class="comments-link"><a href="%s" title="%s" rel="bookmark">%s</a></span>',
-	        						apply_filters('the_permalink', get_permalink()),
-	        						esc_attr( the_title_attribute(array( 'before' => sprintf('%s ', __('Comment on', 'thematic')), 'echo' => FALSE ))),
-	        						sprintf(_n('%d Response', '%d Responses', $postcommentnumber, 'thematic'), $postcommentnumber));
+	        						apply_filters('the_permalink', get_permalink()) . '#respond',
+	        						sprintf( esc_attr__('Comment on %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
+									/* translators: number of comments and trackbacks */
+	        						sprintf( _n('%s Response', '%s Responses', $postcommentnumber, 'thematic'), number_format_i18n( $postcommentnumber ) );
 			} else {
 	            $postcomments = sprintf('<span class="comments-link"><a href="%s" title="%s" rel="bookmark">%s</a></span>',
-	        						apply_filters('the_permalink', get_permalink()),
-	        						esc_attr( the_title_attribute(array( 'before' => sprintf('%s ', __('Comment on', 'thematic')), 'echo' => FALSE ))),
+	        						apply_filters('the_permalink', get_permalink()) . '#respond',
+	        						sprintf( esc_attr__('Comment on %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
 	        						__('Leave a comment', 'thematic'));
 	        }
 	    } else {
@@ -1637,15 +1644,25 @@ if (function_exists('childtheme_override_postfooter_postconnect'))  {
 		function thematic_postfooter_postconnect() {
     
 	    if ((comments_open()) && (pings_open())) { /* Comments are open */
-	        $postconnect = sprintf( _x('%1$sPost a comment%2$s or leave a trackback', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'thematic')), '</a>') . ': ';
-			$postconnect .= sprintf('<a class="trackback-link" href="' . get_trackback_url() . '" title ="%s" rel="trackback">%s</a>.', esc_attr__('Trackback URL for your post', 'thematic'), __('Trackback URL', 'thematic'));
+	        $postconnect = sprintf( _x('%1$sPost a comment%2$s or leave a trackback: %3$s', '1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url.', 'thematic'), 
+								sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'thematic')), 
+								'</a>' ,
+								sprintf('<a class="trackback-link" href="%s" title ="%s" rel="trackback">%s</a>.', 
+									get_trackback_url(),
+									esc_attr__('Trackback URL for your post', 'thematic'),
+						 			__('Trackback URL', 'thematic'))
+							);
 	    } elseif (!(comments_open()) && (pings_open())) { /* Only trackbacks are open */
-	        $postconnect = __('Comments are closed, but you can leave a trackback', 'thematic') . ': ';
-	        $postconnect .= sprintf('<a class="trackback-link" href="%s" title="%s" rel="trackback">%s</a>.', get_trackback_url() , esc_attr__('Trackback URL for your post', 'thematic'), __('Trackback URL', 'thematic'));
+	        $postconnect = sprintf( _x('Comments are closed, but you can leave a trackback: %s', '%s is trackback url, wrapped in link tags', 'thematic'),
+							sprintf('<a class="trackback-link" href="%s" title="%s" rel="trackback">%s</a>.', 
+								get_trackback_url(), 
+								esc_attr__('Trackback URL for your post', 'thematic'), 
+								__('Trackback URL', 'thematic'))
+							);
 	    } elseif ((comments_open()) && !(pings_open())) { /* Only comments open */
-	        $postconnect = sprintf( __('Trackbacks are closed, but you can %1$spost a comment%2$s', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'thematic')), '</a>') . '.';
+	        $postconnect = sprintf( __('Trackbacks are closed, but you can %1$spost a comment%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'thematic')), '</a>');
 	    } elseif (!(comments_open()) && !(pings_open())) { /* Comments and trackbacks closed */
-	        $postconnect = __('Both comments and trackbacks are currently closed', 'thematic'). '.';
+	        $postconnect = __('Both comments and trackbacks are currently closed.', 'thematic');
 	    }
 	    return apply_filters('thematic_postfooter_postconnect',$postconnect); 
 	}

@@ -317,7 +317,7 @@ function thematic_do_auth_opt() {
 function thematic_do_footer_opt() { 
 ?>
 	<textarea rows="5" cols="94" id="thm_footertext" name="thematic_theme_opt[footer_txt]"><?php thematic_get_theme_opt('footer_txt', true ); ?></textarea>
-	<br><?php _e('You can use HTML and shortcodes in your footer text. Shortcode examples', 'thematic'); ?>: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]
+	<br><?php printf( _x('You can use HTML and shortcodes in your footer text. Shortcode examples: %s', '%s are shortcode tags', 'thematic'), '[wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]' ); ?>
 <?php
 }
 
