@@ -370,15 +370,15 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= '</h1>';	
 		} elseif (is_day()) {
 				$content .= '<h1 class="page-title">';
-				$content .= sprintf( __('Daily Archives: %s', 'thematic'), '<span>' . get_the_time( get_option('date_format') ) . '</span>';
+				$content .= sprintf( __('Daily Archives: %s', 'thematic'), '<span>' . get_the_time( get_option('date_format') ) ) . '</span>';
 				$content .= '</h1>';
 		} elseif (is_month()) {
 				$content .= '<h1 class="page-title">';
-				$content .= sprintf( __('Monthly Archives: %s', 'thematic') , '<span>' . get_the_time('F Y') . '</span>';
+				$content .= sprintf( __('Monthly Archives: %s', 'thematic') , '<span>' . get_the_time('F Y') ) . '</span>';
 				$content .= '</h1>';
 		} elseif (is_year()) {
 				$content .= '<h1 class="page-title">';
-				$content .= sprintf( __('Yearly Archives: %s', 'thematic'), '<span>' . get_the_time('Y') . '</span>';
+				$content .= sprintf( __('Yearly Archives: %s', 'thematic'), '<span>' . get_the_time('Y') ) . '</span>';
 				$content .= '</h1>';
 		}
 		$content .= "\n";
@@ -1313,7 +1313,7 @@ add_action( 'thematic_404','thematic_404_content' );
  */
 function thematic_more_text() {
 	/* translators: %s is right angle brackets */
-	$content = sprintf ( __('Read More %s', 'thematic'), ' <span class="meta-nav">&raquo;</span>',);
+	$content = sprintf ( __('Read More %s', 'thematic'), ' <span class="meta-nav">&raquo;</span>');
 	return apply_filters('more_text', $content);
 } // end thematic_more_text
 
@@ -1612,7 +1612,7 @@ if (function_exists('childtheme_override_postfooter_postcomments'))  {
 	        						apply_filters('the_permalink', get_permalink()) . '#respond',
 	        						sprintf( esc_attr__('Comment on %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
 									/* translators: number of comments and trackbacks */
-	        						sprintf( _n('%s Response', '%s Responses', $postcommentnumber, 'thematic'), number_format_i18n( $postcommentnumber ) );
+	        						sprintf( _n('%s Response', '%s Responses', $postcommentnumber, 'thematic'), number_format_i18n( $postcommentnumber ) ) );
 			} else {
 	            $postcomments = sprintf('<span class="comments-link"><a href="%s" title="%s" rel="bookmark">%s</a></span>',
 	        						apply_filters('the_permalink', get_permalink()) . '#respond',
