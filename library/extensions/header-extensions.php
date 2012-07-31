@@ -86,10 +86,10 @@ function thematic_wptitle( $wp_doctitle, $separator, $sep_location ) {
    	// otherwise...	
    	$site_name = get_bloginfo('name' , 'display');
         	
-    if ( is_single() ) {
+    if ( is_single() || ( is_home() && !is_front_page() ) || ( is_page() && !is_front_page() ) ) {
       $content = single_post_title('', FALSE);
     }
-    elseif ( is_home() || is_front_page() ) { 
+    elseif ( is_front_page() ) { 
       $content = get_bloginfo('description', 'display');
     }
     elseif ( is_page() ) { 
@@ -122,7 +122,7 @@ function thematic_wptitle( $wp_doctitle, $separator, $sep_location ) {
     }
     
     if($content) {
-      if ( is_home() || is_front_page() ) {
+      if ( is_front_page() ) {
           $elements = array(
             'site_name' => $site_name,
             'separator' => $separator,
