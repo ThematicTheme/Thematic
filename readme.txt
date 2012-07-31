@@ -45,6 +45,8 @@ Features:
 	- Removed: THEMATIC_TEMPLATEVERSION
 * deprecated thematic_body_class() and modified it to filter body_class()
 * deprecated thematic_post_class() and modified it to filter post_class()
+* replaced get_current_theme() with wp_get_theme() for Theme Review Recommendations
+* update superfish/supersubs, load all superfish-related scripts in footer
 = 1.0.2.2 =
 * fixed invalid markup (extra span) in thematic_postmeta_authorlink()
 * fixed broken feed links in thematic_show_rss() and thematic_show_comment_rss() 
