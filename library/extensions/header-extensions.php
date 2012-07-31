@@ -407,16 +407,17 @@ if ( function_exists('childtheme_override_head_scripts') )  {
     	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 			has_filter( 'thematic_show_commentreply' ) ? thematic_show_commentreply() : wp_enqueue_script( 'comment-reply' );
 		
-		// load jquery and superfish associated plugins when theme support is active and not in admin
-    	if ( !is_admin() && current_theme_supports('thematic_superfish') ) {
+		// load jquery and superfish associated plugins when theme support is active
+    	if ( current_theme_supports('thematic_superfish') ) {
 			$scriptdir = get_template_directory_uri();
 			$scriptdir .= '/library/scripts/';
+
 			wp_enqueue_script('jquery');
-			wp_enqueue_script('hoverIntent');
-		
-			wp_enqueue_script('superfish', $scriptdir . 'superfish.js', array('jquery') );
-			wp_enqueue_script('supersubs', $scriptdir . 'supersubs.js', array('jquery'));
-			wp_enqueue_script('thematic-dropdowns', apply_filters('thematic_dropdown_options', $scriptdir . 'thematic-dropdowns.js') , array('jquery', 'superfish' ));
+			wp_deregister_script('hoverIntent');
+      wp_enqueue_script('hoverIntent', includes_url('js/hoverIntent.js'), array('jquery'), false, true);
+			wp_enqueue_script('superfish', $scriptdir . 'superfish.js', array('jquery'), '1.4.8', true);
+			wp_enqueue_script('supersubs', $scriptdir . 'supersubs.js', array('jquery'), '0.2b', true);
+			wp_enqueue_script('thematic-dropdowns', apply_filters('thematic_dropdown_options', $scriptdir . 'thematic-dropdowns.js') , array('jquery', 'superfish' ), '1.0', true);
      	
      	}
  	}
