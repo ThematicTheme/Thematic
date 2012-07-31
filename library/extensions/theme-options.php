@@ -247,13 +247,24 @@ function thematic_do_legacy_help_section() {
 /**
  * Renders the them options page
  *
- * @since Thematic 1.0 
+ * @since Thematic 1.0
+ * @todo: remove get_current_theme()
  */
 function thematic_do_opt_page() { ?>
 
  <div class="wrap">
 	<?php screen_icon(); ?>
-	<h2><?php printf( _x( '%s Theme Options', '{$current theme} Theme Options', 'thematic' ), get_current_theme() ); ?></h2>
+
+	<?php 
+	if ( function_exists( 'wp_get_theme' ) ) {
+        $frameworkData = wp_get_theme();
+        $theme = $frameworkData->display( 'Name', false );
+ 	} else {
+ 		$theme = get_current_theme();
+ 	} 
+ 	?>
+
+	<h2><?php printf( _x( '%s Theme Options', '{$current theme} Theme Options', 'thematic' ), $theme ); ?></h2>
 	<?php settings_errors(); ?>
 	
 	<form action="options.php" method="post" >
@@ -326,11 +337,22 @@ function thematic_do_footer_opt() {
  * Renders Leagcy Options elements
  *
  * @since Thematic 1.0
+ * @todo: remove get_current_theme()
  */
 function thematic_do_legacy_opt() {
 ?>
 	<input id="thm_legacy_opt" type="checkbox" value="1" name="thematic_theme_opt[del_legacy_opt]"  <?php checked( thematic_get_theme_opt('del_legacy_opt'), 1 ); ?> />
-	<label for="thm_legacy_opt"><?php printf( _x( '%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database.', '{$current theme} Theme Options', 'thematic' ), get_current_theme() ); ?></label>
+
+	<?php 
+	if ( function_exists( 'wp_get_theme' ) ) {
+        $frameworkData = wp_get_theme();
+        $theme = $frameworkData->display( 'Name', false );
+ 	} else {
+ 		$theme = get_current_theme();
+ 	} 
+ 	?>
+
+	<label for="thm_legacy_opt"><?php printf( _x( '%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database.', '{$current theme} Theme Options', 'thematic' ), $theme ); ?></label>
 <?php
 }
 
