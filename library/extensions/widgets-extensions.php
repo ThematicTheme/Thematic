@@ -67,7 +67,7 @@ function thematic_widgets_array() {
 		'Primary Aside' => array(
 			'admin_menu_order' => 100,
 			'args' => array (
-				'name' => 'Primary Aside',
+				'name' => __( 'Primary Aside', 'thematic' ),
 				'id' => 'primary-aside',
                 'description' => __('The primary widget area, most often used as a sidebar.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -82,7 +82,7 @@ function thematic_widgets_array() {
 		'Secondary Aside' => array(
 			'admin_menu_order' => 200,
 			'args' => array (
-				'name' => 'Secondary Aside',
+				'name' => __( 'Secondary Aside', 'thematic' ),
 				'id' => 'secondary-aside',
                 'description' => __('The secondary widget area, most often used as a sidebar.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -97,7 +97,7 @@ function thematic_widgets_array() {
 		'1st Subsidiary Aside' => array(
 			'admin_menu_order' => 300,
 			'args' => array (
-				'name' => '1st Subsidiary Aside',
+				'name' => __( '1st Subsidiary Aside', 'thematic' ),
 				'id' => '1st-subsidiary-aside',
                 'description' => __('The 1st widget area in the footer.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -112,7 +112,7 @@ function thematic_widgets_array() {
 		'2nd Subsidiary Aside' => array(
 			'admin_menu_order' => 400,
 			'args' => array (
-				'name' => '2nd Subsidiary Aside',
+				'name' => __( '2nd Subsidiary Aside', 'thematic' ),
 				'id' => '2nd-subsidiary-aside',
                 'description' => __('The 2nd widget area in the footer.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -127,7 +127,7 @@ function thematic_widgets_array() {
 		'3rd Subsidiary Aside' => array(
 			'admin_menu_order' => 500,
 			'args' => array (
-				'name' => '3rd Subsidiary Aside',
+				'name' => __( '3rd Subsidiary Aside', 'thematic' ),
 				'id' => '3rd-subsidiary-aside',
                 'description' => __('The 3rd widget area in the footer.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -142,7 +142,7 @@ function thematic_widgets_array() {
 		'Index Top' => array(
 			'admin_menu_order' => 600,
 			'args' => array (
-				'name' => 'Index Top',
+				'name' => __( 'Index Top', 'thematic' ),
 				'id' => 'index-top',
                 'description' => __('The top widget area displayed on the index page.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -157,7 +157,7 @@ function thematic_widgets_array() {
 		'Index Insert' => array(
 			'admin_menu_order' => 700,
 			'args' => array (
-				'name' => 'Index Insert',
+				'name' => __( 'Index Insert', 'thematic' ),
 				'id' => 'index-insert',
                 'description' => __('The widget area inserted after x posts on the index page.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -172,7 +172,7 @@ function thematic_widgets_array() {
 		'Index Bottom' => array(
 			'admin_menu_order' => 800,
 			'args' => array (
-				'name' => 'Index Bottom',
+				'name' => __( 'Index Bottom', 'thematic' ),
 				'id' => 'index-bottom',
                 'description' => __('The bottom widget area displayed on the index page.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -187,7 +187,7 @@ function thematic_widgets_array() {
 		'Single Top' => array(
 			'admin_menu_order' => 900,
 			'args' => array (
-				'name' => 'Single Top',
+				'name' => __( 'Single Top', 'thematic' ),
 				'id' => 'single-top',
                 'description' => __('The top widget area displayed on a single post.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -202,7 +202,7 @@ function thematic_widgets_array() {
 		'Single Insert' => array(
 			'admin_menu_order' => 1000,
 			'args' => array (
-				'name' => 'Single Insert',
+				'name' => __( 'Single Insert', 'thematic' ),
 				'id' => 'single-insert',
                 'description' => __('The widget area inserted between the post and the comments on a single post.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -217,7 +217,7 @@ function thematic_widgets_array() {
 		'Single Bottom' => array(
 			'admin_menu_order' => 1100,
 			'args' => array (
-				'name' => 'Single Bottom',
+				'name' => __( 'Single Bottom', 'thematic' ),
 				'id' => 'single-bottom',
                 'description' => __('The bottom widget area displayed on a single post.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -232,7 +232,7 @@ function thematic_widgets_array() {
 		'Page Top' => array(
 			'admin_menu_order' => 1200,
 			'args' => array (
-				'name' => 'Page Top',
+				'name' => __( 'Page Top', 'thematic' ),
 				'id' => 'page-top',
                 'description' => __('The top widget area displayed on a page.', 'thematic'),
 				'before_widget' => thematic_before_widget(),
@@ -247,7 +247,7 @@ function thematic_widgets_array() {
 		'Page Bottom' => array(
 			'admin_menu_order' => 1300,
 			'args' => array (
-				'name' => 'Page Bottom',
+				'name' => __( 'Page Bottom', 'thematic' ),
 				'id' => 'page-bottom',
                 'description' => __('The bottom widget area displayed on a page.', 'thematic'),
 				'before_widget' => thematic_before_widget(),

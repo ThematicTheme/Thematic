@@ -3,7 +3,7 @@ Contributors: iandstewart, chrisgossmann, emhr
 Tags: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
 Requires at least: 3.2
 Tested up to: 3.4
-Stable tag: 1.0.2.2
+Stable tag: 1.0.3
 
 The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, &amp; a whole lot more.
 
@@ -28,6 +28,26 @@ Features:
 * Options for multi-author blogs
 
 == Changelog ==
+= 1.0.3 = 
+* major update of localization strings
+* deprecate all theme constants
+	- replaced THEMATIC_COMPATIBLE_FEEDLINKS with add_theme_support( 'thematic_legacy_feed_links' )
+	- replaced THEMATIC_COMPATIBLE_COMMENT_HANDLING with add_theme_support( 'thematic_legacy_comment_handling' )
+	- replaced THEMATIC_COMPATIBLE_BODY_CLASS with add_theme_support( 'thematic_legacy_body_class' )
+	- replaced THEMATIC_COMPATIBLE_POST_CLASS with add_theme_support( 'thematic_legacy_post_class' )
+	- replaced THEMATIC_COMPATIBLE_COMMENT_FORM with add_theme_support( 'thematic_legacy_comment_form' )
+	- Removed: THEMATIC_THEMENAME
+	- Removed: THEMATIC_THEMEAUTHOR
+	- Removed: THEMATIC_THEMEURI
+	- Removed: THEMATIC_VERSION
+	- Removed: THEMATIC_TEMPLATEAUTHOR
+	- Removed: THEMATIC_TEMPLATEURI
+	- Removed: THEMATIC_TEMPLATEVERSION
+* deprecated thematic_body_class() and modified it to filter body_class()
+* deprecated thematic_post_class() and modified it to filter post_class()
+* replaced get_current_theme() with wp_get_theme() for Theme Review Recommendations
+* update superfish/supersubs, load all superfish-related scripts in footer
+* adjust title tag filter for posts page when front page is a static page
 = 1.0.2.2 =
 * fixed invalid markup (extra span) in thematic_postmeta_authorlink()
 * fixed broken feed links in thematic_show_rss() and thematic_show_comment_rss() 

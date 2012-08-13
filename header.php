@@ -30,8 +30,8 @@
 	// Create the tag <meta name="robots"  
 	thematic_show_robots();
 	
-	// Constant defined true by default 
-	if (THEMATIC_COMPATIBLE_FEEDLINKS) {    
+	// Legacy feedlink handling
+	if ( current_theme_supports( 'thematic_legacy_feedlinks' ) ) {    
 		// Creating the internal RSS links
 		thematic_show_rss();
 	

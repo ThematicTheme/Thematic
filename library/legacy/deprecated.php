@@ -309,4 +309,95 @@ function widget_area_page_bottom() {
 	thematic_widget_area_subsidiaries();
 }
 
+
+/**
+ * Generates the legacy comment form
+ *
+ * We removed the functionality because WordPress supplies its own function comment_form()
+ *
+ * @deprecated 1.0.2.3
+ */
+
+function thematic_legacy_comment_form(){ 
+
+	_deprecated_function( __FUNCTION__, '1.0.2.3', 'comment_form( thematic_comment_form_args() )' ); 
+
+	$user = wp_get_current_user();
+
+	$user_ID =  ! ( is_wp_error( $user ) ) ? $user->ID : FALSE; ?>
+			
+	<div id="respond">
+	
+ 		<h3><?php comment_form_title( thematic_postcomment_text(), thematic_postreply_text() ); ?></h3>
+ 		<div id="cancel-comment-reply"><?php cancel_comment_reply_link() ?></div>
+		
+		<?php if ( get_option( 'comment_registration' ) && !$user_ID ) : ?>
+		
+			<p id="login-req"><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'thematic'), sprintf('<a href="%s" title ="%s">', wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ), esc_attr__( 'Log in', 'thematic' ) ), '</a>' ) ?></p>
+			
+		<?php else : ?>
+		
+			<div class="formcontainer">	
+				<?php
+				// action hook for inserting content above #commentform
+				thematic_abovecommentsform() 
+				?>					
+	
+				<form id="commentform" action="<?php echo site_url( '/wp-comments-post.php' ) ?>" method="post">
+				
+				<?php if ( $user_ID ) : ?>
+					<p id="login"><span class="loggedin"><?php _e('Logged in as', 'thematic' ) . printf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'thematic'), $user_identity ) , $user_identity ) ;?></span> <span class="logout"><?php printf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'thematic' ) , __('Log out?', 'thematic' ) ); ?></span>
+					</p>
+	
+				<?php else : ?>
+
+					<p id="comment-notes"><?php printf( _x( 'Your email is %1$snever%2$s published nor shared.' , '%$1s and %$2s are <em> tags for emphasis on never', 'thematic' ), '<em>' , '</em>' ) ?></p>
+	
+                    <div id="form-section-author" class="form-section">
+						<div class="form-label"><label for="author"><?php _e( 'Name', 'thematic' ) ?></label> <?php if ( $req ) _e( '<span class="required">*</span>', 'thematic' ) ?></div>
+						<div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
+                    </div><!-- #form-section-author .form-section -->
+	
+                    <div id="form-section-email" class="form-section">
+						<div class="form-label"><label for="email"><?php _e( 'Email', 'thematic' ) ?></label> <?php if ( $req ) _e( '<span class="required">*</span>', 'thematic' ) ?></div>
+						<div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
+                    </div><!-- #form-section-email .form-section -->
+	
+                    <div id="form-section-url" class="form-section">
+						<div class="form-label"><label for="url"><?php _e( 'Website', 'thematic' ) ?></label></div>
+						<div class="form-input"><input id="url" name="url" type="text" value="<?php echo $comment_author_url ?>" size="30" maxlength="50" tabindex="5" /></div>
+	                </div><!-- #form-section-url .form-section -->
+	
+				<?php endif /* if ( $user_ID ) */ ?>
+	
+	            <div id="form-section-comment" class="form-section">
+					<div class="form-label"><label for="comment"><?php _e( thematic_commentbox_text(), 'thematic' ) ?></label></div>
+	    			<div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
+	            </div><!-- #form-section-comment .form-section -->
+	                            
+                <div id="form-allowed-tags" class="form-section">
+                    <p><span><?php printf( _x('You may use these %1$sHTML%2$s tags and attributes', '%$1s and %$2s are <abbr> tags', 'thematic'), '<abbr title="HyperText Markup Language">', '</abbr>' ) ?></span> <code><?php echo allowed_tags(); ?></code></p>
+                </div>
+								
+       			<?php do_action( 'comment_form', $post->ID ); ?>
+	                  
+				<div class="form-submit"><input id="submit" name="submit" type="submit" value="<?php echo thematic_commentbutton_text(); ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></div>
+	
+                <?php comment_id_fields(); ?>    
+	
+			</form><!-- #commentform -->
+	
+			<?php
+			// action hook for inserting content below #commentform
+			thematic_belowcommentsform()
+			?>
+	
+		</div><!-- .formcontainer -->
+		<?php endif /* if ( get_option('comment_registration') && !$user_ID ) */ ?>
+		
+	</div><!-- #respond -->
+	
+<?php
+}
+
 ?>

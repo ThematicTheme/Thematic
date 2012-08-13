@@ -24,10 +24,11 @@ if (function_exists('childtheme_override_commentmeta'))  {
 	 */
 	function thematic_commentmeta($print = TRUE) {
 		$content = '<div class="comment-meta">' . 
-					sprintf( __('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'thematic' ),
-					get_comment_date(),
-					get_comment_time(),
-					'#comment-' . get_comment_ID() );
+					sprintf( _x('Posted %s at %s', 'Posted {$date} at {$time}', 'thematic') , 
+						get_comment_date(),
+						get_comment_time() );
+
+		$content .= ' <span class="meta-sep">|</span> ' . sprintf( '<a href="%1$s" title="%2$s">%3$s</a>', '#comment-' . get_comment_ID() , __( 'Permalink to this comment', 'thematic' ), __( 'Permalink', 'thematic' ) );
 							
 		if ( get_edit_comment_link() ) {
 			$content .=	sprintf(' <span class="meta-sep">|</span><span class="edit-link"> <a class="comment-edit-link" href="%1$s" title="%2$s">%3$s</a></span>',
