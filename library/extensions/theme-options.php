@@ -367,7 +367,9 @@ if (function_exists('childtheme_override_validate_opt')) {
  	   }
  	   
  	   // Author Info CheckBox value either 1(yes) or 0(no)
+ 	   if ( isset( $input['author_info'] ) ) {
  	   	$output['author_info'] =  ( $input['author_info'] == 0 ? 0 : 1 );
+ 	   }
  	 
  	   // Footer Text sanitized allowing HTML and WP shortcodes
  	   if ( isset( $input['footer_txt'] ) ) {
@@ -375,7 +377,9 @@ if (function_exists('childtheme_override_validate_opt')) {
  	   }
  	   
  	   // Remove Legacy Options CheckBox value either 1(yes) or 0(no)
- 	   $output['del_legacy_opt'] = ( $input['del_legacy_opt'] == 0 ? 0 : 1 );
+ 	   if ( isset( $input['del_legacy_opt'] ) ) {
+ 	   	$output['del_legacy_opt'] = ( $input['del_legacy_opt'] == 0 ? 0 : 1 );
+ 	   }
  	   
  	   if ( 1 == $output['del_legacy_opt'] ) {
  	   	
