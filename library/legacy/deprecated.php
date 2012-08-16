@@ -58,6 +58,14 @@ function thematic_show_commentreply() {
             wp_enqueue_script('comment-reply'); 
 }
 
+/**
+ * thematic_canonical_url is no longer necessary because the functionality has been included in WordPress core since 2.9.0
+ *
+ * @deprecated 1.0
+ */
+function thematic_canonical_url() {
+	_deprecated_function( __FUNCTION__, '1.0' );
+}
 
 /**
  * Get the page number for title tag
