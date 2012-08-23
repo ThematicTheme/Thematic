@@ -611,7 +611,7 @@ if (function_exists('childtheme_override_index_loop'))  {
 		$count = 1;
 		while ( have_posts() ) : the_post();
 
-				// action hook for insterting content above #post
+				// action hook for inserting content above #post
 				thematic_abovepost();
 				?>
 
