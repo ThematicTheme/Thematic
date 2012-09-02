@@ -43,11 +43,12 @@
     	if ( apply_filters( 'thematic_close_wrapper', true ) ) 
     		echo ( '</div><!-- #wrapper .hfeed -->' . "\n" );
 	
-		// calling WordPress' footer action hook
-		wp_footer();
 
 		// action hook for placing content before closing the BODY tag
 		thematic_after(); 
+		
+		// calling WordPress' footer action hook
+		wp_footer();
 	?>
 
 </body>
