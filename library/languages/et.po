@@ -1,35 +1,21 @@
+# Translation of Thematic 1.0.3 in Estonian
+# This file is distributed under the same license as the Thematic 1.0.3 package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Thematic raamistiku tõlge\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Peeter Marvet <pets@tehnokratt.net>\n"
-"Language-Team: Peeter Marvet <pets@tehnokratt.net>\n"
+"PO-Revision-Date: 2012-09-02 09:54:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-Language: Estonian\n"
-"X-Poedit-Country: ESTONIA\n"
-"X-Poedit-SearchPath-0: ../..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Thematic 1.0.3\n"
 
-#: library/extensions/content-extensions.php:947
-#: library/extensions/content-extensions.php:1461
-#: library/extensions/discussion-extensions.php:36
-#: library/extensions/discussion.php:84
-#: links.php:60
-#: page.php:60
-#: template-page-archives.php:63
-#: template-page-fullwidth.php:61
-msgid "Edit"
-msgstr "Muuda"
+#: archives.php:20 template-page-blog.php:22
+msgid "The template %s"
+msgstr "Põhi %s"
 
-#: attachment.php:62
-#: library/extensions/content-extensions.php:666
-#: library/extensions/content-extensions.php:732
+#: attachment.php:54 library/extensions/content-extensions.php:630
+#: library/extensions/content-extensions.php:689
 msgid "Pages:"
 msgstr "Lehed:"
 
@@ -37,294 +23,336 @@ msgstr "Lehed:"
 msgid "Email "
 msgstr "E-post "
 
+#: comments.php:24
+msgid "Please do not load this page directly."
+msgstr "Selle lehe poole ei tasu otse pöörduda."
+
 #: comments.php:33
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "See postitus on salasõnaga kaitstud. Kommentaaride nägemiseks sisesta salasõna."
 
 #: comments.php:111
-msgid "<span>One</span> Trackback"
-msgstr "<span>Üks</span> trackback-viide"
+msgid "Trackbacks"
+msgstr "Trackback-viited"
 
-#: comments.php:142
-#: library/extensions/comments-extensions.php:234
-#, php-format
-msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Kommenteerimiseks tuleb <a href=\"%s\" title=\"Log in\">sisse logida</a>."
+#: comments.php:111
+msgctxt "%1$ and %2$s are <span> tags"
+msgid "%1$sOne%2$s Trackback"
+msgstr "%1$sÜks%2$s trackback-viide"
 
-#: comments.php:156
-#: library/extensions/comments-extensions.php:235
-#, php-format
-msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\">Oled loginud sisse kasutajana <a href=\"%1$s\" title=\"Oled loginud sisse kasutajana  %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Logi välja\">Logi välja?</a></span>"
-
-#: comments.php:164
-#: library/extensions/comments-extensions.php:233
-msgid "Your email is <em>never</em> published nor shared."
-msgstr "Sinu e-posti ei avaldata ega jagata <em>ealeski</em>."
-
-#: comments.php:164
-#: library/extensions/comments-extensions.php:233
-msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "Kohustuslikke välju tähistab <span class=\"required\">*</span>"
-
-#: comments.php:167
-#: library/extensions/comments-extensions.php:224
-msgid "Name"
-msgstr "Nimi"
-
-#: comments.php:167
-#: comments.php:172
-#: library/extensions/comments-extensions.php:224
-#: library/extensions/comments-extensions.php:225
-msgid "<span class=\"required\">*</span>"
-msgstr "<span class=\"required\">*</span>"
-
-#: comments.php:172
-#: library/extensions/comments-extensions.php:225
-msgid "Email"
-msgstr "E-post"
-
-#: comments.php:177
-#: library/extensions/comments-extensions.php:226
-msgid "Website"
-msgstr "Veebileht"
-
-#: comments.php:189
-#: library/extensions/comments-extensions.php:236
-msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
-msgstr "Sa võid kasutada järgmisi <abbr title=\"HyperText Markup Language\">HTML</abbr> silte ja atribuute:"
-
-#: page.php:58
-#: template-page-fullwidth.php:59
-msgid "Pages: "
-msgstr "Lehed: "
-
-#: search.php:56
-msgid "Nothing Found"
-msgstr "Ei leitud"
-
-#: search.php:60
-msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Kahjuks ei leidunud midagi sobilikku. Palun proovi mõne teise märksõnaga."
-
-#: library/extensions/content-extensions.php:1346
-#: search.php:70
-msgid "Find"
-msgstr "Otsi"
+#: functions.php:194
+msgid "Primary Menu"
+msgstr "Põhimenüü"
 
 #: library/extensions/comments-extensions.php:120
-msgid "<span>One</span> Comment"
-msgstr "<span>Üks</span> kommentaar"
+msgctxt "One Comment, where %$1s and %$2s are <span> tags"
+msgid "%1$sOne%2$s Comment"
+msgstr "%1$sÜks%2$s kommentaar"
 
-#: library/extensions/comments-extensions.php:154
+#: library/extensions/comments-extensions.php:131
+msgid "Comments"
+msgstr "Kommentaarid"
+
+#: library/extensions/comments-extensions.php:155
 msgid "Post a Comment"
 msgstr "Lisa kommentaar"
 
-#: library/extensions/comments-extensions.php:165
-#, php-format
+#: library/extensions/comments-extensions.php:167
 msgid "Post a Reply to %s"
 msgstr "Vasta kommentaarile %s"
 
-#: library/extensions/comments-extensions.php:176
+#: library/extensions/comments-extensions.php:179
+msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentaar"
 
-# @ thematic
-#: library/extensions/comments-extensions.php:187
+#: library/extensions/comments-extensions.php:190
 msgid "Cancel reply"
-msgstr "Loobu vastamisest"
+msgstr "Katkesta vastamine"
 
-#: library/extensions/comments-extensions.php:198
+#: library/extensions/comments-extensions.php:202
 msgid "Post Comment"
 msgstr "Lisa kommentaar"
 
-#: library/extensions/content-extensions.php:340
-#: library/extensions/header-extensions.php:84
+#: library/extensions/comments-extensions.php:228
+#: library/legacy/deprecated.php:357
+msgid "Name"
+msgstr "Nimi"
+
+#: library/extensions/comments-extensions.php:228
+#: library/extensions/comments-extensions.php:229
+msgctxt "denotes required field"
+msgid "*"
+msgstr "*"
+
+#: library/extensions/comments-extensions.php:229
+#: library/legacy/deprecated.php:362
+msgid "Email"
+msgstr "E-post"
+
+#: library/extensions/comments-extensions.php:230
+#: library/legacy/deprecated.php:367
+msgid "Website"
+msgstr "Veebileht"
+
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:354
+msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
+msgid "Your email is %1$snever%2$s published nor shared."
+msgstr "Sinu e-posti ei avaldata ega jagata %1$skunagi%2$s published nor shared."
+
+#: library/extensions/comments-extensions.php:238
+msgctxt "%$1s and %$2s are <span> tags"
+msgid "Required fields are marked %1$s*%2$s"
+msgstr "Kohustuslikke välju tähistab %1$s*%2$s"
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:336
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "Kommenteerimiseks pead olema %1$ssisse loginud%2$s."
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:336
+msgid "Log in"
+msgstr "Logi sisse"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:349
+msgid "Logged in as %s"
+msgstr "Sisse logitud kasutajana %s"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:349
+msgid "Log out of this account"
+msgstr "Logi välja"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:349
+msgid "Log out?"
+msgstr "Logid välja?"
+
+#: library/extensions/comments-extensions.php:244
+#: library/legacy/deprecated.php:379
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes"
+msgstr "Võid kasutada järgmisi %1$sHTML%2$s märgendeid ja atribuute"
+
+#: library/extensions/content-extensions.php:334
+msgid "Author Archives:"
+msgstr "Autori arhiiv:"
+
+#: library/extensions/content-extensions.php:339
+#: library/extensions/header-extensions.php:103
 msgid "Category Archives:"
 msgstr "Rubriigi arhiiv:"
 
-#: library/extensions/content-extensions.php:349
-#: library/extensions/header-extensions.php:80
+#: library/extensions/content-extensions.php:347
+#: library/extensions/header-extensions.php:99
 msgid "Search Results for:"
 msgstr "Tulemused otsingule:"
 
-#: library/extensions/content-extensions.php:355
-#: library/extensions/header-extensions.php:88
+#: library/extensions/content-extensions.php:352
+#: library/extensions/header-extensions.php:107
 msgid "Tag Archives:"
 msgstr "Sildi arhiiv:"
 
-#: library/extensions/content-extensions.php:364
-#: library/extensions/content-extensions.php:373
+#: library/extensions/content-extensions.php:361
+#: library/extensions/content-extensions.php:368
 msgid "Archives:"
 msgstr "Arhiiv:"
 
-#: library/extensions/content-extensions.php:379
-#, php-format
-msgid "Daily Archives: <span>%s</span>"
-msgstr "Päeva arhiiv: <span>%s</span>"
+#: library/extensions/content-extensions.php:373
+msgid "Daily Archives: %s"
+msgstr "Päeva arhiiv: %s"
 
-#: library/extensions/content-extensions.php:383
-#, php-format
-msgid "Monthly Archives: <span>%s</span>"
-msgstr "Kuu arhiiv: <span>%s</span>"
+#: library/extensions/content-extensions.php:377
+msgid "Monthly Archives: %s"
+msgstr "Kuu arhiiv: %s"
 
-#: library/extensions/content-extensions.php:387
-#, php-format
-msgid "Yearly Archives: <span>%s</span>"
-msgstr "Aasta arhiiv: <span>%s</span>"
+#: library/extensions/content-extensions.php:381
+msgid "Yearly Archives: %s"
+msgstr "Aasta arhiiv: %s"
 
-#: library/extensions/content-extensions.php:429
-#: library/extensions/content-extensions.php:1728
-msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> Vanemad postitused"
+#: library/extensions/content-extensions.php:424
+#: library/extensions/content-extensions.php:1706
+msgid "Older posts"
+msgstr "Vanemad postitused"
 
-#: library/extensions/content-extensions.php:431
-#: library/extensions/content-extensions.php:1729
-msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Uuemad postitused <span class=\"meta-nav\">&raquo;</span>"
+#: library/extensions/content-extensions.php:426
+#: library/extensions/content-extensions.php:1708
+msgid "Newer posts"
+msgstr "Uuemad postitused"
 
-#: library/extensions/content-extensions.php:946
-#: library/extensions/content-extensions.php:1460
+#: library/extensions/content-extensions.php:888
+#: library/extensions/content-extensions.php:1418
 msgid "Edit post"
 msgstr "Muuda postitust"
 
-#: library/extensions/content-extensions.php:975
-#: library/extensions/header-extensions.php:92
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1420
+#: library/extensions/discussion-extensions.php:37
+#: library/extensions/discussion.php:84 links.php:54 page.php:52
+#: template-page-archives.php:55 template-page-fullwidth.php:53
+msgid "Edit"
+msgstr "Muuda"
+
+#: library/extensions/content-extensions.php:918
+#: library/extensions/header-extensions.php:111
 msgid "Not Found"
 msgstr "Lehte ei leitud (viga 404)"
 
-#: library/extensions/content-extensions.php:980
-#: library/extensions/content-extensions.php:1413
-#: library/extensions/content-extensions.php:1417
-msgid "Permalink to "
-msgstr "Püsiviide "
+#: library/extensions/content-extensions.php:923
+#: library/extensions/content-extensions.php:1141
+#: library/extensions/content-extensions.php:1145
+#: library/extensions/content-extensions.php:1376
+msgid "Permalink to %s"
+msgstr "Püsiviide: %s"
 
-#: library/extensions/content-extensions.php:1041
-msgid "By "
-msgstr "Autor "
+#: library/extensions/content-extensions.php:983
+msgid "By"
+msgstr "Autor"
 
-#: library/extensions/content-extensions.php:1051
-msgid "View all posts by "
-msgstr "Näita postitusi mille autoriks on "
+#: library/extensions/content-extensions.php:994
+msgid "View all posts by %s"
+msgstr "Vaata kõiki %s postitusi"
 
-#: library/extensions/content-extensions.php:1079
-msgid "Published: "
-msgstr "Avaldatud: "
+#: library/extensions/content-extensions.php:1023
+msgid "Published:"
+msgstr "Avaldatud:"
 
-#: library/extensions/content-extensions.php:1252
+#: library/extensions/content-extensions.php:1199
 msgid "Archives by Category"
 msgstr "Arhiivid rubriikide kaupa"
 
-#: library/extensions/content-extensions.php:1280
+#: library/extensions/content-extensions.php:1230
 msgid "Archives by Month"
 msgstr "Arhiivid kuude kaupa"
 
-# @ thematic
-#: library/extensions/content-extensions.php:1413
-msgid "Browse the "
-msgstr "Sirvi "
+#: library/extensions/content-extensions.php:1291
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
+msgstr "Soovitud leht ei ole leitav. Vahest aitab otsing?"
 
-#: library/extensions/content-extensions.php:1413
-msgid " Archive"
-msgstr " arhiiv"
+#: library/extensions/content-extensions.php:1297 search.php:70
+msgid "Find"
+msgstr "Otsi"
 
-#: library/extensions/content-extensions.php:1414
-msgid " archive"
-msgstr " arhiiv"
+#: library/extensions/content-extensions.php:1316
+msgid "Read More %s"
+msgstr "Loe edasi %s"
 
-#: library/extensions/content-extensions.php:1417
-msgid "Bookmark the "
-msgstr "Salvesta lemmikutesse "
+#: library/extensions/content-extensions.php:1368
+msgid "Browse the %s archive."
+msgstr "Vaata %s arhiivi."
 
-#: library/extensions/content-extensions.php:1418
-msgid "permalink"
-msgstr "püsiviide"
+#: library/extensions/content-extensions.php:1370
+msgid "Permalink to %s Archive"
+msgstr "Püsiviide %s arhiivile"
 
-#: library/extensions/content-extensions.php:1572
-msgid "This entry was posted in "
-msgstr "See postitus kuulub rubriiki "
+#: library/extensions/content-extensions.php:1376
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Bookmark the %1$spermalink%2$s."
+msgstr "Talleta %1$spüsiviide%2$s."
 
-#: library/extensions/content-extensions.php:1580
-msgid "Also posted in "
-msgstr "Samuti postitatud rubriiki "
+#: library/extensions/content-extensions.php:1534
+msgid "This entry was posted in %s"
+msgstr "Postitatud rubriiki %s"
+
+#: library/extensions/content-extensions.php:1545
+msgid "Also posted in %s"
+msgstr "Lisaks postitatud rubriiki %s"
+
+#: library/extensions/content-extensions.php:1549
+msgid "Posted in %s"
+msgstr "Postitatud rubriiki %s"
+
+#: library/extensions/content-extensions.php:1575
+msgid "This entry is tagged"
+msgstr "Postituse märksõnad"
+
+#: library/extensions/content-extensions.php:1578
+msgid "and tagged"
+msgstr "märksõnaga"
+
+#: library/extensions/content-extensions.php:1581
+msgid "Also tagged"
+msgstr "Lisaks märksõna"
 
 #: library/extensions/content-extensions.php:1583
-msgid "Posted in "
-msgstr "Postitatud rubriiki "
-
-#: library/extensions/content-extensions.php:1609
-msgid " This entry is tagged"
-msgstr " See postitus kuulub rubriiki"
-
-#: library/extensions/content-extensions.php:1612
-msgid " and tagged"
-msgstr " ja sildistatud"
-
-#: library/extensions/content-extensions.php:1615
-msgid " Also tagged "
-msgstr " Lisaks sildistatud "
-
-#: library/extensions/content-extensions.php:1617
 msgid "Tagged"
 msgstr "Sildistatud"
 
-#: library/extensions/content-extensions.php:1644
-#: library/extensions/content-extensions.php:1647
-#: library/extensions/content-extensions.php:1650
-msgid "Comment on "
-msgstr "Kommenteeri "
+#: library/extensions/content-extensions.php:1613
+#: library/extensions/content-extensions.php:1619
+msgid "Comment on %s"
+msgstr "Kommenteeri %s"
 
-#: library/extensions/content-extensions.php:1651
+#: library/extensions/content-extensions.php:1615
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] "%s vastus"
+msgstr[1] "%s vastust"
+
+#: library/extensions/content-extensions.php:1620
 msgid "Leave a comment"
 msgstr "Kommenteeri"
 
-#: library/extensions/content-extensions.php:1654
+#: library/extensions/content-extensions.php:1623
 msgid "Comments closed"
 msgstr "Kommenteerimine suletud"
 
-#: library/extensions/content-extensions.php:1678
-#: library/extensions/content-extensions.php:1686
+#: library/extensions/content-extensions.php:1647
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
+msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
+msgstr "%1$sKommenteeri%2$s või lisa trackback-viide: %3$s"
+
+#: library/extensions/content-extensions.php:1648
+#: library/extensions/content-extensions.php:1663
 msgid "Post a comment"
 msgstr "Postita kommentaar"
 
-#: library/extensions/content-extensions.php:1679
-msgid " or leave a trackback: "
-msgstr " või jäta trackback-viide: "
-
-#: library/extensions/content-extensions.php:1680
-#: library/extensions/content-extensions.php:1683
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1659
 msgid "Trackback URL for your post"
 msgstr "Trackback-viite URL Sinu postituse jaoks"
 
-#: library/extensions/content-extensions.php:1680
-#: library/extensions/content-extensions.php:1683
+#: library/extensions/content-extensions.php:1653
+#: library/extensions/content-extensions.php:1660
 msgid "Trackback URL"
 msgstr "Trackback-viite URL"
 
-#: library/extensions/content-extensions.php:1682
-msgid " Comments are closed, but you can leave a trackback: "
-msgstr " Kommentaarid on suletud, aga Sa võid jätta trackback-viite: "
+#: library/extensions/content-extensions.php:1656
+msgctxt "%s is trackback url, wrapped in link tags"
+msgid "Comments are closed, but you can leave a trackback: %s"
+msgstr "Kommenteerimine on suletud, aga võid lisada trackback-viite: %s"
 
-#: library/extensions/content-extensions.php:1685
-msgid " Trackbacks are closed, but you can "
-msgstr " Trackback-viited on suletud, aga Sa võid "
+#: library/extensions/content-extensions.php:1663
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr "Trackback-viited on keelatud, aga võid %1$sjätta kommentaari%2$s."
 
-#: library/extensions/content-extensions.php:1686
-msgid "post a comment"
-msgstr "postitada kommentaari"
-
-#: library/extensions/content-extensions.php:1688
-msgid " Both comments and trackbacks are currently closed."
-msgstr " Kommentaarid ja trackback-viited on suletud."
+#: library/extensions/content-extensions.php:1665
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Kommenteerimine ja trackback-viidete lisamine ei ole lubatud."
 
 #: library/extensions/discussion-extensions.php:27
-#, php-format
-msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "Postitanud %1$s %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Püsiviide kommentaarile\">Püsiviide</a>"
+msgctxt "Posted {$date} at {$time}"
+msgid "Posted %s at %s"
+msgstr "Lisatud %s kell %s"
 
-#: library/extensions/discussion-extensions.php:35
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink to this comment"
+msgstr "Püsiviide sellele kommentaarile"
+
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink"
+msgstr "Püsiviide"
+
+#: library/extensions/discussion-extensions.php:36
 msgid "Edit comment"
 msgstr "Muuda kommentaari"
+
+#: library/extensions/discussion.php:37
+msgid "Your comment is awaiting moderation"
+msgstr "Sinu kommentaar on modereerimisjärjekorras"
 
 #: library/extensions/discussion.php:52
 msgid "Reply"
@@ -335,45 +363,35 @@ msgid "Log in to reply."
 msgstr "Vastamiseks logi sisse."
 
 #: library/extensions/discussion.php:80
-#, php-format
+msgctxt "By {$authorlink} on {$date} at {$time}"
 msgid "By %1$s on %2$s at %3$s"
-msgstr "%1$s, %2$s kell %3$s"
+msgstr "Kirjutas %1$s %2$s kell %3$s"
 
-#: library/extensions/header-extensions.php:302
+#: library/extensions/discussion.php:90
+msgid "Your trackback is awaiting moderation"
+msgstr "Sinu trackback-viide on modereerimisjärjekorras"
+
+#: library/extensions/header-extensions.php:319
 #: library/extensions/widgets.php:157
 msgid "Posts RSS feed"
 msgstr "Postituse RSS"
 
-#: library/extensions/header-extensions.php:326
+#: library/extensions/header-extensions.php:343
 #: library/extensions/widgets.php:158
 msgid "Comments RSS feed"
 msgstr "Kommentaaride RSS"
 
-# @ thematic
-#: functions.php:253
-msgid "Primary Menu"
-msgstr "Põhimenüü"
-
-#: library/extensions/header-extensions.php:625
+#: library/extensions/header-extensions.php:642
 msgid "Skip navigation to the content"
 msgstr "Möödu navigatsioonist sisu juurde"
 
-#: library/extensions/header-extensions.php:625
+#: library/extensions/header-extensions.php:642
 msgid "Skip to content"
 msgstr "Siirdu sisu juurde"
 
-#: library/extensions/helpers.php:50
-#: library/extensions/helpers.php:69
+#: library/extensions/helpers.php:50 library/extensions/helpers.php:69
 msgid "There is no excerpt because this is a protected post."
 msgstr "Kaitstud postituse sisukokkuvõtet ei saa kuvada."
-
-#: library/extensions/shortcodes.php:40
-msgid "Login"
-msgstr "Logi sisse"
-
-#: library/extensions/shortcodes.php:42
-msgid "Logout"
-msgstr "Logi välja"
 
 #: library/extensions/theme-options.php:50
 msgid "Index Insert Position"
@@ -387,96 +405,211 @@ msgstr "Info autori lehel"
 msgid "Text in Footer"
 msgstr "Jaluse tekst"
 
+#: library/extensions/theme-options.php:56
+msgid "Remove Legacy Options"
+msgstr "Kustuta iganenud seaded"
+
+#: library/extensions/theme-options.php:170
+msgid "Theme Options"
+msgstr "Teema sätted"
+
+#: library/extensions/theme-options.php:202
+msgid "For more information:"
+msgstr "Lisainfo:"
+
+#: library/extensions/theme-options.php:204
+msgid "For support:"
+msgstr "Tugi:"
+
+#: library/extensions/theme-options.php:206
+msgid "forums"
+msgstr "foorumid"
+
+#: library/extensions/theme-options.php:210
+msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
+msgstr "Alljärgnevad sätted pärinevad Thematic Theme raamistikust ja/või kasutuselolevast alamteemast (child theme)."
+
+#: library/extensions/theme-options.php:211
+msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
+msgstr "Uusi sätteid saab lisada ja olemasolevaid eemaldada luues alamteema (child theme). Ka seda kontekstitundlikku abiteksti saab muuta alamteemaga."
+
+#: library/extensions/theme-options.php:217
+msgid "Overview"
+msgstr "Ülevaade"
+
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
+msgstr "Selle teema kohta pakub lisainfot %1$sThematicTheme.com%2$s"
+
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
+msgstr "Küsimustele leiad vastuse %1$sThematicTheme.com foorumist%2$s."
+
+#: library/extensions/theme-options.php:256
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options"
+msgstr "%s teema sätted"
+
+#: library/extensions/theme-options.php:294
+msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
+msgstr "Index Insert lisatakse pärast niimitmendat postitust. Tühi lahter või 0 keelab selle mooduli."
+
+#: library/extensions/theme-options.php:307
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
+msgstr "Kuva %1$smikroformaadis vCard%2$s autori avatari, tutvustuse ja e-postiga tema lehel."
+
+#: library/extensions/theme-options.php:320
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr "Jaluses saab kasutada HTMLi ja lühikoode, näiteks: %s"
+
+#: library/extensions/theme-options.php:333
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
+msgstr "%s teema sätted on viidud uuemasse formaati. Kustuta iganenud seaded andmebaasist."
+
+#: library/extensions/theme-options.php:360
+msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
+msgstr "Index Insert mooduli positsiooniks sobib 0 või sellest suurem number. Taastatud sätte eelmine väärtus."
+
 #: library/extensions/widgets-extensions.php:34
 msgid "To search, type and hit enter"
 msgstr "Sisesta otsisõna ja vajuta enterit"
 
 #: library/extensions/widgets-extensions.php:40
-#: library/extensions/widgets.php:56
-#: library/extensions/widgets.php:61
+#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
 msgid "Search"
 msgstr "Otsi"
+
+#: library/extensions/widgets-extensions.php:70
+msgid "Primary Aside"
+msgstr "Primary Aside"
 
 #: library/extensions/widgets-extensions.php:72
 msgid "The primary widget area, most often used as a sidebar."
 msgstr "Peamine mooduliala (primary widget area), harilikult kasutusel külgpaanina."
 
+#: library/extensions/widgets-extensions.php:85
+msgid "Secondary Aside"
+msgstr "Primary Aside"
+
 #: library/extensions/widgets-extensions.php:87
 msgid "The secondary widget area, most often used as a sidebar."
 msgstr "Täiendav mooduliala (secondary widget area), harilikult kasutusel külgpaanina."
+
+#: library/extensions/widgets-extensions.php:100
+msgid "1st Subsidiary Aside"
+msgstr "1st Subsidiary Aside"
 
 #: library/extensions/widgets-extensions.php:102
 msgid "The 1st widget area in the footer."
 msgstr "Esimene mooduliala jaluses (1st widget area)."
 
+#: library/extensions/widgets-extensions.php:115
+msgid "2nd Subsidiary Aside"
+msgstr "2nd Subsidiary Aside"
+
 #: library/extensions/widgets-extensions.php:117
 msgid "The 2nd widget area in the footer."
 msgstr "Teine mooduliala jaluses (2nd widget area)."
+
+#: library/extensions/widgets-extensions.php:130
+msgid "3rd Subsidiary Aside"
+msgstr "3. jalusemoodul"
 
 #: library/extensions/widgets-extensions.php:132
 msgid "The 3rd widget area in the footer."
 msgstr "Kolmas mooduliala jaluses (3rd widget area)."
 
+#: library/extensions/widgets-extensions.php:145
+msgid "Index Top"
+msgstr "Index Top"
+
 #: library/extensions/widgets-extensions.php:147
 msgid "The top widget area displayed on the index page."
 msgstr "Ülemine moodul indeks-lehel."
+
+#: library/extensions/widgets-extensions.php:160
+msgid "Index Insert"
+msgstr "Index Insert"
 
 #: library/extensions/widgets-extensions.php:162
 msgid "The widget area inserted after x posts on the index page."
 msgstr "Moodul mis lisatakse indeks-lehele pärast x postitust"
 
+#: library/extensions/widgets-extensions.php:175
+msgid "Index Bottom"
+msgstr "Index Bottom"
+
 #: library/extensions/widgets-extensions.php:177
 msgid "The bottom widget area displayed on the index page."
 msgstr "Alumine moodul indeks-lehel"
+
+#: library/extensions/widgets-extensions.php:190
+msgid "Single Top"
+msgstr "Single Top"
 
 #: library/extensions/widgets-extensions.php:192
 msgid "The top widget area displayed on a single post."
 msgstr "Ülemine moodul üksiku postituse lehel"
 
+#: library/extensions/widgets-extensions.php:205
+msgid "Single Insert"
+msgstr "Single Insert"
+
 #: library/extensions/widgets-extensions.php:207
 msgid "The widget area inserted between the post and the comments on a single post."
 msgstr "Moodul mis lisatakse postituse ja kommentaaride vahele üksiku postituse lehel"
+
+#: library/extensions/widgets-extensions.php:220
+msgid "Single Bottom"
+msgstr "Single Bottom"
 
 #: library/extensions/widgets-extensions.php:222
 msgid "The bottom widget area displayed on a single post."
 msgstr "Alumine moodul üksiku postituse lehel"
 
+#: library/extensions/widgets-extensions.php:235
+msgid "Page Top"
+msgstr "Page Top"
+
 #: library/extensions/widgets-extensions.php:237
 msgid "The top widget area displayed on a page."
 msgstr "Ülemine moodul leheküljel."
+
+#: library/extensions/widgets-extensions.php:250
+msgid "Page Bottom"
+msgstr "Page Bottom"
 
 #: library/extensions/widgets-extensions.php:252
 msgid "The bottom widget area displayed on a page."
 msgstr "Alumine moodul leheküljel."
 
-# @ thematic
 #: library/extensions/widgets.php:55
 msgid "A search form for your blog"
-msgstr "Otsivorm sinu blogi jaoks"
+msgstr "Otsinguvorm"
 
-#: library/extensions/widgets.php:77
-#: library/extensions/widgets.php:132
+#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
 #: library/extensions/widgets.php:175
 msgid "Title:"
 msgstr "Pealkiri:"
 
-# @ thematic
 #: library/extensions/widgets.php:100
 msgid "Log in/out and admin"
-msgstr "Sisse/välja logimine ja haldur"
+msgstr "Sisse/välja logimine ja haldus"
 
-#: library/extensions/widgets.php:101
-#: library/extensions/widgets.php:106
+#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
 msgid "Meta"
 msgstr "Meta"
 
-# @ thematic
 #: library/extensions/widgets.php:145
 msgid "Links to your posts and comments feed"
-msgstr "Viited postituste ja kommentaaride uudsivoole"
+msgstr "Viited postituse ja kommentaride RSSile"
 
-#: library/extensions/widgets.php:146
-#: library/extensions/widgets.php:151
+#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
 msgid "RSS Links"
 msgstr "RSS lingid"
 
@@ -488,197 +621,59 @@ msgstr "Kõik postitused"
 msgid "All comments"
 msgstr "Kõik kommentaarid"
 
-# @ thematic
-#: archives.php:20
+#: library/legacy/deprecated.php:349
+msgid "Logged in as"
+msgstr "Sisse logitud kasutajana"
+
+#: library/legacy/deprecated.php:357 library/legacy/deprecated.php:362
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: page.php:50 template-page-fullwidth.php:51
+msgid "Pages: "
+msgstr "Lehed: "
+
+#: search.php:56
+msgid "Nothing Found"
+msgstr "Ei leitud"
+
+#: search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Kahjuks ei leidunud midagi sobilikku. Palun proovi mõne teise märksõnaga."
+
 #: template-page-blog.php:22
-#, php-format
-msgid "The template %s"
-msgstr "Põhi %s"
-
-# @ thematic
-#: comments.php:24
-msgid "Please do not load this page directly."
-msgstr "Seda lehe sisu saab kuvada ainult kommentaariumi osana."
-
-#: comments.php:111
-msgid "Trackbacks"
-msgstr "Trackback-viite URL"
-
-#: library/extensions/comments-extensions.php:131
-msgid "Comments"
-msgstr " kommentaari"
-
-#: library/extensions/content-extensions.php:334
-msgid "Author Archives:"
-msgstr "Autori arhiiv:"
-
-#: library/extensions/content-extensions.php:1340
-msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
-msgstr "Kahjuks seda lehte ei leitud. Soovitame proovida menüüd või otsingut."
-
-# @ thematic
-#: library/extensions/content-extensions.php:1364
-#, php-format
-msgid "Read More %s"
-msgstr "Loe edasi %s"
-
-# @ thematic
-#: library/extensions/content-extensions.php:1645
-msgid "Responses"
-msgstr "Vastused"
-
-#: library/extensions/content-extensions.php:1648
-msgid "Response"
-msgstr "Vastus"
-
-#: library/extensions/discussion.php:37
-msgid "Your comment is awaiting moderation"
-msgstr "Sinu kommentaar ootab modereerimist"
-
-#: library/extensions/discussion.php:90
-msgid "Your trackback is awaiting moderation"
-msgstr "Sinu trackback-viide ootab modereerimist"
-
-# @ thematic
-#: library/extensions/theme-options.php:56
-msgid "Remove Legacy Options"
-msgstr "Kustuta andmebaasist vanad seadistused"
-
-# @ thematic
-#: library/extensions/theme-options.php:204
-msgid "For more information:"
-msgstr "Lisainfo:"
-
-# @ thematic
-#: library/extensions/theme-options.php:206
-msgid "For support:"
-msgstr "Tugi:"
-
-# @ thematic
-#: library/extensions/theme-options.php:208
-msgid "forums"
-msgstr "foorumid"
-
-# @ thematic
-#: library/extensions/theme-options.php:212
-msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
-msgstr "Järgnevaid valikuid kasutab Thematic Theme raamistik ja/või sellest tuletatud teema."
-
-# @ thematic
-#: library/extensions/theme-options.php:213
-msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
-msgstr "Uusi valikuid saab lisada ja olemasolevaid eemaldada luues tuletatud teema (child theme). Mõistagi saab ka seda konteksti-tundlikku abiteksti tuletatud teemas muuta."
-
-# @ thematic
-#: library/extensions/theme-options.php:219
-msgid "Overview"
-msgstr "Ülevaade"
-
-#: library/extensions/theme-options.php:247
-msgid "For more information about this theme, <a href=\"http://thematictheme.com\">visit ThemeTheme.com</a>. Please visit the <a href=\"http://thematictheme.com/forums/\">ThematicTheme.com Forums</a> if you have any questions about Thematic."
-msgstr "Lisainfot selle teema kohta annab <a href=\"http://thematictheme.com\">ThematicTheme.com</a>, tuge pakub <a href=\"http://thematictheme.com/forums/\">ThematicTheme.com foorum</a>."
-
-# @ thematic
-#: library/extensions/theme-options.php:262
-#, php-format
-msgid "%s Theme Options"
-msgstr "%s teema valikud"
-
-#: library/extensions/theme-options.php:276
-msgid "Save Changes"
-msgstr "Salvesta muudatused"
-
-# @ thematic
-#: library/extensions/theme-options.php:311
-msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
-msgstr "Index Insert mooduli ala lisatakse pärast niimitmendat postitust. Moodulit ei kasutata kui lahter on tühi või 0."
-
-# @ thematic
-#: library/extensions/theme-options.php:324
-msgid "Display a"
-msgstr "Kuva"
-
-# @ thematic
-#: library/extensions/theme-options.php:324
-msgid "with the author's avatar, bio and email on the author page."
-msgstr "koos autori avatari, tutvustuse ja e-postiga autori lehel."
-
-# @ thematic
-#: library/extensions/theme-options.php:337
-msgid "You can use HTML and shortcodes in your footer text. Shortcode examples"
-msgstr "Jaluse tekstis võib kasutada HTMLi ja lühikoode. Lühikoodide näidised"
-
-# @ thematic
-#: library/extensions/theme-options.php:350
-#, php-format
-msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
-msgstr "%s teema valikud on uuendatud. Kustuta vanad valikud andmebaasist."
-
-# @ thematic
-#: library/extensions/theme-options.php:377
-msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
-msgstr "Index Insert mooduli positsiooniks sobib 0 või sellest suurem number. Eelmine väärtus taastatud."
-
-# @ thematic
-#: template-page-blog.php:22
-#, php-format
 msgid "You can include a %s in a childtheme"
-msgstr "Saad kasutada %s tuletatud teemas"
+msgstr "Võid kasutada %s alamteemas (childtheme)"
 
-#~ msgid "<span>%d</span> Trackbacks"
-#~ msgstr "<span>%d</span> trackback-viidet"
+msgid "Thematic"
+msgstr "Thematic"
 
-#~ msgid "<span>%d</span> Comments"
-#~ msgstr "<span>%d</span> kommentaari"
+msgid "http://thematictheme.com"
+msgstr "http://thematictheme.com"
 
-#~ msgid "Blog Archives"
-#~ msgstr "Ajaveebi arhiiv"
+msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
+msgstr "Thematic on SEO-valmis WordPressi teemaraamistik mis on kergesti laiendatav, 13 mooduli-ala ja menüüde toega, küljendus põhineb võrgustikul... &amp; ja veel palju muud head. Ideaalne aluskiht  <strong><em>teema-arenduseks</em></strong>."
 
-#~ msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-#~ msgstr "Loe edasi <span class=\"meta-nav\">&raquo;</span>"
+msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
 
-#~ msgid "The widgetized Index Insert will follow after this post number."
-#~ msgstr "Moodul kuvatakse indeks-lehel pärast niimitmendat postitust."
+msgid "http://themeshaper.com/"
+msgstr "http://themeshaper.com/"
 
-#~ msgid ""
-#~ "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank"
-#~ "\">microformatted vCard</a>—with the author's avatar, bio and email—on "
-#~ "the author page."
-#~ msgstr ""
-#~ "Kuva <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank"
-#~ "\">mikroformaadis vCard</a>—autori avatari, tutvustuse a e-postiga—autori "
-#~ "lehel."
+msgid "white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats"
+msgstr "white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats"
 
-#~ msgid ""
-#~ "You can use the following shortcodes in your footer text: [wp-link] "
-#~ "[theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
-#~ msgstr ""
-#~ "Jaluse tekstis võid kasutada järgmisi lühikoode: [wp-link] [theme-link] "
-#~ "[loginout-link] [blog-title] [blog-link] [the-year]"
+msgid "Deprecated Archives Template"
+msgstr "Iganenud arhiivide põhi"
 
-#~ msgid "Powered by [wp-link]. Built on the [theme-link]."
-#~ msgstr "Kasutusel [wp-link]. Kujundus [theme-link]."
+msgid "Links Page"
+msgstr "Viidete põhi"
 
-#~ msgid "settings saved."
-#~ msgstr "seaded salvestatud."
+msgid "Archives Page"
+msgstr "Arhiivide põhi"
 
-#~ msgid "settings reset."
-#~ msgstr "seaded taastatud."
+msgid "Deprecated Blog Template"
+msgstr "Iganenud ajaveebi põhi"
 
-#~ msgid "widgets reset."
-#~ msgstr "moodulid taastatud."
-
-#~ msgid "Reset Widgets"
-#~ msgstr "Taasta moodulite algolek"
-
-#~ msgid "definitions created."
-#~ msgstr "definitsioonid loodud."
-
-#~ msgid "failed to create directory:"
-#~ msgstr "kataloogi ei õnnestunud luua:"
-
-#~ msgid "failed to create the file:"
-#~ msgstr "faili ei õnnestunud luua:"
-
-#~ msgid "Create Definitions"
-#~ msgstr "Loo definitsioonid"
+msgid "Full Width"
+msgstr "Täislaiusega põhi"
