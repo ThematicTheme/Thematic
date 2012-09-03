@@ -299,13 +299,20 @@ function thematic_get_comment_link( $link , $comment, $args ) {
 
 	$args['type'] = 'comment';
 	$args['page'] = get_page_of_comment( $comment->comment_ID, $args );
+	
+	if ( $args['per_page'] ) {
+		if ( '' == $args['page'] )
+			$args['page'] = ( !empty($in_comment_loop) ) ? get_query_var('cpage') : get_page_of_comment( $comment->comment_ID, $args );
 
-	if ( $wp_rewrite->using_permalinks() )
-	   	$link = user_trailingslashit( trailingslashit( get_permalink( $comment->comment_post_ID ) ) . 'comment-page-' . $args['page'], 'comment' );
-	else
-		$link = add_query_arg( 'cpage', $args['page'] , get_permalink( $comment->comment_post_ID ) );
+		if ( $wp_rewrite->using_permalinks() )
+			$link = user_trailingslashit( trailingslashit( get_permalink( $comment->comment_post_ID ) ) . 'comment-page-' . $args['page'], 'comment' );
+		else
+			$link = add_query_arg( 'cpage', $args['page'], get_permalink( $comment->comment_post_ID ) );
+	} else {
+		$link = get_permalink( $comment->comment_post_ID );
+	}
 
-	return $link; 
+	return $link . '#comment-' . $comment->comment_ID; 
 }
 add_filter( 'get_comment_link', 'thematic_get_comment_link', 10, 3 );
 
