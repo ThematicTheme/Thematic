@@ -1,0 +1,7 @@
+﻿<wpml-config>
+    <admin-texts>
+        <key name="thematic_theme_opt">
+            <key name="footer_txt" />
+        </key>
+    </admin-texts>    
+</wpml-config>
