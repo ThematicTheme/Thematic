@@ -1,0 +1,678 @@
+# Translation of Thematic 1.0.3 in Chinese (China)
+# This file is distributed under the same license as the Thematic 1.0.3 package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2012-10-22 09:59:38+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Thematic 1.0.3\n"
+
+#: archives.php:20 template-page-blog.php:22
+msgid "The template %s"
+msgstr "模版%s"
+
+#: attachment.php:54 library/extensions/content-extensions.php:630
+#: library/extensions/content-extensions.php:689
+msgid "Pages:"
+msgstr "页码："
+
+#: author.php:67
+msgid "Email "
+msgstr "电子邮件"
+
+#: comments.php:24
+msgid "Please do not load this page directly."
+msgstr "请勿直接加载本页面。"
+
+#: comments.php:33
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "输入密码以查看评论。"
+
+#: comments.php:111
+msgid "Trackbacks"
+msgstr "条互链"
+
+#: comments.php:111
+msgctxt "%1$ and %2$s are <span> tags"
+msgid "%1$sOne%2$s Trackback"
+msgstr "%1$s一%2$s条互链"
+
+#: functions.php:194
+msgid "Primary Menu"
+msgstr "主菜单"
+
+#: library/extensions/comments-extensions.php:120
+msgctxt "One Comment, where %$1s and %$2s are <span> tags"
+msgid "%1$sOne%2$s Comment"
+msgstr "%1$s1%2$s条评论"
+
+#: library/extensions/comments-extensions.php:131
+msgid "Comments"
+msgstr "条评论"
+
+#: library/extensions/comments-extensions.php:155
+msgid "Post a Comment"
+msgstr "添加一条评论"
+
+#: library/extensions/comments-extensions.php:167
+msgid "Post a Reply to %s"
+msgstr "回复 %s"
+
+#: library/extensions/comments-extensions.php:179
+msgctxt "noun"
+msgid "Comment"
+msgstr "评论"
+
+#: library/extensions/comments-extensions.php:190
+msgid "Cancel reply"
+msgstr "取消回复"
+
+#: library/extensions/comments-extensions.php:202
+msgid "Post Comment"
+msgstr "添加评论"
+
+#: library/extensions/comments-extensions.php:228
+#: library/legacy/deprecated.php:357
+msgid "Name"
+msgstr "姓名"
+
+#: library/extensions/comments-extensions.php:228
+#: library/extensions/comments-extensions.php:229
+msgctxt "denotes required field"
+msgid "*"
+msgstr "*"
+
+#: library/extensions/comments-extensions.php:229
+#: library/legacy/deprecated.php:362
+msgid "Email"
+msgstr "电子邮件"
+
+#: library/extensions/comments-extensions.php:230
+#: library/legacy/deprecated.php:367
+msgid "Website"
+msgstr "网站"
+
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:354
+msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
+msgid "Your email is %1$snever%2$s published nor shared."
+msgstr "你的电子邮件%1$s不会%2$s被公开或用作其他用途。"
+
+#: library/extensions/comments-extensions.php:238
+msgctxt "%$1s and %$2s are <span> tags"
+msgid "Required fields are marked %1$s*%2$s"
+msgstr "标记%1$s*%2$s的项为必填项。"
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:336
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "%1$s登录%2$s以添加评论。"
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:336
+msgid "Log in"
+msgstr "登录"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:349
+msgid "Logged in as %s"
+msgstr "以%s身份登录"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:349
+msgid "Log out of this account"
+msgstr "注销"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:349
+msgid "Log out?"
+msgstr "确认注销？"
+
+#: library/extensions/comments-extensions.php:244
+#: library/legacy/deprecated.php:379
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes"
+msgstr "你可以使用以下%1$sHTML%2$s标签和属性。"
+
+#: library/extensions/content-extensions.php:334
+msgid "Author Archives:"
+msgstr "按作者分类："
+
+#: library/extensions/content-extensions.php:339
+#: library/extensions/header-extensions.php:103
+msgid "Category Archives:"
+msgstr "按类别分类："
+
+#: library/extensions/content-extensions.php:347
+#: library/extensions/header-extensions.php:99
+msgid "Search Results for:"
+msgstr "搜索结果："
+
+#: library/extensions/content-extensions.php:352
+#: library/extensions/header-extensions.php:107
+msgid "Tag Archives:"
+msgstr "按标签分类："
+
+#: library/extensions/content-extensions.php:361
+#: library/extensions/content-extensions.php:368
+msgid "Archives:"
+msgstr "分类目录："
+
+#: library/extensions/content-extensions.php:373
+msgid "Daily Archives: %s"
+msgstr "按日分类：%s"
+
+#: library/extensions/content-extensions.php:377
+msgid "Monthly Archives: %s"
+msgstr "按月分类：%s"
+
+#: library/extensions/content-extensions.php:381
+msgid "Yearly Archives: %s"
+msgstr "按年分类：%s"
+
+#: library/extensions/content-extensions.php:424
+#: library/extensions/content-extensions.php:1706
+msgid "Older posts"
+msgstr "较老博文"
+
+#: library/extensions/content-extensions.php:426
+#: library/extensions/content-extensions.php:1708
+msgid "Newer posts"
+msgstr "较新博文"
+
+#: library/extensions/content-extensions.php:888
+#: library/extensions/content-extensions.php:1418
+msgid "Edit post"
+msgstr "编辑本文"
+
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1420
+#: library/extensions/discussion-extensions.php:37
+#: library/extensions/discussion.php:84 links.php:54 page.php:52
+#: template-page-archives.php:55 template-page-fullwidth.php:53
+msgid "Edit"
+msgstr "编辑"
+
+#: library/extensions/content-extensions.php:918
+#: library/extensions/header-extensions.php:111
+msgid "Not Found"
+msgstr "无结果"
+
+#: library/extensions/content-extensions.php:923
+#: library/extensions/content-extensions.php:1141
+#: library/extensions/content-extensions.php:1145
+#: library/extensions/content-extensions.php:1376
+msgid "Permalink to %s"
+msgstr "%s的永久链接"
+
+#: library/extensions/content-extensions.php:983
+msgid "By"
+msgstr "作者："
+
+#: library/extensions/content-extensions.php:994
+msgid "View all posts by %s"
+msgstr "查看%s发表的文章"
+
+#: library/extensions/content-extensions.php:1023
+msgid "Published:"
+msgstr "发布："
+
+#: library/extensions/content-extensions.php:1199
+msgid "Archives by Category"
+msgstr "类别目录"
+
+#: library/extensions/content-extensions.php:1230
+msgid "Archives by Month"
+msgstr "月份目录"
+
+#: library/extensions/content-extensions.php:1291
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
+msgstr "抱歉，没有找到你所需的结果。建议使用搜索功能。"
+
+#: library/extensions/content-extensions.php:1297 search.php:70
+msgid "Find"
+msgstr "查找"
+
+#: library/extensions/content-extensions.php:1316
+msgid "Read More %s"
+msgstr "继续阅读 %s"
+
+#: library/extensions/content-extensions.php:1368
+msgid "Browse the %s archive."
+msgstr "浏览%s类别"
+
+#: library/extensions/content-extensions.php:1370
+msgid "Permalink to %s Archive"
+msgstr "%s类别目录的永久链接"
+
+#: library/extensions/content-extensions.php:1376
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Bookmark the %1$spermalink%2$s."
+msgstr "将该链接%1$s存入书签%2$s。"
+
+#: library/extensions/content-extensions.php:1534
+msgid "This entry was posted in %s"
+msgstr "发布在%s"
+
+#: library/extensions/content-extensions.php:1545
+msgid "Also posted in %s"
+msgstr "同时发布在%s"
+
+#: library/extensions/content-extensions.php:1549
+msgid "Posted in %s"
+msgstr "发布在%s"
+
+#: library/extensions/content-extensions.php:1575
+msgid "This entry is tagged"
+msgstr "条目已有标签"
+
+#: library/extensions/content-extensions.php:1578
+msgid "and tagged"
+msgstr "已有标签"
+
+#: library/extensions/content-extensions.php:1581
+msgid "Also tagged"
+msgstr "已有标签"
+
+#: library/extensions/content-extensions.php:1583
+msgid "Tagged"
+msgstr "已有标签"
+
+#: library/extensions/content-extensions.php:1613
+#: library/extensions/content-extensions.php:1619
+msgid "Comment on %s"
+msgstr "%s的评论"
+
+#: library/extensions/content-extensions.php:1615
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] "%s 个回复或互链"
+
+#: library/extensions/content-extensions.php:1620
+msgid "Leave a comment"
+msgstr "发表评论"
+
+#: library/extensions/content-extensions.php:1623
+msgid "Comments closed"
+msgstr "评论已关闭"
+
+#: library/extensions/content-extensions.php:1647
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
+msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
+msgstr "%1$s发表评论%2$s或留个互链：%3$s"
+
+#: library/extensions/content-extensions.php:1648
+#: library/extensions/content-extensions.php:1663
+msgid "Post a comment"
+msgstr "发表评论"
+
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1659
+msgid "Trackback URL for your post"
+msgstr "本文互链地址"
+
+#: library/extensions/content-extensions.php:1653
+#: library/extensions/content-extensions.php:1660
+msgid "Trackback URL"
+msgstr "互链地址"
+
+#: library/extensions/content-extensions.php:1656
+msgctxt "%s is trackback url, wrapped in link tags"
+msgid "Comments are closed, but you can leave a trackback: %s"
+msgstr "评论已关闭，你可以留个互链：%s"
+
+#: library/extensions/content-extensions.php:1663
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr "互链已关闭，你可以%1$s发表评论%2$s。"
+
+#: library/extensions/content-extensions.php:1665
+msgid "Both comments and trackbacks are currently closed."
+msgstr "评论和互链已关闭。"
+
+#: library/extensions/discussion-extensions.php:27
+msgctxt "Posted {$date} at {$time}"
+msgid "Posted %s at %s"
+msgstr "发表于%s %s"
+
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink to this comment"
+msgstr "评论的永久链接"
+
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink"
+msgstr "永久链接"
+
+#: library/extensions/discussion-extensions.php:36
+msgid "Edit comment"
+msgstr "编辑评论"
+
+#: library/extensions/discussion.php:37
+msgid "Your comment is awaiting moderation"
+msgstr "你的评论正在审核中"
+
+#: library/extensions/discussion.php:52
+msgid "Reply"
+msgstr "回复"
+
+#: library/extensions/discussion.php:53
+msgid "Log in to reply."
+msgstr "登录以发表回复。"
+
+#: library/extensions/discussion.php:80
+msgctxt "By {$authorlink} on {$date} at {$time}"
+msgid "By %1$s on %2$s at %3$s"
+msgstr "由%1$s发表于%2$s %3$s"
+
+#: library/extensions/discussion.php:90
+msgid "Your trackback is awaiting moderation"
+msgstr "你的互链正在等待审核"
+
+#: library/extensions/header-extensions.php:319
+#: library/extensions/widgets.php:157
+msgid "Posts RSS feed"
+msgstr "RSS订阅本文"
+
+#: library/extensions/header-extensions.php:343
+#: library/extensions/widgets.php:158
+msgid "Comments RSS feed"
+msgstr "RSS订阅评论"
+
+#: library/extensions/header-extensions.php:642
+msgid "Skip navigation to the content"
+msgstr "跳过导航"
+
+#: library/extensions/header-extensions.php:642
+msgid "Skip to content"
+msgstr "直接查看正文"
+
+#: library/extensions/helpers.php:50 library/extensions/helpers.php:69
+msgid "There is no excerpt because this is a protected post."
+msgstr "本文受保护，无法提供摘要。"
+
+#: library/extensions/theme-options.php:50
+msgid "Index Insert Position"
+msgstr "目录插入位"
+
+#: library/extensions/theme-options.php:51
+msgid "Info on Author Page"
+msgstr "作者页信息"
+
+#: library/extensions/theme-options.php:52
+msgid "Text in Footer"
+msgstr "页脚文本"
+
+#: library/extensions/theme-options.php:56
+msgid "Remove Legacy Options"
+msgstr "删除旧版设置"
+
+#: library/extensions/theme-options.php:170
+msgid "Theme Options"
+msgstr "主题设置"
+
+#: library/extensions/theme-options.php:202
+msgid "For more information:"
+msgstr "更多信息："
+
+#: library/extensions/theme-options.php:204
+msgid "For support:"
+msgstr "技术支持："
+
+#: library/extensions/theme-options.php:206
+msgid "forums"
+msgstr "讨论版"
+
+#: library/extensions/theme-options.php:210
+msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
+msgstr "以下设置来自Thematic及其子主题。"
+
+#: library/extensions/theme-options.php:211
+msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
+msgstr "建立子主题时，你可以添加新的选项或删除旧的设置项。同时，文本提示也可以进行修改。"
+
+#: library/extensions/theme-options.php:217
+msgid "Overview"
+msgstr "总览"
+
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
+msgstr "更多该主题的信息请访问%1$sThematicTheme.com%2$s"
+
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
+msgstr "咨询及疑问请访问%1$sThematicTheme.com%2$s"
+
+#: library/extensions/theme-options.php:256
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options"
+msgstr "%s主题选项"
+
+#: library/extensions/theme-options.php:294
+msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
+msgstr "目录小工具会在以下楼层后出现。如果不想使用请填0。"
+
+#: library/extensions/theme-options.php:307
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
+msgstr "显示一张带有头像和电子邮件地址的%1$svCard名片%2$s。"
+
+#: library/extensions/theme-options.php:320
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr "你可以在页脚中使用HTML标签和微型标签，如：%s"
+
+#: library/extensions/theme-options.php:333
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
+msgstr "%s主题选项已更新并采用新的格式。请从数据库中移除旧版选项。"
+
+#: library/extensions/theme-options.php:360
+msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
+msgstr "首页小工具插入楼层应当大于或等于零。已恢复到之前的设置。"
+
+#: library/extensions/widgets-extensions.php:34
+msgid "To search, type and hit enter"
+msgstr "搜索..."
+
+#: library/extensions/widgets-extensions.php:40
+#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
+msgid "Search"
+msgstr "搜索"
+
+#: library/extensions/widgets-extensions.php:70
+msgid "Primary Aside"
+msgstr "主边栏"
+
+#: library/extensions/widgets-extensions.php:72
+msgid "The primary widget area, most often used as a sidebar."
+msgstr "首要小工具区域，通常用作边栏"
+
+#: library/extensions/widgets-extensions.php:85
+msgid "Secondary Aside"
+msgstr "次要边栏"
+
+#: library/extensions/widgets-extensions.php:87
+msgid "The secondary widget area, most often used as a sidebar."
+msgstr "次要小工具区域，通常用作边栏"
+
+#: library/extensions/widgets-extensions.php:100
+msgid "1st Subsidiary Aside"
+msgstr "主要底边栏"
+
+#: library/extensions/widgets-extensions.php:102
+msgid "The 1st widget area in the footer."
+msgstr "页脚的主要小工具区。"
+
+#: library/extensions/widgets-extensions.php:115
+msgid "2nd Subsidiary Aside"
+msgstr "次要底边栏"
+
+#: library/extensions/widgets-extensions.php:117
+msgid "The 2nd widget area in the footer."
+msgstr "页脚的第二小工具区。"
+
+#: library/extensions/widgets-extensions.php:130
+msgid "3rd Subsidiary Aside"
+msgstr "第三底边栏"
+
+#: library/extensions/widgets-extensions.php:132
+msgid "The 3rd widget area in the footer."
+msgstr "页脚的第三小工具区。"
+
+#: library/extensions/widgets-extensions.php:145
+msgid "Index Top"
+msgstr "首页顶部"
+
+#: library/extensions/widgets-extensions.php:147
+msgid "The top widget area displayed on the index page."
+msgstr "首页顶部的小工具区。"
+
+#: library/extensions/widgets-extensions.php:160
+msgid "Index Insert"
+msgstr "首页插入"
+
+#: library/extensions/widgets-extensions.php:162
+msgid "The widget area inserted after x posts on the index page."
+msgstr "首页x楼后插入的小工具区。"
+
+#: library/extensions/widgets-extensions.php:175
+msgid "Index Bottom"
+msgstr "首页底部"
+
+#: library/extensions/widgets-extensions.php:177
+msgid "The bottom widget area displayed on the index page."
+msgstr "首页底部的小工具区。"
+
+#: library/extensions/widgets-extensions.php:190
+msgid "Single Top"
+msgstr "博文顶部"
+
+#: library/extensions/widgets-extensions.php:192
+msgid "The top widget area displayed on a single post."
+msgstr "博文页顶部的小工具区。"
+
+#: library/extensions/widgets-extensions.php:205
+msgid "Single Insert"
+msgstr "博文中部"
+
+#: library/extensions/widgets-extensions.php:207
+msgid "The widget area inserted between the post and the comments on a single post."
+msgstr "博文页正文和评论之间的小工具区。"
+
+#: library/extensions/widgets-extensions.php:220
+msgid "Single Bottom"
+msgstr "博文底部"
+
+#: library/extensions/widgets-extensions.php:222
+msgid "The bottom widget area displayed on a single post."
+msgstr "博文页底部的小工具区。"
+
+#: library/extensions/widgets-extensions.php:235
+msgid "Page Top"
+msgstr "页面顶部"
+
+#: library/extensions/widgets-extensions.php:237
+msgid "The top widget area displayed on a page."
+msgstr "页面顶部的小工具区。"
+
+#: library/extensions/widgets-extensions.php:250
+msgid "Page Bottom"
+msgstr "页面底部"
+
+#: library/extensions/widgets-extensions.php:252
+msgid "The bottom widget area displayed on a page."
+msgstr "页面底部的小工具区。"
+
+#: library/extensions/widgets.php:55
+msgid "A search form for your blog"
+msgstr "站内搜索窗格"
+
+#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
+#: library/extensions/widgets.php:175
+msgid "Title:"
+msgstr "标题："
+
+#: library/extensions/widgets.php:100
+msgid "Log in/out and admin"
+msgstr "登录和后台"
+
+#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
+msgid "Meta"
+msgstr "信息"
+
+#: library/extensions/widgets.php:145
+msgid "Links to your posts and comments feed"
+msgstr "订阅该主题和评论"
+
+#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
+msgid "RSS Links"
+msgstr "RSS链接"
+
+#: library/extensions/widgets.php:157
+msgid "All posts"
+msgstr "所有博文"
+
+#: library/extensions/widgets.php:158
+msgid "All comments"
+msgstr "所有评论"
+
+#: library/legacy/deprecated.php:349
+msgid "Logged in as"
+msgstr "登录身份："
+
+#: library/legacy/deprecated.php:357 library/legacy/deprecated.php:362
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: page.php:50 template-page-fullwidth.php:51
+msgid "Pages: "
+msgstr "页码："
+
+#: search.php:56
+msgid "Nothing Found"
+msgstr "没有结果"
+
+#: search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "很抱歉，没有符合搜索条件的结果。您可以尝试其他关键词。"
+
+#: template-page-blog.php:22
+msgid "You can include a %s in a childtheme"
+msgstr "你可以在子主题中包含%s"
+
+msgid "Thematic"
+msgstr "Thematic"
+
+msgid "http://thematictheme.com"
+msgstr "http://thematictheme.com"
+
+msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
+msgstr "Thematic是一个具备高度扩展性的WordPress主题架构，包含13个小工具区，下拉菜单，基于网格的布局，插件整合，页脚微型代码等多种特色功能，并为搜索引擎做了优化。<strong><em>Thematic适应任何一种博客，同时也是主题开发者的理想平台。</em></strong> "
+
+msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+
+msgid "http://themeshaper.com/"
+msgstr "http://themeshaper.com/"
+
+msgid "white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats"
+msgstr "white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats"
+
+msgid "Deprecated Archives Template"
+msgstr "不兼容的分类目录模版"
+
+msgid "Links Page"
+msgstr "链接页"
+
+msgid "Archives Page"
+msgstr "分类目录页"
+
+msgid "Deprecated Blog Template"
+msgstr "不兼容的博客模版"
+
+msgid "Full Width"
+msgstr "满宽模式"
