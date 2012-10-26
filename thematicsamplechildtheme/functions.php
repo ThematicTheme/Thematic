@@ -54,7 +54,7 @@ function childtheme_setup() {
 		// Header text display default
 		'header-text'	=> true,
 		// Header text color default
-		'default-text-color'	=> '',
+		'default-text-color'	=> '000',
 		// Header image width (in pixels)
 		'width'	=> '940',
 		// Header image height (in pixels)
@@ -84,8 +84,8 @@ add_action('after_setup_theme', 'childtheme_setup', 20);
 function childtheme_header_style() {
 	?>	
 	<style type="text/css">
-	/* Sets header image as background for div#branding */
 	<?php
+	/* Sets header image as background for div#branding */
 	if ( get_header_image() && HEADER_IMAGE != get_header_image() ) {
 		?>
 		#branding {
@@ -100,13 +100,22 @@ function childtheme_header_style() {
 		}	
 	}
 	?>
-	/* Sets text color for #blog-title and #blog-description */
 	<?php
+	/* Sets text color for #blog-title and #blog-description */
 	if ( get_header_textcolor() ) {
 		?>
 		#blog-title, #blog-title a, #blog-description {
 			color:#<?php header_textcolor(); ?>;
 		}
+		<?php
+	}
+	/* Removes header text if desired */
+	if ( ! display_header_text() ) {
+		?>
+		#blog-title, #blog-title a, #blog-description {
+			display:none;
+		}
+		#branding { height: 235px; padding:0;}
 		<?php
 	}
 	?>
