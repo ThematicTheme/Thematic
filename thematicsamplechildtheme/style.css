@@ -36,4 +36,5 @@ This work, like WordPress, is released under GNU General Public License, version
 /* Prepare theme for plugins */
 @import url('../thematic/library/styles/plugins.css');
 
-
+/* Overriding Thematic's styles for congruity with WP-Admin > Appearance > Header default header text color settings */
+#blog-description { color: #000 }
