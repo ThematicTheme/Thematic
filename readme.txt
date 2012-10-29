@@ -29,6 +29,7 @@ Features:
 
 == Changelog ==
 = 1.0.3.2 =
+* Changed: Samplechildtheme custom header styling
 * Fixed: Syntax error in links.php
 = 1.0.3.1 =
 * Updated: Spanish and Catalan localization files
