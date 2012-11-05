@@ -28,6 +28,13 @@ Features:
 * Options for multi-author blogs
 
 == Changelog ==
+= 1.0.3.3-beta =
+* Fixed thematic_body_class() and thematic_post_class() to correctly filter body_class() and post_class()
+* Fixed nextpaged and excerpt classes in thematic_body_class() and thematic_post_class()
+* Removed _deprecated_function() from: thematic_body_class() thematic_post_class() childtheme_override_body_class() childtheme_override_post_class() due to issues with WP_DEBUG breaking the post div and body tag class attributes
+* Moved the thematic_bodyopen() functionality to thematic_body()
+* Deprecated thematic_bodyopen() because it was redundant
+* Moved thematic_body() and childtheme_override_thematic_body() from dynamic-classes.php to header-extensions.php
 = 1.0.3.2 =
 * Changed: Samplechildtheme custom header styling
 * Fixed: Syntax error in links.php
