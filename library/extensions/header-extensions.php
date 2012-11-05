@@ -499,10 +499,32 @@ function thematic_add_menuclass($ulclass) {
 }
 
 
+if ( function_exists( 'childtheme_override_body' ) )  {
+	/**
+	 * @ignore
+	 */function thematic_body() {
+		childtheme_override_body();
+	}
+} else {
+	/**
+	 * Creates the body tag
+	 */
+	 function thematic_body() {
+    	if ( apply_filters( 'thematic_show_bodyclass',TRUE ) ) { 
+        	// Creating the body class
+    		echo '<body ';
+    		body_class();
+    		echo '>' . "\n\n";
+    	} else {
+    		echo '<body>' . "\n\n";
+    }
+}
+
+
 /**
  * Register action hook: thematic_before
  * 
- * Located in header.php, just after the opening body tag, before anything else.
+ * Located in header.php, just after the body tag, before anything else.
  */
 function thematic_before() {
     do_action( 'thematic_before' );

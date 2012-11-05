@@ -6,40 +6,12 @@
  * @subpackage DynamicClasses
  */
  
-if ( function_exists( 'childtheme_override_body' ) )  {
-	/**
-	 * @ignore
-	 */function thematic_body() {
-		childtheme_override_body();
-	}
-} else {
-	/**
-	 * @ignore
-	 */function thematic_body() {
-		thematic_bodyopen();
-	}
-}
-
-/**
- * thematic_bodyopen function
- */
-function thematic_bodyopen() {
-    if ( apply_filters( 'thematic_show_bodyclass',TRUE ) ) { 
-        // Creating the body class
-    	echo '<body ';
-    	body_class();
-    	echo '>' . "\n\n";
-    } else {
-    	echo '<body>' . "\n\n";
-    }
-}
-
 
 if ( function_exists( 'childtheme_override_body_class' ) )  {
-	_deprecated_function( 'childtheme_override_body_class', '1.0.1.3','filter body_class()' );
 	/**
 	 * @ignore
-	 */function thematic_body_class() {
+	 */
+	 function thematic_body_class() {
 		childtheme_override_body_class();
 	}
 } else {
@@ -49,7 +21,6 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	 * @param bool $print (default: true)
 	 */
 	function thematic_body_class( $c ) {
-		_deprecated_function( 'thematic_body_class', '1.0.1.3', 'filter body_class()' );
 		global $wp_query, $current_user, $blog_id, $post, $taxonomy;
 	    
 	    $c = array();
@@ -293,7 +264,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 				        $c[] = 'search-paged-' . $page;
  				} 
  			// Paged classes; for page x = 1	For all post types
- 			} elseif ( strpos( $post->post_content, '<!--nextpage-->') )  { 
+ 			} elseif ( isset( $thematic_nextpaged ) )  { 
  				if ( thematic_is_custom_post_type() ) {
 				    	$c[] = str_replace( '_','-',$post->post_type ) . '-paged-1';
  				    } elseif (is_page()) {
@@ -413,10 +384,10 @@ function thematic_browser_class_names($classes) {
 
 
 if (function_exists('childtheme_override_post_class'))  {
-	_deprecated_function( 'childtheme_override_post_class', '1.0.1.3', 'filter post_class()' );
 	/**
 	 * @ignore
-	 */function thematic_post_class() {
+	 */
+	 function thematic_post_class() {
 		childtheme_override_post_class();
 	}
 } else {
@@ -424,7 +395,6 @@ if (function_exists('childtheme_override_post_class'))  {
 	 * Generates semantic classes for each post DIV element
 	 */
 	function thematic_post_class( $c ) {
-		_deprecated_function( 'thematic_post_class', '1.0.1.3', 'filter post_class()' );
 
 		global $post, $thematic_post_alt, $thematic_content_length, $taxonomy;
 	
@@ -463,14 +433,21 @@ if (function_exists('childtheme_override_post_class'))  {
 			}
 		}
 
+		$thematic_nextpaged = preg_match( '/<!--nextpage(.*?)-->/', $post->post_content );
+
+		if( isset( $thematic_nextpaged ) )
+			$c[] = 'is-paged';
+
+		$thematic_excerpt_more = preg_match( '/<!--more(.*?)-->/', $post->post_content ); 
+		
 		// For posts displayed as full content
-		if ($thematic_content_length == 'full')
+		if ( $thematic_content_length == 'full' && !has_excerpt() && !isset( $thematic_excerpt_more )  )
 			$c[] = 'is-full';
 
 		// For posts displayed as excerpts
-		if ($thematic_content_length == 'excerpt') {
+		if ( isset( $thematic_excerpt_more )  || $thematic_content_length == 'excerpt' || has_excerpt() ) {
 			$c[] = 'is-excerpt';
-			if ( has_excerpt() && !preg_match( '/<!--more(.*?)?-->/', $post->post_content ) ) {
+			if ( has_excerpt() || isset( $thematic_excerpt_more ) ) {
 				// For wp-admin Write Page generated excerpts
 				$c[] = 'custom-excerpt';
 			} else {
@@ -484,7 +461,7 @@ if (function_exists('childtheme_override_post_class'))  {
 			$c[] = 'has-excerpt';
 			
 		//	For posts using more tag
-		if ( preg_match( '/<!--more(.*?)?-->/', $post->post_content ) ) {	
+		if ( isset($thematic_excerpt_more ) ) {	
 			if ( !is_single() ) {
 				$c[] = 'wp-teaser';
 			} elseif ( is_single() ) {
