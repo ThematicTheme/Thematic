@@ -502,7 +502,8 @@ function thematic_add_menuclass($ulclass) {
 if ( function_exists( 'childtheme_override_body' ) )  {
 	/**
 	 * @ignore
-	 */function thematic_body() {
+	 */
+	 function thematic_body() {
 		childtheme_override_body();
 	}
 } else {

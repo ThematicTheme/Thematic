@@ -22,8 +22,6 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	 */
 	function thematic_body_class( $c ) {
 		global $wp_query, $current_user, $blog_id, $post, $taxonomy;
-	    
-	    $c = array();
 	
 		if ( apply_filters('thematic_show_bc_wordpress', TRUE ) ) {
 	        // It's surely a WordPress blog, right?
@@ -399,7 +397,10 @@ if (function_exists('childtheme_override_post_class'))  {
 		global $post, $thematic_post_alt, $thematic_content_length, $taxonomy;
 	
 		// hentry for hAtom compliace, gets 'alt' for every other post DIV, describes the post type and p[n]
-		$c = array( 'hentry', "p$thematic_post_alt", str_replace( '_', '-', $post->post_type) , $post->post_status );
+		$c[] = 'hentry';
+		$c[] = "p$thematic_post_alt";
+		$c[] =  str_replace( '_', '-', $post->post_type );
+		$c[] =  $post->post_status ;
 	
 		// Author for the post queried
 		$c[] = 'author-' . sanitize_title_with_dashes( strtolower( get_the_author_meta( 'user_login' ) ) );
@@ -435,21 +436,23 @@ if (function_exists('childtheme_override_post_class'))  {
 
 		$thematic_nextpaged = preg_match( '/<!--nextpage(.*?)-->/', $post->post_content );
 
-		if( isset( $thematic_nextpaged ) )
-			$c[] = 'is-paged';
+		if( $thematic_nextpaged )
+			$c[] = 'is-paged-excerpt';
 
 		$thematic_excerpt_more = preg_match( '/<!--more(.*?)-->/', $post->post_content ); 
 		
 		// For posts displayed as full content
-		if ( $thematic_content_length == 'full' && !has_excerpt() && !isset( $thematic_excerpt_more )  )
+		if ( $thematic_content_length == 'full' && !has_excerpt() && !$thematic_excerpt_more && !$thematic_nextpaged )  
 			$c[] = 'is-full';
 
 		// For posts displayed as excerpts
-		if ( isset( $thematic_excerpt_more )  || $thematic_content_length == 'excerpt' || has_excerpt() ) {
+		if ( $thematic_excerpt_more  || $thematic_content_length == 'excerpt' || has_excerpt() ) {
 			$c[] = 'is-excerpt';
-			if ( has_excerpt() || isset( $thematic_excerpt_more ) ) {
+			if ( has_excerpt() ) {
 				// For wp-admin Write Page generated excerpts
 				$c[] = 'custom-excerpt';
+			} elseif ( $thematic_excerpt_more ) {
+				$c[] = 'moretag-excerpt';
 			} else {
 				// For automatically generated excerpts
 				$c[] = 'auto-excerpt';
@@ -461,13 +464,9 @@ if (function_exists('childtheme_override_post_class'))  {
 			$c[] = 'has-excerpt';
 			
 		//	For posts using more tag
-		if ( isset($thematic_excerpt_more ) ) {	
-			if ( !is_single() ) {
-				$c[] = 'wp-teaser';
-			} elseif ( is_single() ) {
-				$c[] = 'has-teaser';
+		if ( $thematic_excerpt_more && is_single() ) {
+				$c[] = 'has-moretag-excerpt';
 			}
-		}
 						
 		// For posts with comments open or closed
 		if ( comments_open() ) {
