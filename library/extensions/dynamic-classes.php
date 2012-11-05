@@ -264,7 +264,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 				        $c[] = 'search-paged-' . $page;
  				} 
  			// Paged classes; for page x = 1	For all post types
- 			} elseif ( isset( $thematic_nextpaged ) )  { 
+ 			} elseif ( preg_match( '/<!--nextpage(.*?)-->/', $post->post_content ) )  { 
  				if ( thematic_is_custom_post_type() ) {
 				    	$c[] = str_replace( '_','-',$post->post_type ) . '-paged-1';
  				    } elseif (is_page()) {
