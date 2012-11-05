@@ -412,12 +412,12 @@ function thematic_legacy_comment_form(){
 /**
  * Redundant function for opening body tag
  *
- * the contents of this function wee moved to thematic_body()
+ * the contents of this function were moved to thematic_body()
  *
  * @deprecated 1.0.3.3
  */
 
-function thematic_bodyopen()
+function thematic_bodyopen() {
 	_deprecated_function( __FUNCTION__, '1.0.3.3', 'thematic_body()' ); 
-
+}
 ?>

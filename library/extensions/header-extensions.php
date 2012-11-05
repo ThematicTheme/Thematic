@@ -517,7 +517,8 @@ if ( function_exists( 'childtheme_override_body' ) )  {
     		echo '>' . "\n\n";
     	} else {
     		echo '<body>' . "\n\n";
-    }
+    	}
+	}
 }
 
 
