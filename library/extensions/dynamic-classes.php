@@ -18,7 +18,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	/**
 	 * Generates semantic classes for BODY element
 	 *
-	 * @param bool $print (default: true)
+	 * @param array $c body classes
 	 */
 	function thematic_body_class( $c ) {
 		global $wp_query, $current_user, $blog_id, $post, $taxonomy;
@@ -278,15 +278,22 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	}
 }
 
-// Add Legacy Body Classes to body_class()
-if ( current_theme_supports ( 'thematic_legacy_body_class' ) ) {
-	add_filter( 'body_class', 'thematic_body_class', 20 );
+/**
+ * Add thematic body classes if child theme activates it
+ */
+function thematic_activate_body_classes() {
+	if ( current_theme_supports ( 'thematic_legacy_body_class' ) ) {
+		add_filter( 'body_class', 'thematic_body_class', 20 );
+	}
+	
+	// Add browser CSS class to the end (queuing through priority) of the body classes 
+	if ( apply_filters( 'thematic_show_bc_browser', TRUE ) ) {
+		add_filter( 'body_class', 'thematic_browser_class_names', 30 ); 
+	}
 }
+add_action( 'init', 'thematic_activate_body_classes' );
 
-// Add browser CSS class to the end (queuing through priority) of the body classes 
-if ( apply_filters( 'thematic_show_bc_browser', TRUE ) ) {
-	add_filter( 'body_class', 'thematic_browser_class_names', 30 ); 
-}
+
 
 /**
  * thematic_browser_class_names function.
@@ -504,9 +511,16 @@ if (function_exists('childtheme_override_post_class'))  {
 		return array_unique(apply_filters( 'thematic_post_class', $c )); // Available filter: thematic_post_class
 	}
 }
-if ( current_theme_supports ( 'thematic_legacy_post_class' ) ) {
-	add_filter( 'post_class', 'thematic_post_class', 20 );
+
+/**
+ * Add thematic post classes if child theme activates it
+ */
+function thematic_activate_post_classes() {
+	if ( current_theme_supports ( 'thematic_legacy_post_class' ) ) {
+		add_filter( 'post_class', 'thematic_post_class', 20 );
+	}
 }
+add_action( 'init', 'thematic_activate_post_classes' );
 
 /**
  * Define the num val for 'alt' classes (in post DIV and comment LI)
