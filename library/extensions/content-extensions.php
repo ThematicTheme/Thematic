@@ -910,10 +910,13 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 	 * Filter: thematic_postheader_posttitle
 	 */
 	function thematic_postheader_posttitle() {
-		
 		$posttitle = "\n\n\t\t\t\t\t";
+		
+		if ( !$title_content = get_the_title() )  
+			$title_content = '<a href="' . get_permalink() . '">' . _x('(Untitled)', 'Default title for untitled posts', 'thematic') . '</a>';
+	    
 	    if (is_single() || is_page()) {
-	        $posttitle .= '<h1 class="entry-title">' . get_the_title() . "</h1>\n";
+	        $posttitle .= '<h1 class="entry-title">' . $title_content . "</h1>\n";
 	    } elseif (is_404()) {    
 	        $posttitle .= '<h1 class="entry-title">' . __('Not Found', 'thematic') . "</h1>\n";
 	    } else {
@@ -921,7 +924,8 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 	        $posttitle .= sprintf('<a href="%s" title="%s" rel="bookmark">%s</a>',
 	        						apply_filters('the_permalink', get_permalink()),
 									sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
-	        						get_the_title());   
+	        						$title_content
+	        						);   
 	        $posttitle .= "</h2>\n";
 	    }
 	    
