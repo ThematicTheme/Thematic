@@ -1151,6 +1151,7 @@ if (function_exists('childtheme_override_content'))  {
 					}
 			}
 		} elseif ( strtolower($thematic_content_length) == 'none') {
+			$post= '';		
 		} else {
 			$post = get_the_content( thematic_more_text() );
 			$post = apply_filters('the_content', $post);
