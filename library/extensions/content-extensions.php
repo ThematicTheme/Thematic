@@ -1202,10 +1202,10 @@ if (function_exists('childtheme_override_category_archives'))  {
 				<li id="category-archives" class="content-column">
 					<h2><?php _e('Archives by Category', 'thematic') ?></h2>
 					<ul>
-						<?php wp_list_categories(array('optioncount' => true, 
-														'feed' => 'RSS',
-														'title_li' => '',
-														'show_count' => true)); ?> 
+						<?php wp_list_categories( array ( 'feed' => 'RSS',
+														  'title_li' => '',
+														  'show_count' => true ) );
+						?> 
 					</ul>
 				</li>
 <?php }
