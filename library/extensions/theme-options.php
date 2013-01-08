@@ -367,8 +367,8 @@ function thematic_do_legacy_opt() {
  * @since Thematic 1.0 
  */
 if (function_exists('childtheme_override_validate_opt')) {
-	function thematic_thematic_validate_opt() {
-		childtheme_override_validate_opt();
+	function thematic_validate_opt($input) {
+		childtheme_override_validate_opt($input);
 	}
 } else {
  	function thematic_validate_opt($input){
@@ -377,10 +377,10 @@ if (function_exists('childtheme_override_validate_opt')) {
  	   // Index Insert position must be a non-negative number
  	   if ( !is_numeric( $input['index_insert'] ) || $input['index_insert'] < 0 )  {
  	   		add_settings_error(
- 	   		'thematic_theme_opt',
- 	   		'thematic_insert_opt',
- 	   		__('The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value.', 'thematic' ),
- 	   		'error'
+ 	   			'thematic_theme_opt',
+ 	   			'thematic_insert_opt',
+ 	   			__('The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value.', 'thematic' ),
+ 	   			'error'
  	   		);
  	   } else {
  	   	// A sanitize numeric value to ensure a whole number
