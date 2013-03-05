@@ -1,406 +1,682 @@
+# Translation of Thematic 1.0.3.x in Indonesian
+# This file is distributed under the same license as the Thematic 1.0.3.x package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Thematic 0.8\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-18 21:54+0100\n"
-"PO-Revision-Date: 2009-01-19 23:17-0800\n"
-"Last-Translator: Kate Mag <kate@nineteenlabs.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2013-03-05 17:46:55+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Indonesian\n"
-"X-Poedit-Country: Indonesia\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Thematic 1.0.3.x\n"
 
-#: 404.php:10
-msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Maaf, tidak dapat menemukan yang anda cari. Gunakan kotak pencarian"
+#: library/extensions/content-extensions.php:916
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr ""
 
-#: 404.php:15
-#: search.php:58
-msgid "Find"
-msgstr "Temukan"
+#: library/extensions/content-extensions.php:1667
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr ""
 
-#: archive.php:16
-#, php-format
-msgid "Daily Archives: <span>%s</span>"
-msgstr "Arsip Harian: <span>%s</span>"
+#: archives.php:20 template-page-blog.php:22
+msgid "The template %s"
+msgstr ""
 
-#: archive.php:18
-#, php-format
-msgid "Monthly Archives: <span>%s</span>"
-msgstr "Arsip Bulanan: <span>%s</span>"
-
-#: archive.php:20
-#, php-format
-msgid "Yearly Archives: <span>%s</span>"
-msgstr "Arsip Tahunan: <span>%s</span>"
-
-#: archive.php:22
-msgid "Blog Archives"
-msgstr "Arsip Blog"
-
-#: archive.php:31
-#: archive.php:53
-#: author.php:21
-#: author.php:56
-#: category.php:20
-#: category.php:42
-#: index.php:17
-#: index.php:49
-#: search.php:21
-#: search.php:43
-msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> Artikel sebelumnya"
-
-#: archive.php:32
-#: archive.php:54
-#: author.php:22
-#: author.php:57
-#: category.php:21
-#: category.php:43
-#: index.php:18
-#: index.php:50
-#: search.php:22
-#: search.php:44
-msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Artikel terbaru <span class=\"meta-nav\">&raquo;</span>"
-
-#: archive.php:41
-#: attachment.php:20
-#: author.php:44
-#: category.php:30
-#: index.php:30
-#: search.php:31
-msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Baca berikutnya <span class=\"meta-nav\">&raquo;</span>"
-
-#: archives.php:20
-msgid "Archives by Category"
-msgstr "Arsip berdasarkan Kategori"
-
-#: archives.php:26
-msgid "Archives by Month"
-msgstr "Arsip berdasarkan Bulan"
-
-#: archives.php:32
-#: comments.php:39
-#: comments.php:65
-#: links.php:20
-#: page.php:16
-msgid "Edit"
-msgstr "Ubah"
-
-#: attachment.php:22
-#: index.php:32
+#: attachment.php:54 library/extensions/content-extensions.php:630
+#: library/extensions/content-extensions.php:689
 msgid "Pages:"
 msgstr "Halaman:"
 
-#: author.php:15
-msgid "Author Archives: "
-msgstr "Arsip Pengarang: "
-
-#: author.php:33
+#: author.php:67
 msgid "Email "
 msgstr "E-Mail "
 
-#: category.php:13
-msgid "Category Archives:"
-msgstr "Kategori Arsip:"
+#: comments.php:24
+msgid "Please do not load this page directly."
+msgstr ""
 
-#: comments.php:9
+#: comments.php:33
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Post ini diproteksi password. Masukkan password untuk meliha semua komentar."
 
-#: comments.php:28
-#, php-format
-msgid "<span>%d</span> Comments"
-msgstr "<span>%d</span> Komentar"
+#: comments.php:111
+msgid "Trackbacks"
+msgstr ""
 
-#: comments.php:28
-msgid "<span>One</span> Comment"
-msgstr "<span>Satu</span> Komentar"
+#: comments.php:111
+msgctxt "%1$ and %2$s are <span> tags"
+msgid "%1$sOne%2$s Trackback"
+msgstr ""
 
-#: comments.php:35
-#, php-format
-msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "Ditulis %1$s pada %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\">Permanent-Link</a>"
+#: functions.php:194
+msgid "Primary Menu"
+msgstr ""
 
-#: comments.php:40
-msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
-msgstr "\t\t\t\t\t<span class='unapproved'>Komentar anda menunggu moderasi</span>\n"
+#: library/extensions/comments-extensions.php:120
+msgctxt "One Comment, where %$1s and %$2s are <span> tags"
+msgid "%1$sOne%2$s Comment"
+msgstr ""
 
-#: comments.php:54
-#, php-format
-msgid "<span>%d</span> Trackbacks"
-msgstr "<span>%d</span> Trackbacks"
+#: library/extensions/comments-extensions.php:131
+msgid "Comments"
+msgstr ""
 
-#: comments.php:54
-msgid "<span>One</span> Trackback"
-msgstr "<span>Ein</span> Trackback"
-
-#: comments.php:61
-#, php-format
-msgid "By %1$s on %2$s at %3$s"
-msgstr "Oleh %1$s waktu %2$s tempat %3$s"
-
-#: comments.php:66
-msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
-msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Trackback anda menunggu moderasi.</span>\\n"
-
-#: comments.php:79
+#: library/extensions/comments-extensions.php:155
 msgid "Post a Comment"
 msgstr "Tulis sebuah Komentar"
 
-#: comments.php:82
-#, php-format
-msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Anda harus <a href=\"%s\" title=\"Log in\">login</a> untuk berkomentar."
+#: library/extensions/comments-extensions.php:167
+msgid "Post a Reply to %s"
+msgstr ""
 
-#: comments.php:90
-#, php-format
-msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\">Masuk sebagai <a href=\"%1$s\" title=\"Masuk sebagai %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Keluar dari akun ini\">Keluar?</a></span>"
-
-#: comments.php:97
-msgid "Your email is <em>never</em> published nor shared."
-msgstr "Email anda <em>tidak pernah</em> dipublikasikan"
-
-#: comments.php:97
-msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "Bagian yang diperlukan bertanda <span class=\"required\">*</span>"
-
-#: comments.php:100
-msgid "Name"
-msgstr "Nama"
-
-#: comments.php:100
-#: comments.php:105
-msgid "<span class=\"required\">*</span>"
-msgstr "<span class=\"required\">*</span>"
-
-#: comments.php:105
-#, fuzzy
-msgid "Email"
-msgstr "E-Mail"
-
-#: comments.php:110
-msgid "Website"
-msgstr "Website"
-
-#: comments.php:117
+#: library/extensions/comments-extensions.php:179
+msgctxt "noun"
 msgid "Comment"
-msgstr "Komentar"
+msgstr ""
 
-#: comments.php:123
+#: library/extensions/comments-extensions.php:190
+msgid "Cancel reply"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:202
 msgid "Post Comment"
 msgstr "Buat Komentar"
 
-#: header.php:22
-msgid "Posts RSS feed"
-msgstr "RSS Feed Artikel"
+#: library/extensions/comments-extensions.php:228
+#: library/legacy/deprecated.php:365
+msgid "Name"
+msgstr "Nama"
 
-#: header.php:23
-msgid "Comments RSS feed"
-msgstr "RSS Fee Komentar"
+#: library/extensions/comments-extensions.php:228
+#: library/extensions/comments-extensions.php:229
+msgctxt "denotes required field"
+msgid "*"
+msgstr ""
 
-#: header.php:44
-msgid "Skip navigation to the content"
-msgstr "Tidak menggunakan navigasi ke isi"
+#: library/extensions/comments-extensions.php:229
+#: library/legacy/deprecated.php:370
+msgid "Email"
+msgstr ""
 
-#: header.php:44
-msgid "Skip to content"
-msgstr "Langsung ke isi"
+#: library/extensions/comments-extensions.php:230
+#: library/legacy/deprecated.php:375
+msgid "Website"
+msgstr "Website"
 
-#: page.php:14
-msgid "Pages: "
-msgstr "Halaman: "
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:362
+msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
+msgid "Your email is %1$snever%2$s published nor shared."
+msgstr ""
 
-#: search.php:15
+#: library/extensions/comments-extensions.php:238
+msgctxt "%$1s and %$2s are <span> tags"
+msgid "Required fields are marked %1$s*%2$s"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr ""
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "Log in"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Logged in as %s"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out of this account"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out?"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:244
+#: library/legacy/deprecated.php:387
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes"
+msgstr ""
+
+#: library/extensions/content-extensions.php:334
+msgid "Author Archives:"
+msgstr ""
+
+#: library/extensions/content-extensions.php:339
+#: library/extensions/header-extensions.php:103
+msgid "Category Archives:"
+msgstr "Kategori Arsip:"
+
+#: library/extensions/content-extensions.php:347
+#: library/extensions/header-extensions.php:99
 msgid "Search Results for:"
 msgstr "Hasil pencarian untuk:"
 
-#: search.php:51
-msgid "Nothing Found"
-msgstr "Tidak Menemukan"
-
-#: search.php:53
-msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Maaf, tidak ada yang sesuai dengan kriteria pencarian. Coba lagi dengan keyword berbeda"
-
-#: sidebar.php:5
-#: sidebar.php:9
-#: library/functions/widgets.php:16
-#: library/functions/widgets.php:23
-#: library/functions/widgets.php:200
-msgid "Search"
-msgstr "Cari"
-
-#: sidebar.php:15
-msgid "Pages"
-msgstr "Halaman"
-
-#: sidebar.php:22
-msgid "Categories"
-msgstr "Ketegori"
-
-#: sidebar.php:30
-msgid "Archives"
-msgstr "Arsip"
-
-#: sidebar.php:47
-msgid "RSS Feeds"
-msgstr "RSS Feed"
-
-#: sidebar.php:49
-#: library/functions/widgets.php:57
-msgid "All posts"
-msgstr "Semua artikel"
-
-#: sidebar.php:50
-#: library/functions/widgets.php:58
-msgid "All comments"
-msgstr "Semua komentar"
-
-#: sidebar.php:55
-#: library/functions/widgets.php:35
-#: library/functions/widgets.php:202
-msgid "Meta"
-msgstr "Meta"
-
-#: tag.php:13
+#: library/extensions/content-extensions.php:352
+#: library/extensions/header-extensions.php:107
 msgid "Tag Archives:"
 msgstr "Arsip Tag:"
 
-#: library/functions/hooks-filters.php:26
-msgid "Not Found"
-msgstr "Tidak Ketemu"
+#: library/extensions/content-extensions.php:361
+#: library/extensions/content-extensions.php:368
+msgid "Archives:"
+msgstr ""
 
-#: library/functions/hooks-filters.php:31
-#: library/functions/hooks-filters.php:115
-msgid "Permalink to "
-msgstr "Permalink untuk"
+#: library/extensions/content-extensions.php:373
+msgid "Daily Archives: %s"
+msgstr ""
 
-#: library/functions/hooks-filters.php:39
-msgid "By "
-msgstr "Oleh"
+#: library/extensions/content-extensions.php:377
+msgid "Monthly Archives: %s"
+msgstr ""
 
-#: library/functions/hooks-filters.php:41
-msgid "View all posts by "
-msgstr "Tampilkan semua artikel oleh"
+#: library/extensions/content-extensions.php:381
+msgid "Yearly Archives: %s"
+msgstr ""
 
-#: library/functions/hooks-filters.php:65
+#: library/extensions/content-extensions.php:424
+#: library/extensions/content-extensions.php:1710
+msgid "Older posts"
+msgstr ""
+
+#: library/extensions/content-extensions.php:426
+#: library/extensions/content-extensions.php:1712
+msgid "Newer posts"
+msgstr ""
+
+#: library/extensions/content-extensions.php:888
+#: library/extensions/content-extensions.php:1422
 msgid "Edit post"
 msgstr "Ubah Artikel"
 
-#: library/functions/hooks-filters.php:72
-msgid "This entry was posted in "
-msgstr "Entri ini dipublikasikan di"
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1424
+#: library/extensions/discussion-extensions.php:37
+#: library/extensions/discussion.php:84 links.php:52 page.php:52
+#: template-page-archives.php:55 template-page-fullwidth.php:53
+msgid "Edit"
+msgstr "Ubah"
 
-#: library/functions/hooks-filters.php:75
-msgid "Also posted in "
-msgstr "Juga dipublikasikan di "
+#: library/extensions/content-extensions.php:921
+#: library/extensions/header-extensions.php:111
+msgid "Not Found"
+msgstr "Tidak Ketemu"
 
-#: library/functions/hooks-filters.php:78
-msgid "Posted in "
-msgstr "Dipublikasikan di"
+#: library/extensions/content-extensions.php:926
+#: library/extensions/content-extensions.php:1145
+#: library/extensions/content-extensions.php:1149
+#: library/extensions/content-extensions.php:1380
+msgid "Permalink to %s"
+msgstr ""
 
-#: library/functions/hooks-filters.php:84
-msgid " and tagged"
-msgstr "dan ditag"
+#: library/extensions/content-extensions.php:987
+msgid "By"
+msgstr ""
 
-#: library/functions/hooks-filters.php:87
-msgid " Also tagged "
-msgstr "juga ditag"
+#: library/extensions/content-extensions.php:998
+msgid "View all posts by %s"
+msgstr ""
 
-#: library/functions/hooks-filters.php:89
+#: library/extensions/content-extensions.php:1027
+msgid "Published:"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1203
+msgid "Archives by Category"
+msgstr "Arsip berdasarkan Kategori"
+
+#: library/extensions/content-extensions.php:1234
+msgid "Archives by Month"
+msgstr "Arsip berdasarkan Bulan"
+
+#: library/extensions/content-extensions.php:1295
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
+msgstr ""
+
+#: library/extensions/content-extensions.php:1301 search.php:70
+msgid "Find"
+msgstr "Temukan"
+
+#: library/extensions/content-extensions.php:1320
+msgid "Read More %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1372
+msgid "Browse the %s archive."
+msgstr ""
+
+#: library/extensions/content-extensions.php:1374
+msgid "Permalink to %s Archive"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1380
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Bookmark the %1$spermalink%2$s."
+msgstr ""
+
+#: library/extensions/content-extensions.php:1538
+msgid "This entry was posted in %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1549
+msgid "Also posted in %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1553
+msgid "Posted in %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1579
+msgid "This entry is tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1582
+msgid "and tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1585
+msgid "Also tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1587
 msgid "Tagged"
 msgstr "Tag"
 
-#: library/functions/hooks-filters.php:97
-#: library/functions/hooks-filters.php:100
-#: library/functions/hooks-filters.php:103
-msgid "Comment on "
-msgstr "Komentar kepada"
+#: library/extensions/content-extensions.php:1617
+#: library/extensions/content-extensions.php:1623
+msgid "Comment on %s"
+msgstr ""
 
-#: library/functions/hooks-filters.php:98
-msgid " Comments"
-msgstr "Komentar-komentar"
+#: library/extensions/content-extensions.php:1619
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] ""
+msgstr[1] ""
 
-#: library/functions/hooks-filters.php:101
-msgid " Comment"
-msgstr " KoKomentar"
-
-#: library/functions/hooks-filters.php:104
+#: library/extensions/content-extensions.php:1624
 msgid "Leave a comment"
 msgstr "Tulis sebuah komentar"
 
-#: library/functions/hooks-filters.php:107
+#: library/extensions/content-extensions.php:1627
 msgid "Comments closed"
 msgstr "Komentar ditutup"
 
-#: library/functions/hooks-filters.php:115
-msgid ". Bookmark the "
-msgstr "Bookmark"
+#: library/extensions/content-extensions.php:1651
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
+msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
+msgstr ""
 
-#: library/functions/hooks-filters.php:116
-msgid "permalink"
-msgstr "Permanent-Link"
-
-#: library/functions/hooks-filters.php:118
-#: library/functions/hooks-filters.php:126
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1667
 msgid "Post a comment"
 msgstr "Tulis sebuah Komentar"
 
-#: library/functions/hooks-filters.php:119
-msgid " or leave a trackback: "
-msgstr "Tinggalkan trackback"
-
-#: library/functions/hooks-filters.php:120
-#: library/functions/hooks-filters.php:123
+#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1663
 msgid "Trackback URL for your post"
 msgstr "Trackback-URL dari artkel anda"
 
-#: library/functions/hooks-filters.php:120
-#: library/functions/hooks-filters.php:123
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1664
 msgid "Trackback URL"
 msgstr "Trackback-URL"
 
-#: library/functions/hooks-filters.php:122
-msgid " Comments are closed, but you can leave a trackback: "
-msgstr "Komentar ditutup, tapi anda dapat meninggalkan trackback:"
+#: library/extensions/content-extensions.php:1660
+msgctxt "%s is trackback url, wrapped in link tags"
+msgid "Comments are closed, but you can leave a trackback: %s"
+msgstr ""
 
-#: library/functions/hooks-filters.php:125
-msgid " Trackbacks are closed, but you can "
-msgstr "Trackbacks ditutup, tapi anda dapat"
+#: library/extensions/content-extensions.php:1669
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
 
-#: library/functions/hooks-filters.php:126
-msgid "post a comment"
-msgstr "tulis sebuah komentar"
+#: library/extensions/discussion-extensions.php:27
+msgctxt "Posted {$date} at {$time}"
+msgid "Posted %s at %s"
+msgstr ""
 
-#: library/functions/hooks-filters.php:128
-msgid " Both comments and trackbacks are currently closed."
-msgstr "Komentar dan trackbacks ditutup"
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink to this comment"
+msgstr ""
 
-#: library/functions/theme-options.php:199
-msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
-msgstr "Informasi lanjut tentang theme, <a href=\"http://themeshaper.com\">kunjungi ThemeShaper</a>. Silahkan kunjungi pulsa <a href=\"http://themeshaper.com/forums/\">Forum ThemeShaper</a>jika ada pertanyaan tentang Thematic"
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink"
+msgstr ""
 
-#: library/functions/widgets.php:52
-#: library/functions/widgets.php:204
-#: library/functions/widgets.php:205
-msgid "RSS Links"
-msgstr "Link-Link RSS"
+#: library/extensions/discussion-extensions.php:36
+msgid "Edit comment"
+msgstr ""
 
-#: library/functions/widgets.php:76
+#: library/extensions/discussion.php:37
+msgid "Your comment is awaiting moderation"
+msgstr ""
+
+#: library/extensions/discussion.php:52
+msgid "Reply"
+msgstr ""
+
+#: library/extensions/discussion.php:53
+msgid "Log in to reply."
+msgstr ""
+
+#: library/extensions/discussion.php:80
+msgctxt "By {$authorlink} on {$date} at {$time}"
+msgid "By %1$s on %2$s at %3$s"
+msgstr ""
+
+#: library/extensions/discussion.php:90
+msgid "Your trackback is awaiting moderation"
+msgstr ""
+
+#: library/extensions/header-extensions.php:319
+#: library/extensions/widgets.php:157
+msgid "Posts RSS feed"
+msgstr "RSS Feed Artikel"
+
+#: library/extensions/header-extensions.php:343
+#: library/extensions/widgets.php:158
+msgid "Comments RSS feed"
+msgstr "RSS Fee Komentar"
+
+#: library/extensions/header-extensions.php:667
+msgid "Skip navigation to the content"
+msgstr "Tidak menggunakan navigasi ke isi"
+
+#: library/extensions/header-extensions.php:667
+msgid "Skip to content"
+msgstr "Langsung ke isi"
+
+#: library/extensions/helpers.php:50 library/extensions/helpers.php:69
+msgid "There is no excerpt because this is a protected post."
+msgstr ""
+
+#: library/extensions/theme-options.php:50
+msgid "Index Insert Position"
+msgstr ""
+
+#: library/extensions/theme-options.php:51
+msgid "Info on Author Page"
+msgstr ""
+
+#: library/extensions/theme-options.php:52
+msgid "Text in Footer"
+msgstr ""
+
+#: library/extensions/theme-options.php:56
+msgid "Remove Legacy Options"
+msgstr ""
+
+#: library/extensions/theme-options.php:170
+msgid "Theme Options"
+msgstr ""
+
+#: library/extensions/theme-options.php:202
+msgid "For more information:"
+msgstr ""
+
+#: library/extensions/theme-options.php:204
+msgid "For support:"
+msgstr ""
+
+#: library/extensions/theme-options.php:206
+msgid "forums"
+msgstr ""
+
+#: library/extensions/theme-options.php:210
+msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
+msgstr ""
+
+#: library/extensions/theme-options.php:211
+msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
+msgstr ""
+
+#: library/extensions/theme-options.php:217
+msgid "Overview"
+msgstr ""
+
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
+msgstr ""
+
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
+msgstr ""
+
+#: library/extensions/theme-options.php:267
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options"
+msgstr ""
+
+#: library/extensions/theme-options.php:305
+msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
+msgstr ""
+
+#: library/extensions/theme-options.php:318
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
+msgstr ""
+
+#: library/extensions/theme-options.php:331
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr ""
+
+#: library/extensions/theme-options.php:355
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
+msgstr ""
+
+#: library/extensions/theme-options.php:382
+msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:34
+msgid "To search, type and hit enter"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:40
+#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
+msgid "Search"
+msgstr "Cari"
+
+#: library/extensions/widgets-extensions.php:70
+msgid "Primary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:72
+msgid "The primary widget area, most often used as a sidebar."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:85
+msgid "Secondary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:87
+msgid "The secondary widget area, most often used as a sidebar."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:100
+msgid "1st Subsidiary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:102
+msgid "The 1st widget area in the footer."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:115
+msgid "2nd Subsidiary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:117
+msgid "The 2nd widget area in the footer."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:130
+msgid "3rd Subsidiary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:132
+msgid "The 3rd widget area in the footer."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:145
+msgid "Index Top"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:147
+msgid "The top widget area displayed on the index page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:160
+msgid "Index Insert"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:162
+msgid "The widget area inserted after x posts on the index page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:175
+msgid "Index Bottom"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:177
+msgid "The bottom widget area displayed on the index page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:190
+msgid "Single Top"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:192
+msgid "The top widget area displayed on a single post."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:205
+msgid "Single Insert"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:207
+msgid "The widget area inserted between the post and the comments on a single post."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:220
+msgid "Single Bottom"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:222
+msgid "The bottom widget area displayed on a single post."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:235
+msgid "Page Top"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:237
+msgid "The top widget area displayed on a page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:250
+msgid "Page Bottom"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:252
+msgid "The bottom widget area displayed on a page."
+msgstr ""
+
+#: library/extensions/widgets.php:55
+msgid "A search form for your blog"
+msgstr ""
+
+#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
+#: library/extensions/widgets.php:175
 msgid "Title:"
 msgstr "Judul:"
 
-#: library/functions/widgets.php:199
-msgid "Blog Index"
-msgstr "Blog Indeks"
+#: library/extensions/widgets.php:100
+msgid "Log in/out and admin"
+msgstr ""
 
+#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
+msgid "Meta"
+msgstr "Meta"
+
+#: library/extensions/widgets.php:145
+msgid "Links to your posts and comments feed"
+msgstr ""
+
+#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
+msgid "RSS Links"
+msgstr "Link-Link RSS"
+
+#: library/extensions/widgets.php:157
+msgid "All posts"
+msgstr "Semua artikel"
+
+#: library/extensions/widgets.php:158
+msgid "All comments"
+msgstr "Semua komentar"
+
+#: library/legacy/deprecated.php:357
+msgid "Logged in as"
+msgstr ""
+
+#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: page.php:50 template-page-fullwidth.php:51
+msgid "Pages: "
+msgstr "Halaman: "
+
+#: search.php:56
+msgid "Nothing Found"
+msgstr "Tidak Menemukan"
+
+#: search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Maaf, tidak ada yang sesuai dengan kriteria pencarian. Coba lagi dengan keyword berbeda"
+
+#: template-page-blog.php:22
+msgid "You can include a %s in a childtheme"
+msgstr ""
+
+msgid "Thematic"
+msgstr ""
+
+msgid "http://thematictheme.com"
+msgstr ""
+
+msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
+msgstr ""
+
+msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+msgstr ""
+
+msgid "http://themeshaper.com/"
+msgstr ""
+
+msgid "Deprecated Archives Template"
+msgstr ""
+
+msgid "Links Page"
+msgstr ""
+
+msgid "Archives Page"
+msgstr ""
+
+msgid "Deprecated Blog Template"
+msgstr ""
+
+msgid "Full Width"
+msgstr ""

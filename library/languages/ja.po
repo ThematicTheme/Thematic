@@ -1,12 +1,12 @@
-# Translation of Thematic 1.0.3.x in Norwegian (Bokmål)
+# Translation of Thematic 1.0.3.x in Japanese
 # This file is distributed under the same license as the Thematic 1.0.3.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-03-05 17:46:49+0000\n"
+"PO-Revision-Date: 2013-03-05 17:46:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: Thematic 1.0.3.x\n"
 
@@ -22,181 +22,181 @@ msgstr ""
 
 #: archives.php:20 template-page-blog.php:22
 msgid "The template %s"
-msgstr ""
+msgstr "テンプレート %s"
 
 #: attachment.php:54 library/extensions/content-extensions.php:630
 #: library/extensions/content-extensions.php:689
 msgid "Pages:"
-msgstr "Sider:"
+msgstr "ページ:"
 
 #: author.php:67
 msgid "Email "
-msgstr "Send e-post til "
+msgstr "メールアドレス"
 
 #: comments.php:24
 msgid "Please do not load this page directly."
-msgstr ""
+msgstr "このページを直接読み込まないでください。"
 
 #: comments.php:33
 msgid "This post is password protected. Enter the password to view any comments."
-msgstr "Denne artikkelen er passordbeskyttet. Skriv inn passordet for å se kommentarer."
+msgstr "この投稿はパスワードで保護されています。コメントを閲覧するにはパスワードを入力してください。"
 
 #: comments.php:111
 msgid "Trackbacks"
-msgstr ""
+msgstr "トラックバック"
 
 #: comments.php:111
 msgctxt "%1$ and %2$s are <span> tags"
 msgid "%1$sOne%2$s Trackback"
-msgstr ""
+msgstr "トラックバック: %1$s1%2$s件"
 
 #: functions.php:194
 msgid "Primary Menu"
-msgstr ""
+msgstr "プライマリーメニュー"
 
 #: library/extensions/comments-extensions.php:120
 msgctxt "One Comment, where %$1s and %$2s are <span> tags"
 msgid "%1$sOne%2$s Comment"
-msgstr ""
+msgstr "コメント: %1$s1%2$s 件"
 
 #: library/extensions/comments-extensions.php:131
 msgid "Comments"
-msgstr ""
+msgstr "コメント"
 
 #: library/extensions/comments-extensions.php:155
 msgid "Post a Comment"
-msgstr "Skriv en kommentar"
+msgstr "コメントする"
 
 #: library/extensions/comments-extensions.php:167
 msgid "Post a Reply to %s"
-msgstr "Skriv et svar til %s"
+msgstr "%s への返信"
 
 #: library/extensions/comments-extensions.php:179
 msgctxt "noun"
 msgid "Comment"
-msgstr ""
+msgstr "コメント"
 
 #: library/extensions/comments-extensions.php:190
 msgid "Cancel reply"
-msgstr ""
+msgstr "コメントをキャンセル"
 
 #: library/extensions/comments-extensions.php:202
 msgid "Post Comment"
-msgstr "Legg igjen en kommentar"
+msgstr "コメント送信"
 
 #: library/extensions/comments-extensions.php:228
 #: library/legacy/deprecated.php:365
 msgid "Name"
-msgstr "Navn"
+msgstr "名前"
 
 #: library/extensions/comments-extensions.php:228
 #: library/extensions/comments-extensions.php:229
 msgctxt "denotes required field"
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: library/extensions/comments-extensions.php:229
 #: library/legacy/deprecated.php:370
 msgid "Email"
-msgstr "E-post"
+msgstr "メールアドレス"
 
 #: library/extensions/comments-extensions.php:230
 #: library/legacy/deprecated.php:375
 msgid "Website"
-msgstr "Nettsted"
+msgstr "ウェブサイト"
 
 #: library/extensions/comments-extensions.php:238
 #: library/legacy/deprecated.php:362
 msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
 msgid "Your email is %1$snever%2$s published nor shared."
-msgstr ""
+msgstr "あなたのメールは <em>絶対に</em> 公開されたり共有されたりしません。"
 
 #: library/extensions/comments-extensions.php:238
 msgctxt "%$1s and %$2s are <span> tags"
 msgid "Required fields are marked %1$s*%2$s"
-msgstr ""
+msgstr "%1$s*%2$s が付いている欄は必須項目です"
 
 #: library/extensions/comments-extensions.php:240
 #: library/legacy/deprecated.php:344
 msgid "You must be %1$slogged in%2$s to post a comment."
-msgstr ""
+msgstr "コメントを投稿するために%1$sログイン%2$sする必要があります。"
 
 #: library/extensions/comments-extensions.php:240
 #: library/legacy/deprecated.php:344
 msgid "Log in"
-msgstr ""
+msgstr "ログイン"
 
 #: library/extensions/comments-extensions.php:242
 #: library/legacy/deprecated.php:357
 msgid "Logged in as %s"
-msgstr ""
+msgstr "%sとしてログイン済"
 
 #: library/extensions/comments-extensions.php:242
 #: library/legacy/deprecated.php:357
 msgid "Log out of this account"
-msgstr ""
+msgstr "このアカウントからログアウトする"
 
 #: library/extensions/comments-extensions.php:242
 #: library/legacy/deprecated.php:357
 msgid "Log out?"
-msgstr ""
+msgstr "ログアウト ?"
 
 #: library/extensions/comments-extensions.php:244
 #: library/legacy/deprecated.php:387
 msgctxt "%$1s and %$2s are <abbr> tags"
 msgid "You may use these %1$sHTML%2$s tags and attributes"
-msgstr ""
+msgstr "次の %1$sHTML%2$s タグと属性が使用できます:"
 
 #: library/extensions/content-extensions.php:334
 msgid "Author Archives:"
-msgstr ""
+msgstr "投稿者アーカイブ: "
 
 #: library/extensions/content-extensions.php:339
 #: library/extensions/header-extensions.php:103
 msgid "Category Archives:"
-msgstr "Kategori-arkiv:"
+msgstr "カテゴリーアーカイブ:"
 
 #: library/extensions/content-extensions.php:347
 #: library/extensions/header-extensions.php:99
 msgid "Search Results for:"
-msgstr "S&oslash;keresultater for:"
+msgstr "検索結果:"
 
 #: library/extensions/content-extensions.php:352
 #: library/extensions/header-extensions.php:107
 msgid "Tag Archives:"
-msgstr "Stikkord-arkiv:"
+msgstr "タグアーカイブ:"
 
 #: library/extensions/content-extensions.php:361
 #: library/extensions/content-extensions.php:368
 msgid "Archives:"
-msgstr ""
+msgstr "アーカイブ:"
 
 #: library/extensions/content-extensions.php:373
 msgid "Daily Archives: %s"
-msgstr ""
+msgstr "日付別アーカイブ: %s"
 
 #: library/extensions/content-extensions.php:377
 msgid "Monthly Archives: %s"
-msgstr ""
+msgstr "月別アーカイブ: %s"
 
 #: library/extensions/content-extensions.php:381
 msgid "Yearly Archives: %s"
-msgstr ""
+msgstr "年別アーカイブ: %s"
 
 #: library/extensions/content-extensions.php:424
 #: library/extensions/content-extensions.php:1710
 msgid "Older posts"
-msgstr ""
+msgstr "古い記事へ"
 
 #: library/extensions/content-extensions.php:426
 #: library/extensions/content-extensions.php:1712
 msgid "Newer posts"
-msgstr ""
+msgstr "新しい記事へ"
 
 #: library/extensions/content-extensions.php:888
 #: library/extensions/content-extensions.php:1422
 msgid "Edit post"
-msgstr "Rediger artikkel"
+msgstr "投稿を編集"
 
 #: library/extensions/content-extensions.php:890
 #: library/extensions/content-extensions.php:1424
@@ -204,432 +204,431 @@ msgstr "Rediger artikkel"
 #: library/extensions/discussion.php:84 links.php:52 page.php:52
 #: template-page-archives.php:55 template-page-fullwidth.php:53
 msgid "Edit"
-msgstr "Rediger"
+msgstr "編集"
 
 #: library/extensions/content-extensions.php:921
 #: library/extensions/header-extensions.php:111
 msgid "Not Found"
-msgstr "Ikke funnet"
+msgstr "見つかりませんでした。"
 
 #: library/extensions/content-extensions.php:926
 #: library/extensions/content-extensions.php:1145
 #: library/extensions/content-extensions.php:1149
 #: library/extensions/content-extensions.php:1380
 msgid "Permalink to %s"
-msgstr ""
+msgstr "%s へのパーマリンク"
 
 #: library/extensions/content-extensions.php:987
 msgid "By"
-msgstr ""
+msgstr "投稿者: "
 
 #: library/extensions/content-extensions.php:998
 msgid "View all posts by %s"
-msgstr ""
+msgstr "%s のすべての投稿を見る"
 
 #: library/extensions/content-extensions.php:1027
 msgid "Published:"
-msgstr ""
+msgstr "公開日:"
 
 #: library/extensions/content-extensions.php:1203
 msgid "Archives by Category"
-msgstr "Arkiv etter kategori"
+msgstr "カテゴリー別アーカイブ"
 
 #: library/extensions/content-extensions.php:1234
 msgid "Archives by Month"
-msgstr "Arkiv per m&aring;ned"
+msgstr "月別アーカイブ"
 
 #: library/extensions/content-extensions.php:1295
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
-msgstr ""
+msgstr "すみませんが、お探しのもは見つかりませんでした。もしかしたら検索がお役に立つかもしれません。"
 
 #: library/extensions/content-extensions.php:1301 search.php:70
 msgid "Find"
-msgstr "Søk"
+msgstr "検索"
 
 #: library/extensions/content-extensions.php:1320
 msgid "Read More %s"
-msgstr ""
+msgstr " %s をもっと見る "
 
 #: library/extensions/content-extensions.php:1372
 msgid "Browse the %s archive."
-msgstr ""
+msgstr "%s アーカイブを閲覧する。"
 
 #: library/extensions/content-extensions.php:1374
 msgid "Permalink to %s Archive"
-msgstr ""
+msgstr "%s アーカイブへのパーマリンク"
 
 #: library/extensions/content-extensions.php:1380
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Bookmark the %1$spermalink%2$s."
-msgstr ""
+msgstr "この%1$sパーマリンク%2$sをブックマークする。"
 
 #: library/extensions/content-extensions.php:1538
 msgid "This entry was posted in %s"
-msgstr ""
+msgstr "この記事は%sに投稿されました"
 
 #: library/extensions/content-extensions.php:1549
 msgid "Also posted in %s"
-msgstr ""
+msgstr "また、%sのカテゴリーに属しています"
 
 #: library/extensions/content-extensions.php:1553
 msgid "Posted in %s"
-msgstr ""
+msgstr "カテゴリー: %s"
 
 #: library/extensions/content-extensions.php:1579
 msgid "This entry is tagged"
-msgstr ""
+msgstr "この投稿のタグは"
 
 #: library/extensions/content-extensions.php:1582
 msgid "and tagged"
-msgstr ""
+msgstr "タグ: "
 
 #: library/extensions/content-extensions.php:1585
 msgid "Also tagged"
-msgstr ""
+msgstr "タグ:"
 
 #: library/extensions/content-extensions.php:1587
 msgid "Tagged"
-msgstr "Merket"
+msgstr "タグ: "
 
 #: library/extensions/content-extensions.php:1617
 #: library/extensions/content-extensions.php:1623
 msgid "Comment on %s"
-msgstr ""
+msgstr "%s へのコメント"
 
 #: library/extensions/content-extensions.php:1619
 msgid "%s Response"
 msgid_plural "%s Responses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "コメント: %s 件"
 
 #: library/extensions/content-extensions.php:1624
 msgid "Leave a comment"
-msgstr "Legg igjen en kommentar"
+msgstr "コメント / トラックバック: 0個"
 
 #: library/extensions/content-extensions.php:1627
 msgid "Comments closed"
-msgstr "Stengt for kommentarer"
+msgstr "コメントは受け付けていません。"
 
 #: library/extensions/content-extensions.php:1651
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
 msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
-msgstr ""
+msgstr "%1$sコメントを投稿する%2$sか、トラックバックをどうぞ: %3$s"
 
 #: library/extensions/content-extensions.php:1652
 #: library/extensions/content-extensions.php:1667
 msgid "Post a comment"
-msgstr "Skriv en kommentar"
+msgstr "コメント"
 
 #: library/extensions/content-extensions.php:1656
 #: library/extensions/content-extensions.php:1663
 msgid "Trackback URL for your post"
-msgstr "Tilbakesporings-URL for din artikkel"
+msgstr "トラックバック用の URL"
 
 #: library/extensions/content-extensions.php:1657
 #: library/extensions/content-extensions.php:1664
 msgid "Trackback URL"
-msgstr "Tilbakesporings-URL"
+msgstr "トラックバック URL"
 
 #: library/extensions/content-extensions.php:1660
 msgctxt "%s is trackback url, wrapped in link tags"
 msgid "Comments are closed, but you can leave a trackback: %s"
-msgstr ""
+msgstr "コメントは受け付けていませんが、次の URL へトラックバックを残せます: %s"
 
 #: library/extensions/content-extensions.php:1669
 msgid "Both comments and trackbacks are currently closed."
-msgstr ""
+msgstr "コメントとトラックバックは現在受け付けていません。"
 
 #: library/extensions/discussion-extensions.php:27
 msgctxt "Posted {$date} at {$time}"
 msgid "Posted %s at %s"
-msgstr ""
+msgstr "公開日時: %s - %s"
 
 #: library/extensions/discussion-extensions.php:31
 msgid "Permalink to this comment"
-msgstr ""
+msgstr "このコメントのパーマリンク"
 
 #: library/extensions/discussion-extensions.php:31
 msgid "Permalink"
-msgstr ""
+msgstr "パーマリンク"
 
 #: library/extensions/discussion-extensions.php:36
 msgid "Edit comment"
-msgstr ""
+msgstr "コメント編集"
 
 #: library/extensions/discussion.php:37
 msgid "Your comment is awaiting moderation"
-msgstr ""
+msgstr "あなたのコメントは管理者の承認待ちです。"
 
 #: library/extensions/discussion.php:52
 msgid "Reply"
-msgstr "Svar"
+msgstr "返信"
 
 #: library/extensions/discussion.php:53
 msgid "Log in to reply."
-msgstr "Logg inn for &aring; svare."
+msgstr "返信するにはログインしてください。"
 
 #: library/extensions/discussion.php:80
 msgctxt "By {$authorlink} on {$date} at {$time}"
 msgid "By %1$s on %2$s at %3$s"
-msgstr ""
+msgstr "投稿者: %1$s 日時: %2$s - %3$s"
 
 #: library/extensions/discussion.php:90
 msgid "Your trackback is awaiting moderation"
-msgstr ""
+msgstr "あなたのトラックバックは管理者の承認待ちです。"
 
 #: library/extensions/header-extensions.php:319
 #: library/extensions/widgets.php:157
 msgid "Posts RSS feed"
-msgstr "RSS-str&oslash;m (artikler)"
+msgstr "投稿の RSS フィード"
 
 #: library/extensions/header-extensions.php:343
 #: library/extensions/widgets.php:158
 msgid "Comments RSS feed"
-msgstr "RSS-str&oslash;m (kommentarer)"
+msgstr "コメントの RSS フィード"
 
 #: library/extensions/header-extensions.php:667
 msgid "Skip navigation to the content"
-msgstr "Hopp over navigasjonen og g&aring; direkte til innholdet"
+msgstr "ナビゲーションを飛ばしてコンテンツへ"
 
 #: library/extensions/header-extensions.php:667
 msgid "Skip to content"
-msgstr "Gå direkte til innholdet"
+msgstr "コンテンツへ"
 
 #: library/extensions/helpers.php:50 library/extensions/helpers.php:69
 msgid "There is no excerpt because this is a protected post."
-msgstr "Det fins ikke noe utdrag, siden dette er en beskyttet artikkel."
+msgstr "この投稿は保護されているので抜粋文はありません。"
 
 #: library/extensions/theme-options.php:50
 msgid "Index Insert Position"
-msgstr "Index Insert-posisjon"
+msgstr "インデックス挿入位置"
 
 #: library/extensions/theme-options.php:51
 msgid "Info on Author Page"
-msgstr "Informasjon på forfattersiden"
+msgstr "投稿者ページの情報"
 
 #: library/extensions/theme-options.php:52
 msgid "Text in Footer"
-msgstr "Tekst i bunnområde"
+msgstr "フッターのテキスト"
 
 #: library/extensions/theme-options.php:56
 msgid "Remove Legacy Options"
-msgstr ""
+msgstr "レガシーなオプションを削除"
 
 #: library/extensions/theme-options.php:170
 msgid "Theme Options"
-msgstr ""
+msgstr "テーマオプション"
 
 #: library/extensions/theme-options.php:202
 msgid "For more information:"
-msgstr ""
+msgstr "詳細情報:"
 
 #: library/extensions/theme-options.php:204
 msgid "For support:"
-msgstr ""
+msgstr "サポート:"
 
 #: library/extensions/theme-options.php:206
 msgid "forums"
-msgstr ""
+msgstr "フォーラム"
 
 #: library/extensions/theme-options.php:210
 msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
-msgstr ""
+msgstr "以下のオプションは Thematic テーマフレームワークもしくはその子テーマによって有効化されました。"
 
 #: library/extensions/theme-options.php:211
 msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
-msgstr ""
+msgstr "子テーマを作成すると新しいオプションの追加やデフォルトのオプションの削除ができます。このヘルプテキストも子テーマでカスタマイズ可能です。"
 
 #: library/extensions/theme-options.php:217
 msgid "Overview"
-msgstr ""
+msgstr "概要"
 
 #: library/extensions/theme-options.php:244
 msgctxt "%1$s and %2$s are <a> tags"
 msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
-msgstr ""
+msgstr "このテーマに関する詳細は %1$sThematicTheme.comをご覧ください%2$s。"
 
 #: library/extensions/theme-options.php:244
 msgctxt "%1$s and %2$s are <a> tags"
 msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
-msgstr ""
+msgstr "Thematic に関してご質問があれば、%1$sThematicTheme.com フォーラム%2$sへお願いします。"
 
 #: library/extensions/theme-options.php:267
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options"
-msgstr ""
+msgstr "%s テーマオプション"
 
 #: library/extensions/theme-options.php:305
 msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
-msgstr ""
+msgstr "インデックスに挿入されるウィジェットはこの投稿数の後に表示されます。空欄のままか0を入力するとこの機能は無効になります。"
 
 #: library/extensions/theme-options.php:318
 msgctxt "%1$s and %2$s are <a> tags"
 msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
-msgstr ""
+msgstr "投稿者のページに %1$smicroformatted vCard%2$sと、投稿者のアバター、略歴、メールアドレスを表示する。"
 
 #: library/extensions/theme-options.php:331
 msgctxt "%s are shortcode tags"
 msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
-msgstr ""
+msgstr "フッターテキストには HTML やショートコードが利用できます。ショートコード例: %s"
 
 #: library/extensions/theme-options.php:355
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
-msgstr ""
+msgstr "%s 個の テーマオプションが改善されたフォーマットにアップグレードされました。データベースからレガシーなオプションが削除されました。"
 
 #: library/extensions/theme-options.php:382
 msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
-msgstr ""
+msgstr "このインデックス挿入位置の値は0以上の数字を入力してください。この設定は前の値に戻されました。"
 
 #: library/extensions/widgets-extensions.php:34
 msgid "To search, type and hit enter"
-msgstr "For å søke, skriv og trykk enter"
+msgstr "検索語句を入力してください。"
 
 #: library/extensions/widgets-extensions.php:40
 #: library/extensions/widgets.php:56 library/extensions/widgets.php:61
 msgid "Search"
-msgstr "S&oslash;k"
+msgstr "検索"
 
 #: library/extensions/widgets-extensions.php:70
 msgid "Primary Aside"
-msgstr ""
+msgstr "第1アサイド"
 
 #: library/extensions/widgets-extensions.php:72
 msgid "The primary widget area, most often used as a sidebar."
-msgstr "Primært widgetområde, oftest brukt som sidekolonne."
+msgstr "第一ウィジェットエリア。たいていはサイドバーに使用されます。"
 
 #: library/extensions/widgets-extensions.php:85
 msgid "Secondary Aside"
-msgstr ""
+msgstr "第2アサイド"
 
 #: library/extensions/widgets-extensions.php:87
 msgid "The secondary widget area, most often used as a sidebar."
-msgstr "Sekundært widgetområde, oftest brukt som sidekolonne."
+msgstr "第二ウィジェットエリア。たいていはサイドバーに使用されます。"
 
 #: library/extensions/widgets-extensions.php:100
 msgid "1st Subsidiary Aside"
-msgstr ""
+msgstr "第1副アサイド"
 
 #: library/extensions/widgets-extensions.php:102
 msgid "The 1st widget area in the footer."
-msgstr "Første widgetområdet i bunnområdet."
+msgstr "フッターの第一ウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:115
 msgid "2nd Subsidiary Aside"
-msgstr ""
+msgstr "第2副アサイド"
 
 #: library/extensions/widgets-extensions.php:117
 msgid "The 2nd widget area in the footer."
-msgstr "Andre widgetområdet i bunnområdet."
+msgstr "フッターの第二ウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:130
 msgid "3rd Subsidiary Aside"
-msgstr ""
+msgstr "第3副アサイド"
 
 #: library/extensions/widgets-extensions.php:132
 msgid "The 3rd widget area in the footer."
-msgstr "Tredje widgetområdet i bunnområdet."
+msgstr "フッターの第三ウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:145
 msgid "Index Top"
-msgstr ""
+msgstr "インデックストップ"
 
 #: library/extensions/widgets-extensions.php:147
 msgid "The top widget area displayed on the index page."
-msgstr "Øvre widgetområde på forsiden."
+msgstr "インデックスページの一番上にに表示されるウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:160
 msgid "Index Insert"
-msgstr ""
+msgstr "インデック挿入"
 
 #: library/extensions/widgets-extensions.php:162
 msgid "The widget area inserted after x posts on the index page."
-msgstr "Widgetområde etter x innlegg på forsiden."
+msgstr "インデックスページの n 番目の投稿の下に挿入されるウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:175
 msgid "Index Bottom"
-msgstr ""
+msgstr "インデックス下"
 
 #: library/extensions/widgets-extensions.php:177
 msgid "The bottom widget area displayed on the index page."
-msgstr "Nedre widgetområde på forsiden."
+msgstr "インデックスページの一番下に表示されるウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:190
 msgid "Single Top"
-msgstr ""
+msgstr "シングルトップ"
 
 #: library/extensions/widgets-extensions.php:192
 msgid "The top widget area displayed on a single post."
-msgstr "Øvre widgetområde på innleggssider."
+msgstr "シングル投稿の一番上に表示されるウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:205
 msgid "Single Insert"
-msgstr ""
+msgstr "シングル挿入"
 
 #: library/extensions/widgets-extensions.php:207
 msgid "The widget area inserted between the post and the comments on a single post."
-msgstr "Widgetområde mellom innlegg og kommentarer på innleggssider."
+msgstr "シングル投稿の投稿とコメントの間に挿入されるウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:220
 msgid "Single Bottom"
-msgstr ""
+msgstr "シングル下"
 
 #: library/extensions/widgets-extensions.php:222
 msgid "The bottom widget area displayed on a single post."
-msgstr "Nedre widgetområde på innleggssider."
+msgstr "シングル投稿の一番下に表示されるウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:235
 msgid "Page Top"
-msgstr ""
+msgstr "固定ページトップ"
 
 #: library/extensions/widgets-extensions.php:237
 msgid "The top widget area displayed on a page."
-msgstr "Øvre widgetområde på sider."
+msgstr "固定ページの一番上に表示されるウィジェットエリア。"
 
 #: library/extensions/widgets-extensions.php:250
 msgid "Page Bottom"
-msgstr ""
+msgstr "固定ページ下"
 
 #: library/extensions/widgets-extensions.php:252
 msgid "The bottom widget area displayed on a page."
-msgstr "Nedre widgetområde på sider."
+msgstr "固定ページの一番下に表示されるウィジェットエリア。"
 
 #: library/extensions/widgets.php:55
 msgid "A search form for your blog"
-msgstr ""
+msgstr "サイトの検索フォーム"
 
 #: library/extensions/widgets.php:77 library/extensions/widgets.php:132
 #: library/extensions/widgets.php:175
 msgid "Title:"
-msgstr "Tittel:"
+msgstr "タイトル:"
 
 #: library/extensions/widgets.php:100
 msgid "Log in/out and admin"
-msgstr ""
+msgstr "ログイン、ログアウトとサイト管理"
 
 #: library/extensions/widgets.php:101 library/extensions/widgets.php:106
 msgid "Meta"
-msgstr "Meta"
+msgstr "メタ情報"
 
 #: library/extensions/widgets.php:145
 msgid "Links to your posts and comments feed"
-msgstr ""
+msgstr "投稿とコメントフィードへのリンク"
 
 #: library/extensions/widgets.php:146 library/extensions/widgets.php:151
 msgid "RSS Links"
-msgstr "RSS-lenker"
+msgstr "RSS リンク"
 
 #: library/extensions/widgets.php:157
 msgid "All posts"
-msgstr "Alle artikler"
+msgstr "すべての投稿"
 
 #: library/extensions/widgets.php:158
 msgid "All comments"
-msgstr "Alle kommentarer"
+msgstr "すべてのコメント"
 
 #: library/legacy/deprecated.php:357
 msgid "Logged in as"
-msgstr ""
+msgstr "ログイン済: "
 
 #: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
 msgid "<span class=\"required\">*</span>"
@@ -637,46 +636,46 @@ msgstr "<span class=\"required\">*</span>"
 
 #: page.php:50 template-page-fullwidth.php:51
 msgid "Pages: "
-msgstr "Sider: "
+msgstr "ページ:"
 
 #: search.php:56
 msgid "Nothing Found"
-msgstr "Ingen treff"
+msgstr "リンクが見つかりませんでした。"
 
 #: search.php:60
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Beklager, ingenting matchar ditt s&oslash;kekriterie. Fors&oslash;k med en annen s&oslash;kestreng."
+msgstr "検索語句に該当する投稿/ページは見つかりませんでした。別のキーワードをお試しください。"
 
 #: template-page-blog.php:22
 msgid "You can include a %s in a childtheme"
-msgstr ""
+msgstr "子テーマに %s を含めることができます。"
 
 msgid "Thematic"
-msgstr ""
+msgstr "Thematic"
 
 msgid "http://thematictheme.com"
-msgstr ""
+msgstr "http://thematictheme.com"
 
 msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
-msgstr ""
+msgstr "SEO にとても最適化されたテーマ、Thematic は高度な拡張が可能です。13のウィジェットエリア、ドロップダウンメニュー、グリッドベースのレイアウトサンプル、プラグイン統合、フッター用のショートコード、などなどを備えた WordPress のテーマフレームワークです。どんなブログ向けとしても、またテーマ開発の<strong><em>スタート点</em></strong>としても最適です。"
 
 msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
-msgstr ""
+msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
 
 msgid "http://themeshaper.com/"
-msgstr ""
+msgstr "http://themeshaper.com/"
 
 msgid "Deprecated Archives Template"
-msgstr ""
+msgstr "非推奨のアーカイブテンプレート"
 
 msgid "Links Page"
-msgstr ""
+msgstr "リンクのページ"
 
 msgid "Archives Page"
-msgstr ""
+msgstr "アーカイブページ"
 
 msgid "Deprecated Blog Template"
-msgstr ""
+msgstr "非推奨のブログテンプレート"
 
 msgid "Full Width"
-msgstr ""
+msgstr "全幅テンプレート"

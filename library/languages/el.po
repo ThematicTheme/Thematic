@@ -1,488 +1,682 @@
+# Translation of Thematic 1.0.3.x in Greek
+# This file is distributed under the same license as the Thematic 1.0.3.x package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Thematic\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-15 11:44+0100\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Demetris Kikizas <op111.net@gmail.com>\n"
-"Language-Team: op111.net <op111.net@gmail.com>\n"
+"PO-Revision-Date: 2013-03-05 17:46:53+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-Language: Greek\n"
-"X-Poedit-Country: Greece\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Thematic 1.0.3.x\n"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/404.php:10
-msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Συγγνώμη!  Αυτό που ζητούσατε δεν βρέθηκε.  Θέλετε να δοκιμάσετε την αναζήτηση;"
+#: library/extensions/content-extensions.php:916
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/404.php:15
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:58
-msgid "Find"
-msgstr "Αναζήτηση"
+#: library/extensions/content-extensions.php:1667
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:16
-#, php-format
-msgid "Daily Archives: <span>%s</span>"
-msgstr "Αρχείο ημέρας:  <span>%s</span>"
+#: archives.php:20 template-page-blog.php:22
+msgid "The template %s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:18
-#, php-format
-msgid "Monthly Archives: <span>%s</span>"
-msgstr "Αρχείο μηνός:  <span>%s</span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:20
-#, php-format
-msgid "Yearly Archives: <span>%s</span>"
-msgstr "Αρχείο έτους:  <span>%s</span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:22
-msgid "Blog Archives"
-msgstr "Αρχείο ιστολογίου"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:31
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:53
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:21
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:57
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:20
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:42
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:17
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:49
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:21
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:43
-msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">«</span> Προηγούμενα άρθρα"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:32
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:54
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:22
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:58
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:21
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:43
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:18
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:50
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:22
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:44
-msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Επόμενα άρθρα <span class=\"meta-nav\">»</span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archive.php:41
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/attachment.php:20
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:45
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:30
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:30
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:31
-msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Συνέχεια <span class=\"meta-nav\">»</span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archives.php:20
-msgid "Archives by Category"
-msgstr "Αρχείο κατά κατηγορία"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archives.php:26
-msgid "Archives by Month"
-msgstr "Αρχείο κατά μήνα"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/archives.php:32
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/links.php:20
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/page.php:16
-msgid "Edit"
-msgstr "Επεξεργασία"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/attachment.php:22
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/index.php:32
+#: attachment.php:54 library/extensions/content-extensions.php:630
+#: library/extensions/content-extensions.php:689
 msgid "Pages:"
 msgstr "Σελίδες: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:15
-msgid "Author Archives: "
-msgstr "Αρχείο συντάκτη: "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/author.php:34
+#: author.php:67
 msgid "Email "
 msgstr "Ηλ. διεύθυνση"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/category.php:13
-msgid "Category Archives:"
-msgstr "Αρχείο κατηγορίας: "
+#: comments.php:24
+msgid "Please do not load this page directly."
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:10
+#: comments.php:33
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Το άρθρο προστατεύεται με συνθηματικό. Για να δείτε τα σχόλια, πληκτρολογήστε το συνθηματικό σας."
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:31
-#, php-format
-msgid "<span>%d</span> Comments"
-msgstr "<span>%d</span> σχόλια"
+#: comments.php:111
+msgid "Trackbacks"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:31
-msgid "<span>One</span> Comment"
-msgstr "<span>Ένα</span> σχόλιο"
+#: comments.php:111
+msgctxt "%1$ and %2$s are <span> tags"
+msgid "%1$sOne%2$s Trackback"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:52
-#, php-format
-msgid "<span>%d</span> Trackbacks"
-msgstr "<span>%d</span> τράκμπακ"
+#: functions.php:194
+msgid "Primary Menu"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:52
-msgid "<span>One</span> Trackback"
-msgstr "<span>Ένα</span> τράκμπακ"
+#: library/extensions/comments-extensions.php:120
+msgctxt "One Comment, where %$1s and %$2s are <span> tags"
+msgid "%1$sOne%2$s Comment"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:67
+#: library/extensions/comments-extensions.php:131
+msgid "Comments"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:155
 msgid "Post a Comment"
 msgstr "Αφήστε σχόλιο"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:67
-#, php-format
+#: library/extensions/comments-extensions.php:167
 msgid "Post a Reply to %s"
 msgstr "Απαντήστε στο %s"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:72
-#, php-format
-msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Για να σχολιάσετε πρέπει να <a href=\"%s\" title=\"Log in\">συνδεθείτε</a>."
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:83
-#, php-format
-msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\">Έχετε συνδεθεί ως <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Αποσύνδεση;</a></span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:90
-msgid "Your email is <em>never</em> published nor shared."
-msgstr "Η διεύθυνσή σας δεν δημοσιεύεται <em>ούτε</em> κοινοποιείται!"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:90
-msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "Τα πεδία με αστερίσκο (<span class=\"required\">*</span>) είναι υποχρεωτικά."
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:93
-msgid "Name"
-msgstr "Όνομα"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:93
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:98
-msgid "<span class=\"required\">*</span>"
-msgstr "<span class=\"required\">*</span>"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:98
-msgid "Email"
-msgstr "Ηλ. διεύθυνση"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:103
-msgid "Website"
-msgstr "Ιστοσελίδα"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:110
+#: library/extensions/comments-extensions.php:179
+msgctxt "noun"
 msgid "Comment"
-msgstr "Σχόλιο"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:115
-msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
-msgstr "Επιτρέπεται η χρήση των εξής στοιχείων και ιδιοτήτων <abbr title=\"HyperText Markup Language\">HTML</abbr>:"
+#: library/extensions/comments-extensions.php:190
+msgid "Cancel reply"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/comments.php:120
+#: library/extensions/comments-extensions.php:202
 msgid "Post Comment"
 msgstr "Υποβολή"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/page.php:14
-msgid "Pages: "
-msgstr "Σελίδες: "
+#: library/extensions/comments-extensions.php:228
+#: library/legacy/deprecated.php:365
+msgid "Name"
+msgstr "Όνομα"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:15
+#: library/extensions/comments-extensions.php:228
+#: library/extensions/comments-extensions.php:229
+msgctxt "denotes required field"
+msgid "*"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:229
+#: library/legacy/deprecated.php:370
+msgid "Email"
+msgstr "Ηλ. διεύθυνση"
+
+#: library/extensions/comments-extensions.php:230
+#: library/legacy/deprecated.php:375
+msgid "Website"
+msgstr "Ιστοσελίδα"
+
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:362
+msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
+msgid "Your email is %1$snever%2$s published nor shared."
+msgstr ""
+
+#: library/extensions/comments-extensions.php:238
+msgctxt "%$1s and %$2s are <span> tags"
+msgid "Required fields are marked %1$s*%2$s"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr ""
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "Log in"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Logged in as %s"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out of this account"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out?"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:244
+#: library/legacy/deprecated.php:387
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes"
+msgstr ""
+
+#: library/extensions/content-extensions.php:334
+msgid "Author Archives:"
+msgstr ""
+
+#: library/extensions/content-extensions.php:339
+#: library/extensions/header-extensions.php:103
+msgid "Category Archives:"
+msgstr "Αρχείο κατηγορίας: "
+
+#: library/extensions/content-extensions.php:347
+#: library/extensions/header-extensions.php:99
 msgid "Search Results for:"
 msgstr "Αποτελέσματα για: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:51
-msgid "Nothing Found"
-msgstr "Δεν βρέθηκαν άρθρα"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/search.php:53
-msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Η αναζήτησή σας δεν έφερε αποτελέσματα.  Αν θέλετε, ξαναδοκιμάστε με διαφορετικούς όρους."
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:6
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:10
-msgid "Search"
-msgstr "Αναζήτηση"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:16
-msgid "Pages"
-msgstr "Σελίδες"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:23
-msgid "Categories"
-msgstr "Κατηγορίες"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:31
-msgid "Archives"
-msgstr "Αρχείο"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:50
-msgid "RSS Feeds"
-msgstr "Κανάλια RSS"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:52
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:390
-msgid "Posts RSS feed"
-msgstr "Κανάλι RSS άρθρων"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:52
-msgid "All posts"
-msgstr "Όλα τα άρθρα"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:53
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:408
-msgid "Comments RSS feed"
-msgstr "Κανάλι RSS σχολίων"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:53
-msgid "All comments"
-msgstr "Όλα τα σχόλια"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/sidebar.php:58
-msgid "Meta"
-msgstr "Μεταπληροφορίες"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/tag.php:13
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:207
+#: library/extensions/content-extensions.php:352
+#: library/extensions/header-extensions.php:107
 msgid "Tag Archives:"
 msgstr "Αρχείο ετικέτας: "
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:10
-#, php-format
-msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "Δημοσιεύτηκε %1$s στις %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Μόνιμος σύνδεσμος προς το σχόλιο\">Σύνδεσμος</a>"
+#: library/extensions/content-extensions.php:361
+#: library/extensions/content-extensions.php:368
+msgid "Archives:"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:15
-msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
-msgstr "\t\t\t\t\t<span class='unapproved'>Το σχόλιό σας είναι υπό έγκριση.</span>\n"
+#: library/extensions/content-extensions.php:373
+msgid "Daily Archives: %s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:22
-msgid "Reply"
-msgstr "Απάντηση"
+#: library/extensions/content-extensions.php:377
+msgid "Monthly Archives: %s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:23
-msgid "Log in to reply."
-msgstr "Συνδεθείτε για να απαντήσετε"
+#: library/extensions/content-extensions.php:381
+msgid "Yearly Archives: %s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:37
-#, php-format
-msgid "By %1$s on %2$s at %3$s"
-msgstr "Από %1$s στις %2$s, %3$s"
+#: library/extensions/content-extensions.php:424
+#: library/extensions/content-extensions.php:1710
+msgid "Older posts"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/discussion.php:42
-msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
-msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Το τράκμπακ είναι υπό έγκριση.</span>\\n"
+#: library/extensions/content-extensions.php:426
+#: library/extensions/content-extensions.php:1712
+msgid "Newer posts"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/helpers.php:31
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/helpers.php:44
-msgid "There is no excerpt because this is a protected post."
-msgstr "Δεν βλέπετε σύνοψη διότι το άρθρο προστατεύεται με συνθηματικό."
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:61
-msgid "Skip navigation to the content"
-msgstr "Μετάβαση κατευθείαν στο περιεχόμενο"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:61
-msgid "Skip to content"
-msgstr "Μετάβαση στο περιεχόμενο"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:211
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:497
-msgid "Not Found"
-msgstr "Δεν βρέθηκε!"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:489
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:544
+#: library/extensions/content-extensions.php:888
+#: library/extensions/content-extensions.php:1422
 msgid "Edit post"
 msgstr "Επεξεργασία άρθρου"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:502
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:597
-msgid "Permalink to "
-msgstr "Μόνιμος σύνδεσμος του "
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1424
+#: library/extensions/discussion-extensions.php:37
+#: library/extensions/discussion.php:84 links.php:52 page.php:52
+#: template-page-archives.php:55 template-page-fullwidth.php:53
+msgid "Edit"
+msgstr "Επεξεργασία"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:511
-msgid "By "
-msgstr "Από "
+#: library/extensions/content-extensions.php:921
+#: library/extensions/header-extensions.php:111
+msgid "Not Found"
+msgstr "Δεν βρέθηκε!"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:513
-msgid "View all posts by "
-msgstr "Προβολή όλων των άρθρων του/της"
+#: library/extensions/content-extensions.php:926
+#: library/extensions/content-extensions.php:1145
+#: library/extensions/content-extensions.php:1149
+#: library/extensions/content-extensions.php:1380
+msgid "Permalink to %s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:516
-msgid "Published: "
-msgstr "Δημοσίευση: "
+#: library/extensions/content-extensions.php:987
+msgid "By"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:551
-msgid "This entry was posted in "
-msgstr "Καταχωρήθηκε στην κατηγορία/ες:  "
+#: library/extensions/content-extensions.php:998
+msgid "View all posts by %s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:554
-msgid "Also posted in "
-msgstr "Επίσης στις κατηγορίες: "
+#: library/extensions/content-extensions.php:1027
+msgid "Published:"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:557
-msgid "Posted in "
-msgstr "Κατηγορίες: "
+#: library/extensions/content-extensions.php:1203
+msgid "Archives by Category"
+msgstr "Αρχείο κατά κατηγορία"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:564
-msgid " and tagged"
-msgstr "– Ετικέτες: "
+#: library/extensions/content-extensions.php:1234
+msgid "Archives by Month"
+msgstr "Αρχείο κατά μήνα"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:567
-msgid " Also tagged "
-msgstr " Άλλες ετικέτες: "
+#: library/extensions/content-extensions.php:1295
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:569
+#: library/extensions/content-extensions.php:1301 search.php:70
+msgid "Find"
+msgstr "Αναζήτηση"
+
+#: library/extensions/content-extensions.php:1320
+msgid "Read More %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1372
+msgid "Browse the %s archive."
+msgstr ""
+
+#: library/extensions/content-extensions.php:1374
+msgid "Permalink to %s Archive"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1380
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Bookmark the %1$spermalink%2$s."
+msgstr ""
+
+#: library/extensions/content-extensions.php:1538
+msgid "This entry was posted in %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1549
+msgid "Also posted in %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1553
+msgid "Posted in %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1579
+msgid "This entry is tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1582
+msgid "and tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1585
+msgid "Also tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1587
 msgid "Tagged"
 msgstr "Ετικέτες:"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:578
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:581
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:584
-msgid "Comment on "
-msgstr "Κάντε σχόλιο στο: "
+#: library/extensions/content-extensions.php:1617
+#: library/extensions/content-extensions.php:1623
+msgid "Comment on %s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:579
-msgid " Comments"
-msgstr " Σχόλια"
+#: library/extensions/content-extensions.php:1619
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] ""
+msgstr[1] ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:582
-msgid " Comment"
-msgstr " Σχόλιο"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:585
+#: library/extensions/content-extensions.php:1624
 msgid "Leave a comment"
 msgstr "Γράψτε σχόλιο"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:588
+#: library/extensions/content-extensions.php:1627
 msgid "Comments closed"
 msgstr "Τα σχόλια έχουν κλείσει"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:597
-msgid ". Bookmark the "
-msgstr " – Κρατήστε τον "
+#: library/extensions/content-extensions.php:1651
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
+msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:598
-msgid "permalink"
-msgstr "σύνδεσμο"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:600
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:608
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1667
 msgid "Post a comment"
 msgstr "– Κάντε σχόλιο"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:601
-msgid " or leave a trackback: "
-msgstr " ή αφήστε τράκμπακ: "
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:602
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:605
+#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1663
 msgid "Trackback URL for your post"
 msgstr "URL για τράκμπακ στο άρθρο"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:602
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:605
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1664
 msgid "Trackback URL"
 msgstr "URL για τράκμπακ"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:604
-msgid " Comments are closed, but you can leave a trackback: "
-msgstr " Τα σχόλια έχουν κλείσει.  Αν θέλετε, αφήστε τράκμπακ: "
+#: library/extensions/content-extensions.php:1660
+msgctxt "%s is trackback url, wrapped in link tags"
+msgid "Comments are closed, but you can leave a trackback: %s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:607
-msgid " Trackbacks are closed, but you can "
-msgstr " Τα τράκμπακ έχουν κλείσει.  Αν θέλετε, "
+#: library/extensions/content-extensions.php:1669
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:608
-msgid "post a comment"
-msgstr "αφήστε ένα σχόλιο"
+#: library/extensions/discussion-extensions.php:27
+msgctxt "Posted {$date} at {$time}"
+msgid "Posted %s at %s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/hooks-filters.php:610
-msgid " Both comments and trackbacks are currently closed."
-msgstr " Τα σχόλια και τράκμπακ είναι κλειστά επί του παρόντος."
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink to this comment"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/shortcodes.php:16
-msgid "Login"
-msgstr "Σύνδεση"
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/shortcodes.php:18
-msgid "Logout"
-msgstr "Αποσύνδεση"
+#: library/extensions/discussion-extensions.php:36
+msgid "Edit comment"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:13
+#: library/extensions/discussion.php:37
+msgid "Your comment is awaiting moderation"
+msgstr ""
+
+#: library/extensions/discussion.php:52
+msgid "Reply"
+msgstr "Απάντηση"
+
+#: library/extensions/discussion.php:53
+msgid "Log in to reply."
+msgstr "Συνδεθείτε για να απαντήσετε"
+
+#: library/extensions/discussion.php:80
+msgctxt "By {$authorlink} on {$date} at {$time}"
+msgid "By %1$s on %2$s at %3$s"
+msgstr ""
+
+#: library/extensions/discussion.php:90
+msgid "Your trackback is awaiting moderation"
+msgstr ""
+
+#: library/extensions/header-extensions.php:319
+#: library/extensions/widgets.php:157
+msgid "Posts RSS feed"
+msgstr "Κανάλι RSS άρθρων"
+
+#: library/extensions/header-extensions.php:343
+#: library/extensions/widgets.php:158
+msgid "Comments RSS feed"
+msgstr "Κανάλι RSS σχολίων"
+
+#: library/extensions/header-extensions.php:667
+msgid "Skip navigation to the content"
+msgstr "Μετάβαση κατευθείαν στο περιεχόμενο"
+
+#: library/extensions/header-extensions.php:667
+msgid "Skip to content"
+msgstr "Μετάβαση στο περιεχόμενο"
+
+#: library/extensions/helpers.php:50 library/extensions/helpers.php:69
+msgid "There is no excerpt because this is a protected post."
+msgstr "Δεν βλέπετε σύνοψη διότι το άρθρο προστατεύεται με συνθηματικό."
+
+#: library/extensions/theme-options.php:50
 msgid "Index Insert Position"
 msgstr "Θέση ευρετηρίου"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:14
-msgid "The widgetized Index Insert will follow after this post number."
-msgstr "Μετά από πόσα άρθρα να εμφανίζεται η ένθετη μονάδα της αρχικής σελίδας;"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:19
+#: library/extensions/theme-options.php:51
 msgid "Info on Author Page"
 msgstr "Σελίδες συντακτών"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:20
-msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
-msgstr "Προβολή <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">vCard σε μικροφορμάτ</a> —με εικόνα, βιογραφικό και ηλ. διεύθυνση— στις σελίδες συντακτών"
-
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:25
+#: library/extensions/theme-options.php:52
 msgid "Text in Footer"
 msgstr "Κείμενο υποσέλιδου"
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:26
-msgid "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
-msgstr "Στο υποσέλιδο γίνεται να χρησιμοποιήσετε τις εξής κωδικοσυντομεύσεις:<br />[wp-link] [theme-link] [loginout-link] [blog-title] [the-year]"
+#: library/extensions/theme-options.php:56
+msgid "Remove Legacy Options"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:28
-msgid "Powered by [wp-link]. Built on the [theme-link]."
-msgstr "Με τη δύναμη του [wp-link] και του [theme-link]"
+#: library/extensions/theme-options.php:170
+msgid "Theme Options"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:76
-msgid "settings saved."
-msgstr "– Οι ρυθμίσεις αποθηκεύτηκαν."
+#: library/extensions/theme-options.php:202
+msgid "For more information:"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:77
-msgid "settings reset."
-msgstr "– Αποκαταστάθηκαν οι αρχικές τιμές."
+#: library/extensions/theme-options.php:204
+msgid "For support:"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:78
-msgid "widgets reset."
-msgstr "– Αποκαταστάθηκαν οι αρχικές ρυθμίσεις μονάδων."
+#: library/extensions/theme-options.php:206
+msgid "forums"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:191
-msgid "Save changes"
-msgstr "Αποθήκευση αλλαγών"
+#: library/extensions/theme-options.php:210
+msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:197
-msgid "Reset"
-msgstr "Επαναφορά"
+#: library/extensions/theme-options.php:211
+msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:203
-msgid "Reset Widgets"
-msgstr "Επαναφορά μονάδων"
+#: library/extensions/theme-options.php:217
+msgid "Overview"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/theme-options.php:208
-msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
-msgstr "Μάθετε περισσότερα για το Thematic:  <a href=\"http://themeshaper.com\">ThemeShaper.com</a>.  Για οποιαδήποτε απορία γύρω από το Thematic, είστε ευσπρόσεκτοι στο <a href=\"http://themeshaper.com/forums/\">φόρουμ του ThemeShaper.com</a>."
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:55
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:245
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:246
-msgid "RSS Links"
-msgstr "Σύνδεσμοι RSS"
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
+msgstr ""
 
-#: D:\Web\Wordpress\dev\wp-content\themes\thematic/library/extensions/widgets.php:79
+#: library/extensions/theme-options.php:267
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options"
+msgstr ""
+
+#: library/extensions/theme-options.php:305
+msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
+msgstr ""
+
+#: library/extensions/theme-options.php:318
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
+msgstr ""
+
+#: library/extensions/theme-options.php:331
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr ""
+
+#: library/extensions/theme-options.php:355
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
+msgstr ""
+
+#: library/extensions/theme-options.php:382
+msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:34
+msgid "To search, type and hit enter"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:40
+#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: library/extensions/widgets-extensions.php:70
+msgid "Primary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:72
+msgid "The primary widget area, most often used as a sidebar."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:85
+msgid "Secondary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:87
+msgid "The secondary widget area, most often used as a sidebar."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:100
+msgid "1st Subsidiary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:102
+msgid "The 1st widget area in the footer."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:115
+msgid "2nd Subsidiary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:117
+msgid "The 2nd widget area in the footer."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:130
+msgid "3rd Subsidiary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:132
+msgid "The 3rd widget area in the footer."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:145
+msgid "Index Top"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:147
+msgid "The top widget area displayed on the index page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:160
+msgid "Index Insert"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:162
+msgid "The widget area inserted after x posts on the index page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:175
+msgid "Index Bottom"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:177
+msgid "The bottom widget area displayed on the index page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:190
+msgid "Single Top"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:192
+msgid "The top widget area displayed on a single post."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:205
+msgid "Single Insert"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:207
+msgid "The widget area inserted between the post and the comments on a single post."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:220
+msgid "Single Bottom"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:222
+msgid "The bottom widget area displayed on a single post."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:235
+msgid "Page Top"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:237
+msgid "The top widget area displayed on a page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:250
+msgid "Page Bottom"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:252
+msgid "The bottom widget area displayed on a page."
+msgstr ""
+
+#: library/extensions/widgets.php:55
+msgid "A search form for your blog"
+msgstr ""
+
+#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
+#: library/extensions/widgets.php:175
 msgid "Title:"
 msgstr "Τίτλος:"
 
-#, fuzzy
-#~ msgid "Site Meta"
-#~ msgstr "Δείτε την ιστοσελίδα"
+#: library/extensions/widgets.php:100
+msgid "Log in/out and admin"
+msgstr ""
 
-#, fuzzy
-#~ msgid "Blog Index"
-#~ msgstr "Όνομα ιστολογίου"
+#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
+msgid "Meta"
+msgstr "Μεταπληροφορίες"
 
+#: library/extensions/widgets.php:145
+msgid "Links to your posts and comments feed"
+msgstr ""
+
+#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
+msgid "RSS Links"
+msgstr "Σύνδεσμοι RSS"
+
+#: library/extensions/widgets.php:157
+msgid "All posts"
+msgstr "Όλα τα άρθρα"
+
+#: library/extensions/widgets.php:158
+msgid "All comments"
+msgstr "Όλα τα σχόλια"
+
+#: library/legacy/deprecated.php:357
+msgid "Logged in as"
+msgstr ""
+
+#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: page.php:50 template-page-fullwidth.php:51
+msgid "Pages: "
+msgstr "Σελίδες: "
+
+#: search.php:56
+msgid "Nothing Found"
+msgstr "Δεν βρέθηκαν άρθρα"
+
+#: search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Η αναζήτησή σας δεν έφερε αποτελέσματα.  Αν θέλετε, ξαναδοκιμάστε με διαφορετικούς όρους."
+
+#: template-page-blog.php:22
+msgid "You can include a %s in a childtheme"
+msgstr ""
+
+msgid "Thematic"
+msgstr ""
+
+msgid "http://thematictheme.com"
+msgstr ""
+
+msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
+msgstr ""
+
+msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+msgstr ""
+
+msgid "http://themeshaper.com/"
+msgstr ""
+
+msgid "Deprecated Archives Template"
+msgstr ""
+
+msgid "Links Page"
+msgstr ""
+
+msgid "Archives Page"
+msgstr ""
+
+msgid "Deprecated Blog Template"
+msgstr ""
+
+msgid "Full Width"
+msgstr ""

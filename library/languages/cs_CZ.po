@@ -1,524 +1,683 @@
-# kubrick theme pot file.
-# Copyright (C) 2007 WordPress
-# This file is distributed under the same license as the kubrick theme package.
-#
+# Translation of Thematic 1.0.3.x in Czech
+# This file is distributed under the same license as the Thematic 1.0.3.x package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Čeština pro Thematic\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-18 20:58+0100\n"
-"PO-Revision-Date: 2010-08-09 12:25+0100\n"
-"Last-Translator: Shane <janfertek@gmail.com>\n"
-"Language-Team: Jan Feřtek <janfertek@gmail.com>\n"
+"PO-Revision-Date: 2013-03-05 17:46:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Czech\n"
-"X-Poedit-Country: CZECH REPUBLIC\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
-"Plural-Forms: nplurals=3;\n"
-"X-Poedit-SearchPath-0: \n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Thematic 1.0.3.x\n"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/archives.php:42
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/links.php:53
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/page.php:40
-msgid "Edit"
-msgstr "Upravit"
+#: library/extensions/content-extensions.php:916
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:39
+#: library/extensions/content-extensions.php:1667
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr ""
+
+#: archives.php:20 template-page-blog.php:22
+msgid "The template %s"
+msgstr ""
+
+#: attachment.php:54 library/extensions/content-extensions.php:630
+#: library/extensions/content-extensions.php:689
 msgid "Pages:"
 msgstr "Stránky:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/author.php:53
+#: author.php:67
 msgid "Email "
 msgstr "E-mail "
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:10
+#: comments.php:24
+msgid "Please do not load this page directly."
+msgstr ""
+
+#: comments.php:33
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Tento příspěvek je chráněn heslem. Zadejte heslo pro zobrazení komentářů."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:52
-#, php-format
-msgid "<span>%d</span> Trackbacks"
-msgstr "Trackbacky <span>(%d)</span>"
+#: comments.php:111
+msgid "Trackbacks"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:52
-msgid "<span>One</span> Trackback"
-msgstr "<span>jeden</span> trackback"
+#: comments.php:111
+msgctxt "%1$ and %2$s are <span> tags"
+msgid "%1$sOne%2$s Trackback"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:72
-#, php-format
-msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "<a href=\"%s\" title=\"Přihlásit se\">Přihlašte se</a> pro přidání komentáře."
+#: functions.php:194
+msgid "Primary Menu"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:83
-#, php-format
-msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\">Jste přihlášen(a) jako <a href=\"%1$s\">%2$s</a>.</span> <span class=\"logout\">Chcete se <a href=\"%3$s\" title=\"Odhlásit se z tohoto účtu\" >odhlásit</a>?</span></span>"
+#: library/extensions/comments-extensions.php:120
+msgctxt "One Comment, where %$1s and %$2s are <span> tags"
+msgid "%1$sOne%2$s Comment"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:90
-msgid "Your email is <em>never</em> published nor shared."
-msgstr "Váš e-mail nebude <em>nikdy</em> zveřejněn nebo sdílen."
+#: library/extensions/comments-extensions.php:131
+msgid "Comments"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:90
-msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "Povinná pole jsou označena <span class=\"required\">*</span>."
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:93
-msgid "Name"
-msgstr "Jméno"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:93
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:98
-msgid "<span class=\"required\">*</span>"
-msgstr "<span class=\"required\">*</span>"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:98
-msgid "Email"
-msgstr "E-mail"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:103
-msgid "Website"
-msgstr "Web"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:115
-msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
-msgstr "Můžete použít tyto <abbr title=\"HyperText Markup Language\">HTML</abbr> tagy a atributy:"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/page.php:38
-msgid "Pages: "
-msgstr "Stránky: "
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:41
-msgid "Nothing Found"
-msgstr "Nic nenalezeno"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:43
-msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Nebyly nalezeny žádné výsledky. Zkuste prosím zadat jiný výraz."
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:48
-msgid "Find"
-msgstr "Najít"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:76
-msgid "<span>One</span> Comment"
-msgstr "<span>Jeden</span> komentář"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:83
-#, php-format
-msgid "<span>%d</span> Comments"
-msgstr "Komentáře <span>(%d)</span>"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:96
+#: library/extensions/comments-extensions.php:155
 msgid "Post a Comment"
 msgstr "Poslat komentář"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:103
-#, php-format
+#: library/extensions/comments-extensions.php:167
 msgid "Post a Reply to %s"
 msgstr "Poslat odpověď na %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:110
+#: library/extensions/comments-extensions.php:179
+msgctxt "noun"
 msgid "Comment"
-msgstr "Komentář"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:117
+#: library/extensions/comments-extensions.php:190
+msgid "Cancel reply"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:202
 msgid "Post Comment"
 msgstr "Odeslat komentář"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:147
-msgid "Author Archives: "
-msgstr "Archiv autora "
+#: library/extensions/comments-extensions.php:228
+#: library/legacy/deprecated.php:365
+msgid "Name"
+msgstr "Jméno"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:153
+#: library/extensions/comments-extensions.php:228
+#: library/extensions/comments-extensions.php:229
+msgctxt "denotes required field"
+msgid "*"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:229
+#: library/legacy/deprecated.php:370
+msgid "Email"
+msgstr "E-mail"
+
+#: library/extensions/comments-extensions.php:230
+#: library/legacy/deprecated.php:375
+msgid "Website"
+msgstr "Web"
+
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:362
+msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
+msgid "Your email is %1$snever%2$s published nor shared."
+msgstr ""
+
+#: library/extensions/comments-extensions.php:238
+msgctxt "%$1s and %$2s are <span> tags"
+msgid "Required fields are marked %1$s*%2$s"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr ""
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "Log in"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Logged in as %s"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out of this account"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out?"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:244
+#: library/legacy/deprecated.php:387
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes"
+msgstr ""
+
+#: library/extensions/content-extensions.php:334
+msgid "Author Archives:"
+msgstr ""
+
+#: library/extensions/content-extensions.php:339
+#: library/extensions/header-extensions.php:103
 msgid "Category Archives:"
 msgstr "Archiv rubriky"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:162
+#: library/extensions/content-extensions.php:347
+#: library/extensions/header-extensions.php:99
 msgid "Search Results for:"
 msgstr "Najít výsledky pro:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:168
+#: library/extensions/content-extensions.php:352
+#: library/extensions/header-extensions.php:107
 msgid "Tag Archives:"
 msgstr "Archiv štítku"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:174
-#, php-format
-msgid "Daily Archives: <span>%s</span>"
-msgstr "Archiv dne <span>%s</span>"
+#: library/extensions/content-extensions.php:361
+#: library/extensions/content-extensions.php:368
+msgid "Archives:"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:178
-#, php-format
-msgid "Monthly Archives: <span>%s</span>"
-msgstr "Archiv měsíce <span>%s</span>"
+#: library/extensions/content-extensions.php:373
+msgid "Daily Archives: %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:182
-#, php-format
-msgid "Yearly Archives: <span>%s</span>"
-msgstr "Archiv roku <span>%s</span>"
+#: library/extensions/content-extensions.php:377
+msgid "Monthly Archives: %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:186
-msgid "Blog Archives"
-msgstr "Archiv blogu"
+#: library/extensions/content-extensions.php:381
+msgid "Yearly Archives: %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:209
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:725
-msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> Starší příspěvky"
+#: library/extensions/content-extensions.php:424
+#: library/extensions/content-extensions.php:1710
+msgid "Older posts"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:210
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:726
-msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Novější příspěvky <span class=\"meta-nav\">&raquo;</span>"
+#: library/extensions/content-extensions.php:426
+#: library/extensions/content-extensions.php:1712
+msgid "Newer posts"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:394
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:618
+#: library/extensions/content-extensions.php:888
+#: library/extensions/content-extensions.php:1422
 msgid "Edit post"
 msgstr "Upravit příspěvek"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:406
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1424
+#: library/extensions/discussion-extensions.php:37
+#: library/extensions/discussion.php:84 links.php:52 page.php:52
+#: template-page-archives.php:55 template-page-fullwidth.php:53
+msgid "Edit"
+msgstr "Upravit"
+
+#: library/extensions/content-extensions.php:921
+#: library/extensions/header-extensions.php:111
 msgid "Not Found"
 msgstr "Nenalezeno"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:411
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
-msgid "Permalink to "
-msgstr "Trvalý odkaz na "
+#: library/extensions/content-extensions.php:926
+#: library/extensions/content-extensions.php:1145
+#: library/extensions/content-extensions.php:1149
+#: library/extensions/content-extensions.php:1380
+msgid "Permalink to %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:441
-msgid "By "
-msgstr "Vložil(a) "
+#: library/extensions/content-extensions.php:987
+msgid "By"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:444
-msgid "View all posts by "
-msgstr "Zobrazit všechny příspěvky od "
+#: library/extensions/content-extensions.php:998
+msgid "View all posts by %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:455
-msgid "Published: "
-msgstr "Publikováno "
+#: library/extensions/content-extensions.php:1027
+msgid "Published:"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:523
+#: library/extensions/content-extensions.php:1203
 msgid "Archives by Category"
 msgstr "Archiv podle rubriky"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:534
+#: library/extensions/content-extensions.php:1234
 msgid "Archives by Month"
 msgstr "Archiv podle měsíců"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:562
-msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Omlouváme se, ale tato stránka neexistuje. Můžete ji zkusit vyhledat."
+#: library/extensions/content-extensions.php:1295
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:578
-msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Více <span class=\"meta-nav\">&raquo;</span>"
+#: library/extensions/content-extensions.php:1301 search.php:70
+msgid "Find"
+msgstr "Najít"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:629
-msgid "This entry was posted in "
-msgstr "Příspěvek z rubriky "
+#: library/extensions/content-extensions.php:1320
+msgid "Read More %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:632
-msgid "Also posted in "
-msgstr "Také byl publikován v "
+#: library/extensions/content-extensions.php:1372
+msgid "Browse the %s archive."
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:635
-msgid "Posted in "
-msgstr "Příspěvek z rubriky "
+#: library/extensions/content-extensions.php:1374
+msgid "Permalink to %s Archive"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:646
-msgid " and tagged"
-msgstr " a označen"
+#: library/extensions/content-extensions.php:1380
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Bookmark the %1$spermalink%2$s."
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:649
-msgid " Also tagged "
-msgstr " Také označen "
+#: library/extensions/content-extensions.php:1538
+msgid "This entry was posted in %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:651
+#: library/extensions/content-extensions.php:1549
+msgid "Also posted in %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1553
+msgid "Posted in %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1579
+msgid "This entry is tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1582
+msgid "and tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1585
+msgid "Also tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1587
 msgid "Tagged"
 msgstr "Označen jako"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:663
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:666
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:669
-msgid "Comment on "
-msgstr "Komentáře k "
+#: library/extensions/content-extensions.php:1617
+#: library/extensions/content-extensions.php:1623
+msgid "Comment on %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:664
-msgid " Comments"
-msgstr " komentářů"
+#: library/extensions/content-extensions.php:1619
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:667
-msgid " Comment"
-msgstr " Komentář"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:670
+#: library/extensions/content-extensions.php:1624
 msgid "Leave a comment"
 msgstr "Přidat komentář"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:673
+#: library/extensions/content-extensions.php:1627
 msgid "Comments closed"
 msgstr "Komentáře uzavřeny"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
-msgid ". Bookmark the "
-msgstr ". Přidat do záložek "
+#: library/extensions/content-extensions.php:1651
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
+msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:687
-msgid "permalink"
-msgstr "trvalý odkaz"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:689
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:697
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1667
 msgid "Post a comment"
 msgstr "Napsat komentář"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:690
-msgid " or leave a trackback: "
-msgstr " nebo vložit trackback: "
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:691
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:694
+#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1663
 msgid "Trackback URL for your post"
 msgstr "URL trackbacku pro váš příspěvek"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:691
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:694
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1664
 msgid "Trackback URL"
 msgstr "URL trackbacku"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:693
-msgid " Comments are closed, but you can leave a trackback: "
-msgstr " Komentáře jsou uzavřeny, ale můžete vložit trackback: "
+#: library/extensions/content-extensions.php:1660
+msgctxt "%s is trackback url, wrapped in link tags"
+msgid "Comments are closed, but you can leave a trackback: %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:696
-msgid " Trackbacks are closed, but you can "
-msgstr " Trackbacky jsou uzavřeny, ale můžete "
+#: library/extensions/content-extensions.php:1669
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:697
-msgid "post a comment"
-msgstr "napsat komentář"
+#: library/extensions/discussion-extensions.php:27
+msgctxt "Posted {$date} at {$time}"
+msgid "Posted %s at %s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:699
-msgid " Both comments and trackbacks are currently closed."
-msgstr " Komentáře a trackbacky jsou nyní uzavřeny."
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink to this comment"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:10
-#, php-format
-msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "Vloženo %1$s v %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Trvalý odkaz na tento komentář\">Trvalý odkaz</a>"
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:15
-msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
-msgstr "\t\t\t\t\t<span class='unapproved'>Komentář čeká na schválení.</span>\n"
+#: library/extensions/discussion-extensions.php:36
+msgid "Edit comment"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:22
+#: library/extensions/discussion.php:37
+msgid "Your comment is awaiting moderation"
+msgstr ""
+
+#: library/extensions/discussion.php:52
 msgid "Reply"
 msgstr "Odpovědět"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:23
+#: library/extensions/discussion.php:53
 msgid "Log in to reply."
 msgstr "Pokud chcete odpovědět, přihlaste se."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:37
-#, php-format
+#: library/extensions/discussion.php:80
+msgctxt "By {$authorlink} on {$date} at {$time}"
 msgid "By %1$s on %2$s at %3$s"
-msgstr "Vložil(a) %1$s na %2$s v %3$s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:42
-msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
-msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Trackback čeká na schválení.</span>\\n"
+#: library/extensions/discussion.php:90
+msgid "Your trackback is awaiting moderation"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:251
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:77
+#: library/extensions/header-extensions.php:319
+#: library/extensions/widgets.php:157
 msgid "Posts RSS feed"
 msgstr "RSS příspěvků"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:269
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:78
+#: library/extensions/header-extensions.php:343
+#: library/extensions/widgets.php:158
 msgid "Comments RSS feed"
 msgstr "RSS komentářů"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:401
+#: library/extensions/header-extensions.php:667
 msgid "Skip navigation to the content"
 msgstr "Přeskočit navigaci a přejít na obsah"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:401
+#: library/extensions/header-extensions.php:667
 msgid "Skip to content"
 msgstr "Přejít na obsah"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/helpers.php:31
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/helpers.php:44
+#: library/extensions/helpers.php:50 library/extensions/helpers.php:69
 msgid "There is no excerpt because this is a protected post."
 msgstr "Úvodní text se nezobrazuje, protože toto je chráněný příspěvek."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/shortcodes.php:16
-msgid "Login"
-msgstr "Přihlásit se"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/shortcodes.php:18
-msgid "Logout"
-msgstr "Odhlásit se"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:13
+#: library/extensions/theme-options.php:50
 msgid "Index Insert Position"
 msgstr "Pozice widgetu Index Insert"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:14
-msgid "The widgetized Index Insert will follow after this post number."
-msgstr "Zvolte počet příspěvků, za kterým se na úvodní stránce zobrazí widget Index Insert."
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:19
+#: library/extensions/theme-options.php:51
 msgid "Info on Author Page"
 msgstr "Informace na stránce o autorovi"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:20
-msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
-msgstr "Zobrazit <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">vCard</a> — avatar, biografii a e-mail — na stránce o autorovi."
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:25
+#: library/extensions/theme-options.php:52
 msgid "Text in Footer"
 msgstr "Text v patičce webu"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:26
-msgid "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
-msgstr "V textu patičky můžete použít tyto značky: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
+#: library/extensions/theme-options.php:56
+msgid "Remove Legacy Options"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:28
-msgid "Powered by [wp-link]. Built on the [theme-link]."
-msgstr "Poháněno [wp-link]em. Využívá šablonu [theme-link]."
+#: library/extensions/theme-options.php:170
+msgid "Theme Options"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:75
-msgid "settings saved."
-msgstr "- nastavení uloženo."
+#: library/extensions/theme-options.php:202
+msgid "For more information:"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:76
-msgid "settings reset."
-msgstr "- obnovit nastavení."
+#: library/extensions/theme-options.php:204
+msgid "For support:"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:77
-msgid "widgets reset."
-msgstr "- obnovit widgety."
+#: library/extensions/theme-options.php:206
+msgid "forums"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:190
-msgid "Save changes"
-msgstr "Uložit změny"
+#: library/extensions/theme-options.php:210
+msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:196
-msgid "Reset"
-msgstr "Obnovit výchozí"
+#: library/extensions/theme-options.php:211
+msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:202
-msgid "Reset Widgets"
-msgstr "Obnovit widgety"
+#: library/extensions/theme-options.php:217
+msgid "Overview"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:207
-msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
-msgstr "Informace o této šabloně naleznete na webu <a href=\"http://themeshaper.com\">ThemeShaper</a>. Pokud máte nějaké otázky ohledně šablony Thematic, můžete navštívit <a href=\"http://themeshaper.com/forums/\">fórum ThemeShaper</a>."
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:12
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
+msgstr ""
+
+#: library/extensions/theme-options.php:267
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options"
+msgstr ""
+
+#: library/extensions/theme-options.php:305
+msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
+msgstr ""
+
+#: library/extensions/theme-options.php:318
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
+msgstr ""
+
+#: library/extensions/theme-options.php:331
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr ""
+
+#: library/extensions/theme-options.php:355
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
+msgstr ""
+
+#: library/extensions/theme-options.php:382
+msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:34
 msgid "To search, type and hit enter"
 msgstr "Hledaný výraz potvrďte enterem"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:18
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:281
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:43
+#: library/extensions/widgets-extensions.php:40
+#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
 msgid "Search"
 msgstr "Hledat"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:43
+#: library/extensions/widgets-extensions.php:70
+msgid "Primary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:72
 msgid "The primary widget area, most often used as a sidebar."
 msgstr "Primární prostor pro widgety, často používaný jako boční menu."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:58
+#: library/extensions/widgets-extensions.php:85
+msgid "Secondary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:87
 msgid "The secondary widget area, most often used as a sidebar."
 msgstr "Sekundární prostor pro widgety, často používaný jako boční menu."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:73
+#: library/extensions/widgets-extensions.php:100
+msgid "1st Subsidiary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:102
 msgid "The 1st widget area in the footer."
 msgstr "První prostor pro widgety v patičce webu."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:88
+#: library/extensions/widgets-extensions.php:115
+msgid "2nd Subsidiary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:117
 msgid "The 2nd widget area in the footer."
 msgstr "Druhý prostor pro widgety v patičce webu."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:103
+#: library/extensions/widgets-extensions.php:130
+msgid "3rd Subsidiary Aside"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:132
 msgid "The 3rd widget area in the footer."
 msgstr "Třetí prostor pro widgety v patičce webu."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:118
+#: library/extensions/widgets-extensions.php:145
+msgid "Index Top"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:147
 msgid "The top widget area displayed on the index page."
 msgstr "Zobrazí se nahoře na úvodní straně."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:133
+#: library/extensions/widgets-extensions.php:160
+msgid "Index Insert"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:162
 msgid "The widget area inserted after x posts on the index page."
 msgstr "Zobrazí se za x-tým příspěvkem na úvodní straně (hodnotu x nastavíte v Thematic Options)."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:148
+#: library/extensions/widgets-extensions.php:175
+msgid "Index Bottom"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:177
 msgid "The bottom widget area displayed on the index page."
 msgstr "Zobrazí se dole na úvodní straně."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:163
+#: library/extensions/widgets-extensions.php:190
+msgid "Single Top"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:192
 msgid "The top widget area displayed on a single post."
 msgstr "Zobrazí se nahoře na stránce příspěvku."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:178
+#: library/extensions/widgets-extensions.php:205
+msgid "Single Insert"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:207
 msgid "The widget area inserted between the post and the comments on a single post."
 msgstr "Zobrazí se mezi příspěvkem a komentáři na stránce příspěvku."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:193
+#: library/extensions/widgets-extensions.php:220
+msgid "Single Bottom"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:222
 msgid "The bottom widget area displayed on a single post."
 msgstr "Zobrazí se dole na stránce příspěvku."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:208
+#: library/extensions/widgets-extensions.php:235
+msgid "Page Top"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:237
 msgid "The top widget area displayed on a page."
 msgstr "Zobrazí se nahoře na Stránce (Pages)."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:223
+#: library/extensions/widgets-extensions.php:250
+msgid "Page Bottom"
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:252
 msgid "The bottom widget area displayed on a page."
 msgstr "Zobrazí se dole na Stránce (Pages)."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:283
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:55
-msgid "Meta"
-msgstr "Meta"
+#: library/extensions/widgets.php:55
+msgid "A search form for your blog"
+msgstr ""
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:285
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:286
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:72
-msgid "RSS Links"
-msgstr "RSS odkazy"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:77
-msgid "All posts"
-msgstr "Všechny příspěvky"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:78
-msgid "All comments"
-msgstr "Všechny komentáře"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:96
+#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
+#: library/extensions/widgets.php:175
 msgid "Title:"
 msgstr "Titulek:"
 
-#~ msgid "definitions created."
-#~ msgstr "definiciones creadas."
-#~ msgid "failed to create directory:"
-#~ msgstr "error al crear directorio:"
-#~ msgid "failed to create the file:"
-#~ msgstr "error al crear el archivo:"
-#~ msgid "Create Definitions"
-#~ msgstr "Crear Definiciones"
-#~ msgid "Pages"
-#~ msgstr "Páginas"
-#~ msgid "Categories"
-#~ msgstr "Categorías"
-#~ msgid "Archives"
-#~ msgstr "Archivos"
-#~ msgid "RSS Feeds"
-#~ msgstr "Canales RSS"
-#~ msgid "Blog Index"
-#~ msgstr "Índice del blog"
+#: library/extensions/widgets.php:100
+msgid "Log in/out and admin"
+msgstr ""
 
+#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
+msgid "Meta"
+msgstr "Meta"
+
+#: library/extensions/widgets.php:145
+msgid "Links to your posts and comments feed"
+msgstr ""
+
+#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
+msgid "RSS Links"
+msgstr "RSS odkazy"
+
+#: library/extensions/widgets.php:157
+msgid "All posts"
+msgstr "Všechny příspěvky"
+
+#: library/extensions/widgets.php:158
+msgid "All comments"
+msgstr "Všechny komentáře"
+
+#: library/legacy/deprecated.php:357
+msgid "Logged in as"
+msgstr ""
+
+#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: page.php:50 template-page-fullwidth.php:51
+msgid "Pages: "
+msgstr "Stránky: "
+
+#: search.php:56
+msgid "Nothing Found"
+msgstr "Nic nenalezeno"
+
+#: search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Nebyly nalezeny žádné výsledky. Zkuste prosím zadat jiný výraz."
+
+#: template-page-blog.php:22
+msgid "You can include a %s in a childtheme"
+msgstr ""
+
+msgid "Thematic"
+msgstr ""
+
+msgid "http://thematictheme.com"
+msgstr ""
+
+msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
+msgstr ""
+
+msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+msgstr ""
+
+msgid "http://themeshaper.com/"
+msgstr ""
+
+msgid "Deprecated Archives Template"
+msgstr ""
+
+msgid "Links Page"
+msgstr ""
+
+msgid "Archives Page"
+msgstr ""
+
+msgid "Deprecated Blog Template"
+msgstr ""
+
+msgid "Full Width"
+msgstr ""

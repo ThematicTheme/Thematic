@@ -1,25 +1,31 @@
-# Translation of Thematic 1.0.3 in Turkish
-# This file is distributed under the same license as the Thematic 1.0.3 package.
+# Translation of Thematic 1.0.3.x in Turkish
+# This file is distributed under the same license as the Thematic 1.0.3.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2012-06-25 15:46:44+0000\n"
+"PO-Revision-Date: 2013-03-05 17:46:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: Thematic 1.0.3\n"
+"Project-Id-Version: Thematic 1.0.3.x\n"
 
-#: library/extensions/content-extensions.php:947
-#: library/extensions/content-extensions.php:1461
-#: library/extensions/discussion-extensions.php:36
-#: library/extensions/discussion.php:84 links.php:60 page.php:60
-#: template-page-archives.php:63 template-page-fullwidth.php:61
-msgid "Edit"
-msgstr "Düzenle"
+#: library/extensions/content-extensions.php:916
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr ""
 
-#: attachment.php:62 library/extensions/content-extensions.php:666
-#: library/extensions/content-extensions.php:732
+#: library/extensions/content-extensions.php:1667
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr ""
+
+#: archives.php:20 template-page-blog.php:22
+msgid "The template %s"
+msgstr ""
+
+#: attachment.php:54 library/extensions/content-extensions.php:630
+#: library/extensions/content-extensions.php:689
 msgid "Pages:"
 msgstr "Sayfalar:"
 
@@ -27,273 +33,331 @@ msgstr "Sayfalar:"
 msgid "Email "
 msgstr "E-posta"
 
+#: comments.php:24
+msgid "Please do not load this page directly."
+msgstr ""
+
 #: comments.php:33
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Bu yazı parola korumalıdır. Yorumları görmek için parolanızı giriniz. "
 
 #: comments.php:111
-msgid "<span>One</span> Trackback"
-msgstr "<span>1</span> Gerilink"
-
-#: comments.php:142 library/extensions/comments-extensions.php:234
-msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Yorum yapabilmek için <a href=\"%s\" title=\"giriş\">giriş</a> yapmalısınız."
-
-#: comments.php:156 library/extensions/comments-extensions.php:235
-msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\"><a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a> olarak giriş yapıldı.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Sortir d'aquest compte\" >buradan çıkabilirsiniz.</a></span>"
-
-#: comments.php:164 library/extensions/comments-extensions.php:233
-msgid "Your email is <em>never</em> published nor shared."
-msgstr "E-posta adresiniz <em>hiçbir şekilde</em> yayınlanmayacak ya da paylaşılmayacaktır. "
-
-#: comments.php:164 library/extensions/comments-extensions.php:233
-msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "Doldurulması gerekli alanlar <span class=\"gerekli\">*</span> olarak işaretlenmiştir."
-
-#: comments.php:167 library/extensions/comments-extensions.php:224
-msgid "Name"
-msgstr "İsim"
-
-#: comments.php:167 comments.php:172
-#: library/extensions/comments-extensions.php:224
-#: library/extensions/comments-extensions.php:225
-msgid "<span class=\"required\">*</span>"
-msgstr "<span class=\"gerekli\">*</span>"
-
-#: comments.php:172 library/extensions/comments-extensions.php:225
-msgid "Email"
-msgstr "E-posta"
-
-#: comments.php:177 library/extensions/comments-extensions.php:226
-msgid "Website"
-msgstr "Websitesi"
-
-#: comments.php:189 library/extensions/comments-extensions.php:236
-msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
+msgid "Trackbacks"
 msgstr ""
 
-#: page.php:58 template-page-fullwidth.php:59
-msgid "Pages: "
-msgstr "Sayfalar: "
+#: comments.php:111
+msgctxt "%1$ and %2$s are <span> tags"
+msgid "%1$sOne%2$s Trackback"
+msgstr ""
 
-#: search.php:56
-msgid "Nothing Found"
-msgstr "Sonuç Bulunamadı"
-
-#: search.php:60
-msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Üzgünüm fakat yaptığınız aramaya ilişkin bir sonuç bulunamadı. Farklı bir kelime ile arama yapınız. "
-
-#: library/extensions/content-extensions.php:1346 search.php:70
-msgid "Find"
-msgstr "Bul"
+#: functions.php:194
+msgid "Primary Menu"
+msgstr ""
 
 #: library/extensions/comments-extensions.php:120
-msgid "<span>One</span> Comment"
-msgstr "<span>1</span> Yorum"
+msgctxt "One Comment, where %$1s and %$2s are <span> tags"
+msgid "%1$sOne%2$s Comment"
+msgstr ""
 
-#: library/extensions/comments-extensions.php:154
+#: library/extensions/comments-extensions.php:131
+msgid "Comments"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:155
 msgid "Post a Comment"
 msgstr "Yorumlarınızı Alalım"
 
-#: library/extensions/comments-extensions.php:165
+#: library/extensions/comments-extensions.php:167
 msgid "Post a Reply to %s"
 msgstr "%s için yorum yapın"
 
-#: library/extensions/comments-extensions.php:176
+#: library/extensions/comments-extensions.php:179
+msgctxt "noun"
 msgid "Comment"
-msgstr "Yorum Alanı"
+msgstr ""
 
-#: library/extensions/comments-extensions.php:187
+#: library/extensions/comments-extensions.php:190
 msgid "Cancel reply"
 msgstr ""
 
-#: library/extensions/comments-extensions.php:198
+#: library/extensions/comments-extensions.php:202
 msgid "Post Comment"
 msgstr "Yorumu Gönder"
 
-#: library/extensions/content-extensions.php:340
-#: library/extensions/header-extensions.php:84
+#: library/extensions/comments-extensions.php:228
+#: library/legacy/deprecated.php:365
+msgid "Name"
+msgstr "İsim"
+
+#: library/extensions/comments-extensions.php:228
+#: library/extensions/comments-extensions.php:229
+msgctxt "denotes required field"
+msgid "*"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:229
+#: library/legacy/deprecated.php:370
+msgid "Email"
+msgstr "E-posta"
+
+#: library/extensions/comments-extensions.php:230
+#: library/legacy/deprecated.php:375
+msgid "Website"
+msgstr "Websitesi"
+
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:362
+msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
+msgid "Your email is %1$snever%2$s published nor shared."
+msgstr ""
+
+#: library/extensions/comments-extensions.php:238
+msgctxt "%$1s and %$2s are <span> tags"
+msgid "Required fields are marked %1$s*%2$s"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr ""
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "Log in"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Logged in as %s"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out of this account"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out?"
+msgstr ""
+
+#: library/extensions/comments-extensions.php:244
+#: library/legacy/deprecated.php:387
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes"
+msgstr ""
+
+#: library/extensions/content-extensions.php:334
+msgid "Author Archives:"
+msgstr ""
+
+#: library/extensions/content-extensions.php:339
+#: library/extensions/header-extensions.php:103
 msgid "Category Archives:"
 msgstr "Konu Arşivleri:"
 
-#: library/extensions/content-extensions.php:349
-#: library/extensions/header-extensions.php:80
+#: library/extensions/content-extensions.php:347
+#: library/extensions/header-extensions.php:99
 msgid "Search Results for:"
 msgstr "Arama Sonuçları:"
 
-#: library/extensions/content-extensions.php:355
-#: library/extensions/header-extensions.php:88
+#: library/extensions/content-extensions.php:352
+#: library/extensions/header-extensions.php:107
 msgid "Tag Archives:"
 msgstr "Etiket Arşivleri:"
 
-#: library/extensions/content-extensions.php:364
-#: library/extensions/content-extensions.php:373
+#: library/extensions/content-extensions.php:361
+#: library/extensions/content-extensions.php:368
 msgid "Archives:"
 msgstr ""
 
-#: library/extensions/content-extensions.php:379
-msgid "Daily Archives: <span>%s</span>"
-msgstr "Günlük Arşivler: <span>%s</span>"
+#: library/extensions/content-extensions.php:373
+msgid "Daily Archives: %s"
+msgstr ""
 
-#: library/extensions/content-extensions.php:383
-msgid "Monthly Archives: <span>%s</span>"
-msgstr "Aylık Arşivler: <span>%s</span>"
+#: library/extensions/content-extensions.php:377
+msgid "Monthly Archives: %s"
+msgstr ""
 
-#: library/extensions/content-extensions.php:387
-msgid "Yearly Archives: <span>%s</span>"
-msgstr "Yılıkl Arşivi: <span>%s</span>"
+#: library/extensions/content-extensions.php:381
+msgid "Yearly Archives: %s"
+msgstr ""
 
-#: library/extensions/content-extensions.php:429
-#: library/extensions/content-extensions.php:1728
-msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> Eski Yazılar"
+#: library/extensions/content-extensions.php:424
+#: library/extensions/content-extensions.php:1710
+msgid "Older posts"
+msgstr ""
 
-#: library/extensions/content-extensions.php:431
-#: library/extensions/content-extensions.php:1729
-msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Yeni yazılar <span class=\"meta-nav\">&raquo;</span>"
+#: library/extensions/content-extensions.php:426
+#: library/extensions/content-extensions.php:1712
+msgid "Newer posts"
+msgstr ""
 
-#: library/extensions/content-extensions.php:946
-#: library/extensions/content-extensions.php:1460
+#: library/extensions/content-extensions.php:888
+#: library/extensions/content-extensions.php:1422
 msgid "Edit post"
 msgstr "Düzenle"
 
-#: library/extensions/content-extensions.php:975
-#: library/extensions/header-extensions.php:92
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1424
+#: library/extensions/discussion-extensions.php:37
+#: library/extensions/discussion.php:84 links.php:52 page.php:52
+#: template-page-archives.php:55 template-page-fullwidth.php:53
+msgid "Edit"
+msgstr "Düzenle"
+
+#: library/extensions/content-extensions.php:921
+#: library/extensions/header-extensions.php:111
 msgid "Not Found"
 msgstr "Bulunamadı"
 
-#: library/extensions/content-extensions.php:980
-#: library/extensions/content-extensions.php:1413
-#: library/extensions/content-extensions.php:1417
-msgid "Permalink to "
-msgstr "Yazının linki "
+#: library/extensions/content-extensions.php:926
+#: library/extensions/content-extensions.php:1145
+#: library/extensions/content-extensions.php:1149
+#: library/extensions/content-extensions.php:1380
+msgid "Permalink to %s"
+msgstr ""
 
-#: library/extensions/content-extensions.php:1041
-msgid "By "
-msgstr "Yazan: "
+#: library/extensions/content-extensions.php:987
+msgid "By"
+msgstr ""
 
-#: library/extensions/content-extensions.php:1051
-msgid "View all posts by "
-msgstr "Tüm yazılarını görün "
+#: library/extensions/content-extensions.php:998
+msgid "View all posts by %s"
+msgstr ""
 
-#: library/extensions/content-extensions.php:1079
-msgid "Published: "
-msgstr "Yayınlandı: "
+#: library/extensions/content-extensions.php:1027
+msgid "Published:"
+msgstr ""
 
-#: library/extensions/content-extensions.php:1252
+#: library/extensions/content-extensions.php:1203
 msgid "Archives by Category"
 msgstr "Konuya göre arşivler"
 
-#: library/extensions/content-extensions.php:1280
+#: library/extensions/content-extensions.php:1234
 msgid "Archives by Month"
 msgstr "Aya göre arşivler"
 
-#: library/extensions/content-extensions.php:1413
-msgid "Browse the "
+#: library/extensions/content-extensions.php:1295
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
 msgstr ""
 
-#: library/extensions/content-extensions.php:1413
-msgid " Archive"
+#: library/extensions/content-extensions.php:1301 search.php:70
+msgid "Find"
+msgstr "Bul"
+
+#: library/extensions/content-extensions.php:1320
+msgid "Read More %s"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1414
-msgid " archive"
+#: library/extensions/content-extensions.php:1372
+msgid "Browse the %s archive."
 msgstr ""
 
-#: library/extensions/content-extensions.php:1417
-msgid "Bookmark the "
+#: library/extensions/content-extensions.php:1374
+msgid "Permalink to %s Archive"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1418
-msgid "permalink"
-msgstr "kalıcı bağlantı"
-
-#: library/extensions/content-extensions.php:1572
-msgid "This entry was posted in "
-msgstr "Bu yazı gönderildi"
-
-#: library/extensions/content-extensions.php:1580
-msgid "Also posted in "
-msgstr "aynı zamanda"
-
-#: library/extensions/content-extensions.php:1583
-msgid "Posted in "
-msgstr "Gönderildi"
-
-#: library/extensions/content-extensions.php:1609
-msgid " This entry is tagged"
+#: library/extensions/content-extensions.php:1380
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Bookmark the %1$spermalink%2$s."
 msgstr ""
 
-#: library/extensions/content-extensions.php:1612
-msgid " and tagged"
-msgstr "etiketlendi"
+#: library/extensions/content-extensions.php:1538
+msgid "This entry was posted in %s"
+msgstr ""
 
-#: library/extensions/content-extensions.php:1615
-msgid " Also tagged "
-msgstr "etiketlendi"
+#: library/extensions/content-extensions.php:1549
+msgid "Also posted in %s"
+msgstr ""
 
-#: library/extensions/content-extensions.php:1617
+#: library/extensions/content-extensions.php:1553
+msgid "Posted in %s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1579
+msgid "This entry is tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1582
+msgid "and tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1585
+msgid "Also tagged"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1587
 msgid "Tagged"
 msgstr "Etiketler"
 
-#: library/extensions/content-extensions.php:1644
-#: library/extensions/content-extensions.php:1647
-#: library/extensions/content-extensions.php:1650
-msgid "Comment on "
-msgstr "Yorum yap "
+#: library/extensions/content-extensions.php:1617
+#: library/extensions/content-extensions.php:1623
+msgid "Comment on %s"
+msgstr ""
 
-#: library/extensions/content-extensions.php:1651
+#: library/extensions/content-extensions.php:1619
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/extensions/content-extensions.php:1624
 msgid "Leave a comment"
 msgstr "bir yorum bırakın"
 
-#: library/extensions/content-extensions.php:1654
+#: library/extensions/content-extensions.php:1627
 msgid "Comments closed"
 msgstr "Yorumlar kapalıdır"
 
-#: library/extensions/content-extensions.php:1678
-#: library/extensions/content-extensions.php:1686
+#: library/extensions/content-extensions.php:1651
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
+msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1667
 msgid "Post a comment"
 msgstr "Yorum gönderin."
 
-#: library/extensions/content-extensions.php:1679
-msgid " or leave a trackback: "
-msgstr "veya geri link bırakın: "
-
-#: library/extensions/content-extensions.php:1680
-#: library/extensions/content-extensions.php:1683
+#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1663
 msgid "Trackback URL for your post"
 msgstr "Yazının geri bildirim linki"
 
-#: library/extensions/content-extensions.php:1680
-#: library/extensions/content-extensions.php:1683
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1664
 msgid "Trackback URL"
 msgstr "Geri bildirim linki "
 
-#: library/extensions/content-extensions.php:1682
-msgid " Comments are closed, but you can leave a trackback: "
-msgstr "Yorumlar kapalıdır ama isterseniz geri bildirimde bulunabilirsiniz:"
+#: library/extensions/content-extensions.php:1660
+msgctxt "%s is trackback url, wrapped in link tags"
+msgid "Comments are closed, but you can leave a trackback: %s"
+msgstr ""
 
-#: library/extensions/content-extensions.php:1685
-msgid " Trackbacks are closed, but you can "
-msgstr "Geri bildirimler şu an kapalı ama arzu ederseniz"
-
-#: library/extensions/content-extensions.php:1686
-msgid "post a comment"
-msgstr "yorum gönderebilir"
-
-#: library/extensions/content-extensions.php:1688
-msgid " Both comments and trackbacks are currently closed."
-msgstr "Hem yorumlar hem de geri bildirimler şu an kapalıdır."
+#: library/extensions/content-extensions.php:1669
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
 
 #: library/extensions/discussion-extensions.php:27
-msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "%1$s %2$s'de gönderildi <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Bu yorumun linki\">Yorum linki</a>"
+msgctxt "Posted {$date} at {$time}"
+msgid "Posted %s at %s"
+msgstr ""
 
-#: library/extensions/discussion-extensions.php:35
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink to this comment"
+msgstr ""
+
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink"
+msgstr ""
+
+#: library/extensions/discussion-extensions.php:36
 msgid "Edit comment"
+msgstr ""
+
+#: library/extensions/discussion.php:37
+msgid "Your comment is awaiting moderation"
 msgstr ""
 
 #: library/extensions/discussion.php:52
@@ -305,42 +369,35 @@ msgid "Log in to reply."
 msgstr "Cevaplamak için giriş yapın"
 
 #: library/extensions/discussion.php:80
+msgctxt "By {$authorlink} on {$date} at {$time}"
 msgid "By %1$s on %2$s at %3$s"
-msgstr "%1$s tarafından %2$s tarihinde %3$s'de"
+msgstr ""
 
-#: library/extensions/header-extensions.php:302
+#: library/extensions/discussion.php:90
+msgid "Your trackback is awaiting moderation"
+msgstr ""
+
+#: library/extensions/header-extensions.php:319
 #: library/extensions/widgets.php:157
 msgid "Posts RSS feed"
 msgstr "Yazılar RSS"
 
-#: library/extensions/header-extensions.php:326
+#: library/extensions/header-extensions.php:343
 #: library/extensions/widgets.php:158
 msgid "Comments RSS feed"
 msgstr "Yorumlar RSS"
 
-#: functions.php:253
-msgid "Primary Menu"
-msgstr ""
-
-#: library/extensions/header-extensions.php:625
+#: library/extensions/header-extensions.php:667
 msgid "Skip navigation to the content"
 msgstr "İçeriğe geçiş yapın"
 
-#: library/extensions/header-extensions.php:625
+#: library/extensions/header-extensions.php:667
 msgid "Skip to content"
 msgstr "İçeriğe geçin"
 
 #: library/extensions/helpers.php:50 library/extensions/helpers.php:69
 msgid "There is no excerpt because this is a protected post."
 msgstr "Herhangi bir özet bulunmuyor çünkü bu korumalı bir yazı."
-
-#: library/extensions/shortcodes.php:40
-msgid "Login"
-msgstr "Giriş"
-
-#: library/extensions/shortcodes.php:42
-msgid "Logout"
-msgstr "Çıkış"
 
 #: library/extensions/theme-options.php:50
 msgid "Index Insert Position"
@@ -354,6 +411,76 @@ msgstr "Yazar sayfası bilgileri"
 msgid "Text in Footer"
 msgstr "Footer alanı metni"
 
+#: library/extensions/theme-options.php:56
+msgid "Remove Legacy Options"
+msgstr ""
+
+#: library/extensions/theme-options.php:170
+msgid "Theme Options"
+msgstr ""
+
+#: library/extensions/theme-options.php:202
+msgid "For more information:"
+msgstr ""
+
+#: library/extensions/theme-options.php:204
+msgid "For support:"
+msgstr ""
+
+#: library/extensions/theme-options.php:206
+msgid "forums"
+msgstr ""
+
+#: library/extensions/theme-options.php:210
+msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
+msgstr ""
+
+#: library/extensions/theme-options.php:211
+msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
+msgstr ""
+
+#: library/extensions/theme-options.php:217
+msgid "Overview"
+msgstr ""
+
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
+msgstr ""
+
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
+msgstr ""
+
+#: library/extensions/theme-options.php:267
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options"
+msgstr ""
+
+#: library/extensions/theme-options.php:305
+msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
+msgstr ""
+
+#: library/extensions/theme-options.php:318
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
+msgstr ""
+
+#: library/extensions/theme-options.php:331
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr ""
+
+#: library/extensions/theme-options.php:355
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
+msgstr ""
+
+#: library/extensions/theme-options.php:382
+msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
+msgstr ""
+
 #: library/extensions/widgets-extensions.php:34
 msgid "To search, type and hit enter"
 msgstr ""
@@ -363,52 +490,104 @@ msgstr ""
 msgid "Search"
 msgstr "Arama"
 
+#: library/extensions/widgets-extensions.php:70
+msgid "Primary Aside"
+msgstr ""
+
 #: library/extensions/widgets-extensions.php:72
 msgid "The primary widget area, most often used as a sidebar."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:85
+msgid "Secondary Aside"
 msgstr ""
 
 #: library/extensions/widgets-extensions.php:87
 msgid "The secondary widget area, most often used as a sidebar."
 msgstr ""
 
+#: library/extensions/widgets-extensions.php:100
+msgid "1st Subsidiary Aside"
+msgstr ""
+
 #: library/extensions/widgets-extensions.php:102
 msgid "The 1st widget area in the footer."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:115
+msgid "2nd Subsidiary Aside"
 msgstr ""
 
 #: library/extensions/widgets-extensions.php:117
 msgid "The 2nd widget area in the footer."
 msgstr ""
 
+#: library/extensions/widgets-extensions.php:130
+msgid "3rd Subsidiary Aside"
+msgstr ""
+
 #: library/extensions/widgets-extensions.php:132
 msgid "The 3rd widget area in the footer."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:145
+msgid "Index Top"
 msgstr ""
 
 #: library/extensions/widgets-extensions.php:147
 msgid "The top widget area displayed on the index page."
 msgstr ""
 
+#: library/extensions/widgets-extensions.php:160
+msgid "Index Insert"
+msgstr ""
+
 #: library/extensions/widgets-extensions.php:162
 msgid "The widget area inserted after x posts on the index page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:175
+msgid "Index Bottom"
 msgstr ""
 
 #: library/extensions/widgets-extensions.php:177
 msgid "The bottom widget area displayed on the index page."
 msgstr ""
 
+#: library/extensions/widgets-extensions.php:190
+msgid "Single Top"
+msgstr ""
+
 #: library/extensions/widgets-extensions.php:192
 msgid "The top widget area displayed on a single post."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:205
+msgid "Single Insert"
 msgstr ""
 
 #: library/extensions/widgets-extensions.php:207
 msgid "The widget area inserted between the post and the comments on a single post."
 msgstr ""
 
+#: library/extensions/widgets-extensions.php:220
+msgid "Single Bottom"
+msgstr ""
+
 #: library/extensions/widgets-extensions.php:222
 msgid "The bottom widget area displayed on a single post."
 msgstr ""
 
+#: library/extensions/widgets-extensions.php:235
+msgid "Page Top"
+msgstr ""
+
 #: library/extensions/widgets-extensions.php:237
 msgid "The top widget area displayed on a page."
+msgstr ""
+
+#: library/extensions/widgets-extensions.php:250
+msgid "Page Bottom"
 msgstr ""
 
 #: library/extensions/widgets-extensions.php:252
@@ -448,114 +627,56 @@ msgstr "Tüm Yazılar"
 msgid "All comments"
 msgstr "Tüm Yorumlar"
 
-#: archives.php:20 template-page-blog.php:22
-msgid "The template %s"
+#: library/legacy/deprecated.php:357
+msgid "Logged in as"
 msgstr ""
 
-#: comments.php:24
-msgid "Please do not load this page directly."
-msgstr ""
+#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"gerekli\">*</span>"
 
-#: comments.php:111
-msgid "Trackbacks"
-msgstr ""
+#: page.php:50 template-page-fullwidth.php:51
+msgid "Pages: "
+msgstr "Sayfalar: "
 
-#: library/extensions/comments-extensions.php:131
-msgid "Comments"
-msgstr ""
+#: search.php:56
+msgid "Nothing Found"
+msgstr "Sonuç Bulunamadı"
 
-#: library/extensions/content-extensions.php:334
-msgid "Author Archives:"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1340
-msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
-msgstr ""
-
-#: library/extensions/content-extensions.php:1364
-msgid "Read More %s"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1645
-msgid "Responses"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1648
-msgid "Response"
-msgstr ""
-
-#: library/extensions/discussion.php:37
-msgid "Your comment is awaiting moderation"
-msgstr ""
-
-#: library/extensions/discussion.php:90
-msgid "Your trackback is awaiting moderation"
-msgstr ""
-
-#: library/extensions/theme-options.php:56
-msgid "Remove Legacy Options"
-msgstr ""
-
-#: library/extensions/theme-options.php:204
-msgid "For more information:"
-msgstr ""
-
-#: library/extensions/theme-options.php:206
-msgid "For support:"
-msgstr ""
-
-#: library/extensions/theme-options.php:208
-msgid "forums"
-msgstr ""
-
-#: library/extensions/theme-options.php:212
-msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
-msgstr ""
-
-#: library/extensions/theme-options.php:213
-msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
-msgstr ""
-
-#: library/extensions/theme-options.php:219
-msgid "Overview"
-msgstr ""
-
-#: library/extensions/theme-options.php:247
-msgid "For more information about this theme, <a href=\"http://thematictheme.com\">visit ThemeTheme.com</a>. Please visit the <a href=\"http://thematictheme.com/forums/\">ThematicTheme.com Forums</a> if you have any questions about Thematic."
-msgstr ""
-
-#: library/extensions/theme-options.php:262
-msgid "%s Theme Options"
-msgstr ""
-
-#: library/extensions/theme-options.php:276
-msgid "Save Changes"
-msgstr ""
-
-#: library/extensions/theme-options.php:311
-msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
-msgstr ""
-
-#: library/extensions/theme-options.php:324
-msgid "Display a"
-msgstr ""
-
-#: library/extensions/theme-options.php:324
-msgid "with the author's avatar, bio and email on the author page."
-msgstr ""
-
-#: library/extensions/theme-options.php:337
-msgid "You can use HTML and shortcodes in your footer text. Shortcode examples"
-msgstr ""
-
-#: library/extensions/theme-options.php:350
-msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
-msgstr ""
-
-#: library/extensions/theme-options.php:377
-msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
-msgstr ""
+#: search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Üzgünüm fakat yaptığınız aramaya ilişkin bir sonuç bulunamadı. Farklı bir kelime ile arama yapınız. "
 
 #: template-page-blog.php:22
 msgid "You can include a %s in a childtheme"
+msgstr ""
+
+msgid "Thematic"
+msgstr ""
+
+msgid "http://thematictheme.com"
+msgstr ""
+
+msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
+msgstr ""
+
+msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+msgstr ""
+
+msgid "http://themeshaper.com/"
+msgstr ""
+
+msgid "Deprecated Archives Template"
+msgstr ""
+
+msgid "Links Page"
+msgstr ""
+
+msgid "Archives Page"
+msgstr ""
+
+msgid "Deprecated Blog Template"
+msgstr ""
+
+msgid "Full Width"
 msgstr ""

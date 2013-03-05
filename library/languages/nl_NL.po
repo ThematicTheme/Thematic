@@ -1,503 +1,682 @@
+# Translation of Thematic 1.0.3.x in Dutch
+# This file is distributed under the same license as the Thematic 1.0.3.x package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Thematic\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-18 20:58+0100\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Fili Wiese <fili@fili.nl>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2013-03-05 17:46:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Thematic 1.0.3.x\n"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/archives.php:42
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/links.php:53
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/page.php:40
-msgid "Edit"
-msgstr "Bewerk"
+#: library/extensions/content-extensions.php:916
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr "(Geen Titel)"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/attachment.php:39
+#: library/extensions/content-extensions.php:1667
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr "Trackbacks zijn gesloten, maar u kunt een %1$sreactie achterlaten%2$s."
+
+#: archives.php:20 template-page-blog.php:22
+msgid "The template %s"
+msgstr "Het %s sjabloon"
+
+#: attachment.php:54 library/extensions/content-extensions.php:630
+#: library/extensions/content-extensions.php:689
 msgid "Pages:"
 msgstr "Pagina's:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/author.php:53
+#: author.php:67
 msgid "Email "
 msgstr "E-mail"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:10
+#: comments.php:24
+msgid "Please do not load this page directly."
+msgstr "Gelieve deze pagina niet direct te laden."
+
+#: comments.php:33
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Dit bericht is beveiligd met een wachtwoord. Voer het wachtwoord in om het bericht te bekijken."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:52
-#, php-format
-msgid "<span>%d</span> Trackbacks"
-msgstr "<span>%d</span> Trackbacks"
+#: comments.php:111
+msgid "Trackbacks"
+msgstr "Trackbacks"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:52
-msgid "<span>One</span> Trackback"
-msgstr "<span>Één</span> Trackback"
+#: comments.php:111
+msgctxt "%1$ and %2$s are <span> tags"
+msgid "%1$sOne%2$s Trackback"
+msgstr "%1$sÉén%2$s Trackback"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:72
-#, php-format
-msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "U dient <a href=\"%s\" title=\"ingelogd\">ingelogd</a> te zijn om een reactie te plaatsen."
+#: functions.php:194
+msgid "Primary Menu"
+msgstr "Hoofdmenu "
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:83
-#, php-format
-msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\">Ingelogd als <a href=\"%1$s\" title=\"Ingelogd als %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Uitloggen\">Uitloggen?</a></span>"
+#: library/extensions/comments-extensions.php:120
+msgctxt "One Comment, where %$1s and %$2s are <span> tags"
+msgid "%1$sOne%2$s Comment"
+msgstr "%1$sÉén%2$s Reactie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:90
-msgid "Your email is <em>never</em> published nor shared."
-msgstr "Uw e-mailadres zal <em>nooit</em> gepubliceerd of gedeeld worden."
+#: library/extensions/comments-extensions.php:131
+msgid "Comments"
+msgstr "Reacties"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:90
-msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "Verplichte velden zijn gemarkeerd met <span class=\"required\">*</span>"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:93
-msgid "Name"
-msgstr "Naam"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:93
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:98
-msgid "<span class=\"required\">*</span>"
-msgstr "<span class=\"required\">*</span>"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:98
-msgid "Email"
-msgstr "E-mail"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:103
-msgid "Website"
-msgstr "Website"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/comments.php:115
-msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
-msgstr "U kunt de volgende <abbr title=\"HyperText Markup Language\">HTML</abbr> tags en attributen gebruiken:"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/page.php:38
-msgid "Pages: "
-msgstr "Pagina's:"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:41
-msgid "Nothing Found"
-msgstr "Niks gevonden"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:43
-msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Sorry, we hebben niets gevonden wat aan uw zoekcriteria voldoet. Probeer het opnieuw met andere zoekwoorden."
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/search.php:48
-msgid "Find"
-msgstr "Zoeken"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:76
-msgid "<span>One</span> Comment"
-msgstr "<span>Één</span> Reactie"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:83
-#, php-format
-msgid "<span>%d</span> Comments"
-msgstr "<span>%d</span> Reacties"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:96
+#: library/extensions/comments-extensions.php:155
 msgid "Post a Comment"
 msgstr "Plaats een reactie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:103
-#, php-format
+#: library/extensions/comments-extensions.php:167
 msgid "Post a Reply to %s"
-msgstr "Plaats een reactie aan %s"
+msgstr "Plaats een reactie op %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:110
+#: library/extensions/comments-extensions.php:179
+msgctxt "noun"
 msgid "Comment"
-msgstr "Reactie"
+msgstr "Reageer"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/comments-extensions.php:117
+#: library/extensions/comments-extensions.php:190
+msgid "Cancel reply"
+msgstr "Annuleer reactie"
+
+#: library/extensions/comments-extensions.php:202
 msgid "Post Comment"
 msgstr "Plaats Reactie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:147
-msgid "Author Archives: "
-msgstr "Auteur Archief:"
+#: library/extensions/comments-extensions.php:228
+#: library/legacy/deprecated.php:365
+msgid "Name"
+msgstr "Naam"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:153
+#: library/extensions/comments-extensions.php:228
+#: library/extensions/comments-extensions.php:229
+msgctxt "denotes required field"
+msgid "*"
+msgstr "*"
+
+#: library/extensions/comments-extensions.php:229
+#: library/legacy/deprecated.php:370
+msgid "Email"
+msgstr "E-mail"
+
+#: library/extensions/comments-extensions.php:230
+#: library/legacy/deprecated.php:375
+msgid "Website"
+msgstr "Website"
+
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:362
+msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
+msgid "Your email is %1$snever%2$s published nor shared."
+msgstr "Uw e-mail wordt %1$snooit%2$s gepubliceerd noch gedeeld."
+
+#: library/extensions/comments-extensions.php:238
+msgctxt "%$1s and %$2s are <span> tags"
+msgid "Required fields are marked %1$s*%2$s"
+msgstr "Verplichte velden zijn gemarkeerd met een  %1$s*%2$s"
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "U moet %1$singelogged%2$s zijn om een reactie achter te laten."
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "Log in"
+msgstr "Inloggen"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Logged in as %s"
+msgstr "Ingelogd als %s"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out of this account"
+msgstr "Uitloggen van dit account."
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out?"
+msgstr "Uitloggen?"
+
+#: library/extensions/comments-extensions.php:244
+#: library/legacy/deprecated.php:387
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes"
+msgstr "U mag deze %1$sHTML%2$s-elementen en attributen gebruiken"
+
+#: library/extensions/content-extensions.php:334
+msgid "Author Archives:"
+msgstr "Auteur Archieven:"
+
+#: library/extensions/content-extensions.php:339
+#: library/extensions/header-extensions.php:103
 msgid "Category Archives:"
 msgstr "Categorie Archief:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:162
+#: library/extensions/content-extensions.php:347
+#: library/extensions/header-extensions.php:99
 msgid "Search Results for:"
 msgstr "Zoekresultaten voor:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:168
+#: library/extensions/content-extensions.php:352
+#: library/extensions/header-extensions.php:107
 msgid "Tag Archives:"
 msgstr "Tag Archief:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:174
-#, php-format
-msgid "Daily Archives: <span>%s</span>"
-msgstr "Dagelijks Archief: <span>%s</span>"
+#: library/extensions/content-extensions.php:361
+#: library/extensions/content-extensions.php:368
+msgid "Archives:"
+msgstr "Archieven:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:178
-#, php-format
-msgid "Monthly Archives: <span>%s</span>"
-msgstr "Maandelijks Archief: <span>%s</span>"
+#: library/extensions/content-extensions.php:373
+msgid "Daily Archives: %s"
+msgstr "Archief per dag: %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:182
-#, php-format
-msgid "Yearly Archives: <span>%s</span>"
-msgstr "Jaarlijks Archief: <span>%s</span>"
+#: library/extensions/content-extensions.php:377
+msgid "Monthly Archives: %s"
+msgstr "Archief per maand: %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:186
-msgid "Blog Archives"
-msgstr "Blog Archief"
+#: library/extensions/content-extensions.php:381
+msgid "Yearly Archives: %s"
+msgstr "Archief per jaar: %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:209
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:725
-msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> Oudere artikelen"
+#: library/extensions/content-extensions.php:424
+#: library/extensions/content-extensions.php:1710
+msgid "Older posts"
+msgstr "Oudere artikelen"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:210
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:726
-msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Nieuwere artikelen <span class=\"meta-nav\">&raquo;</span>"
+#: library/extensions/content-extensions.php:426
+#: library/extensions/content-extensions.php:1712
+msgid "Newer posts"
+msgstr "Nieuwere artikelen"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:394
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:618
+#: library/extensions/content-extensions.php:888
+#: library/extensions/content-extensions.php:1422
 msgid "Edit post"
 msgstr "Bewerk artikel"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:406
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1424
+#: library/extensions/discussion-extensions.php:37
+#: library/extensions/discussion.php:84 links.php:52 page.php:52
+#: template-page-archives.php:55 template-page-fullwidth.php:53
+msgid "Edit"
+msgstr "Bewerk"
+
+#: library/extensions/content-extensions.php:921
+#: library/extensions/header-extensions.php:111
 msgid "Not Found"
 msgstr "Niet gevonden"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:411
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
-msgid "Permalink to "
-msgstr "Permalink naar"
+#: library/extensions/content-extensions.php:926
+#: library/extensions/content-extensions.php:1145
+#: library/extensions/content-extensions.php:1149
+#: library/extensions/content-extensions.php:1380
+msgid "Permalink to %s"
+msgstr "Permalink naar %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:441
-msgid "By "
+#: library/extensions/content-extensions.php:987
+msgid "By"
 msgstr "Door"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:444
-msgid "View all posts by "
-msgstr "Bekijk alle artikelen van"
+#: library/extensions/content-extensions.php:998
+msgid "View all posts by %s"
+msgstr "Bekijk alle artikelen van %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:455
-msgid "Published: "
+#: library/extensions/content-extensions.php:1027
+msgid "Published:"
 msgstr "Gepubliceerd:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:523
+#: library/extensions/content-extensions.php:1203
 msgid "Archives by Category"
 msgstr "Archief per Categorie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:534
+#: library/extensions/content-extensions.php:1234
 msgid "Archives by Month"
 msgstr "Archief per Maand"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:562
-msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Helaas we konden niet vinden wat je zocht. Wellicht dat de zoekfunctie kan helpen."
+#: library/extensions/content-extensions.php:1295
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
+msgstr "Helaas, we konden niet vinden wat je zocht. Wellicht dat de zoekfunctie kan helpen."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:578
-msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Lees verder <span class=\"meta-nav\">&raquo;</span>"
+#: library/extensions/content-extensions.php:1301 search.php:70
+msgid "Find"
+msgstr "Zoeken"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:629
-msgid "This entry was posted in "
-msgstr "Dit bericht was geplaatst in"
+#: library/extensions/content-extensions.php:1320
+msgid "Read More %s"
+msgstr "Lees verder %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:632
-msgid "Also posted in "
-msgstr "Ook geplaatst in"
+#: library/extensions/content-extensions.php:1372
+msgid "Browse the %s archive."
+msgstr "Bekijk het %s archief."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:635
-msgid "Posted in "
-msgstr "Geplaatst in"
+#: library/extensions/content-extensions.php:1374
+msgid "Permalink to %s Archive"
+msgstr "Permalink naar het %s Archief"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:646
-#, fuzzy
-msgid " and tagged"
-msgstr " en getagged"
+#: library/extensions/content-extensions.php:1380
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Bookmark the %1$spermalink%2$s."
+msgstr "Bookmark de  %1$spermalink%2$s."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:649
-#, fuzzy
-msgid " Also tagged "
-msgstr "Ook getagged"
+#: library/extensions/content-extensions.php:1538
+msgid "This entry was posted in %s"
+msgstr "Dit bericht is geplaatst in %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:651
-#, fuzzy
+#: library/extensions/content-extensions.php:1549
+msgid "Also posted in %s"
+msgstr "Ook geplaatst in %s"
+
+#: library/extensions/content-extensions.php:1553
+msgid "Posted in %s"
+msgstr "Geplaatst in %s"
+
+#: library/extensions/content-extensions.php:1579
+msgid "This entry is tagged"
+msgstr "Dit bericht is getagd met"
+
+#: library/extensions/content-extensions.php:1582
+msgid "and tagged"
+msgstr "en getagd"
+
+#: library/extensions/content-extensions.php:1585
+msgid "Also tagged"
+msgstr "Ook getagd met"
+
+#: library/extensions/content-extensions.php:1587
 msgid "Tagged"
-msgstr "Getagged"
+msgstr "Getagd met"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:663
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:666
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:669
-msgid "Comment on "
-msgstr "Reageer op"
+#: library/extensions/content-extensions.php:1617
+#: library/extensions/content-extensions.php:1623
+msgid "Comment on %s"
+msgstr "Reageer op %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:664
-msgid " Comments"
-msgstr " Reacties"
+#: library/extensions/content-extensions.php:1619
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] "%s Reactie"
+msgstr[1] "%s Reacties"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:667
-msgid " Comment"
-msgstr " Reactie"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:670
+#: library/extensions/content-extensions.php:1624
 msgid "Leave a comment"
 msgstr "Plaats een reactie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:673
+#: library/extensions/content-extensions.php:1627
 msgid "Comments closed"
 msgstr "Reacties gesloten"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:686
-#, fuzzy
-msgid ". Bookmark the "
-msgstr ". Bookmark de"
+#: library/extensions/content-extensions.php:1651
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
+msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
+msgstr "%1$sPlaats een reactie%2$s of laat een trackback achter: %3$s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:687
-msgid "permalink"
-msgstr "permalink"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:689
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:697
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1667
 msgid "Post a comment"
 msgstr "Plaats een reactie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:690
-msgid " or leave a trackback: "
-msgstr " of laat een trackback achter:"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:691
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:694
-#, fuzzy
+#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1663
 msgid "Trackback URL for your post"
-msgstr "Trackback URL voor het artikel"
+msgstr "Trackback URL voor uw post:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:691
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:694
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1664
 msgid "Trackback URL"
 msgstr "Trackback URL"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:693
-msgid " Comments are closed, but you can leave a trackback: "
-msgstr " Reacties zijn gesloten, u kunt wel een trackback achterlaten:"
+#: library/extensions/content-extensions.php:1660
+msgctxt "%s is trackback url, wrapped in link tags"
+msgid "Comments are closed, but you can leave a trackback: %s"
+msgstr "Reacties zijn gesloten, maar u kunt een trackback achterlaten: %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:696
-#, fuzzy
-msgid " Trackbacks are closed, but you can "
-msgstr " Trackbacks zijn gesloten, u kunt wel"
+#: library/extensions/content-extensions.php:1669
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Reacties en trackbacks zijn beide momenteel gesloten."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:697
-msgid "post a comment"
-msgstr "plaats een reactie"
+#: library/extensions/discussion-extensions.php:27
+msgctxt "Posted {$date} at {$time}"
+msgid "Posted %s at %s"
+msgstr "Geplaatst op %s om %s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/content-extensions.php:699
-msgid " Both comments and trackbacks are currently closed."
-msgstr " Zowel reacties als trackbacks zijn gesloten."
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink to this comment"
+msgstr "Permalink naar deze reactie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:10
-#, php-format
-msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "Geplaatst op %1$s om %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink naar deze reactie\">Permalink</a>"
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink"
+msgstr "Permalink"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:15
-msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
-msgstr "\t\t\t\t\t<span class='unapproved'>Uw reactie wacht op moderatie.</span>\n"
+#: library/extensions/discussion-extensions.php:36
+msgid "Edit comment"
+msgstr "Bewerk reactie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:22
+#: library/extensions/discussion.php:37
+msgid "Your comment is awaiting moderation"
+msgstr "Uw reactie is in afwachting van moderatie"
+
+#: library/extensions/discussion.php:52
 msgid "Reply"
 msgstr "Reageer"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:23
+#: library/extensions/discussion.php:53
 msgid "Log in to reply."
 msgstr "Log in om te reageren."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:37
-#, php-format
+#: library/extensions/discussion.php:80
+msgctxt "By {$authorlink} on {$date} at {$time}"
 msgid "By %1$s on %2$s at %3$s"
 msgstr "Door %1$s op %2$s om %3$s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/discussion.php:42
-msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
-msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Uw trackback wacht op moderatie.</span>\\n"
+#: library/extensions/discussion.php:90
+msgid "Your trackback is awaiting moderation"
+msgstr "Uw trackback is in afwachting van moderatie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:251
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:77
+#: library/extensions/header-extensions.php:319
+#: library/extensions/widgets.php:157
 msgid "Posts RSS feed"
-msgstr "Plaats een RSS feed"
+msgstr "RSS feed van artikelen"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:269
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:78
+#: library/extensions/header-extensions.php:343
+#: library/extensions/widgets.php:158
 msgid "Comments RSS feed"
-msgstr "Reacties RSS Feed"
+msgstr "RSS Feed van reacties"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:401
-#, fuzzy
+#: library/extensions/header-extensions.php:667
 msgid "Skip navigation to the content"
-msgstr "Sla de navigatie over en ga naar de inhoud"
+msgstr "Sla navigatie over en ga meteen naar de inhoud"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/header-extensions.php:401
+#: library/extensions/header-extensions.php:667
 msgid "Skip to content"
 msgstr "Ga naar de inhoud"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/helpers.php:31
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/helpers.php:44
+#: library/extensions/helpers.php:50 library/extensions/helpers.php:69
 msgid "There is no excerpt because this is a protected post."
 msgstr "Bij een beschermd artikel kan er geen fragment getoond worden."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/shortcodes.php:16
-msgid "Login"
-msgstr "Log in"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/shortcodes.php:18
-msgid "Logout"
-msgstr "Uitloggen"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:13
-#, fuzzy
+#: library/extensions/theme-options.php:50
 msgid "Index Insert Position"
-msgstr "Index invoeg positie"
+msgstr "Index Invoeg Positie"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:14
-#, fuzzy
-msgid "The widgetized Index Insert will follow after this post number."
-msgstr "De widget index-zone zal worden invoegd na dit aantal berichten"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:19
+#: library/extensions/theme-options.php:51
 msgid "Info on Author Page"
 msgstr "Info op de Auteur's Pagina"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:20
-msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a>—with the author's avatar, bio and email—on the author page."
-msgstr "Toon een <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformaat vCard</a>—met de avatar, bio en e-mail van de auteur—op de auteur's pagina."
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:25
+#: library/extensions/theme-options.php:52
 msgid "Text in Footer"
 msgstr "Tekst in de footer"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:26
-msgid "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
-msgstr "U kunt de volgende variabelen in de footer tekst gebruiken: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
+#: library/extensions/theme-options.php:56
+msgid "Remove Legacy Options"
+msgstr "Verwijder Verouderde Opties"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:28
-msgid "Powered by [wp-link]. Built on the [theme-link]."
-msgstr "Powered by [wp-link]. Built on the [theme-link]."
+#: library/extensions/theme-options.php:170
+msgid "Theme Options"
+msgstr "Thema Opties"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:75
-msgid "settings saved."
-msgstr "instellingen opgeslagen."
+#: library/extensions/theme-options.php:202
+msgid "For more information:"
+msgstr "Voor meer informatie:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:76
-msgid "settings reset."
-msgstr "instellingen reset."
+#: library/extensions/theme-options.php:204
+msgid "For support:"
+msgstr "Voor ondersteuning:"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:77
-msgid "widgets reset."
-msgstr "widget reset."
+#: library/extensions/theme-options.php:206
+msgid "forums"
+msgstr "forums"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:190
-msgid "Save changes"
-msgstr "Opslaan"
+#: library/extensions/theme-options.php:210
+msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
+msgstr "De onderstaande opties zijn geactiveerd door het Thematic Theme Framework en/of een 'child theme'  "
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:196
-msgid "Reset"
-msgstr "Instellingen Resetten"
+#: library/extensions/theme-options.php:211
+msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
+msgstr "Nieuwe opties kunnen worden toegevoegd en de standaard opties verwijderd door het maken van een 'child theme'. Ook deze contextuele helptekst kan worden gepersonaliseerd door een 'child theme', "
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:202
-msgid "Reset Widgets"
-msgstr "Widgets Resetten"
+#: library/extensions/theme-options.php:217
+msgid "Overview"
+msgstr "Overzicht"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/theme-options.php:207
-msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
-msgstr "Bezoek <a href=\"http://themeshaper.com\">ThemeShaper</a> voor meer informatie over dit thema. Voor vragen over Thematic kunt u terecht op het <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forum</a>."
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
+msgstr "Voor meer informatie over dit thema, %1$sbezoek ThematicTheme.com%2$s"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:12
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
+msgstr "Bezoek de %1$sThematicTheme.com Forums%2$s als je een vraag hebt over Thematic."
+
+#: library/extensions/theme-options.php:267
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options"
+msgstr "%s Thema Opties"
+
+#: library/extensions/theme-options.php:305
+msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
+msgstr "Het Index Insert widget verschijnt na x berichten. Dit veld leeglaten of een nul invullen schakelt deze functie uit."
+
+#: library/extensions/theme-options.php:318
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
+msgstr "Laat een %1$smicrogeformatteerde  vCard%2$s  met de auteurs zijn avatar, biografie en E-mail op de auteur pagina zien."
+
+#: library/extensions/theme-options.php:331
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr "Je kunt HTML en ' shortcodes' in je footer tekst gebruiken. Shortcode voorbeelden: %s"
+
+#: library/extensions/theme-options.php:355
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
+msgstr "%s Thema Opties zijn geüpgraded naar een verbeterd formaat. Verwijder de verouderde opties uit de database."
+
+#: library/extensions/theme-options.php:382
+msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
+msgstr "In dit veld moet een getal worden ingevuld van 0 of groter. De instelling is automatisch teruggezet naar zijn vorige waarde."
+
+#: library/extensions/widgets-extensions.php:34
 msgid "To search, type and hit enter"
-msgstr "Voer zoektermen in en druk op enter"
+msgstr "Voer zoekterm in en druk op enter"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:18
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:281
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:43
+#: library/extensions/widgets-extensions.php:40
+#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
 msgid "Search"
 msgstr "Zoeken"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:43
+#: library/extensions/widgets-extensions.php:70
+msgid "Primary Aside"
+msgstr "Eerste Aside"
+
+#: library/extensions/widgets-extensions.php:72
 msgid "The primary widget area, most often used as a sidebar."
-msgstr "Primaire widget zone, meest gebruikt als zijbalk."
+msgstr "Primaire widget, meestal gebruikt als zijbalk."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:58
+#: library/extensions/widgets-extensions.php:85
+msgid "Secondary Aside"
+msgstr "Secundaire Aside"
+
+#: library/extensions/widgets-extensions.php:87
 msgid "The secondary widget area, most often used as a sidebar."
-msgstr "Secundaire widget zone, meest gebruikt als zijbalk."
+msgstr "Secundaire widget, meestal gebruikt als zijbalk."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:73
+#: library/extensions/widgets-extensions.php:100
+msgid "1st Subsidiary Aside"
+msgstr "1e Subsidiaire Aside"
+
+#: library/extensions/widgets-extensions.php:102
 msgid "The 1st widget area in the footer."
-msgstr "Eerste widget zone in de footer"
+msgstr "Eerste widget in de footer"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:88
+#: library/extensions/widgets-extensions.php:115
+msgid "2nd Subsidiary Aside"
+msgstr "2e Subsidiaire Aside"
+
+#: library/extensions/widgets-extensions.php:117
 msgid "The 2nd widget area in the footer."
-msgstr "Tweede widget zone in de footer"
+msgstr "Tweede widget in de footer"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:103
+#: library/extensions/widgets-extensions.php:130
+msgid "3rd Subsidiary Aside"
+msgstr "3e Subsidiaire Aside"
+
+#: library/extensions/widgets-extensions.php:132
 msgid "The 3rd widget area in the footer."
-msgstr "Derde widget zone in de footer"
+msgstr "Derde widget in de footer"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:118
+#: library/extensions/widgets-extensions.php:145
+msgid "Index Top"
+msgstr "Index Bovenkant"
+
+#: library/extensions/widgets-extensions.php:147
 msgid "The top widget area displayed on the index page."
-msgstr "Widget zone zichtbaar bovenin de index pagina."
+msgstr "Bovenste widget zichtbaar op de index pagina."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:133
+#: library/extensions/widgets-extensions.php:160
+msgid "Index Insert"
+msgstr "Index Invoeging"
+
+#: library/extensions/widgets-extensions.php:162
 msgid "The widget area inserted after x posts on the index page."
-msgstr "Widget zone zichtbaar na x artikelen op de index pagina."
+msgstr "Widget zichtbaar na x artikelen op de index pagina."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:148
+#: library/extensions/widgets-extensions.php:175
+msgid "Index Bottom"
+msgstr "Index Onderkant"
+
+#: library/extensions/widgets-extensions.php:177
 msgid "The bottom widget area displayed on the index page."
-msgstr "Widget zone zichtbaar onderaan de index pagina."
+msgstr "Onderste widget zichtbaar op de index pagina."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:163
+#: library/extensions/widgets-extensions.php:190
+msgid "Single Top"
+msgstr "Enkel Bovenkant"
+
+#: library/extensions/widgets-extensions.php:192
 msgid "The top widget area displayed on a single post."
-msgstr "Widget zone zichtbaar boven een artikel."
+msgstr "Bovenste widget zichtbaar boven een volledig artikel."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:178
+#: library/extensions/widgets-extensions.php:205
+msgid "Single Insert"
+msgstr "Enkel Invoeging"
+
+#: library/extensions/widgets-extensions.php:207
 msgid "The widget area inserted between the post and the comments on a single post."
-msgstr "Widget zone tussen een artikel en de reacties."
+msgstr "Widget tussen een artikel en de reacties bij een volledig artikel"
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:193
+#: library/extensions/widgets-extensions.php:220
+msgid "Single Bottom"
+msgstr "Enkel Onder"
+
+#: library/extensions/widgets-extensions.php:222
 msgid "The bottom widget area displayed on a single post."
-msgstr "Widget zone zichtbaar onder een artikel."
+msgstr "Widget zichtbaar onder een volledig artikel."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:208
+#: library/extensions/widgets-extensions.php:235
+msgid "Page Top"
+msgstr "Pagina Bovenkant"
+
+#: library/extensions/widgets-extensions.php:237
 msgid "The top widget area displayed on a page."
-msgstr "Widget zone zichtbaar boven een pagina."
+msgstr "Bovenste widget zichtbaar op een pagina."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:223
+#: library/extensions/widgets-extensions.php:250
+msgid "Page Bottom"
+msgstr "Pagina Onderkant"
+
+#: library/extensions/widgets-extensions.php:252
 msgid "The bottom widget area displayed on a page."
-msgstr "Widget zone zichtbaar onder een pagina."
+msgstr "Onderste widget zichtbaar op een pagina."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:283
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:55
-msgid "Meta"
-msgstr "Meta"
+#: library/extensions/widgets.php:55
+msgid "A search form for your blog"
+msgstr "Een zoekformulier voor uw blog."
 
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:285
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets-extensions.php:286
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:72
-msgid "RSS Links"
-msgstr "RSS Links"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:77
-msgid "All posts"
-msgstr "Alle artikelen"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:78
-msgid "All comments"
-msgstr "Alle reacties"
-
-#: c:\xampp\htdocs\development\wp-content\themes\thematic/library/extensions/widgets.php:96
+#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
+#: library/extensions/widgets.php:175
 msgid "Title:"
 msgstr "Titel:"
 
+#: library/extensions/widgets.php:100
+msgid "Log in/out and admin"
+msgstr "Inloggen/uitloggen en dashboard"
+
+#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
+msgid "Meta"
+msgstr "Meta"
+
+#: library/extensions/widgets.php:145
+msgid "Links to your posts and comments feed"
+msgstr "Verwijzingen naar uw berichten en reacties feed"
+
+#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
+msgid "RSS Links"
+msgstr "RSS Links"
+
+#: library/extensions/widgets.php:157
+msgid "All posts"
+msgstr "Alle artikelen"
+
+#: library/extensions/widgets.php:158
+msgid "All comments"
+msgstr "Alle reacties"
+
+#: library/legacy/deprecated.php:357
+msgid "Logged in as"
+msgstr "Ingelogd als"
+
+#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
+
+#: page.php:50 template-page-fullwidth.php:51
+msgid "Pages: "
+msgstr "Pagina's:"
+
+#: search.php:56
+msgid "Nothing Found"
+msgstr "Niets gevonden"
+
+#: search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Helaas, we hebben niets gevonden wat aan uw zoekcriteria voldoet. Probeer het opnieuw met andere zoekwoorden."
+
+#: template-page-blog.php:22
+msgid "You can include a %s in a childtheme"
+msgstr "U kan een %s aan een 'childtheme' toevoegen"
+
+msgid "Thematic"
+msgstr "Thematic"
+
+msgid "http://thematictheme.com"
+msgstr "http://thematictheme.com"
+
+msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
+msgstr "Het meest ultieme SEO-voorbereide template, Thematic is een hoogst flexibel Wordpress Theme Framework voorzien van ondermeer 13 widget gebieden, drop-down menus, grid gebaseerde layout voorbeelden, plugin integratie, 'shortcodes' voor uw footer, &amp; en nog veel meer! Perfect voor uw blog en <strong><em>het</em></strong> startpunt voor het ontwikkelen van een template."
+
+msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+
+msgid "http://themeshaper.com/"
+msgstr "http://themeshaper.com/"
+
+msgid "Deprecated Archives Template"
+msgstr "Verouderd Archief Sjabloon "
+
+msgid "Links Page"
+msgstr "Links Pagina"
+
+msgid "Archives Page"
+msgstr "Archieven Pagina"
+
+msgid "Deprecated Blog Template"
+msgstr "Verouderd Blog Template"
+
+msgid "Full Width"
+msgstr "Volledige Breedte "

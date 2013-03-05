@@ -1,14 +1,24 @@
-# Translation of Thematic 1.0.3 in Serbian
-# This file is distributed under the same license as the Thematic 1.0.3 package.
+# Translation of Thematic 1.0.3.x in Serbian
+# This file is distributed under the same license as the Thematic 1.0.3.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2012-10-22 10:00:05+0000\n"
+"PO-Revision-Date: 2013-03-05 17:46:45+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: Thematic 1.0.3\n"
+"Project-Id-Version: Thematic 1.0.3.x\n"
+
+#: library/extensions/content-extensions.php:916
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1667
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr ""
 
 #: archives.php:20 template-page-blog.php:22
 msgid "The template %s"
@@ -75,7 +85,7 @@ msgid "Post Comment"
 msgstr "Објавите коментар"
 
 #: library/extensions/comments-extensions.php:228
-#: library/legacy/deprecated.php:357
+#: library/legacy/deprecated.php:365
 msgid "Name"
 msgstr "Име"
 
@@ -86,17 +96,17 @@ msgid "*"
 msgstr "*"
 
 #: library/extensions/comments-extensions.php:229
-#: library/legacy/deprecated.php:362
+#: library/legacy/deprecated.php:370
 msgid "Email"
 msgstr "Е-пошта"
 
 #: library/extensions/comments-extensions.php:230
-#: library/legacy/deprecated.php:367
+#: library/legacy/deprecated.php:375
 msgid "Website"
 msgstr "Вебсајт"
 
 #: library/extensions/comments-extensions.php:238
-#: library/legacy/deprecated.php:354
+#: library/legacy/deprecated.php:362
 msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
 msgid "Your email is %1$snever%2$s published nor shared."
 msgstr "Ваша е-пошта неће %1$sникад%2$s бити објављена или прослеђена наком."
@@ -107,32 +117,32 @@ msgid "Required fields are marked %1$s*%2$s"
 msgstr "Захтевана поља су обележена %1$s*%2$s"
 
 #: library/extensions/comments-extensions.php:240
-#: library/legacy/deprecated.php:336
+#: library/legacy/deprecated.php:344
 msgid "You must be %1$slogged in%2$s to post a comment."
 msgstr "Морате се %1$пријавити %2$s да бисте оставили коментар"
 
 #: library/extensions/comments-extensions.php:240
-#: library/legacy/deprecated.php:336
+#: library/legacy/deprecated.php:344
 msgid "Log in"
 msgstr "Пријави се"
 
 #: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:349
+#: library/legacy/deprecated.php:357
 msgid "Logged in as %s"
 msgstr "Пријављен као %s"
 
 #: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:349
+#: library/legacy/deprecated.php:357
 msgid "Log out of this account"
 msgstr "Изађите из овог налога"
 
 #: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:349
+#: library/legacy/deprecated.php:357
 msgid "Log out?"
 msgstr "Желите да се одјавите?"
 
 #: library/extensions/comments-extensions.php:244
-#: library/legacy/deprecated.php:379
+#: library/legacy/deprecated.php:387
 msgctxt "%$1s and %$2s are <abbr> tags"
 msgid "You may use these %1$sHTML%2$s tags and attributes"
 msgstr "Можете користити ове %1$sHTML%2$s ознаке и атрибуте"
@@ -174,163 +184,159 @@ msgid "Yearly Archives: %s"
 msgstr "Годишнји архиви: %s"
 
 #: library/extensions/content-extensions.php:424
-#: library/extensions/content-extensions.php:1706
+#: library/extensions/content-extensions.php:1710
 msgid "Older posts"
 msgstr "Старији чланци"
 
 #: library/extensions/content-extensions.php:426
-#: library/extensions/content-extensions.php:1708
+#: library/extensions/content-extensions.php:1712
 msgid "Newer posts"
 msgstr "Новији чланци"
 
 #: library/extensions/content-extensions.php:888
-#: library/extensions/content-extensions.php:1418
+#: library/extensions/content-extensions.php:1422
 msgid "Edit post"
 msgstr "Измена чланка"
 
 #: library/extensions/content-extensions.php:890
-#: library/extensions/content-extensions.php:1420
+#: library/extensions/content-extensions.php:1424
 #: library/extensions/discussion-extensions.php:37
-#: library/extensions/discussion.php:84 links.php:54 page.php:52
+#: library/extensions/discussion.php:84 links.php:52 page.php:52
 #: template-page-archives.php:55 template-page-fullwidth.php:53
 msgid "Edit"
 msgstr "Измена"
 
-#: library/extensions/content-extensions.php:918
+#: library/extensions/content-extensions.php:921
 #: library/extensions/header-extensions.php:111
 msgid "Not Found"
 msgstr "Ништа није пронађено"
 
-#: library/extensions/content-extensions.php:923
-#: library/extensions/content-extensions.php:1141
+#: library/extensions/content-extensions.php:926
 #: library/extensions/content-extensions.php:1145
-#: library/extensions/content-extensions.php:1376
+#: library/extensions/content-extensions.php:1149
+#: library/extensions/content-extensions.php:1380
 msgid "Permalink to %s"
 msgstr "Пермалинк на %s"
 
-#: library/extensions/content-extensions.php:983
+#: library/extensions/content-extensions.php:987
 msgid "By"
 msgstr "Од "
 
-#: library/extensions/content-extensions.php:994
+#: library/extensions/content-extensions.php:998
 msgid "View all posts by %s"
 msgstr "Погледај све чланке од %s"
 
-#: library/extensions/content-extensions.php:1023
+#: library/extensions/content-extensions.php:1027
 msgid "Published:"
 msgstr "Објављено: "
 
-#: library/extensions/content-extensions.php:1199
+#: library/extensions/content-extensions.php:1203
 msgid "Archives by Category"
 msgstr "Архиве по категоријама"
 
-#: library/extensions/content-extensions.php:1230
+#: library/extensions/content-extensions.php:1234
 msgid "Archives by Month"
 msgstr "Архиве по месецу"
 
-#: library/extensions/content-extensions.php:1291
+#: library/extensions/content-extensions.php:1295
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
 msgstr "Извините, али ми нисмо у могућности да пронађемо оно сте тражили. Можда Вам претрага може помоћи. "
 
-#: library/extensions/content-extensions.php:1297 search.php:70
+#: library/extensions/content-extensions.php:1301 search.php:70
 msgid "Find"
 msgstr "Пронађи"
 
-#: library/extensions/content-extensions.php:1316
+#: library/extensions/content-extensions.php:1320
 msgid "Read More %s"
 msgstr "Прочитај више %s"
 
-#: library/extensions/content-extensions.php:1368
+#: library/extensions/content-extensions.php:1372
 msgid "Browse the %s archive."
 msgstr "Претражи %s архиву."
 
-#: library/extensions/content-extensions.php:1370
+#: library/extensions/content-extensions.php:1374
 msgid "Permalink to %s Archive"
 msgstr "Пермалинк до  %s Архиве"
 
-#: library/extensions/content-extensions.php:1376
+#: library/extensions/content-extensions.php:1380
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Bookmark the %1$spermalink%2$s."
 msgstr "Забележи (bookmark)  %1$sпермалинк%2$s."
 
-#: library/extensions/content-extensions.php:1534
+#: library/extensions/content-extensions.php:1538
 msgid "This entry was posted in %s"
 msgstr "Унос је објављен у %s"
 
-#: library/extensions/content-extensions.php:1545
+#: library/extensions/content-extensions.php:1549
 msgid "Also posted in %s"
 msgstr "Такође објављено у %s"
 
-#: library/extensions/content-extensions.php:1549
+#: library/extensions/content-extensions.php:1553
 msgid "Posted in %s"
 msgstr "Објављено у %s"
 
-#: library/extensions/content-extensions.php:1575
+#: library/extensions/content-extensions.php:1579
 msgid "This entry is tagged"
 msgstr "Унос је означен (tagged)"
 
-#: library/extensions/content-extensions.php:1578
+#: library/extensions/content-extensions.php:1582
 msgid "and tagged"
 msgstr "и означен (tagged)"
 
-#: library/extensions/content-extensions.php:1581
+#: library/extensions/content-extensions.php:1585
 msgid "Also tagged"
 msgstr "Такође означен (tagged)"
 
-#: library/extensions/content-extensions.php:1583
+#: library/extensions/content-extensions.php:1587
 msgid "Tagged"
 msgstr "Oзначен (tagged)"
 
-#: library/extensions/content-extensions.php:1613
-#: library/extensions/content-extensions.php:1619
+#: library/extensions/content-extensions.php:1617
+#: library/extensions/content-extensions.php:1623
 msgid "Comment on %s"
 msgstr "Коментар на %s"
 
-#: library/extensions/content-extensions.php:1615
+#: library/extensions/content-extensions.php:1619
 msgid "%s Response"
 msgid_plural "%s Responses"
 msgstr[0] "%s Одговор"
 msgstr[1] "%s Одговора"
 msgstr[2] "%s Одговора"
 
-#: library/extensions/content-extensions.php:1620
+#: library/extensions/content-extensions.php:1624
 msgid "Leave a comment"
 msgstr "Остави коментар"
 
-#: library/extensions/content-extensions.php:1623
+#: library/extensions/content-extensions.php:1627
 msgid "Comments closed"
 msgstr "Коментари су затворени"
 
-#: library/extensions/content-extensions.php:1647
+#: library/extensions/content-extensions.php:1651
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
 msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
 msgstr "%1$sОбјави коментар%2$s или остави трекбек: %3$s"
 
-#: library/extensions/content-extensions.php:1648
-#: library/extensions/content-extensions.php:1663
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1667
 msgid "Post a comment"
 msgstr "Објави коментар"
 
-#: library/extensions/content-extensions.php:1652
-#: library/extensions/content-extensions.php:1659
+#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1663
 msgid "Trackback URL for your post"
 msgstr "Трекбек URL за Ваш чланак"
 
-#: library/extensions/content-extensions.php:1653
-#: library/extensions/content-extensions.php:1660
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1664
 msgid "Trackback URL"
 msgstr "Трекбек URL"
 
-#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1660
 msgctxt "%s is trackback url, wrapped in link tags"
 msgid "Comments are closed, but you can leave a trackback: %s"
 msgstr "Коментари су затворени, али ви можете оставити трекбек: %s"
 
-#: library/extensions/content-extensions.php:1663
-msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
-msgstr "Трекбекови су затворени, али можете %1$sобјавити коментар%2$s."
-
-#: library/extensions/content-extensions.php:1665
+#: library/extensions/content-extensions.php:1669
 msgid "Both comments and trackbacks are currently closed."
 msgstr "И коментари и трекбекови су тренутно затворени"
 
@@ -382,11 +388,11 @@ msgstr "RSS feed о чланцима"
 msgid "Comments RSS feed"
 msgstr "RSS feed о коментарима"
 
-#: library/extensions/header-extensions.php:642
+#: library/extensions/header-extensions.php:667
 msgid "Skip navigation to the content"
 msgstr "Прескочи навигацију  до садржаја"
 
-#: library/extensions/header-extensions.php:642
+#: library/extensions/header-extensions.php:667
 msgid "Skip to content"
 msgstr "Иди на садржај"
 
@@ -448,31 +454,31 @@ msgctxt "%1$s and %2$s are <a> tags"
 msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
 msgstr "Молимо Вас посетете %1$sThematicTheme.com форуме%2$s уколико имате нека питања о Thematic"
 
-#: library/extensions/theme-options.php:256
+#: library/extensions/theme-options.php:267
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options"
 msgstr "%s Опције теме"
 
-#: library/extensions/theme-options.php:294
+#: library/extensions/theme-options.php:305
 msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
 msgstr "Индекс за унос widget области ће се појавити после овог броја чланка. Не уношењем ничега или 0 ће онемогућити ово својство. "
 
-#: library/extensions/theme-options.php:307
+#: library/extensions/theme-options.php:318
 msgctxt "%1$s and %2$s are <a> tags"
 msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
 msgstr "Прикажи %1$smicroformatted vCard%2$s на аватару аутора, био и е-пошту на ауторвој страни"
 
-#: library/extensions/theme-options.php:320
+#: library/extensions/theme-options.php:331
 msgctxt "%s are shortcode tags"
 msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
 msgstr "Можете користити и кодовне скраћенице у подножју Вашег текста. Примери кодовних скраћеница: %s"
 
-#: library/extensions/theme-options.php:333
+#: library/extensions/theme-options.php:355
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
 msgstr "%s Опције теме ће бити надограђене у једну унапређену опцију. Уклоните опције о правима из базе података. "
 
-#: library/extensions/theme-options.php:360
+#: library/extensions/theme-options.php:382
 msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
 msgstr "Вредност индекса позиције уноса мора бити број који је једнак или већи од нуле. Ово подешавање ће бити враћено на претходну вредност."
 
@@ -622,11 +628,11 @@ msgstr "Сви чланци"
 msgid "All comments"
 msgstr "Сви коментари"
 
-#: library/legacy/deprecated.php:349
+#: library/legacy/deprecated.php:357
 msgid "Logged in as"
 msgstr "Пријављен као"
 
-#: library/legacy/deprecated.php:357 library/legacy/deprecated.php:362
+#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
 msgid "<span class=\"required\">*</span>"
 msgstr "<span class=\"required\">*</span>"
 
@@ -660,11 +666,6 @@ msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http
 
 msgid "http://themeshaper.com/"
 msgstr "http://themeshaper.com/ "
-
-msgid "white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats"
-msgstr ""
-"Бела, са три колоне, две колоне, фиксираним дужинама, опцјама теме, левим sidebar-ом, деним sidebar-ом, threaded коментарима, лепљивим коментарима, microformat-има\n"
-" "
 
 msgid "Deprecated Archives Template"
 msgstr "Темплејт са старим архивама"

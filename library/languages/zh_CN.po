@@ -1,14 +1,24 @@
-# Translation of Thematic 1.0.3 in Chinese (China)
-# This file is distributed under the same license as the Thematic 1.0.3 package.
+# Translation of Thematic 1.0.3.x in Chinese (China)
+# This file is distributed under the same license as the Thematic 1.0.3.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2012-10-22 09:59:38+0000\n"
+"PO-Revision-Date: 2013-03-05 17:46:44+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: Thematic 1.0.3\n"
+"Project-Id-Version: Thematic 1.0.3.x\n"
+
+#: library/extensions/content-extensions.php:916
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1667
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr ""
 
 #: archives.php:20 template-page-blog.php:22
 msgid "The template %s"
@@ -75,7 +85,7 @@ msgid "Post Comment"
 msgstr "添加评论"
 
 #: library/extensions/comments-extensions.php:228
-#: library/legacy/deprecated.php:357
+#: library/legacy/deprecated.php:365
 msgid "Name"
 msgstr "姓名"
 
@@ -86,17 +96,17 @@ msgid "*"
 msgstr "*"
 
 #: library/extensions/comments-extensions.php:229
-#: library/legacy/deprecated.php:362
+#: library/legacy/deprecated.php:370
 msgid "Email"
 msgstr "电子邮件"
 
 #: library/extensions/comments-extensions.php:230
-#: library/legacy/deprecated.php:367
+#: library/legacy/deprecated.php:375
 msgid "Website"
 msgstr "网站"
 
 #: library/extensions/comments-extensions.php:238
-#: library/legacy/deprecated.php:354
+#: library/legacy/deprecated.php:362
 msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
 msgid "Your email is %1$snever%2$s published nor shared."
 msgstr "你的电子邮件%1$s不会%2$s被公开或用作其他用途。"
@@ -107,32 +117,32 @@ msgid "Required fields are marked %1$s*%2$s"
 msgstr "标记%1$s*%2$s的项为必填项。"
 
 #: library/extensions/comments-extensions.php:240
-#: library/legacy/deprecated.php:336
+#: library/legacy/deprecated.php:344
 msgid "You must be %1$slogged in%2$s to post a comment."
 msgstr "%1$s登录%2$s以添加评论。"
 
 #: library/extensions/comments-extensions.php:240
-#: library/legacy/deprecated.php:336
+#: library/legacy/deprecated.php:344
 msgid "Log in"
 msgstr "登录"
 
 #: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:349
+#: library/legacy/deprecated.php:357
 msgid "Logged in as %s"
 msgstr "以%s身份登录"
 
 #: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:349
+#: library/legacy/deprecated.php:357
 msgid "Log out of this account"
 msgstr "注销"
 
 #: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:349
+#: library/legacy/deprecated.php:357
 msgid "Log out?"
 msgstr "确认注销？"
 
 #: library/extensions/comments-extensions.php:244
-#: library/legacy/deprecated.php:379
+#: library/legacy/deprecated.php:387
 msgctxt "%$1s and %$2s are <abbr> tags"
 msgid "You may use these %1$sHTML%2$s tags and attributes"
 msgstr "你可以使用以下%1$sHTML%2$s标签和属性。"
@@ -174,161 +184,157 @@ msgid "Yearly Archives: %s"
 msgstr "按年分类：%s"
 
 #: library/extensions/content-extensions.php:424
-#: library/extensions/content-extensions.php:1706
+#: library/extensions/content-extensions.php:1710
 msgid "Older posts"
 msgstr "较老博文"
 
 #: library/extensions/content-extensions.php:426
-#: library/extensions/content-extensions.php:1708
+#: library/extensions/content-extensions.php:1712
 msgid "Newer posts"
 msgstr "较新博文"
 
 #: library/extensions/content-extensions.php:888
-#: library/extensions/content-extensions.php:1418
+#: library/extensions/content-extensions.php:1422
 msgid "Edit post"
 msgstr "编辑本文"
 
 #: library/extensions/content-extensions.php:890
-#: library/extensions/content-extensions.php:1420
+#: library/extensions/content-extensions.php:1424
 #: library/extensions/discussion-extensions.php:37
-#: library/extensions/discussion.php:84 links.php:54 page.php:52
+#: library/extensions/discussion.php:84 links.php:52 page.php:52
 #: template-page-archives.php:55 template-page-fullwidth.php:53
 msgid "Edit"
 msgstr "编辑"
 
-#: library/extensions/content-extensions.php:918
+#: library/extensions/content-extensions.php:921
 #: library/extensions/header-extensions.php:111
 msgid "Not Found"
 msgstr "无结果"
 
-#: library/extensions/content-extensions.php:923
-#: library/extensions/content-extensions.php:1141
+#: library/extensions/content-extensions.php:926
 #: library/extensions/content-extensions.php:1145
-#: library/extensions/content-extensions.php:1376
+#: library/extensions/content-extensions.php:1149
+#: library/extensions/content-extensions.php:1380
 msgid "Permalink to %s"
 msgstr "%s的永久链接"
 
-#: library/extensions/content-extensions.php:983
+#: library/extensions/content-extensions.php:987
 msgid "By"
 msgstr "作者："
 
-#: library/extensions/content-extensions.php:994
+#: library/extensions/content-extensions.php:998
 msgid "View all posts by %s"
 msgstr "查看%s发表的文章"
 
-#: library/extensions/content-extensions.php:1023
+#: library/extensions/content-extensions.php:1027
 msgid "Published:"
 msgstr "发布："
 
-#: library/extensions/content-extensions.php:1199
+#: library/extensions/content-extensions.php:1203
 msgid "Archives by Category"
 msgstr "类别目录"
 
-#: library/extensions/content-extensions.php:1230
+#: library/extensions/content-extensions.php:1234
 msgid "Archives by Month"
 msgstr "月份目录"
 
-#: library/extensions/content-extensions.php:1291
+#: library/extensions/content-extensions.php:1295
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
 msgstr "抱歉，没有找到你所需的结果。建议使用搜索功能。"
 
-#: library/extensions/content-extensions.php:1297 search.php:70
+#: library/extensions/content-extensions.php:1301 search.php:70
 msgid "Find"
 msgstr "查找"
 
-#: library/extensions/content-extensions.php:1316
+#: library/extensions/content-extensions.php:1320
 msgid "Read More %s"
 msgstr "继续阅读 %s"
 
-#: library/extensions/content-extensions.php:1368
+#: library/extensions/content-extensions.php:1372
 msgid "Browse the %s archive."
 msgstr "浏览%s类别"
 
-#: library/extensions/content-extensions.php:1370
+#: library/extensions/content-extensions.php:1374
 msgid "Permalink to %s Archive"
 msgstr "%s类别目录的永久链接"
 
-#: library/extensions/content-extensions.php:1376
+#: library/extensions/content-extensions.php:1380
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Bookmark the %1$spermalink%2$s."
 msgstr "将该链接%1$s存入书签%2$s。"
 
-#: library/extensions/content-extensions.php:1534
+#: library/extensions/content-extensions.php:1538
 msgid "This entry was posted in %s"
 msgstr "发布在%s"
 
-#: library/extensions/content-extensions.php:1545
+#: library/extensions/content-extensions.php:1549
 msgid "Also posted in %s"
 msgstr "同时发布在%s"
 
-#: library/extensions/content-extensions.php:1549
+#: library/extensions/content-extensions.php:1553
 msgid "Posted in %s"
 msgstr "发布在%s"
 
-#: library/extensions/content-extensions.php:1575
+#: library/extensions/content-extensions.php:1579
 msgid "This entry is tagged"
 msgstr "条目已有标签"
 
-#: library/extensions/content-extensions.php:1578
+#: library/extensions/content-extensions.php:1582
 msgid "and tagged"
 msgstr "已有标签"
 
-#: library/extensions/content-extensions.php:1581
+#: library/extensions/content-extensions.php:1585
 msgid "Also tagged"
 msgstr "已有标签"
 
-#: library/extensions/content-extensions.php:1583
+#: library/extensions/content-extensions.php:1587
 msgid "Tagged"
 msgstr "已有标签"
 
-#: library/extensions/content-extensions.php:1613
-#: library/extensions/content-extensions.php:1619
+#: library/extensions/content-extensions.php:1617
+#: library/extensions/content-extensions.php:1623
 msgid "Comment on %s"
 msgstr "%s的评论"
 
-#: library/extensions/content-extensions.php:1615
+#: library/extensions/content-extensions.php:1619
 msgid "%s Response"
 msgid_plural "%s Responses"
 msgstr[0] "%s 个回复或互链"
 
-#: library/extensions/content-extensions.php:1620
+#: library/extensions/content-extensions.php:1624
 msgid "Leave a comment"
 msgstr "发表评论"
 
-#: library/extensions/content-extensions.php:1623
+#: library/extensions/content-extensions.php:1627
 msgid "Comments closed"
 msgstr "评论已关闭"
 
-#: library/extensions/content-extensions.php:1647
+#: library/extensions/content-extensions.php:1651
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
 msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
 msgstr "%1$s发表评论%2$s或留个互链：%3$s"
 
-#: library/extensions/content-extensions.php:1648
-#: library/extensions/content-extensions.php:1663
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1667
 msgid "Post a comment"
 msgstr "发表评论"
 
-#: library/extensions/content-extensions.php:1652
-#: library/extensions/content-extensions.php:1659
+#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1663
 msgid "Trackback URL for your post"
 msgstr "本文互链地址"
 
-#: library/extensions/content-extensions.php:1653
-#: library/extensions/content-extensions.php:1660
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1664
 msgid "Trackback URL"
 msgstr "互链地址"
 
-#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1660
 msgctxt "%s is trackback url, wrapped in link tags"
 msgid "Comments are closed, but you can leave a trackback: %s"
 msgstr "评论已关闭，你可以留个互链：%s"
 
-#: library/extensions/content-extensions.php:1663
-msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
-msgstr "互链已关闭，你可以%1$s发表评论%2$s。"
-
-#: library/extensions/content-extensions.php:1665
+#: library/extensions/content-extensions.php:1669
 msgid "Both comments and trackbacks are currently closed."
 msgstr "评论和互链已关闭。"
 
@@ -380,11 +386,11 @@ msgstr "RSS订阅本文"
 msgid "Comments RSS feed"
 msgstr "RSS订阅评论"
 
-#: library/extensions/header-extensions.php:642
+#: library/extensions/header-extensions.php:667
 msgid "Skip navigation to the content"
 msgstr "跳过导航"
 
-#: library/extensions/header-extensions.php:642
+#: library/extensions/header-extensions.php:667
 msgid "Skip to content"
 msgstr "直接查看正文"
 
@@ -446,31 +452,31 @@ msgctxt "%1$s and %2$s are <a> tags"
 msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
 msgstr "咨询及疑问请访问%1$sThematicTheme.com%2$s"
 
-#: library/extensions/theme-options.php:256
+#: library/extensions/theme-options.php:267
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options"
 msgstr "%s主题选项"
 
-#: library/extensions/theme-options.php:294
+#: library/extensions/theme-options.php:305
 msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
 msgstr "目录小工具会在以下楼层后出现。如果不想使用请填0。"
 
-#: library/extensions/theme-options.php:307
+#: library/extensions/theme-options.php:318
 msgctxt "%1$s and %2$s are <a> tags"
 msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
 msgstr "显示一张带有头像和电子邮件地址的%1$svCard名片%2$s。"
 
-#: library/extensions/theme-options.php:320
+#: library/extensions/theme-options.php:331
 msgctxt "%s are shortcode tags"
 msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
 msgstr "你可以在页脚中使用HTML标签和微型标签，如：%s"
 
-#: library/extensions/theme-options.php:333
+#: library/extensions/theme-options.php:355
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
 msgstr "%s主题选项已更新并采用新的格式。请从数据库中移除旧版选项。"
 
-#: library/extensions/theme-options.php:360
+#: library/extensions/theme-options.php:382
 msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
 msgstr "首页小工具插入楼层应当大于或等于零。已恢复到之前的设置。"
 
@@ -620,11 +626,11 @@ msgstr "所有博文"
 msgid "All comments"
 msgstr "所有评论"
 
-#: library/legacy/deprecated.php:349
+#: library/legacy/deprecated.php:357
 msgid "Logged in as"
 msgstr "登录身份："
 
-#: library/legacy/deprecated.php:357 library/legacy/deprecated.php:362
+#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
 msgid "<span class=\"required\">*</span>"
 msgstr "<span class=\"required\">*</span>"
 
@@ -658,9 +664,6 @@ msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http
 
 msgid "http://themeshaper.com/"
 msgstr "http://themeshaper.com/"
-
-msgid "white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats"
-msgstr "white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats"
 
 msgid "Deprecated Archives Template"
 msgstr "不兼容的分类目录模版"

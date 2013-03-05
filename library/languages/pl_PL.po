@@ -1,568 +1,683 @@
+# Translation of Thematic 1.0.3.x in Polish
+# This file is distributed under the same license as the Thematic 1.0.3.x package.
 msgid ""
 msgstr ""
-"Project-Id-Version: pol\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-27 15:18+0100\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Mariusz Jamro <mariusz.jamro@gmail.com>\n"
-"Language-Team:  <mariusz.jamro@gmail.com>\n"
+"PO-Revision-Date: 2013-03-05 17:46:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Thematic 1.0.3.x\n"
 
-#: c:\users\Chris\Desktop\thematic/archives.php:52
-#: c:\users\Chris\Desktop\thematic/links.php:64
-#: c:\users\Chris\Desktop\thematic/page.php:50
-msgid "Edit"
-msgstr "Edytuj"
+#: library/extensions/content-extensions.php:916
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr "(Bez tytułu)"
 
-#: c:\users\Chris\Desktop\thematic/attachment.php:49
+#: library/extensions/content-extensions.php:1667
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr "Trackbacki są wyłączone, ale możesz %1$snapisać komentarz%2$s."
+
+#: archives.php:20 template-page-blog.php:22
+msgid "The template %s"
+msgstr "Motyw %s"
+
+#: attachment.php:54 library/extensions/content-extensions.php:630
+#: library/extensions/content-extensions.php:689
 msgid "Pages:"
 msgstr "Strony:"
 
-#: c:\users\Chris\Desktop\thematic/author.php:61
+#: author.php:67
 msgid "Email "
 msgstr "Email "
 
-#: c:\users\Chris\Desktop\thematic/comments.php:10
+#: comments.php:24
+msgid "Please do not load this page directly."
+msgstr "Nie ładuj tej strony bezpośrednio."
+
+#: comments.php:33
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Ten wpis jest chroniony hasłem. Proszę podaj hasło aby przeglądać komentarze."
 
-#: c:\users\Chris\Desktop\thematic/comments.php:52
-#, php-format
-msgid "<span>%d</span> Trackbacks"
-msgstr "<span>%d</span> Trackback'i"
-
-#: c:\users\Chris\Desktop\thematic/comments.php:52
-msgid "<span>One</span> Trackback"
-msgstr "<span>Jeden</span> Trackback"
-
-#: c:\users\Chris\Desktop\thematic/comments.php:74
-#, php-format
-msgid "You must be <a href=\"%s\" title=\"Log in\">logged in</a> to post a comment."
-msgstr "Musisz być <a href=\"%s\" title=\"Log in\">zalogowany</a> aby dodać komentarz."
-
-#: c:\users\Chris\Desktop\thematic/comments.php:85
-#, php-format
-msgid "<span class=\"loggedin\">Logged in as <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Log out of this account\">Log out?</a></span>"
-msgstr "<span class=\"loggedin\">Zalogowany jako <a href=\"%1$s\" title=\"Logged in as %2$s\">%2$s</a>.</span> <span class=\"logout\"><a href=\"%3$s\" title=\"Wyloguj się.\">Wylogować?</a></span>"
-
-#: c:\users\Chris\Desktop\thematic/comments.php:92
-msgid "Your email is <em>never</em> published nor shared."
-msgstr "Twój adres email <em>nie zostanie</em> opublikowany i nie będzie rozpowszechniany."
-
-#: c:\users\Chris\Desktop\thematic/comments.php:92
-msgid "Required fields are marked <span class=\"required\">*</span>"
-msgstr "Wymagane pola są oznaczone <span class=\"required\">*</span>"
-
-#: c:\users\Chris\Desktop\thematic/comments.php:95
-msgid "Name"
-msgstr "Imię"
-
-#: c:\users\Chris\Desktop\thematic/comments.php:95
-#: c:\users\Chris\Desktop\thematic/comments.php:100
-msgid "<span class=\"required\">*</span>"
-msgstr "<span class=\"required\">*</span>"
-
-#: c:\users\Chris\Desktop\thematic/comments.php:100
-msgid "Email"
-msgstr "Email"
-
-#: c:\users\Chris\Desktop\thematic/comments.php:105
-msgid "Website"
-msgstr "Strona"
-
-#: c:\users\Chris\Desktop\thematic/comments.php:117
-msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
-msgstr "Możesz używać następujących tagów i znaczników <abbr title=\"HyperText Markup Language\">HTML</abbr>:"
-
-#: c:\users\Chris\Desktop\thematic/page.php:48
-msgid "Pages: "
-msgstr "Strony: "
-
-#: c:\users\Chris\Desktop\thematic/search.php:44
-msgid "Nothing Found"
-msgstr "Nic nie znaleziono"
-
-#: c:\users\Chris\Desktop\thematic/search.php:46
-msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Przykro nam, ale nie znaleziono nic pasującego do Twoich kryteriów wyszukiwania. Proszę spróbuj z innymi słowami kluczowymi."
-
-#: c:\users\Chris\Desktop\thematic/search.php:51
-msgid "Find"
-msgstr "Szukaj"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:76
-msgid "<span>One</span> Comment"
-msgstr "<span>Jeden</span> Komentarz"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:83
-#, php-format
-msgid "<span>%d</span> Comments"
-msgstr "<span>%d</span> Komentarze"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:96
-msgid "Post a Comment"
-msgstr "Skomentuj"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:103
-#, php-format
-msgid "Post a Reply to %s"
-msgstr "Napisz odpowiedź na %s."
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:110
-msgid "Comment"
-msgstr "Komentarz"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:118
-msgid "Cancel reply"
-msgstr "Anuluj odpowiedź"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/comments-extensions.php:125
-msgid "Post Comment"
-msgstr "Skomentuj"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:212
-msgid "Author Archives: "
-msgstr "Archiwum Autora: "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:218
-msgid "Category Archives:"
-msgstr "Archiwum Kategorii:"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:227
-msgid "Search Results for:"
-msgstr "Wyniki wyszukiwania:"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:233
-msgid "Tag Archives:"
-msgstr "Archiwum Tagów:"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:242
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:250
-msgid "Archives:"
-msgstr "Archiwa:"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:256
-#, php-format
-msgid "Daily Archives: <span>%s</span>"
-msgstr "Archiwum dzienne: <span>%s</span>"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:260
-#, php-format
-msgid "Monthly Archives: <span>%s</span>"
-msgstr "Archiwum miesięczne: <span>%s</span>"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:264
-#, php-format
-msgid "Yearly Archives: <span>%s</span>"
-msgstr "Archiwum roczne: <span>%s</span>"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:268
-msgid "Blog Archives"
-msgstr "Archiwum blogu"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:298
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1243
-msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&laquo;</span> Starsze wpisy"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:299
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1244
-msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Nowsze wpisy <span class=\"meta-nav\">&raquo;</span>"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:672
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1041
-msgid "Edit post"
-msgstr "Edytuj wpis"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:692
-msgid "Not Found"
-msgstr "Nie Znaleziono"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:697
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1001
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1006
-msgid "Permalink to "
-msgstr "Permalink do "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:742
-msgid "By "
-msgstr "Przez "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:745
-msgid "View all posts by "
-msgstr "Zobacz wszystkie wpisy "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:763
-msgid "Published: "
-msgstr "Opublikowano: "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:888
-msgid "Archives by Category"
-msgstr "Archiwum wg. Kategorii"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:907
-msgid "Archives by Month"
-msgstr "Archiwum wg. Miesiąca"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:950
-msgid "Apologies, but we were unable to find what you were looking for. Perhaps  searching will help."
-msgstr "Przykro nam, ale nie znaleziono strony której szukałeś. Spróbuj skorzystać z wyszukiwarki."
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:967
-msgid "Read More <span class=\"meta-nav\">&raquo;</span>"
-msgstr "Czytaj dalej <span class=\"meta-nav\">&raquo;</span>"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1001
-msgid "Browse the "
-msgstr "Przeglądaj "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1001
-msgid " Archive"
-msgstr " Archiwum"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1002
-msgid " archive"
-msgstr " archiwizuj"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1006
-msgid "Bookmark the "
-msgstr "Dodaj do zakładek "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1007
-msgid "permalink"
-msgstr "permalink"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1123
-msgid "This entry was posted in "
-msgstr "Ten wpis umieszczono w kategorii "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1131
-msgid "Also posted in "
-msgstr "Opublikowano również w "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1134
-msgid "Posted in "
-msgstr "Opublikowano w "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1152
-msgid " This entry is tagged"
-msgstr " Ten wpis umieszczono w kategorii"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1155
-msgid " and tagged"
-msgstr "i otagowano jako"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1158
-msgid " Also tagged "
-msgstr "Również otagowano "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1160
-msgid "Tagged"
-msgstr "Otagowano jako"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1179
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1182
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1185
-msgid "Comment on "
-msgstr "Komentarze do "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1180
-msgid " Comments"
-msgstr " Komentarze"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1183
-msgid " Comment"
-msgstr " Komentarz"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1186
-msgid "Leave a comment"
-msgstr "Skomentuj"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1189
-msgid "Comments closed"
-msgstr "Komentowanie zostało zablokowane"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1205
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1213
-msgid "Post a comment"
-msgstr "Dodaj komentarz"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1206
-msgid " or leave a trackback: "
-msgstr " lub dodaj odpowiedź (trackback): "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1207
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1210
-msgid "Trackback URL for your post"
-msgstr "Adres URL Trackback'u do tego wpisu"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1207
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1210
-msgid "Trackback URL"
+#: comments.php:111
+msgid "Trackbacks"
 msgstr "Trackback URL"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1209
-msgid " Comments are closed, but you can leave a trackback: "
-msgstr "Komentowanie zostało zablokowane, ale możesz dodać odpowiedź (trackback): "
+#: comments.php:111
+msgctxt "%1$ and %2$s are <span> tags"
+msgid "%1$sOne%2$s Trackback"
+msgstr "%1$sJedna%2$s Odpowiedź (trackback)"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1212
-msgid " Trackbacks are closed, but you can "
-msgstr " Dodawanie odpowiedzi Trackback do tego wpisu zostało zablokowane, ale możesz "
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1213
-msgid "post a comment"
-msgstr "dodać komentarz"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/content-extensions.php:1215
-msgid " Both comments and trackbacks are currently closed."
-msgstr "Komentarze i odpowiedzi (trackback) zostały zablokowane."
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/discussion-extensions.php:13
-#, php-format
-msgid "Posted %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink to this comment\">Permalink</a>"
-msgstr "Opublikowano %1$s at %2$s <span class=\"meta-sep\">|</span> <a href=\"%3$s\" title=\"Permalink do tego komentarza\">Permalink</a>"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/discussion-extensions.php:21
-msgid "Edit comment"
-msgstr "Edytuj komentarz"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:12
-msgid "\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n"
-msgstr "\t\t\t\t\t<span class='unapproved'>Twój komentarz oczekuje na moderacje.</span>\n"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:19
-msgid "Reply"
-msgstr "Odpowiedź"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:20
-msgid "Log in to reply."
-msgstr "Zaloguj się aby odpowiedzieć."
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:35
-#, php-format
-msgid "By %1$s on %2$s at %3$s"
-msgstr "Autor %1$s  %2$s o %3$s"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/discussion.php:40
-msgid "\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting moderation.</span>\\n"
-msgstr "\\t\\t\\t\\t\\t<span class=\"unapproved\">Twój trackback oczekuje na moderacje.</span>\\n"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:262
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:138
-msgid "Posts RSS feed"
-msgstr "Kanał RSS wpisów"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:280
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:139
-msgid "Comments RSS feed"
-msgstr "Kanał RSS komentarzy"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:357
+#: functions.php:194
 msgid "Primary Menu"
 msgstr "Menu główne"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:467
+#: library/extensions/comments-extensions.php:120
+msgctxt "One Comment, where %$1s and %$2s are <span> tags"
+msgid "%1$sOne%2$s Comment"
+msgstr "%1$sJeden%2$s Komentarz"
+
+#: library/extensions/comments-extensions.php:131
+msgid "Comments"
+msgstr "Komentarze"
+
+#: library/extensions/comments-extensions.php:155
+msgid "Post a Comment"
+msgstr "Skomentuj"
+
+#: library/extensions/comments-extensions.php:167
+msgid "Post a Reply to %s"
+msgstr "Napisz odpowiedź na %s."
+
+#: library/extensions/comments-extensions.php:179
+msgctxt "noun"
+msgid "Comment"
+msgstr "Komentarz"
+
+#: library/extensions/comments-extensions.php:190
+msgid "Cancel reply"
+msgstr "Anuluj odpowiedź"
+
+#: library/extensions/comments-extensions.php:202
+msgid "Post Comment"
+msgstr "Skomentuj"
+
+#: library/extensions/comments-extensions.php:228
+#: library/legacy/deprecated.php:365
+msgid "Name"
+msgstr "Imię"
+
+#: library/extensions/comments-extensions.php:228
+#: library/extensions/comments-extensions.php:229
+msgctxt "denotes required field"
+msgid "*"
+msgstr "*"
+
+#: library/extensions/comments-extensions.php:229
+#: library/legacy/deprecated.php:370
+msgid "Email"
+msgstr "Email"
+
+#: library/extensions/comments-extensions.php:230
+#: library/legacy/deprecated.php:375
+msgid "Website"
+msgstr "Strona"
+
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:362
+msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
+msgid "Your email is %1$snever%2$s published nor shared."
+msgstr "Twój adres email %1$snie zostanie%2$s opublikowany i nie będzie rozpowszechniany."
+
+#: library/extensions/comments-extensions.php:238
+msgctxt "%$1s and %$2s are <span> tags"
+msgid "Required fields are marked %1$s*%2$s"
+msgstr "Wymagane pola są oznaczone %1$s*%2$s"
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "Musisz być %1$szalogowany%2$s aby dodać komentarz."
+
+#: library/extensions/comments-extensions.php:240
+#: library/legacy/deprecated.php:344
+msgid "Log in"
+msgstr "Zaloguj się"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Logged in as %s"
+msgstr "Jesteś zalogowany jako %s"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out of this account"
+msgstr "Wyloguj się z tego konta"
+
+#: library/extensions/comments-extensions.php:242
+#: library/legacy/deprecated.php:357
+msgid "Log out?"
+msgstr "Wylogować ?"
+
+#: library/extensions/comments-extensions.php:244
+#: library/legacy/deprecated.php:387
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes"
+msgstr "Możesz używać następujących tagów i znaczników %1$sHTML%2$s "
+
+#: library/extensions/content-extensions.php:334
+msgid "Author Archives:"
+msgstr "Artykuły Użytkownika:"
+
+#: library/extensions/content-extensions.php:339
+#: library/extensions/header-extensions.php:103
+msgid "Category Archives:"
+msgstr "Archiwum Kategorii:"
+
+#: library/extensions/content-extensions.php:347
+#: library/extensions/header-extensions.php:99
+msgid "Search Results for:"
+msgstr "Wyniki wyszukiwania:"
+
+#: library/extensions/content-extensions.php:352
+#: library/extensions/header-extensions.php:107
+msgid "Tag Archives:"
+msgstr "Archiwum Tagów:"
+
+#: library/extensions/content-extensions.php:361
+#: library/extensions/content-extensions.php:368
+msgid "Archives:"
+msgstr "Archiwa:"
+
+#: library/extensions/content-extensions.php:373
+msgid "Daily Archives: %s"
+msgstr "Artykuły z dnia: %s"
+
+#: library/extensions/content-extensions.php:377
+msgid "Monthly Archives: %s"
+msgstr "Artykuły opublikowane w %s"
+
+#: library/extensions/content-extensions.php:381
+msgid "Yearly Archives: %s"
+msgstr "Artykuły opublikowane w %s"
+
+#: library/extensions/content-extensions.php:424
+#: library/extensions/content-extensions.php:1710
+msgid "Older posts"
+msgstr "Starsze artykuły"
+
+#: library/extensions/content-extensions.php:426
+#: library/extensions/content-extensions.php:1712
+msgid "Newer posts"
+msgstr "Nowsze artykuły"
+
+#: library/extensions/content-extensions.php:888
+#: library/extensions/content-extensions.php:1422
+msgid "Edit post"
+msgstr "Edytuj wpis"
+
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1424
+#: library/extensions/discussion-extensions.php:37
+#: library/extensions/discussion.php:84 links.php:52 page.php:52
+#: template-page-archives.php:55 template-page-fullwidth.php:53
+msgid "Edit"
+msgstr "Edytuj"
+
+#: library/extensions/content-extensions.php:921
+#: library/extensions/header-extensions.php:111
+msgid "Not Found"
+msgstr "Nie Znaleziono"
+
+#: library/extensions/content-extensions.php:926
+#: library/extensions/content-extensions.php:1145
+#: library/extensions/content-extensions.php:1149
+#: library/extensions/content-extensions.php:1380
+msgid "Permalink to %s"
+msgstr "Link do %s"
+
+#: library/extensions/content-extensions.php:987
+msgid "By"
+msgstr "Przez"
+
+#: library/extensions/content-extensions.php:998
+msgid "View all posts by %s"
+msgstr "Zobacz wszystkie posty od %s"
+
+#: library/extensions/content-extensions.php:1027
+msgid "Published:"
+msgstr "Opublikowane:"
+
+#: library/extensions/content-extensions.php:1203
+msgid "Archives by Category"
+msgstr "Archiwum wg. Kategorii"
+
+#: library/extensions/content-extensions.php:1234
+msgid "Archives by Month"
+msgstr "Archiwum wg. Miesiąca"
+
+#: library/extensions/content-extensions.php:1295
+msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
+msgstr "Przepraszamy, ale szukana przez Ciebie fraza nie została znaleziona. Proszę użyj wyszukiwarki myślę, że to pomoże."
+
+#: library/extensions/content-extensions.php:1301 search.php:70
+msgid "Find"
+msgstr "Szukaj"
+
+#: library/extensions/content-extensions.php:1320
+msgid "Read More %s"
+msgstr "Kontynuuj czytanie %s"
+
+#: library/extensions/content-extensions.php:1372
+msgid "Browse the %s archive."
+msgstr "Przeglądaj archiwum %s."
+
+#: library/extensions/content-extensions.php:1374
+msgid "Permalink to %s Archive"
+msgstr "Link do archiwum %s"
+
+#: library/extensions/content-extensions.php:1380
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Bookmark the %1$spermalink%2$s."
+msgstr "Dodaj %1$slink%2$s do ulubionych."
+
+#: library/extensions/content-extensions.php:1538
+msgid "This entry was posted in %s"
+msgstr "Ten wpis umieszczono w kategorii %s"
+
+#: library/extensions/content-extensions.php:1549
+msgid "Also posted in %s"
+msgstr "Opublikowano również w %s"
+
+#: library/extensions/content-extensions.php:1553
+msgid "Posted in %s"
+msgstr "Opublikowano w %s"
+
+#: library/extensions/content-extensions.php:1579
+msgid "This entry is tagged"
+msgstr "Ten wpis otagowano"
+
+#: library/extensions/content-extensions.php:1582
+msgid "and tagged"
+msgstr "i otagowano jako"
+
+#: library/extensions/content-extensions.php:1585
+msgid "Also tagged"
+msgstr "Otagowano również jako"
+
+#: library/extensions/content-extensions.php:1587
+msgid "Tagged"
+msgstr "Otagowano jako"
+
+#: library/extensions/content-extensions.php:1617
+#: library/extensions/content-extensions.php:1623
+msgid "Comment on %s"
+msgstr "Komentarz do %s"
+
+#: library/extensions/content-extensions.php:1619
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] "%s Odpowiedź"
+msgstr[1] "%s Odpowiedzi"
+msgstr[2] "%s Odpowiedzi"
+
+#: library/extensions/content-extensions.php:1624
+msgid "Leave a comment"
+msgstr "Skomentuj"
+
+#: library/extensions/content-extensions.php:1627
+msgid "Comments closed"
+msgstr "Komentowanie zostało zablokowane"
+
+#: library/extensions/content-extensions.php:1651
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
+msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
+msgstr "%1$sDodaj komentarz%2$s lub zostaw trackback: %3$s"
+
+#: library/extensions/content-extensions.php:1652
+#: library/extensions/content-extensions.php:1667
+msgid "Post a comment"
+msgstr "Dodaj komentarz"
+
+#: library/extensions/content-extensions.php:1656
+#: library/extensions/content-extensions.php:1663
+msgid "Trackback URL for your post"
+msgstr "Adres URL Trackback'u do tego wpisu"
+
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1664
+msgid "Trackback URL"
+msgstr "Trackback URL"
+
+#: library/extensions/content-extensions.php:1660
+msgctxt "%s is trackback url, wrapped in link tags"
+msgid "Comments are closed, but you can leave a trackback: %s"
+msgstr "Komentowanie zostało zablokowane, ale możesz dodać trackback: %s"
+
+#: library/extensions/content-extensions.php:1669
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Zarówno komentarze jak i trackbacki są aktualnie wyłączone"
+
+#: library/extensions/discussion-extensions.php:27
+msgctxt "Posted {$date} at {$time}"
+msgid "Posted %s at %s"
+msgstr "Opublikowano %s o %s"
+
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink to this comment"
+msgstr "Link do komentarza"
+
+#: library/extensions/discussion-extensions.php:31
+msgid "Permalink"
+msgstr "Link"
+
+#: library/extensions/discussion-extensions.php:36
+msgid "Edit comment"
+msgstr "Edytuj komentarz"
+
+#: library/extensions/discussion.php:37
+msgid "Your comment is awaiting moderation"
+msgstr "Twój komentarz oczekuje na moderację"
+
+#: library/extensions/discussion.php:52
+msgid "Reply"
+msgstr "Odpowiedź"
+
+#: library/extensions/discussion.php:53
+msgid "Log in to reply."
+msgstr "Zaloguj się aby odpowiedzieć."
+
+#: library/extensions/discussion.php:80
+msgctxt "By {$authorlink} on {$date} at {$time}"
+msgid "By %1$s on %2$s at %3$s"
+msgstr "Dodany przez %1$s %2$s o %3$s"
+
+#: library/extensions/discussion.php:90
+msgid "Your trackback is awaiting moderation"
+msgstr "Twój trackback oczekuje na moderację."
+
+#: library/extensions/header-extensions.php:319
+#: library/extensions/widgets.php:157
+msgid "Posts RSS feed"
+msgstr "Kanał RSS wpisów"
+
+#: library/extensions/header-extensions.php:343
+#: library/extensions/widgets.php:158
+msgid "Comments RSS feed"
+msgstr "Kanał RSS komentarzy"
+
+#: library/extensions/header-extensions.php:667
 msgid "Skip navigation to the content"
 msgstr "Skocz do treści strony"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/header-extensions.php:467
+#: library/extensions/header-extensions.php:667
 msgid "Skip to content"
 msgstr "Skocz do treści"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/helpers.php:31
-#: c:\users\Chris\Desktop\thematic/library/extensions/helpers.php:44
+#: library/extensions/helpers.php:50 library/extensions/helpers.php:69
 msgid "There is no excerpt because this is a protected post."
 msgstr "Skrót postu nie jest dostępny, ponieważ post został oznaczony jako chroniony."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/shortcodes.php:16
-msgid "Login"
-msgstr "Zaloguj się"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/shortcodes.php:18
-msgid "Logout"
-msgstr "Wyloguj się"
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:13
+#: library/extensions/theme-options.php:50
 msgid "Index Insert Position"
 msgstr "Pozycja wstawienia indeksu"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:14
-msgid "The widgetized Index Insert will follow after this post number."
-msgstr "Pozycja wstawienia indeksu pojawi się po tym numerze postu."
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:19
+#: library/extensions/theme-options.php:51
 msgid "Info on Author Page"
 msgstr "Informacja na stronie autora."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:20
-msgid "Display a <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microformatted vCard</a> - with the author's avatar, bio and email - on the author page."
-msgstr "Pokaż na stronie autora <a href=\"http://microformats.org/wiki/hcard\" target=\"_blank\">microsformatowany vCard</a> z awatarem, krótką notką i emailem."
-
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:25
+#: library/extensions/theme-options.php:52
 msgid "Text in Footer"
 msgstr "Tekst stopki."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:26
-msgid "You can use the following shortcodes in your footer text: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
-msgstr "Możesz używać następujących tagów w tekście stopki: [wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]"
+#: library/extensions/theme-options.php:56
+msgid "Remove Legacy Options"
+msgstr "Usuń Przedawnione Opcje"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:28
-msgid "Powered by [wp-link]. Built on the [theme-link]."
-msgstr "Oparte na [wp-link] i szablonie [theme-link]."
+#: library/extensions/theme-options.php:170
+msgid "Theme Options"
+msgstr "Opcje motywu"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:115
-msgid "settings saved."
-msgstr "ustawienia zapisane."
+#: library/extensions/theme-options.php:202
+msgid "For more information:"
+msgstr "Więcej informacji:"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:116
-msgid "settings reset."
-msgstr "reset ustawień."
+#: library/extensions/theme-options.php:204
+msgid "For support:"
+msgstr "Support:"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:117
-msgid "widgets reset."
-msgstr "reset widgetów."
+#: library/extensions/theme-options.php:206
+msgid "forums"
+msgstr "fora"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:286
-msgid "Save changes"
-msgstr "Zapisz zmiany"
+#: library/extensions/theme-options.php:210
+msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
+msgstr "Poniższe opcje są udostępniane przez framework Thematic Theme i motywy podrzędne"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:293
-msgid "Reset"
-msgstr "Reset"
+#: library/extensions/theme-options.php:211
+msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
+msgstr "Nowe opcje mogą zostać dodane, a standardowe usunięte poprzez utworzenie motywu podrzędnego. Ta pomoc kontekstowa może być również zmodyfikowana."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:300
-msgid "Reset Widgets"
-msgstr "Reset Widgetów"
+#: library/extensions/theme-options.php:217
+msgid "Overview"
+msgstr "Podgląd"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/theme-options.php:305
-msgid "For more information about this theme, <a href=\"http://themeshaper.com\">visit ThemeShaper</a>. Please visit the <a href=\"http://themeshaper.com/forums/\">ThemeShaper Forums</a> if you have any questions about Thematic."
-msgstr "Więcej informacji na temat tego szablonu na stronie, <a href=\"http://themeshaper.com\">ThemeShaper</a>. Odwiedź <a href=\"http://themeshaper.com/forums/\">Forum ThemeShaper</a> jeśli masz jakiekolwiek pytania do Thematic."
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
+msgstr "Więcej informacji pod adresem: %1$sThematicTheme.com%2$s"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:13
+#: library/extensions/theme-options.php:244
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
+msgstr "W przypadku pytań o Thematic, odwiedź fora %1$sThematicTheme.com%2$s."
+
+#: library/extensions/theme-options.php:267
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options"
+msgstr "Opcje Motywu %s"
+
+#: library/extensions/theme-options.php:305
+msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
+msgstr "Widget pojawi się po określonej liczbie postów. Wstawienie 0 lub pozostawienie pustego pola wyłączy ten widget."
+
+#: library/extensions/theme-options.php:318
+msgctxt "%1$s and %2$s are <a> tags"
+msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
+msgstr "Wyświetl %1$smicroformatowaną vCard%2$s z awatarem, bio i mailem na stronie autora."
+
+#: library/extensions/theme-options.php:331
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr "Możesz używać następujących tagów w tekście stopki: %s"
+
+#: library/extensions/theme-options.php:355
+msgctxt "{$current theme} Theme Options"
+msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
+msgstr "Opcje Motywu %s zostały zaktualizowane do nowego formatu. Usuń przestarzałe opcje z bazy danych."
+
+#: library/extensions/theme-options.php:382
+msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
+msgstr "Indeks pozycji musi być liczbą większą od zera. Ustawienie indeksu zostało przywrócone do poprzedniej wartości."
+
+#: library/extensions/widgets-extensions.php:34
 msgid "To search, type and hit enter"
 msgstr "Wpisz poszukiwaną frazę i wciśnij enter"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:19
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:37
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:42
+#: library/extensions/widgets-extensions.php:40
+#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
 msgid "Search"
 msgstr "Szukaj"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:42
+#: library/extensions/widgets-extensions.php:70
+msgid "Primary Aside"
+msgstr "Główny Obszar"
+
+#: library/extensions/widgets-extensions.php:72
 msgid "The primary widget area, most often used as a sidebar."
 msgstr "Główny obszar widgetów, najczęsciej wyświetlany w kolumnie bocznej."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:57
+#: library/extensions/widgets-extensions.php:85
+msgid "Secondary Aside"
+msgstr "Pomocniczy Obszar"
+
+#: library/extensions/widgets-extensions.php:87
 msgid "The secondary widget area, most often used as a sidebar."
 msgstr "Pomocniczy obszar widgetów, najczęsciej wyświetlany w kolumnie bocznej."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:72
+#: library/extensions/widgets-extensions.php:100
+msgid "1st Subsidiary Aside"
+msgstr "Pierwszy Obszar Podrzędny"
+
+#: library/extensions/widgets-extensions.php:102
 msgid "The 1st widget area in the footer."
 msgstr "Pierwszy obszar widgetów w stopce."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:87
+#: library/extensions/widgets-extensions.php:115
+msgid "2nd Subsidiary Aside"
+msgstr "Drugi Obszar Podrzędny"
+
+#: library/extensions/widgets-extensions.php:117
 msgid "The 2nd widget area in the footer."
 msgstr "Drugi obszar widgetów w stopce."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:102
+#: library/extensions/widgets-extensions.php:130
+msgid "3rd Subsidiary Aside"
+msgstr "Trzeci Obszar Podrzędny"
+
+#: library/extensions/widgets-extensions.php:132
 msgid "The 3rd widget area in the footer."
 msgstr "Trzeci obszar widgetów w stopce."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:117
+#: library/extensions/widgets-extensions.php:145
+msgid "Index Top"
+msgstr "Obszar Górny"
+
+#: library/extensions/widgets-extensions.php:147
 msgid "The top widget area displayed on the index page."
 msgstr "Obszar widgetów wyświetlany na górze strony głównej."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:132
+#: library/extensions/widgets-extensions.php:160
+msgid "Index Insert"
+msgstr "Obszar Indeksowany"
+
+#: library/extensions/widgets-extensions.php:162
 msgid "The widget area inserted after x posts on the index page."
 msgstr "Obszar widgetów wyświetlany po x postach na stronie głównej"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:147
+#: library/extensions/widgets-extensions.php:175
+msgid "Index Bottom"
+msgstr "Obszar Dolny"
+
+#: library/extensions/widgets-extensions.php:177
 msgid "The bottom widget area displayed on the index page."
 msgstr "Obszar widgetów wyświetlany na dole strony głównej."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:162
+#: library/extensions/widgets-extensions.php:190
+msgid "Single Top"
+msgstr "Obszar Górny Wpisu"
+
+#: library/extensions/widgets-extensions.php:192
 msgid "The top widget area displayed on a single post."
 msgstr "Obszar widgetów wyświetlany na górze strony z postem."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:177
-msgid "The widget area inserted between the post and the comments on a single post."
-msgstr "Obszar widgetów wyświetlany na stronie postu pomiędzy treścą a komentarzami."
+#: library/extensions/widgets-extensions.php:205
+msgid "Single Insert"
+msgstr "Obszar Nad Komentarzami Wpisu"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:192
+#: library/extensions/widgets-extensions.php:207
+msgid "The widget area inserted between the post and the comments on a single post."
+msgstr "Obszar widgetów wyświetlany na stronie postu pomiędzy treścią a komentarzami."
+
+#: library/extensions/widgets-extensions.php:220
+msgid "Single Bottom"
+msgstr "Obszar Dolny Wpisu"
+
+#: library/extensions/widgets-extensions.php:222
 msgid "The bottom widget area displayed on a single post."
 msgstr "Obszar widgetów wyświetlany na dole strony z postem."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:207
+#: library/extensions/widgets-extensions.php:235
+msgid "Page Top"
+msgstr "Obszar Górny Strony"
+
+#: library/extensions/widgets-extensions.php:237
 msgid "The top widget area displayed on a page."
 msgstr "Obszar widgetów wyświetlany na górze strony"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets-extensions.php:222
+#: library/extensions/widgets-extensions.php:250
+msgid "Page Bottom"
+msgstr "Obszar Dolny Strony"
+
+#: library/extensions/widgets-extensions.php:252
 msgid "The bottom widget area displayed on a page."
 msgstr "Obszar widgetów wyświetlany na dole strony."
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:36
+#: library/extensions/widgets.php:55
 msgid "A search form for your blog"
 msgstr "Formularz wyszukiwania dla twojego blogu"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:58
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:113
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:156
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:174
+#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
+#: library/extensions/widgets.php:175
 msgid "Title:"
 msgstr "Tytuł:"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:81
+#: library/extensions/widgets.php:100
 msgid "Log in/out and admin"
 msgstr "Zaloguj/wyloguj się z panel administracyjnego"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:82
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:87
+#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
 msgid "Meta"
 msgstr "Meta"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:126
+#: library/extensions/widgets.php:145
 msgid "Links to your posts and comments feed"
 msgstr "Linki do twoich postów i komentarzy"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:127
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:132
+#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
 msgid "RSS Links"
 msgstr "Linki RSS"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:138
+#: library/extensions/widgets.php:157
 msgid "All posts"
 msgstr "Wszystkie wpisy"
 
-#: c:\users\Chris\Desktop\thematic/library/extensions/widgets.php:139
+#: library/extensions/widgets.php:158
 msgid "All comments"
 msgstr "Wszystkie komentarze"
 
-#~ msgid "Pages"
-#~ msgstr "Strony"
+#: library/legacy/deprecated.php:357
+msgid "Logged in as"
+msgstr "Zalogowano jako"
 
-#~ msgid "Categories"
-#~ msgstr "Kategorie"
+#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
+msgid "<span class=\"required\">*</span>"
+msgstr "<span class=\"required\">*</span>"
 
-#~ msgid "RSS Feeds"
-#~ msgstr "Kanał RSS"
+#: page.php:50 template-page-fullwidth.php:51
+msgid "Pages: "
+msgstr "Strony: "
 
-#~ msgid ""
-#~ "Enter the HTML text that will appear in the bottom of your footer. Feel "
-#~ "free to remove or change any links. <strong>Hint:</strong> <a href="
-#~ "\"http://www.w3schools.com/HTML/html_links.asp\" target=\"_blank\">how to "
-#~ "write a link</a>."
-#~ msgstr ""
-#~ "Wpisz kod HTML tekstu, któy pojawi się na dole twojej stopki. Możesz "
-#~ "dowolnie modyfikować i zmieniać dowolne linki."
+#: search.php:56
+msgid "Nothing Found"
+msgstr "Nic nie znaleziono"
 
-#~ msgid "Blog Index"
-#~ msgstr "Blog Index"
+#: search.php:60
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Przykro nam, ale nie znaleziono nic pasującego do Twoich kryteriów wyszukiwania. Proszę spróbuj z innymi słowami kluczowymi."
 
-#~ msgid "Blog Buttons"
-#~ msgstr "Przyciski Bloga"
+#: template-page-blog.php:22
+msgid "You can include a %s in a childtheme"
+msgstr "Możesz użyć %s w motywie podrzędnym"
 
-#~ msgid "Site Meta"
-#~ msgstr "Meta Strony"
+msgid "Thematic"
+msgstr "Thematic"
+
+msgid "http://thematictheme.com"
+msgstr "http://thematictheme.com"
+
+msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
+msgstr "Ostatnie słowo w motywach SEO. Thematic jest rozszerzalnym frameworkiem posiadającym: 13 miejsc na widgety, rozwijalne menu, nowoczesne przykładowe layouty, integrację z pluginami, tagi dla stopki i dużo więcej możliwości. Idealny motyw dla każdego bloga jak również jako <strong><em>punkt startowy</em></strong> do budowania własnych motywów."
+
+msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+
+msgid "http://themeshaper.com/"
+msgstr "http://themeshaper.com/"
+
+msgid "Deprecated Archives Template"
+msgstr "Przestarzałe Archiwum Motywów"
+
+msgid "Links Page"
+msgstr "Strona z Linkami"
+
+msgid "Archives Page"
+msgstr "Archiwum"
+
+msgid "Deprecated Blog Template"
+msgstr "Przestarzały Motyw"
+
+msgid "Full Width"
+msgstr "Pełna Szerokość"
