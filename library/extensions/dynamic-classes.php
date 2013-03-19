@@ -441,39 +441,26 @@ if (function_exists('childtheme_override_post_class'))  {
 			}
 		}
 
-		$thematic_nextpaged = preg_match( '/<!--nextpage(.*?)-->/', $post->post_content );
-
-		if( $thematic_nextpaged )
-			$c[] = 'is-paged-excerpt';
-
-		$thematic_excerpt_more = preg_match( '/<!--more(.*?)-->/', $post->post_content ); 
-		
-		// For posts displayed as full content
-		if ( $thematic_content_length == 'full' && !has_excerpt() && !$thematic_excerpt_more && !$thematic_nextpaged )  
-			$c[] = 'is-full';
+		$thematic_excerpt_more = preg_match( '/<!--more(.*?)-->/', $post->post_content );
 
 		// For posts displayed as excerpts
-		if ( $thematic_excerpt_more  || $thematic_content_length == 'excerpt' || has_excerpt() ) {
+		if ( $thematic_content_length == 'excerpt' || ( !is_single() && $thematic_excerpt_more ) ) {
 			$c[] = 'is-excerpt';
 			if ( has_excerpt() ) {
 				// For wp-admin Write Page generated excerpts
 				$c[] = 'custom-excerpt';
 			} elseif ( $thematic_excerpt_more ) {
+				// For  more tag
 				$c[] = 'moretag-excerpt';
 			} else {
-				// For automatically generated excerpts
+				// For auto generated excerpts
 				$c[] = 'auto-excerpt';
 			}
+		// For posts displayed as full content
+		} elseif (  $thematic_content_length == 'full'  )  {
+				$c[] = 'is-full';
 		}
-		
-		// For single posts that had a wp-admin Write Page generated excerpt  
-		if ( has_excerpt() && is_single() )
-			$c[] = 'has-excerpt';
-			
-		//	For posts using more tag
-		if ( $thematic_excerpt_more && is_single() ) {
-				$c[] = 'has-moretag-excerpt';
-			}
+
 						
 		// For posts with comments open or closed
 		if ( comments_open() ) {
