@@ -17,22 +17,21 @@
  */
 
 
+/* The Following add_theme_support functions 
+ * will enable legacy Thematic Features
+ * if uncommented.
+ */
+ 
+// add_theme_support( 'thematic_legacy_feedlinks' );
+// add_theme_support( 'thematic_legacy_body_class' );
+// add_theme_support( 'thematic_legacy_post_class' );
+// add_theme_support( 'thematic_legacy_comment_form' );
+// add_theme_support( 'thematic_legacy_comment_handling' );
+
 /**
  * Define theme setup
  */
 function childtheme_setup() {
-	
-	/* The Following add_theme_support functions 
-	 * will enable legacy Thematic Features
-	 * if uncommented.
-	 */
-	 
-	// add_theme_support( 'thematic_legacy_feedlinks' );
-	// add_theme_support( 'thematic_legacy_body_class' );
-	// add_theme_support( 'thematic_legacy_post_class' );
-	// add_theme_support( 'thematic_legacy_comment_form' );
-	// add_theme_support( 'thematic_legacy_comment_handling' );
-	
 	
 	/*
 	 * Add support for custom background
