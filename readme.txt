@@ -1,9 +1,9 @@
 === Thematic ===
-Contributors: iandstewart, chrisgossmann, emhr
+Contributors: iandstewart, chrisgossmann, emhr, helgatheviking, middlesister
 Tags: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
-Requires at least: 3.2
-Tested up to: 3.4.2
-Stable tag: 1.0.3.2
+Requires at least: 3.4
+Tested up to: 3.6
+Stable tag: 1.0.4
 
 The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, &amp; a whole lot more.
 
@@ -28,6 +28,20 @@ Features:
 * Options for multi-author blogs
 
 == Changelog ==
+= 1.0.4 =
+* Removed: Backward compatibility for WP versions earlier than 3.4 specifically all calls to wp_get_theme() and get_theme_data()
+* Deprecated: thematic_legacy_help() & thematic_do_legacy_help_section()
+* Changed: SampleChildTheme's legacy add_theme_support() moved off of thematic_child_init hook
+* Fixed: legacy post classes for excerpt & full post classes
+* Removed: has-* excerpt classes & pagination classes from legacy post class
+* Updated: All current translations from translate.thematictheme.com
+* Added: readme.txt to /languages directory 
+* Added: Japanese locale
+* Updated: comments-extensions.php form element attributes to be HTML5 compatible props coliff
+* Fixed: thematic_content() undefined variable notice props scottnix
+* Removed: deprecated arg from wp_list_categories() props scottnix
+* Fixed: thematic_validate_opt() Typo in namespacing of function props josephting
+* Fixed: thematic_validate_opt() Passing validation variable to child theme override
 = 1.0.3.3-beta =
 * Fixed thematic_body_class() and thematic_post_class() to correctly filter body_class() and post_class()
 * Fixed nextpaged and excerpt classes in thematic_body_class() and thematic_post_class()
