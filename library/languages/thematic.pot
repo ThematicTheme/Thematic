@@ -1,14 +1,14 @@
-# Copyright (C) 2012 <a href="http://themeshaper.com/">Ian Stewart</a> &amp; <a href="http://thematic4you.com/">Chris Go&szlig;mann</a>
+# Copyright (C) 2013 <a href="http://themeshaper.com/">Ian Stewart</a> &amp; <a href="http://thematic4you.com/">Chris Go&szlig;mann</a>
 # This file is distributed under the GNU General Public License v2.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Thematic 1.0.3.3-beta\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/thematic\n"
-"POT-Creation-Date: 2012-12-10 13:09:54+00:00\n"
+"Project-Id-Version: Thematic 1.0.4\n"
+"Report-Msgid-Bugs-To: https://github.com/ThematicTheme/Thematic/issues?state=open\n"
+"POT-Creation-Date: 2013-04-02 21:19:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
@@ -181,23 +181,23 @@ msgid "Yearly Archives: %s"
 msgstr ""
 
 #: library/extensions/content-extensions.php:424
-#: library/extensions/content-extensions.php:1710
+#: library/extensions/content-extensions.php:1711
 msgid "Older posts"
 msgstr ""
 
 #: library/extensions/content-extensions.php:426
-#: library/extensions/content-extensions.php:1712
+#: library/extensions/content-extensions.php:1713
 msgid "Newer posts"
 msgstr ""
 
 #: library/extensions/content-extensions.php:888
-#: library/extensions/content-extensions.php:1422
+#: library/extensions/content-extensions.php:1423
 msgid "Edit post"
 msgstr ""
 
 #. translators: post edit link
 #: library/extensions/content-extensions.php:890
-#: library/extensions/content-extensions.php:1424
+#: library/extensions/content-extensions.php:1425
 #: library/extensions/discussion-extensions.php:37
 #: library/extensions/discussion.php:84 links.php:52 page.php:52
 #: template-page-archives.php:55 template-page-fullwidth.php:53
@@ -217,7 +217,7 @@ msgstr ""
 #: library/extensions/content-extensions.php:926
 #: library/extensions/content-extensions.php:1145
 #: library/extensions/content-extensions.php:1149
-#: library/extensions/content-extensions.php:1380
+#: library/extensions/content-extensions.php:1381
 msgid "Permalink to %s"
 msgstr ""
 
@@ -234,128 +234,128 @@ msgstr ""
 msgid "Published:"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1203
+#: library/extensions/content-extensions.php:1204
 msgid "Archives by Category"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1234
+#: library/extensions/content-extensions.php:1235
 msgid "Archives by Month"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1295
+#: library/extensions/content-extensions.php:1296
 msgid ""
 "Apologies, but we were unable to find what you were looking for. Perhaps "
 "searching will help."
 msgstr ""
 
-#: library/extensions/content-extensions.php:1301 search.php:70
+#: library/extensions/content-extensions.php:1302 search.php:70
 msgid "Find"
 msgstr ""
 
 #. translators: %s is right angle brackets
-#: library/extensions/content-extensions.php:1320
+#: library/extensions/content-extensions.php:1321
 msgid "Read More %s"
 msgstr ""
 
 #. translators: %s is custom post type singular name, wrapped in link tags
-#: library/extensions/content-extensions.php:1372
+#: library/extensions/content-extensions.php:1373
 msgid "Browse the %s archive."
 msgstr ""
 
 #. translators: %s is custom post type singular name
-#: library/extensions/content-extensions.php:1374
+#: library/extensions/content-extensions.php:1375
 msgid "Permalink to %s Archive"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1380
+#: library/extensions/content-extensions.php:1381
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Bookmark the %1$spermalink%2$s."
 msgstr ""
 
 #. translators: %s is postfooter categories
-#: library/extensions/content-extensions.php:1538
+#: library/extensions/content-extensions.php:1539
 msgid "This entry was posted in %s"
 msgstr ""
 
 #. translators: %s is postfooter categories
-#: library/extensions/content-extensions.php:1549
+#: library/extensions/content-extensions.php:1550
 msgid "Also posted in %s"
 msgstr ""
 
 #. translators: %s is postfooter categories
-#: library/extensions/content-extensions.php:1553
+#: library/extensions/content-extensions.php:1554
 msgid "Posted in %s"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1579
+#: library/extensions/content-extensions.php:1580
 msgid "This entry is tagged"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1582
+#: library/extensions/content-extensions.php:1583
 msgid "and tagged"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1585
+#: library/extensions/content-extensions.php:1586
 msgid "Also tagged"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1587
+#: library/extensions/content-extensions.php:1588
 msgid "Tagged"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1617
-#: library/extensions/content-extensions.php:1623
+#: library/extensions/content-extensions.php:1618
+#: library/extensions/content-extensions.php:1624
 msgid "Comment on %s"
 msgstr ""
 
 #. translators: number of comments and trackbacks
-#: library/extensions/content-extensions.php:1619
+#: library/extensions/content-extensions.php:1620
 msgid "%s Response"
 msgid_plural "%s Responses"
 msgstr[0] ""
 msgstr[1] ""
 
-#: library/extensions/content-extensions.php:1624
+#: library/extensions/content-extensions.php:1625
 msgid "Leave a comment"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1627
+#: library/extensions/content-extensions.php:1628
 msgid "Comments closed"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1651
+#: library/extensions/content-extensions.php:1652
 msgctxt ""
 "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback "
 "url."
 msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1652
-#: library/extensions/content-extensions.php:1667
+#: library/extensions/content-extensions.php:1653
+#: library/extensions/content-extensions.php:1668
 msgid "Post a comment"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1656
-#: library/extensions/content-extensions.php:1663
-msgid "Trackback URL for your post"
 msgstr ""
 
 #: library/extensions/content-extensions.php:1657
 #: library/extensions/content-extensions.php:1664
+msgid "Trackback URL for your post"
+msgstr ""
+
+#: library/extensions/content-extensions.php:1658
+#: library/extensions/content-extensions.php:1665
 msgid "Trackback URL"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1660
+#: library/extensions/content-extensions.php:1661
 msgctxt "%s is trackback url, wrapped in link tags"
 msgid "Comments are closed, but you can leave a trackback: %s"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1667
+#: library/extensions/content-extensions.php:1668
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
 msgstr ""
 
-#: library/extensions/content-extensions.php:1669
+#: library/extensions/content-extensions.php:1670
 msgid "Both comments and trackbacks are currently closed."
 msgstr ""
 
@@ -439,78 +439,66 @@ msgstr ""
 msgid "Theme Options"
 msgstr ""
 
-#: library/extensions/theme-options.php:202
+#: library/extensions/theme-options.php:201
 msgid "For more information:"
 msgstr ""
 
-#: library/extensions/theme-options.php:204
+#: library/extensions/theme-options.php:203
 msgid "For support:"
 msgstr ""
 
-#: library/extensions/theme-options.php:206
+#: library/extensions/theme-options.php:205
 msgid "forums"
 msgstr ""
 
-#: library/extensions/theme-options.php:210
+#: library/extensions/theme-options.php:209
 msgid ""
 "The options below are enabled by the Thematic Theme framework and/or a child "
 "theme."
 msgstr ""
 
-#: library/extensions/theme-options.php:211
+#: library/extensions/theme-options.php:210
 msgid ""
 "New options can be added and the default ones removed by creating a child "
 "theme. This contextual help can be customized in a child theme also."
 msgstr ""
 
-#: library/extensions/theme-options.php:217
+#: library/extensions/theme-options.php:214
 msgid "Overview"
 msgstr ""
 
-#: library/extensions/theme-options.php:244
-msgctxt "%1$s and %2$s are <a> tags"
-msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
-msgstr ""
-
-#: library/extensions/theme-options.php:244
-msgctxt "%1$s and %2$s are <a> tags"
-msgid ""
-"Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions "
-"about Thematic."
-msgstr ""
-
-#: library/extensions/theme-options.php:267
+#: library/extensions/theme-options.php:235
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options"
 msgstr ""
 
-#: library/extensions/theme-options.php:305
+#: library/extensions/theme-options.php:273
 msgid ""
 "The Index Insert widget area will appear after this post number. Entering "
 "nothing or 0 will disable this feature."
 msgstr ""
 
-#: library/extensions/theme-options.php:318
+#: library/extensions/theme-options.php:286
 msgctxt "%1$s and %2$s are <a> tags"
 msgid ""
 "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and "
 "email on the author page."
 msgstr ""
 
-#: library/extensions/theme-options.php:331
+#: library/extensions/theme-options.php:299
 msgctxt "%s are shortcode tags"
 msgid ""
 "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
 msgstr ""
 
-#: library/extensions/theme-options.php:355
+#: library/extensions/theme-options.php:318
 msgctxt "{$current theme} Theme Options"
 msgid ""
 "%s Theme Options have been upgraded to an improved format. Remove the legacy "
 "options from the database."
 msgstr ""
 
-#: library/extensions/theme-options.php:382
+#: library/extensions/theme-options.php:345
 msgid ""
 "The index insert position value must be a number equal to or greater than "
 "zero. This setting has been reverted to the previous value."
