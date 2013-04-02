@@ -188,7 +188,6 @@ add_action( 'admin_menu', 'thematic_opt_add_page' );
  * Override: childtheme_override_opt_page_help <br>
  * 
  * @since Thematic 1.0 
- * @todo remove conditional compatibilty  WP version > 3.3 and remove fallback to 3.2
  */
 if (function_exists('childtheme_override_opt_page_help')) {
 	function thematic_opt_page_help() {
@@ -212,43 +211,16 @@ if (function_exists('childtheme_override_opt_page_help')) {
 		
 		$help = apply_filters ( 'thematic_theme_opt_help_txt', $help );
 	
-        if ( method_exists( $screen, 'add_help_tab' ) ) {
-        	// WordPress 3.3
-			$screen->add_help_tab( array( 'title' => __( 'Overview', 'thematic' ), 'id' => 'theme-opt-help', 'content' => $help, ) );
-			$screen->set_help_sidebar( $sidebar );
+        $screen->add_help_tab( array( 'title' => __( 'Overview', 'thematic' ), 'id' => 'theme-opt-help', 'content' => $help, ) );
+		$screen->set_help_sidebar( $sidebar );
                         
-			} else {
-             	thematic_legacy_help();
-           	}
         }
-}
-
-/**
- * Adds a settings section to display legacy help text and theme links
- *
- * @since Thematic 1.0
- * @todo remove Legacy help when two point relases of WP have occurred after 3.3
- */
-function thematic_legacy_help() {
-        add_settings_section ('thematic_opt_help_section', '', 'thematic_do_legacy_help_section', 'thematic_opt_page');
-}
-
-
-/**
- * Renders the legacy help text and theme links
- * 
- * @since Thematic 1.0
- * @todo remove Legacy help when two point relases of WP have occurred after 3.3
- */
-function thematic_do_legacy_help_section() { 
-    echo '<p>'. sprintf ( _x( 'For more information about this theme, %1$svisit ThematicTheme.com%2$s', '%1$s and %2$s are <a> tags', 'thematic') , '<a href="http://thematictheme.com">', '</a>') . ' ' . sprintf ( _x( 'Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic.', '%1$s and %2$s are <a> tags', 'thematic'), '<a href="http://thematictheme.com/forums/">', '</a>' ) .'</p>' ;
 }
 
 /**
  * Renders the them options page
  *
  * @since Thematic 1.0
- * @todo: remove get_current_theme()
  */
 function thematic_do_opt_page() { ?>
 
@@ -256,12 +228,8 @@ function thematic_do_opt_page() { ?>
 	<?php screen_icon(); ?>
 
 	<?php 
-	if ( function_exists( 'wp_get_theme' ) ) {
-        $frameworkData = wp_get_theme();
-        $theme = $frameworkData->display( 'Name', false );
- 	} else {
- 		$theme = get_current_theme();
- 	} 
+		$frameworkData = wp_get_theme();
+    	$theme = $frameworkData->display( 'Name', false ); 
  	?>
 
 	<h2><?php printf( _x( '%s Theme Options', '{$current theme} Theme Options', 'thematic' ), $theme ); ?></h2>
@@ -337,19 +305,14 @@ function thematic_do_footer_opt() {
  * Renders Leagcy Options elements
  *
  * @since Thematic 1.0
- * @todo: remove get_current_theme()
  */
 function thematic_do_legacy_opt() {
 ?>
 	<input id="thm_legacy_opt" type="checkbox" value="1" name="thematic_theme_opt[del_legacy_opt]"  <?php checked( thematic_get_theme_opt('del_legacy_opt'), 1 ); ?> />
 
 	<?php 
-	if ( function_exists( 'wp_get_theme' ) ) {
         $frameworkData = wp_get_theme();
         $theme = $frameworkData->display( 'Name', false );
- 	} else {
- 		$theme = get_current_theme();
- 	} 
  	?>
 
 	<label for="thm_legacy_opt"><?php printf( _x( '%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database.', '{$current theme} Theme Options', 'thematic' ), $theme ); ?></label>

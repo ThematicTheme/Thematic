@@ -11,7 +11,6 @@
  * @package ThematicCoreLibrary
  * @subpackage Shortcodes
  *
- * @TODO: remove all references to deprecated function, get_theme_data()
  */
 
 
@@ -75,13 +74,8 @@ add_shortcode('the-year', 'thematic_shortcode_year');
  * Display the name of the parent theme.
  */
 function thematic_shortcode_theme_name() {
-    if ( function_exists( 'wp_get_theme' ) ) {
-        $frameworkData = wp_get_theme( 'thematic' );
-        return $frameworkData->display( 'Name', false );
-    } else { 
-        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
-        return $frameworkData['Title'];
-    }
+    $frameworkData = wp_get_theme( 'thematic' );
+    return $frameworkData->display( 'Name', false );
 }
 add_shortcode('theme-name', 'thematic_shortcode_theme_name');
 
@@ -90,13 +84,8 @@ add_shortcode('theme-name', 'thematic_shortcode_theme_name');
  * Display the name of the parent theme author.
  */
 function thematic_shortcode_theme_author() {
-    if ( function_exists( 'wp_get_theme' ) ) {
-        $frameworkData = wp_get_theme( 'thematic' );
-        return $frameworkData->display( 'Author', false );
-    } else { 
-        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
-        return $frameworkData['Author'];
-    }
+    $frameworkData = wp_get_theme( 'thematic' );
+    return $frameworkData->display( 'Author', false );
 }
 add_shortcode('theme-author', 'thematic_shortcode_theme_author');
 
@@ -105,13 +94,8 @@ add_shortcode('theme-author', 'thematic_shortcode_theme_author');
  * Display the URI of the parent theme.
  */
 function thematic_shortcode_theme_uri() {
-    if ( function_exists( 'wp_get_theme' ) ) {
-        $frameworkData = wp_get_theme( 'thematic' );
-        return $frameworkData->display( 'ThemeURI', false );
-    } else { 
-        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
-        return $frameworkData['URI'];
-    }
+    $frameworkData = wp_get_theme( 'thematic' );
+    return $frameworkData->display( 'ThemeURI', false );
 }
 add_shortcode('theme-uri', 'thematic_shortcode_theme_uri');
 
@@ -120,13 +104,8 @@ add_shortcode('theme-uri', 'thematic_shortcode_theme_uri');
  * Display the version no. of the parent theme.
  */
 function thematic_shortcode_theme_version() {
-    if ( function_exists( 'wp_get_theme' ) ) {
-        $frameworkData = wp_get_theme( 'thematic' );
-        return trim( $frameworkData->display('Version', false));
-    } else { 
-        $frameworkData = get_theme_data(  get_template_directory() . '/style.css' );
-        return trim( $frameworkData['Version'] );
-    }
+    $frameworkData = wp_get_theme( 'thematic' );
+    return trim( $frameworkData->display('Version', false));
 }
 add_shortcode('theme-version', 'thematic_shortcode_theme_version');
 
@@ -136,13 +115,8 @@ add_shortcode('theme-version', 'thematic_shortcode_theme_version');
  * Display the name of the child theme.
  */
 function thematic_shortcode_child_name() {
-    if ( function_exists( 'wp_get_theme' ) ) {
-        $frameworkData = wp_get_theme();
-        return $frameworkData->display( 'Name', false );
-    } else { 
-        $frameworkData = get_theme_data( get_stylesheet_directory() . '/style.css' );
-        return $frameworkData['Title'];
-    }
+    $frameworkData = wp_get_theme();
+    return $frameworkData->display( 'Name', false );
 }
 add_shortcode('child-name', 'thematic_shortcode_child_name');
 
@@ -151,13 +125,8 @@ add_shortcode('child-name', 'thematic_shortcode_child_name');
  * Display the name of the child theme author.
  */
 function thematic_shortcode_child_author() {
-    if ( function_exists( 'wp_get_theme' ) ) {
-        $frameworkData = wp_get_theme();
-        return $frameworkData->display( 'Author', false );
-    } else { 
-        $frameworkData = get_theme_data( get_stylesheet_directory() . '/style.css' );
-        return $frameworkData['Author'];
-    }
+    $frameworkData = wp_get_theme();
+    return $frameworkData->display( 'Author', false );
 }
 add_shortcode('child-author', 'thematic_shortcode_child_author');
 
@@ -166,13 +135,8 @@ add_shortcode('child-author', 'thematic_shortcode_child_author');
  * Display the URI of the child theme.
  */
 function thematic_shortcode_child_uri() {
-    if ( function_exists( 'wp_get_theme' ) ) {
-        $frameworkData = wp_get_theme();
-        return $frameworkData->display( 'ThemeURI', false );
-    } else { 
-        $frameworkData = get_theme_data( get_stylesheet_directory() . '/style.css' );
-        return $frameworkData['URI'];
-    }
+    $frameworkData = wp_get_theme();
+    return $frameworkData->display( 'ThemeURI', false );
 }
 add_shortcode('child-uri', 'thematic_shortcode_child_uri');
 
@@ -182,12 +146,7 @@ add_shortcode('child-uri', 'thematic_shortcode_child_uri');
  * 
  */
 function thematic_shortcode_child_version() {
-    if ( function_exists( 'wp_get_theme' ) ) {
-        $frameworkData = wp_get_theme();
-        return trim( $frameworkData->display('Version', false));
-    } else { 
-        $frameworkData = get_theme_data( get_stylesheet_directory() . '/style.css' );
-        return trim( $frameworkData['Version'] );
-    }
+    $frameworkData = wp_get_theme();
+    return trim( $frameworkData->display('Version', false));
 }
 add_shortcode('child-version', 'thematic_shortcode_child_version');
