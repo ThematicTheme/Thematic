@@ -9,40 +9,35 @@
  * @subpackage Templates
  */
  
-	// Create doctype
-	thematic_create_doctype();
-	echo " ";
-	language_attributes();
-	echo ">\n";
+	// Creates the doctype 
+	thematic_doctype();
+
+	// Opens the html tag with attributes
+	thematic_html();
 	
-	// Opens the head tag 
+	// Opens the head 
 	thematic_head_profile();
 	
-	// Create the meta content type
-	thematic_create_contenttype();
+	// Create the meta charset
+	thematic_meta_charset();
+	
+	// Create the meta viewport if theme supports it
+	if( current_theme_supports( 'thematic_meta_viewport' ) ) 
+		thematic_meta_viewport();
 	
 	// Create the title tag 
 	thematic_doctitle();
 	
 	// Create the meta description
-	thematic_show_description();
+	thematic_meta_description();
 	
 	// Create the tag <meta name="robots"  
-	thematic_show_robots();
-	
-	// Legacy feedlink handling
-	if ( current_theme_supports( 'thematic_legacy_feedlinks' ) ) {    
-		// Creating the internal RSS links
-		thematic_show_rss();
-	
-		// Create comments RSS links
-		thematic_show_commentsrss();
-	}
+	thematic_meta_robots();
 	
 	// Create pingback adress
 	thematic_show_pingback();
 	
-	/* The function wp_head() loads Thematic's stylesheet and scripts.
+	/* Loads Thematic's stylesheet and scripts
 	 * Calling wp_head() is required to provide plugins and child themes
 	 * the ability to insert markup within the <head> tag.
 	 */
@@ -52,7 +47,7 @@
 
 <?php 
 	// Create the body element and dynamic body classes
-	thematic_body();
+	thematic_body(); 
 
 	// Action hook to place content before opening #wrapper
 	thematic_before(); 

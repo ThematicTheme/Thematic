@@ -28,6 +28,21 @@ Features:
 * Options for multi-author blogs
 
 == Changelog ==
+= 1.1-beta =
+Deprecated: thematic_create_doctype
+Added: thematic_doctype
+Added: childtheme_override_doctype
+Deprecated: thematic_create_html
+Added: Deprecated: thematic_html
+Added: childtheme_override_html
+Deprecated: thematic_show_description
+Deprecated: thematic_create_description
+Added: thematic_meta_description
+Deprecated: thematic_show_robots
+Deprecated: thematic_create_robots
+Added: thematic_meta_robots
+Changed: thematic_create_stylesheet() to append the active theme's version as query string
+Changed: thematic_create_stylesheet() comment block to note how childthemes can change this behavior
 = 1.0.4 =
 * Removed: Backward compatibility for WP versions earlier than 3.4 specifically all calls to wp_get_theme() and get_theme_data()
 * Deprecated: thematic_legacy_help() & thematic_do_legacy_help_section()

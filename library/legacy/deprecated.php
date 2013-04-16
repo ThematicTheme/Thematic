@@ -441,4 +441,45 @@ function thematic_do_legacy_help_section() {
 }
 
 
+/**
+ * Switch for displaying the meta-tag description
+ * Removed after thematic_show_description switch was merged with thematic_create_description into thematic_meta_description
+ * 
+ * Filter: thematic_show_description
+ */
+function thematic_show_description() {
+	_deprecated_function( __FUNCTION__, '1.1', 'thematic_meta_description' );
+	thematic_create_description();
+} // end thematic_show_description
+
+
+/**
+ * Switch for creating the meta-tag description
+ * Removed after thematic_show_description switch was merged with thematic_create_description into thematic_meta_description
+ */
+function thematic_create_description() {
+	_deprecated_function( __FUNCTION__, '1.1', 'thematic_meta_description' );
+	thematic_meta_description();
+} // end thematic_show_description
+
+/**
+ * Switch creating the robots meta-tag
+ * 
+ * Removed after thematic_show_robots switch was merged with thematic_create_robots into thematic_meta_robots
+ */
+function thematic_show_robots() {
+	_deprecated_function( __FUNCTION__, '1.1', 'thematic_meta_robots' );
+	thematic_create_robots();
+} // end thematic_show_robots
+
+
+/**
+ * Created the robots meta-tag
+ * 
+ * Removed after thematic_show_robots switch was merged with thematic_create_robots into thematic_meta_robots
+ */
+function thematic_create_robots() {
+	thematic_meta_robots();
+} // end thematic_create_robots
+
 ?>
