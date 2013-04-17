@@ -28,13 +28,17 @@ Features:
 * Options for multi-author blogs
 
 == Changelog ==
-= 1.1-beta =
+= 1.1-alpha =
+Added: current_theme_supports checks for 'thematic_legacy' for restoring the legacy xhtml doctype
 Deprecated: thematic_create_doctype
 Added: thematic_doctype
 Added: childtheme_override_doctype
 Deprecated: thematic_create_html
 Added: Deprecated: thematic_html
 Added: childtheme_override_html
+Deprecated: thematic_create_head
+Added: Deprecated: thematic_head
+Added: childtheme_override_head
 Deprecated: thematic_show_description
 Deprecated: thematic_create_description
 Added: thematic_meta_description

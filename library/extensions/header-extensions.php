@@ -22,9 +22,9 @@ if ( function_exists( 'childtheme_override_doctype' ) )  {
 	 * Override: childtheme_doctype
 	 */
 	function thematic_doctype() {
-	?>
-	<!DOCTYPE html>
-	<?php
+?>
+<!DOCTYPE html>
+<?php
 	}
 
 }
@@ -39,31 +39,41 @@ if ( function_exists( 'childtheme_override_html' ) )  {
     }
 } else {
 	/**
-	 * Display the html tag and attributes
-	 * 
-	 * Override: childtheme_html
-	 * Filter: thematic_html_class for including a class attribute string
-	 */
-	 function thematic_html( $class_att = FALSE ) {
-	 	$html_class = apply_filters( 'thematic_html_class' , $class_att );
-	 	?>
-	<!--[if lt IE 7]><html class="<?php if ( $html_class ) echo( $html_class . ' ' ) ?>lt-ie9 lt-ie8 lt-ie7" <?php language_attributes() ?>> <![endif]-->
-	<!--[if IE 7]><html class="<?php 	if ( $html_class ) echo( $html_class . ' ' ) ?>ie7 lt-ie9 lt-ie8" ' <?php language_attributes() ?>> <![endif]-->
-	<!--[if IE 8]><html class="<?php 	if ( $html_class ) echo( $html_class . ' ' ) ?>ie8 lt-ie9" <?php language_attributes() ?>> <![endif]-->
-	<!--[if gt IE 8]><!--><html <?php 	if ( $html_class ) echo $html_class ?><?php language_attributes() ?>> <!--<![endif]-->
-		<?php
+	* Display the html tag and attributes
+	* Override: childtheme_html
+	* Filter: thematic_html_class for including a class attribute string
+	*/
+	function thematic_html( $class_att = FALSE ) {
+		$html_class = apply_filters( 'thematic_html_class' , $class_att );
+?>
+<!--[if lt IE 7]><html class="<?php if ( $html_class ) echo( $html_class . ' ' ) ?>lt-ie9 lt-ie8 lt-ie7" <?php language_attributes() ?>><![endif]-->
+<!--[if IE 7]><html class="<?php 	if ( $html_class ) echo( $html_class . ' ' ) ?>ie7 lt-ie9 lt-ie8" ' <?php language_attributes() ?>><![endif]-->
+<!--[if IE 8]><html class="<?php 	if ( $html_class ) echo( $html_class . ' ' ) ?>ie8 lt-ie9" <?php language_attributes() ?>><![endif]-->
+<!--[if gt IE 8]><!--><html <?php 	if ( $html_class ) echo $html_class ?><?php language_attributes() ?>><!--<![endif]-->
+
+<?php
 	}
 }
 
 
-/**
- * Display the HEAD profile
- * 
- * Filter: thematic_head_profile
- */
-function thematic_head_profile() {
-    $content = '<head profile="http://gmpg.org/xfn/11">' . "\n";
-    echo apply_filters( 'thematic_head_profile', $content );
+if ( function_exists( 'childtheme_override_head' ) )  {
+	/**
+     * @ignore
+     */
+    function thematic_head() {
+    	childtheme_override_head();
+    }
+} else {
+	/**
+	 * Display the HEAD 
+ 	 * 
+ 	 */
+	function thematic_head() {
+?>
+<head>
+
+<?php
+	}
 }
 
 
@@ -72,7 +82,7 @@ if ( function_exists( 'childtheme_override_meta_charset' ) ) {
 	 * @ignore
 	 */
 	 function thematic_meta_charset() {
-		childtheme_override_meta_meta();
+		childtheme_override_meta_charset();
 	 }
 } else {
 	/**
@@ -81,10 +91,24 @@ if ( function_exists( 'childtheme_override_meta_charset' ) ) {
 	 * Override: childtheme_override_meta_charset
 	 */
 	function thematic_meta_charset() {
-	?>
-	<meta charset="<?php get_bloginfo( 'charset' ) ?>"/>
-	<?php
+?>
+<meta charset="<?php echo ( get_bloginfo( 'charset' ) ) ?>" />
+<?php
 	}
+}
+
+
+/**
+ * Display the meta viewport
+ *
+ * Filter: thematic_meta_viewport_content
+ *
+ */
+function thematic_meta_viewport() {
+	$viewport_content = apply_filters( 'thematic_meta_viewport_content', 'width=device-width' ); 
+?>
+<meta name="viewport" content="<?php echo $viewport_content ?>"/>
+<?php
 }
 
 
@@ -243,18 +267,6 @@ function thematic_use_autoexcerpt() {
     return $display;
 }
 
-
-/**
-* Display the meta viewport
-*
-* Filter: thematic_meta_viewport_content
-*/
-function thematic_meta_viewport() {
-	$viewport_content = apply_filters( 'thematic_meta_viewport_content', 'width=device-width' ); 
-	?>
-	<meta name="viewport" content="<?php echo $viewport_content ?>"/>
-	<?php
-}
 	
 /**
  * Display the meta-tag description
@@ -314,7 +326,7 @@ function thematic_meta_description() {
  */
 function thematic_meta_robots() {
 	global $paged;
-	if ( thematic_seo() && et_option( 'blog_public' ) ) {
+	if ( thematic_seo() && get_option( 'blog_public' ) ) {
 		$display = apply_filters( 'thematic_show_robots', $display = TRUE );
 		if ( $display ) {
     		if ( ( is_home() && ( $paged < 2 ) ) || is_front_page() || is_single() || is_page() || is_attachment() ) {

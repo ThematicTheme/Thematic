@@ -50,12 +50,15 @@ if (function_exists('childtheme_override_opt_init')) {
 		add_settings_field ('thematic_insert_opt', __('Index Insert Position', 'thematic')	, 'thematic_do_insert_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 		add_settings_field ('thematic_auth_opt',   __('Info on Author Page'	, 'thematic')	, 'thematic_do_auth_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 		add_settings_field ('thematic_footer_opt', __('Text in Footer'	, 'thematic')		, 'thematic_do_footer_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
-		
+
+		// show check box option for restoring legacy xtml1.0 doctype and compatible markup
+		add_settings_field ('thematic_legacy_xhtml_opt', __('Restore Legacy XHTML1.0 Doctype'	, 'thematic'), 'thematic_do_legacy_xhtml_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+
 		// Show checkbox option for removing old options from database
 		if ( isset( $legacy_options ) && false !== $legacy_options ) {
 			add_settings_field ('thematic_legacy_opt', __('Remove Legacy Options'	, 'thematic'), 'thematic_do_legacy_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 		} 
-	
+
 	}
 }
 
@@ -147,7 +150,8 @@ function thematic_default_opt() {
 		'index_insert' 	=> 2,
 		'author_info'  	=> 0, // 0 = not checked 1 = checked
 		'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
-		'del_legacy_opt'=> 0  // 0 = not checked 1 = check
+		'del_legacy_opt'=> 0, // 0 = not checked 1 = check
+		'legacy_xhtml'	=> 0  // 0 = not checked 1 = check
 	);
 
 	return apply_filters( 'thematic_theme_default_opt', $thematic_default_opt );
@@ -218,7 +222,7 @@ if (function_exists('childtheme_override_opt_page_help')) {
 }
 
 /**
- * Renders the them options page
+ * Renders the theme options page
  *
  * @since Thematic 1.0
  */
@@ -250,7 +254,7 @@ function thematic_do_opt_page() { ?>
 
 
 /**
- * Renders the "Main" settings section. This is left blank in Theamatic and outputs nothing
+ * Renders the "Main" settings section. This is left blank in Thematic and outputs nothing
  *
  * Filter: thematic_theme_opt_section_main
  *
@@ -300,9 +304,21 @@ function thematic_do_footer_opt() {
 <?php
 }
 
+/**
+ * Renders Leagcy XTML1.0 mode checkbox
+ *
+ * @since Thematic 1.1
+ */
+ function thematic_do_legacy_xhtml_opt() {
+?>
+	<input id="thm_legacy_xhtml" type="checkbox" value="1" name="thematic_theme_opt[legacy_xhtml]"  <?php checked( thematic_get_theme_opt('legacy_xhtml'), 1 ); ?> />
+
+	<label for="thm_legacy_xhtml"><?php printf( __( 'Restore the legacy XHTML Doctype and xhtml compatible markup.', 'thematic' ) ) ?></label>
+<?php
+}
 
 /**
- * Renders Leagcy Options elements
+ * Renders Legacy Options elements
  *
  * @since Thematic 1.0
  */
@@ -314,8 +330,9 @@ function thematic_do_legacy_opt() {
         $frameworkData = wp_get_theme();
         $theme = $frameworkData->display( 'Name', false );
  	?>
+ 	
+	<label for="thm_legacy_opt"><?php printf( __( '%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database.', '{$current theme} Theme Options', 'thematic' ), $theme ); ?></label>
 
-	<label for="thm_legacy_opt"><?php printf( _x( '%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database.', '{$current theme} Theme Options', 'thematic' ), $theme ); ?></label>
 <?php
 }
 
@@ -358,6 +375,11 @@ if (function_exists('childtheme_override_validate_opt')) {
  	   // Footer Text sanitized allowing HTML and WP shortcodes
  	   if ( isset( $input['footer_txt'] ) ) {
  	   	$output['footer_txt'] = wp_kses_post( $input['footer_txt'] ) ;	
+ 	   }
+ 	   
+ 	   // Remove Legacy XHTML CheckBox value either 1(yes) or 0(no)
+ 	   if ( isset( $input['legacy_xhtml'] )) {
+ 	   	$output['legacy_xhtml'] = ( $input['legacy_xhtml'] == 0 ? 0 : 1 );
  	   }
  	   
  	   // Remove Legacy Options CheckBox value either 1(yes) or 0(no)

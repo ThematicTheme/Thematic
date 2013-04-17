@@ -16,7 +16,7 @@
 	thematic_html();
 	
 	// Opens the head 
-	thematic_head_profile();
+	thematic_head();
 	
 	// Create the meta charset
 	thematic_meta_charset();
@@ -43,6 +43,7 @@
 	 */
 	wp_head();
 ?>
+
 </head>
 
 <?php 

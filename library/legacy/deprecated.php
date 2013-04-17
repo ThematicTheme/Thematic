@@ -442,6 +442,44 @@ function thematic_do_legacy_help_section() {
 
 
 /**
+ * Displays the HEAD profile
+ * 
+ * Filter: thematic_head_profile
+ */
+function thematic_head_profile() {
+	if ( !current_theme_supports( 'thematic_legacy_quiet' ) )
+		_deprecated_function( __FUNCTION__, '1.1', 'childtheme_override_head' );
+    $content = "\n" . '<head profile="http://gmpg.org/xfn/11">' . "\n";
+    echo apply_filters( 'thematic_head_profile', $content );
+}
+
+
+/**
+ * Displays the xhtml1.0 DOCTYPE
+ * 
+ * Filter: thematic_create_doctype
+ */
+function thematic_create_doctype() {
+	if ( !current_theme_supports( 'thematic_legacy_quiet' ) )
+		_deprecated_function( __FUNCTION__, '1.1', 'childtheme_override_doctype' );
+   
+   	$content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
+    $content .= '<html xmlns="http://www.w3.org/1999/xhtml"';
+    echo apply_filters( 'thematic_create_doctype', $content );
+}
+
+
+// Display the meta content type
+function thematic_create_contenttype() {
+	if ( !current_theme_supports( 'thematic_legacy_quiet' ) )
+		_deprecated_function( __FUNCTION__, '1.1', 'childtheme_override_meta_charset' );
+    
+    $content = '<meta http-equiv="Content-Type" content="' . get_bloginfo('html_type') . '" charset="' . get_bloginfo('charset') . '" />' . "\n";
+    echo apply_filters('thematic_create_contenttype', $content);
+}
+
+
+/**
  * Switch for displaying the meta-tag description
  * Removed after thematic_show_description switch was merged with thematic_create_description into thematic_meta_description
  * 
@@ -479,6 +517,7 @@ function thematic_show_robots() {
  * Removed after thematic_show_robots switch was merged with thematic_create_robots into thematic_meta_robots
  */
 function thematic_create_robots() {
+	_deprecated_function( __FUNCTION__, '1.1', 'thematic_meta_robots' );
 	thematic_meta_robots();
 } // end thematic_create_robots
 

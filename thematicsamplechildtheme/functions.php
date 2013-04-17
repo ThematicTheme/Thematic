@@ -90,70 +90,63 @@ add_action('thematic_child_init', 'childtheme_setup');
  * @link http://codex.wordpress.org/Function_Reference/get_header_textcolor get_header_textcolor()
  */
 function childtheme_header_style() {
-	?>	
-	<style type="text/css">
-	<?php
+?>	
+<style type="text/css">
+<?php
 	/* Declares the header image from the settings
 	 * saved in WP-Admin > Appearance > Header
 	 * as the background-image for div#branding.
-	 */
-	if ( get_header_image() && HEADER_IMAGE != get_header_image() ) {
-		?>
-		#branding {
-			background:url('<?php header_image(); ?>') no-repeat 0 100%;
-			margin-bottom:28px;
-    		padding:44px 0 <?php echo HEADER_IMAGE_HEIGHT; ?>px 0; /* Bottom padding is the same height as the image */
-    		overflow: visible;
+ 	*/
+	if ( get_header_image() && HEADER_IMAGE != get_header_image() ) :
+?>
+#branding {
+	background:url('<?php header_image(); ?>') no-repeat 0 100%;
+	margin-bottom:28px;
+    padding:44px 0 <?php echo HEADER_IMAGE_HEIGHT; ?>px 0; /* Bottom padding is the same height as the image */
+    overflow: visible;
 }
-		}
-		<?php if ( 'blank' != get_header_textcolor() ) { ?>
-		#blog-title, #blog-title a {
-			color:#000;
-		}
-		#blog-description {	
-			padding-bottom: 22px;
-		}
-		<?php
-		}
-		
-	}
-	?>
-	<?php
-	/* This delcares text color for the Blog title and Description
-	 * from the settings saved in WP-Admin > Appearance > Header\
-	 * If not set the deafault color is set to #000 
-	 */
-	if ( get_header_textcolor() ) {
-		?>
-		#blog-title, #blog-title a, #blog-description {
-			color:#<?php header_textcolor(); ?>;
-		}
-		<?php
-	}
-	/* Removes header text if the
-	 * "Do not diplay header text…" setting is saved
-	 * in WP-Admin > Appearance > Header
-	 */
-	if ( ! display_header_text() ) {
-		?>
-		#branding {
-			background-position: center bottom;
-			background-repeat: no-repeat;
-			margin-top: 32px;
-		}
-		#blog-title, #blog-title a, #blog-description {
-			display:none;
-		}
-		#branding { 
-			height:<?php echo HEADER_IMAGE_HEIGHT; ?>px; 
-			width:940px;
-			padding:0; 
-		}
-		<?php
-	}
-	?>
-	</style>
-	<?php
+<?php if ( 'blank' != get_header_textcolor() ) : ?>
+#blog-title, #blog-title a {
+    color:#000;
+}
+#blog-description {	
+	padding-bottom: 22px;
+}
+<?php endif ?>
+<?php endif; ?>
+<?php 	/** This delcares text color for the Blog title and Description
+		 * from the settings saved in WP-Admin > Appearance > Header\
+		 * If not set the deafault color is set to #000 
+		 */
+		if ( get_header_textcolor() ) :
+?>
+#blog-title, #blog-title a, #blog-description {
+	color:#<?php header_textcolor(); ?>;
+}
+<?php endif ?>
+<?php
+		/* Removes header text if the
+		 * "Do not diplay header text…" setting is saved
+		 * in WP-Admin > Appearance > Header
+		 */
+		if ( ! display_header_text() ) :
+?>
+#branding {
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	margin-top: 32px;
+}
+#blog-title, #blog-title a, #blog-description {
+	display:none;
+}
+#branding { 
+	height:<?php echo HEADER_IMAGE_HEIGHT; ?>px; 
+	width:940px;
+	padding:0; 
+}
+<?php endif ?>
+</style>
+<?php
 }
 
 
@@ -168,33 +161,33 @@ function childtheme_header_style() {
  * that this child theme is currently designed to display.
  */
 function childtheme_admin_header_style() {
-	?>
-	<style type="text/css">
-	#headimg {
-		background-position: left bottom; 
-		background-repeat:no-repeat;
-		border:0 !important;   
-		height:auto !important;
-		padding:0 0 <?php echo HEADER_IMAGE_HEIGHT + 22; /* change the added integer (22) to match your desired top padding */?>px 0;
-		margin:0 0 28px 0;
-	}
-	
-	#headimg h1 {
-	    font-family:Arial,sans-serif;
-	    font-size:34px;
-	    font-weight:bold;
-	    line-height:40px;
-		margin:0;
-	}
-	#headimg a {
-		color: #000;
-		text-decoration: none;
-	}
-	#desc{
-		font-family: Georgia;
-    	font-size: 13px;
-    	font-style: italic;
-    }
-	</style>
-	<?php
+?>
+<style type="text/css">
+#headimg {
+    background-position: left bottom; 
+    background-repeat:no-repeat;
+    border:0 !important;   
+    height:auto !important;
+    padding:0 0 <?php echo HEADER_IMAGE_HEIGHT + 22; /* change the added integer (22) to match your desired top padding */?>px 0;
+    margin:0 0 28px 0;
+}
+
+#headimg h1 {
+    font-family:Arial,sans-serif;
+    font-size:34px;
+    font-weight:bold;
+    line-height:40px;
+    margin:0;
+}
+#headimg a {
+    color: #000;
+    text-decoration: none;
+}
+#desc{
+    font-family: Georgia;
+	font-size: 13px;
+	font-style: italic;
+}
+</style>
+<?php
 }

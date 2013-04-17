@@ -18,7 +18,7 @@
  * Display link to WP.org.
  */
 function thematic_shortcode_wp_link() {
-    return '<a class="wp-link" href="http://WordPress.org/" title="WordPress" rel="generator">WordPress</a>';
+    return '<a class="wp-link" href="http://WordPress.org/" title="WordPress">WordPress</a>';
 }
 add_shortcode('wp-link', 'thematic_shortcode_wp_link');		  
 

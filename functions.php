@@ -100,6 +100,10 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		
 		// Load legacy functions
 		require_once ( THEMATIC_LIB . '/legacy/deprecated.php' );
+		
+		// Restore legacy functionality
+		if ( current_theme_supports ( 'thematic_legacy' ) )
+			require_once ( THEMATIC_LIB . '/legacy/legacy.php' );
 
 		// Load widgets
 		require_once ( THEMATIC_LIB . '/extensions/widgets.php' );
