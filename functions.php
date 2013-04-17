@@ -90,8 +90,8 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		if ( apply_filters( 'thematic_post_thumbs', true ) )
 			add_theme_support( 'post-thumbnails' );
  
-		add_theme_support( 'thematic_superfish' );
-
+		add_theme_support( 'thematic_superfish' );		
+		
 		// Path constants
 		define( 'THEMATIC_LIB',  get_template_directory() .  '/library' );
 
@@ -101,10 +101,11 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		// Load legacy functions
 		require_once ( THEMATIC_LIB . '/legacy/deprecated.php' );
 		
-		// Restore legacy functionality
-		if ( current_theme_supports ( 'thematic_legacy' ) )
+		if ( !is_admin() && thematic_get_theme_opt( 'legacy_xhtml' ) == 1 ) {
+			add_theme_support( 'thematic_legacy' );
 			require_once ( THEMATIC_LIB . '/legacy/legacy.php' );
-
+		}
+		
 		// Load widgets
 		require_once ( THEMATIC_LIB . '/extensions/widgets.php' );
 

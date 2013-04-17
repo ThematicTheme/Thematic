@@ -30,24 +30,24 @@ if ( !function_exists( 'childtheme_override_doctype' ) || !function_exists( 'chi
 
 // Restore head profile
 // Check for new overrides before restoring leagcy functionality
-if ( !function_exists( 'childtheme_override_head' ) {
+if ( !function_exists( 'childtheme_override_head' ) ) {
 	/**
 	* @ignore
 	*/
 	function childtheme_override_head() {
-		thematic_head_profile()
+		thematic_head_profile();
 	}
 }
 
 
 // Restore meta content type / charset
 // Check for new overrides before restoring leagcy functionality
-if ( !function_exists( 'childtheme_override_meta_charset' ) {
+if ( !function_exists( 'childtheme_override_meta_charset' ) ) {
 	/**
 	* @ignore
 	*/
 	function childtheme_override_meta_charset() {
-		thematic_create_contenttype()
+		thematic_create_contenttype();
 	}
 }
 
