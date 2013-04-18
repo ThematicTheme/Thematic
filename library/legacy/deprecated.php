@@ -474,7 +474,7 @@ function thematic_create_contenttype() {
 	if ( !current_theme_supports( 'thematic_legacy_quiet' ) )
 		_deprecated_function( __FUNCTION__, '1.1', 'childtheme_override_meta_charset' );
     
-    $content = '<meta http-equiv="Content-Type" content="' . get_bloginfo('html_type') . '; charset="' . get_bloginfo('charset') . '" />' . "\n";
+    $content = '<meta http-equiv="Content-Type" content="' . get_bloginfo('html_type') . '; charset=' . get_bloginfo('charset') . '" />' . "\n";
     echo apply_filters('thematic_create_contenttype', $content);
 }
 
