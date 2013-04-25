@@ -351,53 +351,47 @@ if (function_exists('childtheme_override_validate_opt')) {
 		childtheme_override_validate_opt($input);
 	}
 } else {
- 	function thematic_validate_opt($input){
- 	   $output = thematic_get_wp_opt( 'thematic_theme_opt', thematic_default_opt() );	
+	function thematic_validate_opt($input){
+		$output = thematic_get_wp_opt( 'thematic_theme_opt', thematic_default_opt() );	
  	   
- 	   // Index Insert position must be a non-negative number
- 	   if ( !is_numeric( $input['index_insert'] ) || $input['index_insert'] < 0 )  {
+		// Index Insert position must be a non-negative number
+		if ( !is_numeric( $input['index_insert'] ) || $input['index_insert'] < 0 )  {
  	   		add_settings_error(
  	   			'thematic_theme_opt',
  	   			'thematic_insert_opt',
  	   			__('The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value.', 'thematic' ),
  	   			'error'
  	   		);
- 	   } else {
- 	   	// A sanitize numeric value to ensure a whole number
- 	   	$output['index_insert'] = intval( $input['index_insert'] );
- 	   }
+		} else {
+			// A sanitize numeric value to ensure a whole number
+			$output['index_insert'] = intval( $input['index_insert'] );
+		}
  	   
- 	   // Author Info CheckBox value either 1(yes) or 0(no)
- 	   if ( isset( $input['author_info'] ) ) {
- 	   	$output['author_info'] =  ( $input['author_info'] == 0 ? 0 : 1 );
- 	   }
+		// Author Info CheckBox value either 1(yes) or 0(no)
+		$output['author_info'] = ( isset( $input['author_info'] ) ?  1 : 0 );
  	 
- 	   // Footer Text sanitized allowing HTML and WP shortcodes
- 	   if ( isset( $input['footer_txt'] ) ) {
- 	   	$output['footer_txt'] = wp_kses_post( $input['footer_txt'] ) ;	
- 	   }
+		// Footer Text sanitized allowing HTML and WP shortcodes
+		if ( isset( $input['footer_txt'] ) ) 
+			$output['footer_txt'] = wp_kses_post( $input['footer_txt'] ) ;	
  	   
- 	   // Remove Legacy XHTML CheckBox value either 1(yes) or 0(no)
- 	   if ( isset( $input['legacy_xhtml'] )) {
- 	   	$output['legacy_xhtml'] = ( $input['legacy_xhtml'] == 0 ? 0 : 1 );
- 	   }
+		// Remove Legacy XHTML CheckBox value either 1(yes) or 0(no)
+		$output['legacy_xhtml'] = ( isset( $input['legacy_xhtml'] ) ?  1 : 0 );
  	   
- 	   // Remove Legacy Options CheckBox value either 1(yes) or 0(no)
- 	   if ( isset( $input['del_legacy_opt'] ) ) {
- 	   	$output['del_legacy_opt'] = ( $input['del_legacy_opt'] == 0 ? 0 : 1 );
- 	   }
+		// Remove Legacy Options CheckBox value either 1(yes) or 0(no)
+		$output['del_legacy_opt'] = ( isset( $input['del_legacy_opt'] ) ?  1 : 0 );
+
  	   
- 	   if ( 1 == $output['del_legacy_opt'] ) {
+		if ( 1 == $output['del_legacy_opt'] ) {
  	   	
- 	   	// Remove options if the choice is yes
- 	   	delete_option('thm_insert_position');
- 	   	delete_option('thm_authorinfo');
- 	   	delete_option('thm_footertext');
+			// Remove options if the choice is yes
+ 	   		delete_option('thm_insert_position');
+ 	   		delete_option('thm_authorinfo');
+ 	   		delete_option('thm_footertext');
  	   	
- 	   	// Reset checkbox value to unchecked in case a legacy set of options is ever saved to database again
- 	   	$output['del_legacy_opt'] = 0;
- 	   }
+ 	   		// Reset checkbox value to unchecked in case a legacy set of options is ever saved to database again
+ 	   		$output['del_legacy_opt'] = 0;
+		}
  	   	
- 	   return apply_filters( 'thematic_theme_opt_validation', $output, $input );
- 	}
+		return apply_filters( 'thematic_theme_opt_validation', $output, $input );
+	}
 } 
