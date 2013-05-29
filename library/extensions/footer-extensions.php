@@ -136,7 +136,7 @@ if (function_exists('childtheme_override_siteinfo'))  {
 	 */
 	function thematic_siteinfo() {
 		// footer text set in theme options
-		echo "\t\t" . do_shortcode( thematic_get_theme_opt( 'footer_txt' ) ) . "\n";
+		echo "\t\t<p>" . do_shortcode( thematic_get_theme_opt( 'footer_txt' ) ) . "</p>\n";
 	}
 }
 
