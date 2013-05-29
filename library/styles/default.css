@@ -1,4 +1,3 @@
-
 /* =Global Elements
 -------------------------------------------------------------- */
 
@@ -820,4 +819,7 @@ li.content-column {
 #siteinfo a:active,
 #siteinfo a:hover {
     color: #FF4B33;
+}
+#siteinfo p {
+    margin: 0;
 }
