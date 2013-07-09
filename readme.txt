@@ -19,8 +19,8 @@ Features:
 * Free and commercially supported Child Themes are available for upgrading the theme
 * Includes a sample WordPress Child Theme for rapid development
 * A wiki-editable guide to Thematic Customization
-* Ready for WordPress plugins like Subscribe to Comments, WP-PageNavi, and Comment-license
-* Fully compatible with All-In-One SEO and Platinum SEO plugins
+* Ready for WordPress plugins like Subscribe to Comments and WP-PageNavi
+* Fully compatible with All-In-One SEO and WordPress SEO by Yoast
 * Multiple, easy to implement, bulletproof layout options for 2, or 3 column designs
 * Modular CSS with pre-packaged resets and basic typography
 * Dynamic post and body classes make it a hyper-canvas for CSS artists
