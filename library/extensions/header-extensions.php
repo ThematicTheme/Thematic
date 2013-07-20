@@ -414,9 +414,10 @@ function thematic_show_pingback() {
  * Register and enqueue Thematic style.css
  *
  * Child themes that want to filter the wp_enqueue_style params
- * should call wp_register_style( 'thematic_style' , $custom , $custom, $custom )
- * hooking into wp_enqueue_scripts
- * 
+ * should call wp_register_style( '{$themeslug}-style' , $custom , $custom, $custom )
+ * hooking into wp_enqueue_scripts. The theme slug is the name of the folder 
+ * of your child theme. For example, if your theme folder is named "awesome"
+ * the style handle becomes 'awesome-style'
  */
 function thematic_create_stylesheet() {
 	$theme = wp_get_theme();
