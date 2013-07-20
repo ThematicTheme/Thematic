@@ -421,7 +421,8 @@ function thematic_show_pingback() {
 function thematic_create_stylesheet() {
 	$theme = wp_get_theme();
 	$version = $theme->Version;
-	wp_enqueue_style( 'thematic_style', get_stylesheet_uri(), array(), $version );
+	$themeslug = get_stylesheet();
+	wp_enqueue_style( "{$themeslug}-style", get_stylesheet_uri(), array(), $version );
 }
 
 add_action( 'wp_enqueue_scripts', 'thematic_create_stylesheet' );
