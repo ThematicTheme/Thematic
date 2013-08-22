@@ -8,7 +8,7 @@
 
 /**
  * Action Hook: thematic_abovecomments
- * 
+ *
  * Located in comments.php
  * Just before #comments
  */
@@ -18,7 +18,7 @@ function thematic_abovecomments() {
 
 /**
  * Action Hook: thematic_abovecommentslist
- * 
+ *
  * Located in comments.php
  * Just before #comments-list
  */
@@ -28,7 +28,7 @@ function thematic_abovecommentslist() {
 
 /**
  * Action Hook: thematic_belowcommentslist
- * 
+ *
  * Located in comments.php
  * Just after #comments-list
  */
@@ -38,7 +38,7 @@ function thematic_belowcommentslist() {
 
 /**
  * Action Hook: thematic_abovetrackbackslist
- * 
+ *
  * Located in comments.php
  * Just before #trackbacks-list
  */
@@ -48,7 +48,7 @@ function thematic_abovetrackbackslist() {
 
 /**
  * Action Hook: thematic_belowtrackbackslist
- * 
+ *
  * Located in comments.php
  * Just after #trackbacks-list
  */
@@ -58,7 +58,7 @@ function thematic_belowtrackbackslist() {
 
 /**
  * Action Hook: thematic_abovecommentsform
- * 
+ *
  * Located in comments.php
  * Just before the comments form
  */
@@ -80,7 +80,7 @@ add_action('comment_form', 'thematic_show_subscription_checkbox', 98);
 
 /**
  * Action Hook: thematic_belowcommentsform
- * 
+ *
  * Located in comments.php
  * Just after the comments form
  */
@@ -102,7 +102,7 @@ add_action('thematic_belowcommentsform', 'thematic_show_manual_subscription_form
 
 /**
  * Action Hook: thematic_belowcomments
- * 
+ *
  * Located in comments.php
  * Just after #comments
  */
@@ -135,7 +135,7 @@ function thematic_multiplecomments_text() {
 
 /**
  * Filter: list_comments_arg
- * 
+ *
  * Creates the list comments arguments
  */
 function thematic_list_comments_arg() {
@@ -146,7 +146,7 @@ function thematic_list_comments_arg() {
 
 /**
  * Filter: thematic_postcomment_text
- * 
+ *
  * Creates the standard text 'Post a Comment'
  * Located in comments.php
  */
@@ -158,7 +158,7 @@ function thematic_postcomment_text() {
 
 /**
  * Filter: thematic_postreply_text
- * 
+ *
  * Creates the standard text 'Post a Reply to %s'
  * Located in comments.php
  */
@@ -170,7 +170,7 @@ function thematic_postreply_text() {
 
 /**
  * Filter: thematic_commentbox_text
- * 
+ *
  * Creates the standard text 'Comment' for the text box
  * Located in comments.php
  */
@@ -182,7 +182,7 @@ function thematic_commentbox_text() {
 
 /**
  * Filter: thematic_cancelreply_text function.
- * 
+ *
  * Creates the standard text 'Cancel reply'
  * Located in comments-extensions.php
  */
@@ -193,7 +193,7 @@ function thematic_cancelreply_text() {
 
 /**
  * Filter: thematic_commentbutton_text
- * 
+ *
  * Creates the standard text 'Post Comment' for the send button
  * Located in comments.php
  */
@@ -206,31 +206,31 @@ function thematic_commentbutton_text() {
 /**
  * Function: thematic_comment_form_args
  * Filter: comment_form_default_fields
- * 
+ *
  * Creates the standard arguments for comment_form()
  * Located in comments.php
  */
 function thematic_comment_form_args( $post_id = null ) {
 	global $user_identity, $id;
-	
+
 	if ( null === $post_id )
           $post_id = $id;
       else
           $id = $post_id;
-	
+
 	$req = get_option( 'require_name_email' );
-	
+
 	$commenter = wp_get_current_commenter();
-	
+
 	$aria_req = ( $req ? " aria-required='true'" : '' );
-	
+
 	$fields =  array(
 		'author' => '<div id="form-section-author" class="form-section"><div class="form-label">' . '<label for="author">' . __( 'Name', 'thematic' ) . '</label> ' . ( $req ? '<span class="required">' . _x( '*', 'denotes required field', 'thematic' ) . '</span>' : '' ) . '</div>' . '<div class="form-input">' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' .  ' maxlength="20" tabindex="3"' . $aria_req . ' /></div></div><!-- #form-section-author .form-section -->',
 		'email'  => '<div id="form-section-email" class="form-section"><div class="form-label"><label for="email">' . __( 'Email', 'thematic' ) . '</label> ' . ( $req ? '<span class="required">' . _x( '*', 'denotes required field', 'thematic' ) . '</span>' : '' ) . '</div><div class="form-input">' . '<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" maxlength="50" tabindex="4"' . $aria_req . ' /></div></div><!-- #form-section-email .form-section -->',
 		'url'    => '<div id="form-section-url" class="form-section"><div class="form-label"><label for="url">' . __( 'Website', 'thematic' ) . '</label></div>' . '<div class="form-input"><input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="50" tabindex="5" /></div></div><!-- #form-section-url .form-section -->',
 	);
 
-	
+
 	$args = array(
 		'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
 		'comment_field'        => '<div id="form-section-comment" class="form-section"><div class="form-label"><label for="comment">' . __(thematic_commentbox_text(), 'thematic') . '</label></div><div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6" aria-required="true"></textarea></div></div><!-- #form-section-comment .form-section -->',
@@ -240,7 +240,7 @@ function thematic_comment_form_args( $post_id = null ) {
 		'must_log_in'          => '<p id="login-req">' .  sprintf( __('You must be %1$slogged in%2$s to post a comment.', 'thematic'), sprintf('<a href="%s" title ="%s">', esc_attr( wp_login_url( apply_filters( 'the_permalink', get_permalink() ) ) ), esc_attr__( 'Log in', 'thematic' ) ), '</a>' ). '</p>',
 
 		'logged_in_as'         => '<p id="login"><span class="loggedin">' . sprintf( __('Logged in as %s', 'thematic' ), sprintf( ' <a href="%1$s" title="%2$s">%3$s</a>', admin_url( 'profile.php' ), sprintf( esc_attr__('Logged in as %s', 'thematic'), $user_identity ) , $user_identity ) ) .'</span> <span class="logout">' . sprintf('<a href="%s" title="%s">%s</a>' , esc_attr( wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ), esc_attr__('Log out of this account', 'thematic' ) , __('Log out?', 'thematic' ) ) . '</span></p>',
-		
+
 		'comment_notes_after'  => '<div id="form-allowed-tags" class="form-section"><p><span>' . sprintf( _x('You may use these %1$sHTML%2$s tags and attributes', '%$1s and %$2s are <abbr> tags', 'thematic'), '<abbr title="HyperText Markup Language">', '</abbr>' ) . '</span> <code>' . allowed_tags() . '</code></p></div>',
 
 		'id_form'              => 'commentform',
@@ -251,7 +251,7 @@ function thematic_comment_form_args( $post_id = null ) {
 		'label_submit'         => thematic_commentbutton_text(),
 
 	);
-	return apply_filters( 'thematic_comment_form_args', $args );	
+	return apply_filters( 'thematic_comment_form_args', $args );
 }
 
 /**
@@ -259,16 +259,11 @@ function thematic_comment_form_args( $post_id = null ) {
  */
 function thematic_commenter_link() {
 	$commenter = get_comment_author_link();
-	if ( ereg( '<a[^>]* class=[^>]+>', $commenter ) ) {
-		$commenter = ereg_replace( '(<a[^>]* class=[\'"]?)', '\\1url ' , $commenter );
-	} else {
-		$commenter = ereg_replace( '(<a )/', '\\1class="url "' , $commenter );
-	}
 	$avatar_email = get_comment_author_email();
 	$avatar_size = apply_filters( 'avatar_size', '80' ); // Available filter: avatar_size
 	$avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( $avatar_email, $avatar_size ) );
 	echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
-} 
+}
 
 /**
  * ActionHook: thematic_comments_template
@@ -285,7 +280,7 @@ function thematic_include_comments() {
     if (  current_theme_supports( 'thematic_legacy_comment_handling' ) && is_page() ) {
     	// Needs post-meta key/value of "comments" to call comments template on Pages!
        	if ( get_post_custom_values('comments') )
-			comments_template('', true);	    	
+			comments_template('', true);
 	// WordPress standard comment handling is the default if constant is not set
 	} else {
 		comments_template('', true);
@@ -295,11 +290,11 @@ function thematic_include_comments() {
 add_action('thematic_comments_template','thematic_include_comments', 5);
 
 function thematic_get_comment_link( $link , $comment, $args ) {
-	global  $wp_rewrite; 
+	global  $wp_rewrite;
 
 	$args['type'] = 'comment';
 	$args['page'] = get_page_of_comment( $comment->comment_ID, $args );
-	
+
 	if ( $args['per_page'] ) {
 		if ( '' == $args['page'] )
 			$args['page'] = ( !empty($in_comment_loop) ) ? get_query_var('cpage') : get_page_of_comment( $comment->comment_ID, $args );
@@ -312,7 +307,7 @@ function thematic_get_comment_link( $link , $comment, $args ) {
 		$link = get_permalink( $comment->comment_post_ID );
 	}
 
-	return $link . '#comment-' . $comment->comment_ID; 
+	return $link . '#comment-' . $comment->comment_ID;
 }
 add_filter( 'get_comment_link', 'thematic_get_comment_link', 10, 3 );
 
