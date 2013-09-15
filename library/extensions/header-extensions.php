@@ -330,7 +330,7 @@ function thematic_meta_robots() {
 		$display = apply_filters( 'thematic_show_robots', $display = TRUE );
 		if ( $display ) {
     		if ( ( is_home() && ( $paged < 2 ) ) || is_front_page() || is_single() || is_page() || is_attachment() ) {
-				$content = '<meta name="robots" content="index,follow" />';
+				$content = '';
     		} elseif ( is_search() ) {
         		$content = '<meta name="robots" content="noindex,nofollow" />';
     		} else {	
