@@ -35,7 +35,7 @@
 				thematic_abovecontent();
 	    	
 				// filter for manipulating the element that wraps the content 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
+				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content">' . "\n\n" );
 	    		
 	    		$wp_query = new WP_Query();
 	    		$wp_query->query( array( 'posts_per_page' => get_option( 'posts_per_page' ), 'paged' => $paged ) );
