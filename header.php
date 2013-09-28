@@ -65,7 +65,7 @@
 
 		<?php
 			// Filter provided for altering output of the header opening element
-			echo ( apply_filters( 'thematic_open_header',  '<div id="header">' ) );
+			echo ( apply_filters( 'thematic_open_header',  '<div id="header" class="site-header">' ) );
     	?>
 
 
