@@ -22,7 +22,7 @@
 			thematic_abovefooter();
 		
 			// Filter provided for altering output of the footer opening element
-    		echo ( apply_filters( 'thematic_open_footer', '<div id="footer">' ) );
+    		echo ( apply_filters( 'thematic_open_footer', '<div id="footer" class="site-footer">' ) );
     	?>	
         	
         	<?php
