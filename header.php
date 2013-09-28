@@ -84,4 +84,4 @@
 			thematic_belowheader();
     	?>
     	
-	<div id="main">
+	<div id="main" class="site-main">
