@@ -637,7 +637,7 @@ if ( function_exists( 'childtheme_override_blogtitle' ) )  {
     function thematic_blogtitle() { 
     ?>
     
-    	<div id="blog-title"><span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+    	<div id="blog-title" class="site-title"><span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
     
     <?php 
     }
