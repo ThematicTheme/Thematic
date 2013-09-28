@@ -16,7 +16,7 @@
     thematic_abovecontainer();
 ?>
 
-		<div id="container">
+		<div id="container" class="content-wrapper">
 		
 			<?php
 				// action hook for placing content above #content
