@@ -660,12 +660,12 @@ if ( function_exists( 'childtheme_override_blogdescription' ) )  {
      * Override: childtheme_override_blogdescription
      */
     function thematic_blogdescription() {
-    	$blogdesc = '"blog-description">' . get_bloginfo( 'description', 'display' );
     	if ( is_home() || is_front_page() ) { 
-        	echo "\t<h1 id=$blogdesc</h1>\n\n";
-        } else {	
-        	echo "\t<div id=$blogdesc</div>\n\n";
-        }
+			$tag = 'h1';
+		} else {	
+			$tag = 'div';
+		}
+		echo "\t<$tag id=\"blog-description\">". get_bloginfo( 'description', 'display' ) . "</$tag>\n\n";
     }
 }
 
