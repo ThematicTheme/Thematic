@@ -614,7 +614,7 @@ if ( function_exists( 'childtheme_override_brandingopen' ) )  {
 	 * Override: childtheme_override_brandingopen
 	 */
     function thematic_brandingopen() {
-    	echo "\t<div id=\"branding\">\n";
+    	echo "\t<div id=\"branding\" class=\"branding\">\n";
     }
 }
 
