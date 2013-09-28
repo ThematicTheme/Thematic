@@ -665,7 +665,7 @@ if ( function_exists( 'childtheme_override_blogdescription' ) )  {
 		} else {	
 			$tag = 'div';
 		}
-		echo "\t<$tag id=\"blog-description\">". get_bloginfo( 'description', 'display' ) . "</$tag>\n\n";
+		echo "\t<$tag id=\"blog-description\" class=\"tagline\">". get_bloginfo( 'description', 'display' ) . "</$tag>\n\n";
     }
 }
 
