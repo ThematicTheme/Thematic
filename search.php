@@ -16,14 +16,14 @@
 
 ?>
 
-		<div id="container">
+		<div id="container" class="content-wrapper">
 		
 			<?php 
 	            // action hook for inserting contentabove #content
 				thematic_abovecontent();
 		
 				// filter for manipulating the element that wraps the content 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
+				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content">' . "\n\n" );
 							
 				if (have_posts()) {
 	

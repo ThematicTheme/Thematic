@@ -56,7 +56,7 @@
 	<?php
 		// Filter provided for removing output of wrapping element follows the body tag
 		if ( apply_filters( 'thematic_open_wrapper', true ) ) 
-  		  echo ( '<div id="wrapper" class="hfeed">' );
+  		  echo ( '<div id="wrapper" class="hfeed site-wrapper">' );
 
 		// Action hook for placing content above the theme header
 		thematic_aboveheader(); 
@@ -65,7 +65,7 @@
 
 		<?php
 			// Filter provided for altering output of the header opening element
-			echo ( apply_filters( 'thematic_open_header',  '<div id="header">' ) );
+			echo ( apply_filters( 'thematic_open_header',  '<div id="header" class="site-header">' ) );
     	?>
 
 
@@ -84,4 +84,4 @@
 			thematic_belowheader();
     	?>
     	
-	<div id="main">
+	<div id="main" class="site-main">

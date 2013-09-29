@@ -19,14 +19,14 @@
 	thematic_abovecontainer();
 ?>
 
-		<div id="container">
+		<div id="container" class="content-wrapper">
 
 			<?php
 				// action hook for placing content above #content
 				thematic_abovecontent();
 
 				// filter for manipulating the element that wraps the content 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content">' . "\n\n" );
+				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content">' . "\n\n" );
 
 				// start the loop to get the page content
 				the_post();

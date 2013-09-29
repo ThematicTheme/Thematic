@@ -614,7 +614,7 @@ if ( function_exists( 'childtheme_override_brandingopen' ) )  {
 	 * Override: childtheme_override_brandingopen
 	 */
     function thematic_brandingopen() {
-    	echo "\t<div id=\"branding\">\n";
+    	echo "\t<div id=\"branding\" class=\"branding\">\n";
     }
 }
 
@@ -637,7 +637,7 @@ if ( function_exists( 'childtheme_override_blogtitle' ) )  {
     function thematic_blogtitle() { 
     ?>
     
-    	<div id="blog-title"><span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+    	<div id="blog-title" class="site-title"><span><a href="<?php echo home_url() ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
     
     <?php 
     }
@@ -665,7 +665,7 @@ if ( function_exists( 'childtheme_override_blogdescription' ) )  {
 		} else {	
 			$tag = 'div';
 		}
-		echo "\t<$tag id=\"blog-description\">". get_bloginfo( 'description', 'display' ) . "</$tag>\n\n";
+		echo "\t<$tag id=\"blog-description\" class=\"tagline\">". get_bloginfo( 'description', 'display' ) . "</$tag>\n\n";
     }
 }
 
