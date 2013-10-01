@@ -6,7 +6,7 @@
  */
 
 // Restore xhtml1.0 doctype and version 1.0.4 html tag
-// Check for new overrides before restoring leagcy functionality
+// Check for new overrides before restoring legacy functionality
 if ( !function_exists( 'childtheme_override_doctype' ) || !function_exists( 'childtheme_override_html' )  ) {
 	/**
 	* @ignore
@@ -29,7 +29,7 @@ if ( !function_exists( 'childtheme_override_doctype' ) || !function_exists( 'chi
 
 
 // Restore head profile
-// Check for new overrides before restoring leagcy functionality
+// Check for new overrides before restoring legacy functionality
 if ( !function_exists( 'childtheme_override_head' ) ) {
 	/**
 	* @ignore
@@ -41,7 +41,7 @@ if ( !function_exists( 'childtheme_override_head' ) ) {
 
 
 // Restore meta content type / charset
-// Check for new overrides before restoring leagcy functionality
+// Check for new overrides before restoring legacy functionality
 if ( !function_exists( 'childtheme_override_meta_charset' ) ) {
 	/**
 	* @ignore
