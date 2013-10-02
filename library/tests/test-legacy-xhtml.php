@@ -74,6 +74,23 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->assertRegexp( '/^<\/div/', $aside_actual );
 	}
 	
+	
+	function test_xhtml_before_widget() {	
+		do_action( 'widgets_init' );
+		
+		$content = '<section id="%1$s" class="widgetcontainer %2$s">';		
+		$actual = apply_filters( 'thematic_before_widget', $content );
+		$this->assertRegexp( '/^<li/', $actual );
+	}
+	
+	
+	function test_xhtml_after_widget() {	
+		do_action( 'widgets_init' );
+		
+		$content = '</section>';		
+		$actual = apply_filters( 'thematic_after_widget', $content );
+		$this->assertRegexp( '/^<\/li/', $actual );
+	}
 
 }
 

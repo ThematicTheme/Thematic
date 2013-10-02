@@ -11,7 +11,7 @@
  * Markup before the widget
  */
 function thematic_before_widget() {
-	$content = '<li id="%1$s" class="widgetcontainer %2$s">';
+	$content = '<section id="%1$s" class="widgetcontainer %2$s">';
 	return apply_filters('thematic_before_widget', $content);
 }
 
@@ -20,7 +20,7 @@ function thematic_before_widget() {
  * Markup after the widget
  */
 function thematic_after_widget() {
-	$content = '</li>';
+	$content = '</section>';
 	return apply_filters('thematic_after_widget', $content);
 }
 

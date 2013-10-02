@@ -102,3 +102,23 @@ function thematic_xhtml_after_widget_area( $content ) {
 	return $content;
 }
 add_filter( 'thematic_after_widget_area', 'thematic_xhtml_after_widget_area' );
+
+
+/**
+ * Filter the thematic_before_widget to use li tags
+ */
+function thematic_xhtml_before_widget( $content ) {
+	$content = '<li id="%1$s" class="widgetcontainer %2$s">';
+	return $content;
+}
+add_filter( 'thematic_before_widget', 'thematic_xhtml_before_widget' );
+
+
+/**
+ * Filter the thematic_after_widget to use li tags
+ */
+function thematic_xhtml_after_widget( $content ) {
+	$content = '</li>';
+	return $content;
+}
+add_filter( 'thematic_after_widget', 'thematic_xhtml_after_widget' );
