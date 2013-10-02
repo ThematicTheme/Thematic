@@ -122,3 +122,23 @@ function thematic_xhtml_after_widget( $content ) {
 	return $content;
 }
 add_filter( 'thematic_after_widget', 'thematic_xhtml_after_widget' );
+
+
+/**
+ * Filter the thematic_before_title to use h3 tags
+ */
+function thematic_xhtml_before_title( $content ) {
+	$content = '<h3 class="widgettitle">';
+	return $content;
+}
+add_filter( 'thematic_before_title', 'thematic_xhtml_before_title' );
+
+
+/**
+ * Filter the thematic_after_title to use h3 tags
+ */
+function thematic_xhtml_after_title( $content ) {
+	$content = "</h3>\n";
+	return $content;
+}
+add_filter( 'thematic_after_title', 'thematic_xhtml_after_title' );

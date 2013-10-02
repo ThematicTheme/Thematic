@@ -91,6 +91,23 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$actual = apply_filters( 'thematic_after_widget', $content );
 		$this->assertRegexp( '/^<\/li/', $actual );
 	}
+	
+	function test_xhtml_before_widgettitle() {	
+		do_action( 'widgets_init' );
+		
+		$content = '<h1 class="widgettitle">';		
+		$actual = apply_filters( 'thematic_before_title', $content );
+		$this->assertRegexp( '/^<h3/', $actual );
+	}
+	
+	
+	function test_xhtml_after_widgettitle() {	
+		do_action( 'widgets_init' );
+		
+		$content = '<\h1>';		
+		$actual = apply_filters( 'thematic_after_title', $content );
+		$this->assertRegexp( '/^<\/h3/', $actual );
+	}
 
 }
 
