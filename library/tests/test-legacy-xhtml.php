@@ -52,6 +52,28 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->assertEquals( 'div', $actual[ 'container' ] );
 	}
 	
+	function test_xhtml_before_widget_area() {	
+		do_action( 'widgets_init' );
+		
+		$content = '<aside id="third" class="third-sub-aside aside sub-aside">';
+		$this->assertRegexp( '/^<aside/', $content );
+		
+		$actual = apply_filters( 'thematic_before_widget_area', $content );
+		$this->assertRegexp( '/^<div/', $actual );
+	}
+	
+	function test_xhtml_after_widget_area() {	
+		do_action( 'widgets_init' );
+		
+		$ul_content = '</div><!-- .inner -->';		
+		$ul_actual = apply_filters( 'thematic_after_widget_area', $ul_content );
+		$this->assertRegexp( '/^<\/ul/', $ul_actual );
+		
+		$aside_content = '</aside><!-- .third-sub-aside -->';
+		$aside_actual = apply_filters( 'thematic_after_widget_area', $aside_content );
+		$this->assertRegexp( '/^<\/div/', $aside_actual );
+	}
+	
 
 }
 

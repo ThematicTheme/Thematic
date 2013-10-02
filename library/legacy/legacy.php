@@ -81,3 +81,24 @@ function thematic_xhtml_navmenu_args( $args ) {
 }
 add_filter( 'thematic_nav_menu_args', 'thematic_xhtml_navmenu_args' );
 
+
+/**
+ * Filter the thematic_before_widget_area to use div tags
+ */
+function thematic_xhtml_before_widget_area( $content ) {
+	$content = str_replace( '<aside', '<div ', $content);
+	$content = str_replace( '<div class="inner xoxo">', '<ul class="xoxo">', $content);
+	return $content;
+}
+add_filter( 'thematic_before_widget_area', 'thematic_xhtml_before_widget_area' );
+
+
+/**
+ * Filter the thematic_after_widget_area to use div tags
+ */
+function thematic_xhtml_after_widget_area( $content ) {
+	$content = str_replace( '</aside>', '</div>', $content);
+	$content = str_replace( '</div><!-- .inner -->', '</ul>', $content);
+	return $content;
+}
+add_filter( 'thematic_after_widget_area', 'thematic_xhtml_after_widget_area' );
