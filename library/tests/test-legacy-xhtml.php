@@ -34,6 +34,16 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->expectOutputRegex( '/^<!DOCTYPE html PUBLIC/', thematic_doctype() );	
 	}
 	
+	function test_thematic_open_header_xhtml() {
+		$actual = apply_filters( 'thematic_open_header', '<header id="header" class="site-header">' );
+		$this->assertEquals( '<div id="header" class="site-header">', $actual );	
+	}
+	
+	function test_thematic_close_header_xhtml() {
+		$actual = apply_filters( 'thematic_close_header', '</header><!-- .site-header-->' );
+		$this->assertEquals( '</div><!-- .site-header-->', $actual );	
+	}
+	
 
 }
 

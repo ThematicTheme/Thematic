@@ -52,7 +52,22 @@ if ( !function_exists( 'childtheme_override_meta_charset' ) ) {
 }
 
 
+/**
+ * Switch .site-header opening tag to xhtml
+ */
+function thematic_open_header_xhtml( $content ) {
+	$content = '<div id="header" class="site-header">';
+	return $content;
+}
+add_filter( 'thematic_open_header', 'thematic_open_header_xhtml' );
 
-
+/**
+ * Switch .site-header closing tag to xhtml
+ */
+function thematic_close_header_xhtml( $content ) {
+	$content = '</div><!-- .site-header-->';
+	return $content;
+}
+add_filter( 'thematic_close_header', 'thematic_close_header_xhtml' );
 
 
