@@ -61,6 +61,7 @@ function thematic_open_header_xhtml( $content ) {
 }
 add_filter( 'thematic_open_header', 'thematic_open_header_xhtml' );
 
+
 /**
  * Switch .site-header closing tag to xhtml
  */
@@ -70,4 +71,13 @@ function thematic_close_header_xhtml( $content ) {
 }
 add_filter( 'thematic_close_header', 'thematic_close_header_xhtml' );
 
+
+/**
+ * Filter the main menu to use div tag
+ */
+function thematic_xhtml_navmenu_args( $args ) {
+	$args[ 'container' ] = 'div';
+	return $args;
+}
+add_filter( 'thematic_nav_menu_args', 'thematic_xhtml_navmenu_args' );
 

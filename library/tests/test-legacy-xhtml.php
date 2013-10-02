@@ -44,6 +44,14 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->assertEquals( '</div><!-- .site-header-->', $actual );	
 	}
 	
+	function test_thematic_xhtml_navmenu_args() {
+		$args = array(
+			'container' => 'nav'
+		);
+		$actual = apply_filters( 'thematic_nav_menu_args', $args );
+		$this->assertEquals( 'div', $actual[ 'container' ] );
+	}
+	
 
 }
 
