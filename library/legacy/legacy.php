@@ -142,3 +142,23 @@ function thematic_xhtml_after_title( $content ) {
 	return $content;
 }
 add_filter( 'thematic_after_title', 'thematic_xhtml_after_title' );
+
+
+/**
+ * Switch .site-footer opening tag to xhtml
+ */
+function thematic_open_footer_xhtml( $content ) {
+	$content = '<div id="footer" class="site-footer">';
+	return $content;
+}
+add_filter( 'thematic_open_footer', 'thematic_open_footer_xhtml' );
+
+
+/**
+ * Switch .site-footer closing tag to xhtml
+ */
+function thematic_close_footer_xhtml( $content ) {
+	$content = '</div><!-- .site-footer -->';
+	return $content;
+}
+add_filter( 'thematic_close_footer', 'thematic_close_footer_xhtml' );

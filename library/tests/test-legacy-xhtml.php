@@ -26,23 +26,28 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->update_test_options( 'thematic_theme_opt', $this->theme_options );
 	}
 	
+	
 	function test_legacy_theme_options() {
 		$this->assertEquals( '1',  $this->theme_options['legacy_xhtml'] );
 	}
 
+
 	function test_thematic_doctype() {
 		$this->expectOutputRegex( '/^<!DOCTYPE html PUBLIC/', thematic_doctype() );	
 	}
+	
 	
 	function test_thematic_open_header_xhtml() {
 		$actual = apply_filters( 'thematic_open_header', '<header id="header" class="site-header">' );
 		$this->assertEquals( '<div id="header" class="site-header">', $actual );	
 	}
 	
+	
 	function test_thematic_close_header_xhtml() {
 		$actual = apply_filters( 'thematic_close_header', '</header><!-- .site-header-->' );
 		$this->assertEquals( '</div><!-- .site-header-->', $actual );	
 	}
+	
 	
 	function test_thematic_xhtml_navmenu_args() {
 		$args = array(
@@ -51,6 +56,7 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$actual = apply_filters( 'thematic_nav_menu_args', $args );
 		$this->assertEquals( 'div', $actual[ 'container' ] );
 	}
+	
 	
 	function test_xhtml_before_widget_area() {	
 		do_action( 'widgets_init' );
@@ -61,6 +67,7 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$actual = apply_filters( 'thematic_before_widget_area', $content );
 		$this->assertRegexp( '/^<div/', $actual );
 	}
+	
 	
 	function test_xhtml_after_widget_area() {	
 		do_action( 'widgets_init' );
@@ -92,6 +99,7 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->assertRegexp( '/^<\/li/', $actual );
 	}
 	
+	
 	function test_xhtml_before_widgettitle() {	
 		do_action( 'widgets_init' );
 		
@@ -107,6 +115,18 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$content = '<\h1>';		
 		$actual = apply_filters( 'thematic_after_title', $content );
 		$this->assertRegexp( '/^<\/h3/', $actual );
+	}
+	
+	
+	function test_thematic_open_footer_xhtml() {
+		$actual = apply_filters( 'thematic_open_footer', '<footer id="footer" class="site-footer">' );
+		$this->assertEquals( '<div id="footer" class="site-footer">', $actual );	
+	}
+	
+	
+	function test_thematic_close_footer_xhtml() {
+		$actual = apply_filters( 'thematic_close_footer', '</footer><!-- .site-footer -->' );
+		$this->assertEquals( '</div><!-- .site-footer -->', $actual );	
 	}
 
 }
