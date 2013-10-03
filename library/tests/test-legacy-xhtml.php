@@ -57,6 +57,9 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->assertEquals( 'div', $actual[ 'container' ] );
 	}
 	
+	function test_xhtml_nav_above() {
+		$this->expectOutputRegex( '/<div id="nav-above"/', thematic_nav_above() );	
+	}
 	
 	function test_xhtml_before_widget_area() {	
 		do_action( 'widgets_init' );

@@ -53,7 +53,7 @@ if ( !function_exists( 'childtheme_override_meta_charset' ) ) {
 
 
 /**
- * Switch .site-header opening tag to xhtml
+ * Filter .site-header opening tag to xhtml
  */
 function thematic_open_header_xhtml( $content ) {
 	$content = '<div id="header" class="site-header">';
@@ -63,7 +63,7 @@ add_filter( 'thematic_open_header', 'thematic_open_header_xhtml' );
 
 
 /**
- * Switch .site-header closing tag to xhtml
+ * Filter .site-header closing tag to xhtml
  */
 function thematic_close_header_xhtml( $content ) {
 	$content = '</div><!-- .site-header-->';
@@ -80,6 +80,40 @@ function thematic_xhtml_navmenu_args( $args ) {
 	return $args;
 }
 add_filter( 'thematic_nav_menu_args', 'thematic_xhtml_navmenu_args' );
+
+
+// Restore nav above using <div> tags instead of <nav>
+if ( !function_exists( 'childtheme_override_nav_above' ) )  {
+	/**
+	 * @ignore
+	 */
+	function childtheme_override_nav_above() {
+		if ( is_single() ) { 
+		?>
+				<div id="nav-above" class="navigation">
+				
+					<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
+					
+					<div class="nav-next"><?php thematic_next_post_link() ?></div>
+					
+				</div>
+		<?php } else { ?>
+				<div id="nav-above" class="navigation">
+               		<?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
+                	<?php wp_pagenavi(); ?>
+					<?php } else { ?>
+					  
+					<div class="nav-previous"><?php next_posts_link(sprintf('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
+					
+					<div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
+
+					<?php } ?>
+					
+				</div>	
+		<?php
+		}
+	}
+}
 
 
 /**
@@ -145,7 +179,7 @@ add_filter( 'thematic_after_title', 'thematic_xhtml_after_title' );
 
 
 /**
- * Switch .site-footer opening tag to xhtml
+ * Filter .site-footer opening tag to xhtml
  */
 function thematic_open_footer_xhtml( $content ) {
 	$content = '<div id="footer" class="site-footer">';
@@ -155,7 +189,7 @@ add_filter( 'thematic_open_footer', 'thematic_open_footer_xhtml' );
 
 
 /**
- * Switch .site-footer closing tag to xhtml
+ * Filter .site-footer closing tag to xhtml
  */
 function thematic_close_footer_xhtml( $content ) {
 	$content = '</div><!-- .site-footer -->';
