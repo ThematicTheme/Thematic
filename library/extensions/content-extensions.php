@@ -1693,17 +1693,17 @@ if (function_exists('childtheme_override_nav_below'))  {
 	 * @link http://wordpress.org/extend/plugins/wp-pagenavi/ WP-PageNavi Plugin Page
 	 */
 	function thematic_nav_below() {
-		if (is_single()) { ?>
+		if ( is_single() ) { ?>
 
-			<div id="nav-below" class="navigation">
+			<nav id="nav-below" class="navigation">
 				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
 				<div class="nav-next"><?php thematic_next_post_link() ?></div>
-			</div>
+			</nav>
 
 <?php
 		} else { ?>
 
-			<div id="nav-below" class="navigation">
+			<nav id="nav-below" class="navigation">
                 <?php if(function_exists('wp_pagenavi')) { ?>
                 <?php wp_pagenavi(); ?>
                 <?php } else { ?>  
@@ -1713,7 +1713,7 @@ if (function_exists('childtheme_override_nav_below'))  {
 				<div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
 
 				<?php } ?>
-			</div>	
+			</nav>	
 	
 <?php
 		}

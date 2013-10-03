@@ -116,6 +116,40 @@ if ( !function_exists( 'childtheme_override_nav_above' ) )  {
 }
 
 
+// Restore nav below to use <div> tags instead of <nav>
+if ( !function_exists( 'childtheme_override_nav_below' ) ) {
+	/**
+	 * @ignore
+	 */
+	function childtheme_override_nav_below() {
+		if ( is_single() ) { ?>
+
+			<div id="nav-below" class="navigation">
+				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
+				<div class="nav-next"><?php thematic_next_post_link() ?></div>
+			</div>
+
+<?php
+		} else { ?>
+
+			<div id="nav-below" class="navigation">
+				<?php if(function_exists('wp_pagenavi')) { ?>
+				<?php wp_pagenavi(); ?>
+				<?php } else { ?>  
+				
+				<div class="nav-previous"><?php next_posts_link(sprintf('<span class="meta-nav">&laquo;</span> %s', __('Older posts', 'thematic') ) ) ?></div>
+					
+				<div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
+
+				<?php } ?>
+			</div>	
+	
+<?php
+		}
+	}
+}
+
+
 /**
  * Filter the thematic_before_widget_area to use div tags
  */
