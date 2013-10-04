@@ -75,11 +75,11 @@ add_filter( 'thematic_close_header', 'thematic_close_header_xhtml' );
 /**
  * Filter the main menu to use div tag
  */
-function thematic_xhtml_navmenu_args( $args ) {
+function thematic_navmenu_args_xhtml( $args ) {
 	$args[ 'container' ] = 'div';
 	return $args;
 }
-add_filter( 'thematic_nav_menu_args', 'thematic_xhtml_navmenu_args' );
+add_filter( 'thematic_nav_menu_args', 'thematic_navmenu_args_xhtml' );
 
 
 // Restore nav above using <div> tags instead of <nav>

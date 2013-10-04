@@ -49,7 +49,7 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 	}
 	
 	
-	function test_thematic_xhtml_navmenu_args() {
+	function test_thematic_navmenu_args_xhtml() {
 		$args = array(
 			'container' => 'nav'
 		);
