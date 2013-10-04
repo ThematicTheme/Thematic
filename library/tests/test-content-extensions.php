@@ -15,6 +15,10 @@ class TestContentExtensions extends Thematic_UnitTestCase {
 		$this->expectOutputRegex( '/<header/', thematic_postheader() );	
 	}
 	
+	function test_thematic_postfooter() {
+		$this->expectOutputRegex( '/<footer/', thematic_postfooter() );	
+	}
+	
 	function test_thematic_nav_below() {
 		$this->expectOutputRegex( '/<nav id="nav-below"/', thematic_nav_below() );	
 	}

@@ -68,6 +68,13 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->assertRegexp( '/^\n\n\t\t\t\t\t<h2/', $actual );
 	}
 	
+	function test_xhtml_thematic_postfooter() {
+		$content = '<footer class="entry-utility">' . thematic_postfooter_posteditlink() . '</footer><!-- .entry-utility -->';
+		$this->assertRegexp( '/^<footer/', $content );-
+		$actual = apply_filters( 'thematic_postfooter', $content );
+		$this->assertRegexp( '/^<div/', $actual );
+	}
+	
 	function test_xhtml_nav_below() {
 		$this->expectOutputRegex( '/<div id="nav-below"/', thematic_nav_below() );	
 	}

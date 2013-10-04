@@ -1357,14 +1357,14 @@ if (function_exists('childtheme_override_postfooter'))  {
 	    
 		// Check for "Page" post-type and logged in user to show edit link
 	    if ( $post_type == 'page' && current_user_can('edit_posts') ) {
-	        $postfooter = '<div class="entry-utility">' . thematic_postfooter_posteditlink();
-	        $postfooter .= "</div><!-- .entry-utility -->\n";
+	        $postfooter = '<footer class="entry-utility">' . thematic_postfooter_posteditlink();
+	        $postfooter .= "</footer><!-- .entry-utility -->\n";
 	    // Display nothing for logged out users on a "Page" post-type 
 	    } elseif ( $post_type == 'page' ) {
 	        $postfooter = '';
 	    // For post-types other than "Pages" press on
 	    } else {
-	    	$postfooter = '<div class="entry-utility">';
+	    	$postfooter = '<footer class="entry-utility">';
 	        if ( is_single() ) {
 	        	$post_type_archive_link = ( function_exists( 'get_post_type_archive_link' )  ? get_post_type_archive_link( $post_type ) :  home_url( '/?post_type=' . $post_type ) );
 	        	if ( thematic_is_custom_post_type() && $post_type_obj->has_archive ) {
@@ -1394,7 +1394,7 @@ if (function_exists('childtheme_override_postfooter'))  {
 	        	} 
 	        	$postfooter .= ' ' . thematic_postfooter_posteditlink();
 	    	}   
-	    	$postfooter .= "\n\n\t\t\t\t\t</div><!-- .entry-utility -->\n";    
+	    	$postfooter .= "\n\n\t\t\t\t\t</footer><!-- .entry-utility -->\n";    
 	    }
 	    // Put it on the screen
 	    echo apply_filters( 'thematic_postfooter', $postfooter ); // Filter to override default post footer

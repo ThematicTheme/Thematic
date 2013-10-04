@@ -127,6 +127,17 @@ function thematic_postheader_xhtml( $content ) {
 add_filter( 'thematic_postheader', 'thematic_postheader_xhtml' );
 
 
+/**
+ * Filter thematic_postfooter to use <div> tag
+ */
+function thematic_postfooter_xhtml( $content ) {
+	$content = str_replace( '<footer class="entry-utility">', '<div class="entry-utility">', $content);
+	$content = str_replace( '</footer><!-- .entry-utility -->', '</div><!-- .entry-utility -->', $content);
+	return $content;
+}
+add_filter( 'thematic_postfooter', 'thematic_postfooter_xhtml' );
+
+
 // Restore nav below to use <div> tags instead of <nav>
 if ( !function_exists( 'childtheme_override_nav_below' ) ) {
 	/**
