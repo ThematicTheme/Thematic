@@ -920,13 +920,13 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 	    } elseif (is_404()) {    
 	        $posttitle .= '<h1 class="entry-title">' . __('Not Found', 'thematic') . "</h1>\n";
 	    } else {
-	        $posttitle .= '<h2 class="entry-title">';
+	        $posttitle .= '<h1 class="entry-title">';
 	        $posttitle .= sprintf('<a href="%s" title="%s" rel="bookmark">%s</a>',
 	        						apply_filters('the_permalink', get_permalink()),
 									sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
 	        						$title_content
 	        						);   
-	        $posttitle .= "</h2>\n";
+	        $posttitle .= "</h1>\n";
 	    }
 	    
 	    return apply_filters('thematic_postheader_posttitle',$posttitle); 

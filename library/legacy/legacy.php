@@ -128,6 +128,19 @@ add_filter( 'thematic_postheader', 'thematic_postheader_xhtml' );
 
 
 /**
+ * Filter thematic_postheader_posttitle to use <h2> tags
+ */
+function thematic_postheader_posttitle_xhtml( $content ) {
+	if ( !is_single() || !is_page() || !is_404() ) {
+		$content = str_replace( '<h1 class="entry-title">', '<h2 class="entry-title">', $content);
+		$content = str_replace( '</h1>', '</h2>', $content);
+	}
+	return $content;
+}
+add_filter( 'thematic_postheader_posttitle', 'thematic_postheader_posttitle_xhtml' );
+
+
+/**
  * Filter thematic_postfooter to use <div> tag
  */
 function thematic_postfooter_xhtml( $content ) {
