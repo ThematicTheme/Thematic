@@ -61,6 +61,13 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->expectOutputRegex( '/<div id="nav-above"/', thematic_nav_above() );	
 	}
 	
+	function test_xhtml_thematic_postheader() {
+		$content = '<header class="entry-header">' . thematic_postheader_posttitle() . '</header>';
+		$this->assertRegexp( '/^<header/', $content );-
+		$actual = apply_filters( 'thematic_postheader', $content );
+		$this->assertRegexp( '/^\n\n\t\t\t\t\t<h2/', $actual );
+	}
+	
 	function test_xhtml_nav_below() {
 		$this->expectOutputRegex( '/<div id="nav-below"/', thematic_nav_below() );	
 	}

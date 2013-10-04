@@ -116,6 +116,17 @@ if ( !function_exists( 'childtheme_override_nav_above' ) )  {
 }
 
 
+/**
+ * Filter thematic_postheader to remove the <header> element
+ */
+function thematic_postheader_xhtml( $content ) {
+	$content = str_replace( '<header class="entry-header">', '', $content);
+	$content = str_replace( '</header>', '', $content);
+	return $content;
+}
+add_filter( 'thematic_postheader', 'thematic_postheader_xhtml' );
+
+
 // Restore nav below to use <div> tags instead of <nav>
 if ( !function_exists( 'childtheme_override_nav_below' ) ) {
 	/**
