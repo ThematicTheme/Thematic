@@ -856,9 +856,9 @@ if (function_exists('childtheme_override_postheader'))  {
  	   global $post;
  	 
  	   if ( is_404() || $post->post_type == 'page') {
- 	       $postheader = '<header class="entry-header">' . thematic_postheader_posttitle() . '</header>';        
+ 	       $postheader = '<header class="entry-header">' . thematic_postheader_posttitle() . "</header><!-- .entry-header -->\n";        
  	   } else {
- 	       $postheader = '<header class="entry-header">' . thematic_postheader_posttitle() . thematic_postheader_postmeta() . '</header>';    
+ 	       $postheader = '<header class="entry-header">' . thematic_postheader_posttitle() . thematic_postheader_postmeta() . "</header><!-- .entry-header -->\n";    
  	   }
  	   
  	   echo apply_filters( 'thematic_postheader', $postheader ); // Filter to override default post header
