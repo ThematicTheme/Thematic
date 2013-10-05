@@ -21,6 +21,14 @@ class TestContentExtensions extends Thematic_UnitTestCase {
 		$this->assertRegexp( '/<\/h1>$/', $content );
 	}
 	
+	function test_thematic_link_pages_args() {
+		$post = $this->factory->post->create_and_get( array( 'post_content' => 'Page 0<!--nextpage-->Page 1<!--nextpage-->Page 2<!--nextpage-->Page 3' ) );
+		setup_postdata( $post );
+		
+		$content = wp_link_pages( array( 'before' => sprintf( '<nav class="page-link">%s', __( 'Pages:', 'thematic' ) ),'after' => '</nav>', 'echo' => '0' ) );
+		$this->assertRegexp( '/^<nav/', $content );
+	}
+	
 	function test_thematic_postfooter() {
 		$this->expectOutputRegex( '/<footer/', thematic_postfooter() );	
 	}

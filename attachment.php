@@ -51,7 +51,8 @@
 	                        <?php 
 	                        	the_content( thematic_more_text() );
 
-	                        	wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'thematic' ) . '&after=</div>' );
+	                        	wp_link_pages( array( 'before' => sprintf( '<nav class="page-link">%s', __( 'Pages:', 'thematic' ) ),
+															'after' => '</nav>' ) );
 	                        ?>
 
 					</div><!-- .entry-content -->

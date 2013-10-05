@@ -151,6 +151,17 @@ function thematic_postfooter_xhtml( $content ) {
 add_filter( 'thematic_postfooter', 'thematic_postfooter_xhtml' );
 
 
+/**
+ * Filter wp_link_pages_args to use <div> tags
+ */
+function thematic_link_pages_args_xhtml( $args ) {
+	$args['before'] = sprintf( '<div class="page-link">%s', __( 'Pages:', 'thematic' ) ); 
+	$args['after'] = '</div>';
+	return $args;
+}
+add_filter( 'wp_link_pages_args', 'thematic_link_pages_args_xhtml' );
+
+
 // Restore nav below to use <div> tags instead of <nav>
 if ( !function_exists( 'childtheme_override_nav_below' ) ) {
 	/**

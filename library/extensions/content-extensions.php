@@ -627,8 +627,8 @@ if (function_exists('childtheme_override_index_loop'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'thematic')),
-													'after' => '</div>')); ?>
+						<?php wp_link_pages( array( 'before' => sprintf( '<nav class="page-link">%s', __( 'Pages:', 'thematic' ) ),
+													'after' => '</nav>' ) ); ?>
 					
 					</div><!-- .entry-content -->
 					
@@ -686,8 +686,8 @@ if (function_exists('childtheme_override_single_post'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'thematic')),
-													'after' => '</div>')); ?>
+						<?php wp_link_pages( array( 'before' => sprintf( '<nav class="page-link">%s', __( 'Pages:', 'thematic' ) ),
+													'after' => '</nav>' ) ); ?>
 						
 					</div><!-- .entry-content -->
 					

@@ -48,7 +48,7 @@
 	                    <?php
 	                    	the_content();
 	                    
-	                    	wp_link_pages( "\t\t\t\t\t<div class='page-link'>" . __( 'Pages: ', 'thematic' ), "</div>\n", 'number' );
+	                    	wp_link_pages( "\t\t\t\t\t<nav class='page-link'>" . __( 'Pages: ', 'thematic' ), "</nav>\n", 'number' );
 	                    
 	                    	edit_post_link( __( 'Edit', 'thematic' ), '<span class="edit-link">','</span>' );
 	                    ?>

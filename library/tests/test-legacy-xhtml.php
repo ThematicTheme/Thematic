@@ -83,6 +83,16 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->assertRegexp( '/^<div/', $actual );
 	}
 	
+	function test_xhtml_thematic_link_pages_args() {
+		$post = $this->factory->post->create_and_get( array( 'post_content' => 'Page 0<!--nextpage-->Page 1<!--nextpage-->Page 2<!--nextpage-->Page 3' ) );
+		setup_postdata( $post );
+		
+		$content = wp_link_pages( array( 'before' => sprintf( '<nav class="page-link">%s', __( 'Pages:', 'thematic' ) ),'after' => '</nav>', 'echo' => '0' ) );
+		
+		$this->assertRegexp( '/^<div/', $content );
+		$this->assertRegexp( '/<\/div>$/', $content );
+	}
+	
 	function test_xhtml_nav_below() {
 		$this->expectOutputRegex( '/<div id="nav-below"/', thematic_nav_below() );	
 	}
