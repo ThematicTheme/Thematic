@@ -6,10 +6,55 @@
  */
 
 class TestContentExtensions extends Thematic_UnitTestCase {
+	
+	function setUp() {
+		parent::setUp();
+		
+		/* Create and setup a loop for testing */
+		$post_ids = $this->factory->post->create_many( 10 );
+		foreach ( $post_ids as $post_id )
+			clean_post_cache( $post_id );
+			
+		$query = new WP_Query( array(
+			'post_type' => 'post',
+			'posts_per_page' => 3,
+		) );
+		
+		$GLOBALS['wp_query'] = $query;
+	}
 
 	function test_thematic_nav_above() {
 		$this->expectOutputRegex( '/<nav id="nav-above"/', thematic_nav_above() );	
 	}
+	
+	function test_thematic_archiveloop() {		
+		$this->expectOutputRegex( '/<article id="post/', thematic_archiveloop() );
+	}
+	
+	function test_thematic_authorloop() {		
+		$this->expectOutputRegex( '/<article id="post/', thematic_authorloop() );
+	}
+	
+	function test_thematic_categoryloop() {		
+		$this->expectOutputRegex( '/<article id="post/', thematic_categoryloop() );
+	}
+	
+	function test_thematic_indexloop() {		
+		$this->expectOutputRegex( '/<article id="post/', thematic_indexloop() );
+	}
+	
+	function test_thematic_searchloop() {		
+		$this->expectOutputRegex( '/<article id="post/', thematic_searchloop() );
+	}
+	
+	function test_thematic_singlepost() {		
+		$this->expectOutputRegex( '/<article id="post/', thematic_singlepost() );
+	}
+	
+	function test_thematic_tagloop() {		
+		$this->expectOutputRegex( '/<article id="post/', thematic_tagloop() );
+	}
+	
 	
 	function test_thematic_postheader() {
 		$this->expectOutputRegex( '/<header/', thematic_postheader() );	

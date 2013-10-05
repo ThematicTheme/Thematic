@@ -24,6 +24,19 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->theme_options['legacy_xhtml'] = '1';
 		
 		$this->update_test_options( 'thematic_theme_opt', $this->theme_options );
+		
+		/* Create and setup a loop for testing */
+		$post_ids = $this->factory->post->create_many( 10 );
+		foreach ( $post_ids as $post_id )
+			clean_post_cache( $post_id );
+			
+		$query = new WP_Query( array(
+			'post_type' => 'post',
+			'posts_per_page' => 5,
+		) );
+		
+		$GLOBALS['wp_query'] = $query;
+		
 	}
 	
 	
@@ -60,6 +73,35 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 	function test_xhtml_nav_above() {
 		$this->expectOutputRegex( '/<div id="nav-above"/', thematic_nav_above() );	
 	}
+	
+	function test_thematic_archiveloop_xhtml() {		
+		$this->expectOutputRegex( '/<div id="post/', thematic_archiveloop() );
+	}
+	
+	function test_thematic_authorloop_xhtml() {		
+		$this->expectOutputRegex( '/<div id="post/', thematic_authorloop() );
+	}
+	
+	function test_thematic_categoryloop_xhtml() {		
+		$this->expectOutputRegex( '/<div id="post/', thematic_categoryloop() );
+	}
+	
+	function test_thematic_indexloop_xhtml() {		
+		$this->expectOutputRegex( '/<div id="post/', thematic_indexloop() );
+	}
+	
+	function test_thematic_searchloop_xhtml() {		
+		$this->expectOutputRegex( '/<div id="post/', thematic_searchloop() );
+	}
+	
+	function test_thematic_singlepost_xhtml() {		
+		$this->expectOutputRegex( '/<div id="post/', thematic_singlepost() );
+	}
+	
+	function test_thematic_tagloop_xhtml() {		
+		$this->expectOutputRegex( '/<div id="post/', thematic_tagloop() );
+	}
+	
 	
 	function test_xhtml_thematic_postheader() {
 		$content = '<header class="entry-header">' . thematic_postheader_posttitle() . '</header>';

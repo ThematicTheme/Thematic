@@ -117,6 +117,167 @@ if ( !function_exists( 'childtheme_override_nav_above' ) )  {
 
 
 /**
+ * The default xhtml loop
+ */
+function thematic_default_loop_xhtml() {
+	if ( is_author() ) 
+		rewind_posts();
+		
+	while ( have_posts() ) : the_post(); 
+
+			// action hook for insterting content above #post
+			thematic_abovepost(); 
+			?>
+
+			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
+			<?php
+
+				// creating the post header
+				thematic_postheader();
+			?>
+				
+				<div class="entry-content">
+					
+					<?php thematic_content(); ?>
+
+				</div><!-- .entry-content -->
+				
+				<?php thematic_postfooter(); ?>
+				
+			</div><!-- #post -->
+
+		<?php 
+			// action hook for insterting content below #post
+			thematic_belowpost();
+	
+	endwhile;
+}
+// replace the archive loop
+if ( !function_exists( 'childtheme_override_archive_loop' ) ) {
+	remove_action( 'thematic_archiveloop', 'thematic_archive_loop');
+	add_action( 'thematic_archiveloop', 'thematic_default_loop_xhtml' );
+}
+
+// replace the author loop
+if ( !function_exists( 'childtheme_override_author_loop' ) ) {
+	remove_action( 'thematic_authorloop', 'thematic_author_loop');
+	add_action( 'thematic_authorloop', 'thematic_default_loop_xhtml' );
+}
+
+// replace the category loop
+if ( !function_exists( 'childtheme_override_category_loop' ) ) {
+	remove_action( 'thematic_categoryloop', 'thematic_category_loop');
+	add_action( 'thematic_categoryloop', 'thematic_default_loop_xhtml' );
+}
+
+// replace the search loop
+if ( !function_exists( 'childtheme_override_search_loop' ) ) {
+	remove_action( 'thematic_searchloop', 'thematic_search_loop' );
+	add_action( 'thematic_searchloop', 'thematic_default_loop_xhtml' );
+}
+
+// replace the tag loop
+if ( !function_exists( 'childtheme_override_tag_loop' ) ) {
+	remove_action( 'thematic_tagloop', 'thematic_tag_loop');
+	add_action( 'thematic_tagloop', 'thematic_default_loop_xhtml' );
+}
+
+
+/**
+ * The index xhtml loop
+ */
+function thematic_index_loop_xhtml() {
+	// Count the number of posts so we can insert a widgetized area
+	$count = 1;
+	while ( have_posts() ) : the_post();
+
+			// action hook for inserting content above #post
+			thematic_abovepost();
+			?>
+
+			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
+			<?php
+
+				// creating the post header
+				thematic_postheader();
+            ?>
+ 				
+				<div class="entry-content">
+				
+					<?php thematic_content(); ?>
+
+					<?php wp_link_pages( array( 'before' => sprintf( '<div class="page-link">%s', __( 'Pages:', 'thematic' ) ),
+												'after' => '</div>' ) ); ?>
+				
+				</div><!-- .entry-content -->
+				
+				<?php thematic_postfooter(); ?>
+				
+			</div><!-- #post -->
+
+		<?php 
+			// action hook for insterting content below #post
+			thematic_belowpost();
+			
+			comments_template();
+
+			if ( $count == thematic_get_theme_opt( 'index_insert' ) ) {
+				get_sidebar('index-insert');
+			}
+			$count = $count + 1;
+	endwhile;
+}
+// replace the index loop
+if ( !function_exists( 'childtheme_override_index_loop' ) ) {
+	remove_action( 'thematic_indexloop', 'thematic_index_loop');
+	add_action( 'thematic_indexloop', 'thematic_index_loop_xhtml' );
+}
+
+
+/**
+ * The single posts xhtml loop
+ */
+function thematic_single_post_xhtml() {
+	while ( have_posts() ) : the_post(); 
+	
+			// action hook for insterting content above #post
+			thematic_abovepost();
+			?>
+		
+			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
+			<?php
+				// creating the post header
+				thematic_postheader();
+			?>
+ 				
+				<div class="entry-content">
+				
+					<?php thematic_content(); ?>
+
+					<?php wp_link_pages( array( 'before' => sprintf( '<div class="page-link">%s', __( 'Pages:', 'thematic' ) ),
+												'after' => '</div>' ) ); ?>
+					
+				</div><!-- .entry-content -->
+				
+				<?php thematic_postfooter(); ?>
+				
+			</div><!-- #post -->
+	<?php
+		// action hook for insterting content below #post
+		thematic_belowpost();
+	endwhile;
+}
+// replace the single post loop
+if ( !function_exists( 'childtheme_override_single_post' ) ) {
+	remove_action( 'thematic_singlepost', 'thematic_single_post');
+	add_action( 'thematic_singlepost', 'thematic_single_post_xhtml' );
+}
+
+
+/**
  * Filter thematic_postheader to remove the <header> element
  */
 function thematic_postheader_xhtml( $content ) {
