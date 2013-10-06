@@ -106,25 +106,19 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 	
 	
 	function test_xhtml_thematic_postheader() {
-		$content = '<header class="entry-header">' . thematic_postheader_posttitle() . '</header>';
-		$this->assertRegexp( '/^<header/', $content );-
-		$actual = apply_filters( 'thematic_postheader', $content );
-		$this->assertRegexp( '/^\n\n\t\t\t\t\t<h2/', $actual );
+		$content = get_echo( 'thematic_postheader' );
+		$this->assertRegexp( '/^\n\n\t\t\t\t\t<h2/', $content );
 	}
 	
 	function test_xhtml_thematic_postheader_posttitle() {
 		$content = thematic_postheader_posttitle();
-		//$this->assertRegexp( '/^<header/', $content );-
-		$actual = apply_filters( 'thematic_postheader_posttitle', $content );
-		$this->assertRegexp( '/^\n\n\t\t\t\t\t<h2/', $actual );
-		$this->assertRegexp( '/<\/h2>$/', $actual );
+		$this->assertRegexp( '/^\n\n\t\t\t\t\t<h2/', $content );
+		$this->assertRegexp( '/<\/h2>$/', $content );
 	}
 	
 	function test_xhtml_thematic_postfooter() {
-		$content = '<footer class="entry-utility">' . thematic_postfooter_posteditlink() . '</footer><!-- .entry-utility -->';
-		$this->assertRegexp( '/^<footer/', $content );-
-		$actual = apply_filters( 'thematic_postfooter', $content );
-		$this->assertRegexp( '/^<div/', $actual );
+		$content = get_echo( 'thematic_postfooter' );
+		$this->assertRegexp( '/^<div/', $content );
 	}
 	
 	function test_xhtml_thematic_link_pages_args() {
