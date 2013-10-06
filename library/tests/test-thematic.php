@@ -5,6 +5,9 @@
  * @package ThematicUnitTests
  */
 
+/**
+ * @group default
+ */
 class Thematic_UnitTestCase extends WP_UnitTestCase {
 	
 	/**

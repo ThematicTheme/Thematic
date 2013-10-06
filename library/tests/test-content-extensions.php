@@ -5,6 +5,9 @@
  * @package ThematicUnitTests
  */
 
+/**
+ * @group default
+ */
 class TestContentExtensions extends Thematic_UnitTestCase {
 	
 	function setUp() {

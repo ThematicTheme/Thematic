@@ -7,7 +7,9 @@
  * @package ThematicUnitTests
  */
 
-
+/**
+ * @group legacy
+ */
 class TestLegacyXTHML extends Thematic_UnitTestCase {
 	
 	function setUp() {
