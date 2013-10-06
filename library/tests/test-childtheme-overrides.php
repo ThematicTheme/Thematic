@@ -29,9 +29,36 @@ class TestChildthemeOverrides extends Thematic_UnitTestCase {
 	}
 
 	function test_thematic_override_archive_loop() {
-		//do_action('thematic_archiveloop');		
-		//$this->assertTrue( 'OVERRIDES_INCLUDED' );
 		$this->assertEquals( 'override archive loop!', get_echo( 'thematic_archiveloop' )  );
 	}
 	
+	
+	function test_thematic_override_author_loop() {
+		$this->assertEquals( 'override author loop!', get_echo( 'thematic_authorloop' )  );
+	}
+	
+	
+	function test_thematic_override_category_loop() {
+		$this->assertEquals( 'override category loop!', get_echo( 'thematic_categoryloop' )  );
+	}
+	
+	
+	function test_thematic_override_index_loop() {
+		$this->assertEquals( 'override index loop!', get_echo( 'thematic_indexloop' )  );
+	}
+	
+	
+	function test_thematic_override_search_loop() {
+		$this->assertEquals( 'override search loop!', get_echo( 'thematic_searchloop' )  );
+	}
+	
+	
+	function test_thematic_override_single_post() {
+		$this->assertEquals( 'override single post loop!', get_echo( 'thematic_singlepost' )  );
+	}
+	
+	
+	function test_thematic_override_tag_loop() {
+		$this->assertEquals( 'override tag loop!', get_echo( 'thematic_tagloop' )  );
+	}
 }
