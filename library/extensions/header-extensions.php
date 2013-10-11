@@ -408,6 +408,52 @@ function thematic_show_pingback() {
     }
 }
 
+
+/**
+ * Add html5 shiv for older browser compatibility
+ * 
+ * Filter: thematic_modernizr_handles
+ * Filter: thematic_use_html5shiv
+ * Filter: thematic_html5shiv
+ * 
+ * @since 2.0
+ */
+function thematic_add_html5shiv() {
+	
+	$use_shiv = true;
+	
+	// List of handles to look for. These scripts make the html5shiv unnecessary
+	$possible_handles = array(
+		'modernizr',
+		'modernizr-js'
+	);
+	
+	// Allow themes to add their handles
+	$possible_handles = apply_filters( 'thematic_modernizr_handles', $possible_handles );
+	
+	// Check if any other scripts has been enqueued
+	foreach( $possible_handles as $handle) {
+		if( wp_script_is( $handle, 'queue' ) )
+			$use_shiv = false;
+	}
+	
+	// Allow themes/plugins to switch off the shiv
+	$use_shiv = apply_filters( 'thematic_use_html5shiv', $use_shiv );
+	
+	// Output script link
+	if( $use_shiv ) {
+		$content  = '<!--[if lt IE 9]>' . "\n";
+		$content .= '<script src="' . get_template_directory_uri() . '/library/js/html5.js"></script>' . "\n";
+		$content .= '<![endif]-->';
+	
+		echo apply_filters( 'thematic_html5shiv', $content );
+	}
+	
+}
+
+add_action( 'wp_head', 'thematic_add_html5shiv', 20 );
+
+
 /**
  * Add the default stylesheet to the head of the document.
  * 
