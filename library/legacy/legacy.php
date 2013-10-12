@@ -52,6 +52,17 @@ if ( !function_exists( 'childtheme_override_meta_charset' ) ) {
 }
 
 
+/**
+ * Add filter to wp_list_comments arguments to use xhtml comments callback
+ * 
+ * @param $content array Previous arguments
+ * @return $content array Array with new arguments
+ */
+function thematic_comments_arg_xhtml( $content ) {
+	$content[ 'callback' ] = 'thematic_comments_xhtml';
+	return $content;
+}
+add_filter( 'list_comments_arg', 'thematic_comments_arg_xhtml' );
 
 
 
