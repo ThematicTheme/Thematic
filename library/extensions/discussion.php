@@ -20,43 +20,47 @@ function thematic_comments($comment, $args, $depth) {
 	$GLOBALS['comment_depth'] = $depth;
 ?>
     
-       	<li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
-    	
-    		<?php 
-    			// action hook for inserting content above #comment
-    			thematic_abovecomment();
-    		?>
-    		
-    		<div class="comment-author vcard"><?php thematic_commenter_link() ?></div>
-    		
-    			<?php thematic_commentmeta(TRUE); ?>
-    		
-    			<?php  
-    				if ( $comment->comment_approved == '0' ) {
-    					echo "\t\t\t\t\t" . '<span class="unapproved">';
-    					_e( 'Your comment is awaiting moderation', 'thematic' );
-    					echo ".</span>\n";
-    				}
-    			?>
-    			
-            <div class="comment-content">
-            
-        		<?php comment_text() ?>
-        		
-    		</div>
-    		
-			<?php // echo the comment reply link with help from Justin Tadlock http://justintadlock.com/ and Will Norris http://willnorris.com/
-				
-				if( $args['type'] == 'all' || get_comment_type() == 'comment' ) :
-					comment_reply_link( array_merge( $args, array(
-						'reply_text' => __( 'Reply','thematic' ), 
-						'login_text' => __( 'Log in to reply.','thematic' ),
-						'depth'      => $depth,
-						'before'     => '<div class="comment-reply-link">', 
-						'after'      => '</div>'
-					)));
-				endif;
+	   	<li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
+		
+			<?php 
+				// action hook for inserting content above #comment
+				thematic_abovecomment();
 			?>
+			
+			<article id="comment-body-<?php comment_ID() ?>" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard"><?php thematic_commenter_link() ?></div><!-- .comment-author -->
+			
+						<?php thematic_commentmeta( true ); ?>
+			
+						<?php  
+							if ( $comment->comment_approved == '0' ) {
+								echo "\t\t\t\t\t" . '<span class="unapproved">';
+								_e( 'Your comment is awaiting moderation', 'thematic' );
+								echo ".</span>\n";
+							}
+						?>
+				</footer><!-- .comment-meta -->
+				
+		        <div class="comment-content">
+		    		<?php comment_text() ?>
+				</div><!-- .comment-content -->
+			
+				<?php // echo the comment reply link with help from Justin Tadlock http://justintadlock.com/ and Will Norris http://willnorris.com/
+				
+					if( $args['type'] == 'all' || get_comment_type() == 'comment' ) :
+						comment_reply_link( array_merge( $args, array(
+							'add_below'  => 'comment-body',
+							'reply_text' => __( 'Reply','thematic' ), 
+							'login_text' => __( 'Log in to reply.','thematic' ),
+							'depth'      => $depth,
+							'before'     => '<div class="comment-replylink">', 
+							'after'      => '</div>'
+						)));
+					endif;
+				?>
+			
+			</article><!-- .comment-body -->
 			
 			<?php
 				// action hook for inserting content above #comment

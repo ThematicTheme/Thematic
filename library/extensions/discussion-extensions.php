@@ -22,11 +22,13 @@ if (function_exists('childtheme_override_commentmeta'))  {
 	 * Override: childtheme_override_commentmeta <br>
 	 * Filter: thematic_commentmeta
 	 */
-	function thematic_commentmeta($print = TRUE) {
-		$content = '<div class="comment-meta">' . 
-					sprintf( _x('Posted %s at %s', 'Posted {$date} at {$time}', 'thematic') , 
+	function thematic_commentmeta( $print = true ) {
+		$content = '<div class="comment-metadata">';
+		$content .= '<time datetime="'. get_comment_time( 'c' ). '">'; 
+		$content .= sprintf( _x('Posted %s at %s', 'Posted {$date} at {$time}', 'thematic') , 
 						get_comment_date(),
 						get_comment_time() );
+		$content .= '</time>';
 
 		$content .= ' <span class="meta-sep">|</span> ' . sprintf( '<a href="%1$s" title="%2$s">%3$s</a>', '#comment-' . get_comment_ID() , __( 'Permalink to this comment', 'thematic' ), __( 'Permalink', 'thematic' ) );
 							
@@ -39,7 +41,7 @@ if (function_exists('childtheme_override_commentmeta'))  {
 		
 		$content .= '</div>' . "\n";
 			
-		return $print ? print(apply_filters('thematic_commentmeta', $content)) : apply_filters('thematic_commentmeta', $content);
+		return $print ? print( apply_filters( 'thematic_commentmetadata', $content ) ) : apply_filters( 'thematic_commentmeta', $content );
 
 	} // end thematic_commentmeta
 }
