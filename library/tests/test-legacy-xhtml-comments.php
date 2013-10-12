@@ -9,7 +9,7 @@
 /**
  * @group legacy
  */
-class TestComments extends Thematic_UnitTestCase {
+class TestLegacyComments extends Thematic_UnitTestCase {
 	
 	function setUp() {
 		/* Load the legacy files before anything else - needed for childtheme_overrides* to work */
