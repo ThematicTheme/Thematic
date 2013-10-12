@@ -62,7 +62,7 @@ function thematic_comments_arg_xhtml( $content ) {
 	$content[ 'callback' ] = 'thematic_comments_xhtml';
 	return $content;
 }
-add_filter( 'list_comments_arg', 'thematic_comments_arg_xhtml' );
+add_filter( 'thematic_list_comments_arg', 'thematic_comments_arg_xhtml' );
 
 
 /**

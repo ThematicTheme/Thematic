@@ -143,7 +143,7 @@ function thematic_list_comments_arg() {
 		'type' => 'comment',
 		'callback' => 'thematic_comments'
 	);
-	return apply_filters('list_comments_arg', $content);
+	return apply_filters( 'thematic_list_comments_arg', $content );
 }
 
 

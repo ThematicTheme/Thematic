@@ -48,7 +48,7 @@ class TestComments extends Thematic_UnitTestCase {
 			'type' => 'comment',
 			'callback' => 'thematic_comments'
 		);
-		$actual = apply_filters('list_comments_arg', $args);
+		$actual = apply_filters( 'thematic_list_comments_arg', $args );
 		
 		$this->assertEquals( 'thematic_comments_xhtml', $actual[ 'callback' ] );
 	}
