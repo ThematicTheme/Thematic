@@ -16,6 +16,24 @@
  */
 function thematic_customize_register( $wp_customize ) {
 	
+	/**
+	 * Create a custom control to use a textarea for the footer text
+	 * 
+	 * @link http://ottopress.com/2012/making-a-custom-control-for-the-theme-customizer/
+	 */
+	class Thematic_Customize_Textarea_Control extends WP_Customize_Control {
+	    public $type = 'textarea';
+
+	    public function render_content() {
+	        ?>
+	        <label>
+	        <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+	        <textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+	        </label>
+	        <?php
+	    }
+	}
+	
 	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -40,15 +58,16 @@ function thematic_customize_register( $wp_customize ) {
 	) );
  
 	// Add control for footer text 
-	$wp_customize->add_control( 'thematic_theme_opt[footer_txt]', array(
+	$wp_customize->add_control( new Thematic_Customize_Textarea_Control( $wp_customize, 'thematic_theme_opt[footer_txt]', array(
 		'label'			=> __('Footer text', 'thematic'),
 		'section'		=> 'thematic_footer_text',
-		'type'			=> 'text',
+		'type'			=> 'textarea',
 		'settings'		=> 'thematic_theme_opt[footer_txt]'
-	) );
+	) ) );
 	
 }
 add_action( 'customize_register', 'thematic_customize_register' );
+
 
 /**
  * Bind JS handlers to make Theme Customizer preview reload changes asynchronously.
