@@ -48,3 +48,13 @@ function thematic_customize_register( $wp_customize ) {
 	
 }
 add_action( 'customize_register', 'thematic_customize_register' );
+
+/**
+ * Bind JS handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @since 2.0
+ */
+function thematic_customize_preview_js() {
+	wp_enqueue_script( 'thematic_customizer', get_template_directory_uri() . '/library/js/customizer.js', array( 'customize-preview' ), '20131119', true );
+}
+add_action( 'customize_preview_init', 'thematic_customize_preview_js' );
