@@ -137,6 +137,9 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		// Load shortcodes
 		require_once ( THEMATIC_LIB . '/extensions/shortcodes.php' );
 
+		// Load Theme Customizer support
+		require_once ( THEMATIC_LIB . '/extensions/customizer.php' );
+		
 		// Adds filters for the description/meta content in archive templates
 		add_filter( 'archive_meta', 'wptexturize' );
 		add_filter( 'archive_meta', 'convert_smilies' );
