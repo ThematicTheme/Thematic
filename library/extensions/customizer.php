@@ -22,9 +22,10 @@ function thematic_customize_register( $wp_customize ) {
 	
 	// Add section for thematic footer options 
     $wp_customize->add_section( 'thematic_footer_text', array(
-        'title'			=> __( 'Footer', 'tornfeldt'),
-        'priority'		=> 135,
-    ) );
+		'title'			=> __( 'Footer', 'thematic'),
+		'description'	=> sprintf( _x('You can use HTML and shortcodes in your footer text. Shortcode examples: %s', '%s are shortcode tags', 'thematic'), '[wp-link] [theme-link] [loginout-link] [blog-title] [blog-link] [the-year]' ),
+		'priority'		=> 135,
+	) );
 	
 	// Get the default thematic footer text 
 	$thematic_defaults = thematic_default_opt();
@@ -32,19 +33,19 @@ function thematic_customize_register( $wp_customize ) {
 
 	// Add setting for footer text 
     $wp_customize->add_setting( 'thematic_theme_opt[footer_txt]', array(
-        'default'		=> $thematic_default_footertext,
+		'default'		=> $thematic_default_footertext,
 		'type'			=> 'option',
 		'capability'	=> 'edit_theme_options',
 		'transport'		=> 'postMessage'
-    ) );
+	) );
  
 	// Add control for footer text 
-    $wp_customize->add_control( 'thematic_theme_opt[footer_txt]', array(
-        'label'			=> __('Footer text', 'thematic'),
-        'section'		=> 'thematic_footer_text',
-        'type'			=> 'text',
+	$wp_customize->add_control( 'thematic_theme_opt[footer_txt]', array(
+		'label'			=> __('Footer text', 'thematic'),
+		'section'		=> 'thematic_footer_text',
+		'type'			=> 'text',
 		'settings'		=> 'thematic_theme_opt[footer_txt]'
-    ) );
+	) );
 	
 }
 add_action( 'customize_register', 'thematic_customize_register' );
