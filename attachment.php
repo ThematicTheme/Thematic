@@ -36,7 +36,7 @@
 				thematic_abovepost();
 			?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -62,7 +62,7 @@
 	                	thematic_postfooter();
 	                ?>
 
-				</div><!-- #post -->
+				</article><!-- #post -->
 
 	            <?php
 					// action hook for placing contentbelow #post

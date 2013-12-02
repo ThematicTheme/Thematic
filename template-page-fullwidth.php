@@ -35,7 +35,7 @@
 	            thematic_abovepost();
 	        ?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -55,7 +55,7 @@
 	
 					</div>
 					
-				</div><!-- .post -->
+				</article><!-- .post -->
 	
 			<?php
 				// calls the do_action for inserting content below #post
