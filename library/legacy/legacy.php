@@ -5,6 +5,33 @@
  * @package ThematicLegacy
  */
 
+/**
+ * Load legacy template files when needed
+ * 
+ * @since 2.0
+ */
+function thematic_load_legacy_template_files( $template ) {
+		
+	if( is_attachment() )
+		$template = THEMATIC_LIB . '/legacy/legacy-attachment.php';
+		
+	if( is_page() )
+		$template = THEMATIC_LIB . '/legacy/legacy-page.php';
+		
+	if( is_page_template( 'links.php' ) )
+		$template = THEMATIC_LIB . '/legacy/legacy-links.php';
+		
+	if( is_page_template( 'template-page-archives.php' ) )
+		$template = THEMATIC_LIB . '/legacy/legacy-template-page-archives.php';
+		
+	if( is_page_template( 'template-page-fullwidth.php' ) )
+		$template = THEMATIC_LIB . '/legacy/legacy-template-page-fullwidth.php';
+		
+	return $template;
+}
+add_filter( 'template_include', 'thematic_load_legacy_template_files' );
+
+
 // Restore xhtml1.0 doctype and version 1.0.4 html tag
 // Check for new overrides before restoring legacy functionality
 if ( !function_exists( 'childtheme_override_doctype' ) || !function_exists( 'childtheme_override_html' )  ) {
