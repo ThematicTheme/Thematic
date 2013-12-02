@@ -428,7 +428,17 @@ function thematic_add_html5shiv() {
 		'modernizr-js'
 	);
 	
-	// Allow themes to add their handles
+	/**
+	 * Filter the possible script handles that makes the html5 shiv unnecessary.
+	 * 
+	 * The handles are strings used as id in the call to <code>wp_enqueue_script()</code>.
+	 * If a script with any of these handles is enqueued by a child theme or plugin, Thematic
+	 * will not add the html5 shiv.
+	 * 
+	 * @since 2.0
+	 * 
+	 * @param  array  $possible_handles  Array of handle names
+	 */
 	$possible_handles = apply_filters( 'thematic_modernizr_handles', $possible_handles );
 	
 	// Check if any other scripts has been enqueued
@@ -437,7 +447,16 @@ function thematic_add_html5shiv() {
 			$use_shiv = false;
 	}
 	
-	// Allow themes/plugins to switch off the shiv
+	/**
+	 * Decide whether to use the html5shiv or not
+	 * 
+	 * Provides a shortcut to switch off the shiv. Defaults to true,
+	 * unless modernizr is detected.
+	 * 
+	 * @since 2.0
+	 * 
+	 * @param  boolean  $use_shiv
+	 */
 	$use_shiv = apply_filters( 'thematic_use_html5shiv', $use_shiv );
 	
 	// Output script link
@@ -446,6 +465,13 @@ function thematic_add_html5shiv() {
 		$content .= '<script src="' . get_template_directory_uri() . '/library/js/html5.js"></script>' . "\n";
 		$content .= '<![endif]-->';
 	
+		/**
+		 * Filter the output string of the html5shiv link
+		 * 
+		 * @since 2.0
+		 * 
+		 * @param  string  $content  The complete string that gets output to wp_head
+		 */
 		echo apply_filters( 'thematic_html5shiv_output', $content );
 	}
 	
