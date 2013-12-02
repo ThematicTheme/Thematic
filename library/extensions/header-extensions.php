@@ -446,7 +446,7 @@ function thematic_add_html5shiv() {
 		$content .= '<script src="' . get_template_directory_uri() . '/library/js/html5.js"></script>' . "\n";
 		$content .= '<![endif]-->';
 	
-		echo apply_filters( 'thematic_html5shiv', $content );
+		echo apply_filters( 'thematic_html5shiv_output', $content );
 	}
 	
 }
