@@ -98,10 +98,14 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		// Create Theme Options Page
 		require_once ( THEMATIC_LIB . '/extensions/theme-options.php' );
 		
+		// Need a little help from our helper functions
+		require_once ( THEMATIC_LIB . '/extensions/helpers.php' );
+		
 		// Load legacy functions
 		require_once ( THEMATIC_LIB . '/legacy/deprecated.php' );
 		
-		if ( !is_admin() && thematic_get_theme_opt( 'legacy_xhtml' ) == 1 ) {
+		// Load overrides to activate the old xhtml markup if set
+		if ( !is_admin() && thematic_is_legacy_xhtml() ) {
 			add_theme_support( 'thematic_legacy' );
 			require_once ( THEMATIC_LIB . '/legacy/legacy.php' );
 		}
@@ -135,9 +139,6 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 
 		// Add Dynamic Contextual Semantic Classes
 		require_once ( THEMATIC_LIB . '/extensions/dynamic-classes.php' );
-
-		// Need a little help from our helper functions
-		require_once ( THEMATIC_LIB . '/extensions/helpers.php' );
 
 		// Load shortcodes
 		require_once ( THEMATIC_LIB . '/extensions/shortcodes.php' );
