@@ -414,7 +414,7 @@ function thematic_show_pingback() {
  * 
  * Filter: thematic_modernizr_handles
  * Filter: thematic_use_html5shiv
- * Filter: thematic_html5shiv
+ * Filter: thematic_html5shiv_output
  * 
  * @since 2.0
  */
