@@ -581,7 +581,7 @@ function thematic_nav_menu_args() {
 	$args = array (
 		'theme_location'	=> apply_filters( 'thematic_primary_menu_id', 'primary-menu' ),
 		'menu'				=> '',
-		'container'			=> 'div',
+		'container'			=> 'nav',
 		'container_class'	=> 'menu',
 		'menu_class'		=> 'sf-menu',
 		'fallback_cb'		=> 'wp_page_menu',

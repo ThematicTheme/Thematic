@@ -5,7 +5,9 @@
  * @package ThematicUnitTests
  */
 
-
+/**
+ * @group default
+ */
 class TestHeaderExtensions extends Thematic_UnitTestCase {
 
 	function testThematicDoctype() {

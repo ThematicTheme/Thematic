@@ -5,7 +5,7 @@
  * Displays singular WordPress Media Library items.
  *
  * @package Thematic
- * @subpackage Templates
+ * @subpackage LegacyTemplates
  *
  * @link http://codex.wordpress.org/Using_Image_and_File_Attachments Codex:Using Attachments
  */
@@ -36,7 +36,7 @@
 				thematic_abovepost();
 			?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -51,8 +51,8 @@
 	                        <?php 
 	                        	the_content( thematic_more_text() );
 
-	                        	wp_link_pages( array( 'before' => sprintf( '<nav class="page-link">%s', __( 'Pages:', 'thematic' ) ),
-															'after' => '</nav>' ) );
+	                        	wp_link_pages( array( 'before' => sprintf( '<div class="page-link">%s', __( 'Pages:', 'thematic' ) ),
+															'after' => '</div>' ) );
 	                        ?>
 
 					</div><!-- .entry-content -->
@@ -62,7 +62,7 @@
 	                	thematic_postfooter();
 	                ?>
 
-				</article><!-- #post -->
+				</div><!-- #post -->
 
 	            <?php
 					// action hook for placing contentbelow #post

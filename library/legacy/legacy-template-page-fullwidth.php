@@ -1,13 +1,14 @@
 <?php
 /**
- * Page Template
+ * Template Name: Full Width
  *
- * …
+ * This Full Width template removes the primary and secondary asides so that content
+ * can be displayed the entire width of the #content area.
  * 
  * @package Thematic
- * @subpackage Templates
+ * @subpackage LegacyTemplates
  */
- 
+
     // calling the header.php
     get_header();
 
@@ -18,49 +19,49 @@
 		<div id="container" class="content-wrapper">
 		
 			<?php
-				// action hook for placing content above #content
-				thematic_abovecontent();
-
+				// action hook for inserting content above #content
+				thematic_abovecontent();		
+	    	
 				// filter for manipulating the element that wraps the content 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content">' . "\n" );
+				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content">' . "\n\n" );
 			
 				// calling the widget area 'page-top'
 	            get_sidebar('page-top');
 	
 	            // start the loop
 	            while ( have_posts() ) : the_post();
-
-				// action hook for placing content above #post
+	            
+	            // action hook for inserting content above #post
 	            thematic_abovepost();
 	        ?>
-    	     		
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
-	                
-	                // creating the post header
-	                thematic_postheader();
-				?>
+
+	            	// creating the post header
+	            	thematic_postheader();
+	            ?>
 	                
 					<div class="entry-content">
 	
-						<?php
+	                    <?php
 	                    	the_content();
 	                    
-	                    	wp_link_pages( "\t\t\t\t\t<nav class='page-link'>" . __( 'Pages: ', 'thematic' ), "</nav>\n", 'number' );
+	                    	wp_link_pages( "\t\t\t\t\t<div class='page-link'>" . __( 'Pages: ', 'thematic' ), "</div>\n", 'number' );
 	                    
-	                    	edit_post_link( __( 'Edit', 'thematic' ), "\n\t\t\t\t\t\t" . '<span class="edit-link">' , '</span>' . "\n" );
+	                    	edit_post_link( __( 'Edit', 'thematic' ), '<span class="edit-link">','</span>' );
 	                    ?>
-
-					</div><!-- .entry-content -->
-¯					
-				</article><!-- #post -->
+	
+					</div>
+					
+				</div><!-- .post -->
 	
 			<?php
-				// action hook for inserting content below #post
+				// calls the do_action for inserting content below #post
 	        	thematic_belowpost();
 	        		        
-       			// action hook for calling the comments_template
+	        	// action hook for calling the comments_template
        			thematic_comments_template();
         		
 	        	// end loop
@@ -73,18 +74,14 @@
 			</div><!-- #content -->
 			
 			<?php 
-				// action hook for placing content below #content
+				// action hook for inserting content below #content
 				thematic_belowcontent(); 
 			?> 
-			
 		</div><!-- #container -->
 
 <?php 
     // action hook for placing content below #container
     thematic_belowcontainer();
-
-    // calling the standard sidebar 
-    thematic_sidebar();
     
     // calling footer.php
     get_footer();

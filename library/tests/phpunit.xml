@@ -9,7 +9,6 @@
 	<testsuites>
 		<testsuite>
 			<directory prefix="test-" suffix=".php">.</directory>
-			<exclude>test-legacy-xhtml.php</exclude>
 		</testsuite>
 	</testsuites>
 </phpunit>

@@ -7,7 +7,7 @@
  * post-type archives nested with an unordered list of thier post-type items.
  *
  * @package Thematic
- * @subpackage Templates
+ * @subpackage LegacyTemplates
  *
  * @link http://codex.wordpress.org/Creating_an_Archive_Index Codex: Creating an Archives Index
  */
@@ -35,7 +35,7 @@
 				thematic_abovepost();
 			?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -57,7 +57,7 @@
 
 					</div><!-- .entry-content -->
 
-				</article><!-- #post -->
+				</div><!-- #post -->
 
 	        <?php
 	       		// action hook for placing contentbelow #post

@@ -5,7 +5,7 @@
  * …
  * 
  * @package Thematic
- * @subpackage Templates
+ * @subpackage LegacyTemplates
  */
  
     // calling the header.php
@@ -34,7 +34,7 @@
 	            thematic_abovepost();
 	        ?>
     	     		
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 	                
@@ -54,7 +54,7 @@
 
 					</div><!-- .entry-content -->
 ¯					
-				</article><!-- #post -->
+				</div><!-- #post -->
 	
 			<?php
 				// action hook for inserting content below #post
