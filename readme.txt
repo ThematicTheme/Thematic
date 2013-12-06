@@ -28,25 +28,38 @@ Features:
 * Options for multi-author blogs
 
 == Changelog ==
-= 1.1-alpha =
-Added: current_theme_supports checks for 'thematic_legacy' for restoring the legacy xhtml doctype
-Deprecated: thematic_create_doctype
-Added: thematic_doctype
-Added: childtheme_override_doctype
-Deprecated: thematic_create_html
-Added: Deprecated: thematic_html
-Added: childtheme_override_html
-Deprecated: thematic_create_head
-Added: Deprecated: thematic_head
-Added: childtheme_override_head
-Deprecated: thematic_show_description
-Deprecated: thematic_create_description
-Added: thematic_meta_description
-Deprecated: thematic_show_robots
-Deprecated: thematic_create_robots
-Added: thematic_meta_robots
+
+= 2.0-alpha =
+Changed: Switched markup to html5. Introduced a legacy mode for the old xhtml markup
 Changed: thematic_create_stylesheet() to append the active theme's version as query string
 Changed: thematic_create_stylesheet() comment block to note how childthemes can change this behavior
+
+Fixed: removed deprecated ereg. Props scottnix
+
+Added: unit tests in /library/tests/ directory
+Added: thematic_is_legacy_xhtml() for checking if legacy mode is active
+Added: current_theme_supports checks for 'thematic_legacy' for restoring the legacy xhtml doctype
+Added: thematic_doctype() and childtheme_override_doctype()
+Added: thematic_html() and childtheme_override_html()
+Added: thematic_head() and childtheme_override_head()
+Added: thematic_meta_description()
+Added: thematic_meta_robots()
+Added: thematic_meta_viewport()
+Added: new semantic css classes to the structural layout elements
+Added: support for Theme Customizer Preview
+
+Deprecated: thematic_create_doctype() in favor of thematic_doctype()
+Deprecated: thematic_create_html() in favor of thematic_html()
+Deprecated: thematic_create_head() in favor of thematic_head()
+Deprecated: thematic_show_description() in favor of thematic_meta_description()
+Deprecated: thematic_create_description() in favor of thematic_meta_description()
+Deprecated: thematic_show_robots() in favor of thematic_meta_robots()
+Deprecated: thematic_create_robots() in favor of thematic_meta_robots()
+
+Removed: previously deprecated files archives.php and template-page-blog.php
+Removed: redundant robots "follow" meta tag
+
+
 = 1.0.4 =
 * Removed: Backward compatibility for WP versions earlier than 3.4 specifically all calls to wp_get_theme() and get_theme_data()
 * Deprecated: thematic_legacy_help() & thematic_do_legacy_help_section()
@@ -61,6 +74,7 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Removed: deprecated arg from wp_list_categories() props scottnix
 * Fixed: thematic_validate_opt() Typo in namespacing of function props josephting
 * Fixed: thematic_validate_opt() Passing validation variable to child theme override
+
 = 1.0.3.3-beta =
 * Fixed thematic_body_class() and thematic_post_class() to correctly filter body_class() and post_class()
 * Fixed nextpaged and excerpt classes in thematic_body_class() and thematic_post_class()
@@ -68,14 +82,17 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Moved the thematic_bodyopen() functionality to thematic_body()
 * Deprecated thematic_bodyopen() because it was redundant
 * Moved thematic_body() and childtheme_override_thematic_body() from dynamic-classes.php to header-extensions.php
+
 = 1.0.3.2 =
 * Changed: Samplechildtheme custom header styling
 * Fixed: Syntax error in links.php
+
 = 1.0.3.1 =
 * Updated: Spanish and Catalan localization files
 * Added: Simplified Chinese and Serbian localization files
 * Added: XML configuration file for compatibility with WPML multilingual plugin
 * Fixed: restored missing #comment-id on comment permalinks 
+
 = 1.0.3 = 
 * Updated: Swedish, French, Estonian localization files
 * Updated: regeneration of .pot file after major update of localization strings
@@ -100,9 +117,11 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Deprecated: thematic_post_class(), modified it to filter post_class() instead
 * Fixed: replaced get_current_theme() with wp_get_theme() for Theme Review Recommendations
 * Updated: superfish/supersubs, load all superfish-related scripts in footer
+
 = 1.0.2.2 =
 * fixed invalid markup (extra span) in thematic_postmeta_authorlink()
 * fixed broken feed links in thematic_show_rss() and thematic_show_comment_rss() 
+
 = 1.0.2.1 =
 * Added: $hook argument to <code>apply_filters()</code> in <code>thematic_before_widget_area()</code> and <code>thematicafter_widget_area()</code> to filter attribute id
 * Fixed: <code>thematic_wptitle</code> to use <code>!thematic_seo()</code> logic
@@ -124,6 +143,7 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Added: THEMATIC_TEMPLATEVERSION
 * Removed: THEMELIB 
 * Added:THEMATIC_LIB
+
 = 1.0.2 =
 * Updated: German language files
 * Updated: Swedish language files
@@ -135,6 +155,7 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Added Filters: <code>thematic_open_header thematic_close_header thematic_open_footer thematic_close_footer</code>
 * Updated locales: sv_SE fr_FR
 * Added locales: lt, tr_TR, he_IL
+
 = 1.0 =
 * Moved: conditional comment handling from page templates to <code>thematic_include_comments()</code>
 * Fixed: many templates misuse of the <code>the_post()</code> 
@@ -252,13 +273,17 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Fixed: Reinstated thematic_nav_menu filter.
 * Fixed: Undefined variable $redirect in thmfooter_login_link() from shortcodes.php.
 * Fixed: The override part of a few functions creating the header missed the add_action part.
+
 = 0.9.7.7 =
+
 * Fixed: search.php call to undefined function blog_info().
 * Fixed: Theme Review Images Test via CSS.
+
 = 0.9.7.6 =
 * Fixed: "Constant * already defined" notices when defining constants in a child themes.
 * Fixed: "Undefined variable" $id, $aria_req notices when using default comment_form().
 * Fixed: "Undefined constant assumed get_post_type_object" notice in thematic_post_class.
+
 = 0.9.7.5 =
 * Added: The constant THEMATIC_COMPATIBLE_FEEDLINKS which defaults to false. In this case the WordPress functions add_theme_support( 'automatic-feed-links' ) is used. If you set it to TRUE, Thematic will use its own functionality. This is a requirement by the Theme Review Team.
 * Added: New function thematic_body() to header.php defined in dynamic-classes.php 
@@ -280,6 +305,7 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Fixed: Removed add_theme_support('menu') according to Andrew Nacin.
 * Fixed: Comment handling for archives.php, links.php and page.php can be made compatible with old handling controlled by a key/value of "comments".
 * Wrapped some WP 3.0 function calls. Thematic still supports WP 2.9.x.
+
 = 0.9.7.4 =
 * Added: Filter thematic_post_thumb_size in thematic_content()
 * Added: Filter thematic_post_thumb_attr in thematic_content()
@@ -305,6 +331,7 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Renamed template files page-... to template-page-... according to <a href="http://codex.wordpress.org/Theme_Review#Custom_Template_Naming_Conventions">4.5.4 Custom Template Naming Conventions</a> and adjusted the CSS files.
 * Updated: PT lang files Thanks to: Bernardo Maciel
 * Updated: Dutch translation props: Fili
+
 = 0.9.7.3 =
 * Fixed: Changed trackback_url() to get_trackback_url().
 * Fixed: Displaying WordPress Galleries is fixed.
@@ -315,6 +342,7 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Fixed: Cleaned up the deprecated function calls
 * Fixed: duplicate key in thematic_nav_menu_args().
 * Fixed: The deprecated function uses WordPress' functionality for reporting.
+
 = 0.9.7.2 =
 * Added: Fallback to wp_page_menu if theme location has no menu
 * Added: thematic_init_navmenu registers the theme location for our menu. Override: childtheme_override_init_navmenu
@@ -323,8 +351,10 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Added: The main menu uses the menu id 'primary-menu' and the menu name 'Primary Menu'.
 * Fixed: Changed add_theme_support( 'nav-menus' ) to add_theme_support( 'menus' ).
 * Fixed: a bug that prevents the 'Reset Widgets'.
+
 = 0.9.7.1 =
 * Fixed: Potential security issue in theme-options.php.
+
 = 0.9.7 =
 * Added: new function: thematic_init_presetwidgets() to initialize the preset widgets. Override function: childtheme_override_init_presetwidgets()
 * Added: new function: thematic_content_init() to set up new post classes.
@@ -406,10 +436,12 @@ Changed: thematic_create_stylesheet() comment block to note how childthemes can 
 * Fixed: Upgraded the Thematic widgets to the new API. Thematic now requires WordPress 2.8.x or above.
 * Updated: Norwegian language files updated. Credits: peter.holme.
 * Updated: Norwegian language files updated. Credits: Thomas Misund.
+
 = 0.9.6.2 =
 * Fixed: a bug in widgets-extensions.php not loading the preset widgets after switching themes.
 * Fixed: a bug in page.php not loading thematic_comments_template()
 * Fixed: missing gettext in comments-extensions.php
+
 = 0.9.6.1 =
 * Added: thematic_abovecontainer()
 * Added: thematic_belowcontainer()
