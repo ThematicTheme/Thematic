@@ -307,7 +307,7 @@ function thematic_do_footer_opt() {
 /**
  * Renders Leagcy XTML1.0 mode checkbox
  *
- * @since Thematic 1.1
+ * @since Thematic 2.0
  */
  function thematic_do_legacy_xhtml_opt() {
 ?>
