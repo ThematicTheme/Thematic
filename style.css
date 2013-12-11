@@ -1733,3 +1733,34 @@ ul.sf-menu li li li.sfHover ul {
 #subsidiary {
     padding: 36px 0 0 0;    
 }
+
+
+/**
+ * 7.0 Footer
+ * ----------------------------------------------------------------------------
+ */
+
+.site-footer {
+    border-top: 1px solid #ccc;
+    margin-top: 22px;
+}
+
+#siteinfo {
+    color: #666;
+    font-size: 11px;
+    line-height: 18px;
+    padding: 24px 0 48px 0;
+}
+
+#siteinfo a {
+    color: #666;
+}
+
+#siteinfo a:active,
+#siteinfo a:hover {
+    color: #FF4B33;
+}
+
+#siteinfo p {
+    margin: 0;
+}
