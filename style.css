@@ -29,16 +29,17 @@ This work, like WordPress, is released under GNU General Public License, version
  *   5.1 - Entry Header
  *   5.2 - Entry Meta
  *   5.3 - Entry Content
- *   5.4 - Galleries
- *   5.5 - Post Formats
- *   5.6 - Attachments
- *   5.7 - Post/Paging Navigation
- *   5.8 - Author Bio
- *   5.9 - Archives
- *   5.10 - Search Results/No posts
- *   5.11 - 404
- *   5.12 - Comments
- *   5.13 - Multisite
+ *   5.4 - Entry Utility
+ *   5.5 - Galleries
+ *   5.6 - Post Formats
+ *   5.7 - Attachments
+ *   5.8 - Post/Paging Navigation
+ *   5.9 - Author Bio
+ *   5.10 - Archives
+ *   5.11 - Search Results/No posts
+ *   5.12 - 404
+ *   5.13 - Comments
+ *   5.14 - Multisite
  * 6.0 - Sidebar
  *   6.1 - Widgets
  * 7.0 - Footer
@@ -915,4 +916,289 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 
+/**
+ * 5.0 Content
+ * ----------------------------------------------------------------------------
+ */
+
+.page-title {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0 0 44px 0;
+}
+
+.attachment .page-title {
+    font-style: italic;
+}
+
+.page-title a {
+    color: #666;
+    text-decoration: none;
+}
+
+.page-title a:active,
+.page-title a:hover {
+    color: #FF4B33;
+}
+
+.page-title span {
+    font-style: italic;
+}
+
+.page-title .meta-nav {
+    font-style: normal;
+}
+
+.hentry {
+    padding: 40px 0; /* legacy used bottom padding only of 22px */
+}
+
+.single .hentry {
+    padding: 0;
+}
+
+.home #content .sticky {
+    border: 1px solid #ccc;
+    margin: 0 0 72px 0;
+    padding: 24px 20px 0 20px;
+}
+
+/**
+ * 5.1 Entry Header
+ * ----------------------------------------------------------------------------
+ */
+
+.entry-title {
+    font-family: Arial,sans-serif;
+    font-size: 26px; /* @todo check type hierarchy */
+    font-weight: bold;
+    line-height: 26px;
+    padding: 0 0 7px 0;
+}
+
+.entry-title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.entry-title a:active,
+.entry-title a:hover {
+    color: #FF4B33;
+}
+
+/**
+ * 5.2 Entry Meta
+ * ----------------------------------------------------------------------------
+ */
+
+.entry-meta {
+    color: #666;
+    font-size: 14px;
+    font-style: italic;
+    /* legacy had line-height: 18px; */
+}
+
+.entry-meta .author {
+}
+
+.entry-meta .n, .entry-meta .nickname {
+    font-size:11px;
+    font-style:normal;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+}
+
+.entry-meta a {
+    color: #666;
+    text-decoration: none;
+}
+
+.entry-meta a:active,
+.entry-meta a:hover {
+    color: #FF4B33;
+}
+
+.entry-meta abbr {
+    border: none;
+    cursor: text;
+    font-size: 11px;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/**
+ * 5.3 Entry Content
+ * ----------------------------------------------------------------------------
+ */
+
+.entry-content {
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	word-wrap: break-word;
+    padding: 24px 0 0 0;
+}
+
+.entry-content h1,
+.entry-content h2 {
+    font-family: Arial,sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 28px 0 14px 0;
+}
+
+.entry-content h3 {
+    font-size: 17px;
+    font-style: italic;
+    padding: 28px 0 14px 0;
+}
+
+.entry-content h4 {
+    font-size:11px;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+}
+
+.entry-content table {
+    margin-left:1px;
+}
+
+.entry-content embed {
+    margin:0 0 22px 0;
+}
+
+/* Page links */
+.page-links {
+	clear: both;
+	font-size: 16px; /* legacy had 13px font 18px line-height */
+	font-weight: bold;
+	line-height: 2.2;
+    margin: 0 0 24px 0;
+    padding: 24px 0 0 0;
+	word-spacing: 0.5em;
+}
+
+.page-links a,
+.page-links > span {
+	border: 1px solid #ccc;
+	color: #666;
+	font-weight: normal;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.page-link a:active,
+.page-link a:hover {
+    color: #FF4B33;
+}
+
+.page-links .page-links-title {
+	background: transparent;
+	border: none;
+	margin-right: 20px;
+	padding: 0;
+}
+
+/* Mediaelements */
+.hentry .mejs-mediaelement,
+.hentry .mejs-container .mejs-controls {
+	background: #220e10; /* no equivalent in legacy, @todo check styles for consistency  */
+}
+
+.hentry .mejs-controls .mejs-time-rail .mejs-time-loaded,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	background: #fff;
+}
+
+.hentry .mejs-controls .mejs-time-rail .mejs-time-current {
+	background: #ea9629;
+}
+
+.hentry .mejs-controls .mejs-time-rail .mejs-time-total,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+	background: #595959;
+}
+
+.hentry .mejs-controls .mejs-time-rail span,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+	border-radius: 0;
+}
+
+/**
+ * 5.4 Entry Utility
+ * ----------------------------------------------------------------------------
+ */
+
+.entry-utility {
+	clear: both;
+    color: #666;
+    font-size: 13px;
+    line-height: 18px;
+    margin:0 0 48px 0;
+}
+.entry-utility a {
+    color: #666;
+    font-style: italic;
+    text-decoration: none;
+}
+.entry-utility a:active,
+.entry-utility a:hover {
+    color: #FF4B33;
+}
+
+/**
+ * 5.5 Galleries
+ * ----------------------------------------------------------------------------
+ */
+
+.gallery {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	margin: 0 auto;
+    padding:0 0 24px 0;
+}
+
+.gallery-row {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	margin: 0;
+}
+
+.gallery-item {
+	overflow: hidden;
+	float: left;
+	margin: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.gallery-icon {
+	margin: 0 5px;
+}
+
+#content .gallery img {
+    border: 1px solid #ccc;
+	margin: 0;
+	padding: 6px;
+}
+
+.gallery-item img, .gallery-item img.thumbnail {
+	margin: 0 auto;
+}
+
+.gallery-caption {
+	padding: 6px 6px 0;
+}
+
+/**
+ * 5.6 Post Formats
+ * ----------------------------------------------------------------------------
+ */
 
