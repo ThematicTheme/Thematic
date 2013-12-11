@@ -1613,10 +1613,10 @@ ul.sf-menu li li li.sfHover ul {
     color: #FF4B33;
 }
 
-.aside h3 {
-    font-size: 15px;
+.aside .widgettitle {
+    font-size: 18px;
     font-style: italic;
-    line-height: 22px;
+    margin-bottom: 0;
 }
 
 .aside h3 a {
