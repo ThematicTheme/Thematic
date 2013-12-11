@@ -765,10 +765,6 @@ img.wp-smiley,
 	/* legacy padding:88px 0 44px 0, if new baseline is 24 px then 4*24=96 */
 }
 
-.site-header .site-title:hover {
-	text-decoration: underline;
-}
-
 .site-title {
     font-family: Arial,sans-serif;
     font-size: 34px;
