@@ -1764,3 +1764,35 @@ ul.sf-menu li li li.sfHover ul {
 #siteinfo p {
     margin: 0;
 }
+
+
+/**
+ * 8.0 Media Queries
+ * ----------------------------------------------------------------------------
+ */
+
+/* Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to 
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor 
+ * the meta tag. See http://core.trac.wordpress.org/ticket/25888.
+ */
+@-ms-viewport {
+	width: device-width;
+}
+@viewport {
+	width: device-width;
+}
+
+
+/**
+ * 9.0 Print
+ * ----------------------------------------------------------------------------
+ */
+
+@media print {
+	body {
+		background: none !important;
+		color: #000;
+		font-size: 10pt;
+	}
+}
