@@ -346,6 +346,7 @@ ol ol ol {
 }
 ol ol ol ol {
 	list-style: lower-alpha;
+}
 
 nav ul,
 nav ol {
@@ -736,5 +737,182 @@ img.wp-smiley,
 
 /* legacy had image styles for gallery too
 @todo see if gallery styles are needed */
+
+
+/**
+ * 3.0 Basic Structure
+ * ----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 4.0 Header
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 4.1 Site Header
+ * ----------------------------------------------------------------------------
+ */
+
+.site-header {
+
+}
+
+.branding {
+	padding: 96px 0 48px 0; 
+	/* legacy padding:88px 0 44px 0, if new baseline is 24 px then 4*24=96 */
+}
+
+.site-header .site-title:hover {
+	text-decoration: underline;
+}
+
+.site-title {
+    font-family: Arial,sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 40px;
+	/* @todo check site-title still looks ok */
+}
+
+.site-title a {
+	color: #000;
+	text-decoration: none;
+}
+
+.site-title a:active,
+.site-title a:hover {
+	color: #ff4b33;
+}
+
+.tagline {
+	color: #666;
+	font-style: italic;
+	font-size: 16px;
+	margin: 0;
+	font-weight: normal;
+}
+
+
+/**
+ * 4.2 Navigation
+ * ----------------------------------------------------------------------------
+ */
+
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.sf-menu {
+	line-height:1.0;
+}
+.sf-menu ul {
+	position:absolute;
+	top:-999em;
+	width:10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu ul li {
+	width:100%;
+}
+.sf-menu li:hover {
+	visibility:inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:left;
+	position:relative;
+}
+.sf-menu a {
+	display:block;
+	position:relative;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:0;
+	top:2.5em; /* match top ul list item height */
+	z-index:99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:10em; /* match ul width */
+	top:0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:10em; /* match ul width */
+	top:0;
+}
+
+/*** THEMATIC SKIN ***/
+.sf-menu {
+	float:left;
+	margin-left:1px;
+}
+.sf-menu a {
+  	border-color:#CCCCCC;
+    border-style:solid;
+    border-width:1px;
+	padding:9px 13px;
+	text-decoration:none;
+	margin-left:-1px;
+}
+.ie7 .sf-menu a {
+	width:100%;
+}
+.sf-menu .current-menu-item a,
+.sf-menu .current-menu-parent a,
+.sf-menu .current-menu-ancestor a,
+.sf-menu .current-post-ancestor a,
+.sf-menu .current_page_item a,
+.sf-menu .current_page_ancestor a,
+.sf-menu .current_page_parent a {
+    border-bottom-color:#fff;
+}
+.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:#666;
+}
+.sf-menu li {
+	background:#fff;
+}
+.sf-menu li li {
+	background:#fff;
+}
+.sf-menu li li li {
+	background:#9AAEDB;
+}
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+    background:#fafafa;
+	outline: 0;
+    border-bottom-color:#ccc;
+}
+.sf-menu ul {
+    border-bottom:1px solid #ccc;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	top:32px; /* overriding essential styles */
+}
+.sf-menu ul ul {
+    margin-top:0;
+}
+.sf-menu ul a {
+    background:#fafafa;
+	border-bottom:none;
+}
+.sf-menu ul a:hover {
+    color: #FF4B33;
+}
+
 
 
