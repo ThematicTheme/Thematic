@@ -1281,4 +1281,268 @@ ul.sf-menu li li li.sfHover ul {
     padding: 0 0 48px 0;
 }
 
+/**
+ * 5.9 Author Bio
+ * ----------------------------------------------------------------------------
+ */
 
+#author-info {
+    margin: 0 0 48px 0;
+    overflow:hidden;
+}
+
+#author-info .avatar {
+    float: left;
+    margin: .3em 1em 0 0;
+}
+
+/**
+ * 5.10 Archives
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 5.11 Search Results/No posts
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 5.12 404
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 5.13 Comments
+ * ----------------------------------------------------------------------------
+ */
+
+#comments {
+	clear: both;
+    padding: 24px 0 0 0;
+}
+
+#comments code {
+    font-size:12px;
+    line-height:18px;
+}
+
+#comments h3 {
+    font-family:Arial,sans-serif;
+    font-size:15px;
+    font-weight:bold;
+    line-height:22px;
+    padding:0 0 18px 0;
+}
+
+#comments-list {
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin: 0 0 18px;
+}
+
+#comments-list h3 {
+	padding-bottom: 0;
+}
+
+#comments-list,
+#comments-list ul {
+    list-style: none;
+}
+
+#comments-list ul,
+#comments-list ol {
+    padding-bottom: 18px;
+}
+
+#comments-list ul ul,
+#comments-list ol ol,
+#comments-list ul ul ul,
+#comments-list ol ol ol {
+    padding-bottom:0;
+}
+
+#comments-list .comment {
+    background: #fafafa;
+    border-bottom: 1px solid #ccc;
+    padding: 18px 1.5em 0 1.5em;
+    position: relative;
+}
+
+#comments-list li.alt {
+    background: #fff;
+}
+
+#comments-list li.bypostauthor {
+    background: #FFFFCC;
+}
+
+#comments-list ul .comment {
+    border: 1px solid #ccc;
+    margin: 0 0 18px 0;
+}
+
+#comments-list li .avatar {
+    position: absolute;
+    top: 22px;
+    left: 1.5em;
+    width: 36px;
+    height: 36px;
+}
+
+#comments-list .comment-author {
+    font-weight:bold;
+    padding:9px 0 0 46px;
+}
+
+#comments-list .comment-meta {
+    color: #666;
+    font-size: 11px;
+    padding: 0 0 9px 46px;
+}
+
+#comments-list .comment-meta a {
+    color: #666;
+    font-style: italic;
+    text-decoration: none;
+}
+
+#comments-list .comment-meta a:active,
+#comments-list .comment-meta a:hover {
+    color: #FF4B33;
+}
+
+.comment-reply-link {
+    font-size: 11px;
+    padding: 0 0 18px 0;
+    text-align: right;
+}
+
+.comment-reply-link a {
+    color: #666;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.comment-reply-link a:active,
+.comment-reply-link a:hover {
+    color: #FF4B33;
+}
+
+.comment-navigation {
+    font-weight: bold;
+	padding: 18px 0 24px;
+    margin-right: 0.5em;
+}
+
+.comment-navigation a {
+    border: 1px solid #ccc;
+    color: #666;
+    font-weight: normal;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+}
+
+.comment-navigation a:active,
+.comment-navigation a:hover {
+    color: #FF4B33;
+}
+
+.comment-navigation a,
+.comment-navigation span {
+    margin-right: 0.5em;
+}
+
+#trackbacks-list .comment-content {
+    position: absolute;
+    left: -10000px;
+}
+
+#respond {
+    background: #fff;
+    margin-bottom: 24px;
+    overflow: hidden;
+    padding: 18px 0 0 0;
+    position: relative;
+}
+
+#comments-list #respond {
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 18px 0;
+    padding: 18px 1.5em;
+}
+
+#comments-list ul #respond {
+    border: 1px solid #ccc;
+    margin:0;
+}
+
+#cancel-comment-reply {
+    font-size: 11px;
+    position: absolute;
+    top: 18px;
+    right: 1.5em;
+}
+
+#cancel-comment-reply a {
+    color: #666;
+}
+
+#respond .required {
+    color: #FF4B33;
+    font-weight: bold;
+}
+
+.form-section label {
+    font-size: 11px;
+}
+
+.form-section input {
+    margin: 0 0 18px 0;
+    width: 98%;
+}
+
+.form-section textarea {
+    width:99%;
+}
+
+#form-allowed-tags p {
+    color: #666;
+    font-size: 11px;
+    margin: 0;    
+}
+
+#form-allowed-tags span {
+    font-style: italic;
+}
+
+#form-allowed-tags code {
+    font-size: 11px;
+    line-height: normal;
+}
+
+.form-submit {
+    padding: 18px 0 0 0;
+    text-align: right;
+}
+
+.subscribe-to-comments {
+    color: #666;
+    float: left;
+    font-size: 11px;
+    margin: 0;
+    padding: 18px 0 0 0;
+}
+
+.solo-subscribe-to-comments {
+    color: #666;
+    font-size: 11px;
+    padding: 18px 0 0 0;
+}
+
+.comment_license {
+    color: #666;
+    clear: both;
+    font-size: 11px;
+    margin: 0;
+    padding: 18px 0 0 0;
+}
