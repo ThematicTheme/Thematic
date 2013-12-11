@@ -1202,3 +1202,83 @@ ul.sf-menu li li li.sfHover ul {
  * ----------------------------------------------------------------------------
  */
 
+/**
+ * 5.7 Attachments
+ * ----------------------------------------------------------------------------
+ */
+
+.attachment-jpeg #container,
+.attachment-png #container {
+    width: 100%;
+}
+
+.attachment-jpeg #content,
+.attachment-png #content {
+    width: 930px;
+}
+
+.attachment-jpeg #comments,
+.attachment-png #comments {
+    width: 540px;
+    overflow: hidden;
+}
+
+.attachment-jpeg .main-aside,
+.attachment-png .main-aside {
+    display: none;    
+}
+
+
+/**
+ * 5.8 Post/Paging Navigation
+ * ----------------------------------------------------------------------------
+ */
+
+.navigation {
+    color: #666;
+    font-size: 13px; /* @todo check type hierarchy */
+    line-height: 18px;
+    margin: 0px 0 24px 0;
+    overflow: hidden;
+}
+
+.navigation a {
+    color: #666;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.navigation a:active,
+.navigation a:hover {
+    color: #FF4B33;
+}
+
+.navigation .meta-nav {
+    font-style: normal;
+}
+
+.nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.nav-next {
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+#nav-above,#nav-below {
+	width: 100%;
+}
+
+#nav-above {
+    display: none;
+}
+
+.paged #nav-above {
+    display: block;
+    padding: 0 0 48px 0;
+}
+
+
