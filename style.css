@@ -1546,3 +1546,190 @@ ul.sf-menu li li li.sfHover ul {
     margin: 0;
     padding: 18px 0 0 0;
 }
+
+/**
+ * 5.14 Multisite
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 6.0 Sidebar
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * 6.1 Widgets
+ * ----------------------------------------------------------------------------
+ */
+
+.aside,
+.aside input {
+    font-size: 13px; /* @todo check type hierarchy */
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+
+.aside p,
+.aside ul,
+.aside ol,
+.aside dd,
+.aside pre {
+    margin-bottom: 18px;
+}
+
+.aside pre,
+.aside code {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.aside .current-menu-item a,
+.aside .current_page_item a {
+    color: #FF4B33;
+}
+
+.aside .current-menu-item .menu-item a,
+.aside .current_page_item .menu-item a {
+    color: #666;
+}
+
+.aside .current-menu-item .menu-item a:hover,
+.aside .current-menu-item .menu-item a:active,
+.aside .current_page_item .menu-item a:hover,
+.aside .current_page_item .menu-item a:active {
+    color: #FF4B33;
+}
+
+.aside {
+    color: #666;
+}
+
+.aside a {
+    color: #666;
+}
+
+.aside a:active,
+.aside a:hover {
+    color: #FF4B33;
+}
+
+.aside h3 {
+    font-size: 15px;
+    font-style: italic;
+    line-height: 22px;
+}
+
+.aside h3 a {
+    text-decoration: none;
+}
+
+.aside caption {
+    font-size: 11px;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.aside ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.aside ul ul {
+    list-style: disc;
+    margin: 0 0 24px 20px;
+}
+
+.aside ul ul li {
+    padding: 1px 0;
+}
+
+.aside ul ul ul {
+    margin-bottom:0;
+}
+
+.aside form,
+.aside table {
+    margin-bottom:24px;
+}
+
+.aside table {
+    border:none;
+}
+
+.aside thead {
+    border: 1px solid #ccc;
+}
+
+.aside tbody {
+    border: 1px solid #ccc;
+}
+
+.aside th, .aside td {
+    border-right: 1px solid #ccc;
+    padding: .25em .8em;
+}
+
+.aside tfoot tr {
+    border:none;
+}
+
+.aside tfoot td {
+    border-color:transparent;
+}
+
+.widget_tag_cloud {
+    margin: 0 0 22px 0;
+}
+
+.aside #searchsubmit {
+	display: none;	
+}
+
+/* Main Asides */
+.main-aside ul {
+    padding: 0 20px;
+}
+
+.main-aside h3 {
+}
+
+.main-aside ul ul {
+    padding:0;
+}
+
+#primary {
+    border: 1px solid #ccc;
+    padding: 18px 0 0 0;
+    margin-bottom: 24px;
+}
+
+/* Content Asides */
+#content .aside {
+    border: 1px solid #ccc;
+    margin: 0 0 24px 0;
+    padding: 18px 0 0 0;
+}
+
+#content .aside ul {
+    padding:0 20px;
+}
+
+#content .aside h3 {
+    font-family: Georgia,serif;
+    font-weight: normal;
+    font-size: 17px;
+    font-style: italic;
+    padding: 0 0 7px 0;
+    text-transform: none;
+}
+
+#content .aside ul ul {
+    padding:0;
+}
+
+/* Footer Asides */
+#subsidiary {
+    padding: 36px 0 0 0;    
+}
