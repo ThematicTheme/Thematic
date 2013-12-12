@@ -727,12 +727,12 @@ img.wp-smiley,
 
 .site-wrapper {
 	margin: 0 auto;
-	max-width: 1024px;
 	width: 100%;
 }
 
 #access {
 	position: relative;
+	border-bottom: 1px solid #ccc;
 }
 
 .branding,
@@ -742,6 +742,9 @@ img.wp-smiley,
 #siteinfo {
 	padding-left: 20px;
 	padding-right: 20px;
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media (max-width: 999px) {	
@@ -914,7 +917,10 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu {
 	float:left;
 	margin-left:1px;
+	position: relative;
+	top: 1px;
 }
+
 .sf-menu a {
   	border-color:#CCCCCC;
     border-style:solid;
