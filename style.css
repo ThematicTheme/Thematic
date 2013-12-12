@@ -448,7 +448,7 @@ textarea {
 }
 
 table {
-	border-bottom: 1px solid #ccc;
+	border: 1px solid #ccc;
 	border-collapse: collapse;
 	border-spacing: 0;
 	font-size: 14px;
@@ -462,6 +462,7 @@ th,
 td {
 	font-weight: normal;
 	text-align: left;
+	padding: .7em 1.25em;
 }
 
 caption {
@@ -476,7 +477,6 @@ th {
 
 td {
 	border-top: 1px solid #ccc;
-	padding: 6px 10px 6px 0; /* legacy uses .7em 1.25em */
 }
 
 del {
