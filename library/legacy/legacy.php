@@ -142,6 +142,56 @@ if ( !function_exists( 'childtheme_override_nav_above' ) )  {
 	}
 }
 
+/**
+ * Replace the loops with xhtml versions
+ * 
+ * @since 2.0
+ */
+function thematic_replace_loops() {
+	// replace the archive loop
+	if ( !function_exists( 'childtheme_override_archive_loop' ) ) {
+		remove_action( 'thematic_archiveloop', 'thematic_archive_loop');
+		add_action( 'thematic_archiveloop', 'thematic_default_loop_xhtml' );
+	}
+
+	// replace the author loop
+	if ( !function_exists( 'childtheme_override_author_loop' ) ) {
+		remove_action( 'thematic_authorloop', 'thematic_author_loop');
+		add_action( 'thematic_authorloop', 'thematic_default_loop_xhtml' );
+	}
+
+	// replace the category loop
+	if ( !function_exists( 'childtheme_override_category_loop' ) ) {
+		remove_action( 'thematic_categoryloop', 'thematic_category_loop');
+		add_action( 'thematic_categoryloop', 'thematic_default_loop_xhtml' );
+	}
+
+	// replace the search loop
+	if ( !function_exists( 'childtheme_override_search_loop' ) ) {
+		remove_action( 'thematic_searchloop', 'thematic_search_loop' );
+		add_action( 'thematic_searchloop', 'thematic_default_loop_xhtml' );
+	}
+
+	// replace the tag loop
+	if ( !function_exists( 'childtheme_override_tag_loop' ) ) {
+		remove_action( 'thematic_tagloop', 'thematic_tag_loop');
+		add_action( 'thematic_tagloop', 'thematic_default_loop_xhtml' );
+	}
+
+	// replace the index loop
+	if ( !function_exists( 'childtheme_override_index_loop' ) ) {
+		remove_action( 'thematic_indexloop', 'thematic_index_loop');
+		add_action( 'thematic_indexloop', 'thematic_index_loop_xhtml' );
+	}
+
+
+	// replace the single post loop
+	if ( !function_exists( 'childtheme_override_single_post' ) ) {
+		remove_action( 'thematic_singlepost', 'thematic_single_post');
+		add_action( 'thematic_singlepost', 'thematic_single_post_xhtml' );
+	}
+}
+add_action( 'init', 'thematic_replace_loops' );
 
 /**
  * The default xhtml loop
@@ -179,35 +229,6 @@ function thematic_default_loop_xhtml() {
 			thematic_belowpost();
 	
 	endwhile;
-}
-// replace the archive loop
-if ( !function_exists( 'childtheme_override_archive_loop' ) ) {
-	remove_action( 'thematic_archiveloop', 'thematic_archive_loop');
-	add_action( 'thematic_archiveloop', 'thematic_default_loop_xhtml' );
-}
-
-// replace the author loop
-if ( !function_exists( 'childtheme_override_author_loop' ) ) {
-	remove_action( 'thematic_authorloop', 'thematic_author_loop');
-	add_action( 'thematic_authorloop', 'thematic_default_loop_xhtml' );
-}
-
-// replace the category loop
-if ( !function_exists( 'childtheme_override_category_loop' ) ) {
-	remove_action( 'thematic_categoryloop', 'thematic_category_loop');
-	add_action( 'thematic_categoryloop', 'thematic_default_loop_xhtml' );
-}
-
-// replace the search loop
-if ( !function_exists( 'childtheme_override_search_loop' ) ) {
-	remove_action( 'thematic_searchloop', 'thematic_search_loop' );
-	add_action( 'thematic_searchloop', 'thematic_default_loop_xhtml' );
-}
-
-// replace the tag loop
-if ( !function_exists( 'childtheme_override_tag_loop' ) ) {
-	remove_action( 'thematic_tagloop', 'thematic_tag_loop');
-	add_action( 'thematic_tagloop', 'thematic_default_loop_xhtml' );
 }
 
 
@@ -256,11 +277,6 @@ function thematic_index_loop_xhtml() {
 			$count = $count + 1;
 	endwhile;
 }
-// replace the index loop
-if ( !function_exists( 'childtheme_override_index_loop' ) ) {
-	remove_action( 'thematic_indexloop', 'thematic_index_loop');
-	add_action( 'thematic_indexloop', 'thematic_index_loop_xhtml' );
-}
 
 
 /**
@@ -297,11 +313,7 @@ function thematic_single_post_xhtml() {
 		thematic_belowpost();
 	endwhile;
 }
-// replace the single post loop
-if ( !function_exists( 'childtheme_override_single_post' ) ) {
-	remove_action( 'thematic_singlepost', 'thematic_single_post');
-	add_action( 'thematic_singlepost', 'thematic_single_post_xhtml' );
-}
+
 
 
 /**
