@@ -1110,7 +1110,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 /* Page links */
-.page-links {
+.page-link {
 	clear: both;
 	font-size: 16px; /* legacy had 13px font 18px line-height */
 	font-weight: bold;
@@ -1120,8 +1120,8 @@ ul.sf-menu li li li.sfHover ul {
 	word-spacing: 0.5em;
 }
 
-.page-links a,
-.page-links > span {
+.page-link a,
+.page-link > span {
 	border: 1px solid #ccc;
 	color: #666;
 	font-weight: normal;
@@ -1134,7 +1134,7 @@ ul.sf-menu li li li.sfHover ul {
     color: #FF4B33;
 }
 
-.page-links .page-links-title {
+.page-link .page-links-title {
 	background: transparent;
 	border: none;
 	margin-right: 20px;
