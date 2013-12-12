@@ -845,9 +845,10 @@ img.wp-smiley,
 .tagline {
 	color: #666;
 	font-style: italic;
-	font-size: 16px;
-	margin: 0;
+	font-size: 14px;
+	margin: 6px 0;
 	font-weight: normal;
+	font-family: Georgia, serif;
 }
 
 
