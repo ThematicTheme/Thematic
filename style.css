@@ -1422,6 +1422,7 @@ ul.sf-menu li li li.sfHover ul {
     border: 1px solid #ccc;
     border-bottom: none;
     margin: 0 0 18px;
+	padding-left: 0;
 }
 
 #comments-list h3 {
