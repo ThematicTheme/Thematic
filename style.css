@@ -500,13 +500,15 @@ hr {
 
 /* Clearing floats */
 .clear:after,
-#access:after {
+#access:after,
+.site-main:after {
 	clear: both;
 }
 
 .clear:before,
 .clear:after,
-#access:after {
+#access:after,
+.site-main:after {
 	content: "";
 	display: table;
 }
