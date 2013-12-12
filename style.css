@@ -499,12 +499,14 @@ hr {
  */
 
 /* Clearing floats */
-.clear:after {
+.clear:after,
+#access:after {
 	clear: both;
 }
 
 .clear:before,
-.clear:after {
+.clear:after,
+#access:after {
 	content: "";
 	display: table;
 }
