@@ -946,8 +946,10 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu li li li {
 	background:#9AAEDB;
 }
-.sf-menu li:hover, .sf-menu li.sfHover,
-.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+.sf-menu li:hover, 
+.sf-menu li.sfHover, 
+.sf-menu a:hover, 
+.sf-menu a:active {
     background:#fafafa;
 	outline: 0;
     border-bottom-color:#ccc;
