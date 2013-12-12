@@ -765,7 +765,8 @@ img.wp-smiley,
 }
 
 .branding {
-	padding: 96px 0 48px 0; 
+	padding-top: 96px; 
+	padding-bottom: 48px;
 	/* legacy padding:88px 0 44px 0, if new baseline is 24 px then 4*24=96 */
 }
 
@@ -921,6 +922,10 @@ ul.sf-menu li li li.sfHover ul {
  * ----------------------------------------------------------------------------
  */
 
+.site-main {
+	padding-top: 72px;
+}
+
 .page-title {
     font-size: 13px;
     line-height: 18px;
@@ -950,7 +955,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 .hentry {
-    padding: 40px 0; /* legacy used bottom padding only of 22px */
+    padding: 0 0 24px 0; /* legacy used bottom padding only of 22px */
 }
 
 .single .hentry {
@@ -974,6 +979,7 @@ ul.sf-menu li li li.sfHover ul {
     font-weight: bold;
     line-height: 26px;
     padding: 0 0 7px 0;
+	margin: 0;
 }
 
 .entry-title a {
@@ -1731,7 +1737,7 @@ ul.sf-menu li li li.sfHover ul {
 
 /* Footer Asides */
 #subsidiary {
-    padding: 36px 0 0 0;    
+    padding-top: 36px;    
 }
 
 
@@ -1749,7 +1755,8 @@ ul.sf-menu li li li.sfHover ul {
     color: #666;
     font-size: 11px;
     line-height: 18px;
-    padding: 24px 0 48px 0;
+    padding-top: 24px;
+	padding-bottom: 48px;
 }
 
 #siteinfo a {
