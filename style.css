@@ -1652,16 +1652,6 @@ ul.sf-menu li li li.sfHover ul {
     color: #FF4B33;
 }
 
-.aside .widgettitle {
-    font-size: 18px;
-    font-style: italic;
-    margin-bottom: 0;
-}
-
-.aside h3 a {
-    text-decoration: none;
-}
-
 .aside caption {
     font-size: 11px;
     font-family: Arial,sans-serif;
@@ -1670,14 +1660,35 @@ ul.sf-menu li li li.sfHover ul {
     letter-spacing: 0.05em;
 }
 
-.aside ul {
-    list-style: none;
-    margin-left: 0;
+.widgetcontainer {
+    margin: 0 20px;
 }
 
-.aside ul ul {
+.widgetcontainer ul {
     list-style: disc;
-    margin: 0 0 24px 20px;
+    margin: 0 0 24px 0;
+	padding: 0 20px;
+}
+
+.widgetcontainer ul ul {
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+
+.widgettitle {
+    font-size: 18px;
+    font-style: italic;
+	font-family: Georgia, serif;
+	font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.widgettitle a {
+    text-decoration: none;
+}
+
+.widgetcontainer:first-child .widgettitle {
+	margin-top: 6px;
 }
 
 .aside ul ul li {
@@ -1727,13 +1738,6 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 /* Main Asides */
-.main-aside ul {
-    padding: 0 20px;
-}
-
-.main-aside h3 {
-}
-
 .main-aside ul ul {
     padding:0;
 }
@@ -1753,15 +1757,6 @@ ul.sf-menu li li li.sfHover ul {
 
 .site-content .aside ul {
     padding:0 20px;
-}
-
-.site-content .aside h3 {
-    font-family: Georgia,serif;
-    font-weight: normal;
-    font-size: 17px;
-    font-style: italic;
-    padding: 0 0 7px 0;
-    text-transform: none;
 }
 
 .site-content .aside ul ul {
