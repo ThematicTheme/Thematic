@@ -282,9 +282,7 @@ function thematic_index_loop_xhtml() {
 /**
  * The single posts xhtml loop
  */
-function thematic_single_post_xhtml() {
-	while ( have_posts() ) : the_post(); 
-	
+function thematic_single_post_xhtml() {	
 			// action hook for insterting content above #post
 			thematic_abovepost();
 			?>
@@ -311,7 +309,6 @@ function thematic_single_post_xhtml() {
 	<?php
 		// action hook for insterting content below #post
 		thematic_belowpost();
-	endwhile;
 }
 
 
