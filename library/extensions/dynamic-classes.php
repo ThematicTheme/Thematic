@@ -287,7 +287,7 @@ function thematic_activate_body_classes() {
 	}
 	
 	// Add browser CSS class to the end (queuing through priority) of the body classes 
-	if ( apply_filters( 'thematic_show_bc_browser', TRUE ) ) {
+	if ( apply_filters( 'thematic_show_bc_browser', false ) ) {
 		add_filter( 'body_class', 'thematic_browser_class_names', 30 ); 
 	}
 }
