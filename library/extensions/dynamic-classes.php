@@ -5,6 +5,28 @@
  * @package ThematicCoreLibrary
  * @subpackage DynamicClasses
  */
+
+
+if ( function_exists( 'childtheme_override_body_class' ) )  {
+	/**
+	 * @ignore
+	 */
+	 function thematic_body_class() {
+		childtheme_override_body_class();
+	}
+} else {
+	/**
+	 * Generates semantic classes for BODY element
+	 *
+	 * @param array $classes body classes
+	 */
+	function thematic_body_class( $classes ) {
+		
+	
+	return $classes;	
+	}
+	
+}
  
 
 if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
@@ -279,9 +301,15 @@ if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
 }
 
 /**
- * Add thematic body classes if child theme activates it
+ * Add thematic body classes
+ * 
+ * Child themes can add the legacy bodyclasses if they need using
+ * add_theme_support('thematic_legacy_body_class')
  */
 function thematic_activate_body_classes() {
+	
+	add_filter( 'body_class', 'thematic_body_class' );
+	
 	if ( current_theme_supports ( 'thematic_legacy_body_class' ) ) {
 		add_filter( 'body_class', 'thematic_legacy_body_class', 20 );
 	}
