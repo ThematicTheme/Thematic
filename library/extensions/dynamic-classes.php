@@ -7,12 +7,12 @@
  */
  
 
-if ( function_exists( 'childtheme_override_body_class' ) )  {
+if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
 	/**
 	 * @ignore
 	 */
-	 function thematic_body_class() {
-		childtheme_override_body_class();
+	 function thematic_legacy_body_class() {
+		childtheme_override_legacy_body_class();
 	}
 } else {
 	/**
@@ -20,7 +20,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	 *
 	 * @param array $c body classes
 	 */
-	function thematic_body_class( $c ) {
+	function thematic_legacy_body_class( $c ) {
 		global $wp_query, $current_user, $blog_id, $post, $taxonomy;
 	
 		if ( apply_filters('thematic_show_bc_wordpress', TRUE ) ) {
@@ -274,7 +274,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
   		}
 
 		// And tada!
-		return array_unique(apply_filters( 'thematic_body_class', $c )); // Available filter: thematic_body_class
+		return array_unique(apply_filters( 'thematic_legacy_body_class', $c )); // Available filter: thematic_legacy_body_class
 	}
 }
 
@@ -283,7 +283,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
  */
 function thematic_activate_body_classes() {
 	if ( current_theme_supports ( 'thematic_legacy_body_class' ) ) {
-		add_filter( 'body_class', 'thematic_body_class', 20 );
+		add_filter( 'body_class', 'thematic_legacy_body_class', 20 );
 	}
 	
 	// Add browser CSS class to the end (queuing through priority) of the body classes 
