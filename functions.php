@@ -90,7 +90,9 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		if ( apply_filters( 'thematic_post_thumbs', true ) )
 			add_theme_support( 'post-thumbnails' );
  
-		add_theme_support( 'thematic_superfish' );		
+		add_theme_support( 'thematic_superfish' );
+		
+		add_theme_support( 'thematic_meta_viewport' );
 		
 		// Path constants
 		define( 'THEMATIC_LIB',  get_template_directory() .  '/library' );
