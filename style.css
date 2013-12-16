@@ -19,32 +19,33 @@ This work, like WordPress, is released under GNU General Public License, version
 /**
  * Table of Contents:
  *
- * 1.0 - Reset
- * 2.0 - Repeatable Patterns
- * 3.0 - Basic Structure
- * 4.0 - Header
- *   4.1 - Site Header
- *   4.2 - Navigation
- * 5.0 - Content
- *   5.1 - Entry Header
- *   5.2 - Entry Meta
- *   5.3 - Entry Content
- *   5.4 - Entry Utility
- *   5.5 - Galleries
- *   5.6 - Post Formats
- *   5.7 - Attachments
- *   5.8 - Post/Paging Navigation
- *   5.9 - Author Bio
- *   5.10 - Archives
- *   5.11 - Search Results/No posts
- *   5.12 - 404
- *   5.13 - Comments
- *   5.14 - Multisite
- * 6.0 - Sidebar
- *   6.1 - Widgets
- * 7.0 - Footer
- * 8.0 - Media Queries
- * 9.0 - Print
+ *  1.0 - Reset
+ *  2.0 - Repeatable Patterns
+ *  3.0 - Basic Structure
+ *  4.0 - Header
+ *    4.1 - Site Header
+ *    4.2 - Navigation
+ *  5.0 - Content
+ *    5.1 - Entry Header
+ *    5.2 - Entry Meta
+ *    5.3 - Entry Content
+ *    5.4 - Entry Utility
+ *    5.5 - Galleries
+ *    5.6 - Post Formats
+ *    5.7 - Attachments
+ *    5.8 - Post/Paging Navigation
+ *    5.9 - Author Bio
+ *    5.10 - Archives
+ *    5.11 - Search Results/No posts
+ *    5.12 - 404
+ *    5.13 - Comments
+ *    5.14 - Multisite
+ *  6.0 - Sidebar
+ *    6.1 - Widgets
+ *  7.0 - Footer
+ *  8.0 - Media Queries
+ *  9.0 - Print
+ * 10.0 - Legacy compatibility styles
  * ----------------------------------------------------------------------------
  */
 
@@ -1888,4 +1889,19 @@ ul.sf-menu li li li.sfHover ul {
 		color: #000;
 		font-size: 10pt;
 	}
+}
+
+
+/**
+ * 10.0 Legacy compatibility styles
+ * ----------------------------------------------------------------------------
+ */
+
+.thematic-legacy .aside > ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.thematic-legacy .main-aside .widgetcontainer > ul {
+	padding-left: 20px;
 }
