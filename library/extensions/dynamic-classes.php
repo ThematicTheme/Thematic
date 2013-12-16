@@ -39,7 +39,12 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 			$classes[] = 'full-width';
 		}
 	
-	return $classes;	
+	/**
+	 * Filter the body classes
+	 * 
+	 * @param array $classes
+	 */
+	return apply_filters( 'thematic_body_class' $classes );	
 	}
 	
 }
