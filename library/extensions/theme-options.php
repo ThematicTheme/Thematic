@@ -51,8 +51,15 @@ if (function_exists('childtheme_override_opt_init')) {
 		add_settings_field ('thematic_auth_opt',   __('Info on Author Page'	, 'thematic')	, 'thematic_do_auth_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 		add_settings_field ('thematic_footer_opt', __('Text in Footer'	, 'thematic')		, 'thematic_do_footer_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 
-		// show check box option for restoring legacy xtml1.0 doctype and compatible markup
-		add_settings_field ('thematic_legacy_xhtml_opt', __('Restore Legacy XHTML1.0 Doctype'	, 'thematic'), 'thematic_do_legacy_xhtml_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		/**
+		 * Filter to enable child themes to hide the legacy mode checkbox
+		 * 
+		 * @param bool true
+		 */
+		if( apply_filters( 'thematic_show_legacymode_checkbox', true ) ) {
+			// show check box option for restoring legacy xtml1.0 doctype and compatible markup
+			add_settings_field ('thematic_legacy_xhtml_opt', __('Restore Legacy XHTML1.0 Doctype'	, 'thematic'), 'thematic_do_legacy_xhtml_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		}
 
 		// Show checkbox option for removing old options from database
 		if ( isset( $legacy_options ) && false !== $legacy_options ) {
