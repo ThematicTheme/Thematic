@@ -38,13 +38,16 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 		if ( is_page_template( 'template-page-fullwidth.php' ) ) {
 			$classes[] = 'full-width';
 		}
-	
-	/**
-	 * Filter the body classes
-	 * 
-	 * @param array $classes
-	 */
-	return apply_filters( 'thematic_body_class' $classes );	
+		
+		if( thematic_is_legacy_xhtml() ) 
+			$classes[] = 'thematic-legacy';
+		
+		/**
+		* Filter the body classes
+		* 
+		* @param array $classes
+		*/
+		return apply_filters( 'thematic_body_class' $classes );	
 	}
 	
 }
