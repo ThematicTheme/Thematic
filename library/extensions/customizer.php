@@ -37,6 +37,42 @@ function thematic_customize_register( $wp_customize ) {
 	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+
+	// Get the default thematic footer text 
+	$thematic_defaults = thematic_default_opt();
+	$thematic_default_footertext = $thematic_defaults['footer_txt'];
+	$thematic_default_layout = $thematic_defaults['layout'];
+		
+	/**
+	 * Filter to show or hide the layout section from the Theme Customizer
+	 * 
+	 * @param bool true Default is showing the section
+	 */
+	if( apply_filters( 'thematic_show_customizer_layoutsection', true ) ) {
+		
+		$wp_customize->add_section( 'thematic_layout', array(
+			'title'       => __( 'Layout', 'thematic' ),
+			'description' => __( 'Choose the main layout of your theme', 'thematic' ),
+			'capability'  => 'edit_theme_options'
+		) );
+		
+		$wp_customize->add_setting( 'thematic_theme_opt[layout]', array(
+			'default'  => $thematic_default_layout,
+			'type'   => 'option',
+		) );
+		
+		$wp_customize->add_control( 'thematic_layout_control', array(
+			'type'  => 'radio',
+			'label'  => __( 'Theme layout', 'thematic' ),
+			'section' => 'thematic_layout',
+			'choices' => array(
+				'right-sidebar' => __( 'Right Sidebar', 'thematic' ),
+				'left-sidebar'  => __( 'Left Sidebar', 'thematic' ),
+				'three-columns' => __( 'Three columns', 'thematic' )
+			),
+			'settings' => 'thematic_theme_opt[layout]'
+		) );
+	}
 	
 	// Add section for thematic footer options 
     $wp_customize->add_section( 'thematic_footer_text', array(
@@ -45,10 +81,6 @@ function thematic_customize_register( $wp_customize ) {
 		'priority'		=> 135,
 	) );
 	
-	// Get the default thematic footer text 
-	$thematic_defaults = thematic_default_opt();
-	$thematic_default_footertext = $thematic_defaults['footer_txt'];
-
 	// Add setting for footer text 
     $wp_customize->add_setting( 'thematic_theme_opt[footer_txt]', array(
 		'default'		=> $thematic_default_footertext,

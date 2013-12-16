@@ -770,7 +770,6 @@ img.wp-smiley,
 	.main-aside,
 	.sub-aside {
 		position: relative;
-		float: left;
 	}
 	
 	.content-wrapper {
@@ -781,18 +780,10 @@ img.wp-smiley,
 		width: 91.66667%;
 	}
 	
-	.main-aside {
-		width: 33.33333%;
-		float: right;
-	}
-	
-	.secondary-aside {
-		clear: right;
-	}
-	
 	.sub-aside {
 	    width: 33.33333%;
 	    padding: 0 20px 0 0;
+		float: left;
 	}
 	
 	.third-sub-aside {
@@ -804,14 +795,75 @@ img.wp-smiley,
 		clear: both;
 	}
 	
-	.page-template-template-page-fullwidth-php .content-wrapper,
-	.page-template-template-page-fullwidth-php .site-content {
+	.right-sidebar .content-wrapper {
+		float:left;
+	}
+	
+	.right-sidebar .main-aside {
+		width: 33.33333%;
+		float: right;
+	}
+	
+	.right-sidebar .secondary-aside {
+		clear: right;
+	}
+	
+	.left-sidebar .content-wrapper,
+	.left-sidebar .site-content {
+		float: right;
+	}
+	
+	.left-sidebar .main-aside {
+		float: left;
+	}
+	
+	.left-sidebar .secondary-aside {
+		clear: left;
+	}
+	
+	.three-columns .site-main {
+		position: relative;
+	}
+	
+	.three-columns .content-wrapper {
 		width: 100%;
 	}
 	
-	.page-template-template-page-fullwidth-php .comments {
-		width: 540px;
+	.three-columns .site-content {
+		margin-left: 25%;
+		margin-right: 25%;
+		width: 50%;
 	}
+	
+	.three-columns .main-aside {
+		width: 20%;
+	}
+	
+	.three-columns .primary-aside {
+		float: left;
+		margin-left: -100%;
+	}
+	
+	.three-columns .secondary-aside {
+		margin-left: -25%;
+	}
+	
+	.full-width .content-wrapper,
+	.full-width .site-content {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	.full-width .site-content {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.full-width #comments {
+		max-width: 40em;
+	}
+	
 }
 
 /**

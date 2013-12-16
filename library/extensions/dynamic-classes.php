@@ -21,7 +21,23 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	 * @param array $classes body classes
 	 */
 	function thematic_body_class( $classes ) {
+		$current_layout = thematic_get_theme_opt( 'layout' );
 		
+		switch( $current_layout ) {
+			case 'left-sidebar':
+				$classes[] = 'left-sidebar';
+				break;
+			case 'three-columns':
+				$classes[] = 'three-columns';
+				break;
+			default:
+				$classes[] = 'right-sidebar';
+				break;
+		}
+		
+		if ( is_page_template( 'template-page-fullwidth.php' ) ) {
+			$classes[] = 'full-width';
+		}
 	
 	return $classes;	
 	}
