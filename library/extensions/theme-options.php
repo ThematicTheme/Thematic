@@ -151,7 +151,8 @@ function thematic_default_opt() {
 		'author_info'  	=> 0, // 0 = not checked 1 = checked
 		'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
 		'del_legacy_opt'=> 0, // 0 = not checked 1 = check
-		'legacy_xhtml'	=> 0  // 0 = not checked 1 = check
+		'legacy_xhtml'	=> 0,  // 0 = not checked 1 = check
+		'layout'        => 'right-sidebar'
 	);
 
 	return apply_filters( 'thematic_theme_default_opt', $thematic_default_opt );
@@ -376,6 +377,21 @@ if (function_exists('childtheme_override_validate_opt')) {
  	   
 		// Remove Legacy XHTML CheckBox value either 1(yes) or 0(no)
 		$output['legacy_xhtml'] = ( isset( $input['legacy_xhtml'] ) ?  1 : 0 );
+		
+		// Check and set layout
+		if( isset( $input['layout'] ) ) {
+			switch( $input['layout'] ) {
+				case 'left-sidebar':
+					$output['layout'] = 'left-sidebar';
+					break;
+				case 'three-columns':
+					$output['layout'] = 'three-columns';
+					break;
+				default:
+					$output['layout'] = 'right-sidebar';
+					break;
+			}
+		}
  	   
 		// Remove Legacy Options CheckBox value either 1(yes) or 0(no)
 		$output['del_legacy_opt'] = ( isset( $input['del_legacy_opt'] ) ?  1 : 0 );
