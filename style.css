@@ -848,16 +848,20 @@ img.wp-smiley,
 		margin-left: -25%;
 	}
 	
-	.page-template-template-page-fullwidth-php .content-wrapper,
-	.page-template-template-page-fullwidth-php .site-content {
+	.full-width .content-wrapper,
+	.full-width .site-content {
 		width: 100%;
 		margin-left: 0;
 	}
 	
-	.page-template-template-page-fullwidth-php .site-content {
-		max-width: 40em;
+	.full-width .site-content {
+		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	
+	.full-width #comments {
+		max-width: 40em;
 	}
 	
 }
