@@ -47,7 +47,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 		* 
 		* @param array $classes
 		*/
-		return apply_filters( 'thematic_body_class' $classes );	
+		return apply_filters( 'thematic_body_class', $classes );	
 	}
 	
 }
