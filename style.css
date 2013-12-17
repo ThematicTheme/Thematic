@@ -816,6 +816,8 @@ img.wp-smiley,
 	
 	.left-sidebar .main-aside {
 		float: left;
+		width: 33.33333%;
+		
 	}
 	
 	.left-sidebar .secondary-aside {
