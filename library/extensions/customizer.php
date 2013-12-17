@@ -48,12 +48,13 @@ function thematic_customize_register( $wp_customize ) {
 	 * 
 	 * @param bool true Default is showing the section
 	 */
-	if( apply_filters( 'thematic_show_customizer_layoutsection', true ) ) {
+	if( apply_filters( 'thematic_show_customizer_layoutsection', true ) && !thematic_is_legacy_xhtml() ) {
 		
 		$wp_customize->add_section( 'thematic_layout', array(
 			'title'       => __( 'Layout', 'thematic' ),
 			'description' => __( 'Choose the main layout of your theme', 'thematic' ),
-			'capability'  => 'edit_theme_options'
+			'capability'  => 'edit_theme_options',
+			'priority'    => '90'
 		) );
 		
 		$wp_customize->add_setting( 'thematic_theme_opt[layout]', array(
