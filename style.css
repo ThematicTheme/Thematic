@@ -1450,8 +1450,7 @@ ul.sf-menu li li li.sfHover ul {
 	padding-bottom: 0;
 }
 
-#comments-list,
-#comments-list ul {
+#comments-list {
     list-style: none;
 }
 
