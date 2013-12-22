@@ -1459,6 +1459,11 @@ ul.sf-menu li li li.sfHover ul {
     padding-bottom: 18px;
 }
 
+#comments-list .children {
+	list-style: none;
+	padding-left: 0;
+}
+
 #comments-list ul ul,
 #comments-list ol ol,
 #comments-list ul ul ul,
