@@ -45,6 +45,29 @@ function thematic_after_title() {
 
 
 /**
+ * Enforce title on search widget
+ * 
+ * Replaces the functionality of deprecated widget Thematic_Widget_Search
+ * 
+ * @since 2.0
+ * 
+ * @param  string  $title    The current widget title
+ * @param  object  $instance The current widget instance
+ * @param  string  $id_base  The registered id of current widget
+ */
+function thematic_filter_search_widget( $title, $instance = '', $id_base = '' ) {
+	
+	if ( 'search' == $id_base ) {
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Search', 'thematic' ) : $instance['title'] );
+		$title = '<label for="s">' . $title . '</label>';
+	}
+	
+	return $title;
+}
+add_filter( 'widget_title', 'thematic_filter_search_widget', 10, 3 );
+
+
+/**
  * Search widget class
  *
  * @since 0.9.6.3
