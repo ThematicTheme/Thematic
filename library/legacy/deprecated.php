@@ -521,4 +521,51 @@ function thematic_create_robots() {
 	thematic_meta_robots();
 } // end thematic_create_robots
 
+
+/**
+ * Search widget class
+ * 
+ * Deprecated since core widgets should not be deregisterd. 
+ * Functionality is replaced with a filter in thematic_filter_search_widget()
+ *
+ * @since 0.9.6.3
+ * @deprecated 2.0
+ */
+class Thematic_Widget_Search extends WP_Widget {
+
+	function Thematic_Widget_Search() {
+		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'thematic') );
+		$this->WP_Widget('search', __('Search', 'thematic'), $widget_ops);
+	}
+
+	function widget( $args, $instance ) {
+		extract($args);
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('Search', 'thematic') : $instance['title']);
+
+		echo $before_widget;
+		if ( $title )
+			echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title;
+
+		// Use current theme search form if it exists
+		get_search_form();
+
+		echo $after_widget;
+	}
+
+	function form( $instance ) {
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '') );
+		$title = $instance['title'];
+?>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'thematic'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
+<?php
+	}
+
+	function update( $new_instance, $old_instance ) {
+		$instance = $old_instance;
+		$new_instance = wp_parse_args((array) $new_instance, array( 'title' => ''));
+		$instance['title'] = strip_tags($new_instance['title']);
+		return $instance;
+	}
+
+}
 ?>
