@@ -278,10 +278,6 @@ function thematic_widgets_init() {
 		register_sidebar( $thematic_widgetized_areas[$key]['args'] );
 	}  
 	
-	// Remove WP default Widgets
-	// WP 2.8 function using $widget_class
-    unregister_widget( 'WP_Widget_Meta' );
-
 	// Finished intializing Widgets plugin, now let's load the thematic default widgets
 	register_widget( 'Thematic_Widget_Meta' );
 	register_widget( 'Thematic_Widget_RSSlinks' );
