@@ -78,7 +78,7 @@ class Thematic_Widget_Meta extends WP_Widget {
 
 	function Thematic_Widget_Meta() {
 		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'thematic') );
-		$this->WP_Widget('meta', __('Meta', 'thematic'), $widget_ops);
+		$this->WP_Widget('thematic-meta', __('Thematic Meta', 'thematic'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {
