@@ -408,7 +408,7 @@ if (function_exists('childtheme_override_nav_above'))  {
 	function thematic_nav_above() {
 		if ( is_single() ) { 
 		?>
-				<nav id="nav-above" class="navigation">
+				<nav id="nav-above" class="navigation" role="navigation">
 				
 					<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
 					
@@ -416,7 +416,7 @@ if (function_exists('childtheme_override_nav_above'))  {
 					
 				</nav>
 		<?php } else { ?>
-				<nav id="nav-above" class="navigation">
+				<nav id="nav-above" class="navigation" role="navigation">
                		<?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
                 	<?php wp_pagenavi(); ?>
 					<?php } else { ?>
@@ -1695,7 +1695,7 @@ if (function_exists('childtheme_override_nav_below'))  {
 	function thematic_nav_below() {
 		if ( is_single() ) { ?>
 
-			<nav id="nav-below" class="navigation">
+			<nav id="nav-below" class="navigation" role="navigation">
 				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
 				<div class="nav-next"><?php thematic_next_post_link() ?></div>
 			</nav>
@@ -1703,7 +1703,7 @@ if (function_exists('childtheme_override_nav_below'))  {
 <?php
 		} else { ?>
 
-			<nav id="nav-below" class="navigation">
+			<nav id="nav-below" class="navigation" role="navigation">
                 <?php if(function_exists('wp_pagenavi')) { ?>
                 <?php wp_pagenavi(); ?>
                 <?php } else { ?>  

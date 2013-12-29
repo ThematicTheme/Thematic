@@ -24,7 +24,7 @@
 				thematic_abovecontent();
 
 				// filter for manipulating the element that wraps the content 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content">' . "\n\n" );
+				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content" role="main">' . "\n\n" );
 
 	            // start the loop
 	            while ( have_posts() ) : the_post();

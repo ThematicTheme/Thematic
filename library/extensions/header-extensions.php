@@ -781,7 +781,7 @@ if ( function_exists( 'childtheme_override_access' ) )  {
     function thematic_access() { 
     ?>
     
-    <div id="access">
+    <div id="access" role="navigation">
     
     	<div class=""><a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip navigation to the content', 'thematic' ); ?>"><?php _e( 'Skip to content', 'thematic' ); ?></a></div><!-- .skip-link -->
     	

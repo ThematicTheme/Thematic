@@ -112,7 +112,7 @@ if (function_exists('childtheme_override_siteinfoopen'))  {
 	function thematic_siteinfoopen() {
     ?>
     
-	<div id="siteinfo">        
+	<div id="siteinfo" role="contentinfo">        
 
    	<?php
    	}
