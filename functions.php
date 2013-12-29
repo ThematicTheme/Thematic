@@ -58,7 +58,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 * @since Thematic 1.0
 		 */
 		if ( !isset($content_width) )
-			$content_width = 540;
+			$content_width = 600;
    
 		// Legacy feed links handling - @to be removed eventually
 		// If you add theme support for thematic_legacy_feedlinks, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
