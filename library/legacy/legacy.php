@@ -80,6 +80,17 @@ if ( !function_exists( 'childtheme_override_meta_charset' ) ) {
 
 
 /**
+ *  Remove style dependencies from legacy child stylesheet 
+ *  
+ *  @since 2.0
+ */
+function thematic_legacy_style_dependency( $dependencies ) {
+	return array( );
+}
+add_filter( 'thematic_childtheme_style_dependencies', 'thematic_legacy_style_dependency' );
+
+
+/**
  * Filter .site-header opening tag to xhtml
  */
 function thematic_open_header_xhtml( $content ) {
