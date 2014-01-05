@@ -495,7 +495,21 @@ function thematic_create_stylesheet() {
 	$theme = wp_get_theme();
 	$version = $theme->Version;
 	$themeslug = get_stylesheet();
-	wp_enqueue_style( "{$themeslug}-style", get_stylesheet_uri(), array(), $version );
+	
+	$template = wp_get_theme( 'thematic' );	
+	
+	/**
+	 * Filter for specifying child theme stylesheet dependencies
+	 * 
+	 * @param array List of registered style handles
+	 */
+	$childtheme_style_dependencies = apply_filters( 'thematic_childtheme_style_dependencies', array( 'thematic-style1' ) );
+	
+	wp_register_style( 'genericons', get_template_directory_uri() . '/library/css/genericons.css', array(), '3.0.2' );
+	wp_register_style( 'thematic-style1', get_template_directory_uri() . '/library/css/style1.css', array(), $template->Version );
+	wp_register_style( 'thematic-style2', get_template_directory_uri() . '/library/css/style2.css', array( 'genericons' ), $template->Version );
+	
+	wp_enqueue_style( "{$themeslug}", get_stylesheet_uri(), $childtheme_style_dependencies, $version );
 }
 
 add_action( 'wp_enqueue_scripts', 'thematic_create_stylesheet' );
