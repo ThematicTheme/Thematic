@@ -23,6 +23,19 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	function thematic_body_class( $classes ) {
 		$current_layout = thematic_get_theme_opt( 'layout' );
 		
+		/**
+		 * Filter to control the layout
+		 * 
+		 * Accepts values of 'left-sidebar', 'three-columns', and 'right-sidebar'.
+		 * Note that the filter overrides the layout defined in the Theme Customizer
+		 * Default is 'right-sidebar'
+		 * 
+		 * @since 2.0
+		 * 
+		 * @param string $current_layout
+		 */
+		$current_layout = apply_filters( 'thematic_theme_layout', $current_layout );
+		
 		switch( $current_layout ) {
 			case 'left-sidebar':
 				$classes[] = 'left-sidebar';
