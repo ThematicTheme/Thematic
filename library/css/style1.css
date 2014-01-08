@@ -967,7 +967,8 @@ img.wp-smiley,
 
 	}
 
-	.toggled-on .sf-menu .current_page_item a {
+	.toggled-on .sf-menu .current_page_item a,
+	.toggled-on .sf-menu .current-menu-item a {
 		font-style: italic;
 		color: #004B91;
 	}
