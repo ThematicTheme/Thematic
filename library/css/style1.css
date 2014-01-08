@@ -967,6 +967,16 @@ img.wp-smiley,
 
 	}
 
+	.toggled-on .sf-menu .current-menu-item > a,
+	.toggled-on .sf-menu .current-menu-parent > a,
+	.toggled-on .sf-menu .current-menu-ancestor > a,
+	.toggled-on .sf-menu .current-post-ancestor > a,
+	.toggled-on .sf-menu .current_page_item > a,
+	.toggled-on .sf-menu .current_page_ancestor > a,
+	.toggled-on .sf-menu .current_page_parent > a {
+		font-style: italic;
+	}
+	
 	.toggled-on .sf-menu .current_page_item a,
 	.toggled-on .sf-menu .current-menu-item a {
 		font-style: italic;
