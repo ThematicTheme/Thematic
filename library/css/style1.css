@@ -1069,8 +1069,15 @@ img.wp-smiley,
 	.sf-menu .current_page_item a,
 	.sf-menu .current_page_ancestor a,
 	.sf-menu .current_page_parent a {
-	    border-bottom-color:#fff;
+		border-bottom-color:#fff;
+		font-style: italic;
 	}
+	
+	.sf-menu .current-menu-item a,
+	.sf-menu .current_page_item a {
+		color: #004B91;	
+	}
+	
 	.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
 		color:#666;
 	}
