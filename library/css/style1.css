@@ -1062,13 +1062,13 @@ img.wp-smiley,
 	.ie7 .sf-menu a {
 		width:100%;
 	}
-	.sf-menu .current-menu-item a,
-	.sf-menu .current-menu-parent a,
-	.sf-menu .current-menu-ancestor a,
-	.sf-menu .current-post-ancestor a,
-	.sf-menu .current_page_item a,
-	.sf-menu .current_page_ancestor a,
-	.sf-menu .current_page_parent a {
+	.sf-menu .current-menu-item > a,
+	.sf-menu .current-menu-parent > a,
+	.sf-menu .current-menu-ancestor > a,
+	.sf-menu .current-post-ancestor > a,
+	.sf-menu .current_page_item > a,
+	.sf-menu .current_page_ancestor > a,
+	.sf-menu .current_page_parent > a {
 		border-bottom-color:#fff;
 		font-style: italic;
 	}
