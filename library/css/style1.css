@@ -947,8 +947,8 @@ img.wp-smiley,
 		background-color: transparent;
 		display: block;
 		float: none;
-		margin-left: 20px;
 		position: relative;
+		padding-left: 1.5em;
 		left: auto;
 		top: auto;
 	}
