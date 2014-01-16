@@ -207,7 +207,8 @@ ul.sf-menu li li li.sfHover ul {
     background:#fafafa;
 	border-bottom:none;
 }
-.sf-menu ul a:hover {
+.sf-menu ul a:hover,
+.sf-menu ul a:focus {
     color: #FF4B33;
 }
 
