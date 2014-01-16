@@ -535,24 +535,19 @@ if ( function_exists( 'childtheme_override_head_scripts' ) )  {
      * @since 1.0
      */
     function thematic_head_scripts() {
-    	$template = wp_get_theme( 'thematic' );
+		$template = wp_get_theme( 'thematic' );
 
-    	// load comment reply script on posts and pages when option is set and check for deprecated filter
-    	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+		// load comment reply script on posts and pages when option is set and check for deprecated filter
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 			has_filter( 'thematic_show_commentreply' ) ? thematic_show_commentreply() : wp_enqueue_script( 'comment-reply' );
-		
+
+		// load jquery and superfish associated plugins when theme support is active
+		if ( current_theme_supports( 'thematic_superfish' ) ) {
+			wp_enqueue_script( 'superfish', get_template_directory_uri() . '/library/scripts/superfish.min.js', array( 'jquery', 'hoverIntent' ), '1.7.4', true );
+		}
+
 		// load theme javascript in footer
 		wp_enqueue_script( 'thematic-js', get_template_directory_uri() . '/library/js/thematic.js', array( 'jquery' ), $template->Version, true );
-		
-		// load jquery and superfish associated plugins when theme support is active
-    	if ( current_theme_supports( 'thematic_superfish' ) ) {
-			$scriptdir = get_template_directory_uri();
-			$scriptdir .= '/library/scripts/';
-
-			wp_enqueue_script( 'superfish', $scriptdir . 'superfish.min.js', array( 'jquery', 'hoverIntent' ), '1.7.4', true );
-			wp_enqueue_script( 'thematic-dropdowns', apply_filters( 'thematic_dropdown_options', $scriptdir . 'thematic-dropdowns.js' ) , array( 'jquery', 'superfish' ), '2.0', true );
-     	
-     	}
  	}
  }
 
