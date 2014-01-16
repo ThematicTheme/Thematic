@@ -895,7 +895,7 @@ img.wp-smiley,
 .tagline {
 	color: #666;
 	font-style: italic;
-	font-size: 14px;
+	font-size: 16px;
 	margin: 6px 0;
 	font-weight: normal;
 	font-family: Georgia, serif;
@@ -920,12 +920,10 @@ img.wp-smiley,
 	position:absolute;
 	top:-999em;
 	width:10em; /* left offset of submenus need to match (see below) */
+	margin-top: 3px;
 }
 .sf-menu ul li {
 	width:100%;
-}
-.sf-menu li:hover {
-	visibility:inherit; /* fixes IE7 'sticky bug' */
 }
 .sf-menu li {
 	float:left;
@@ -1088,7 +1086,7 @@ ul.sf-menu li li li.sfHover ul {
     font-size: 26px; /* @todo check type hierarchy */
     font-weight: bold;
     line-height: 26px;
-    padding: 0 0 7px 0;
+    padding: 0 0 12px 0;
 	margin: 0;
 }
 
@@ -1137,7 +1135,7 @@ ul.sf-menu li li li.sfHover ul {
 .entry-meta abbr {
     border: none;
     cursor: text;
-    font-size: 11px;
+    font-size: 12px;
     font-style: normal;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -1225,7 +1223,7 @@ ul.sf-menu li li li.sfHover ul {
 .entry-utility {
 	clear: both;
     color: #666;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 18px;
     margin:0 0 48px 0;
 }
@@ -1586,7 +1584,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 .form-section label {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .form-section input {
@@ -1600,8 +1598,9 @@ ul.sf-menu li li li.sfHover ul {
 
 #form-allowed-tags p {
     color: #666;
-    font-size: 11px;
-    margin: 0;    
+    font-size: 12px;
+    margin: 0;  
+    padding: 10px 0;  
 }
 
 #form-allowed-tags span {
@@ -1609,7 +1608,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 #form-allowed-tags code {
-    font-size: 11px;
+    font-size: 12px;
     line-height: normal;
 }
 
@@ -1657,8 +1656,7 @@ ul.sf-menu li li li.sfHover ul {
 
 .aside,
 .aside input {
-    font-size: 13px; /* @todo check type hierarchy */
-    line-height: 18px;
+    font-size: 14px; /* @todo check type hierarchy */
     margin-bottom: 6px;
 }
 
@@ -1734,7 +1732,7 @@ ul.sf-menu li li li.sfHover ul {
     font-style: italic;
 	font-family: Georgia, serif;
 	font-weight: normal;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .widgettitle a {
@@ -1831,7 +1829,7 @@ ul.sf-menu li li li.sfHover ul {
 
 #siteinfo {
     color: #666;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 18px;
     padding-top: 24px;
 	padding-bottom: 48px;
