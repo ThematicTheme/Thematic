@@ -554,14 +554,14 @@ if ( function_exists( 'childtheme_override_head_scripts' ) )  {
 			'superfish' => array(
 				// These are the options for the superfish dropdown menus
 				// see http://users.tpg.com.au/j_birch/plugins/superfish/options/ for more details
-				'hoverClass' => 'sfHover',           // the class applied to hovered list items
-				'pathClass'  => 'overideThisToUse',  // the class you have applied to list items that lead to the current page
-				'pathLevels' => 1,                   // the number of levels of submenus that remain open or are restored using pathClass
-				'delay'      => 400,                 // the delay in milliseconds that the mouse can remain outside a submenu without it closing
-				'speed'      => 'fast',              // speed of the opening animation. Equivalent to second parameter of jQuery’s .animate() method
-				'speedOut'   => 'fast',              // speed of the closing animation. Equivalent to second parameter of jQuery’s .animate() method
-				'cssArrows'  => false,               // set to false if you want to remove the CSS-based arrow triangles
-				'disableHI'  => false                // set to true to disable hoverIntent detection
+				'animation'    => array( 'opacity' => 'show', 'height' => 'show' ), // animation on opening the submenu
+				'hoverClass'   => 'sfHover',           // the class applied to hovered list items
+				'pathClass'    => 'overideThisToUse',  // the class you have applied to list items that lead to the current page
+				'pathLevels'   => 1,                   // the number of levels of submenus that remain open or are restored using pathClass
+				'delay'        => 400,                 // the delay in milliseconds that the mouse can remain outside a submenu without it closing
+				'speed'        => 'slow',              // speed of the opening animation. Equivalent to second parameter of jQuery’s .animate() method
+				'cssArrows'    => false,               // set to false if you want to remove the CSS-based arrow triangles
+				'disableHI'    => false                // set to true to disable hoverIntent detection
 			) 
 		);
 		
