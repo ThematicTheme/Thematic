@@ -977,8 +977,8 @@ img.wp-smiley,
 		font-style: italic;
 	}
 	
-	.toggled-on .sf-menu .current_page_item a,
-	.toggled-on .sf-menu .current-menu-item a {
+	.toggled-on .sf-menu .current_page_item > a,
+	.toggled-on .sf-menu .current-menu-item > a {
 		font-style: italic;
 		color: #004B91;
 	}
@@ -1081,8 +1081,8 @@ img.wp-smiley,
 	.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
 		color:#666;
 	}
-	.sf-menu .current-menu-item a,
-	.sf-menu .current_page_item a {
+	.sf-menu .current-menu-item > a,
+	.sf-menu .current_page_item > a {
 		color: #004B91;	
 	}
 	.sf-menu li {
