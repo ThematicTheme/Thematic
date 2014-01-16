@@ -974,9 +974,6 @@ ul.sf-menu li li li.sfHover ul {
 	text-decoration:none;
 	margin-left:-1px;
 }
-.ie7 .sf-menu a {
-	width:100%;
-}
 .sf-menu .current-menu-item a,
 .sf-menu .current-menu-parent a,
 .sf-menu .current-menu-ancestor a,
