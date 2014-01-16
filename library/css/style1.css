@@ -907,120 +907,219 @@ img.wp-smiley,
  * ----------------------------------------------------------------------------
  */
 
-/*** ESSENTIAL STYLES ***/
-.sf-menu, .sf-menu * {
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-.sf-menu {
-	line-height:1.0;
-}
-.sf-menu ul {
-	position:absolute;
-	top:-999em;
-	width:10em; /* left offset of submenus need to match (see below) */
-	margin-top: 3px;
-}
-.sf-menu ul li {
-	width:100%;
-}
-.sf-menu li {
-	float:left;
-	position:relative;
-}
-.sf-menu a {
-	display:block;
-	position:relative;
-}
-.sf-menu li:hover ul,
-.sf-menu li.sfHover ul {
-	left:0;
-	top:2.5em; /* match top ul list item height */
-	z-index:99;
-}
-ul.sf-menu li:hover li ul,
-ul.sf-menu li.sfHover li ul {
-	top:-999em;
-}
-ul.sf-menu li li:hover ul,
-ul.sf-menu li li.sfHover ul {
-	left:10em; /* match ul width */
-	top:0;
-}
-ul.sf-menu li li:hover li ul,
-ul.sf-menu li li.sfHover li ul {
-	top:-999em;
-}
-ul.sf-menu li li li:hover ul,
-ul.sf-menu li li li.sfHover ul {
-	left:10em; /* match ul width */
-	top:0;
+@media( max-width: 600px ) {
+	/* Small menu */
+	.menu-toggle {
+		cursor: pointer;
+		display: inline-block;
+		/* font: bold 16px/1.3 "Source Sans Pro", Helvetica, sans-serif; */
+		margin: 0;
+		padding: 12px 0 12px 20px;
+		font-style: normal;
+	}
+
+	.menu-toggle:after {
+		/* content: "\f502";
+		font-size: 12px;
+		padding-left: 8px;
+		vertical-align: -4px; */
+	}
+
+	.toggled-on .menu-toggle:after {
+		/* content: "\f500";
+		vertical-align: 2px; */
+	}
+
+	.toggled-on .sf-menu,
+	.toggled-on .sf-menu > ul {
+		display: block;
+		margin-left: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.toggled-on li,
+	.toggled-on .children {
+		display: block;
+	}
+
+	.toggled-on .sf-menu li > ul {
+		background-color: transparent;
+		display: block;
+		float: none;
+		position: relative;
+		padding-left: 1.5em;
+		left: auto;
+		top: auto;
+	}
+
+	.toggled-on .sf-menu li > ul a {
+		width: auto;
+	}
+
+	.toggled-on .sf-menu a, 
+	.toggled-on .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+		color:#666;
+	}
+
+	.toggled-on .sf-menu li:hover > a,
+	.toggled-on .sf-menu .children a {
+
+	}
+
+	.toggled-on .sf-menu .current-menu-item > a,
+	.toggled-on .sf-menu .current-menu-parent > a,
+	.toggled-on .sf-menu .current-menu-ancestor > a,
+	.toggled-on .sf-menu .current-post-ancestor > a,
+	.toggled-on .sf-menu .current_page_item > a,
+	.toggled-on .sf-menu .current_page_ancestor > a,
+	.toggled-on .sf-menu .current_page_parent > a {
+		font-style: italic;
+	}
+	
+	.toggled-on .sf-menu .current_page_item > a,
+	.toggled-on .sf-menu .current-menu-item > a {
+		font-style: italic;
+		color: #004B91;
+	}
+
+	.toggled-on .sf-menu li a:hover,
+	.toggled-on .sf-menu ul a:hover {
+		background:#fafafa;    
+	}
+
+	ul.sf-menu,
+	div.sf-menu > ul {
+		display: none;
+	}
 }
 
-/*** THEMATIC SKIN ***/
-.sf-menu {
-	float:left;
-	margin-left:1px;
-	position: relative;
-	top: 1px;
-}
+@media( min-width: 601px ) {
+	
+	.menu-toggle {
+		display: none;
+	}
+	
+	/*** ESSENTIAL STYLES ***/
+	.sf-menu, .sf-menu * {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.sf-menu {
+		line-height:1.0;
+	}
+	.sf-menu ul {
+		position:absolute;
+		top:-999em;
+		width:10em; /* left offset of submenus need to match (see below) */
+		margin-top: 3px;
+	}
+	.sf-menu ul li {
+		width:100%;
+	}
+	.sf-menu li {
+		float:left;
+		position:relative;
+	}
+	.sf-menu a {
+		display:block;
+		position:relative;
+	}
+	.sf-menu li:hover ul,
+	.sf-menu li.sfHover ul {
+		left:0;
+		top:2.5em; /* match top ul list item height */
+		z-index:99;
+	}
+	ul.sf-menu li:hover li ul,
+	ul.sf-menu li.sfHover li ul {
+		top:-999em;
+	}
+	ul.sf-menu li li:hover ul,
+	ul.sf-menu li li.sfHover ul {
+		left:10em; /* match ul width */
+		top:0;
+	}
+	ul.sf-menu li li:hover li ul,
+	ul.sf-menu li li.sfHover li ul {
+		top:-999em;
+	}
+	ul.sf-menu li li li:hover ul,
+	ul.sf-menu li li li.sfHover ul {
+		left:10em; /* match ul width */
+		top:0;
+	}
 
-.sf-menu a {
-  	border-color:#CCCCCC;
-    border-style:solid;
-    border-width:1px;
-	padding:9px 13px;
-	text-decoration:none;
-	margin-left:-1px;
-}
-.sf-menu .current-menu-item a,
-.sf-menu .current-menu-parent a,
-.sf-menu .current-menu-ancestor a,
-.sf-menu .current-post-ancestor a,
-.sf-menu .current_page_item a,
-.sf-menu .current_page_ancestor a,
-.sf-menu .current_page_parent a {
-    border-bottom-color:#fff;
-}
-.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
-	color:#666;
-}
-.sf-menu li {
-	background:#fff;
-}
-.sf-menu li li {
-	background:#fff;
-}
-.sf-menu li li li {
-	background:#9AAEDB;
-}
-.sf-menu li:hover, 
-.sf-menu li.sfHover, 
-.sf-menu a:hover, 
-.sf-menu a:active {
-    background:#fafafa;
-	outline: 0;
-    border-bottom-color:#ccc;
-}
-.sf-menu ul {
-    border-bottom:1px solid #ccc;
-}
-.sf-menu li:hover ul,
-.sf-menu li.sfHover ul {
-	top:32px; /* overriding essential styles */
-}
-.sf-menu ul ul {
-    margin-top:0;
-}
-.sf-menu ul a {
-    background:#fafafa;
-	border-bottom:none;
-}
-.sf-menu ul a:hover {
-    color: #FF4B33;
-}
+	/*** THEMATIC SKIN ***/
+	.sf-menu {
+		float:left;
+		margin-left:1px;
+		position: relative;
+		top: 1px;
+	}
 
+	.sf-menu a {
+	  	border-color:#CCCCCC;
+	    border-style:solid;
+	    border-width:1px;
+		padding:9px 13px;
+		text-decoration:none;
+		margin-left:-1px;
+	}
+	.sf-menu .current-menu-item > a,
+	.sf-menu .current-menu-parent > a,
+	.sf-menu .current-menu-ancestor > a,
+	.sf-menu .current-post-ancestor > a,
+	.sf-menu .current_page_item > a,
+	.sf-menu .current_page_ancestor > a,
+	.sf-menu .current_page_parent > a {
+		border-bottom-color:#fff;
+		font-style: italic;
+	}
+	
+	.sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+		color:#666;
+	}
+	.sf-menu .current-menu-item > a,
+	.sf-menu .current_page_item > a {
+		color: #004B91;	
+	}
+	.sf-menu li {
+		background:#fff;
+	}
+	.sf-menu li li {
+		background:#fff;
+	}
+	.sf-menu li li li {
+		background:#9AAEDB;
+	}
+	.sf-menu li:hover, 
+	.sf-menu li.sfHover, 
+	.sf-menu a:hover, 
+	.sf-menu a:active {
+	    background:#fafafa;
+		outline: 0;
+	    border-bottom-color:#ccc;
+	}
+	.sf-menu ul {
+	    border-bottom:1px solid #ccc;
+	}
+	.sf-menu li:hover ul,
+	.sf-menu li.sfHover ul {
+		top:32px; /* overriding essential styles */
+	}
+	.sf-menu ul ul {
+	    margin-top:0;
+	}
+	.sf-menu ul a {
+	    background:#fafafa;
+		border-bottom:none;
+	}
+	.sf-menu ul a:hover {
+	    color: #FF4B33;
+	}
+}
 
 /**
  * 5.0 Content

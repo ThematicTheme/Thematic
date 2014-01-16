@@ -535,20 +535,46 @@ if ( function_exists( 'childtheme_override_head_scripts' ) )  {
      * @since 1.0
      */
     function thematic_head_scripts() {
-    	
-    	// load comment reply script on posts and pages when option is set and check for deprecated filter
-    	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
-			has_filter( 'thematic_show_commentreply' ) ? thematic_show_commentreply() : wp_enqueue_script( 'comment-reply' );
-		
-		// load jquery and superfish associated plugins when theme support is active
-    	if ( current_theme_supports( 'thematic_superfish' ) ) {
-			$scriptdir = get_template_directory_uri();
-			$scriptdir .= '/library/scripts/';
+		$template = wp_get_theme( 'thematic' );
 
-			wp_enqueue_script( 'superfish', $scriptdir . 'superfish.min.js', array( 'jquery', 'hoverIntent' ), '1.7.4', true );
-			wp_enqueue_script( 'thematic-dropdowns', apply_filters( 'thematic_dropdown_options', $scriptdir . 'thematic-dropdowns.js' ) , array( 'jquery', 'superfish' ), '2.0', true );
-     	
-     	}
+		// load comment reply script on posts and pages when option is set and check for deprecated filter
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+			has_filter( 'thematic_show_commentreply' ) ? thematic_show_commentreply() : wp_enqueue_script( 'comment-reply' );
+
+		// load jquery and superfish associated plugins when theme support is active
+		if ( current_theme_supports( 'thematic_superfish' ) ) {
+			wp_enqueue_script( 'superfish', get_template_directory_uri() . '/library/js/superfish.min.js', array( 'jquery', 'hoverIntent' ), '1.7.4', true );
+		}
+
+		// load theme javascript in footer
+		wp_enqueue_script( 'thematic-js', get_template_directory_uri() . '/library/js/thematic.js', array( 'jquery' ), $template->Version, true );
+					
+
+		$thematic_javascript_options = array( 
+			'superfish' => array(
+				// These are the options for the superfish dropdown menus
+				// see http://users.tpg.com.au/j_birch/plugins/superfish/options/ for more details
+				'animation'    => array( 'opacity' => 'show', 'height' => 'show' ), // animation on opening the submenu
+				'hoverClass'   => 'sfHover',           // the class applied to hovered list items
+				'pathClass'    => 'overideThisToUse',  // the class you have applied to list items that lead to the current page
+				'pathLevels'   => 1,                   // the number of levels of submenus that remain open or are restored using pathClass
+				'delay'        => 400,                 // the delay in milliseconds that the mouse can remain outside a submenu without it closing
+				'speed'        => 'slow',              // speed of the opening animation. Equivalent to second parameter of jQuery’s .animate() method
+				'cssArrows'    => false,               // set to false if you want to remove the CSS-based arrow triangles
+				'disableHI'    => false                // set to true to disable hoverIntent detection
+			) 
+		);
+		
+		/**
+		 * Filter the variables sent to wp_localize_script
+		 * 
+		 * @since 2.0
+		 * 
+		 * @param array $thematic_javascript_options
+		 */
+		$thematic_javascript_options = apply_filters( 'thematic_javascript_options', $thematic_javascript_options );
+		
+		wp_localize_script( 'thematic-js', 'sfOptions', $thematic_javascript_options );
  	}
  }
 
@@ -792,7 +818,7 @@ if ( function_exists( 'childtheme_override_access' ) )  {
     ?>
     
     <div id="access" role="navigation">
-    
+    	<h3 class="menu-toggle"><?php echo apply_filters( 'thematic_mobile_navigation_buttontext', _x( 'Menu', 'Mobile navigation button', 'thematic' ) ); ?></h3>
     	<div class=""><a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip navigation to the content', 'thematic' ); ?>"><?php _e( 'Skip to content', 'thematic' ); ?></a></div><!-- .skip-link -->
     	
     	<?php 
