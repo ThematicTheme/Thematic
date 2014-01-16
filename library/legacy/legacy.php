@@ -80,6 +80,17 @@ if ( !function_exists( 'childtheme_override_meta_charset' ) ) {
 
 
 /**
+ *  Remove style dependencies from legacy child stylesheet 
+ *  
+ *  @since 2.0
+ */
+function thematic_legacy_style_dependency( $dependencies ) {
+	return array( );
+}
+add_filter( 'thematic_childtheme_style_dependencies', 'thematic_legacy_style_dependency' );
+
+
+/**
  * Filter .site-header opening tag to xhtml
  */
 function thematic_open_header_xhtml( $content ) {
@@ -117,7 +128,7 @@ if ( !function_exists( 'childtheme_override_nav_above' ) )  {
 	function childtheme_override_nav_above() {
 		if ( is_single() ) { 
 		?>
-				<div id="nav-above" class="navigation">
+				<div id="nav-above" class="navigation" role="navigation">
 				
 					<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
 					
@@ -125,7 +136,7 @@ if ( !function_exists( 'childtheme_override_nav_above' ) )  {
 					
 				</div>
 		<?php } else { ?>
-				<div id="nav-above" class="navigation">
+				<div id="nav-above" class="navigation" role="navigation">
                		<?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
                 	<?php wp_pagenavi(); ?>
 					<?php } else { ?>
@@ -367,7 +378,7 @@ if ( !function_exists( 'childtheme_override_nav_below' ) ) {
 	function childtheme_override_nav_below() {
 		if ( is_single() ) { ?>
 
-			<div id="nav-below" class="navigation">
+			<div id="nav-below" class="navigation" role="navigation">
 				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
 				<div class="nav-next"><?php thematic_next_post_link() ?></div>
 			</div>
@@ -375,7 +386,7 @@ if ( !function_exists( 'childtheme_override_nav_below' ) ) {
 <?php
 		} else { ?>
 
-			<div id="nav-below" class="navigation">
+			<div id="nav-below" class="navigation" role="navigation">
 				<?php if(function_exists('wp_pagenavi')) { ?>
 				<?php wp_pagenavi(); ?>
 				<?php } else { ?>  

@@ -24,7 +24,7 @@
 				// action hook for placing content above #content
 				thematic_abovecontent();
 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content">' . "\n\n" );
+				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content" role="main">' . "\n\n" );
 			?>
 
     	    	<?php

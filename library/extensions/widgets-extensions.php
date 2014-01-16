@@ -586,17 +586,17 @@ function thematic_page_bottom() {
 function thematic_before_widget_area($hook) {
 	$content =  "\n\t\t";
 	if ( $hook == 'primary-aside' ) {
-		$content .= '<aside id="primary" class="primary-aside aside main-aside">' . "\n\n";
+		$content .= '<aside id="primary" class="primary-aside aside main-aside" role="complementary">' . "\n\n";
 	} elseif ( $hook == 'secondary-aside' ) {
-		$content .= '<aside id="secondary" class="secondary-aside aside main-aside">' . "\n\n";
+		$content .= '<aside id="secondary" class="secondary-aside aside main-aside" role="complementary">' . "\n\n";
 	} elseif ( $hook == '1st-subsidiary-aside' ) {
-		$content .= '<aside id="first" class="first-sub-aside aside sub-aside">' . "\n\n";
+		$content .= '<aside id="first" class="first-sub-aside aside sub-aside" role="complementary">' . "\n\n";
 	} elseif ( $hook == '2nd-subsidiary-aside' ) {
-		$content .= '<aside id="second" class="second-sub-aside aside sub-aside">' . "\n\n";
+		$content .= '<aside id="second" class="second-sub-aside aside sub-aside" role="complementary">' . "\n\n";
 	} elseif ( $hook == '3rd-subsidiary-aside' ) {
-		$content .= '<aside id="third" class="third-sub-aside aside sub-aside">' . "\n\n";
+		$content .= '<aside id="third" class="third-sub-aside aside sub-aside" role="complementary">' . "\n\n";
 	} else {
-		$content .= '<aside id="' . $hook . '" class="' . $hook . ' aside">' ."\n";
+		$content .= '<aside id="' . $hook . '" class="' . $hook . ' aside" role="complementary">' ."\n";
 	}
 	$content .= "\t\t\t" . '<div class="inner xoxo">' . "\n\n\t\t\t\t";
 	return apply_filters( 'thematic_before_widget_area', $content, $hook );

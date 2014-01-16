@@ -91,7 +91,7 @@
 					
 					<?php endif; ?>
 					
-					<div id="comments-nav-below" class="comment-navigation">
+					<div id="comments-nav-below" class="comment-navigation" role="navigation">
 	        		
 	        			<div class="paginated-comments-links"><?php paginate_comments_links( 'total=' . $thematic_max_response_pages ); ?></div>
 	                

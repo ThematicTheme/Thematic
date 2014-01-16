@@ -22,7 +22,7 @@
 				thematic_abovecontent();
 
 				// filter for manipulating the element that wraps the content 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content">' . "\n" );
+				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content" role="main">' . "\n" );
 			
 				// calling the widget area 'page-top'
 	            get_sidebar('page-top');
