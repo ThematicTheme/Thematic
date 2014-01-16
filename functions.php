@@ -58,28 +58,8 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 * @since Thematic 1.0
 		 */
 		if ( !isset($content_width) )
-			$content_width = 540;
-   
-		// Legacy feed links handling - @to be removed eventually
-		// If you add theme support for thematic_legacy_feedlinks, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
-		if ( defined( 'THEMATIC_COMPATIBLE_FEEDLINKS' ) ) add_theme_support( 'thematic_legacy_feedlinks' );
-
-		// Legacy comments handling for pages, archives and links
-		// If you add_theme_support for thematic_legacy_comment_handling, Thematic will only show comments on pages with a key/value of "comments"
-		if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING' ) ) add_theme_support( 'thematic_legacy_comment_handling' );
-
-		// Legacy body class handling - @to be removed eventually
-		// If you add theme support for thematic_legacy_body_class, Thematic will use thematic_body_class instead of body_class()
-		if ( defined( 'THEMATIC_COMPATIBLE_BODY_CLASS' ) ) add_theme_support( 'thematic_legacy_body_class' );
-
-		// Legacy post class handling - @to be removed eventually
-		// If you add theme support for thematic_legacy_post_class, Thematic will use thematic_body_class instead of post_class()
-		if ( defined( 'THEMATIC_COMPATIBLE_POST_CLASS' ) ) add_theme_support( 'thematic_legacy_post_class' );
-
-		// Legacy post class handling - @to be removed eventually
-		// If you add theme support for thematic_legacy_post_class, Thematic will use it's legacy comment form
-		if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_FORM' ) ) add_theme_support( 'thematic_legacy_comment_form' );
-
+			$content_width = 600;
+		
 		// Check for MultiSite
 		define( 'THEMATIC_MB', is_multisite()  );
 
@@ -90,7 +70,9 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		if ( apply_filters( 'thematic_post_thumbs', true ) )
 			add_theme_support( 'post-thumbnails' );
  
-		add_theme_support( 'thematic_superfish' );		
+		add_theme_support( 'thematic_superfish' );
+		
+		add_theme_support( 'thematic_meta_viewport' );
 		
 		// Path constants
 		define( 'THEMATIC_LIB',  get_template_directory() .  '/library' );
@@ -98,10 +80,14 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		// Create Theme Options Page
 		require_once ( THEMATIC_LIB . '/extensions/theme-options.php' );
 		
+		// Need a little help from our helper functions
+		require_once ( THEMATIC_LIB . '/extensions/helpers.php' );
+		
 		// Load legacy functions
 		require_once ( THEMATIC_LIB . '/legacy/deprecated.php' );
 		
-		if ( !is_admin() && thematic_get_theme_opt( 'legacy_xhtml' ) == 1 ) {
+		// Load overrides to activate the old xhtml markup if set
+		if ( !is_admin() && thematic_is_legacy_xhtml() ) {
 			add_theme_support( 'thematic_legacy' );
 			require_once ( THEMATIC_LIB . '/legacy/legacy.php' );
 		}
@@ -136,12 +122,12 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		// Add Dynamic Contextual Semantic Classes
 		require_once ( THEMATIC_LIB . '/extensions/dynamic-classes.php' );
 
-		// Need a little help from our helper functions
-		require_once ( THEMATIC_LIB . '/extensions/helpers.php' );
-
 		// Load shortcodes
 		require_once ( THEMATIC_LIB . '/extensions/shortcodes.php' );
 
+		// Load Theme Customizer support
+		require_once ( THEMATIC_LIB . '/extensions/customizer.php' );
+		
 		// Adds filters for the description/meta content in archive templates
 		add_filter( 'archive_meta', 'wptexturize' );
 		add_filter( 'archive_meta', 'convert_smilies' );

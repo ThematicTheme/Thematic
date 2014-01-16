@@ -5,7 +5,7 @@
  * @package ThematicCoreLibrary
  * @subpackage DynamicClasses
  */
- 
+
 
 if ( function_exists( 'childtheme_override_body_class' ) )  {
 	/**
@@ -18,9 +18,68 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	/**
 	 * Generates semantic classes for BODY element
 	 *
+	 * @param array $classes body classes
+	 */
+	function thematic_body_class( $classes ) {
+		$current_layout = thematic_get_theme_opt( 'layout' );
+		
+		/**
+		 * Filter to control the layout
+		 * 
+		 * Accepts values of 'left-sidebar', 'three-columns', and 'right-sidebar'.
+		 * Note that the filter overrides the layout defined in the Theme Customizer
+		 * Default is 'right-sidebar'
+		 * 
+		 * @since 2.0
+		 * 
+		 * @param string $current_layout
+		 */
+		$current_layout = apply_filters( 'thematic_theme_layout', $current_layout );
+		
+		switch( $current_layout ) {
+			case 'left-sidebar':
+				$classes[] = 'left-sidebar';
+				break;
+			case 'three-columns':
+				$classes[] = 'three-columns';
+				break;
+			default:
+				$classes[] = 'right-sidebar';
+				break;
+		}
+		
+		if ( is_page_template( 'template-page-fullwidth.php' ) ) {
+			$classes[] = 'full-width';
+		}
+		
+		if( thematic_is_legacy_xhtml() ) 
+			$classes[] = 'thematic-legacy';
+		
+		/**
+		* Filter the body classes
+		* 
+		* @param array $classes
+		*/
+		return apply_filters( 'thematic_body_class', $classes );	
+	}
+	
+}
+ 
+
+if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
+	/**
+	 * @ignore
+	 */
+	 function thematic_legacy_body_class() {
+		childtheme_override_legacy_body_class();
+	}
+} else {
+	/**
+	 * Generates semantic classes for BODY element
+	 *
 	 * @param array $c body classes
 	 */
-	function thematic_body_class( $c ) {
+	function thematic_legacy_body_class( $c ) {
 		global $wp_query, $current_user, $blog_id, $post, $taxonomy;
 	
 		if ( apply_filters('thematic_show_bc_wordpress', TRUE ) ) {
@@ -274,20 +333,26 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
   		}
 
 		// And tada!
-		return array_unique(apply_filters( 'thematic_body_class', $c )); // Available filter: thematic_body_class
+		return array_unique(apply_filters( 'thematic_legacy_body_class', $c )); // Available filter: thematic_legacy_body_class
 	}
 }
 
 /**
- * Add thematic body classes if child theme activates it
+ * Add thematic body classes
+ * 
+ * Child themes can add the legacy bodyclasses if they need using
+ * add_theme_support('thematic_legacy_body_class')
  */
 function thematic_activate_body_classes() {
+	
+	add_filter( 'body_class', 'thematic_body_class' );
+	
 	if ( current_theme_supports ( 'thematic_legacy_body_class' ) ) {
-		add_filter( 'body_class', 'thematic_body_class', 20 );
+		add_filter( 'body_class', 'thematic_legacy_body_class', 20 );
 	}
 	
 	// Add browser CSS class to the end (queuing through priority) of the body classes 
-	if ( apply_filters( 'thematic_show_bc_browser', TRUE ) ) {
+	if ( apply_filters( 'thematic_show_bc_browser', false ) ) {
 		add_filter( 'body_class', 'thematic_browser_class_names', 30 ); 
 	}
 }

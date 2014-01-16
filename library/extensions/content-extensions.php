@@ -406,17 +406,17 @@ if (function_exists('childtheme_override_nav_above'))  {
 	 * @link http://wordpress.org/extend/plugins/wp-pagenavi/ WP-PageNavi Plugin Page
 	 */
 	function thematic_nav_above() {
-		if (is_single()) { 
+		if ( is_single() ) { 
 		?>
-				<div id="nav-above" class="navigation">
+				<nav id="nav-above" class="navigation" role="navigation">
 				
 					<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
 					
 					<div class="nav-next"><?php thematic_next_post_link() ?></div>
 					
-				</div>
+				</nav>
 		<?php } else { ?>
-				<div id="nav-above" class="navigation">
+				<nav id="nav-above" class="navigation" role="navigation">
                		<?php if ( function_exists( 'wp_pagenavi' ) ) { ?>
                 	<?php wp_pagenavi(); ?>
 					<?php } else { ?>
@@ -427,7 +427,7 @@ if (function_exists('childtheme_override_nav_above'))  {
 
 					<?php } ?>
 					
-				</div>	
+				</nav>	
 		<?php
 		}
 	}
@@ -458,7 +458,7 @@ if (function_exists('childtheme_override_archive_loop'))  {
 				thematic_abovepost(); 
 				?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -474,7 +474,7 @@ if (function_exists('childtheme_override_archive_loop'))  {
 					
 					<?php thematic_postfooter(); ?>
 					
-				</div><!-- #post -->
+				</article><!-- #post -->
 
 			<?php 
 				// action hook for insterting content below #post
@@ -510,7 +510,7 @@ if (function_exists('childtheme_override_author_loop'))  {
 				thematic_abovepost();
 				?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -526,7 +526,7 @@ if (function_exists('childtheme_override_author_loop'))  {
 					
 					<?php thematic_postfooter(); ?>
 					
-				</div><!-- #post -->
+				</article><!-- #post -->
 
 			<?php 
 				// action hook for insterting content below #post
@@ -561,7 +561,7 @@ if (function_exists('childtheme_override_category_loop'))  {
 				thematic_abovepost();
 				?>
 	
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -577,7 +577,7 @@ if (function_exists('childtheme_override_category_loop'))  {
 					
 					<?php thematic_postfooter(); ?>
 					
-				</div><!-- #post -->
+				</article><!-- #post -->
 
 			<?php 
 				// action hook for insterting content below #post
@@ -615,7 +615,7 @@ if (function_exists('childtheme_override_index_loop'))  {
 				thematic_abovepost();
 				?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -627,14 +627,14 @@ if (function_exists('childtheme_override_index_loop'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'thematic')),
-													'after' => '</div>')); ?>
+						<?php wp_link_pages( array( 'before' => sprintf( '<nav class="page-link">%s', __( 'Pages:', 'thematic' ) ),
+													'after' => '</nav>' ) ); ?>
 					
 					</div><!-- .entry-content -->
 					
 					<?php thematic_postfooter(); ?>
 					
-				</div><!-- #post -->
+				</article><!-- #post -->
 
 			<?php 
 				// action hook for insterting content below #post
@@ -674,7 +674,7 @@ if (function_exists('childtheme_override_single_post'))  {
 				thematic_abovepost();
 				?>
 			
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -686,14 +686,14 @@ if (function_exists('childtheme_override_single_post'))  {
 					
 						<?php thematic_content(); ?>
 
-						<?php wp_link_pages(array('before' => sprintf('<div class="page-link">%s', __('Pages:', 'thematic')),
-													'after' => '</div>')); ?>
+						<?php wp_link_pages( array( 'before' => sprintf( '<nav class="page-link">%s', __( 'Pages:', 'thematic' ) ),
+													'after' => '</nav>' ) ); ?>
 						
 					</div><!-- .entry-content -->
 					
 					<?php thematic_postfooter(); ?>
 					
-				</div><!-- #post -->
+				</article><!-- #post -->
 		<?php
 			// action hook for insterting content below #post
 			thematic_belowpost();
@@ -725,7 +725,7 @@ if (function_exists('childtheme_override_search_loop'))  {
 				thematic_abovepost();
 				?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -741,7 +741,7 @@ if (function_exists('childtheme_override_search_loop'))  {
 					
 					<?php thematic_postfooter(); ?>
 					
-				</div><!-- #post -->
+				</article><!-- #post -->
 
 			<?php 
 				// action hook for insterting content below #post
@@ -776,7 +776,7 @@ if (function_exists('childtheme_override_tag_loop'))  {
 				thematic_abovepost(); 
 				?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> > 
 
 				<?php
 
@@ -792,7 +792,7 @@ if (function_exists('childtheme_override_tag_loop'))  {
 					
 					<?php thematic_postfooter(); ?>
 					
-				</div><!-- #post -->
+				</article><!-- #post -->
 
 			<?php 
 				// action hook for insterting content below #post
@@ -856,9 +856,9 @@ if (function_exists('childtheme_override_postheader'))  {
  	   global $post;
  	 
  	   if ( is_404() || $post->post_type == 'page') {
- 	       $postheader = thematic_postheader_posttitle();        
+ 	       $postheader = '<header class="entry-header">' . thematic_postheader_posttitle() . "</header><!-- .entry-header -->\n";        
  	   } else {
- 	       $postheader = thematic_postheader_posttitle() . thematic_postheader_postmeta();    
+ 	       $postheader = '<header class="entry-header">' . thematic_postheader_posttitle() . thematic_postheader_postmeta() . "</header><!-- .entry-header -->\n";    
  	   }
  	   
  	   echo apply_filters( 'thematic_postheader', $postheader ); // Filter to override default post header
@@ -920,13 +920,13 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 	    } elseif (is_404()) {    
 	        $posttitle .= '<h1 class="entry-title">' . __('Not Found', 'thematic') . "</h1>\n";
 	    } else {
-	        $posttitle .= '<h2 class="entry-title">';
+	        $posttitle .= '<h1 class="entry-title">';
 	        $posttitle .= sprintf('<a href="%s" title="%s" rel="bookmark">%s</a>',
 	        						apply_filters('the_permalink', get_permalink()),
 									sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
 	        						$title_content
 	        						);   
-	        $posttitle .= "</h2>\n";
+	        $posttitle .= "</h1>\n";
 	    }
 	    
 	    return apply_filters('thematic_postheader_posttitle',$posttitle); 
@@ -1357,14 +1357,14 @@ if (function_exists('childtheme_override_postfooter'))  {
 	    
 		// Check for "Page" post-type and logged in user to show edit link
 	    if ( $post_type == 'page' && current_user_can('edit_posts') ) {
-	        $postfooter = '<div class="entry-utility">' . thematic_postfooter_posteditlink();
-	        $postfooter .= "</div><!-- .entry-utility -->\n";
+	        $postfooter = '<footer class="entry-utility">' . thematic_postfooter_posteditlink();
+	        $postfooter .= "</footer><!-- .entry-utility -->\n";
 	    // Display nothing for logged out users on a "Page" post-type 
 	    } elseif ( $post_type == 'page' ) {
 	        $postfooter = '';
 	    // For post-types other than "Pages" press on
 	    } else {
-	    	$postfooter = '<div class="entry-utility">';
+	    	$postfooter = '<footer class="entry-utility">';
 	        if ( is_single() ) {
 	        	$post_type_archive_link = ( function_exists( 'get_post_type_archive_link' )  ? get_post_type_archive_link( $post_type ) :  home_url( '/?post_type=' . $post_type ) );
 	        	if ( thematic_is_custom_post_type() && $post_type_obj->has_archive ) {
@@ -1394,7 +1394,7 @@ if (function_exists('childtheme_override_postfooter'))  {
 	        	} 
 	        	$postfooter .= ' ' . thematic_postfooter_posteditlink();
 	    	}   
-	    	$postfooter .= "\n\n\t\t\t\t\t</div><!-- .entry-utility -->\n";    
+	    	$postfooter .= "\n\n\t\t\t\t\t</footer><!-- .entry-utility -->\n";    
 	    }
 	    // Put it on the screen
 	    echo apply_filters( 'thematic_postfooter', $postfooter ); // Filter to override default post footer
@@ -1693,17 +1693,17 @@ if (function_exists('childtheme_override_nav_below'))  {
 	 * @link http://wordpress.org/extend/plugins/wp-pagenavi/ WP-PageNavi Plugin Page
 	 */
 	function thematic_nav_below() {
-		if (is_single()) { ?>
+		if ( is_single() ) { ?>
 
-			<div id="nav-below" class="navigation">
+			<nav id="nav-below" class="navigation" role="navigation">
 				<div class="nav-previous"><?php thematic_previous_post_link() ?></div>
 				<div class="nav-next"><?php thematic_next_post_link() ?></div>
-			</div>
+			</nav>
 
 <?php
 		} else { ?>
 
-			<div id="nav-below" class="navigation">
+			<nav id="nav-below" class="navigation" role="navigation">
                 <?php if(function_exists('wp_pagenavi')) { ?>
                 <?php wp_pagenavi(); ?>
                 <?php } else { ?>  
@@ -1713,7 +1713,7 @@ if (function_exists('childtheme_override_nav_below'))  {
 				<div class="nav-next"><?php previous_posts_link(sprintf('%s <span class="meta-nav">&raquo;</span>',__( 'Newer posts', 'thematic') ) ) ?></div>
 
 				<?php } ?>
-			</div>	
+			</nav>	
 	
 <?php
 		}

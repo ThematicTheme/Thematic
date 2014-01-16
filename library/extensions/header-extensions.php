@@ -408,6 +408,78 @@ function thematic_show_pingback() {
     }
 }
 
+
+/**
+ * Add html5 shiv for older browser compatibility
+ * 
+ * Filter: thematic_modernizr_handles
+ * Filter: thematic_use_html5shiv
+ * Filter: thematic_html5shiv_output
+ * 
+ * @since 2.0
+ */
+function thematic_add_html5shiv() {
+	
+	$use_shiv = true;
+	
+	// List of handles to look for. These scripts make the html5shiv unnecessary
+	$possible_handles = array(
+		'modernizr',
+		'modernizr-js'
+	);
+	
+	/**
+	 * Filter the possible script handles that makes the html5 shiv unnecessary.
+	 * 
+	 * The handles are strings used as id in the call to <code>wp_enqueue_script()</code>.
+	 * If a script with any of these handles is enqueued by a child theme or plugin, Thematic
+	 * will not add the html5 shiv.
+	 * 
+	 * @since 2.0
+	 * 
+	 * @param  array  $possible_handles  Array of handle names
+	 */
+	$possible_handles = apply_filters( 'thematic_modernizr_handles', $possible_handles );
+	
+	// Check if any other scripts has been enqueued
+	foreach( $possible_handles as $handle) {
+		if( wp_script_is( $handle, 'queue' ) )
+			$use_shiv = false;
+	}
+	
+	/**
+	 * Decide whether to use the html5shiv or not
+	 * 
+	 * Provides a shortcut to switch off the shiv. Defaults to true,
+	 * unless modernizr is detected.
+	 * 
+	 * @since 2.0
+	 * 
+	 * @param  boolean  $use_shiv
+	 */
+	$use_shiv = apply_filters( 'thematic_use_html5shiv', $use_shiv );
+	
+	// Output script link
+	if( $use_shiv ) {
+		$content  = '<!--[if lt IE 9]>' . "\n";
+		$content .= '<script src="' . get_template_directory_uri() . '/library/js/html5.js"></script>' . "\n";
+		$content .= '<![endif]-->';
+	
+		/**
+		 * Filter the output string of the html5shiv link
+		 * 
+		 * @since 2.0
+		 * 
+		 * @param  string  $content  The complete string that gets output to wp_head
+		 */
+		echo apply_filters( 'thematic_html5shiv_output', $content );
+	}
+	
+}
+
+add_action( 'wp_head', 'thematic_add_html5shiv', 20 );
+
+
 /**
  * Add the default stylesheet to the head of the document.
  * 
@@ -423,7 +495,21 @@ function thematic_create_stylesheet() {
 	$theme = wp_get_theme();
 	$version = $theme->Version;
 	$themeslug = get_stylesheet();
-	wp_enqueue_style( "{$themeslug}-style", get_stylesheet_uri(), array(), $version );
+	
+	$template = wp_get_theme( 'thematic' );	
+	
+	/**
+	 * Filter for specifying child theme stylesheet dependencies
+	 * 
+	 * @param array List of registered style handles
+	 */
+	$childtheme_style_dependencies = apply_filters( 'thematic_childtheme_style_dependencies', array( 'thematic-style1' ) );
+	
+	wp_register_style( 'genericons', get_template_directory_uri() . '/library/css/genericons.css', array(), '3.0.2' );
+	wp_register_style( 'thematic-style1', get_template_directory_uri() . '/library/css/style1.css', array(), $template->Version );
+	wp_register_style( 'thematic-style2', get_template_directory_uri() . '/library/css/style2.css', array( 'genericons' ), $template->Version );
+	
+	wp_enqueue_style( "{$themeslug}", get_stylesheet_uri(), $childtheme_style_dependencies, $version );
 }
 
 add_action( 'wp_enqueue_scripts', 'thematic_create_stylesheet' );
@@ -509,7 +595,7 @@ function thematic_nav_menu_args() {
 	$args = array (
 		'theme_location'	=> apply_filters( 'thematic_primary_menu_id', 'primary-menu' ),
 		'menu'				=> '',
-		'container'			=> 'div',
+		'container'			=> 'nav',
 		'container_class'	=> 'menu',
 		'menu_class'		=> 'sf-menu',
 		'fallback_cb'		=> 'wp_page_menu',
@@ -709,9 +795,9 @@ if ( function_exists( 'childtheme_override_access' ) )  {
     function thematic_access() { 
     ?>
     
-    <div id="access">
+    <div id="access" role="navigation">
     
-    	<div class="skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip navigation to the content', 'thematic' ); ?>"><?php _e( 'Skip to content', 'thematic' ); ?></a></div><!-- .skip-link -->
+    	<div class=""><a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip navigation to the content', 'thematic' ); ?>"><?php _e( 'Skip to content', 'thematic' ); ?></a></div><!-- .skip-link -->
     	
     	<?php 
     	if ( ( function_exists( 'has_nav_menu' ) ) && ( has_nav_menu( apply_filters( 'thematic_primary_menu_id', 'primary-menu' ) ) ) ) {

@@ -37,23 +37,29 @@ Create a new empty database for the tests. (Important! The test suite will **del
 
 ## Running the tests ##
 
-The Thematic unit tests are configured to use a variable called `WP_TESTS_DIR` in order to find the WordPress test suite. This needs to point to the folder where you just downloaded the test suite files. You can supply it directly with the command when you run the tests
+The Thematic unit tests are configured to use a variable called `WP_TESTS_DIR` in order to find the WordPress test suite. This needs to point to the folder where you just downloaded the test suite files. You can supply it directly with the command when you run the tests.
+
+The tests are divided into groups: default, legacy and overrides. Since some of these tests conflict with eachother they need to be run separately using the `--group` command line parameter 
 
 ```
 cd wp-content/themes/thematic/library/tests
-WP_TESTS_DIR=~/svn/wp-tests phpunit
+WP_TESTS_DIR=~/svn/wp-tests phpunit --group default
 ```
 
 Or if you want, you can add the variable to your .bash_profile or equivalent. You can then run the tests simply with
 
 ```
-phpunit
+phpunit --group default
 ```
 
-By default, the tests for the legacy xhtml mode is not run at the same time as the others. Run those tests separately with
+The other test groups are run with 
 
 ```
-phpunit test-legacy-xhtml.php
+phpunit --group legacy
+```
+and 
+```
+phpunit --group overrides
 ```
 
 ## Resources ##
@@ -61,4 +67,3 @@ phpunit test-legacy-xhtml.php
 - [PHPUnit installation instructions](http://phpunit.de/manual/current/en/installation.html)
 - [WP-CLI WordPress unit test installation](http://wp-cli.org/blog/plugin-unit-tests.html)
 - [The WordPress unit tests](http://make.wordpress.org/core/handbook/automated-testing/)
-- 

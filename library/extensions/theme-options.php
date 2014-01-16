@@ -51,8 +51,15 @@ if (function_exists('childtheme_override_opt_init')) {
 		add_settings_field ('thematic_auth_opt',   __('Info on Author Page'	, 'thematic')	, 'thematic_do_auth_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 		add_settings_field ('thematic_footer_opt', __('Text in Footer'	, 'thematic')		, 'thematic_do_footer_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 
-		// show check box option for restoring legacy xtml1.0 doctype and compatible markup
-		add_settings_field ('thematic_legacy_xhtml_opt', __('Restore Legacy XHTML1.0 Doctype'	, 'thematic'), 'thematic_do_legacy_xhtml_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		/**
+		 * Filter to enable child themes to hide the legacy mode checkbox
+		 * 
+		 * @param bool true
+		 */
+		if( apply_filters( 'thematic_show_legacymode_checkbox', true ) ) {
+			// show check box option for restoring legacy xtml1.0 doctype and compatible markup
+			add_settings_field ('thematic_legacy_xhtml_opt', __('Restore Legacy XHTML1.0 Doctype'	, 'thematic'), 'thematic_do_legacy_xhtml_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
+		}
 
 		// Show checkbox option for removing old options from database
 		if ( isset( $legacy_options ) && false !== $legacy_options ) {
@@ -151,7 +158,8 @@ function thematic_default_opt() {
 		'author_info'  	=> 0, // 0 = not checked 1 = checked
 		'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
 		'del_legacy_opt'=> 0, // 0 = not checked 1 = check
-		'legacy_xhtml'	=> 0  // 0 = not checked 1 = check
+		'legacy_xhtml'	=> 0,  // 0 = not checked 1 = check
+		'layout'        => 'right-sidebar'
 	);
 
 	return apply_filters( 'thematic_theme_default_opt', $thematic_default_opt );
@@ -307,7 +315,7 @@ function thematic_do_footer_opt() {
 /**
  * Renders Leagcy XTML1.0 mode checkbox
  *
- * @since Thematic 1.1
+ * @since Thematic 2.0
  */
  function thematic_do_legacy_xhtml_opt() {
 ?>
@@ -376,6 +384,21 @@ if (function_exists('childtheme_override_validate_opt')) {
  	   
 		// Remove Legacy XHTML CheckBox value either 1(yes) or 0(no)
 		$output['legacy_xhtml'] = ( isset( $input['legacy_xhtml'] ) ?  1 : 0 );
+		
+		// Check and set layout
+		if( isset( $input['layout'] ) ) {
+			switch( $input['layout'] ) {
+				case 'left-sidebar':
+					$output['layout'] = 'left-sidebar';
+					break;
+				case 'three-columns':
+					$output['layout'] = 'three-columns';
+					break;
+				default:
+					$output['layout'] = 'right-sidebar';
+					break;
+			}
+		}
  	   
 		// Remove Legacy Options CheckBox value either 1(yes) or 0(no)
 		$output['del_legacy_opt'] = ( isset( $input['del_legacy_opt'] ) ?  1 : 0 );
