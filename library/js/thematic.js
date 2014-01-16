@@ -37,13 +37,18 @@
 		if( typeof( sf.superfish ) === 'function' ) {
 			
 			if( body.width() >= breakpoint ) {
+				
 				// enable superfish when the page first loads if we're on desktop
 				sf.superfish({ 
-					delay:       400,                               // delay on mouseout 
-					animation:   {opacity:'show',height:'show'},    // fade-in and slide-down animation 
-					speed:       'fast',                            // faster animation speed 
-					autoArrows:  false,                             // disable generation of arrow mark-up 
-					dropShadows: false                              // disable drop shadows 
+					animation:  {opacity:'show',height:'show'},    // fade-in and slide-down animation 
+					hoverClass: sfOptions['superfish'].hoverClass,         
+					pathClass:  sfOptions['superfish'].pathClass,
+					pathLevels: parseInt( sfOptions['superfish'].pathLevels ),                 
+					delay:      parseInt( sfOptions['superfish'].delay ),               
+					speed:      sfOptions['superfish'].speed,            
+					speedOut:   sfOptions['superfish'].speedOut,            
+					cssArrows:  sfOptions['superfish'].cssArrows,             
+					disableHI:  sfOptions['superfish'].disableHI               
 				});
 			}
 		
