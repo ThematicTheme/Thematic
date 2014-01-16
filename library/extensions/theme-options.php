@@ -356,7 +356,7 @@ function thematic_do_legacy_opt() {
  */
 if (function_exists('childtheme_override_validate_opt')) {
 	function thematic_validate_opt($input) {
-		childtheme_override_validate_opt($input);
+		return childtheme_override_validate_opt($input);
 	}
 } else {
 	function thematic_validate_opt($input){
