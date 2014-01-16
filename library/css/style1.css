@@ -819,7 +819,7 @@ img.wp-smiley,
 	.three-columns .site-content {
 		margin: 0 25%;
 		overflow:hidden;
-		width: 50%;
+		width: 52%;
 	}
 	
 	.three-columns .main-aside {
@@ -895,7 +895,7 @@ img.wp-smiley,
 .tagline {
 	color: #666;
 	font-style: italic;
-	font-size: 14px;
+	font-size: 16px;
 	margin: 6px 0;
 	font-weight: normal;
 	font-family: Georgia, serif;
@@ -1013,12 +1013,10 @@ img.wp-smiley,
 		position:absolute;
 		top:-999em;
 		width:10em; /* left offset of submenus need to match (see below) */
+		margin-top: 3px;
 	}
 	.sf-menu ul li {
 		width:100%;
-	}
-	.sf-menu li:hover {
-		visibility:inherit; /* fixes IE7 'sticky bug' */
 	}
 	.sf-menu li {
 		float:left;
@@ -1068,9 +1066,6 @@ img.wp-smiley,
 		padding:9px 13px;
 		text-decoration:none;
 		margin-left:-1px;
-	}
-	.ie7 .sf-menu a {
-		width:100%;
 	}
 	.sf-menu .current-menu-item > a,
 	.sf-menu .current-menu-parent > a,
@@ -1187,7 +1182,7 @@ img.wp-smiley,
     font-size: 26px; /* @todo check type hierarchy */
     font-weight: bold;
     line-height: 26px;
-    padding: 0 0 7px 0;
+    padding: 0 0 12px 0;
 	margin: 0;
 }
 
@@ -1236,7 +1231,7 @@ img.wp-smiley,
 .entry-meta abbr {
     border: none;
     cursor: text;
-    font-size: 11px;
+    font-size: 12px;
     font-style: normal;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -1324,7 +1319,7 @@ img.wp-smiley,
 .entry-utility {
 	clear: both;
     color: #666;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 18px;
     margin:0 0 48px 0;
 }
@@ -1685,7 +1680,7 @@ img.wp-smiley,
 }
 
 .form-section label {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .form-section input {
@@ -1699,8 +1694,9 @@ img.wp-smiley,
 
 #form-allowed-tags p {
     color: #666;
-    font-size: 11px;
-    margin: 0;    
+    font-size: 12px;
+    margin: 0;  
+    padding: 10px 0;  
 }
 
 #form-allowed-tags span {
@@ -1708,7 +1704,7 @@ img.wp-smiley,
 }
 
 #form-allowed-tags code {
-    font-size: 11px;
+    font-size: 12px;
     line-height: normal;
 }
 
@@ -1756,8 +1752,7 @@ img.wp-smiley,
 
 .aside,
 .aside input {
-    font-size: 13px; /* @todo check type hierarchy */
-    line-height: 18px;
+    font-size: 14px; /* @todo check type hierarchy */
     margin-bottom: 6px;
 }
 
@@ -1833,7 +1828,7 @@ img.wp-smiley,
     font-style: italic;
 	font-family: Georgia, serif;
 	font-weight: normal;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .widgettitle a {
@@ -1930,7 +1925,7 @@ img.wp-smiley,
 
 #siteinfo {
     color: #666;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 18px;
     padding-top: 24px;
 	padding-bottom: 48px;
