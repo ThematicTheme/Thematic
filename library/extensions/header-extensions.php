@@ -543,7 +543,7 @@ if ( function_exists( 'childtheme_override_head_scripts' ) )  {
 
 		// load jquery and superfish associated plugins when theme support is active
 		if ( current_theme_supports( 'thematic_superfish' ) ) {
-			wp_enqueue_script( 'superfish', get_template_directory_uri() . '/library/scripts/superfish.min.js', array( 'jquery', 'hoverIntent' ), '1.7.4', true );
+			wp_enqueue_script( 'superfish', get_template_directory_uri() . '/library/js/superfish.min.js', array( 'jquery', 'hoverIntent' ), '1.7.4', true );
 		}
 
 		// load theme javascript in footer
