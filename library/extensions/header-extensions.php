@@ -483,19 +483,20 @@ add_action( 'wp_head', 'thematic_add_html5shiv', 20 );
 /**
  * Add the default stylesheet to the head of the document.
  * 
- * Register and enqueue Thematic style.css
+ * Register and enqueue Thematic main stylesheet and child style.css
  *
  * Child themes that want to filter the wp_enqueue_style params
- * should call wp_register_style( '{$themeslug}-style' , $custom , $custom, $custom )
+ * should call wp_register_style( '{$themeslug}' , $custom , $custom, $custom )
  * hooking into wp_enqueue_scripts. The theme slug is the name of the folder 
- * of your child theme. For example, if your theme folder is named "awesome"
- * the style handle becomes 'awesome-style'
+ * of your child theme.
+ * 
+ * If you want to use the Genericons icon font in a child theme, filter 
+ * thematic_childtheme_style_dependencies and pass an array including the 
+ * 'genericons' handle.
  */
 function thematic_create_stylesheet() {
 	$theme = wp_get_theme();
-	$version = $theme->Version;
 	$themeslug = get_stylesheet();
-	
 	$template = wp_get_theme( 'thematic' );	
 	
 	/**
@@ -507,12 +508,11 @@ function thematic_create_stylesheet() {
 	
 	wp_register_style( 'genericons', get_template_directory_uri() . '/library/css/genericons.css', array(), '3.0.2' );
 	wp_register_style( 'thematic-style1', get_template_directory_uri() . '/library/css/style1.css', array(), $template->Version );
-	wp_register_style( 'thematic-style2', get_template_directory_uri() . '/library/css/style2.css', array( 'genericons' ), $template->Version );
 	
-	wp_enqueue_style( "{$themeslug}", get_stylesheet_uri(), $childtheme_style_dependencies, $version );
+	wp_enqueue_style( "{$themeslug}", get_stylesheet_uri(), $childtheme_style_dependencies, $theme->Version );
 }
-
 add_action( 'wp_enqueue_scripts', 'thematic_create_stylesheet' );
+
 
 if ( function_exists( 'childtheme_override_head_scripts' ) )  {
     /**
