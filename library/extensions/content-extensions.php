@@ -112,7 +112,7 @@ function thematic_archiveloop() {
 /**
  * Register action hook: thematic_authorloop 
  *
- * Located in author.pgp
+ * Located in author.php
  * The Loop used on author pages
  */
 function thematic_authorloop() {
