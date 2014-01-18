@@ -18,7 +18,7 @@
 			return;
 		}
 
-		$( '.menu-toggle' ).on( 'click.twentythirteen', function() {
+		$( '.menu-toggle' ).on( 'click', function() {
 			nav.toggleClass( 'toggled-on' );
 		} );
 	} )();
@@ -35,22 +35,22 @@
 		
 		// only activate superfish if scripts are loaded
 		if( typeof( sf.superfish ) === 'function' ) {
-			
+
 			if( body.width() >= breakpoint ) {
 				
 				// enable superfish when the page first loads if we're on desktop
 				sf.superfish({ 
-					animation:    thematicOptions['superfish'].animation,    // fade-in and slide-down animation 
-					hoverClass:   thematicOptions['superfish'].hoverClass,         
+					animation:    thematicOptions['superfish'].animation, 
+					hoverClass:   thematicOptions['superfish'].hoverClass,
 					pathClass:    thematicOptions['superfish'].pathClass,
-					pathLevels:   parseInt( thematicOptions['superfish'].pathLevels ),                 
-					delay:        parseInt( thematicOptions['superfish'].delay ),               
-					speed:        thematicOptions['superfish'].speed,            
-					cssArrows:    thematicOptions['superfish'].cssArrows,             
-					disableHI:    thematicOptions['superfish'].disableHI               
+					pathLevels:   parseInt( thematicOptions['superfish'].pathLevels ),
+					delay:        parseInt( thematicOptions['superfish'].delay ),
+					speed:        thematicOptions['superfish'].speed,
+					cssArrows:    thematicOptions['superfish'].cssArrows,
+					disableHI:    thematicOptions['superfish'].disableHI
 				});
 			}
-		
+
 			$( window ).resize( function() {
 				if( body.width() >= breakpoint && !sf.hasClass('sf-js-enabled') ) {
 					// you only want SuperFish to be re-enabled once (sf.hasClass)
