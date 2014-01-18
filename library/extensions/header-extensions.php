@@ -551,6 +551,7 @@ if ( function_exists( 'childtheme_override_head_scripts' ) )  {
 					
 
 		$thematic_javascript_options = array( 
+			'mobileMenuBreakpoint' => 600,
 			'superfish' => array(
 				// These are the options for the superfish dropdown menus
 				// see http://users.tpg.com.au/j_birch/plugins/superfish/options/ for more details

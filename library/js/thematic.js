@@ -30,7 +30,7 @@
 	 */
 	( function() {
 		var body = $( 'body' );
-		var breakpoint = 600;
+		var breakpoint = parseInt( thematicOptions.mobileMenuBreakpoint );
 		var sf = $( 'ul.sf-menu' );
 		
 		// only activate superfish if scripts are loaded
