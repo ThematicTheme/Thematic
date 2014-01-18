@@ -40,14 +40,14 @@
 				
 				// enable superfish when the page first loads if we're on desktop
 				sf.superfish({ 
-					animation:    sfOptions['superfish'].animation,    // fade-in and slide-down animation 
-					hoverClass:   sfOptions['superfish'].hoverClass,         
-					pathClass:    sfOptions['superfish'].pathClass,
-					pathLevels:   parseInt( sfOptions['superfish'].pathLevels ),                 
-					delay:        parseInt( sfOptions['superfish'].delay ),               
-					speed:        sfOptions['superfish'].speed,            
-					cssArrows:    sfOptions['superfish'].cssArrows,             
-					disableHI:    sfOptions['superfish'].disableHI               
+					animation:    thematicOptions['superfish'].animation,    // fade-in and slide-down animation 
+					hoverClass:   thematicOptions['superfish'].hoverClass,         
+					pathClass:    thematicOptions['superfish'].pathClass,
+					pathLevels:   parseInt( thematicOptions['superfish'].pathLevels ),                 
+					delay:        parseInt( thematicOptions['superfish'].delay ),               
+					speed:        thematicOptions['superfish'].speed,            
+					cssArrows:    thematicOptions['superfish'].cssArrows,             
+					disableHI:    thematicOptions['superfish'].disableHI               
 				});
 			}
 		

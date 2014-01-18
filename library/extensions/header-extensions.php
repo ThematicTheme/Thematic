@@ -574,7 +574,7 @@ if ( function_exists( 'childtheme_override_head_scripts' ) )  {
 		 */
 		$thematic_javascript_options = apply_filters( 'thematic_javascript_options', $thematic_javascript_options );
 		
-		wp_localize_script( 'thematic-js', 'sfOptions', $thematic_javascript_options );
+		wp_localize_script( 'thematic-js', 'thematicOptions', $thematic_javascript_options );
  	}
  }
 
