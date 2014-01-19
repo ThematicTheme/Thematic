@@ -15,7 +15,12 @@
 			thematic_abovemainclose();
 		?>
 		
-		</div><!-- #main -->
+		<?php
+		
+			// Filter provided for altering output of the #main div closing element
+    			echo ( apply_filters( 'thematic_close_main', '</div><!-- #main -->' . "\n" ) );
+    		
+    		?>
     	
     	<?php
 			// action hook for placing content above the footer
