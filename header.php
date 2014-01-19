@@ -84,4 +84,7 @@
 			thematic_belowheader();
     	?>
     	
-	<div id="main" class="site-main">
+	<?php
+		// Filter provided for altering output of the #main div opening element
+		echo ( apply_filters( 'thematic_open_main',  '<div id="main" class="site-main">' ) 
+	?>
