@@ -376,14 +376,14 @@ if (function_exists('childtheme_override_validate_opt')) {
 		}
  	   
 		// Author Info CheckBox value either 1(yes) or 0(no)
-		$output['author_info'] = ( isset( $input['author_info'] ) ?  1 : 0 );
+		$output['author_info'] = ( isset( $input['author_info'] ) && 1 == $input['author_info'] ?  1 : 0 );
  	 
 		// Footer Text sanitized allowing HTML and WP shortcodes
 		if ( isset( $input['footer_txt'] ) ) 
 			$output['footer_txt'] = wp_kses_post( $input['footer_txt'] ) ;	
  	   
 		// Remove Legacy XHTML CheckBox value either 1(yes) or 0(no)
-		$output['legacy_xhtml'] = ( isset( $input['legacy_xhtml'] ) ?  1 : 0 );
+		$output['legacy_xhtml'] = ( isset( $input['legacy_xhtml'] ) && 1 == $input['legacy_xhtml'] ?  1 : 0 );
 		
 		// Check and set layout
 		if( isset( $input['layout'] ) ) {
@@ -401,7 +401,7 @@ if (function_exists('childtheme_override_validate_opt')) {
 		}
  	   
 		// Remove Legacy Options CheckBox value either 1(yes) or 0(no)
-		$output['del_legacy_opt'] = ( isset( $input['del_legacy_opt'] ) ?  1 : 0 );
+		$output['del_legacy_opt'] = ( isset( $input['del_legacy_opt'] ) && 1 == $input['del_legacy_opt'] ?  1 : 0 );
 
  	   
 		if ( 1 == $output['del_legacy_opt'] ) {
