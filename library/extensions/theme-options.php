@@ -218,7 +218,7 @@ if (function_exists('childtheme_override_opt_page_help')) {
 		
 		$sidebar = apply_filters ( 'thematic_theme_opt_help_sidebar', $sidebar );
 		
-		$help =  '<p>' . __('The options below are enabled by the Thematic Theme framework and/or a child theme.', 'thematic') .' ';
+		$help =  '<p>' . __('The options below are enabled by the Thematic Theme and/or a child theme.', 'thematic') .' ';
 		$help .= __('New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also.', 'thematic') . '</p>';
 		
 		$help = apply_filters ( 'thematic_theme_opt_help_txt', $help );
