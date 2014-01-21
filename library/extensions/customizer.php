@@ -87,7 +87,7 @@ function thematic_customize_register( $wp_customize ) {
 		'default'		=> $thematic_default_footertext,
 		'type'			=> 'option',
 		'capability'	=> 'edit_theme_options',
-		'transport'		=> 'postMessage'
+		'transport'		=> 'refresh'
 	) );
  
 	// Add control for footer text 
