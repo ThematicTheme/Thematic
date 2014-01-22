@@ -44,7 +44,7 @@
 	wp_head();
 
 	// Filter provided for altering output of the head closing element
-	echo ( apply_filters( 'thematic_close_head',  '</head>' ) );
+	echo ( apply_filters( 'thematic_close_head',  '</head>' . "\n" ) );
 
 	// Create the body element and dynamic body classes
 	thematic_body();
@@ -54,7 +54,7 @@
 
 	// Filter provided for removing output of wrapping element follows the body tag
 	if ( apply_filters( 'thematic_open_wrapper', true ) )
-	echo ( '<div id="wrapper" class="hfeed site-wrapper">' );
+		echo ( '<div id="wrapper" class="hfeed site-wrapper">' );
 
 	// Action hook for placing content above the theme header
 	thematic_aboveheader();
