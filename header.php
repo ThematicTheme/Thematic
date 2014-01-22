@@ -42,49 +42,34 @@
 	 * the ability to insert markup within the <head> tag.
 	 */
 	wp_head();
-?>
 
-</head>
+	// Filter provided for altering output of the head closing element
+	echo ( apply_filters( 'thematic_close_head',  '</head>' ) );
 
-<?php
 	// Create the body element and dynamic body classes
 	thematic_body();
 
 	// Action hook to place content before opening #wrapper
 	thematic_before();
-?>
-	<?php
-		// Filter provided for removing output of wrapping element follows the body tag
-		if ( apply_filters( 'thematic_open_wrapper', true ) )
-  		  echo ( '<div id="wrapper" class="hfeed site-wrapper">' );
 
-		// Action hook for placing content above the theme header
-		thematic_aboveheader();
-	?>
+	// Filter provided for removing output of wrapping element follows the body tag
+	if ( apply_filters( 'thematic_open_wrapper', true ) )
+	echo ( '<div id="wrapper" class="hfeed site-wrapper">' );
 
+	// Action hook for placing content above the theme header
+	thematic_aboveheader();
 
-		<?php
-			// Filter provided for altering output of the header opening element
-			echo ( apply_filters( 'thematic_open_header',  '<header id="header" class="site-header" role="banner">' ) );
-    	?>
+	// Filter provided for altering output of the header opening element
+	echo ( apply_filters( 'thematic_open_header',  '<header id="header" class="site-header" role="banner">' ) );
 
+	// Action hook creating the theme header
+	thematic_header();
 
-        	<?php
-				// Action hook creating the theme header
-				thematic_header();
-       		?>
+	// Filter provided for altering output of the header closing element
+	echo ( apply_filters( 'thematic_close_header', '</header><!-- .site-header-->' ) );
 
-    	<?php
-    		// Filter provided for altering output of the header closing element
-			echo ( apply_filters( 'thematic_close_header', '</header><!-- .site-header-->' ) );
-		?>
+	// Action hook for placing content below the theme header
+	thematic_belowheader();
 
-    	<?php
-			// Action hook for placing content below the theme header
-			thematic_belowheader();
-    	?>
-
-	<?php
-		// Filter provided for altering output of the #main div opening element
-		echo ( apply_filters( 'thematic_open_main',  '<div id="main" class="site-main">' ) );
-	?>
+	// Filter provided for altering output of the #main div opening element
+	echo ( apply_filters( 'thematic_open_main',  '<div id="main" class="site-main">' ) );
