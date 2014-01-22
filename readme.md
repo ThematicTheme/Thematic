@@ -2,7 +2,7 @@
 
 ### Welcome to our GitHub Repository
 
-Selling digital downloads is something that not a single one of the large WordPress ecommerce plugins has ever gotten really right. This plugin aims to fix that. Instead of focusing on providing every single feature under the sun, Easy Digital Downloads tries to provide only the ones that you really need. It aims to make selling digital downloads through WordPress easy, and complete.
+Thematic is a free, open-source, highly extensible, search-engine optimized WordPress theme, designed to be used as a parent theme to your child theme development. Whether a beginner, a designer or seasoned developer, Thematic provides a lot of functionality and a stable foundation to work from - featuring 13 widget-ready areas, styling for popular plugins, and a whole community behind it. It includes a sample child theme for rapid development.
 
 More information can be found at [thematictheme.com](http://thematictheme.com/).
 
@@ -13,7 +13,7 @@ More information can be found at [thematictheme.com](http://thematictheme.com/).
 
 This will download the latest release of Thematic. 
 
-If you want to try out the development version, download the zip from the develop branch: `https://github.com/ThematicTheme/Thematic/archive/develop.zip` This is not recommended for production sites.
+If you want to try out the development version, download the zip from the develop branch: `https://github.com/ThematicTheme/Thematic/archive/develop.zip` This is not recommended for production sites, but helpful if you want to help test beta versions before release.
 
 
 ## Bugs ##
