@@ -55,7 +55,7 @@
 		</article><!-- #post -->
 
 		<?php
-		
+
 		// action hook for placing contentbelow #post
 		thematic_belowpost();
 
