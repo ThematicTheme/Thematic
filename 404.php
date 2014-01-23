@@ -15,51 +15,49 @@
 
 	// action hook for placing content above #container
 	thematic_abovecontainer();
-?>
 
-		<div id="container" class="content-wrapper">
+	// filter for manipulating the output of the #container opening element
+	echo apply_filters( 'thematic_open_id_container', '<div id="container" class="content-wrapper">' . "\n\n" );
 
-			<?php 
-				// action hook for placing content above #content
-				thematic_abovecontent();
+	// action hook for placing content above #content
+	thematic_abovecontent();
 
-				// filter for manipulating the element that wraps the content 
-				echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content" role="main">' . "\n\n" );
+	// filter for manipulating the element that wraps the content
+	echo apply_filters( 'thematic_open_id_content', '<div id="content" class="site-content" role="main">' . "\n\n" );
 
-				// action hook for placing content above #post
-				thematic_abovepost(); 
-			?>
+	// action hook for placing content above #post
+	thematic_abovepost();
 
-				<div id="post-0" class="post error404">
+	?>
 
-				<?php
-		    		// action hook for placing the 404 content
-    	        	thematic_404()
-    	        ?>
+		<div id="post-0" class="post error404">
 
-				</div><!-- .post -->
+		<?php
+			// action hook for placing the 404 content
+			thematic_404()
+		?>
 
-				<?php 
-					// action hook for placing content below #post
-					thematic_belowpost(); 
-				?>
+		</div><!-- .post -->
 
-			</div><!-- #content -->
+	<?php
 
-			<?php 
-				// action hook for placing content below #content
-				thematic_belowcontent(); 
-			?> 
+	// action hook for placing content below #post
+	thematic_belowpost();
 
-		</div><!-- #container -->
-    
-<?php
+	// filter for manipulating the output of the #content closing element
+	echo apply_filters( 'thematic_close_id_content', '</div><!-- #content -->' . "\n\n" );
+
+	// action hook for placing content below #content
+	thematic_belowcontent();
+
+	// filter for manipulating the output of the #container closing element
+	echo apply_filters( 'thematic_close_id_container', '</div><!-- #container -->' . "\n\n" );
+
 	// action hook for placing content below #container
 	thematic_belowcontainer();
 
-	// calling the standard sidebar 
+	// calling the standard sidebar
 	thematic_sidebar();
 
 	// calling footer.php
 	get_footer();
-?>
