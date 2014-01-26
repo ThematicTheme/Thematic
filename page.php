@@ -52,7 +52,7 @@
 				?>
 
 				</div><!-- .entry-content -->
-	¯
+
 			</article><!-- #post -->
 
 		<?php
