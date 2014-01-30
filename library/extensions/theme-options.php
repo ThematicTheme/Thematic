@@ -42,7 +42,20 @@ if (function_exists('childtheme_override_opt_init')) {
 				add_option( 'thematic_theme_opt', thematic_default_opt() );
 			}
 		}
-
+		
+		// If we are missing a 2.0 option, this is an upgrade from previous version
+		if ( !isset( $current_options['layout'] ) ) {
+			$thematic_upgrade_opt = array(
+				'index_insert' 	=> 2,
+				'author_info'  	=> 0, // 0 = not checked 1 = checked
+				'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
+				'del_legacy_opt'=> 0, // 0 = not checked 1 = check
+				'legacy_xhtml'	=> 1,  // 0 = not checked 1 = check
+				'layout'        => 'right-sidebar'
+			);
+			update_option( 'thematic_theme_opt', $thematic_upgrade_opt );
+		}
+		
 		register_setting ('thematic_opt_group', 'thematic_theme_opt', 'thematic_validate_opt');
 		
 		add_settings_section ('thematic_opt_section_main', '', 'thematic_do_opt_section_main', 'thematic_theme_opt');
