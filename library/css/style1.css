@@ -1131,9 +1131,9 @@ img.wp-smiley,
 }
 
 .page-title {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 18px;
     padding: 0 0 44px 0;
+	margin: 0;
 }
 
 .attachment .page-title {
@@ -1156,6 +1156,12 @@ img.wp-smiley,
 
 .page-title .meta-nav {
     font-style: normal;
+}
+
+.archive-meta {
+	font-size: 14px;
+	position: relative;
+	top: -44px;
 }
 
 .hentry {
