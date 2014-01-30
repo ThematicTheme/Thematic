@@ -1190,6 +1190,7 @@ img.wp-smiley,
     line-height: 26px;
     padding: 0 0 12px 0;
 	margin: 0;
+	word-wrap: break-word;
 }
 
 .entry-title a {
@@ -1507,6 +1508,7 @@ img.wp-smiley,
 #comments {
 	clear: both;
     padding: 24px 0 0 0;
+	word-wrap: break-word;
 }
 
 #comments code {
@@ -1760,6 +1762,7 @@ img.wp-smiley,
 .aside input {
     font-size: 14px; /* @todo check type hierarchy */
     margin-bottom: 6px;
+	word-wrap: break-word;
 }
 
 .aside p,
