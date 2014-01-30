@@ -1402,12 +1402,12 @@ img.wp-smiley,
 
 .attachment-jpeg .site-content,
 .attachment-png .site-content {
-    width: 930px;
+    max-width: 100%;
 }
 
 .attachment-jpeg #comments,
 .attachment-png #comments {
-    width: 540px;
+    max-width: 40em;
     overflow: hidden;
 }
 
