@@ -1291,33 +1291,6 @@ img.wp-smiley,
     color: #FF4B33;
 }
 
-
-/* Mediaelements */
-.hentry .mejs-mediaelement,
-.hentry .mejs-container .mejs-controls {
-	background: #220e10; /* no equivalent in legacy, @todo check styles for consistency  */
-}
-
-.hentry .mejs-controls .mejs-time-rail .mejs-time-loaded,
-.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-	background: #fff;
-}
-
-.hentry .mejs-controls .mejs-time-rail .mejs-time-current {
-	background: #ea9629;
-}
-
-.hentry .mejs-controls .mejs-time-rail .mejs-time-total,
-.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
-	background: #595959;
-}
-
-.hentry .mejs-controls .mejs-time-rail span,
-.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
-.hentry .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-	border-radius: 0;
-}
-
 /**
  * 5.4 Entry Utility
  * ----------------------------------------------------------------------------
