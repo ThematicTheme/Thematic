@@ -91,6 +91,19 @@ add_filter( 'thematic_childtheme_style_dependencies', 'thematic_legacy_style_dep
 
 
 /**
+ * Remove the html5shiv markup
+ * 
+ * @since 2.0
+ * 
+ * @return bool false
+ */
+function thematic_xhtml_remove_shiv() {
+	return false;
+}
+add_filter( 'thematic_use_html5shiv', 'thematic_xhtml_remove_shiv' );
+
+
+/**
  * Filter .site-header opening tag to xhtml
  */
 function thematic_open_header_xhtml( $content ) {
