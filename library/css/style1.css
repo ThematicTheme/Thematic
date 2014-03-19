@@ -225,6 +225,11 @@ q {
 	-ms-hyphens:     none;
 	hyphens:         none;
 	quotes: none;
+	font-size: 18px;
+	font-style: italic;
+	color: #666;
+	/* font-weight: 300; */
+	margin: 24px 40px; /* legacy was 0 3em */
 }
 
 blockquote:before,
@@ -233,14 +238,6 @@ q:before,
 q:after {
 	content: "";
 	content: none;
-}
-
-blockquote {
-	font-size: 18px;
-	font-style: italic;
-	color: #666;
-	/* font-weight: 300; */
-	margin: 24px 40px; /* legacy was 0 3em */
 }
 
 blockquote blockquote {
