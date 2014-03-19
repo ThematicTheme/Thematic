@@ -44,7 +44,7 @@ if (function_exists('childtheme_override_opt_init')) {
 		}
 		
 		// If we are missing a 2.0 option, this is an upgrade from previous version
-		if ( !isset( $current_options['layout'] ) ) {
+		if ( !isset( $current_options['layout'] ) && isset( $current_options['footer_txt'] ) ) {
 			$thematic_upgrade_opt = array(
 				'index_insert' 	=> 2,
 				'author_info'  	=> 0, // 0 = not checked 1 = checked
