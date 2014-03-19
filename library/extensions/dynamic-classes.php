@@ -388,10 +388,10 @@ function thematic_browser_class_names($classes) {
 		
 		if ( ( current_theme_supports( 'minorbrowserversion_all' )) || ( current_theme_supports( 'minorbrowserversion_ch' ) ) ) {
 			preg_match( "/Chrome\/(\d+.\d+)/si", $browser, $matches );
-			$ch_version = 'ch' . str_replace( '.', '-', $matches[1] );
+			$ch_version = 'ch' . str_replace( '.', '-', ( isset ( $matches[1] ) ? $matches[1] : null ) );
 		} else {
 			preg_match( "/Chrome\/(\d+)/si", $browser, $matches );
-			$ch_version = 'ch' . $matches[1];
+			$ch_version = 'ch' . ( isset ( $matches[1] ) ? $matches[1] : null );
 		}      
 		$classes[] = $ch_version;
 	
@@ -400,10 +400,10 @@ function thematic_browser_class_names($classes) {
 				
 		if ( ( current_theme_supports( 'minorbrowserversion_all' )) || ( current_theme_supports( 'minorbrowserversion_sf' ) ) ) {
 			preg_match( "/Version\/(\d+.\d+)/si", $browser, $matches );
-			$sf_version = 'sf' . str_replace( '.', '-', $matches[1] );
+			$sf_version = 'sf' . str_replace( '.', '-', ( isset ( $matches[1] ) ? $matches[1] : null ) );
 		} else {
 			preg_match( "/Version\/(\d+)/si", $browser, $matches );
-			$sf_version = 'sf' . $matches[1];
+			$sf_version = 'sf' . ( isset ( $matches[1] ) ? $matches[1] : null );
 			
 		}     
 		$classes[] = $sf_version;
@@ -413,10 +413,10 @@ function thematic_browser_class_names($classes) {
 				
 		if ( ( current_theme_supports( 'minorbrowserversion_all' ) ) || ( current_theme_supports( 'minorbrowserversion_op' ) ) ) {
 			preg_match( "/Version\/(\d+.\d+)/si", $browser, $matches );
-			$op_version = 'op' . str_replace( '.', '-', $matches[1] );      
+			$op_version = 'op' . str_replace( '.', '-', ( isset ( $matches[1] ) ? $matches[1] : null ) );      
 		} else {
 			preg_match( "/Version\/(\d+)/si", $browser, $matches );
-			$op_version = 'op' . $matches[1];      			
+			$op_version = 'op' . ( isset ( $matches[1] ) ? $matches[1] : null );      			
 		}
 		$classes[] = $op_version;
 				
@@ -425,10 +425,10 @@ function thematic_browser_class_names($classes) {
 		
 		if ( ( current_theme_supports( 'minorbrowserversion_all' )) || ( current_theme_supports( 'minorbrowserversion_ie' ) ) ) {
 			preg_match( "/MSIE (\d+.\d+)/si", $browser, $matches );
-			$ie_version = 'ie' . str_replace( '.', '-', $matches[1] );
+			$ie_version = 'ie' . str_replace( '.', '-', ( isset ( $matches[1] ) ? $matches[1] : null ) );
 		} else {
 			preg_match( "/MSIE (\d+)/si", $browser, $matches );
-			$ie_version = 'ie' . $matches[1];
+			$ie_version = 'ie' . ( isset ( $matches[1] ) ? $matches[1] : null );
 			
 		}
 		$classes[] = $ie_version;
@@ -438,10 +438,10 @@ function thematic_browser_class_names($classes) {
 				
 			if ( ( current_theme_supports( 'minorbrowserversion_all' ) ) || ( current_theme_supports( 'minorbrowserversion_ff' ) ) ) {
 				preg_match( "/Firefox\/(\d+.\d+)/si", $browser, $matches );
-				$ff_version = 'ff' . str_replace( '.', '-', $matches[1] );
+				$ff_version = 'ff' . str_replace( '.', '-', ( isset ( $matches[1] ) ? $matches[1] : null ) );
 			} else {
 				preg_match( "/Firefox\/(\d+)/si", $browser, $matches );
-				$ff_version = 'ff' . $matches[1];
+				$ff_version = 'ff' . ( isset ( $matches[1] ) ? $matches[1] : null );
 			}      
 			$classes[] = $ff_version;
 				
