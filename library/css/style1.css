@@ -947,9 +947,13 @@ img.wp-smiley,
 		display: block;
 		float: none;
 		position: relative;
-		padding-left: 1.5em;
+		padding-left: 0;
 		left: auto;
 		top: auto;
+	}
+
+	.toggled-on .sf-menu li li {
+		padding-left: 1.5em;
 	}
 
 	.toggled-on .sf-menu li > ul a {
