@@ -1020,6 +1020,7 @@ img.wp-smiley,
 	.sf-menu li {
 		float:left;
 		position:relative;
+		display: block;
 	}
 	.sf-menu a {
 		display:block;
