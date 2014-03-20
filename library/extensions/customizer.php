@@ -62,15 +62,17 @@ function thematic_customize_register( $wp_customize ) {
 			'type'   => 'option',
 		) );
 		
+		$possible_layouts = thematic_available_theme_layouts();
+		$available_layouts = array();
+		foreach( $possible_layouts as $layout) {
+			$available_layouts[ $layout['slug'] ] = $layout['title'];
+		}
+
 		$wp_customize->add_control( 'thematic_layout_control', array(
 			'type'  => 'radio',
 			'label'  => __( 'Theme layout', 'thematic' ),
 			'section' => 'thematic_layout',
-			'choices' => array(
-				'right-sidebar' => __( 'Right Sidebar', 'thematic' ),
-				'left-sidebar'  => __( 'Left Sidebar', 'thematic' ),
-				'three-columns' => __( 'Three columns', 'thematic' )
-			),
+			'choices' => $available_layouts,
 			'settings' => 'thematic_theme_opt[layout]'
 		) );
 	}

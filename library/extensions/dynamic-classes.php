@@ -22,7 +22,9 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	 */
 	function thematic_body_class( $classes ) {
 		$current_layout = thematic_get_theme_opt( 'layout' );
-		
+
+		$available_layouts = thematic_available_layout_slugs();
+
 		/**
 		 * Filter to control the layout
 		 * 
@@ -34,18 +36,12 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 		 * 
 		 * @param string $current_layout
 		 */
-		$current_layout = apply_filters( 'thematic_theme_layout', $current_layout );
+		$current_layout = apply_filters( 'thematic_current_theme_layout', $current_layout );
 		
-		switch( $current_layout ) {
-			case 'left-sidebar':
-				$classes[] = 'left-sidebar';
-				break;
-			case 'three-columns':
-				$classes[] = 'three-columns';
-				break;
-			default:
-				$classes[] = 'right-sidebar';
-				break;
+		if( in_array( $current_layout, $available_layouts ) ) {
+			$classes[] = $current_layout;
+		} else {
+			$classes[] = thematic_default_theme_layout();
 		}
 		
 		if ( is_page_template( 'template-page-fullwidth.php' ) ) {

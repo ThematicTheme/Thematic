@@ -51,7 +51,7 @@ if (function_exists('childtheme_override_opt_init')) {
 				'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
 				'del_legacy_opt'=> 0, // 0 = not checked 1 = check
 				'legacy_xhtml'	=> 1,  // 0 = not checked 1 = check
-				'layout'        => 'right-sidebar'
+				'layout'        => thematic_default_theme_layout()
 			);
 			update_option( 'thematic_theme_opt', $thematic_upgrade_opt );
 		}
@@ -172,7 +172,7 @@ function thematic_default_opt() {
 		'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
 		'del_legacy_opt'=> 0, // 0 = not checked 1 = check
 		'legacy_xhtml'	=> 0,  // 0 = not checked 1 = check
-		'layout'        => 'right-sidebar'
+		'layout'        => thematic_default_theme_layout()
 	);
 
 	return apply_filters( 'thematic_theme_default_opt', $thematic_default_opt );
@@ -400,16 +400,12 @@ if (function_exists('childtheme_override_validate_opt')) {
 		
 		// Check and set layout
 		if( isset( $input['layout'] ) ) {
-			switch( $input['layout'] ) {
-				case 'left-sidebar':
-					$output['layout'] = 'left-sidebar';
-					break;
-				case 'three-columns':
-					$output['layout'] = 'three-columns';
-					break;
-				default:
-					$output['layout'] = 'right-sidebar';
-					break;
+			$available_layouts = thematic_available_layout_slugs();
+
+			if( in_array( $input['layout'], $available_layouts ) ) {
+				$output['layout'] = $input['layout'];
+			} else {
+				$output['layout'] = thematic_default_theme_layout();
 			}
 		}
  	   

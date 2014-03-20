@@ -148,4 +148,67 @@ function thematic_is_legacy_xhtml() {
 	return false;
 }
 
+
+/**
+ * Specifies the available layouts for the theme
+ *
+ * @since 2.0
+ *
+ * @return array $layouts
+ */
+function thematic_available_theme_layouts() {
+	$layouts = array(
+		'left-sidebar' => array(
+			'slug'  => 'left-sidebar',
+			'title' => __( 'Left Sidebar', 'thematic' )
+		),
+		'right-sidebar' => array(
+			'slug' => 'right-sidebar',
+			'title' => __( 'Right Sidebar', 'thematic' )
+		),
+		'three-columns' => array(
+			'slug' => 'three-columns',
+			'title' => __( 'Three columns', 'thematic' )
+		)
+	);
+
+	return apply_filters( 'thematic_available_theme_layouts', $layouts );
+}
+
+
+/**
+ * Create a simple array of the available layout strings
+ *
+ * @since 2.0
+ *
+ * @return array $layouts
+ */
+function thematic_available_layout_slugs() {
+	$possible_layouts = thematic_available_theme_layouts();
+	$available_layouts = array();
+	foreach( $possible_layouts as $layout) {
+		$available_layouts[] = $layout['slug'];
+	}
+
+	return $available_layouts;
+}
+
+
+/**
+ * Decide the default layout of the theme
+ *
+ * @since 2.0
+ *
+ * @return string $default_layout
+ */
+function thematic_default_theme_layout() {
+	$thematic_default_layout = apply_filters( 'thematic_default_theme_layout', 'right-sidebar' );
+
+	// check that the filtered layout is a valid layout
+	if ( !in_array( $thematic_default_layout, thematic_available_layout_slugs() ) ) {
+		$thematic_default_layout = 'right-sidebar';
+	}
+
+	return $thematic_default_layout;
+}
 ?>
