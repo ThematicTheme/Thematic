@@ -23,7 +23,7 @@ if (function_exists('childtheme_override_commentmeta'))  {
 	 * Filter: thematic_commentmeta
 	 */
 	function thematic_commentmeta( $print = true ) {
-		$content = '<div class="comment-metadata">';
+		$content = '<div class="comment-meta">';
 		$content .= '<time datetime="'. get_comment_time( 'c' ). '">'; 
 		$content .= sprintf( _x('Posted %s at %s', 'Posted {$date} at {$time}', 'thematic') , 
 						get_comment_date(),
@@ -41,7 +41,7 @@ if (function_exists('childtheme_override_commentmeta'))  {
 		
 		$content .= '</div>' . "\n";
 			
-		return $print ? print( apply_filters( 'thematic_commentmetadata', $content ) ) : apply_filters( 'thematic_commentmeta', $content );
+		return $print ? print( apply_filters( 'thematic_commentmeta', $content ) ) : apply_filters( 'thematic_commentmeta', $content );
 
 	} // end thematic_commentmeta
 }

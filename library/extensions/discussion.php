@@ -28,7 +28,7 @@ function thematic_comments($comment, $args, $depth) {
 			?>
 			
 			<article id="comment-body-<?php comment_ID() ?>" class="comment-body">
-				<footer class="comment-meta">
+				<footer class="comment-utility">
 					<div class="comment-author vcard"><?php thematic_commenter_link() ?></div><!-- .comment-author -->
 			
 						<?php thematic_commentmeta( true ); ?>
@@ -40,7 +40,7 @@ function thematic_comments($comment, $args, $depth) {
 								echo ".</span>\n";
 							}
 						?>
-				</footer><!-- .comment-meta -->
+				</footer><!-- .comment-utility -->
 				
 		        <div class="comment-content">
 		    		<?php comment_text() ?>
