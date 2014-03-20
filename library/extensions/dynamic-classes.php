@@ -34,6 +34,24 @@ function thematic_available_theme_layouts() {
 }
 
 
+/**
+ * Create a simple array of the available layout strings
+ *
+ * @since 2.0
+ *
+ * @return array $layouts
+ */
+function thematic_available_layout_slugs() {
+	$possible_layouts = thematic_available_theme_layouts();
+	$available_layouts = array();
+	foreach( $possible_layouts as $layout) {
+		$available_layouts[] = $layout['slug'];
+	}
+
+	return $available_layouts();
+}
+
+
 if ( function_exists( 'childtheme_override_body_class' ) )  {
 	/**
 	 * @ignore
@@ -49,12 +67,8 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	 */
 	function thematic_body_class( $classes ) {
 		$current_layout = thematic_get_theme_opt( 'layout' );
-		
-		$possible_layouts = thematic_available_theme_layouts();
-		$available_layouts = array();
-		foreach( $possible_layouts as $layout) {
-			$available_layouts[] = $layout['slug'];
-		}
+
+		$available_layouts = thematic_available_layout_slugs();
 
 		/**
 		 * Filter to control the layout

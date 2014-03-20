@@ -400,11 +400,7 @@ if (function_exists('childtheme_override_validate_opt')) {
 		
 		// Check and set layout
 		if( isset( $input['layout'] ) ) {
-			$possible_layouts = thematic_available_theme_layouts();
-			$available_layouts = array();
-			foreach( $possible_layouts as $layout) {
-				$available_layouts[] = $layout['slug'];
-			}
+			$available_layouts = thematic_available_layout_slugs();
 
 			if( in_array( $current_layout, $available_layouts ) ) {
 				$output['layout'] = $current_layout;
