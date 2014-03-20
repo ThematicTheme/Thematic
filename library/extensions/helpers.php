@@ -193,4 +193,22 @@ function thematic_available_layout_slugs() {
 	return $available_layouts;
 }
 
+
+/**
+ * Decide the default layout of the theme
+ *
+ * @since 2.0
+ *
+ * @return string $default_layout
+ */
+function thematic_default_theme_layout() {
+	$thematic_default_layout = apply_filters( 'thematic_default_theme_layout', 'right-sidebar' );
+
+	// check that the filtered layout is a valid layout
+	if ( !in_array( $thematic_default_layout, thematic_available_layout_slugs() ) ) {
+		$thematic_default_layout = 'right-sidebar';
+	}
+
+	return $thematic_default_layout;
+}
 ?>

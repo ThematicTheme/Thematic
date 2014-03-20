@@ -51,7 +51,7 @@ if (function_exists('childtheme_override_opt_init')) {
 				'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
 				'del_legacy_opt'=> 0, // 0 = not checked 1 = check
 				'legacy_xhtml'	=> 1,  // 0 = not checked 1 = check
-				'layout'        => apply_filters( 'thematic_default_theme_layout', 'right-sidebar' )
+				'layout'        => thematic_default_theme_layout()
 			);
 			update_option( 'thematic_theme_opt', $thematic_upgrade_opt );
 		}
@@ -172,7 +172,7 @@ function thematic_default_opt() {
 		'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
 		'del_legacy_opt'=> 0, // 0 = not checked 1 = check
 		'legacy_xhtml'	=> 0,  // 0 = not checked 1 = check
-		'layout'        => apply_filters( 'thematic_default_theme_layout', 'right-sidebar' )
+		'layout'        => thematic_default_theme_layout()
 	);
 
 	return apply_filters( 'thematic_theme_default_opt', $thematic_default_opt );
@@ -405,7 +405,7 @@ if (function_exists('childtheme_override_validate_opt')) {
 			if( in_array( $current_layout, $available_layouts ) ) {
 				$output['layout'] = $current_layout;
 			} else {
-				$output['layout'] = apply_filters( 'thematic_default_theme_layout', 'right-sidebar' );
+				$output['layout'] = thematic_default_theme_layout();
 			}
 		}
  	   

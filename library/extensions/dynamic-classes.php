@@ -41,7 +41,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 		if( in_array( $current_layout, $available_layouts ) ) {
 			$classes[] = $current_layout;
 		} else {
-			$classes[] = apply_filters( 'thematic_default_theme_layout', 'right-sidebar' );
+			$classes[] = thematic_default_theme_layout();
 		}
 		
 		if ( is_page_template( 'template-page-fullwidth.php' ) ) {
