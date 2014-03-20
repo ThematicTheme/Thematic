@@ -16,6 +16,15 @@
 
 
 /**
+ * Thematic only works in WordPress 3.6 or later.
+ * 
+ * @since Thematic 2.0
+ */
+if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) )
+	require get_template_directory() . '/library/extensions/back-compat.php';
+
+
+/**
  * Registers action hook: thematic_init 
  * 
  * @since Thematic 1.0
