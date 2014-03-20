@@ -15,17 +15,46 @@ class TestDynamicClasses extends Thematic_UnitTestCase {
 		$this->assertContains( 'right-sidebar', $body_classes );	
 	}
 	
-	function test_thematic_body_class_filter_layout() {
-		add_filter( 'thematic_theme_layout', array( $this, 'switch_layout' ) );
+	function test_thematic_filter_current_theme_layout() {
+		add_filter( 'thematic_current_theme_layout', array( $this, 'switch_layout' ) );
 		
-		$current_layout = apply_filters( 'thematic_theme_layout', '' );
+		$current_layout = apply_filters( 'thematic_current_theme_layout', '' );
 		
 		$body_classes = thematic_body_class( array() );
 		$this->assertContains( 'left-sidebar', $body_classes );	
 	}
 
+	function test_thematic_add_available_layout() {
+		add_filter( 'thematic_available_theme_layouts', array( $this, 'add_layout' ) );
+
+		$available_layouts = apply_filters( 'thematic_available_theme_layouts', thematic_available_theme_layouts() );
+
+		$this->assertArrayHasKey( 'half-sidebar', $available_layouts );
+	}
+
+	function test_thematic_remove_available_layout() {
+		add_filter( 'thematic_available_theme_layouts', array( $this, 'remove_layout' ) );
+
+		$available_layouts = apply_filters( 'thematic_available_theme_layouts', thematic_available_theme_layouts() );
+
+		$this->assertArrayNotHasKey( 'right-sidebar', $available_layouts );
+	}
+
 	function switch_layout( $layout ) {
 		return 'left-sidebar';
+	}
+
+	function add_layout( $layouts ) {
+		$layouts['half-sidebar'] = array(
+			'slug' => 'half-sidebar',
+			'title' => 'Half Sidebar'
+		);
+		return $layouts;
+	}
+
+	function remove_layout( $layouts ) {
+		unset( $layouts['right-sidebar'] );
+		return $layouts;
 	}
 
 }
