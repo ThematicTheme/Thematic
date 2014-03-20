@@ -402,8 +402,8 @@ if (function_exists('childtheme_override_validate_opt')) {
 		if( isset( $input['layout'] ) ) {
 			$available_layouts = thematic_available_layout_slugs();
 
-			if( in_array( $current_layout, $available_layouts ) ) {
-				$output['layout'] = $current_layout;
+			if( in_array( $input['layout'], $available_layouts ) ) {
+				$output['layout'] = $input['layout'];
 			} else {
 				$output['layout'] = thematic_default_theme_layout();
 			}
