@@ -7,51 +7,6 @@
  */
 
 
-/**
- * Specifies the available layouts for the theme
- *
- * @since 2.0
- *
- * @return array $layouts
- */
-function thematic_available_theme_layouts() {
-	$layouts = array(
-		'left-sidebar' => array(
-			'slug'  => 'left-sidebar',
-			'title' => __( 'Left Sidebar', 'thematic' )
-		),
-		'right-sidebar' => array(
-			'slug' => 'right-sidebar',
-			'title' => __( 'Right Sidebar', 'thematic' )
-		),
-		'three-columns' => array(
-			'slug' => 'three-columns',
-			'title' => __( 'Three columns', 'thematic' )
-		)
-	);
-
-	return apply_filters( 'thematic_available_theme_layouts', $layouts );
-}
-
-
-/**
- * Create a simple array of the available layout strings
- *
- * @since 2.0
- *
- * @return array $layouts
- */
-function thematic_available_layout_slugs() {
-	$possible_layouts = thematic_available_theme_layouts();
-	$available_layouts = array();
-	foreach( $possible_layouts as $layout) {
-		$available_layouts[] = $layout['slug'];
-	}
-
-	return $available_layouts();
-}
-
-
 if ( function_exists( 'childtheme_override_body_class' ) )  {
 	/**
 	 * @ignore
