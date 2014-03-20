@@ -45,47 +45,27 @@ function thematic_after_title() {
 
 
 /**
- * Search widget class
- *
- * @since 0.9.6.3
+ * Enforce title on search widget
+ * 
+ * Replaces the functionality of deprecated widget Thematic_Widget_Search
+ * 
+ * @since 2.0
+ * 
+ * @param  string  $title    The current widget title
+ * @param  object  $instance The current widget instance
+ * @param  string  $id_base  The registered id of current widget
  */
-class Thematic_Widget_Search extends WP_Widget {
-
-	function Thematic_Widget_Search() {
-		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'thematic') );
-		$this->WP_Widget('search', __('Search', 'thematic'), $widget_ops);
+function thematic_filter_search_widget( $title, $instance = '', $id_base = '' ) {
+	
+	if ( 'search' == $id_base ) {
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Search', 'thematic' ) : $instance['title'] );
+		$title = '<label for="s">' . $title . '</label>';
 	}
-
-	function widget( $args, $instance ) {
-		extract($args);
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Search', 'thematic') : $instance['title']);
-
-		echo $before_widget;
-		if ( $title )
-			echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title;
-
-		// Use current theme search form if it exists
-		get_search_form();
-
-		echo $after_widget;
-	}
-
-	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '') );
-		$title = $instance['title'];
-?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'thematic'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
-<?php
-	}
-
-	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		$new_instance = wp_parse_args((array) $new_instance, array( 'title' => ''));
-		$instance['title'] = strip_tags($new_instance['title']);
-		return $instance;
-	}
-
+	
+	return $title;
 }
+add_filter( 'widget_title', 'thematic_filter_search_widget', 10, 3 );
+
 
 /**
  * Meta widget class
@@ -98,7 +78,7 @@ class Thematic_Widget_Meta extends WP_Widget {
 
 	function Thematic_Widget_Meta() {
 		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'thematic') );
-		$this->WP_Widget('meta', __('Meta', 'thematic'), $widget_ops);
+		$this->WP_Widget('thematic-meta', __('Thematic Meta', 'thematic'), $widget_ops);
 	}
 
 	function widget( $args, $instance ) {
