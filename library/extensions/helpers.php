@@ -190,7 +190,7 @@ function thematic_available_layout_slugs() {
 		$available_layouts[] = $layout['slug'];
 	}
 
-	return $available_layouts();
+	return $available_layouts;
 }
 
 ?>
