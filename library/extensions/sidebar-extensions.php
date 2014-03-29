@@ -18,10 +18,18 @@
  * Filter: thematic_sidebar
  */
 function thematic_sidebar() {
-	$show = TRUE;
+	
+	$current_layout = apply_filters( 'thematic_current_theme_layout', thematic_get_theme_opt( 'layout' ) );
+	
+	if ( in_array( $current_layout, thematic_available_layout_slugs() ) && 'full-width' == $current_layout ) {
+		$show = false;
+	} else {
+		$show = true;
+	}
+
 	$show = apply_filters('thematic_sidebar', $show);
 	
-	if ($show)
+	if ( $show )
     	get_sidebar();
 	
 	return;

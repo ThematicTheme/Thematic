@@ -169,6 +169,10 @@ function thematic_available_theme_layouts() {
 		'three-columns' => array(
 			'slug' => 'three-columns',
 			'title' => __( 'Three columns', 'thematic' )
+		),
+		'full-width' => array(
+			'slug' => 'full-width',
+			'title' => __( 'Full width', 'thematic' )
 		)
 	);
 
