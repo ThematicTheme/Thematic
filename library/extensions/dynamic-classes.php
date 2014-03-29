@@ -37,15 +37,13 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 		 * @param string $current_layout
 		 */
 		$current_layout = apply_filters( 'thematic_current_theme_layout', $current_layout );
-		
-		if( in_array( $current_layout, $available_layouts ) ) {
+
+		if ( is_page_template( 'template-page-fullwidth.php' ) ) {
+			$classes[] = 'full-width';
+		} elseif( in_array( $current_layout, $available_layouts ) ) {
 			$classes[] = $current_layout;
 		} else {
 			$classes[] = thematic_default_theme_layout();
-		}
-		
-		if ( is_page_template( 'template-page-fullwidth.php' ) ) {
-			$classes[] = 'full-width';
 		}
 		
 		if( thematic_is_legacy_xhtml() ) 
