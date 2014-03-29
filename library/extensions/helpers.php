@@ -202,11 +202,27 @@ function thematic_available_layout_slugs() {
  * @return string $default_layout
  */
 function thematic_default_theme_layout() {
-	$thematic_default_layout = apply_filters( 'thematic_default_theme_layout', 'right-sidebar' );
 
-	// check that the filtered layout is a valid layout
-	if ( !in_array( $thematic_default_layout, thematic_available_layout_slugs() ) ) {
-		$thematic_default_layout = 'right-sidebar';
+	// use a default layout of right-sidebar if no theme option has been set
+	$thematic_default_layout = thematic_get_theme_opt( 'layout' ) ? thematic_get_theme_opt( 'layout' ) : 'right-sidebar';
+
+	/**
+	 * Filter for the default layout
+	 *
+	 * Specifies the theme layout upon first setup. The returned string need to match 
+	 * one of the available layout slugs. Any invalid slug will be ignored.
+	 *
+	 * @since 2.0
+	 *
+	 * @see thematic_available_layout_slugs()
+	 *
+	 * @param string $thematic_default_layout
+	 */
+	$thematic_possible_default_layout = apply_filters( 'thematic_default_theme_layout', $thematic_default_layout );
+
+	// only use the filtered layout if it is a valid layout
+	if ( in_array( $thematic_possible_default_layout, thematic_available_layout_slugs() ) ) {
+		$thematic_default_layout = $thematic_possible_default_layout;
 	}
 
 	return $thematic_default_layout;
