@@ -33,9 +33,7 @@
 	thematic_belowfooter();
 
 	// Filter provided for altering output of wrapping element follows the body tag
-	if ( apply_filters( 'thematic_close_wrapper', true ) ) {
-		echo ( '</div><!-- #wrapper .hfeed -->' . "\n" );
-	}
+	echo ( apply_filters( 'thematic_close_wrapper', '</div><!-- #wrapper .hfeed -->' . "\n" ) );
 
 	// action hook for placing content before closing the BODY tag
 	thematic_after();
