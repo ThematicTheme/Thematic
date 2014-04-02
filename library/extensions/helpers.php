@@ -67,8 +67,8 @@ function thematic_excerpt_rss() {
 	$output = strip_tags( $post->post_excerpt );
 	if ( post_password_required( $post ) ) {
 		$output = __( 'There is no excerpt because this is a protected post.', 'thematic' );
-		return $output;
-}
+		return $output;	
+	}
 
 	return apply_filters( 'thematic_excerpt_rss', $output );
 
@@ -142,8 +142,9 @@ function thematic_is_custom_post_type() {
  * @return bool
  */
 function thematic_is_legacy_xhtml() {
-	if ( thematic_get_theme_opt( 'legacy_xhtml' ) === 1 || current_theme_supports( 'thematic_legacy' ) )
+	if ( thematic_get_theme_opt( 'legacy_xhtml' ) === 1 || current_theme_supports( 'thematic_legacy' ) ) {
 		return true;
+	}
 		
 	return false;
 }

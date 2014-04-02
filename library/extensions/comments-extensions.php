@@ -74,7 +74,9 @@ function thematic_abovecommentsform() {
  * @link http://wordpress.org/extend/plugins/subscribe-to-comments/ Subscribe to Comments Plugin Page
  */
 function thematic_show_subscription_checkbox() {
-    if(function_exists('show_subscription_checkbox')) { show_subscription_checkbox(); }
+    if( function_exists( 'show_subscription_checkbox' ) ) { 
+		show_subscription_checkbox(); 
+	}
 }
 add_action('comment_form', 'thematic_show_subscription_checkbox', 98);
 
@@ -96,7 +98,9 @@ function thematic_belowcommentsform() {
  * @link http://wordpress.org/extend/plugins/subscribe-to-comments/ Subscribe to Comments Plugin Page
  */
 function thematic_show_manual_subscription_form() {
-    if(function_exists('show_manual_subscription_form')) { show_manual_subscription_form(); }
+    if( function_exists( 'show_manual_subscription_form' ) ) { 
+		show_manual_subscription_form(); 
+	}
 }
 add_action('thematic_belowcommentsform', 'thematic_show_manual_subscription_form', 5);
 
@@ -216,10 +220,11 @@ function thematic_commentbutton_text() {
 function thematic_comment_form_args( $post_id = null ) {
 	global $user_identity, $id;
 
-	if ( null === $post_id )
-          $post_id = $id;
-      else
-          $id = $post_id;
+	if ( null === $post_id ) {
+		$post_id = $id;
+	} else {
+		$id = $post_id;
+	}
 
 	$req = get_option( 'require_name_email' );
 
@@ -282,8 +287,9 @@ function thematic_include_comments() {
 	// Checking for defined constant to enable conditional comment display for Pages
     if (  current_theme_supports( 'thematic_legacy_comment_handling' ) && is_page() ) {
     	// Needs post-meta key/value of "comments" to call comments template on Pages!
-       	if ( get_post_custom_values('comments') )
+       	if ( get_post_custom_values('comments') ) {
 			comments_template('', true);
+		}
 	// WordPress standard comment handling is the default if constant is not set
 	} else {
 		comments_template('', true);
@@ -299,13 +305,15 @@ function thematic_get_comment_link( $link , $comment, $args ) {
 	$args['page'] = get_page_of_comment( $comment->comment_ID, $args );
 
 	if ( $args['per_page'] ) {
-		if ( '' == $args['page'] )
+		if ( '' == $args['page'] ) {
 			$args['page'] = ( !empty($in_comment_loop) ) ? get_query_var('cpage') : get_page_of_comment( $comment->comment_ID, $args );
+		}
 
-		if ( $wp_rewrite->using_permalinks() )
+		if ( $wp_rewrite->using_permalinks() ) {
 			$link = user_trailingslashit( trailingslashit( get_permalink( $comment->comment_post_ID ) ) . 'comment-page-' . $args['page'], 'comment' );
-		else
+		} else {
 			$link = add_query_arg( 'cpage', $args['page'], get_permalink( $comment->comment_post_ID ) );
+		}
 	} else {
 		$link = get_permalink( $comment->comment_post_ID );
 	}

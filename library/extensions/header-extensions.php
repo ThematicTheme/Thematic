@@ -46,10 +46,10 @@ if ( function_exists( 'childtheme_override_html' ) )  {
 	function thematic_html( $class_att = FALSE ) {
 		$html_class = apply_filters( 'thematic_html_class' , $class_att );
 ?>
-<!--[if lt IE 7]><html class="<?php if ( $html_class ) echo( $html_class . ' ' ) ?>lt-ie9 lt-ie8 lt-ie7" <?php language_attributes() ?>><![endif]-->
-<!--[if IE 7]><html class="<?php 	if ( $html_class ) echo( $html_class . ' ' ) ?>ie7 lt-ie9 lt-ie8" ' <?php language_attributes() ?>><![endif]-->
-<!--[if IE 8]><html class="<?php 	if ( $html_class ) echo( $html_class . ' ' ) ?>ie8 lt-ie9" <?php language_attributes() ?>><![endif]-->
-<!--[if gt IE 8]><!--><html class="<?php 	if ( $html_class ) echo $html_class ?>" <?php language_attributes() ?>><!--<![endif]-->
+<!--[if lt IE 7]><html class="<?php if ( $html_class ) { echo( $html_class . ' ' ) } ?>lt-ie9 lt-ie8 lt-ie7" <?php language_attributes() ?>><![endif]-->
+<!--[if IE 7]><html class="<?php 	if ( $html_class ) { echo( $html_class . ' ' ) } ?>ie7 lt-ie9 lt-ie8" ' <?php language_attributes() ?>><![endif]-->
+<!--[if IE 8]><html class="<?php 	if ( $html_class ) { echo( $html_class . ' ' ) } ?>ie8 lt-ie9" <?php language_attributes() ?>><![endif]-->
+<!--[if gt IE 8]><!--><html class="<?php 	if ( $html_class ) { echo $html_class } ?>" <?php language_attributes() ?>><!--<![endif]-->
 
 <?php
 	}
@@ -147,8 +147,9 @@ if ( function_exists( 'childtheme_override_doctitle' ) )  {
  */
 function thematic_wptitle( $wp_doctitle, $separator, $sep_location ) { 
 	// return original string if on feed or if a seo plugin is being used
-    if ( is_feed() || !thematic_seo() )
+    if ( is_feed() || !thematic_seo() ) {
     	return $wp_doctitle;
+	}
    	// otherwise...	
    	$site_name = get_bloginfo( 'name' , 'display' );
         	
@@ -443,8 +444,9 @@ function thematic_add_html5shiv() {
 	
 	// Check if any other scripts has been enqueued
 	foreach( $possible_handles as $handle) {
-		if( wp_script_is( $handle, 'queue' ) )
+		if( wp_script_is( $handle, 'queue' ) ) {
 			$use_shiv = false;
+		}
 	}
 	
 	/**
@@ -538,8 +540,9 @@ if ( function_exists( 'childtheme_override_head_scripts' ) )  {
 		$template = wp_get_theme( 'thematic' );
 
 		// load comment reply script on posts and pages when option is set and check for deprecated filter
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			has_filter( 'thematic_show_commentreply' ) ? thematic_show_commentreply() : wp_enqueue_script( 'comment-reply' );
+		}
 
 		// load jquery and superfish associated plugins when theme support is active
 		if ( current_theme_supports( 'thematic_superfish' ) ) {

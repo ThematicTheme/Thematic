@@ -340,7 +340,9 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= ' <span>' . single_cat_title('', FALSE) .'</span>';
 				$content .= '</h1>' . "\n";
 				$content .= "\n\t\t\t\t" . '<div class="archive-meta">';
-				if ( !(''== category_description()) ) : $content .= apply_filters('archive_meta', category_description()); endif;
+				if ( !(''== category_description()) ) { 
+					$content .= apply_filters('archive_meta', category_description()); 
+				}
 				$content .= '</div>';
 		} elseif (is_search()) {
 				$content .= '<h1 class="page-title">';
@@ -912,8 +914,9 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 	function thematic_postheader_posttitle() {
 		$posttitle = "\n\n\t\t\t\t\t";
 		
-		if ( !$title_content = get_the_title() )  
+		if ( !$title_content = get_the_title() )  {
 			$title_content = '<a href="' . get_permalink() . '">' . _x('(Untitled)', 'Default title for untitled posts', 'thematic') . '</a>';
+		}
 	    
 	    if (is_single() || is_page()) {
 	        $posttitle .= '<h1 class="entry-title">' . $title_content . "</h1>\n";
@@ -1486,7 +1489,9 @@ if (function_exists('childtheme_override_postfooter_postterms'))  {
 	function thematic_postfooter_postterms($tax) {
 		global $post;
 		
-		if ($tax == 'post_format') return;
+		if ($tax == 'post_format') {
+			return;
+		}
 		$tax_terms = '';	
 		$tax_obj = get_taxonomy($tax);
 		

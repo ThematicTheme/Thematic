@@ -46,8 +46,9 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 			$classes[] = thematic_default_theme_layout();
 		}
 		
-		if( thematic_is_legacy_xhtml() ) 
+		if( thematic_is_legacy_xhtml() ) {
 			$classes[] = 'thematic-legacy';
+		}
 		
 		/**
 		* Filter the body classes
@@ -123,20 +124,25 @@ if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
 			$c[] = 'postid-' . $postID;
 	
 			// Adds classes for the month, day, and hour when the post was published
-			if ( isset( $wp_query->post->post_date ) )
+			if ( isset( $wp_query->post->post_date ) ) {
 				thematic_date_classes( mysql2date( 'U', $wp_query->post->post_date ), $c, 's-' );
+			}
 	
 		// Special classes for BODY element when a single post
 		
 			// Adds category classes for each category on single posts
-			if ( $cats = get_the_category() )
-				foreach ( $cats as $cat )
+			if ( $cats = get_the_category() ) {
+				foreach ( $cats as $cat ) {
 					$c[] = 's-category-' . $cat->slug;
+				}
+			}
 
 			// Adds tag classes for each tag on single posts
-			if ( $tags = get_the_tags() )
-				foreach ( $tags as $tag )
+			if ( $tags = get_the_tags() ) {
+				foreach ( $tags as $tag ) {
 					$c[] = 's-tag-' . $tag->slug;
+				}
+			}
 
 			// Adds taxonomy classes for each term on single posts
 			$single_post_type = get_post_type_object( get_post_type( $post->ID ) );
@@ -168,8 +174,9 @@ if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
 			rewind_posts();
 			
 			// For posts with excerpts
-			if ( has_excerpt() )
+			if ( has_excerpt() ) {
 				$c[] = 's-has-excerpt';
+			}
 				
 			// For posts with comments open or closed
 			if ( comments_open() ) {
@@ -186,12 +193,14 @@ if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
 			}
 		
 			// For password-protected posts
-			if ( $post->post_password )
+			if ( $post->post_password ) {
 				$c[] = 's-protected';
+			}
 		
 			// For sticky posts
-			if ( is_sticky() )
-			   $c[] = 's-sticky';		
+			if ( is_sticky() ) {
+			   $c[] = 's-sticky';
+			}
 			
 		}
 	
@@ -239,14 +248,17 @@ if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
 			$c[] = 'page-author-' . sanitize_title_with_dashes( strtolower( get_the_author_meta( 'user_nicename', $post->post_author) ) );
 			
 			// Checks to see if the page has children and/or is a child page; props to Adam
-			if ( $page_children )
+			if ( $page_children ) {
 				$c[] = 'page-parent';
-			if ( $wp_query->post->post_parent )
+			}
+			if ( $wp_query->post->post_parent ) {
 				$c[] = 'page-child parent-pageid-' . $wp_query->post->post_parent;
+			}
 				
 			// For pages with excerpts
-			if ( has_excerpt() )
+			if ( has_excerpt() ) {
 				$c[] = 'page-has-excerpt';
+			}
 				
 			// For pages with comments open or closed
 			if ( comments_open() ) {
@@ -263,12 +275,14 @@ if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
 			}
 		
 			// For password-protected pages
-			if ( $post->post_password )
-				$c[] = 'page-protected';			
+			if ( $post->post_password ) {
+				$c[] = 'page-protected';
+			}			
 				
 			// Checks to see if the page is using a template	
-			if ( is_page_template() & !is_page_template('default') )
+			if ( is_page_template() & !is_page_template('default') ) {
 				$c[] = 'page-template page-template-' . str_replace( '.php', '-php', get_post_meta( $pageID, '_wp_page_template', true ) );
+			}
 			rewind_posts();
 		}
 	
@@ -285,8 +299,9 @@ if ( function_exists( 'childtheme_override_legacy_body_class' ) )  {
 	
 		if ( apply_filters( 'thematic_show_bc_loggedin', TRUE ) ) {
 	        // For when a visitor is logged in while browsing
-	        if ( $current_user->ID )
+	        if ( $current_user->ID ) {
 	            $c[] = 'loggedin';
+			}
 	    }
 	
 	 // Paged classes; for page x > 1 classes of index and all post types etc.
@@ -363,10 +378,10 @@ function thematic_browser_class_names($classes) {
 	$browser = $_SERVER[ 'HTTP_USER_AGENT' ];
 		
 	// Mac, PC ...or Linux
-	if ( preg_match( "/Mac/", $browser ) ){
+	if ( preg_match( "/Mac/", $browser ) ) {
 		$classes[] = 'mac';
 			
-	} elseif ( preg_match( "/Windows/", $browser ) ){
+	} elseif ( preg_match( "/Windows/", $browser ) ) {
 		$classes[] = 'windows';
 			
 	} elseif ( preg_match( "/Linux/", $browser ) ) {
@@ -536,19 +551,22 @@ if (function_exists('childtheme_override_post_class'))  {
 		}
 	
 		// For password-protected posts
-		if ( $post->post_password )
+		if ( $post->post_password ) {
 			$c[] = 'protected';
+		}
 	
 		// For sticky posts
-		if (is_sticky())
+		if (is_sticky()) {
 		   $c[] = 'sticky';
+	   }
 	
 		// Applies the time- and date-based classes (below) to post DIV
 		thematic_date_classes( mysql2date( 'U', $post->post_date ), $c );
 	
 		// If it's the other to the every, then add 'alt' class
-		if ( ++$thematic_post_alt % 2 )
+		if ( ++$thematic_post_alt % 2 ) {
 			$c[] = 'alt';
+		}
 	
 	    // Adds post slug class, prefixed by 'slug-'
 	    $c[] = 'slug-' . $post->post_name; 

@@ -20,8 +20,9 @@
  * 
  * @since Thematic 2.0
  */
-if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) )
+if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) ) {
 	require get_template_directory() . '/library/extensions/back-compat.php';
+}
 
 
 /**
@@ -66,18 +67,21 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 *
 		 * @since Thematic 1.0
 		 */
-		if ( !isset($content_width) )
+		if ( !isset($content_width) ) {
 			$content_width = 600;
+		}
 		
 		// Check for MultiSite
 		define( 'THEMATIC_MB', is_multisite()  );
 
 		// Create the feedlinks
-		if ( ! current_theme_supports( 'thematic_legacy_feedlinks' ) )
- 			add_theme_support( 'automatic-feed-links' );
+		if ( ! current_theme_supports( 'thematic_legacy_feedlinks' ) ) {
+			add_theme_support( 'automatic-feed-links' );
+		}
  
-		if ( apply_filters( 'thematic_post_thumbs', true ) )
+		if ( apply_filters( 'thematic_post_thumbs', true ) ) {
 			add_theme_support( 'post-thumbnails' );
+		}
  
 		add_theme_support( 'thematic_superfish' );
 		
@@ -147,16 +151,18 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		function thematic_remove_generators() {
  			return '';
  		}
- 		if ( apply_filters( 'thematic_hide_generators', true ) )
+ 		if ( apply_filters( 'thematic_hide_generators', true ) ) {
  			add_filter( 'the_generator', 'thematic_remove_generators' );
+		}
  
 		// Translate, if applicable
 		load_theme_textdomain( 'thematic', THEMATIC_LIB . '/languages' );
 
 		$locale = get_locale();
 		$locale_file = THEMATIC_LIB . "/languages/$locale.php";
-		if ( is_readable($locale_file) )
+		if ( is_readable($locale_file) ) {
 			require_once ($locale_file);
+		}
 	}
 }
 

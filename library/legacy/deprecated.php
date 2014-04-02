@@ -53,9 +53,11 @@ function thematic_show_commentreply() {
 	_deprecated_function( __FUNCTION__, '1.0' );
     $display = TRUE;
     $display = apply_filters('thematic_show_commentreply', $display);
-    if ($display)
-        if ( is_singular() ) 
+    if ($display) {
+        if ( is_singular() ) {
             wp_enqueue_script('comment-reply'); 
+		}
+	}
 }
 
 /**
@@ -76,8 +78,9 @@ function thematic_canonical_url() {
  */
 function pageGetPageNo() {
 	_deprecated_function( __FUNCTION__, '1.0' );
-    if ( get_query_var('paged') )
+    if ( get_query_var('paged') ) {
         print ' | Page ' . get_query_var('paged');
+	}
 }
 
 
@@ -124,8 +127,9 @@ if ( function_exists( 'childtheme_override_comment_class' ) )  {
 
 		// If it's the other to the every, then add 'alt' class; collects time- and date-based classes
 		thematic_date_classes( mysql2date( 'U', $comment->comment_date ), $c, 'c-' );
-		if ( ++$thematic_comment_alt % 2 )
+		if ( ++$thematic_comment_alt % 2 ) {
 			$c[] = 'alt';
+		}
 
 		// Comment depth
 		$c[] = "depth-$comment_depth";
@@ -362,12 +366,12 @@ function thematic_legacy_comment_form(){
 					<p id="comment-notes"><?php printf( _x( 'Your email is %1$snever%2$s published nor shared.' , '%$1s and %$2s are <em> tags for emphasis on never', 'thematic' ), '<em>' , '</em>' ) ?></p>
 	
                     <div id="form-section-author" class="form-section">
-						<div class="form-label"><label for="author"><?php _e( 'Name', 'thematic' ) ?></label> <?php if ( $req ) _e( '<span class="required">*</span>', 'thematic' ) ?></div>
+						<div class="form-label"><label for="author"><?php _e( 'Name', 'thematic' ) ?></label> <?php if ( $req ) { _e( '<span class="required">*</span>', 'thematic' ) } ?></div>
 						<div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
                     </div><!-- #form-section-author .form-section -->
 	
                     <div id="form-section-email" class="form-section">
-						<div class="form-label"><label for="email"><?php _e( 'Email', 'thematic' ) ?></label> <?php if ( $req ) _e( '<span class="required">*</span>', 'thematic' ) ?></div>
+						<div class="form-label"><label for="email"><?php _e( 'Email', 'thematic' ) ?></label> <?php if ( $req ) { _e( '<span class="required">*</span>', 'thematic' ) } ?></div>
 						<div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
                     </div><!-- #form-section-email .form-section -->
 	
@@ -447,8 +451,9 @@ function thematic_do_legacy_help_section() {
  * Filter: thematic_head_profile
  */
 function thematic_head_profile() {
-	if ( !current_theme_supports( 'thematic_legacy_quiet' ) )
+	if ( !current_theme_supports( 'thematic_legacy_quiet' ) ) {
 		_deprecated_function( __FUNCTION__, '2.0', 'childtheme_override_head' );
+	}
     $content = "\n" . '<head profile="http://gmpg.org/xfn/11">' . "\n";
     echo apply_filters( 'thematic_head_profile', $content );
 }
@@ -460,8 +465,9 @@ function thematic_head_profile() {
  * Filter: thematic_create_doctype
  */
 function thematic_create_doctype() {
-	if ( !current_theme_supports( 'thematic_legacy_quiet' ) )
+	if ( !current_theme_supports( 'thematic_legacy_quiet' ) ) {
 		_deprecated_function( __FUNCTION__, '2.0', 'childtheme_override_doctype' );
+	}
    
    	$content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
     $content .= '<html xmlns="http://www.w3.org/1999/xhtml"';
@@ -471,8 +477,9 @@ function thematic_create_doctype() {
 
 // Display the meta content type
 function thematic_create_contenttype() {
-	if ( !current_theme_supports( 'thematic_legacy_quiet' ) )
+	if ( !current_theme_supports( 'thematic_legacy_quiet' ) ) {
 		_deprecated_function( __FUNCTION__, '2.0', 'childtheme_override_meta_charset' );
+	}
     
     $content = '<meta http-equiv="Content-Type" content="' . get_bloginfo('html_type') . '; charset=' . get_bloginfo('charset') . '" />' . "\n";
     echo apply_filters('thematic_create_contenttype', $content);
@@ -543,8 +550,9 @@ class Thematic_Widget_Search extends WP_Widget {
 		$title = apply_filters('widget_title', empty($instance['title']) ? __('Search', 'thematic') : $instance['title']);
 
 		echo $before_widget;
-		if ( $title )
+		if ( $title ) {
 			echo $before_title ?><label for="s"><?php echo $title ?></label><?php echo $after_title;
+		}
 
 		// Use current theme search form if it exists
 		get_search_form();
@@ -572,23 +580,23 @@ class Thematic_Widget_Search extends WP_Widget {
 
 // Legacy feed links handling
 // If you add theme support for thematic_legacy_feedlinks, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
-if ( defined( 'THEMATIC_COMPATIBLE_FEEDLINKS' ) ) add_theme_support( 'thematic_legacy_feedlinks' );
+if ( defined( 'THEMATIC_COMPATIBLE_FEEDLINKS' ) ) { add_theme_support( 'thematic_legacy_feedlinks' ); }
 
 // Legacy comments handling for pages, archives and links
 // If you add_theme_support for thematic_legacy_comment_handling, Thematic will only show comments on pages with a key/value of "comments"
-if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING' ) ) add_theme_support( 'thematic_legacy_comment_handling' );
+if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING' ) ) { add_theme_support( 'thematic_legacy_comment_handling' ); }
 
 // Legacy body class handling
 // If you add theme support for thematic_legacy_body_class, Thematic will use thematic_body_class instead of body_class()
-if ( defined( 'THEMATIC_COMPATIBLE_BODY_CLASS' ) ) add_theme_support( 'thematic_legacy_body_class' );
+if ( defined( 'THEMATIC_COMPATIBLE_BODY_CLASS' ) ) { add_theme_support( 'thematic_legacy_body_class' ); }
 
 // Legacy post class handling
 // If you add theme support for thematic_legacy_post_class, Thematic will use thematic_body_class instead of post_class()
-if ( defined( 'THEMATIC_COMPATIBLE_POST_CLASS' ) ) add_theme_support( 'thematic_legacy_post_class' );
+if ( defined( 'THEMATIC_COMPATIBLE_POST_CLASS' ) ) { add_theme_support( 'thematic_legacy_post_class' ); }
 
 // Legacy post class handling
 // If you add theme support for thematic_legacy_post_class, Thematic will use it's legacy comment form
-if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_FORM' ) ) add_theme_support( 'thematic_legacy_comment_form' );
+if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_FORM' ) ) { add_theme_support( 'thematic_legacy_comment_form' ); }
 
 
 ?>

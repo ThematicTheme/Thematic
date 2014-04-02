@@ -86,8 +86,9 @@ class Thematic_Widget_Meta extends WP_Widget {
 		$title = apply_filters('widget_title', empty($instance['title']) ? __('Meta', 'thematic') : $instance['title']);
 
 		echo $before_widget;
-		if ( $title )
+		if ( $title ) {
 			echo $before_title . $title . $after_title;
+		}
 ?>
 			<ul>
 			<?php wp_register(); ?>
@@ -130,8 +131,9 @@ class Thematic_Widget_RSSlinks extends WP_Widget {
 		extract($args);
 		$title = apply_filters('widget_title', empty($instance['title']) ? __('RSS Links', 'thematic') : $instance['title']);
 		echo $before_widget;
-		if ( $title )
+		if ( $title ) {
 			echo $before_title . $title . $after_title;
+		}
 ?>
 			<ul>
 				<li><a href="<?php bloginfo('rss2_url') ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ) ?> <?php _e('Posts RSS feed', 'thematic'); ?>" rel="alternate nofollow" type="application/rss+xml"><?php _e('All posts', 'thematic') ?></a></li>

@@ -22,8 +22,9 @@
 	thematic_meta_charset();
 
 	// Create the meta viewport if theme supports it
-	if( current_theme_supports( 'thematic_meta_viewport' ) )
+	if( current_theme_supports( 'thematic_meta_viewport' ) ) {
 		thematic_meta_viewport();
+	}
 
 	// Create the title tag
 	thematic_doctitle();
@@ -53,8 +54,9 @@
 	thematic_before();
 
 	// Filter provided for removing output of wrapping element follows the body tag
-	if ( apply_filters( 'thematic_open_wrapper', true ) )
+	if ( apply_filters( 'thematic_open_wrapper', true ) ) {
 		echo ( '<div id="wrapper" class="hfeed site-wrapper">' );
+	}
 
 	// Action hook for placing content above the theme header
 	thematic_aboveheader();

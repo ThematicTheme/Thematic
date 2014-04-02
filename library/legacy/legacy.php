@@ -320,8 +320,9 @@ add_action( 'init', 'thematic_replace_loops' );
  * The default xhtml loop
  */
 function thematic_default_loop_xhtml() {
-	if ( is_author() ) 
+	if ( is_author() ) {
 		rewind_posts();
+	}
 		
 	while ( have_posts() ) : the_post(); 
 

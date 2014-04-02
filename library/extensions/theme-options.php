@@ -143,8 +143,9 @@ function thematic_convert_legacy_opt() {
     $thm_footertext = thematic_get_wp_opt( 'thm_footertext' );
     
     // Return false if no options found
-    if ( false === $thm_insert_position && false === $thm_authorinfo && false === $thm_footertext )
+    if ( false === $thm_insert_position && false === $thm_authorinfo && false === $thm_footertext ) {
     	return false; 
+	}
     	
     // Return a sanitized array from legacy options if found
     $legacy_sanitized_opt = array(
@@ -392,9 +393,10 @@ if (function_exists('childtheme_override_validate_opt')) {
 		$output['author_info'] = ( isset( $input['author_info'] ) && 1 == $input['author_info'] ?  1 : 0 );
  	 
 		// Footer Text sanitized allowing HTML and WP shortcodes
-		if ( isset( $input['footer_txt'] ) ) 
+		if ( isset( $input['footer_txt'] ) ) {
 			$output['footer_txt'] = wp_kses_post( $input['footer_txt'] ) ;	
- 	   
+		}
+
 		// Remove Legacy XHTML CheckBox value either 1(yes) or 0(no)
 		$output['legacy_xhtml'] = ( isset( $input['legacy_xhtml'] ) && 1 == $input['legacy_xhtml'] ?  1 : 0 );
 		

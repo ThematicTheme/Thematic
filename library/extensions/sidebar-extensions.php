@@ -29,8 +29,9 @@ function thematic_sidebar() {
 
 	$show = apply_filters('thematic_sidebar', $show);
 	
-	if ( $show )
+	if ( $show ) {
     	get_sidebar();
+	}
 	
 	return;
 } // end thematic_sidebar

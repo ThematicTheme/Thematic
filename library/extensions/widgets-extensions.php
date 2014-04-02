@@ -340,8 +340,9 @@ function thematic_connect_functions() {
 	$thematic_widgetized_areas = thematic_widgets_array();
 
 	foreach ( $thematic_widgetized_areas as $key => $value ) {
-		if ( !has_action( $thematic_widgetized_areas[$key]['action_hook'], $thematic_widgetized_areas[$key]['function'] ) )
+		if ( !has_action( $thematic_widgetized_areas[$key]['action_hook'], $thematic_widgetized_areas[$key]['function'] ) ) {
 			add_action( $thematic_widgetized_areas[$key]['action_hook'], $thematic_widgetized_areas[$key]['function'], $thematic_widgetized_areas[$key]['priority'] );	
+		}
 	}
 
 }

@@ -20,8 +20,9 @@
 	
 				<?php 
 					// Disable direct access to the comments script
-					if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) )
+					if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
 					    die ( __('Please do not load this page directly.', 'thematic')  );
+					}
 					
 					// Set required varible from options
 					$req = get_option('require_name_email');
@@ -59,8 +60,9 @@
 						$thematic_max_response_pages = ( $thematic_ping_pages > $thematic_comment_pages ) ? $thematic_ping_pages : $thematic_comment_pages;
 						
 						// Reset the query var to use our calculation for the maximum page (newest/oldest)
-						if ( $overridden_cpage )
+						if ( $overridden_cpage ) {
 							set_query_var( 'cpage', 'newest' == get_option('default_comments_page') ? $thematic_comment_pages : 1 );
+						}
 					?>
 					
 					<?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>

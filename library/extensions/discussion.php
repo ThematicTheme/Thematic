@@ -48,7 +48,7 @@ function thematic_comments($comment, $args, $depth) {
 			
 				<?php // echo the comment reply link with help from Justin Tadlock http://justintadlock.com/ and Will Norris http://willnorris.com/
 				
-					if( $args['type'] == 'all' || get_comment_type() == 'comment' ) :
+					if( $args['type'] == 'all' || get_comment_type() == 'comment' ) {
 						comment_reply_link( array_merge( $args, array(
 							'add_below'  => 'comment-body',
 							'reply_text' => __( 'Reply','thematic' ), 
@@ -57,7 +57,7 @@ function thematic_comments($comment, $args, $depth) {
 							'before'     => '<div class="comment-replylink">', 
 							'after'      => '</div>'
 						)));
-					endif;
+					}
 				?>
 			
 			</article><!-- .comment-body -->
