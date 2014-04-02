@@ -160,7 +160,7 @@ function thematic_comments_xhtml($comment, $args, $depth) {
 function thematic_legacy_style_dependency( $dependencies ) {
 	return array( );
 }
-add_filter( 'thematic_childtheme_style_dependencies', 'thematic_legacy_style_dependency' );
+add_filter( 'thematic_childtheme_style_dependencies', 'thematic_legacy_style_dependency', 9 );
 
 
 if ( !function_exists( 'childtheme_override_head' ) ) {
