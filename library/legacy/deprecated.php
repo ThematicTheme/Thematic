@@ -366,12 +366,12 @@ function thematic_legacy_comment_form(){
 					<p id="comment-notes"><?php printf( _x( 'Your email is %1$snever%2$s published nor shared.' , '%$1s and %$2s are <em> tags for emphasis on never', 'thematic' ), '<em>' , '</em>' ) ?></p>
 	
                     <div id="form-section-author" class="form-section">
-						<div class="form-label"><label for="author"><?php _e( 'Name', 'thematic' ) ?></label> <?php if ( $req ) { _e( '<span class="required">*</span>', 'thematic' ) } ?></div>
+						<div class="form-label"><label for="author"><?php _e( 'Name', 'thematic' ) ?></label> <?php if ( $req ) { _e( '<span class="required">*</span>', 'thematic' ); } ?></div>
 						<div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
                     </div><!-- #form-section-author .form-section -->
 	
                     <div id="form-section-email" class="form-section">
-						<div class="form-label"><label for="email"><?php _e( 'Email', 'thematic' ) ?></label> <?php if ( $req ) { _e( '<span class="required">*</span>', 'thematic' ) } ?></div>
+						<div class="form-label"><label for="email"><?php _e( 'Email', 'thematic' ) ?></label> <?php if ( $req ) { _e( '<span class="required">*</span>', 'thematic' ); } ?></div>
 						<div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
                     </div><!-- #form-section-email .form-section -->
 	

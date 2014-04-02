@@ -46,10 +46,10 @@ if ( function_exists( 'childtheme_override_html' ) )  {
 	function thematic_html( $class_att = FALSE ) {
 		$html_class = apply_filters( 'thematic_html_class' , $class_att );
 ?>
-<!--[if lt IE 7]><html class="<?php if ( $html_class ) { echo( $html_class . ' ' ) } ?>lt-ie9 lt-ie8 lt-ie7" <?php language_attributes() ?>><![endif]-->
-<!--[if IE 7]><html class="<?php 	if ( $html_class ) { echo( $html_class . ' ' ) } ?>ie7 lt-ie9 lt-ie8" ' <?php language_attributes() ?>><![endif]-->
-<!--[if IE 8]><html class="<?php 	if ( $html_class ) { echo( $html_class . ' ' ) } ?>ie8 lt-ie9" <?php language_attributes() ?>><![endif]-->
-<!--[if gt IE 8]><!--><html class="<?php 	if ( $html_class ) { echo $html_class } ?>" <?php language_attributes() ?>><!--<![endif]-->
+<!--[if lt IE 7]><html class="<?php if ( $html_class ) { echo( $html_class . ' ' ); } ?>lt-ie9 lt-ie8 lt-ie7" <?php language_attributes() ?>><![endif]-->
+<!--[if IE 7]><html class="<?php 	if ( $html_class ) { echo( $html_class . ' ' ); } ?>ie7 lt-ie9 lt-ie8" ' <?php language_attributes() ?>><![endif]-->
+<!--[if IE 8]><html class="<?php 	if ( $html_class ) { echo( $html_class . ' ' ); } ?>ie8 lt-ie9" <?php language_attributes() ?>><![endif]-->
+<!--[if gt IE 8]><!--><html class="<?php 	if ( $html_class ) { echo $html_class; } ?>" <?php language_attributes() ?>><!--<![endif]-->
 
 <?php
 	}
