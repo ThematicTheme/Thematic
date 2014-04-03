@@ -1,6 +1,6 @@
 === Thematic ===
 Contributors: iandstewart, chrisgossmann, emhr, helgatheviking, middlesister
-Tags: white, three-columns, two-columns, fixed-width, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats
+Tags: white, three-columns, two-columns, responsive-layout, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats, translation-ready, full-width-template
 Requires at least: 3.4
 Tested up to: 3.6
 Stable tag: 1.0.4
