@@ -49,8 +49,9 @@ class Thematic_UnitTestCase extends WP_UnitTestCase {
 		/* Define Thematic constants */
 		define('THEMATIC_MB', false);
 		
-		if ( defined( 'WP_TESTS_MULTISITE') && WP_TESTS_MULTISITE )
+		if ( defined( 'WP_TESTS_MULTISITE') && WP_TESTS_MULTISITE ) {
 			define('THEMATIC_MB', true);
+		}
 	} // end setup
 
 
