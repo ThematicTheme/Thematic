@@ -21,26 +21,25 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 	 * @param array $classes body classes
 	 */
 	function thematic_body_class( $classes ) {
-		$current_layout = thematic_get_theme_opt( 'layout' );
-
-		$available_layouts = thematic_available_layout_slugs();
 
 		/**
-		 * Filter to control the layout
-		 * 
-		 * Accepts values of 'left-sidebar', 'three-columns', and 'right-sidebar'.
-		 * Note that the filter overrides the layout defined in the Theme Customizer
-		 * Default is 'right-sidebar'
-		 * 
+		 * Filter to control the theme layout
+		 *
+		 * Accepts any string that is part of thematic_available_theme_layouts(). Note that
+		 * the filter overrides the layout defined in the Theme Customizer. Any invalid
+		 * layout string will be ignored and the theme's default layout will be used.
+		 *
+		 * @see thematic_available_theme_layouts()
+		 *
 		 * @since 2.0
-		 * 
+		 *
 		 * @param string $current_layout
 		 */
-		$current_layout = apply_filters( 'thematic_current_theme_layout', $current_layout );
+		$current_layout = apply_filters( 'thematic_current_theme_layout', thematic_get_theme_opt( 'layout' ) );
 
 		if ( is_page_template( 'template-page-fullwidth.php' ) ) {
 			$classes[] = 'full-width';
-		} elseif( in_array( $current_layout, $available_layouts ) ) {
+		} elseif( in_array( $current_layout, thematic_available_layout_slugs() ) ) {
 			$classes[] = $current_layout;
 		} else {
 			$classes[] = thematic_default_theme_layout();
