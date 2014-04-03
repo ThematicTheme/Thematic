@@ -47,7 +47,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 		}
 		
 		if( thematic_is_legacy_xhtml() ) {
-			$classes[] = 'thematic-legacy';
+			$classes[] = 'thematic-xhtml';
 		}
 		
 		/**

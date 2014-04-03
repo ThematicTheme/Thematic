@@ -1940,11 +1940,11 @@ img.wp-smiley,
  * ----------------------------------------------------------------------------
  */
 
-.thematic-legacy .aside > ul {
+.thematic-xhtml .aside > ul {
 	list-style: none;
 	padding-left: 0;
 }
 
-.thematic-legacy .main-aside .widgetcontainer > ul {
+.thematic-xhtml .main-aside .widgetcontainer > ul {
 	padding-left: 20px;
 }
