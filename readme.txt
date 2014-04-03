@@ -1,8 +1,8 @@
 === Thematic ===
 Contributors: iandstewart, chrisgossmann, emhr, helgatheviking, middlesister
 Tags: white, three-columns, two-columns, responsive-layout, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats, translation-ready, full-width-template
-Requires at least: 3.4
-Tested up to: 3.6
+Requires at least: 3.6
+Tested up to: 3.8.1
 Stable tag: 1.0.4
 
 The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, &amp; a whole lot more.
@@ -29,7 +29,7 @@ Features:
 
 == Changelog ==
 
-= 2.0-alpha =
+= 2.0-beta1 =
 Changed: Switched primary markup to html5. Introduced a legacy mode for using the previous xhtml markup
 Changed: thematic_create_stylesheet() uses the active theme's name as handle and version as argument to wp_enqueue_style()
 Changed: thematic_head_scripts() uses wp_localize_script to send data to the main javascript file
