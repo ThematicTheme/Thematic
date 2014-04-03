@@ -1,12 +1,12 @@
-# Translation of Thematic 2.0 in Persian
+# Translation of Thematic 2.0 in Croatian
 # This file is distributed under the same license as the Thematic 2.0 package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-04-03 13:55:06+0000\n"
+"PO-Revision-Date: 2014-04-03 13:54:57+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: Thematic 2.0\n"
 
@@ -39,182 +39,182 @@ msgstr ""
 #: library/tests/test-content-extensions.php:76
 #: library/tests/test-legacy-xhtml.php:128
 msgid "Pages:"
-msgstr "برگه‌ها:"
+msgstr "Stranice:"
 
 #: author.php:65
 msgid "Email "
-msgstr "رايانامه "
+msgstr "E-mail"
 
 #: comments.php:24
 msgid "Please do not load this page directly."
-msgstr "لطفا این صفحه را مستقیما باز نکنید."
+msgstr "Molimo ne učitavati ovu stranicu izravno."
 
 #: comments.php:34
 msgid "This post is password protected. Enter the password to view any comments."
-msgstr "اين مطلب رمزدار است. برای مشاهده ديدگاه‌ها رمز را وارد كنيد."
+msgstr "Ova objava je zaštićena lozinkom. Unesite lozinku da biste pregledali komentare."
 
 #: comments.php:113
 msgid "Trackbacks"
-msgstr "بازتاب‌ها"
+msgstr "Poveznice"
 
 #: comments.php:113
 msgctxt "%1$ and %2$s are <span> tags"
 msgid "%1$sOne%2$s Trackback"
-msgstr "%1$sیک%2$s بازتاب"
+msgstr "%1$sJedna%2$s poveznica"
 
 #: functions.php:200
 msgid "Primary Menu"
-msgstr "منو اصلی"
+msgstr "Glavni izbornik"
 
 #: library/extensions/back-compat.php:41 library/extensions/back-compat.php:53
 #: library/extensions/back-compat.php:68
 msgid "Thematic requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
-msgstr "تماتیک حداقل نیاز به نسخه 3.6 وردپرس دارد. شما در حال استفاده از نسخه %s هستید. لطفا آن را ارتقا داده و دوباره تلاش کنید."
+msgstr ""
 
 #: library/extensions/comments-extensions.php:124
 msgctxt "One Comment, where %$1s and %$2s are <span> tags"
 msgid "%1$sOne%2$s Comment"
-msgstr "%1$sیک%2$s دیدگاه"
+msgstr "%1$sJedan%2$s Komentar"
 
 #: library/extensions/comments-extensions.php:135
 msgid "Comments"
-msgstr "دیدگاه‌ها"
+msgstr "Komentara"
 
 #: library/extensions/comments-extensions.php:162
 msgid "Post a Comment"
-msgstr "ارسال ديدگاه"
+msgstr "Objavi komentar"
 
 #: library/extensions/comments-extensions.php:174
 msgid "Post a Reply to %s"
-msgstr "پاسخ به ديدگاه %s"
+msgstr "Odgovori: %s"
 
 #: library/extensions/comments-extensions.php:186
 msgctxt "noun"
 msgid "Comment"
-msgstr "دیدگاه"
+msgstr "Komentar"
 
 #: library/extensions/comments-extensions.php:197
 msgid "Cancel reply"
-msgstr "لغو پاسخ"
+msgstr "Odustani"
 
 #: library/extensions/comments-extensions.php:209
 msgid "Post Comment"
-msgstr "ارسال ديدگاه"
+msgstr "Objavi komentar"
 
 #: library/extensions/comments-extensions.php:236
 #: library/legacy/deprecated.php:369
 msgid "Name"
-msgstr "نام"
+msgstr "Ime"
 
 #: library/extensions/comments-extensions.php:236
 #: library/extensions/comments-extensions.php:237
 msgctxt "denotes required field"
 msgid "*"
-msgstr "*"
+msgstr "* označava obavezno polje"
 
 #: library/extensions/comments-extensions.php:237
 #: library/legacy/deprecated.php:374
 msgid "Email"
-msgstr "رايانامه"
+msgstr "E-mail"
 
 #: library/extensions/comments-extensions.php:238
 #: library/legacy/deprecated.php:379
 msgid "Website"
-msgstr "وب‌سايت"
+msgstr "Website"
 
 #: library/extensions/comments-extensions.php:246
 #: library/legacy/deprecated.php:366
 msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
 msgid "Your email is %1$snever%2$s published nor shared."
-msgstr "رایانامه شما %1$sهرگز%2$s منتشر نمی‌شود و با دیگران به اشتراک گذاشته نخواهد شد."
+msgstr "Vaš e-mail neće %1$snikada%2$s biti objavljen ili podijeljen."
 
 #: library/extensions/comments-extensions.php:246
 msgctxt "%$1s and %$2s are <span> tags"
 msgid "Required fields are marked %1$s*%2$s"
-msgstr "فیلدهای ضروری با %1$s*%2$s علامت‌گذاری شده‌اند."
+msgstr "Obavezna polja su označena sa %1$s*%2$s"
 
 #: library/extensions/comments-extensions.php:248
 #: library/legacy/deprecated.php:348
 msgid "You must be %1$slogged in%2$s to post a comment."
-msgstr "برای فرستادن دیدگاه باید %1$sوارد شوید%2$s."
+msgstr "Morate biti %1$sprijavljeni%2$s kako biste objavili komentar."
 
 #: library/extensions/comments-extensions.php:248
 #: library/legacy/deprecated.php:348
 msgid "Log in"
-msgstr "ورود"
+msgstr "Prijavi se"
 
 #: library/extensions/comments-extensions.php:250
 #: library/legacy/deprecated.php:361
 msgid "Logged in as %s"
-msgstr ""
+msgstr "Prijavljeni ste kao %s"
 
 #: library/extensions/comments-extensions.php:250
 #: library/legacy/deprecated.php:361
 msgid "Log out of this account"
-msgstr "خروج از این حساب"
+msgstr "Odjavite se sa ovog računa"
 
 #: library/extensions/comments-extensions.php:250
 #: library/legacy/deprecated.php:361
 msgid "Log out?"
-msgstr "خروج؟"
+msgstr "Odjava?"
 
 #: library/legacy/deprecated.php:391
 msgctxt "%$1s and %$2s are <abbr> tags"
 msgid "You may use these %1$sHTML%2$s tags and attributes"
-msgstr "می‌توانید از این برچسب‌ها و خصوصیت‌های %1$sHTML%2$s استفاده کنید."
+msgstr "Možete koristiti ove %1$sHTML%2$s oznake i atribute"
 
 #: library/extensions/content-extensions.php:334
 msgid "Author Archives:"
-msgstr "بایگانی نویسنده"
+msgstr "Arhiva autora:"
 
 #: library/extensions/content-extensions.php:339
 #: library/extensions/header-extensions.php:170
 msgid "Category Archives:"
-msgstr "بايگاني موضوعات:"
+msgstr "Arhiva kategorije:"
 
 #: library/extensions/content-extensions.php:349
 #: library/extensions/header-extensions.php:166
 msgid "Search Results for:"
-msgstr "نتايج جستجوي:"
+msgstr "Rezultati pretrage za:"
 
 #: library/extensions/content-extensions.php:354
 #: library/extensions/header-extensions.php:174
 msgid "Tag Archives:"
-msgstr "بايگاني برچسب‌ها:"
+msgstr "Arhiva oznaka:"
 
 #: library/extensions/content-extensions.php:363
 #: library/extensions/content-extensions.php:370
 msgid "Archives:"
-msgstr "بایگانی‌ها:"
+msgstr "Arhiva:"
 
 #: library/extensions/content-extensions.php:375
 msgid "Daily Archives: %s"
-msgstr "آرشیو روزانه: %s"
+msgstr "Dnevna arhiva: %s"
 
 #: library/extensions/content-extensions.php:379
 msgid "Monthly Archives: %s"
-msgstr "آرشیو ماهانه: %s"
+msgstr "Mjesečna arhiva: %s"
 
 #: library/extensions/content-extensions.php:383
 msgid "Yearly Archives: %s"
-msgstr "آرشیو سالانه: %s"
+msgstr "Godišnja arhiva: %s"
 
 #: library/extensions/content-extensions.php:426
 #: library/extensions/content-extensions.php:1715 library/legacy/legacy.php:256
 #: library/legacy/legacy.php:507
 msgid "Older posts"
-msgstr "مطالب قدیمی‌تر"
+msgstr "Starije objave"
 
 #: library/extensions/content-extensions.php:428
 #: library/extensions/content-extensions.php:1717 library/legacy/legacy.php:258
 #: library/legacy/legacy.php:509
 msgid "Newer posts"
-msgstr "مطالب جدیدتر"
+msgstr "Novije objave"
 
 #: library/extensions/content-extensions.php:890
 #: library/extensions/content-extensions.php:1425
 msgid "Edit post"
-msgstr "ويرايش مطلب"
+msgstr "Uredi objavu"
 
 #: library/extensions/content-extensions.php:892
 #: library/extensions/content-extensions.php:1427
@@ -226,308 +226,310 @@ msgstr "ويرايش مطلب"
 #: library/legacy/legacy.php:182 links.php:51 page.php:51
 #: template-page-archives.php:54 template-page-fullwidth.php:52
 msgid "Edit"
-msgstr "ويرايش"
+msgstr "Uredi"
 
 #: library/extensions/content-extensions.php:918
 msgctxt "Default title for untitled posts"
 msgid "(Untitled)"
-msgstr "(بدون عنوان)"
+msgstr "(Bez naslova)"
 
 #: library/extensions/content-extensions.php:924
 #: library/extensions/header-extensions.php:178
 msgid "Not Found"
-msgstr "يافت نشد"
+msgstr "Nije pronađeno"
 
 #: library/extensions/content-extensions.php:1147
 #: library/extensions/content-extensions.php:1151
 #: library/extensions/content-extensions.php:1383
 msgid "Permalink to %s"
-msgstr "پیوند یکتا به %s"
+msgstr "Permalink za %s"
 
 #: library/extensions/content-extensions.php:989
 msgid "By"
-msgstr "توسط"
+msgstr "Autor"
 
 #: library/extensions/content-extensions.php:1000
 msgid "View all posts by %s"
-msgstr "دیدن همه‌ی مطالب %s"
+msgstr "Pogledajte sve objave od %s"
 
 #: library/extensions/content-extensions.php:1029
 msgid "Published:"
-msgstr "منتشر شده:"
+msgstr "Objavljeno:"
 
 #: library/extensions/content-extensions.php:1206
 msgid "Archives by Category"
-msgstr "بايگاني موضوعي"
+msgstr "Arhiva po kategorijama"
 
 #: library/extensions/content-extensions.php:1237
 msgid "Archives by Month"
-msgstr "بايگاني ماهانه"
+msgstr "Arhiva po mjesecima"
 
 #: library/extensions/content-extensions.php:1298
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
-msgstr "متاسفیم، اما نتوانستیم آنچه می‌جستید بیابیم. شاید جستجوی مطالب کمکتان کند."
+msgstr "Ispričavamo se, ali nismo bili u mogućnosti pronaći ono što ste tražili. Pokušate sa pretragom."
 
 #: library/extensions/content-extensions.php:1304 search.php:68
 msgid "Find"
-msgstr "پيدا كن"
+msgstr "Pronađi"
 
 #: library/extensions/content-extensions.php:1323
 msgid "Read More %s"
-msgstr "بیشتر بخوانید %s"
+msgstr "Pročitaj više %s"
 
 #: library/extensions/content-extensions.php:1375
 msgid "Browse the %s archive."
-msgstr "بایگانی %s را مرور کنید."
+msgstr "Pretražite arhivu vezanu uz %s."
 
 #: library/extensions/content-extensions.php:1377
 msgid "Permalink to %s Archive"
-msgstr "پیوند یکتا به بایگانی %s"
+msgstr "Permalink do arhive %s"
 
 #: library/extensions/content-extensions.php:1383
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Bookmark the %1$spermalink%2$s."
-msgstr "%1$spermalink%2$s را به علاقمندی‌های خود بیافزایید."
+msgstr "Spremite %1$spermalink%2$s."
 
 #: library/extensions/content-extensions.php:1543
 msgid "This entry was posted in %s"
-msgstr "این مطلب در دسته‌ی %s ارسال شده است"
+msgstr "Unos je objavljen u kategoriji %s"
 
 #: library/extensions/content-extensions.php:1554
 msgid "Also posted in %s"
-msgstr "همچنین در دسته‌ی %s ارسال شده"
+msgstr "Također objavljeno u %s"
 
 #: library/extensions/content-extensions.php:1558
 msgid "Posted in %s"
-msgstr "ارسال شده در دسته‌ی %s"
+msgstr "Objavljeno u %s"
 
 #: library/extensions/content-extensions.php:1584
 msgid "This entry is tagged"
-msgstr "برچسب‌های این مطلب:"
+msgstr "Ovaj unos je označen"
 
 #: library/extensions/content-extensions.php:1587
 msgid "and tagged"
-msgstr "و دارای برچسب"
+msgstr "i označen"
 
 #: library/extensions/content-extensions.php:1590
 msgid "Also tagged"
-msgstr "همچنین دارای برچسب"
+msgstr "Također označeno"
 
 #: library/extensions/content-extensions.php:1592
 msgid "Tagged"
-msgstr "برچسب‌ها:"
+msgstr "Označeno"
 
 #: library/extensions/content-extensions.php:1622
 #: library/extensions/content-extensions.php:1628
 msgid "Comment on %s"
-msgstr "دیدگاه‌های %s"
+msgstr "Komentirajte %s"
 
 #: library/extensions/content-extensions.php:1624
 msgid "%s Response"
 msgid_plural "%s Responses"
-msgstr[0] "%s پاسخ"
+msgstr[0] "%s Odgovor"
+msgstr[1] "%s Odgovora"
+msgstr[2] "%s Odgovora"
 
 #: library/extensions/content-extensions.php:1629
 msgid "Leave a comment"
-msgstr "ارسال ديدگاه"
+msgstr "Ostavi komentar"
 
 #: library/extensions/content-extensions.php:1632
 msgid "Comments closed"
-msgstr "بخش ديدگاه‌ها مسدود است."
+msgstr "Komentari su zatvoreni"
 
 #: library/extensions/content-extensions.php:1656
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
 msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
-msgstr "%1$sنظر بدهید%2$s یا بازتاب بفرستید: %3$s"
+msgstr "%1$sObjavi komentar%2$s ili navedi poveznicu: %3$s"
 
 #: library/extensions/content-extensions.php:1657
 #: library/extensions/content-extensions.php:1672
 msgid "Post a comment"
-msgstr "ارسال ديدگاه"
+msgstr "Objavi komentar"
 
 #: library/extensions/content-extensions.php:1661
 #: library/extensions/content-extensions.php:1668
 msgid "Trackback URL for your post"
-msgstr "پيوند بازتاب"
+msgstr "Povratna adresa Vašeg posta"
 
 #: library/extensions/content-extensions.php:1662
 #: library/extensions/content-extensions.php:1669
 msgid "Trackback URL"
-msgstr "پيوند بازتاب"
+msgstr "Povratna adresa"
 
 #: library/extensions/content-extensions.php:1665
 msgctxt "%s is trackback url, wrapped in link tags"
 msgid "Comments are closed, but you can leave a trackback: %s"
-msgstr "دیدگاه‌ها بسته است، اما می‌توانید بازتاب بفرستید: %s"
+msgstr "Komentari su isključeni, ali možete navesti poveznicu: %s"
 
 #: library/extensions/content-extensions.php:1672
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
-msgstr "بازتاب‌ها بسته است، اما می‌توانید %1$sدیدگاه خود را بفرستید%2$s."
+msgstr "Poveznice su isključene, ali možete %1$sobjaviti komentar%2$s."
 
 #: library/extensions/content-extensions.php:1674
 msgid "Both comments and trackbacks are currently closed."
-msgstr "در حال حاضر دیدگاه‌ها و بازتاب‌ها بسته هستند."
+msgstr "Komentari i poveznice su trenutačno isključeni."
 
 #: library/extensions/customizer.php:54
 msgid "Layout"
-msgstr "طرح‌بندی"
+msgstr ""
 
 #: library/extensions/customizer.php:55
 msgid "Choose the main layout of your theme"
-msgstr "طرح‌بندی اصلی تم خود را برگزینید"
+msgstr ""
 
 #: library/extensions/customizer.php:73
 msgid "Theme layout"
-msgstr "طرح‌بندی تم"
+msgstr ""
 
 #: library/extensions/helpers.php:168
 msgid "Right Sidebar"
-msgstr "نوار سمت راست"
+msgstr ""
 
 #: library/extensions/helpers.php:164
 msgid "Left Sidebar"
-msgstr "نوار سمت چپ"
+msgstr ""
 
 #: library/extensions/helpers.php:172
 msgid "Three columns"
-msgstr "سه ستونه"
+msgstr ""
 
 #: library/extensions/customizer.php:82
 msgid "Footer"
-msgstr "پانوشت"
+msgstr ""
 
 #: library/extensions/customizer.php:83
 #: library/extensions/theme-options.php:325
 msgctxt "%s are shortcode tags"
 msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
-msgstr "شما می‌توانید از HTML و کدهای میانبر در متن پانوشت استفاده کنید. نمونه‌ی کد میانبر: %s"
+msgstr "Možete koristiti HTML i kodove u vašem tekstu u podnožju. Primjeri kodova: %s"
 
 #: library/extensions/customizer.php:97
 msgid "Footer text"
-msgstr "متن پانوشت"
+msgstr ""
 
 #: library/extensions/discussion-extensions.php:28
 #: library/legacy/legacy.php:172
 msgctxt "Posted {$date} at {$time}"
 msgid "Posted %s at %s"
-msgstr "فرستاده شده در %s ساعت %s"
+msgstr "Objavljeno %s u %s"
 
 #: library/extensions/discussion-extensions.php:33
 #: library/legacy/legacy.php:176
 msgid "Permalink to this comment"
-msgstr "پیوند یکتا به این دیدگاه"
+msgstr "Permalink do ovog komentara"
 
 #: library/extensions/discussion-extensions.php:33
 #: library/legacy/legacy.php:176
 msgid "Permalink"
-msgstr "پیوند یکتا"
+msgstr "Permalink"
 
 #: library/extensions/discussion-extensions.php:38
 #: library/legacy/legacy.php:181
 msgid "Edit comment"
-msgstr "ویرایش دیدگاه"
+msgstr "Uredi komentar"
 
 #: library/extensions/discussion.php:39 library/legacy/legacy.php:123
 msgid "Your comment is awaiting moderation"
-msgstr "دیدگاه شما در انتظار بررسی است."
+msgstr "Vaš komentar čeka administratorsku provjeru"
 
 #: library/extensions/discussion.php:54 library/legacy/legacy.php:138
 msgid "Reply"
-msgstr "پاسخ"
+msgstr "Odgovori"
 
 #: library/extensions/discussion.php:55 library/legacy/legacy.php:139
 msgid "Log in to reply."
-msgstr "براي پاسخ دادن بايد وارد شويد."
+msgstr "Prijavite se i odgovorite."
 
 #: library/extensions/discussion.php:84
 msgctxt "By {$authorlink} on {$date} at {$time}"
 msgid "By %1$s on %2$s at %3$s"
-msgstr "توسط %1$s در %2$s ساعت %3$s"
+msgstr "Objavio/la %1$s na %2$s u %3$s"
 
 #: library/extensions/discussion.php:94
 msgid "Your trackback is awaiting moderation"
-msgstr "بازتاب شما در انتظار بررسی است"
+msgstr "Vaša poveznica čeka odobrenje moderatora"
 
 #: library/extensions/header-extensions.php:362
 #: library/extensions/widgets.php:139
 msgid "Posts RSS feed"
-msgstr "خوراك RSS مطالب"
+msgstr "RSS objave članaka"
 
 #: library/extensions/header-extensions.php:385
 #: library/extensions/widgets.php:140
 msgid "Comments RSS feed"
-msgstr "خوراك RSS ديدگاه‌ها"
+msgstr "RSS objave komentara"
 
 #: library/extensions/header-extensions.php:826
 msgid "Skip navigation to the content"
-msgstr "اصل مطلب"
+msgstr "Preskoči navigaciju do sadržaja"
 
 #: library/extensions/header-extensions.php:826
 msgid "Skip to content"
-msgstr "اصل مطلب"
+msgstr "Preskoči na sadržaj"
 
 #: library/extensions/helpers.php:50 library/extensions/helpers.php:69
 msgid "There is no excerpt because this is a protected post."
-msgstr "اين مطلب چكيده ندارد چون رمزدار است."
+msgstr "Ne postoji izvadak jer je ovo zaštićena objava."
 
 #: library/extensions/theme-options.php:63
 msgid "Index Insert Position"
-msgstr "محل درج ويجت مياني"
+msgstr "Indeks pozicija za ubacivanje"
 
 #: library/extensions/theme-options.php:64
 msgid "Info on Author Page"
-msgstr "اطلاعات صفحه نويسنده"
+msgstr "Informacije na autorskoj stranici"
 
 #: library/extensions/theme-options.php:65
 msgid "Text in Footer"
-msgstr "متن پانويس"
+msgstr "Tekst na dnu"
 
 #: library/extensions/theme-options.php:74
 msgid "Restore Legacy XHTML1.0 Doctype"
-msgstr "بازگردانی نوع سند Legacy XHTML1.0"
+msgstr ""
 
 #: library/extensions/theme-options.php:79
 msgid "Remove Legacy Options"
-msgstr "حذف گزینه‌های قدیمی"
+msgstr "Ukloni stare opcije"
 
 #: library/extensions/theme-options.php:196
 msgid "Theme Options"
-msgstr "گزینه‌های تم"
+msgstr "Tematske opcije"
 
 #: library/extensions/theme-options.php:227
 msgid "For more information:"
-msgstr "برای اطلاعات بیشتر:"
+msgstr "Za dodatne informacije:"
 
 #: library/extensions/theme-options.php:229
 msgid "For support:"
-msgstr "برای پشتیبانی:"
+msgstr "Za podršku:"
 
 #: library/extensions/theme-options.php:231
 msgid "forums"
-msgstr "تالارهای گفتگو"
+msgstr "forumi"
 
 #: library/extensions/theme-options.php:236
 msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
-msgstr "با ساختن یک تم فرزند، گزینه‌های جدیدی قابل افزودن هستند و گزینه‌های پیش‌فرض نیز قابل حذف شدن می‌باشند. در یک تم فرزند، این راهنما را نیز می‌توان سفارشی‌سازی کرد."
+msgstr "Nove opcije mogu biti dodane, a originalne uklonjene kreiranjem child teme. Ova kontekstualna pomoć također može biti prilagođena u child temi."
 
 #: library/extensions/theme-options.php:240
 msgid "Overview"
-msgstr "مرور کلی"
+msgstr "Pregled"
 
 #: library/extensions/theme-options.php:261
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options"
-msgstr "%s گزینه‌های تم"
+msgstr "%s tematske opcije"
 
 #: library/extensions/theme-options.php:299
 msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
-msgstr ""
+msgstr "Widget pozicija umetanja na indeksu će se pojaviti nakon ovog broja posta. Ostavljanje praznog polja ili upisivanje 0 će isključiti ovu opciju."
 
 #: library/extensions/theme-options.php:312
 msgctxt "%1$s and %2$s are <a> tags"
 msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
-msgstr ""
+msgstr "Prikaži %1$smikro formatirani vCard%2$s sa autorovim avatarom, biografijom i e-mail adresom na autorskoj stranici."
 
 #: library/extensions/theme-options.php:338
 msgid "Restore the legacy XHTML Doctype and xhtml compatible markup."
@@ -535,162 +537,162 @@ msgstr ""
 
 #: library/extensions/theme-options.php:356
 msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
-msgstr "%s گزینه‌ی تم به یک قالب بهبود یافته ارتقا یافتند. گزینه‌های قدیمی را از پایگاه داده حذف کنید."
+msgstr ""
 
 #: library/extensions/theme-options.php:384
 msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
-msgstr ""
+msgstr "Vrijednost pozicije umetanja na indeksu mora biti broj jednak ili veći od 0. Ova postavka je vraćena na prijašnju vrijednost."
 
 #: library/extensions/widgets-extensions.php:34
 msgid "To search, type and hit enter"
-msgstr "جستجو در سايت"
+msgstr "Za pretragu, upiši pojam i stisni enter"
 
 #: library/extensions/widgets-extensions.php:40
 #: library/extensions/widgets.php:61 library/legacy/deprecated.php:545
 #: library/legacy/deprecated.php:550
 msgid "Search"
-msgstr "جستجو"
+msgstr "Traži"
 
 #: library/extensions/widgets-extensions.php:70
 msgid "Primary Aside"
-msgstr ""
+msgstr "Primarno sa strane"
 
 #: library/extensions/widgets-extensions.php:72
 msgid "The primary widget area, most often used as a sidebar."
-msgstr "ناحيه ويجت اصلي كه معمولاً بعنوان ستون كناري استفاده مي‌شود."
+msgstr "Primarna widget pozicija, najčešće se koristi kao sidebar (bočni sadržaj)."
 
 #: library/extensions/widgets-extensions.php:85
 msgid "Secondary Aside"
-msgstr ""
+msgstr "Sekundarno sa strane"
 
 #: library/extensions/widgets-extensions.php:87
 msgid "The secondary widget area, most often used as a sidebar."
-msgstr "ناحيه ويجت فرعي كه معمولاً بعنوان ستون كناري استفاده مي‌شود."
+msgstr "Sekundarna widget pozicija, najčešće se koristi kao sidebar (bočni sadržaj)."
 
 #: library/extensions/widgets-extensions.php:100
 msgid "1st Subsidiary Aside"
-msgstr ""
+msgstr "Prvi produžetak sa strane"
 
 #: library/extensions/widgets-extensions.php:102
 msgid "The 1st widget area in the footer."
-msgstr "اولين ناحيه ويجت در پانويس"
+msgstr "Prva widget pozicija u footeru."
 
 #: library/extensions/widgets-extensions.php:115
 msgid "2nd Subsidiary Aside"
-msgstr ""
+msgstr "Drugi produžetak sa strane "
 
 #: library/extensions/widgets-extensions.php:117
 msgid "The 2nd widget area in the footer."
-msgstr "دومين ناحيه ويجت در پانويس"
+msgstr "Druga widget pozicija u footeru."
 
 #: library/extensions/widgets-extensions.php:130
 msgid "3rd Subsidiary Aside"
-msgstr ""
+msgstr "Treći produžetak sa strane"
 
 #: library/extensions/widgets-extensions.php:132
 msgid "The 3rd widget area in the footer."
-msgstr "سومين ناحيه ويجت در پانويس"
+msgstr "Treća widget pozicija u footeru."
 
 #: library/extensions/widgets-extensions.php:145
 msgid "Index Top"
-msgstr ""
+msgstr "Vrh indeksa"
 
 #: library/extensions/widgets-extensions.php:147
 msgid "The top widget area displayed on the index page."
-msgstr "ناحيه ويجت بالايي كه در بالاي صفحه اصلي نمايش داده مي‌شود"
+msgstr "Najviša widget pozicija na indeks stranici"
 
 #: library/extensions/widgets-extensions.php:160
 msgid "Index Insert"
-msgstr ""
+msgstr "Dodatak indeksu"
 
 #: library/extensions/widgets-extensions.php:162
 msgid "The widget area inserted after x posts on the index page."
-msgstr "ناحيه ويجت مياني كه پس از تعداد مشخصي از مطالب در صفحه اصلي درج مي‌شود"
+msgstr "Widget pozicija dodana nakon x postova na index stranici."
 
 #: library/extensions/widgets-extensions.php:175
 msgid "Index Bottom"
-msgstr ""
+msgstr "Dno indeksa"
 
 #: library/extensions/widgets-extensions.php:177
 msgid "The bottom widget area displayed on the index page."
-msgstr "ناحيه ويجت پاييني كه در پايين صفحه اصلي نمايش داده مي‌شود"
+msgstr "Najniža widget pozicija na indeks stranici"
 
 #: library/extensions/widgets-extensions.php:190
 msgid "Single Top"
-msgstr ""
+msgstr "Pojedini na vrhu"
 
 #: library/extensions/widgets-extensions.php:192
 msgid "The top widget area displayed on a single post."
-msgstr "ناحيه ويجت بالايي كه در بالاي صفحه جداگانه‌‌ي هر مطلب نمايش داده مي‌شود"
+msgstr "Najviša pozicija za widget prikazana na pojedinom postu."
 
 #: library/extensions/widgets-extensions.php:205
 msgid "Single Insert"
-msgstr ""
+msgstr "Pojedinačno umetanje"
 
 #: library/extensions/widgets-extensions.php:207
 msgid "The widget area inserted between the post and the comments on a single post."
-msgstr "ناحيه ويجتي كه در صفحه جداگانه‌‌ي هر مطلب، بين متن مطلب و ديدگاه‌ها نمايش داده مي‌شود"
+msgstr "Pozicija za widget umetnut između posta i komentara na pojedinačnoj objavi."
 
 #: library/extensions/widgets-extensions.php:220
 msgid "Single Bottom"
-msgstr ""
+msgstr "Pojedini na dnu"
 
 #: library/extensions/widgets-extensions.php:222
 msgid "The bottom widget area displayed on a single post."
-msgstr "ناحيه ويجت پاييني كه در پايين صفحه جداگانه‌‌ي هر مطلب نمايش داده مي‌شود"
+msgstr "Najniža pozicija za widget prikazana na pojedinom postu. "
 
 #: library/extensions/widgets-extensions.php:235
 msgid "Page Top"
-msgstr ""
+msgstr "Vrh stranice"
 
 #: library/extensions/widgets-extensions.php:237
 msgid "The top widget area displayed on a page."
-msgstr "ناحيه ويجت بالايي كه در بالاي هر برگه نمايش داده مي‌شود"
+msgstr "Najviša widget pozicija prikazana na stranici."
 
 #: library/extensions/widgets-extensions.php:250
 msgid "Page Bottom"
-msgstr ""
+msgstr "Dno stranice"
 
 #: library/extensions/widgets-extensions.php:252
 msgid "The bottom widget area displayed on a page."
-msgstr "ناحيه ويجت پاييني كه در پايين هر برگه نمايش داده مي‌شود"
+msgstr "Pozicija za widget na dnu stranice."
 
 #: library/legacy/deprecated.php:544
 msgid "A search form for your blog"
-msgstr "یک فرم جستجو برای وبلاگ شما"
+msgstr "Tražilica za vaš blog"
 
 #: library/extensions/widgets.php:113 library/extensions/widgets.php:157
 #: library/legacy/deprecated.php:567
 msgid "Title:"
-msgstr "عنوان:"
+msgstr "Naslov:"
 
 #: library/extensions/widgets.php:80
 msgid "Log in/out and admin"
-msgstr "ورود/خروج و مدیریت"
+msgstr "Prijava/odjava i admin"
 
 #: library/extensions/widgets.php:86
 msgid "Meta"
-msgstr "متا"
+msgstr "Oznake"
 
 #: library/extensions/widgets.php:126
 msgid "Links to your posts and comments feed"
-msgstr "پیوند به مطالب ارسالی و خوراک دیدگاه‌ها"
+msgstr "Linkovi na vaše objave i komentare"
 
 #: library/extensions/widgets.php:127 library/extensions/widgets.php:132
 msgid "RSS Links"
-msgstr "پيوندهاي RSS"
+msgstr "RSS linkovi"
 
 #: library/extensions/widgets.php:139
 msgid "All posts"
-msgstr "همه مطالب"
+msgstr "Sve objave"
 
 #: library/extensions/widgets.php:140
 msgid "All comments"
-msgstr "همه ديدگاه‌ها"
+msgstr "Svi komentari"
 
 #: library/legacy/deprecated.php:361
 msgid "Logged in as"
-msgstr "وارد شده با"
+msgstr "Prijavljeni ste kao"
 
 #: library/legacy/deprecated.php:369 library/legacy/deprecated.php:374
 msgid "<span class=\"required\">*</span>"
@@ -700,15 +702,15 @@ msgstr "<span class=\"required\">*</span>"
 #: library/legacy/legacy-template-page-fullwidth.php:50 page.php:49
 #: template-page-fullwidth.php:50
 msgid "Pages: "
-msgstr "برگه‌ها: "
+msgstr "Stranice:"
 
 #: search.php:54
 msgid "Nothing Found"
-msgstr "چيزي يافت نشد"
+msgstr "Nije pronađeno"
 
 #: search.php:58
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "متأسفانه عبارت مورد جستجوي شما پيدا نشد. لطفاً جستجوي خود را با كليدواژه‌هاي ديگري تكرار كنيد."
+msgstr "Žao nam je, ali nije pronađeno ništa što odgovara Vašem upitu. Molimo pokušajte ponovno, sa drugačijim ključnim riječima."
 
 msgid "Thematic"
 msgstr "Thematic"
@@ -717,19 +719,19 @@ msgid "http://thematictheme.com"
 msgstr "http://thematictheme.com"
 
 msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
-msgstr "تماتیک یکی از سئو ترین تم‌هاست، به شدت توسعه پذیر است،  این چارچوب تم وردپرس دارای 13 ناحیه آماده برای ویجت‌ها، منوهای پایین افتادنی، مثال‌های طرح‌بندی مبتنی بر شبکه(grid)، یکپارچه‌سازی افزونه‌ها، کدهای میانبر برای پانوشت شما ، &amp; و بسیاری امکانات دیگر است. چارچوبی کامل و تمام‌عیار برای هر وبلاگ و نقطه‌ی شروعی برای طراحی و توسعه‌ی تم."
+msgstr "Thematic je WordPress framework koji je krajnje optimiziran za tražilice, te vrlo proširiv. Sadrži 13 pozicija za widgete. padajuće izbornike, primjere layouta koji se baziraju na gridovima, integraciju za pluginove, kratke kodove za footer  &amp; još mnogo toga. Savršen je za svaki blog i <strong><em>najbolji</em></strong> je početni korak ka razvoju WordPress tema."
 
 msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
-msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
+msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> i <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
 
 msgid "http://themeshaper.com/"
 msgstr "http://themeshaper.com/"
 
 msgid "Links Page"
-msgstr "صفحه‌ی پیوندها"
+msgstr "Linkovi"
 
 msgid "Archives Page"
-msgstr "صفحه بایگانی‌ها"
+msgstr "Arhiva"
 
 msgid "Full Width"
-msgstr "عرض کامل"
+msgstr "Puna širina"

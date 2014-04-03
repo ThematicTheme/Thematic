@@ -1,8 +1,8 @@
-# Translation of Thematic 2.0 in Persian
+# Translation of Thematic 2.0 in Vietnamese
 # This file is distributed under the same license as the Thematic 2.0 package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-04-03 13:55:06+0000\n"
+"PO-Revision-Date: 2014-04-03 13:54:55+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,72 +39,72 @@ msgstr ""
 #: library/tests/test-content-extensions.php:76
 #: library/tests/test-legacy-xhtml.php:128
 msgid "Pages:"
-msgstr "برگه‌ها:"
+msgstr "Trang:"
 
 #: author.php:65
 msgid "Email "
-msgstr "رايانامه "
+msgstr "Thư điện tử"
 
 #: comments.php:24
 msgid "Please do not load this page directly."
-msgstr "لطفا این صفحه را مستقیما باز نکنید."
+msgstr "Xin đừng tải trang này trực tiếp."
 
 #: comments.php:34
 msgid "This post is password protected. Enter the password to view any comments."
-msgstr "اين مطلب رمزدار است. برای مشاهده ديدگاه‌ها رمز را وارد كنيد."
+msgstr "Bài này đã được bảo vệ bằng mật khẩu. Nhập mật khẩu để xem nội dung"
 
 #: comments.php:113
 msgid "Trackbacks"
-msgstr "بازتاب‌ها"
+msgstr "Trackbacks"
 
 #: comments.php:113
 msgctxt "%1$ and %2$s are <span> tags"
 msgid "%1$sOne%2$s Trackback"
-msgstr "%1$sیک%2$s بازتاب"
+msgstr "%1$sOne%2$s Trackback"
 
 #: functions.php:200
 msgid "Primary Menu"
-msgstr "منو اصلی"
+msgstr "Menu Chính"
 
 #: library/extensions/back-compat.php:41 library/extensions/back-compat.php:53
 #: library/extensions/back-compat.php:68
 msgid "Thematic requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
-msgstr "تماتیک حداقل نیاز به نسخه 3.6 وردپرس دارد. شما در حال استفاده از نسخه %s هستید. لطفا آن را ارتقا داده و دوباره تلاش کنید."
+msgstr ""
 
 #: library/extensions/comments-extensions.php:124
 msgctxt "One Comment, where %$1s and %$2s are <span> tags"
 msgid "%1$sOne%2$s Comment"
-msgstr "%1$sیک%2$s دیدگاه"
+msgstr "%1$sOne%2$s bình luận"
 
 #: library/extensions/comments-extensions.php:135
 msgid "Comments"
-msgstr "دیدگاه‌ها"
+msgstr "Bình luận"
 
 #: library/extensions/comments-extensions.php:162
 msgid "Post a Comment"
-msgstr "ارسال ديدگاه"
+msgstr "Gửi bình luận"
 
 #: library/extensions/comments-extensions.php:174
 msgid "Post a Reply to %s"
-msgstr "پاسخ به ديدگاه %s"
+msgstr "Gửi trả lời đến"
 
 #: library/extensions/comments-extensions.php:186
 msgctxt "noun"
 msgid "Comment"
-msgstr "دیدگاه"
+msgstr "Bình luận"
 
 #: library/extensions/comments-extensions.php:197
 msgid "Cancel reply"
-msgstr "لغو پاسخ"
+msgstr "Bỏ trả lời"
 
 #: library/extensions/comments-extensions.php:209
 msgid "Post Comment"
-msgstr "ارسال ديدگاه"
+msgstr "Gửi bình luận"
 
 #: library/extensions/comments-extensions.php:236
 #: library/legacy/deprecated.php:369
 msgid "Name"
-msgstr "نام"
+msgstr "Tên của bạn"
 
 #: library/extensions/comments-extensions.php:236
 #: library/extensions/comments-extensions.php:237
@@ -115,106 +115,106 @@ msgstr "*"
 #: library/extensions/comments-extensions.php:237
 #: library/legacy/deprecated.php:374
 msgid "Email"
-msgstr "رايانامه"
+msgstr "Thư điện tử"
 
 #: library/extensions/comments-extensions.php:238
 #: library/legacy/deprecated.php:379
 msgid "Website"
-msgstr "وب‌سايت"
+msgstr "Website"
 
 #: library/extensions/comments-extensions.php:246
 #: library/legacy/deprecated.php:366
 msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
 msgid "Your email is %1$snever%2$s published nor shared."
-msgstr "رایانامه شما %1$sهرگز%2$s منتشر نمی‌شود و با دیگران به اشتراک گذاشته نخواهد شد."
+msgstr "Email của bạn là %1$snever%2$s sẽ không được hiển thị hoặc công khai."
 
 #: library/extensions/comments-extensions.php:246
 msgctxt "%$1s and %$2s are <span> tags"
 msgid "Required fields are marked %1$s*%2$s"
-msgstr "فیلدهای ضروری با %1$s*%2$s علامت‌گذاری شده‌اند."
+msgstr "Trường bắt buộc được đánh dấu %1$s*%2$s"
 
 #: library/extensions/comments-extensions.php:248
 #: library/legacy/deprecated.php:348
 msgid "You must be %1$slogged in%2$s to post a comment."
-msgstr "برای فرستادن دیدگاه باید %1$sوارد شوید%2$s."
+msgstr "Bạn phải đăng nhập để xem được bình luận."
 
 #: library/extensions/comments-extensions.php:248
 #: library/legacy/deprecated.php:348
 msgid "Log in"
-msgstr "ورود"
+msgstr "Đăng nhập"
 
 #: library/extensions/comments-extensions.php:250
 #: library/legacy/deprecated.php:361
 msgid "Logged in as %s"
-msgstr ""
+msgstr "Đăng nhập với %s"
 
 #: library/extensions/comments-extensions.php:250
 #: library/legacy/deprecated.php:361
 msgid "Log out of this account"
-msgstr "خروج از این حساب"
+msgstr "Thoát ra tài khoản này"
 
 #: library/extensions/comments-extensions.php:250
 #: library/legacy/deprecated.php:361
 msgid "Log out?"
-msgstr "خروج؟"
+msgstr "Bạn muốn thoát chứ?"
 
 #: library/legacy/deprecated.php:391
 msgctxt "%$1s and %$2s are <abbr> tags"
 msgid "You may use these %1$sHTML%2$s tags and attributes"
-msgstr "می‌توانید از این برچسب‌ها و خصوصیت‌های %1$sHTML%2$s استفاده کنید."
+msgstr "Bạn có thể sử dụng các thẻ HTML như %1$s%2$s."
 
 #: library/extensions/content-extensions.php:334
 msgid "Author Archives:"
-msgstr "بایگانی نویسنده"
+msgstr "Lưu trữ tác giả:"
 
 #: library/extensions/content-extensions.php:339
 #: library/extensions/header-extensions.php:170
 msgid "Category Archives:"
-msgstr "بايگاني موضوعات:"
+msgstr "Lưu trữ chuyên mục:"
 
 #: library/extensions/content-extensions.php:349
 #: library/extensions/header-extensions.php:166
 msgid "Search Results for:"
-msgstr "نتايج جستجوي:"
+msgstr "Kết quả tìm kiếm cho:"
 
 #: library/extensions/content-extensions.php:354
 #: library/extensions/header-extensions.php:174
 msgid "Tag Archives:"
-msgstr "بايگاني برچسب‌ها:"
+msgstr "Lưu trữ thẻ:"
 
 #: library/extensions/content-extensions.php:363
 #: library/extensions/content-extensions.php:370
 msgid "Archives:"
-msgstr "بایگانی‌ها:"
+msgstr "Lưu trữ:"
 
 #: library/extensions/content-extensions.php:375
 msgid "Daily Archives: %s"
-msgstr "آرشیو روزانه: %s"
+msgstr "Lưu trữ mỗi ngày:"
 
 #: library/extensions/content-extensions.php:379
 msgid "Monthly Archives: %s"
-msgstr "آرشیو ماهانه: %s"
+msgstr "Lưu trữ mỗi tháng:"
 
 #: library/extensions/content-extensions.php:383
 msgid "Yearly Archives: %s"
-msgstr "آرشیو سالانه: %s"
+msgstr "Lưu trữ mỗi năm:"
 
 #: library/extensions/content-extensions.php:426
 #: library/extensions/content-extensions.php:1715 library/legacy/legacy.php:256
 #: library/legacy/legacy.php:507
 msgid "Older posts"
-msgstr "مطالب قدیمی‌تر"
+msgstr "Bài cũ hơn"
 
 #: library/extensions/content-extensions.php:428
 #: library/extensions/content-extensions.php:1717 library/legacy/legacy.php:258
 #: library/legacy/legacy.php:509
 msgid "Newer posts"
-msgstr "مطالب جدیدتر"
+msgstr "Bài mới hơn"
 
 #: library/extensions/content-extensions.php:890
 #: library/extensions/content-extensions.php:1425
 msgid "Edit post"
-msgstr "ويرايش مطلب"
+msgstr "Sửa bài"
 
 #: library/extensions/content-extensions.php:892
 #: library/extensions/content-extensions.php:1427
@@ -226,308 +226,308 @@ msgstr "ويرايش مطلب"
 #: library/legacy/legacy.php:182 links.php:51 page.php:51
 #: template-page-archives.php:54 template-page-fullwidth.php:52
 msgid "Edit"
-msgstr "ويرايش"
+msgstr "Sửa"
 
 #: library/extensions/content-extensions.php:918
 msgctxt "Default title for untitled posts"
 msgid "(Untitled)"
-msgstr "(بدون عنوان)"
+msgstr "(Chưa có tiêu đề)"
 
 #: library/extensions/content-extensions.php:924
 #: library/extensions/header-extensions.php:178
 msgid "Not Found"
-msgstr "يافت نشد"
+msgstr "Không tìm thấy"
 
 #: library/extensions/content-extensions.php:1147
 #: library/extensions/content-extensions.php:1151
 #: library/extensions/content-extensions.php:1383
 msgid "Permalink to %s"
-msgstr "پیوند یکتا به %s"
+msgstr "Liên kết tới %s"
 
 #: library/extensions/content-extensions.php:989
 msgid "By"
-msgstr "توسط"
+msgstr "Đăng bởi"
 
 #: library/extensions/content-extensions.php:1000
 msgid "View all posts by %s"
-msgstr "دیدن همه‌ی مطالب %s"
+msgstr "Xem toàn bộ bài của %s"
 
 #: library/extensions/content-extensions.php:1029
 msgid "Published:"
-msgstr "منتشر شده:"
+msgstr "Ngày đăng:"
 
 #: library/extensions/content-extensions.php:1206
 msgid "Archives by Category"
-msgstr "بايگاني موضوعي"
+msgstr "Lưu trữ trữ bởi chuyên mục"
 
 #: library/extensions/content-extensions.php:1237
 msgid "Archives by Month"
-msgstr "بايگاني ماهانه"
+msgstr "Lưu trữ bởi tháng"
 
 #: library/extensions/content-extensions.php:1298
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
-msgstr "متاسفیم، اما نتوانستیم آنچه می‌جستید بیابیم. شاید جستجوی مطالب کمکتان کند."
+msgstr "Xin lỗi nhưng chúng tôi không thể tìm ra nội dung mà bạn cần xem. Hãy thử tính năng tìm kiếm biết đâu nó có thể giúp bạn tìm ra tốt hơn?"
 
 #: library/extensions/content-extensions.php:1304 search.php:68
 msgid "Find"
-msgstr "پيدا كن"
+msgstr "Tìm"
 
 #: library/extensions/content-extensions.php:1323
 msgid "Read More %s"
-msgstr "بیشتر بخوانید %s"
+msgstr "Xem thêm %s"
 
 #: library/extensions/content-extensions.php:1375
 msgid "Browse the %s archive."
-msgstr "بایگانی %s را مرور کنید."
+msgstr "Duyệt lưu trữ %s."
 
 #: library/extensions/content-extensions.php:1377
 msgid "Permalink to %s Archive"
-msgstr "پیوند یکتا به بایگانی %s"
+msgstr "Liên kết đến lưu trữ %s."
 
 #: library/extensions/content-extensions.php:1383
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Bookmark the %1$spermalink%2$s."
-msgstr "%1$spermalink%2$s را به علاقمندی‌های خود بیافزایید."
+msgstr "Đánh dấu %1$spermalink%2$s."
 
 #: library/extensions/content-extensions.php:1543
 msgid "This entry was posted in %s"
-msgstr "این مطلب در دسته‌ی %s ارسال شده است"
+msgstr "Bài này được lưu trong mục"
 
 #: library/extensions/content-extensions.php:1554
 msgid "Also posted in %s"
-msgstr "همچنین در دسته‌ی %s ارسال شده"
+msgstr "và cũng trong %s"
 
 #: library/extensions/content-extensions.php:1558
 msgid "Posted in %s"
-msgstr "ارسال شده در دسته‌ی %s"
+msgstr "Đăng trong %s"
 
 #: library/extensions/content-extensions.php:1584
 msgid "This entry is tagged"
-msgstr "برچسب‌های این مطلب:"
+msgstr "Bài này được đánh dấu trong thẻ"
 
 #: library/extensions/content-extensions.php:1587
 msgid "and tagged"
-msgstr "و دارای برچسب"
+msgstr "và trong thẻ"
 
 #: library/extensions/content-extensions.php:1590
 msgid "Also tagged"
-msgstr "همچنین دارای برچسب"
+msgstr "Cũng trong thẻ"
 
 #: library/extensions/content-extensions.php:1592
 msgid "Tagged"
-msgstr "برچسب‌ها:"
+msgstr "Thẻ: "
 
 #: library/extensions/content-extensions.php:1622
 #: library/extensions/content-extensions.php:1628
 msgid "Comment on %s"
-msgstr "دیدگاه‌های %s"
+msgstr "Bình luận trong %s"
 
 #: library/extensions/content-extensions.php:1624
 msgid "%s Response"
 msgid_plural "%s Responses"
-msgstr[0] "%s پاسخ"
+msgstr[0] " %s phản hồi"
 
 #: library/extensions/content-extensions.php:1629
 msgid "Leave a comment"
-msgstr "ارسال ديدگاه"
+msgstr "Để lại bình luận"
 
 #: library/extensions/content-extensions.php:1632
 msgid "Comments closed"
-msgstr "بخش ديدگاه‌ها مسدود است."
+msgstr "Bình luận đã bị đóng"
 
 #: library/extensions/content-extensions.php:1656
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
 msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
-msgstr "%1$sنظر بدهید%2$s یا بازتاب بفرستید: %3$s"
+msgstr "%1$sĐăng một bình luận%2$s hoặc để lại một trackback: %3$s"
 
 #: library/extensions/content-extensions.php:1657
 #: library/extensions/content-extensions.php:1672
 msgid "Post a comment"
-msgstr "ارسال ديدگاه"
+msgstr "Đăng bình luận"
 
 #: library/extensions/content-extensions.php:1661
 #: library/extensions/content-extensions.php:1668
 msgid "Trackback URL for your post"
-msgstr "پيوند بازتاب"
+msgstr "Trackback URL cho bài của bạn"
 
 #: library/extensions/content-extensions.php:1662
 #: library/extensions/content-extensions.php:1669
 msgid "Trackback URL"
-msgstr "پيوند بازتاب"
+msgstr "Địa chỉ Trackback"
 
 #: library/extensions/content-extensions.php:1665
 msgctxt "%s is trackback url, wrapped in link tags"
 msgid "Comments are closed, but you can leave a trackback: %s"
-msgstr "دیدگاه‌ها بسته است، اما می‌توانید بازتاب بفرستید: %s"
+msgstr "Bình luận đã bị đóng, nhưng bạn có thể để lại trackbacks: %s"
 
 #: library/extensions/content-extensions.php:1672
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
-msgstr "بازتاب‌ها بسته است، اما می‌توانید %1$sدیدگاه خود را بفرستید%2$s."
+msgstr "Trackback đã bị đóng, nhưng bạn có thể %1$spost a comment%2$s."
 
 #: library/extensions/content-extensions.php:1674
 msgid "Both comments and trackbacks are currently closed."
-msgstr "در حال حاضر دیدگاه‌ها و بازتاب‌ها بسته هستند."
+msgstr "Trackback và bình luận đã bị đóng."
 
 #: library/extensions/customizer.php:54
 msgid "Layout"
-msgstr "طرح‌بندی"
+msgstr ""
 
 #: library/extensions/customizer.php:55
 msgid "Choose the main layout of your theme"
-msgstr "طرح‌بندی اصلی تم خود را برگزینید"
+msgstr ""
 
 #: library/extensions/customizer.php:73
 msgid "Theme layout"
-msgstr "طرح‌بندی تم"
+msgstr ""
 
 #: library/extensions/helpers.php:168
 msgid "Right Sidebar"
-msgstr "نوار سمت راست"
+msgstr ""
 
 #: library/extensions/helpers.php:164
 msgid "Left Sidebar"
-msgstr "نوار سمت چپ"
+msgstr ""
 
 #: library/extensions/helpers.php:172
 msgid "Three columns"
-msgstr "سه ستونه"
+msgstr ""
 
 #: library/extensions/customizer.php:82
 msgid "Footer"
-msgstr "پانوشت"
+msgstr ""
 
 #: library/extensions/customizer.php:83
 #: library/extensions/theme-options.php:325
 msgctxt "%s are shortcode tags"
 msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
-msgstr "شما می‌توانید از HTML و کدهای میانبر در متن پانوشت استفاده کنید. نمونه‌ی کد میانبر: %s"
+msgstr "Bạn có thể sử dụng HTML và shortcodes trong footer. Ví dụ cho shortcode: %s"
 
 #: library/extensions/customizer.php:97
 msgid "Footer text"
-msgstr "متن پانوشت"
+msgstr ""
 
 #: library/extensions/discussion-extensions.php:28
 #: library/legacy/legacy.php:172
 msgctxt "Posted {$date} at {$time}"
 msgid "Posted %s at %s"
-msgstr "فرستاده شده در %s ساعت %s"
+msgstr "Ngày đăng: %s lúc %s"
 
 #: library/extensions/discussion-extensions.php:33
 #: library/legacy/legacy.php:176
 msgid "Permalink to this comment"
-msgstr "پیوند یکتا به این دیدگاه"
+msgstr "Liên kết đến bình luận này"
 
 #: library/extensions/discussion-extensions.php:33
 #: library/legacy/legacy.php:176
 msgid "Permalink"
-msgstr "پیوند یکتا"
+msgstr "Liên kết"
 
 #: library/extensions/discussion-extensions.php:38
 #: library/legacy/legacy.php:181
 msgid "Edit comment"
-msgstr "ویرایش دیدگاه"
+msgstr "Sửa bình luận"
 
 #: library/extensions/discussion.php:39 library/legacy/legacy.php:123
 msgid "Your comment is awaiting moderation"
-msgstr "دیدگاه شما در انتظار بررسی است."
+msgstr "Bình luận của bạn đang chờ duyệt."
 
 #: library/extensions/discussion.php:54 library/legacy/legacy.php:138
 msgid "Reply"
-msgstr "پاسخ"
+msgstr "Trả lời"
 
 #: library/extensions/discussion.php:55 library/legacy/legacy.php:139
 msgid "Log in to reply."
-msgstr "براي پاسخ دادن بايد وارد شويد."
+msgstr "Đăng nhập để bình luận."
 
 #: library/extensions/discussion.php:84
 msgctxt "By {$authorlink} on {$date} at {$time}"
 msgid "By %1$s on %2$s at %3$s"
-msgstr "توسط %1$s در %2$s ساعت %3$s"
+msgstr "Đăng bởi %1$s vào ngày %2$s lúc %3$s"
 
 #: library/extensions/discussion.php:94
 msgid "Your trackback is awaiting moderation"
-msgstr "بازتاب شما در انتظار بررسی است"
+msgstr "Trackback của bạn đang được chờ duyệt"
 
 #: library/extensions/header-extensions.php:362
 #: library/extensions/widgets.php:139
 msgid "Posts RSS feed"
-msgstr "خوراك RSS مطالب"
+msgstr "RSS Feed"
 
 #: library/extensions/header-extensions.php:385
 #: library/extensions/widgets.php:140
 msgid "Comments RSS feed"
-msgstr "خوراك RSS ديدگاه‌ها"
+msgstr "RSS Feed bình luận"
 
 #: library/extensions/header-extensions.php:826
 msgid "Skip navigation to the content"
-msgstr "اصل مطلب"
+msgstr "Bỏ qua thanh điều hướng để xem nội dung."
 
 #: library/extensions/header-extensions.php:826
 msgid "Skip to content"
-msgstr "اصل مطلب"
+msgstr "Xem nội dung"
 
 #: library/extensions/helpers.php:50 library/extensions/helpers.php:69
 msgid "There is no excerpt because this is a protected post."
-msgstr "اين مطلب چكيده ندارد چون رمزدار است."
+msgstr "Bài này không có bản rút gọn bởi vì bài này đã được bảo vệ."
 
 #: library/extensions/theme-options.php:63
 msgid "Index Insert Position"
-msgstr "محل درج ويجت مياني"
+msgstr "Vị trí chèn vào index"
 
 #: library/extensions/theme-options.php:64
 msgid "Info on Author Page"
-msgstr "اطلاعات صفحه نويسنده"
+msgstr "Thông tin ở trang tác giả"
 
 #: library/extensions/theme-options.php:65
 msgid "Text in Footer"
-msgstr "متن پانويس"
+msgstr "Chữ ở Footer"
 
 #: library/extensions/theme-options.php:74
 msgid "Restore Legacy XHTML1.0 Doctype"
-msgstr "بازگردانی نوع سند Legacy XHTML1.0"
+msgstr ""
 
 #: library/extensions/theme-options.php:79
 msgid "Remove Legacy Options"
-msgstr "حذف گزینه‌های قدیمی"
+msgstr "Xóa những tùy chọn thừa."
 
 #: library/extensions/theme-options.php:196
 msgid "Theme Options"
-msgstr "گزینه‌های تم"
+msgstr "Tùy chọn theme"
 
 #: library/extensions/theme-options.php:227
 msgid "For more information:"
-msgstr "برای اطلاعات بیشتر:"
+msgstr "Xem thêm thông tin:"
 
 #: library/extensions/theme-options.php:229
 msgid "For support:"
-msgstr "برای پشتیبانی:"
+msgstr "Hỗ trợ:"
 
 #: library/extensions/theme-options.php:231
 msgid "forums"
-msgstr "تالارهای گفتگو"
+msgstr "diễn đàn"
 
 #: library/extensions/theme-options.php:236
 msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
-msgstr "با ساختن یک تم فرزند، گزینه‌های جدیدی قابل افزودن هستند و گزینه‌های پیش‌فرض نیز قابل حذف شدن می‌باشند. در یک تم فرزند، این راهنما را نیز می‌توان سفارشی‌سازی کرد."
+msgstr "Một tùy chọn mới có thể đã được thêm vào và mặc định đã bị xóa bởi việc tạo một child theme mới. Và cái dòng chữ hỗ trợ này cũng có thể tùy biến trong child theme."
 
 #: library/extensions/theme-options.php:240
 msgid "Overview"
-msgstr "مرور کلی"
+msgstr "Xem tổng thể"
 
 #: library/extensions/theme-options.php:261
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options"
-msgstr "%s گزینه‌های تم"
+msgstr "%s tùy chọn."
 
 #: library/extensions/theme-options.php:299
 msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
-msgstr ""
+msgstr "Vị trí chèn vào index là widget sẽ được áp dụng vào sau mỗi số bài viết. Không nhập gì hoặc để là 0 để tắt tính năng này."
 
 #: library/extensions/theme-options.php:312
 msgctxt "%1$s and %2$s are <a> tags"
 msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
-msgstr ""
+msgstr "Hiển thị %1$smicroformatted vCard%2$s cho avatar tác giả, thông tin và email ở trang tác giả."
 
 #: library/extensions/theme-options.php:338
 msgid "Restore the legacy XHTML Doctype and xhtml compatible markup."
@@ -535,162 +535,162 @@ msgstr ""
 
 #: library/extensions/theme-options.php:356
 msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
-msgstr "%s گزینه‌ی تم به یک قالب بهبود یافته ارتقا یافتند. گزینه‌های قدیمی را از پایگاه داده حذف کنید."
+msgstr ""
 
 #: library/extensions/theme-options.php:384
 msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
-msgstr ""
+msgstr "Giá trị cho vị trí chèn vào index phải là một số tự nhiên hoặc lớn hơn 0."
 
 #: library/extensions/widgets-extensions.php:34
 msgid "To search, type and hit enter"
-msgstr "جستجو در سايت"
+msgstr "Nhập từ khóa tìm kiếm và enter"
 
 #: library/extensions/widgets-extensions.php:40
 #: library/extensions/widgets.php:61 library/legacy/deprecated.php:545
 #: library/legacy/deprecated.php:550
 msgid "Search"
-msgstr "جستجو"
+msgstr "Tìm"
 
 #: library/extensions/widgets-extensions.php:70
 msgid "Primary Aside"
-msgstr ""
+msgstr "Thanh bên chính"
 
 #: library/extensions/widgets-extensions.php:72
 msgid "The primary widget area, most often used as a sidebar."
-msgstr "ناحيه ويجت اصلي كه معمولاً بعنوان ستون كناري استفاده مي‌شود."
+msgstr "Thanh bên chính là thanh bên cạnh khung nội dung, thường gọi là Sidebar."
 
 #: library/extensions/widgets-extensions.php:85
 msgid "Secondary Aside"
-msgstr ""
+msgstr "Thanh bên phụ"
 
 #: library/extensions/widgets-extensions.php:87
 msgid "The secondary widget area, most often used as a sidebar."
-msgstr "ناحيه ويجت فرعي كه معمولاً بعنوان ستون كناري استفاده مي‌شود."
+msgstr "Chức năng tương tự như Thanh bên chính."
 
 #: library/extensions/widgets-extensions.php:100
 msgid "1st Subsidiary Aside"
-msgstr ""
+msgstr "Khu vực Footer 1"
 
 #: library/extensions/widgets-extensions.php:102
 msgid "The 1st widget area in the footer."
-msgstr "اولين ناحيه ويجت در پانويس"
+msgstr "Khu vực chèn widget số 1 ở footer."
 
 #: library/extensions/widgets-extensions.php:115
 msgid "2nd Subsidiary Aside"
-msgstr ""
+msgstr "Khu vực footer 2"
 
 #: library/extensions/widgets-extensions.php:117
 msgid "The 2nd widget area in the footer."
-msgstr "دومين ناحيه ويجت در پانويس"
+msgstr "Khu vực chèn widget nằm ở footer số 2"
 
 #: library/extensions/widgets-extensions.php:130
 msgid "3rd Subsidiary Aside"
-msgstr ""
+msgstr "Khu vực footer 3"
 
 #: library/extensions/widgets-extensions.php:132
 msgid "The 3rd widget area in the footer."
-msgstr "سومين ناحيه ويجت در پانويس"
+msgstr "Khu vực chèn widget nằm ở footer số 2"
 
 #: library/extensions/widgets-extensions.php:145
 msgid "Index Top"
-msgstr ""
+msgstr "Trên bài đầu tiên ở Index"
 
 #: library/extensions/widgets-extensions.php:147
 msgid "The top widget area displayed on the index page."
-msgstr "ناحيه ويجت بالايي كه در بالاي صفحه اصلي نمايش داده مي‌شود"
+msgstr "Khu vực chèn widget nằm trên bài viết đầu tiên ở trang chủ."
 
 #: library/extensions/widgets-extensions.php:160
 msgid "Index Insert"
-msgstr ""
+msgstr "Chèn vào Index"
 
 #: library/extensions/widgets-extensions.php:162
 msgid "The widget area inserted after x posts on the index page."
-msgstr "ناحيه ويجت مياني كه پس از تعداد مشخصي از مطالب در صفحه اصلي درج مي‌شود"
+msgstr "Vị trí chèn widget sau bài viết số x ở trang chủ. Thiết lập trong Tùy chọn theme."
 
 #: library/extensions/widgets-extensions.php:175
 msgid "Index Bottom"
-msgstr ""
+msgstr "Dưới trang chủ"
 
 #: library/extensions/widgets-extensions.php:177
 msgid "The bottom widget area displayed on the index page."
-msgstr "ناحيه ويجت پاييني كه در پايين صفحه اصلي نمايش داده مي‌شود"
+msgstr "Vị trí chèn widget dưới bài cuối cùng tại trang chủ."
 
 #: library/extensions/widgets-extensions.php:190
 msgid "Single Top"
-msgstr ""
+msgstr "Trên trang nội dung"
 
 #: library/extensions/widgets-extensions.php:192
 msgid "The top widget area displayed on a single post."
-msgstr "ناحيه ويجت بالايي كه در بالاي صفحه جداگانه‌‌ي هر مطلب نمايش داده مي‌شود"
+msgstr "Khu vực chèn widget nằm trên bài viết trong trang nội dung."
 
 #: library/extensions/widgets-extensions.php:205
 msgid "Single Insert"
-msgstr ""
+msgstr "Chèn trong trang nội dung"
 
 #: library/extensions/widgets-extensions.php:207
 msgid "The widget area inserted between the post and the comments on a single post."
-msgstr "ناحيه ويجتي كه در صفحه جداگانه‌‌ي هر مطلب، بين متن مطلب و ديدگاه‌ها نمايش داده مي‌شود"
+msgstr "Khu vực chèn widget nằm giữa khu vực bình luận và nội dung bài viết."
 
 #: library/extensions/widgets-extensions.php:220
 msgid "Single Bottom"
-msgstr ""
+msgstr "Dưới trang nội dung"
 
 #: library/extensions/widgets-extensions.php:222
 msgid "The bottom widget area displayed on a single post."
-msgstr "ناحيه ويجت پاييني كه در پايين صفحه جداگانه‌‌ي هر مطلب نمايش داده مي‌شود"
+msgstr "Khu vực chèn widget nằm dưới bài viết trong trang bài viết."
 
 #: library/extensions/widgets-extensions.php:235
 msgid "Page Top"
-msgstr ""
+msgstr "Trên của Page"
 
 #: library/extensions/widgets-extensions.php:237
 msgid "The top widget area displayed on a page."
-msgstr "ناحيه ويجت بالايي كه در بالاي هر برگه نمايش داده مي‌شود"
+msgstr "Khu vực chèn vào bên trên nội dung trong Page"
 
 #: library/extensions/widgets-extensions.php:250
 msgid "Page Bottom"
-msgstr ""
+msgstr "Dưới nội dung của Page"
 
 #: library/extensions/widgets-extensions.php:252
 msgid "The bottom widget area displayed on a page."
-msgstr "ناحيه ويجت پاييني كه در پايين هر برگه نمايش داده مي‌شود"
+msgstr "Khu vực chèn widget vào bên dưới nội dung trong Page"
 
 #: library/legacy/deprecated.php:544
 msgid "A search form for your blog"
-msgstr "یک فرم جستجو برای وبلاگ شما"
+msgstr "Một thanh tìm kiếm nội dung trên blog của bạn."
 
 #: library/extensions/widgets.php:113 library/extensions/widgets.php:157
 #: library/legacy/deprecated.php:567
 msgid "Title:"
-msgstr "عنوان:"
+msgstr "Tiêu đề:"
 
 #: library/extensions/widgets.php:80
 msgid "Log in/out and admin"
-msgstr "ورود/خروج و مدیریت"
+msgstr "Thoát ra"
 
 #: library/extensions/widgets.php:86
 msgid "Meta"
-msgstr "متا"
+msgstr "Meta"
 
 #: library/extensions/widgets.php:126
 msgid "Links to your posts and comments feed"
-msgstr "پیوند به مطالب ارسالی و خوراک دیدگاه‌ها"
+msgstr "Liên kết đến bài viết của bạn và feed của bình luận."
 
 #: library/extensions/widgets.php:127 library/extensions/widgets.php:132
 msgid "RSS Links"
-msgstr "پيوندهاي RSS"
+msgstr "Liên kết RSS"
 
 #: library/extensions/widgets.php:139
 msgid "All posts"
-msgstr "همه مطالب"
+msgstr "Tất cả bài viết"
 
 #: library/extensions/widgets.php:140
 msgid "All comments"
-msgstr "همه ديدگاه‌ها"
+msgstr "Tất cả bình luận"
 
 #: library/legacy/deprecated.php:361
 msgid "Logged in as"
-msgstr "وارد شده با"
+msgstr "Đã đăng nhập là "
 
 #: library/legacy/deprecated.php:369 library/legacy/deprecated.php:374
 msgid "<span class=\"required\">*</span>"
@@ -700,15 +700,15 @@ msgstr "<span class=\"required\">*</span>"
 #: library/legacy/legacy-template-page-fullwidth.php:50 page.php:49
 #: template-page-fullwidth.php:50
 msgid "Pages: "
-msgstr "برگه‌ها: "
+msgstr "Trang: "
 
 #: search.php:54
 msgid "Nothing Found"
-msgstr "چيزي يافت نشد"
+msgstr "Không tìm thấy"
 
 #: search.php:58
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "متأسفانه عبارت مورد جستجوي شما پيدا نشد. لطفاً جستجوي خود را با كليدواژه‌هاي ديگري تكرار كنيد."
+msgstr "Xin lỗi nhưng không tìm thấy nội dung phù hợp với từ khóa tìm kiếm của bạn. Hãy thử với một vài từ khóa khác."
 
 msgid "Thematic"
 msgstr "Thematic"
@@ -717,7 +717,7 @@ msgid "http://thematictheme.com"
 msgstr "http://thematictheme.com"
 
 msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
-msgstr "تماتیک یکی از سئو ترین تم‌هاست، به شدت توسعه پذیر است،  این چارچوب تم وردپرس دارای 13 ناحیه آماده برای ویجت‌ها، منوهای پایین افتادنی، مثال‌های طرح‌بندی مبتنی بر شبکه(grid)، یکپارچه‌سازی افزونه‌ها، کدهای میانبر برای پانوشت شما ، &amp; و بسیاری امکانات دیگر است. چارچوبی کامل و تمام‌عیار برای هر وبلاگ و نقطه‌ی شروعی برای طراحی و توسعه‌ی تم."
+msgstr "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
 
 msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
 msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
@@ -726,10 +726,10 @@ msgid "http://themeshaper.com/"
 msgstr "http://themeshaper.com/"
 
 msgid "Links Page"
-msgstr "صفحه‌ی پیوندها"
+msgstr "Trang liên kết"
 
 msgid "Archives Page"
-msgstr "صفحه بایگانی‌ها"
+msgstr "Trang lưu trữ"
 
 msgid "Full Width"
-msgstr "عرض کامل"
+msgstr "Toàn màn hình"

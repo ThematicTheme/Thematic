@@ -72,7 +72,7 @@ Added: Filters 'thematic_modernizr_handles', 'thematic_use_html5shiv' and 'thema
 Added: Filter 'thematic_available_theme_layouts'
 Added: Filter 'thematic_default_theme_layout'
 Added: Filter 'thematic_current_theme_layout'
-Added: Slovenian and Vietnamese language files
+Added: Slovenian, Croatian and Vietnamese language files
 Added: New widget Thematic Meta, showing only login/logout links
 Added: Thematic now requires WordPress version 3.6 or later
 Deprecated: thematic_create_doctype() in favor of thematic_doctype()

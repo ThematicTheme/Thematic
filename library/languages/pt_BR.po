@@ -1,483 +1,544 @@
-# Translation of Thematic 1.0.3.x in Portuguese (Brazil)
-# This file is distributed under the same license as the Thematic 1.0.3.x package.
+# Translation of Thematic 2.0 in Portuguese (Brazil)
+# This file is distributed under the same license as the Thematic 2.0 package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-03-05 17:46:55+0000\n"
+"PO-Revision-Date: 2014-04-03 13:55:09+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: Thematic 1.0.3.x\n"
+"Project-Id-Version: Thematic 2.0\n"
 
-#: library/extensions/content-extensions.php:916
-msgctxt "Default title for untitled posts"
-msgid "(Untitled)"
+#: library/extensions/comments-extensions.php:252
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes:"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1667
-msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
-msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+#: library/extensions/header-extensions.php:825
+msgctxt "Mobile navigation button"
+msgid "Menu"
 msgstr ""
 
-#: archives.php:20 template-page-blog.php:22
-msgid "The template %s"
+#: library/extensions/helpers.php:176
+msgid "Full width"
 msgstr ""
 
-#: attachment.php:54 library/extensions/content-extensions.php:630
-#: library/extensions/content-extensions.php:689
+#: library/extensions/theme-options.php:235
+msgid "The options below are enabled by the Thematic Theme and/or a child theme."
+msgstr ""
+
+#: library/extensions/widgets.php:81
+msgid "Thematic Meta"
+msgstr ""
+
+#: attachment.php:53 library/extensions/content-extensions.php:632
+#: library/extensions/content-extensions.php:691
+#: library/legacy/legacy-attachment.php:54 library/legacy/legacy.php:383
+#: library/legacy/legacy.php:425 library/legacy/legacy.php:479
+#: library/tests/test-content-extensions.php:76
+#: library/tests/test-legacy-xhtml.php:128
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
-#: author.php:67
+#: author.php:65
 msgid "Email "
 msgstr "Email"
 
 #: comments.php:24
 msgid "Please do not load this page directly."
-msgstr ""
+msgstr "Por favor, não acesse esta página diretamente."
 
-#: comments.php:33
+#: comments.php:34
 msgid "This post is password protected. Enter the password to view any comments."
-msgstr ""
+msgstr "Este post é protegido por senha. Digite a senha para ver os comentários."
 
-#: comments.php:111
+#: comments.php:113
 msgid "Trackbacks"
-msgstr ""
+msgstr "Trackbacks"
 
-#: comments.php:111
+#: comments.php:113
 msgctxt "%1$ and %2$s are <span> tags"
 msgid "%1$sOne%2$s Trackback"
-msgstr ""
+msgstr "%1$sUm%2$s Trackback"
 
-#: functions.php:194
+#: functions.php:200
 msgid "Primary Menu"
+msgstr "Menu Principal"
+
+#: library/extensions/back-compat.php:41 library/extensions/back-compat.php:53
+#: library/extensions/back-compat.php:68
+msgid "Thematic requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
 msgstr ""
 
-#: library/extensions/comments-extensions.php:120
+#: library/extensions/comments-extensions.php:124
 msgctxt "One Comment, where %$1s and %$2s are <span> tags"
 msgid "%1$sOne%2$s Comment"
-msgstr ""
+msgstr "%1$sUm%2$s Comentário"
 
-#: library/extensions/comments-extensions.php:131
+#: library/extensions/comments-extensions.php:135
 msgid "Comments"
-msgstr ""
+msgstr "Comentários"
 
-#: library/extensions/comments-extensions.php:155
+#: library/extensions/comments-extensions.php:162
 msgid "Post a Comment"
-msgstr ""
+msgstr "Postar um Comentário"
 
-#: library/extensions/comments-extensions.php:167
+#: library/extensions/comments-extensions.php:174
 msgid "Post a Reply to %s"
 msgstr "Postar uma resposta a %s"
 
-#: library/extensions/comments-extensions.php:179
+#: library/extensions/comments-extensions.php:186
 msgctxt "noun"
 msgid "Comment"
-msgstr ""
+msgstr "Comentário"
 
-#: library/extensions/comments-extensions.php:190
+#: library/extensions/comments-extensions.php:197
 msgid "Cancel reply"
-msgstr ""
+msgstr "Cancelar resposta"
 
-#: library/extensions/comments-extensions.php:202
+#: library/extensions/comments-extensions.php:209
 msgid "Post Comment"
-msgstr ""
+msgstr "Postar Comentário"
 
-#: library/extensions/comments-extensions.php:228
-#: library/legacy/deprecated.php:365
+#: library/extensions/comments-extensions.php:236
+#: library/legacy/deprecated.php:369
 msgid "Name"
 msgstr "Nome"
 
-#: library/extensions/comments-extensions.php:228
-#: library/extensions/comments-extensions.php:229
+#: library/extensions/comments-extensions.php:236
+#: library/extensions/comments-extensions.php:237
 msgctxt "denotes required field"
 msgid "*"
-msgstr ""
+msgstr "*"
 
-#: library/extensions/comments-extensions.php:229
-#: library/legacy/deprecated.php:370
+#: library/extensions/comments-extensions.php:237
+#: library/legacy/deprecated.php:374
 msgid "Email"
 msgstr "Email"
 
-#: library/extensions/comments-extensions.php:230
-#: library/legacy/deprecated.php:375
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:379
 msgid "Website"
 msgstr "Site"
 
-#: library/extensions/comments-extensions.php:238
-#: library/legacy/deprecated.php:362
+#: library/extensions/comments-extensions.php:246
+#: library/legacy/deprecated.php:366
 msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
 msgid "Your email is %1$snever%2$s published nor shared."
-msgstr ""
+msgstr "Seu e-mail %1$snunca%2$s será publicado ou compartilhado."
 
-#: library/extensions/comments-extensions.php:238
+#: library/extensions/comments-extensions.php:246
 msgctxt "%$1s and %$2s are <span> tags"
 msgid "Required fields are marked %1$s*%2$s"
-msgstr ""
+msgstr "Campos obrigatórios são marcados com %1$s*%2$s"
 
-#: library/extensions/comments-extensions.php:240
-#: library/legacy/deprecated.php:344
+#: library/extensions/comments-extensions.php:248
+#: library/legacy/deprecated.php:348
 msgid "You must be %1$slogged in%2$s to post a comment."
-msgstr ""
+msgstr "Você precisa fazer %1$slogin%2$s para postar um comentário. "
 
-#: library/extensions/comments-extensions.php:240
-#: library/legacy/deprecated.php:344
+#: library/extensions/comments-extensions.php:248
+#: library/legacy/deprecated.php:348
 msgid "Log in"
-msgstr ""
+msgstr "Login"
 
-#: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:357
+#: library/extensions/comments-extensions.php:250
+#: library/legacy/deprecated.php:361
 msgid "Logged in as %s"
-msgstr ""
+msgstr "Conectado como %s"
 
-#: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:357
+#: library/extensions/comments-extensions.php:250
+#: library/legacy/deprecated.php:361
 msgid "Log out of this account"
-msgstr ""
+msgstr "Sair desta conta"
 
-#: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:357
+#: library/extensions/comments-extensions.php:250
+#: library/legacy/deprecated.php:361
 msgid "Log out?"
-msgstr ""
+msgstr "Sair?"
 
-#: library/extensions/comments-extensions.php:244
-#: library/legacy/deprecated.php:387
+#: library/legacy/deprecated.php:391
 msgctxt "%$1s and %$2s are <abbr> tags"
 msgid "You may use these %1$sHTML%2$s tags and attributes"
-msgstr ""
+msgstr "Você pode usar as seguintes tags %1$sHTML%2$s e atributos"
 
 #: library/extensions/content-extensions.php:334
 msgid "Author Archives:"
-msgstr ""
+msgstr "Arquivos do Autor:"
 
 #: library/extensions/content-extensions.php:339
-#: library/extensions/header-extensions.php:103
+#: library/extensions/header-extensions.php:170
 msgid "Category Archives:"
 msgstr "Arquivos da categoria:"
 
-#: library/extensions/content-extensions.php:347
-#: library/extensions/header-extensions.php:99
+#: library/extensions/content-extensions.php:349
+#: library/extensions/header-extensions.php:166
 msgid "Search Results for:"
 msgstr "Resultados da busca por:"
 
-#: library/extensions/content-extensions.php:352
-#: library/extensions/header-extensions.php:107
+#: library/extensions/content-extensions.php:354
+#: library/extensions/header-extensions.php:174
 msgid "Tag Archives:"
 msgstr "Arquivos da tag:"
 
-#: library/extensions/content-extensions.php:361
-#: library/extensions/content-extensions.php:368
+#: library/extensions/content-extensions.php:363
+#: library/extensions/content-extensions.php:370
 msgid "Archives:"
-msgstr ""
+msgstr "Arquivos:"
 
-#: library/extensions/content-extensions.php:373
+#: library/extensions/content-extensions.php:375
 msgid "Daily Archives: %s"
-msgstr ""
+msgstr "Arquivos Diários: %s"
 
-#: library/extensions/content-extensions.php:377
+#: library/extensions/content-extensions.php:379
 msgid "Monthly Archives: %s"
-msgstr ""
+msgstr "Arquivos Mensais: %s"
 
-#: library/extensions/content-extensions.php:381
+#: library/extensions/content-extensions.php:383
 msgid "Yearly Archives: %s"
-msgstr ""
-
-#: library/extensions/content-extensions.php:424
-#: library/extensions/content-extensions.php:1710
-msgid "Older posts"
-msgstr ""
+msgstr "Arquivos Anuais: %s"
 
 #: library/extensions/content-extensions.php:426
-#: library/extensions/content-extensions.php:1712
-msgid "Newer posts"
-msgstr ""
+#: library/extensions/content-extensions.php:1715 library/legacy/legacy.php:256
+#: library/legacy/legacy.php:507
+msgid "Older posts"
+msgstr "Posts anteriores"
 
-#: library/extensions/content-extensions.php:888
-#: library/extensions/content-extensions.php:1422
+#: library/extensions/content-extensions.php:428
+#: library/extensions/content-extensions.php:1717 library/legacy/legacy.php:258
+#: library/legacy/legacy.php:509
+msgid "Newer posts"
+msgstr "Posts mais recentes"
+
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1425
 msgid "Edit post"
 msgstr "Editar post"
 
-#: library/extensions/content-extensions.php:890
-#: library/extensions/content-extensions.php:1424
-#: library/extensions/discussion-extensions.php:37
-#: library/extensions/discussion.php:84 links.php:52 page.php:52
-#: template-page-archives.php:55 template-page-fullwidth.php:53
+#: library/extensions/content-extensions.php:892
+#: library/extensions/content-extensions.php:1427
+#: library/extensions/discussion-extensions.php:39
+#: library/extensions/discussion.php:88 library/legacy/legacy-links.php:51
+#: library/legacy/legacy-page.php:51
+#: library/legacy/legacy-template-page-archives.php:54
+#: library/legacy/legacy-template-page-fullwidth.php:52
+#: library/legacy/legacy.php:182 links.php:51 page.php:51
+#: template-page-archives.php:54 template-page-fullwidth.php:52
 msgid "Edit"
 msgstr "Editar"
 
-#: library/extensions/content-extensions.php:921
-#: library/extensions/header-extensions.php:111
+#: library/extensions/content-extensions.php:918
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr "(Sem título)"
+
+#: library/extensions/content-extensions.php:924
+#: library/extensions/header-extensions.php:178
 msgid "Not Found"
-msgstr ""
+msgstr "Não encontrado"
 
-#: library/extensions/content-extensions.php:926
-#: library/extensions/content-extensions.php:1145
-#: library/extensions/content-extensions.php:1149
-#: library/extensions/content-extensions.php:1380
+#: library/extensions/content-extensions.php:1147
+#: library/extensions/content-extensions.php:1151
+#: library/extensions/content-extensions.php:1383
 msgid "Permalink to %s"
-msgstr ""
+msgstr "Link permanente para %s"
 
-#: library/extensions/content-extensions.php:987
+#: library/extensions/content-extensions.php:989
 msgid "By"
-msgstr ""
+msgstr "Por"
 
-#: library/extensions/content-extensions.php:998
+#: library/extensions/content-extensions.php:1000
 msgid "View all posts by %s"
-msgstr ""
+msgstr "Ver todos os posts por %s"
 
-#: library/extensions/content-extensions.php:1027
+#: library/extensions/content-extensions.php:1029
 msgid "Published:"
-msgstr ""
+msgstr "Publicado:"
 
-#: library/extensions/content-extensions.php:1203
+#: library/extensions/content-extensions.php:1206
 msgid "Archives by Category"
 msgstr "Arquivos por categoria"
 
-#: library/extensions/content-extensions.php:1234
+#: library/extensions/content-extensions.php:1237
 msgid "Archives by Month"
-msgstr ""
+msgstr "Arquivos por Mês"
 
-#: library/extensions/content-extensions.php:1295
+#: library/extensions/content-extensions.php:1298
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
-msgstr ""
+msgstr "Desculpe, mas não conseguimos encontrar o que você estava procurando. Talvez a busca o ajude."
 
-#: library/extensions/content-extensions.php:1301 search.php:70
+#: library/extensions/content-extensions.php:1304 search.php:68
 msgid "Find"
 msgstr "Procurar"
 
-#: library/extensions/content-extensions.php:1320
+#: library/extensions/content-extensions.php:1323
 msgid "Read More %s"
-msgstr ""
+msgstr "Leia Mais %s"
 
-#: library/extensions/content-extensions.php:1372
+#: library/extensions/content-extensions.php:1375
 msgid "Browse the %s archive."
-msgstr ""
+msgstr "Navegar pelo arquivo de %s."
 
-#: library/extensions/content-extensions.php:1374
+#: library/extensions/content-extensions.php:1377
 msgid "Permalink to %s Archive"
-msgstr ""
+msgstr "Link permanente para arquivo de %s"
 
-#: library/extensions/content-extensions.php:1380
+#: library/extensions/content-extensions.php:1383
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Bookmark the %1$spermalink%2$s."
-msgstr ""
+msgstr "Adicionar %1$slink permanente%2$s aos favoritos."
 
-#: library/extensions/content-extensions.php:1538
+#: library/extensions/content-extensions.php:1543
 msgid "This entry was posted in %s"
-msgstr ""
+msgstr "Este post foi publicado em %s"
 
-#: library/extensions/content-extensions.php:1549
+#: library/extensions/content-extensions.php:1554
 msgid "Also posted in %s"
-msgstr ""
+msgstr "Também publicado em %s"
 
-#: library/extensions/content-extensions.php:1553
+#: library/extensions/content-extensions.php:1558
 msgid "Posted in %s"
-msgstr ""
+msgstr "Publicado em %s"
 
-#: library/extensions/content-extensions.php:1579
+#: library/extensions/content-extensions.php:1584
 msgid "This entry is tagged"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1582
-msgid "and tagged"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1585
-msgid "Also tagged"
-msgstr ""
+msgstr "Este post é tagueado"
 
 #: library/extensions/content-extensions.php:1587
+msgid "and tagged"
+msgstr "e tagueado"
+
+#: library/extensions/content-extensions.php:1590
+msgid "Also tagged"
+msgstr "Também tageado"
+
+#: library/extensions/content-extensions.php:1592
 msgid "Tagged"
 msgstr "Com as tags"
 
-#: library/extensions/content-extensions.php:1617
-#: library/extensions/content-extensions.php:1623
+#: library/extensions/content-extensions.php:1622
+#: library/extensions/content-extensions.php:1628
 msgid "Comment on %s"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1619
-msgid "%s Response"
-msgid_plural "%s Responses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr "Comentar sobre %s"
 
 #: library/extensions/content-extensions.php:1624
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] "%s Resposta"
+msgstr[1] "%s Respostas"
+
+#: library/extensions/content-extensions.php:1629
 msgid "Leave a comment"
 msgstr "Comentar"
 
-#: library/extensions/content-extensions.php:1627
+#: library/extensions/content-extensions.php:1632
 msgid "Comments closed"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1651
-msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
-msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
-msgstr ""
-
-#: library/extensions/content-extensions.php:1652
-#: library/extensions/content-extensions.php:1667
-msgid "Post a comment"
-msgstr ""
+msgstr "Comentários fechados"
 
 #: library/extensions/content-extensions.php:1656
-#: library/extensions/content-extensions.php:1663
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
+msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
+msgstr "%1$sDeixe um comentário%2$s ou um trackback: %3$s"
+
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1672
+msgid "Post a comment"
+msgstr "Deixe um comentário"
+
+#: library/extensions/content-extensions.php:1661
+#: library/extensions/content-extensions.php:1668
 msgid "Trackback URL for your post"
 msgstr "URL pra trackback do seu post"
 
-#: library/extensions/content-extensions.php:1657
-#: library/extensions/content-extensions.php:1664
+#: library/extensions/content-extensions.php:1662
+#: library/extensions/content-extensions.php:1669
 msgid "Trackback URL"
 msgstr "URL pra trackback"
 
-#: library/extensions/content-extensions.php:1660
+#: library/extensions/content-extensions.php:1665
 msgctxt "%s is trackback url, wrapped in link tags"
 msgid "Comments are closed, but you can leave a trackback: %s"
-msgstr ""
+msgstr "Os comentários estão fechados, mas você pode deixar um trackback: %s"
 
-#: library/extensions/content-extensions.php:1669
+#: library/extensions/content-extensions.php:1672
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr "Trackbacks estão fechados, mas você pode %1$sdeixar um comentário%2$s."
+
+#: library/extensions/content-extensions.php:1674
 msgid "Both comments and trackbacks are currently closed."
+msgstr "Comentários e trackbacks estão fechados."
+
+#: library/extensions/customizer.php:54
+msgid "Layout"
 msgstr ""
 
-#: library/extensions/discussion-extensions.php:27
+#: library/extensions/customizer.php:55
+msgid "Choose the main layout of your theme"
+msgstr ""
+
+#: library/extensions/customizer.php:73
+msgid "Theme layout"
+msgstr ""
+
+#: library/extensions/helpers.php:168
+msgid "Right Sidebar"
+msgstr ""
+
+#: library/extensions/helpers.php:164
+msgid "Left Sidebar"
+msgstr ""
+
+#: library/extensions/helpers.php:172
+msgid "Three columns"
+msgstr ""
+
+#: library/extensions/customizer.php:82
+msgid "Footer"
+msgstr ""
+
+#: library/extensions/customizer.php:83
+#: library/extensions/theme-options.php:325
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr "Você pode usar HTML e shortcodes no seu texto do rodapé. Exemplo de shortcode: %s"
+
+#: library/extensions/customizer.php:97
+msgid "Footer text"
+msgstr ""
+
+#: library/extensions/discussion-extensions.php:28
+#: library/legacy/legacy.php:172
 msgctxt "Posted {$date} at {$time}"
 msgid "Posted %s at %s"
-msgstr ""
+msgstr "Publicado %s às %s"
 
-#: library/extensions/discussion-extensions.php:31
+#: library/extensions/discussion-extensions.php:33
+#: library/legacy/legacy.php:176
 msgid "Permalink to this comment"
-msgstr ""
+msgstr "Link permanente para este comentário"
 
-#: library/extensions/discussion-extensions.php:31
+#: library/extensions/discussion-extensions.php:33
+#: library/legacy/legacy.php:176
 msgid "Permalink"
-msgstr ""
+msgstr "Link Permanente"
 
-#: library/extensions/discussion-extensions.php:36
+#: library/extensions/discussion-extensions.php:38
+#: library/legacy/legacy.php:181
 msgid "Edit comment"
-msgstr ""
+msgstr "Editar comentário"
 
-#: library/extensions/discussion.php:37
+#: library/extensions/discussion.php:39 library/legacy/legacy.php:123
 msgid "Your comment is awaiting moderation"
-msgstr ""
+msgstr "Seu comentário está aguardando moderação"
 
-#: library/extensions/discussion.php:52
+#: library/extensions/discussion.php:54 library/legacy/legacy.php:138
 msgid "Reply"
 msgstr "Responder."
 
-#: library/extensions/discussion.php:53
+#: library/extensions/discussion.php:55 library/legacy/legacy.php:139
 msgid "Log in to reply."
-msgstr ""
+msgstr "Faça login para responder."
 
-#: library/extensions/discussion.php:80
+#: library/extensions/discussion.php:84
 msgctxt "By {$authorlink} on {$date} at {$time}"
 msgid "By %1$s on %2$s at %3$s"
-msgstr ""
+msgstr "Por %1$s em %2$s às %3$s"
 
-#: library/extensions/discussion.php:90
+#: library/extensions/discussion.php:94
 msgid "Your trackback is awaiting moderation"
-msgstr ""
+msgstr "Seu trackback está aguardando moderação"
 
-#: library/extensions/header-extensions.php:319
-#: library/extensions/widgets.php:157
+#: library/extensions/header-extensions.php:362
+#: library/extensions/widgets.php:139
 msgid "Posts RSS feed"
 msgstr "Feed RSS dos posts"
 
-#: library/extensions/header-extensions.php:343
-#: library/extensions/widgets.php:158
+#: library/extensions/header-extensions.php:385
+#: library/extensions/widgets.php:140
 msgid "Comments RSS feed"
-msgstr ""
+msgstr "Feed RSS de comentários"
 
-#: library/extensions/header-extensions.php:667
+#: library/extensions/header-extensions.php:826
 msgid "Skip navigation to the content"
-msgstr ""
+msgstr "Pular navegação para o conteúdo"
 
-#: library/extensions/header-extensions.php:667
+#: library/extensions/header-extensions.php:826
 msgid "Skip to content"
-msgstr ""
+msgstr "Pular para o conteúdo"
 
 #: library/extensions/helpers.php:50 library/extensions/helpers.php:69
 msgid "There is no excerpt because this is a protected post."
-msgstr ""
+msgstr "Não há resumo por ser um post protegido."
 
-#: library/extensions/theme-options.php:50
+#: library/extensions/theme-options.php:63
 msgid "Index Insert Position"
 msgstr ""
 
-#: library/extensions/theme-options.php:51
+#: library/extensions/theme-options.php:64
 msgid "Info on Author Page"
-msgstr ""
+msgstr "Informação na Página Autor"
 
-#: library/extensions/theme-options.php:52
+#: library/extensions/theme-options.php:65
 msgid "Text in Footer"
+msgstr "Texto de Rodapé"
+
+#: library/extensions/theme-options.php:74
+msgid "Restore Legacy XHTML1.0 Doctype"
 msgstr ""
 
-#: library/extensions/theme-options.php:56
+#: library/extensions/theme-options.php:79
 msgid "Remove Legacy Options"
-msgstr ""
+msgstr "Remover Opções Obsoletas"
 
-#: library/extensions/theme-options.php:170
+#: library/extensions/theme-options.php:196
 msgid "Theme Options"
-msgstr ""
+msgstr "Opções do Tema"
 
-#: library/extensions/theme-options.php:202
+#: library/extensions/theme-options.php:227
 msgid "For more information:"
-msgstr ""
+msgstr "Para mais informações:"
 
-#: library/extensions/theme-options.php:204
+#: library/extensions/theme-options.php:229
 msgid "For support:"
-msgstr ""
+msgstr "Para suporte:"
 
-#: library/extensions/theme-options.php:206
+#: library/extensions/theme-options.php:231
 msgid "forums"
-msgstr ""
+msgstr "fóruns"
 
-#: library/extensions/theme-options.php:210
-msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
-msgstr ""
-
-#: library/extensions/theme-options.php:211
+#: library/extensions/theme-options.php:236
 msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
-msgstr ""
+msgstr "Opções podem ser adicionadas ou removidas criando um tema filho. Esta ajuda contextual também pode ser customizada em um tema filho."
 
-#: library/extensions/theme-options.php:217
+#: library/extensions/theme-options.php:240
 msgid "Overview"
-msgstr ""
+msgstr "Visão Geral"
 
-#: library/extensions/theme-options.php:244
-msgctxt "%1$s and %2$s are <a> tags"
-msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
-msgstr ""
-
-#: library/extensions/theme-options.php:244
-msgctxt "%1$s and %2$s are <a> tags"
-msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
-msgstr ""
-
-#: library/extensions/theme-options.php:267
+#: library/extensions/theme-options.php:261
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options"
-msgstr ""
+msgstr "%s Opções do Tema"
 
-#: library/extensions/theme-options.php:305
+#: library/extensions/theme-options.php:299
 msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
 msgstr ""
 
-#: library/extensions/theme-options.php:318
+#: library/extensions/theme-options.php:312
 msgctxt "%1$s and %2$s are <a> tags"
 msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
+msgstr "Exibir um %1$svCard de microformatos%2$s com o avatar, biografia e e-mail na página do autor."
+
+#: library/extensions/theme-options.php:338
+msgid "Restore the legacy XHTML Doctype and xhtml compatible markup."
 msgstr ""
 
-#: library/extensions/theme-options.php:331
-msgctxt "%s are shortcode tags"
-msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
-msgstr ""
-
-#: library/extensions/theme-options.php:355
-msgctxt "{$current theme} Theme Options"
+#: library/extensions/theme-options.php:356
 msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
 msgstr ""
 
-#: library/extensions/theme-options.php:382
+#: library/extensions/theme-options.php:384
 msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
 msgstr ""
 
@@ -486,7 +547,8 @@ msgid "To search, type and hit enter"
 msgstr "Pra buscar, digite e aperte enter"
 
 #: library/extensions/widgets-extensions.php:40
-#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
+#: library/extensions/widgets.php:61 library/legacy/deprecated.php:545
+#: library/legacy/deprecated.php:550
 msgid "Search"
 msgstr "Pesquisa"
 
@@ -548,7 +610,7 @@ msgstr ""
 
 #: library/extensions/widgets-extensions.php:175
 msgid "Index Bottom"
-msgstr ""
+msgstr "Base da Home"
 
 #: library/extensions/widgets-extensions.php:177
 msgid "The bottom widget area displayed on the index page."
@@ -580,7 +642,7 @@ msgstr ""
 
 #: library/extensions/widgets-extensions.php:235
 msgid "Page Top"
-msgstr ""
+msgstr "Topo da Página"
 
 #: library/extensions/widgets-extensions.php:237
 msgid "The top widget area displayed on a page."
@@ -588,86 +650,81 @@ msgstr ""
 
 #: library/extensions/widgets-extensions.php:250
 msgid "Page Bottom"
-msgstr ""
+msgstr "Base da Página"
 
 #: library/extensions/widgets-extensions.php:252
 msgid "The bottom widget area displayed on a page."
 msgstr ""
 
-#: library/extensions/widgets.php:55
+#: library/legacy/deprecated.php:544
 msgid "A search form for your blog"
-msgstr ""
+msgstr "Um campo de busca para seu blog"
 
-#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
-#: library/extensions/widgets.php:175
+#: library/extensions/widgets.php:113 library/extensions/widgets.php:157
+#: library/legacy/deprecated.php:567
 msgid "Title:"
 msgstr ""
 
-#: library/extensions/widgets.php:100
+#: library/extensions/widgets.php:80
 msgid "Log in/out and admin"
 msgstr ""
 
-#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
+#: library/extensions/widgets.php:86
 msgid "Meta"
 msgstr "Meta"
 
-#: library/extensions/widgets.php:145
+#: library/extensions/widgets.php:126
 msgid "Links to your posts and comments feed"
 msgstr ""
 
-#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
+#: library/extensions/widgets.php:127 library/extensions/widgets.php:132
 msgid "RSS Links"
 msgstr "Links RSS"
 
-#: library/extensions/widgets.php:157
+#: library/extensions/widgets.php:139
 msgid "All posts"
 msgstr "Todos os posts"
 
-#: library/extensions/widgets.php:158
+#: library/extensions/widgets.php:140
 msgid "All comments"
-msgstr ""
+msgstr "Todos os comentários"
 
-#: library/legacy/deprecated.php:357
+#: library/legacy/deprecated.php:361
 msgid "Logged in as"
 msgstr ""
 
-#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
+#: library/legacy/deprecated.php:369 library/legacy/deprecated.php:374
 msgid "<span class=\"required\">*</span>"
 msgstr "<span class=\"required\">*</span>"
 
-#: page.php:50 template-page-fullwidth.php:51
+#: library/legacy/legacy-page.php:49
+#: library/legacy/legacy-template-page-fullwidth.php:50 page.php:49
+#: template-page-fullwidth.php:50
 msgid "Pages: "
-msgstr ""
+msgstr "Páginas:"
 
-#: search.php:56
+#: search.php:54
 msgid "Nothing Found"
 msgstr "Nada encontrado"
 
-#: search.php:60
+#: search.php:58
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr ""
-
-#: template-page-blog.php:22
-msgid "You can include a %s in a childtheme"
 msgstr ""
 
 msgid "Thematic"
 msgstr ""
 
 msgid "http://thematictheme.com"
-msgstr ""
+msgstr "http://thematictheme.com"
 
 msgid "The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, drop-down menus, grid-based layout samples, plugin integration, shortcodes for your footer, &amp; a whole lot more. Perfect for any blog and <strong><em>the</em></strong> starting point for theme development."
 msgstr ""
 
 msgid "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
-msgstr ""
+msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http://thematic4you.com/\">Chris Go&szlig;mann</a>"
 
 msgid "http://themeshaper.com/"
-msgstr ""
-
-msgid "Deprecated Archives Template"
-msgstr ""
+msgstr "http://themeshaper.com/"
 
 msgid "Links Page"
 msgstr ""
@@ -675,8 +732,5 @@ msgstr ""
 msgid "Archives Page"
 msgstr ""
 
-msgid "Deprecated Blog Template"
-msgstr ""
-
 msgid "Full Width"
-msgstr ""
+msgstr "Largura Total"

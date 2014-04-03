@@ -1,35 +1,47 @@
-# Translation of Thematic 1.0.3.x in Japanese
-# This file is distributed under the same license as the Thematic 1.0.3.x package.
+# Translation of Thematic 2.0 in Japanese
+# This file is distributed under the same license as the Thematic 2.0 package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2013-03-05 17:46:46+0000\n"
+"PO-Revision-Date: 2014-04-03 13:54:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: Thematic 1.0.3.x\n"
+"Project-Id-Version: Thematic 2.0\n"
 
-#: library/extensions/content-extensions.php:916
-msgctxt "Default title for untitled posts"
-msgid "(Untitled)"
+#: library/extensions/comments-extensions.php:252
+msgctxt "%$1s and %$2s are <abbr> tags"
+msgid "You may use these %1$sHTML%2$s tags and attributes:"
 msgstr ""
 
-#: library/extensions/content-extensions.php:1667
-msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
-msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+#: library/extensions/header-extensions.php:825
+msgctxt "Mobile navigation button"
+msgid "Menu"
 msgstr ""
 
-#: archives.php:20 template-page-blog.php:22
-msgid "The template %s"
-msgstr "テンプレート %s"
+#: library/extensions/helpers.php:176
+msgid "Full width"
+msgstr ""
 
-#: attachment.php:54 library/extensions/content-extensions.php:630
-#: library/extensions/content-extensions.php:689
+#: library/extensions/theme-options.php:235
+msgid "The options below are enabled by the Thematic Theme and/or a child theme."
+msgstr ""
+
+#: library/extensions/widgets.php:81
+msgid "Thematic Meta"
+msgstr ""
+
+#: attachment.php:53 library/extensions/content-extensions.php:632
+#: library/extensions/content-extensions.php:691
+#: library/legacy/legacy-attachment.php:54 library/legacy/legacy.php:383
+#: library/legacy/legacy.php:425 library/legacy/legacy.php:479
+#: library/tests/test-content-extensions.php:76
+#: library/tests/test-legacy-xhtml.php:128
 msgid "Pages:"
 msgstr "ページ:"
 
-#: author.php:67
+#: author.php:65
 msgid "Email "
 msgstr "メールアドレス"
 
@@ -37,112 +49,116 @@ msgstr "メールアドレス"
 msgid "Please do not load this page directly."
 msgstr "このページを直接読み込まないでください。"
 
-#: comments.php:33
+#: comments.php:34
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "この投稿はパスワードで保護されています。コメントを閲覧するにはパスワードを入力してください。"
 
-#: comments.php:111
+#: comments.php:113
 msgid "Trackbacks"
 msgstr "トラックバック"
 
-#: comments.php:111
+#: comments.php:113
 msgctxt "%1$ and %2$s are <span> tags"
 msgid "%1$sOne%2$s Trackback"
 msgstr "トラックバック: %1$s1%2$s件"
 
-#: functions.php:194
+#: functions.php:200
 msgid "Primary Menu"
 msgstr "プライマリーメニュー"
 
-#: library/extensions/comments-extensions.php:120
+#: library/extensions/back-compat.php:41 library/extensions/back-compat.php:53
+#: library/extensions/back-compat.php:68
+msgid "Thematic requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
+msgstr ""
+
+#: library/extensions/comments-extensions.php:124
 msgctxt "One Comment, where %$1s and %$2s are <span> tags"
 msgid "%1$sOne%2$s Comment"
 msgstr "コメント: %1$s1%2$s 件"
 
-#: library/extensions/comments-extensions.php:131
+#: library/extensions/comments-extensions.php:135
 msgid "Comments"
 msgstr "コメント"
 
-#: library/extensions/comments-extensions.php:155
+#: library/extensions/comments-extensions.php:162
 msgid "Post a Comment"
 msgstr "コメントする"
 
-#: library/extensions/comments-extensions.php:167
+#: library/extensions/comments-extensions.php:174
 msgid "Post a Reply to %s"
 msgstr "%s への返信"
 
-#: library/extensions/comments-extensions.php:179
+#: library/extensions/comments-extensions.php:186
 msgctxt "noun"
 msgid "Comment"
 msgstr "コメント"
 
-#: library/extensions/comments-extensions.php:190
+#: library/extensions/comments-extensions.php:197
 msgid "Cancel reply"
 msgstr "コメントをキャンセル"
 
-#: library/extensions/comments-extensions.php:202
+#: library/extensions/comments-extensions.php:209
 msgid "Post Comment"
 msgstr "コメント送信"
 
-#: library/extensions/comments-extensions.php:228
-#: library/legacy/deprecated.php:365
+#: library/extensions/comments-extensions.php:236
+#: library/legacy/deprecated.php:369
 msgid "Name"
 msgstr "名前"
 
-#: library/extensions/comments-extensions.php:228
-#: library/extensions/comments-extensions.php:229
+#: library/extensions/comments-extensions.php:236
+#: library/extensions/comments-extensions.php:237
 msgctxt "denotes required field"
 msgid "*"
 msgstr "*"
 
-#: library/extensions/comments-extensions.php:229
-#: library/legacy/deprecated.php:370
+#: library/extensions/comments-extensions.php:237
+#: library/legacy/deprecated.php:374
 msgid "Email"
 msgstr "メールアドレス"
 
-#: library/extensions/comments-extensions.php:230
-#: library/legacy/deprecated.php:375
+#: library/extensions/comments-extensions.php:238
+#: library/legacy/deprecated.php:379
 msgid "Website"
 msgstr "ウェブサイト"
 
-#: library/extensions/comments-extensions.php:238
-#: library/legacy/deprecated.php:362
+#: library/extensions/comments-extensions.php:246
+#: library/legacy/deprecated.php:366
 msgctxt "%$1s and %$2s are <em> tags for emphasis on never"
 msgid "Your email is %1$snever%2$s published nor shared."
 msgstr "あなたのメールは <em>絶対に</em> 公開されたり共有されたりしません。"
 
-#: library/extensions/comments-extensions.php:238
+#: library/extensions/comments-extensions.php:246
 msgctxt "%$1s and %$2s are <span> tags"
 msgid "Required fields are marked %1$s*%2$s"
 msgstr "%1$s*%2$s が付いている欄は必須項目です"
 
-#: library/extensions/comments-extensions.php:240
-#: library/legacy/deprecated.php:344
+#: library/extensions/comments-extensions.php:248
+#: library/legacy/deprecated.php:348
 msgid "You must be %1$slogged in%2$s to post a comment."
 msgstr "コメントを投稿するために%1$sログイン%2$sする必要があります。"
 
-#: library/extensions/comments-extensions.php:240
-#: library/legacy/deprecated.php:344
+#: library/extensions/comments-extensions.php:248
+#: library/legacy/deprecated.php:348
 msgid "Log in"
 msgstr "ログイン"
 
-#: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:357
+#: library/extensions/comments-extensions.php:250
+#: library/legacy/deprecated.php:361
 msgid "Logged in as %s"
 msgstr "%sとしてログイン済"
 
-#: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:357
+#: library/extensions/comments-extensions.php:250
+#: library/legacy/deprecated.php:361
 msgid "Log out of this account"
 msgstr "このアカウントからログアウトする"
 
-#: library/extensions/comments-extensions.php:242
-#: library/legacy/deprecated.php:357
+#: library/extensions/comments-extensions.php:250
+#: library/legacy/deprecated.php:361
 msgid "Log out?"
 msgstr "ログアウト ?"
 
-#: library/extensions/comments-extensions.php:244
-#: library/legacy/deprecated.php:387
+#: library/legacy/deprecated.php:391
 msgctxt "%$1s and %$2s are <abbr> tags"
 msgid "You may use these %1$sHTML%2$s tags and attributes"
 msgstr "次の %1$sHTML%2$s タグと属性が使用できます:"
@@ -152,245 +168,302 @@ msgid "Author Archives:"
 msgstr "投稿者アーカイブ: "
 
 #: library/extensions/content-extensions.php:339
-#: library/extensions/header-extensions.php:103
+#: library/extensions/header-extensions.php:170
 msgid "Category Archives:"
 msgstr "カテゴリーアーカイブ:"
 
-#: library/extensions/content-extensions.php:347
-#: library/extensions/header-extensions.php:99
+#: library/extensions/content-extensions.php:349
+#: library/extensions/header-extensions.php:166
 msgid "Search Results for:"
 msgstr "検索結果:"
 
-#: library/extensions/content-extensions.php:352
-#: library/extensions/header-extensions.php:107
+#: library/extensions/content-extensions.php:354
+#: library/extensions/header-extensions.php:174
 msgid "Tag Archives:"
 msgstr "タグアーカイブ:"
 
-#: library/extensions/content-extensions.php:361
-#: library/extensions/content-extensions.php:368
+#: library/extensions/content-extensions.php:363
+#: library/extensions/content-extensions.php:370
 msgid "Archives:"
 msgstr "アーカイブ:"
 
-#: library/extensions/content-extensions.php:373
+#: library/extensions/content-extensions.php:375
 msgid "Daily Archives: %s"
 msgstr "日付別アーカイブ: %s"
 
-#: library/extensions/content-extensions.php:377
+#: library/extensions/content-extensions.php:379
 msgid "Monthly Archives: %s"
 msgstr "月別アーカイブ: %s"
 
-#: library/extensions/content-extensions.php:381
+#: library/extensions/content-extensions.php:383
 msgid "Yearly Archives: %s"
 msgstr "年別アーカイブ: %s"
 
-#: library/extensions/content-extensions.php:424
-#: library/extensions/content-extensions.php:1710
+#: library/extensions/content-extensions.php:426
+#: library/extensions/content-extensions.php:1715 library/legacy/legacy.php:256
+#: library/legacy/legacy.php:507
 msgid "Older posts"
 msgstr "古い記事へ"
 
-#: library/extensions/content-extensions.php:426
-#: library/extensions/content-extensions.php:1712
+#: library/extensions/content-extensions.php:428
+#: library/extensions/content-extensions.php:1717 library/legacy/legacy.php:258
+#: library/legacy/legacy.php:509
 msgid "Newer posts"
 msgstr "新しい記事へ"
 
-#: library/extensions/content-extensions.php:888
-#: library/extensions/content-extensions.php:1422
+#: library/extensions/content-extensions.php:890
+#: library/extensions/content-extensions.php:1425
 msgid "Edit post"
 msgstr "投稿を編集"
 
-#: library/extensions/content-extensions.php:890
-#: library/extensions/content-extensions.php:1424
-#: library/extensions/discussion-extensions.php:37
-#: library/extensions/discussion.php:84 links.php:52 page.php:52
-#: template-page-archives.php:55 template-page-fullwidth.php:53
+#: library/extensions/content-extensions.php:892
+#: library/extensions/content-extensions.php:1427
+#: library/extensions/discussion-extensions.php:39
+#: library/extensions/discussion.php:88 library/legacy/legacy-links.php:51
+#: library/legacy/legacy-page.php:51
+#: library/legacy/legacy-template-page-archives.php:54
+#: library/legacy/legacy-template-page-fullwidth.php:52
+#: library/legacy/legacy.php:182 links.php:51 page.php:51
+#: template-page-archives.php:54 template-page-fullwidth.php:52
 msgid "Edit"
 msgstr "編集"
 
-#: library/extensions/content-extensions.php:921
-#: library/extensions/header-extensions.php:111
+#: library/extensions/content-extensions.php:918
+msgctxt "Default title for untitled posts"
+msgid "(Untitled)"
+msgstr "(タイトル未定)"
+
+#: library/extensions/content-extensions.php:924
+#: library/extensions/header-extensions.php:178
 msgid "Not Found"
 msgstr "見つかりませんでした。"
 
-#: library/extensions/content-extensions.php:926
-#: library/extensions/content-extensions.php:1145
-#: library/extensions/content-extensions.php:1149
-#: library/extensions/content-extensions.php:1380
+#: library/extensions/content-extensions.php:1147
+#: library/extensions/content-extensions.php:1151
+#: library/extensions/content-extensions.php:1383
 msgid "Permalink to %s"
 msgstr "%s へのパーマリンク"
 
-#: library/extensions/content-extensions.php:987
+#: library/extensions/content-extensions.php:989
 msgid "By"
 msgstr "投稿者: "
 
-#: library/extensions/content-extensions.php:998
+#: library/extensions/content-extensions.php:1000
 msgid "View all posts by %s"
 msgstr "%s のすべての投稿を見る"
 
-#: library/extensions/content-extensions.php:1027
+#: library/extensions/content-extensions.php:1029
 msgid "Published:"
 msgstr "公開日:"
 
-#: library/extensions/content-extensions.php:1203
+#: library/extensions/content-extensions.php:1206
 msgid "Archives by Category"
 msgstr "カテゴリー別アーカイブ"
 
-#: library/extensions/content-extensions.php:1234
+#: library/extensions/content-extensions.php:1237
 msgid "Archives by Month"
 msgstr "月別アーカイブ"
 
-#: library/extensions/content-extensions.php:1295
+#: library/extensions/content-extensions.php:1298
 msgid "Apologies, but we were unable to find what you were looking for. Perhaps searching will help."
 msgstr "すみませんが、お探しのもは見つかりませんでした。もしかしたら検索がお役に立つかもしれません。"
 
-#: library/extensions/content-extensions.php:1301 search.php:70
+#: library/extensions/content-extensions.php:1304 search.php:68
 msgid "Find"
 msgstr "検索"
 
-#: library/extensions/content-extensions.php:1320
+#: library/extensions/content-extensions.php:1323
 msgid "Read More %s"
 msgstr " %s をもっと見る "
 
-#: library/extensions/content-extensions.php:1372
+#: library/extensions/content-extensions.php:1375
 msgid "Browse the %s archive."
 msgstr "%s アーカイブを閲覧する。"
 
-#: library/extensions/content-extensions.php:1374
+#: library/extensions/content-extensions.php:1377
 msgid "Permalink to %s Archive"
 msgstr "%s アーカイブへのパーマリンク"
 
-#: library/extensions/content-extensions.php:1380
+#: library/extensions/content-extensions.php:1383
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
 msgid "Bookmark the %1$spermalink%2$s."
 msgstr "この%1$sパーマリンク%2$sをブックマークする。"
 
-#: library/extensions/content-extensions.php:1538
+#: library/extensions/content-extensions.php:1543
 msgid "This entry was posted in %s"
 msgstr "この記事は%sに投稿されました"
 
-#: library/extensions/content-extensions.php:1549
+#: library/extensions/content-extensions.php:1554
 msgid "Also posted in %s"
 msgstr "また、%sのカテゴリーに属しています"
 
-#: library/extensions/content-extensions.php:1553
+#: library/extensions/content-extensions.php:1558
 msgid "Posted in %s"
 msgstr "カテゴリー: %s"
 
-#: library/extensions/content-extensions.php:1579
+#: library/extensions/content-extensions.php:1584
 msgid "This entry is tagged"
 msgstr "この投稿のタグは"
 
-#: library/extensions/content-extensions.php:1582
+#: library/extensions/content-extensions.php:1587
 msgid "and tagged"
 msgstr "タグ: "
 
-#: library/extensions/content-extensions.php:1585
+#: library/extensions/content-extensions.php:1590
 msgid "Also tagged"
 msgstr "タグ:"
 
-#: library/extensions/content-extensions.php:1587
+#: library/extensions/content-extensions.php:1592
 msgid "Tagged"
 msgstr "タグ: "
 
-#: library/extensions/content-extensions.php:1617
-#: library/extensions/content-extensions.php:1623
+#: library/extensions/content-extensions.php:1622
+#: library/extensions/content-extensions.php:1628
 msgid "Comment on %s"
 msgstr "%s へのコメント"
 
-#: library/extensions/content-extensions.php:1619
+#: library/extensions/content-extensions.php:1624
 msgid "%s Response"
 msgid_plural "%s Responses"
 msgstr[0] "コメント: %s 件"
 
-#: library/extensions/content-extensions.php:1624
+#: library/extensions/content-extensions.php:1629
 msgid "Leave a comment"
 msgstr "コメント / トラックバック: 0個"
 
-#: library/extensions/content-extensions.php:1627
+#: library/extensions/content-extensions.php:1632
 msgid "Comments closed"
 msgstr "コメントは受け付けていません。"
 
-#: library/extensions/content-extensions.php:1651
+#: library/extensions/content-extensions.php:1656
 msgctxt "1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url."
 msgid "%1$sPost a comment%2$s or leave a trackback: %3$s"
 msgstr "%1$sコメントを投稿する%2$sか、トラックバックをどうぞ: %3$s"
 
-#: library/extensions/content-extensions.php:1652
-#: library/extensions/content-extensions.php:1667
+#: library/extensions/content-extensions.php:1657
+#: library/extensions/content-extensions.php:1672
 msgid "Post a comment"
 msgstr "コメント"
 
-#: library/extensions/content-extensions.php:1656
-#: library/extensions/content-extensions.php:1663
+#: library/extensions/content-extensions.php:1661
+#: library/extensions/content-extensions.php:1668
 msgid "Trackback URL for your post"
 msgstr "トラックバック用の URL"
 
-#: library/extensions/content-extensions.php:1657
-#: library/extensions/content-extensions.php:1664
+#: library/extensions/content-extensions.php:1662
+#: library/extensions/content-extensions.php:1669
 msgid "Trackback URL"
 msgstr "トラックバック URL"
 
-#: library/extensions/content-extensions.php:1660
+#: library/extensions/content-extensions.php:1665
 msgctxt "%s is trackback url, wrapped in link tags"
 msgid "Comments are closed, but you can leave a trackback: %s"
 msgstr "コメントは受け付けていませんが、次の URL へトラックバックを残せます: %s"
 
-#: library/extensions/content-extensions.php:1669
+#: library/extensions/content-extensions.php:1672
+msgctxt "1s and 2s are the a href link wrappers, do not reverse them"
+msgid "Trackbacks are closed, but you can %1$spost a comment%2$s."
+msgstr "トラックバックは受け付けていませんが、%1$sコメントを投稿することができます%2$s。"
+
+#: library/extensions/content-extensions.php:1674
 msgid "Both comments and trackbacks are currently closed."
 msgstr "コメントとトラックバックは現在受け付けていません。"
 
-#: library/extensions/discussion-extensions.php:27
+#: library/extensions/customizer.php:54
+msgid "Layout"
+msgstr ""
+
+#: library/extensions/customizer.php:55
+msgid "Choose the main layout of your theme"
+msgstr ""
+
+#: library/extensions/customizer.php:73
+msgid "Theme layout"
+msgstr ""
+
+#: library/extensions/helpers.php:168
+msgid "Right Sidebar"
+msgstr ""
+
+#: library/extensions/helpers.php:164
+msgid "Left Sidebar"
+msgstr ""
+
+#: library/extensions/helpers.php:172
+msgid "Three columns"
+msgstr ""
+
+#: library/extensions/customizer.php:82
+msgid "Footer"
+msgstr ""
+
+#: library/extensions/customizer.php:83
+#: library/extensions/theme-options.php:325
+msgctxt "%s are shortcode tags"
+msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
+msgstr "フッターテキストには HTML やショートコードが利用できます。ショートコード例: %s"
+
+#: library/extensions/customizer.php:97
+msgid "Footer text"
+msgstr ""
+
+#: library/extensions/discussion-extensions.php:28
+#: library/legacy/legacy.php:172
 msgctxt "Posted {$date} at {$time}"
 msgid "Posted %s at %s"
 msgstr "公開日時: %s - %s"
 
-#: library/extensions/discussion-extensions.php:31
+#: library/extensions/discussion-extensions.php:33
+#: library/legacy/legacy.php:176
 msgid "Permalink to this comment"
 msgstr "このコメントのパーマリンク"
 
-#: library/extensions/discussion-extensions.php:31
+#: library/extensions/discussion-extensions.php:33
+#: library/legacy/legacy.php:176
 msgid "Permalink"
 msgstr "パーマリンク"
 
-#: library/extensions/discussion-extensions.php:36
+#: library/extensions/discussion-extensions.php:38
+#: library/legacy/legacy.php:181
 msgid "Edit comment"
 msgstr "コメント編集"
 
-#: library/extensions/discussion.php:37
+#: library/extensions/discussion.php:39 library/legacy/legacy.php:123
 msgid "Your comment is awaiting moderation"
 msgstr "あなたのコメントは管理者の承認待ちです。"
 
-#: library/extensions/discussion.php:52
+#: library/extensions/discussion.php:54 library/legacy/legacy.php:138
 msgid "Reply"
 msgstr "返信"
 
-#: library/extensions/discussion.php:53
+#: library/extensions/discussion.php:55 library/legacy/legacy.php:139
 msgid "Log in to reply."
 msgstr "返信するにはログインしてください。"
 
-#: library/extensions/discussion.php:80
+#: library/extensions/discussion.php:84
 msgctxt "By {$authorlink} on {$date} at {$time}"
 msgid "By %1$s on %2$s at %3$s"
 msgstr "投稿者: %1$s 日時: %2$s - %3$s"
 
-#: library/extensions/discussion.php:90
+#: library/extensions/discussion.php:94
 msgid "Your trackback is awaiting moderation"
 msgstr "あなたのトラックバックは管理者の承認待ちです。"
 
-#: library/extensions/header-extensions.php:319
-#: library/extensions/widgets.php:157
+#: library/extensions/header-extensions.php:362
+#: library/extensions/widgets.php:139
 msgid "Posts RSS feed"
 msgstr "投稿の RSS フィード"
 
-#: library/extensions/header-extensions.php:343
-#: library/extensions/widgets.php:158
+#: library/extensions/header-extensions.php:385
+#: library/extensions/widgets.php:140
 msgid "Comments RSS feed"
 msgstr "コメントの RSS フィード"
 
-#: library/extensions/header-extensions.php:667
+#: library/extensions/header-extensions.php:826
 msgid "Skip navigation to the content"
 msgstr "ナビゲーションを飛ばしてコンテンツへ"
 
-#: library/extensions/header-extensions.php:667
+#: library/extensions/header-extensions.php:826
 msgid "Skip to content"
 msgstr "コンテンツへ"
 
@@ -398,85 +471,73 @@ msgstr "コンテンツへ"
 msgid "There is no excerpt because this is a protected post."
 msgstr "この投稿は保護されているので抜粋文はありません。"
 
-#: library/extensions/theme-options.php:50
+#: library/extensions/theme-options.php:63
 msgid "Index Insert Position"
 msgstr "インデックス挿入位置"
 
-#: library/extensions/theme-options.php:51
+#: library/extensions/theme-options.php:64
 msgid "Info on Author Page"
 msgstr "投稿者ページの情報"
 
-#: library/extensions/theme-options.php:52
+#: library/extensions/theme-options.php:65
 msgid "Text in Footer"
 msgstr "フッターのテキスト"
 
-#: library/extensions/theme-options.php:56
+#: library/extensions/theme-options.php:74
+msgid "Restore Legacy XHTML1.0 Doctype"
+msgstr ""
+
+#: library/extensions/theme-options.php:79
 msgid "Remove Legacy Options"
 msgstr "レガシーなオプションを削除"
 
-#: library/extensions/theme-options.php:170
+#: library/extensions/theme-options.php:196
 msgid "Theme Options"
 msgstr "テーマオプション"
 
-#: library/extensions/theme-options.php:202
+#: library/extensions/theme-options.php:227
 msgid "For more information:"
 msgstr "詳細情報:"
 
-#: library/extensions/theme-options.php:204
+#: library/extensions/theme-options.php:229
 msgid "For support:"
 msgstr "サポート:"
 
-#: library/extensions/theme-options.php:206
+#: library/extensions/theme-options.php:231
 msgid "forums"
 msgstr "フォーラム"
 
-#: library/extensions/theme-options.php:210
-msgid "The options below are enabled by the Thematic Theme framework and/or a child theme."
-msgstr "以下のオプションは Thematic テーマフレームワークもしくはその子テーマによって有効化されました。"
-
-#: library/extensions/theme-options.php:211
+#: library/extensions/theme-options.php:236
 msgid "New options can be added and the default ones removed by creating a child theme. This contextual help can be customized in a child theme also."
 msgstr "子テーマを作成すると新しいオプションの追加やデフォルトのオプションの削除ができます。このヘルプテキストも子テーマでカスタマイズ可能です。"
 
-#: library/extensions/theme-options.php:217
+#: library/extensions/theme-options.php:240
 msgid "Overview"
 msgstr "概要"
 
-#: library/extensions/theme-options.php:244
-msgctxt "%1$s and %2$s are <a> tags"
-msgid "For more information about this theme, %1$svisit ThematicTheme.com%2$s"
-msgstr "このテーマに関する詳細は %1$sThematicTheme.comをご覧ください%2$s。"
-
-#: library/extensions/theme-options.php:244
-msgctxt "%1$s and %2$s are <a> tags"
-msgid "Please visit the %1$sThematicTheme.com Forums%2$s if you have any questions about Thematic."
-msgstr "Thematic に関してご質問があれば、%1$sThematicTheme.com フォーラム%2$sへお願いします。"
-
-#: library/extensions/theme-options.php:267
+#: library/extensions/theme-options.php:261
 msgctxt "{$current theme} Theme Options"
 msgid "%s Theme Options"
 msgstr "%s テーマオプション"
 
-#: library/extensions/theme-options.php:305
+#: library/extensions/theme-options.php:299
 msgid "The Index Insert widget area will appear after this post number. Entering nothing or 0 will disable this feature."
 msgstr "インデックスに挿入されるウィジェットはこの投稿数の後に表示されます。空欄のままか0を入力するとこの機能は無効になります。"
 
-#: library/extensions/theme-options.php:318
+#: library/extensions/theme-options.php:312
 msgctxt "%1$s and %2$s are <a> tags"
 msgid "Display a %1$smicroformatted vCard%2$s with the author's avatar, bio and email on the author page."
 msgstr "投稿者のページに %1$smicroformatted vCard%2$sと、投稿者のアバター、略歴、メールアドレスを表示する。"
 
-#: library/extensions/theme-options.php:331
-msgctxt "%s are shortcode tags"
-msgid "You can use HTML and shortcodes in your footer text. Shortcode examples: %s"
-msgstr "フッターテキストには HTML やショートコードが利用できます。ショートコード例: %s"
+#: library/extensions/theme-options.php:338
+msgid "Restore the legacy XHTML Doctype and xhtml compatible markup."
+msgstr ""
 
-#: library/extensions/theme-options.php:355
-msgctxt "{$current theme} Theme Options"
+#: library/extensions/theme-options.php:356
 msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
-msgstr "%s 個の テーマオプションが改善されたフォーマットにアップグレードされました。データベースからレガシーなオプションが削除されました。"
+msgstr ""
 
-#: library/extensions/theme-options.php:382
+#: library/extensions/theme-options.php:384
 msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
 msgstr "このインデックス挿入位置の値は0以上の数字を入力してください。この設定は前の値に戻されました。"
 
@@ -485,7 +546,8 @@ msgid "To search, type and hit enter"
 msgstr "検索語句を入力してください。"
 
 #: library/extensions/widgets-extensions.php:40
-#: library/extensions/widgets.php:56 library/extensions/widgets.php:61
+#: library/extensions/widgets.php:61 library/legacy/deprecated.php:545
+#: library/legacy/deprecated.php:550
 msgid "Search"
 msgstr "検索"
 
@@ -593,62 +655,60 @@ msgstr "固定ページ下"
 msgid "The bottom widget area displayed on a page."
 msgstr "固定ページの一番下に表示されるウィジェットエリア。"
 
-#: library/extensions/widgets.php:55
+#: library/legacy/deprecated.php:544
 msgid "A search form for your blog"
 msgstr "サイトの検索フォーム"
 
-#: library/extensions/widgets.php:77 library/extensions/widgets.php:132
-#: library/extensions/widgets.php:175
+#: library/extensions/widgets.php:113 library/extensions/widgets.php:157
+#: library/legacy/deprecated.php:567
 msgid "Title:"
 msgstr "タイトル:"
 
-#: library/extensions/widgets.php:100
+#: library/extensions/widgets.php:80
 msgid "Log in/out and admin"
 msgstr "ログイン、ログアウトとサイト管理"
 
-#: library/extensions/widgets.php:101 library/extensions/widgets.php:106
+#: library/extensions/widgets.php:86
 msgid "Meta"
 msgstr "メタ情報"
 
-#: library/extensions/widgets.php:145
+#: library/extensions/widgets.php:126
 msgid "Links to your posts and comments feed"
 msgstr "投稿とコメントフィードへのリンク"
 
-#: library/extensions/widgets.php:146 library/extensions/widgets.php:151
+#: library/extensions/widgets.php:127 library/extensions/widgets.php:132
 msgid "RSS Links"
 msgstr "RSS リンク"
 
-#: library/extensions/widgets.php:157
+#: library/extensions/widgets.php:139
 msgid "All posts"
 msgstr "すべての投稿"
 
-#: library/extensions/widgets.php:158
+#: library/extensions/widgets.php:140
 msgid "All comments"
 msgstr "すべてのコメント"
 
-#: library/legacy/deprecated.php:357
+#: library/legacy/deprecated.php:361
 msgid "Logged in as"
 msgstr "ログイン済: "
 
-#: library/legacy/deprecated.php:365 library/legacy/deprecated.php:370
+#: library/legacy/deprecated.php:369 library/legacy/deprecated.php:374
 msgid "<span class=\"required\">*</span>"
 msgstr "<span class=\"required\">*</span>"
 
-#: page.php:50 template-page-fullwidth.php:51
+#: library/legacy/legacy-page.php:49
+#: library/legacy/legacy-template-page-fullwidth.php:50 page.php:49
+#: template-page-fullwidth.php:50
 msgid "Pages: "
 msgstr "ページ:"
 
-#: search.php:56
+#: search.php:54
 msgid "Nothing Found"
 msgstr "リンクが見つかりませんでした。"
 
-#: search.php:60
+#: search.php:58
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "検索語句に該当する投稿/ページは見つかりませんでした。別のキーワードをお試しください。"
-
-#: template-page-blog.php:22
-msgid "You can include a %s in a childtheme"
-msgstr "子テーマに %s を含めることができます。"
 
 msgid "Thematic"
 msgstr "Thematic"
@@ -665,17 +725,11 @@ msgstr "<a href=\"http://themeshaper.com/\">Ian Stewart</a> &amp; <a href=\"http
 msgid "http://themeshaper.com/"
 msgstr "http://themeshaper.com/"
 
-msgid "Deprecated Archives Template"
-msgstr "非推奨のアーカイブテンプレート"
-
 msgid "Links Page"
 msgstr "リンクのページ"
 
 msgid "Archives Page"
 msgstr "アーカイブページ"
-
-msgid "Deprecated Blog Template"
-msgstr "非推奨のブログテンプレート"
 
 msgid "Full Width"
 msgstr "全幅テンプレート"
