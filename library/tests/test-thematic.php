@@ -56,7 +56,7 @@ class Thematic_UnitTestCase extends WP_UnitTestCase {
 
 
 	function test_active_theme() {
-	    $this->assertTrue( 'Thematic' == get_current_theme() );
+	    $this->assertTrue( 'Thematic' == wp_get_theme() );
 	}
 	
 	
