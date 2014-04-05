@@ -42,13 +42,9 @@ function thematic_customize_register( $wp_customize ) {
 	$thematic_defaults = thematic_default_opt();
 	$thematic_default_footertext = $thematic_defaults['footer_txt'];
 	$thematic_default_layout = $thematic_defaults['layout'];
-		
-	/**
-	 * Filter to show or hide the layout section from the Theme Customizer
-	 * 
-	 * @param bool true Default is showing the section
-	 */
-	if( apply_filters( 'thematic_show_customizer_layoutsection', true ) && !thematic_is_legacy_xhtml() ) {
+
+	// Only show the layout section if the theme supports it
+	if( current_theme_supports('thematic_customizer_layout') ) {
 		
 		$wp_customize->add_section( 'thematic_layout', array(
 			'title'       => __( 'Layout', 'thematic' ),
@@ -99,7 +95,7 @@ function thematic_customize_register( $wp_customize ) {
 		'type'			=> 'textarea',
 		'settings'		=> 'thematic_theme_opt[footer_txt]'
 	) ) );
-	
+
 }
 add_action( 'customize_register', 'thematic_customize_register' );
 

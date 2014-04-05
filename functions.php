@@ -105,6 +105,11 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 			require_once ( THEMATIC_LIB . '/legacy/legacy.php' );
 		}
 		
+		// Add the customizer layout section by default on html5 sites
+		if( !thematic_is_legacy_xhtml() ) {
+			add_theme_support('thematic_customizer_layout');
+		}
+
 		// Load widgets
 		require_once ( THEMATIC_LIB . '/extensions/widgets.php' );
 
