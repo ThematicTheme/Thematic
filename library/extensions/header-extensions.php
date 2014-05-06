@@ -510,6 +510,7 @@ function thematic_create_stylesheet() {
 	 */
 	$childtheme_style_dependencies = apply_filters( 'thematic_childtheme_style_dependencies', $childtheme_style_dependencies );
 	
+	wp_register_style( 'thematic-legacy', get_template_directory_uri() . '/library/css/legacy.css', array(), $template->Version );
 	wp_register_style( 'genericons', get_template_directory_uri() . '/library/css/genericons.css', array(), '3.0.2' );
 	wp_register_style( 'thematic-main', get_template_directory_uri() . '/library/css/main.css', array(), $template->Version );
 	

@@ -153,12 +153,19 @@ function thematic_comments_xhtml($comment, $args, $depth) {
 
 
 /**
- *  Remove style dependencies from legacy child stylesheet 
+ *  Specify style dependencies when legacy mode is activated
  *  
  *  @since 2.0
  */
 function thematic_legacy_style_dependency( $dependencies ) {
-	return array( );
+
+	$theme = wp_get_theme();
+	$template = wp_get_theme( 'thematic' );
+
+	// enqueue legacy stylesheet when Thematic is used as active theme
+	$childtheme_style_dependencies = ( $theme == $template) ? array( 'thematic-legacy' ) : array();
+
+	return $childtheme_style_dependencies;
 }
 add_filter( 'thematic_childtheme_style_dependencies', 'thematic_legacy_style_dependency', 9 );
 

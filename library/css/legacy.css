@@ -1,0 +1,21 @@
+/* Reset browser defaults */
+@import url('../styles/reset.css');
+
+/* Apply basic typography styles */
+@import url('../styles/typography.css');
+
+/* Apply a basic layout */
+@import url('../layouts/2c-r-fixed.css');
+
+/* Apply basic image styles */
+@import url('../styles/images.css');
+
+/* Apply default theme styles and colors */
+/* It's better to actually copy over default.css into this file (or link to a copy in your child theme) if you're going to do anything outrageous */
+@import url('../styles/default.css');
+
+/* Prepare theme for plugins */
+@import url('../styles/plugins.css');
+
+/* Overriding Thematic's styles for congruity with WP-Admin > Appearance > Header default header text color settings */
+#blog-description { color: #000 }
