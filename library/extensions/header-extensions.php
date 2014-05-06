@@ -501,12 +501,14 @@ function thematic_create_stylesheet() {
 	$themeslug = get_stylesheet();
 	$template = wp_get_theme( 'thematic' );	
 	
+	$childtheme_style_dependencies = ( $theme == $template) ? array( 'thematic-main' ) : array();
+	
 	/**
 	 * Filter for specifying child theme stylesheet dependencies
 	 * 
 	 * @param array List of registered style handles
 	 */
-	$childtheme_style_dependencies = apply_filters( 'thematic_childtheme_style_dependencies', array() );
+	$childtheme_style_dependencies = apply_filters( 'thematic_childtheme_style_dependencies', $childtheme_style_dependencies );
 	
 	wp_register_style( 'genericons', get_template_directory_uri() . '/library/css/genericons.css', array(), '3.0.2' );
 	wp_register_style( 'thematic-main', get_template_directory_uri() . '/library/css/main.css', array(), $template->Version );
