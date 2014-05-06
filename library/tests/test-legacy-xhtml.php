@@ -39,6 +39,7 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		
 		$GLOBALS['wp_query'] = $query;
 		
+		thematic_replace_loops();
 	}
 	
 	
