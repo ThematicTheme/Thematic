@@ -45,13 +45,6 @@ class Thematic_UnitTestCase extends WP_UnitTestCase {
 		$this->theme_options['legacy_xhtml'] = '0';	
 		$this->update_test_options( 'thematic_theme_opt', $this->theme_options );
 		
-		
-		/* Define Thematic constants */
-		define('THEMATIC_MB', false);
-		
-		if ( defined( 'WP_TESTS_MULTISITE') && WP_TESTS_MULTISITE ) {
-			define('THEMATIC_MB', true);
-		}
 	} // end setup
 
 
