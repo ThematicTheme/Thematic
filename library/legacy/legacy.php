@@ -15,7 +15,7 @@ function thematic_load_legacy_template_files( $template ) {
 	if( is_attachment() )
 		$template = THEMATIC_LIB . '/legacy/legacy-attachment.php';
 		
-	if( is_page() )
+	if( is_page() && ! is_page_template() )
 		$template = THEMATIC_LIB . '/legacy/legacy-page.php';
 		
 	if( is_page_template( 'links.php' ) )
