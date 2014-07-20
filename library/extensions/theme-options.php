@@ -31,17 +31,13 @@ if (function_exists('childtheme_override_opt_init')) {
 		$current_options = thematic_get_wp_opt('thematic_theme_opt');
 		$legacy_options = thematic_convert_legacy_opt();
 		
-		// If no current settings exist
-		if ( false === $current_options )  {
-			// Check for legacy options
-			if ( false !== ( $legacy_options ) )  {
-				// Theme upgrade: Convert legacy to current format and add to database 
-				add_option( 'thematic_theme_opt', $legacy_options );
-			} else {
-				// Fresh theme installation: Add default settings to database
-				add_option( 'thematic_theme_opt', thematic_default_opt() );
-			}
+
+		// Check for pre-1.0 options
+		if ( false !== ( $legacy_options ) )  {
+			// Theme upgrade: Convert legacy to current format and add to database
+			add_option( 'thematic_theme_opt', $legacy_options );
 		}
+
 		
 		// If we are missing a 2.0 option, this is an upgrade from previous version
 		if ( !isset( $current_options['layout'] ) && isset( $current_options['footer_txt'] ) ) {
