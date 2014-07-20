@@ -41,15 +41,10 @@ if (function_exists('childtheme_override_opt_init')) {
 		
 		// If we are missing a 2.0 option, this is an upgrade from previous version
 		if ( !isset( $current_options['layout'] ) && isset( $current_options['footer_txt'] ) ) {
-			$thematic_upgrade_opt = array(
-				'index_insert' 	=> 2,
-				'author_info'  	=> 0, // 0 = not checked 1 = checked
-				'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
-				'del_legacy_opt'=> 0, // 0 = not checked 1 = check
-				'legacy_xhtml'	=> 1,  // 0 = not checked 1 = check
-				'layout'        => thematic_default_theme_layout()
-			);
-			update_option( 'thematic_theme_opt', $thematic_upgrade_opt );
+			$current_options = wp_parse_args( $current_options, thematic_default_opt() );
+			// enable xhtml mode by default on theme upgrades
+			$current_options['legacy_xhtml'] = 1;
+			update_option( 'thematic_theme_opt', $current_options );
 		}
 		
 		register_setting ('thematic_opt_group', 'thematic_theme_opt', 'thematic_validate_opt');
