@@ -208,8 +208,10 @@ function thematic_available_layout_slugs() {
  */
 function thematic_default_theme_layout() {
 
+	$options = thematic_get_wp_opt( 'thematic_theme_opt' );
+
 	// use a default layout of right-sidebar if no theme option has been set
-	$thematic_default_layout = thematic_get_theme_opt( 'layout' ) ? thematic_get_theme_opt( 'layout' ) : 'right-sidebar';
+	$thematic_default_layout = isset( $options['layout'] ) ? $options['layout'] : 'right-sidebar';
 
 	/**
 	 * Filter for the default layout
