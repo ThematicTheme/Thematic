@@ -106,17 +106,18 @@ function thematic_get_wp_opt( $option_name, $default = false ) {
  */
 function thematic_get_theme_opt( $opt_key, $echo = false ) {
 	
-	$theme_opt = thematic_get_wp_opt( 'thematic_theme_opt' );
+	$theme_opt =  wp_parse_args( thematic_get_wp_opt( 'thematic_theme_opt', array() ), thematic_default_opt() );
 	
-	if ( isset( $theme_opt[$opt_key] ) ) {
-		if ( false === $echo ) {
-			return $theme_opt[$opt_key] ;
-		} else { 
-			echo $theme_opt[$opt_key];
-		}
-	} else {
+	if ( !isset( $theme_opt[$opt_key] ) ) {
 		return false;
 	}
+
+	if ( false === $echo ) {
+		return $theme_opt[$opt_key];
+	} else {
+		echo $theme_opt[$opt_key];
+	}
+
 }
 
 
