@@ -142,7 +142,7 @@ function thematic_is_custom_post_type() {
  * @return bool
  */
 function thematic_is_legacy_xhtml() {
-	if ( thematic_get_theme_opt( 'legacy_xhtml' ) === 1 || current_theme_supports( 'thematic_legacy' ) ) {
+	if ( thematic_get_theme_opt( 'legacy_xhtml' ) === 1 || current_theme_supports( 'thematic_xhtml' ) ) {
 		return true;
 	}
 		
