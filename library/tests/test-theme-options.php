@@ -88,15 +88,5 @@ class TestThemeOptions extends Thematic_UnitTestCase {
 		
 		$this->update_theme_option( $options );
 	}
-	
-	function update_theme_option( $options ) {
-		update_option( 'thematic_theme_opt', $options );
-	}
-	
-	function delete_theme_option() {
-		delete_option( 'thematic_theme_opt' );
-	}
-	
-	
 
 }

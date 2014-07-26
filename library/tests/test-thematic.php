@@ -26,4 +26,11 @@ class Thematic_UnitTestCase extends WP_UnitTestCase {
 	    $this->assertTrue( 'Thematic' == wp_get_theme() );
 	}
 
+	function update_theme_option( $options ) {
+		update_option( 'thematic_theme_opt', $options );
+	}
+
+	function delete_theme_option() {
+		delete_option( 'thematic_theme_opt' );
+	}
 }
