@@ -136,9 +136,7 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 		$this->expectOutputRegex( '/<div id="nav-below"/', thematic_nav_below() );	
 	}
 	
-	function test_xhtml_before_widget_area() {	
-		do_action( 'widgets_init' );
-		
+	function test_xhtml_before_widget_area() {			
 		$content = '<aside id="third" class="third-sub-aside aside sub-aside">';
 		$this->assertRegexp( '/^<aside/', $content );
 		
@@ -147,9 +145,7 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 	}
 	
 	
-	function test_xhtml_after_widget_area() {	
-		do_action( 'widgets_init' );
-		
+	function test_xhtml_after_widget_area() {			
 		$ul_content = '</div><!-- .inner -->';		
 		$ul_actual = apply_filters( 'thematic_after_widget_area', $ul_content );
 		$this->assertRegexp( '/^<\/ul/', $ul_actual );
@@ -160,36 +156,28 @@ class TestLegacyXTHML extends Thematic_UnitTestCase {
 	}
 	
 	
-	function test_xhtml_before_widget() {	
-		do_action( 'widgets_init' );
-		
+	function test_xhtml_before_widget() {			
 		$content = '<section id="%1$s" class="widgetcontainer %2$s">';		
 		$actual = apply_filters( 'thematic_before_widget', $content );
 		$this->assertRegexp( '/^<li/', $actual );
 	}
 	
 	
-	function test_xhtml_after_widget() {	
-		do_action( 'widgets_init' );
-		
+	function test_xhtml_after_widget() {			
 		$content = '</section>';		
 		$actual = apply_filters( 'thematic_after_widget', $content );
 		$this->assertRegexp( '/^<\/li/', $actual );
 	}
 	
 	
-	function test_xhtml_before_widgettitle() {	
-		do_action( 'widgets_init' );
-		
+	function test_xhtml_before_widgettitle() {			
 		$content = '<h1 class="widgettitle">';		
 		$actual = apply_filters( 'thematic_before_title', $content );
 		$this->assertRegexp( '/^<h3/', $actual );
 	}
 	
 	
-	function test_xhtml_after_widgettitle() {	
-		do_action( 'widgets_init' );
-		
+	function test_xhtml_after_widgettitle() {			
 		$content = '<\h1>';		
 		$actual = apply_filters( 'thematic_after_title', $content );
 		$this->assertRegexp( '/^<\/h3/', $actual );
