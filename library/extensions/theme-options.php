@@ -31,29 +31,20 @@ if (function_exists('childtheme_override_opt_init')) {
 		$current_options = thematic_get_wp_opt('thematic_theme_opt');
 		$legacy_options = thematic_convert_legacy_opt();
 		
-		// If no current settings exist
-		if ( false === $current_options )  {
-			// Check for legacy options
-			if ( false !== ( $legacy_options ) )  {
-				// Theme upgrade: Convert legacy to current format and add to database 
-				add_option( 'thematic_theme_opt', $legacy_options );
-			} else {
-				// Fresh theme installation: Add default settings to database
-				add_option( 'thematic_theme_opt', thematic_default_opt() );
-			}
+
+		// Check for pre-1.0 options
+		if ( false !== ( $legacy_options ) )  {
+			// Theme upgrade: Convert legacy to current format and add to database
+			add_option( 'thematic_theme_opt', $legacy_options );
 		}
+
 		
 		// If we are missing a 2.0 option, this is an upgrade from previous version
 		if ( !isset( $current_options['layout'] ) && isset( $current_options['footer_txt'] ) ) {
-			$thematic_upgrade_opt = array(
-				'index_insert' 	=> 2,
-				'author_info'  	=> 0, // 0 = not checked 1 = checked
-				'footer_txt' 	=> 'Powered by [wp-link]. Built on the [theme-link].',
-				'del_legacy_opt'=> 0, // 0 = not checked 1 = check
-				'legacy_xhtml'	=> 1,  // 0 = not checked 1 = check
-				'layout'        => thematic_default_theme_layout()
-			);
-			update_option( 'thematic_theme_opt', $thematic_upgrade_opt );
+			$current_options = wp_parse_args( $current_options, thematic_default_opt() );
+			// enable xhtml mode by default on theme upgrades
+			$current_options['legacy_xhtml'] = 1;
+			update_option( 'thematic_theme_opt', $current_options );
 		}
 		
 		register_setting ('thematic_opt_group', 'thematic_theme_opt', 'thematic_validate_opt');
@@ -115,17 +106,18 @@ function thematic_get_wp_opt( $option_name, $default = false ) {
  */
 function thematic_get_theme_opt( $opt_key, $echo = false ) {
 	
-	$theme_opt = thematic_get_wp_opt( 'thematic_theme_opt' );
+	$theme_opt =  wp_parse_args( thematic_get_wp_opt( 'thematic_theme_opt', array() ), thematic_default_opt() );
 	
-	if ( isset( $theme_opt[$opt_key] ) ) {
-		if ( false === $echo ) {
-			return $theme_opt[$opt_key] ;
-		} else { 
-			echo $theme_opt[$opt_key];
-		}
-	} else {
+	if ( !isset( $theme_opt[$opt_key] ) ) {
 		return false;
 	}
+
+	if ( false === $echo ) {
+		return $theme_opt[$opt_key];
+	} else {
+		echo $theme_opt[$opt_key];
+	}
+
 }
 
 
