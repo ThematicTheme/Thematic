@@ -16,8 +16,7 @@ class TestLegacyOverridesXTHML extends Thematic_UnitTestCase {
 		include_once 'childtheme-overrides.php';
 		
 		/* Load the legacy files before anything else - needed for childtheme_overrides* to work */
-		include_once '../legacy/deprecated.php';
-		include_once '../legacy/legacy.php';
+		include_legacy_xhtml_files();
 		
 		/* Load the thematic files */
 		parent::setUp();

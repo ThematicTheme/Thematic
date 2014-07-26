@@ -19,26 +19,10 @@ class Thematic_UnitTestCase extends WP_UnitTestCase {
 	    parent::setUp();
 		
 		/* Make sure the active theme is Thematic */
-	    switch_theme( 'Thematic' );
-		
-		
+		switch_theme( 'Thematic' );
+
 		/* Include the Thematic function file and extensions */
-		require_once '../../functions.php';
-		
-		include_once '../extensions/comments-extensions.php';
-		include_once '../extensions/content-extensions.php';
-		include_once '../extensions/discussion-extensions.php';
-		include_once '../extensions/discussion.php';
-		include_once '../extensions/dynamic-classes.php';
-		include_once '../extensions/footer-extensions.php';
-		include_once '../extensions/header-extensions.php';
-		include_once '../extensions/helpers.php';
-		include_once '../extensions/shortcodes.php';
-		include_once '../extensions/sidebar-extensions.php';
-		include_once '../extensions/theme-options.php';
-		include_once '../extensions/widgets-extensions.php';
-		include_once '../extensions/widgets.php';
-		
+		include_main_theme_files();
 
 		/* Setup the theme options */
 		$this->theme_options =  thematic_default_opt() ;
