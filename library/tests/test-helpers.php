@@ -1,6 +1,6 @@
 <?php
 /**
- * Tests for Theme Options
+ * Tests for Thematic helper functions
  *
  * @package ThematicUnitTests
  */
@@ -8,14 +8,15 @@
 /**
  * @group default
  */
-class TestThemeOptions extends Thematic_UnitTestCase {
+class TestHelpers extends Thematic_UnitTestCase {
 	
 	/**
 	 * The theme options from 1.0
 	 * @var array
 	 */
-    private $pre_upgrade_opt;
-	
+	private $pre_upgrade_opt;
+
+
 	function setUp() {
 		
 		$this->pre_upgrade_opt = array(
@@ -28,9 +29,11 @@ class TestThemeOptions extends Thematic_UnitTestCase {
 		parent::setUp();
 	}
 
+
 	function test_html5_markup_by_default() {
 		$this->assertFalse( thematic_is_legacy_xhtml() );
 	}
+	
 	
 	function test_xhtml_mode_set_by_database() {
 
@@ -40,6 +43,7 @@ class TestThemeOptions extends Thematic_UnitTestCase {
 		
 		$this->delete_theme_option();
 	}
+
 
 	function test_html5_markup_specified_by_theme_support() {
 		
@@ -54,6 +58,7 @@ class TestThemeOptions extends Thematic_UnitTestCase {
 		
 		$this->delete_theme_option();
 	}
+	
 	
 	function test_xhtml_markup_specified_by_theme_support() {
 		
