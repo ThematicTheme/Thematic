@@ -141,11 +141,13 @@ function thematic_convert_legacy_opt() {
     	
     // Return a sanitized array from legacy options if found
     $legacy_sanitized_opt = array(
-    		'index_insert' 	=> intval( $thm_insert_position ),
-    		'author_info'  	=> ( $thm_authorinfo == "true" ) ? 1 : 0,
-    		'footer_txt' 	=> wp_kses_post( $thm_footertext ),
-    		'del_legacy_opt'=> 0
-    	);
+		'index_insert' 	=> intval( $thm_insert_position ),
+		'author_info'  	=> ( $thm_authorinfo == "true" ) ? 1 : 0,
+		'footer_txt' 	=> wp_kses_post( $thm_footertext ),
+		'del_legacy_opt'=> 0,
+		'legacy_xhtml'	=> 1,  // 0 = not checked 1 = check
+		'layout'        => thematic_default_theme_layout()
+	);
 
     return apply_filters( 'thematic_theme_convert_legacy_opt', $legacy_sanitized_opt );
 }
