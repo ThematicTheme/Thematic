@@ -47,7 +47,7 @@ Fixed: Avoid undefined index error in thematic_browser_class_names(). Props ryan
 Added: Unit tests in /library/tests/ directory.
 Added: File CONTRIBUTING.md with instructions on how to contribute to the project
 Added: Function thematic_is_legacy_xhtml() for checking if legacy mode is active
-Added: Current_theme_supports checks for 'thematic_legacy' for restoring the legacy xhtml doctype
+Added: Current_theme_supports checks for 'thematic_xhtml' for restoring the legacy xhtml doctype
 Added: Theme option checkbox to activate legacy xhtml mode
 Added: Function thematic_doctype() and childtheme_override_doctype()
 Added: Function thematic_html() and childtheme_override_html()

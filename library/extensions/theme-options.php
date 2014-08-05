@@ -60,7 +60,7 @@ if (function_exists('childtheme_override_opt_init')) {
 		 * 
 		 * @param bool true
 		 */
-		if( apply_filters( 'thematic_show_legacymode_checkbox', true ) ) {
+		if( apply_filters( 'thematic_show_legacymode_checkbox', false ) ) {
 			// show check box option for restoring legacy xtml1.0 doctype and compatible markup
 			add_settings_field ('thematic_legacy_xhtml_opt', __('Restore Legacy XHTML1.0 Doctype'	, 'thematic'), 'thematic_do_legacy_xhtml_opt'	, 'thematic_theme_opt', 'thematic_opt_section_main');
 		}

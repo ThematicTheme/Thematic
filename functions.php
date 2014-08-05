@@ -101,7 +101,6 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		
 		// Load overrides to activate the old xhtml markup if set
 		if ( !is_admin() && thematic_is_legacy_xhtml() ) {
-			add_theme_support( 'thematic_legacy' );
 			require_once ( THEMATIC_LIB . '/legacy/legacy.php' );
 		}
 		

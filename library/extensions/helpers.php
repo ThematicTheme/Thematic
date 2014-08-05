@@ -137,16 +137,28 @@ function thematic_is_custom_post_type() {
 }
 
 /**
- * Check if the option to use legacy xhtml is set
- * 
- * @return bool
+ * Determine if we want to use html5 or xhtml markup
+ *
+ * @return bool True for xhtml, false for html5 markup
  */
 function thematic_is_legacy_xhtml() {
-	if ( thematic_get_theme_opt( 'legacy_xhtml' ) === 1 || current_theme_supports( 'thematic_legacy' ) ) {
+
+	// Child themes can set html5 markup
+	if ( current_theme_supports( 'thematic_html5' ) ) {
+		return false;
+	}
+
+	// Child themes can opt to use xhtml
+	if ( current_theme_supports( 'thematic_xhtml' ) ) {
 		return true;
 	}
-		
-	return false;
+
+	// New 2.0 installations haven't set the legacy mode
+	if ( 0 == thematic_get_theme_opt( 'legacy_xhtml' ) ) {
+		return false;
+	}
+
+	return true;
 }
 
 
