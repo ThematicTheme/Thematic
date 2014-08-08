@@ -884,10 +884,9 @@ if (function_exists('childtheme_override_postheader_posteditlink'))  {
 	 */
 	function thematic_postheader_posteditlink() {
 
-    	$posteditlink = sprintf( '<a href="%s" title="%s" class="edit">%s</a>' , 
+    	$posteditlink = sprintf( '<a href="%s" class="edit">%s</a>' , 
 
 			    			get_edit_post_link(),
-			    			esc_attr__('Edit post', 'thematic'),
 							/* translators: post edit link */
 			    			__('Edit', 'thematic'));
 		
@@ -1420,9 +1419,8 @@ if (function_exists('childtheme_override_postfooter_posteditlink'))  {
 	 */
 	function thematic_postfooter_posteditlink() {
 
-	    $posteditlink = sprintf( '<a href="%s" title="%s" class="edit">%s</a>' , 
+	    $posteditlink = sprintf( '<a href="%s" class="edit">%s</a>' , 
 			    			get_edit_post_link(),
-			    			esc_attr__('Edit post', 'thematic'),
 							/* translators: post edit link */
 			    			__('Edit', 'thematic'));
 
