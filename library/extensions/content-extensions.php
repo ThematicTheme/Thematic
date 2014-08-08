@@ -1654,16 +1654,14 @@ if (function_exists('childtheme_override_postfooter_postconnect'))  {
 	        $postconnect = sprintf( _x('%1$sPost a comment%2$s or leave a trackback: %3$s', '1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url.', 'thematic'), 
 								sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'thematic')), 
 								'</a>' ,
-								sprintf('<a class="trackback-link" href="%s" title ="%s" rel="trackback">%s</a>.', 
+								sprintf('<a class="trackback-link" href="%s" rel="trackback">%s</a>.', 
 									get_trackback_url(),
-									esc_attr__('Trackback URL for your post', 'thematic'),
 						 			__('Trackback URL', 'thematic'))
 							);
 	    } elseif (!(comments_open()) && (pings_open())) { /* Only trackbacks are open */
 	        $postconnect = sprintf( _x('Comments are closed, but you can leave a trackback: %s', '%s is trackback url, wrapped in link tags', 'thematic'),
-							sprintf('<a class="trackback-link" href="%s" title="%s" rel="trackback">%s</a>.', 
+							sprintf('<a class="trackback-link" href="%s" rel="trackback">%s</a>.', 
 								get_trackback_url(), 
-								esc_attr__('Trackback URL for your post', 'thematic'), 
 								__('Trackback URL', 'thematic'))
 							);
 	    } elseif ((comments_open()) && !(pings_open())) { /* Only comments open */
