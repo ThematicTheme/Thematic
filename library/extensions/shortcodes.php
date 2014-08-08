@@ -18,7 +18,7 @@
  * Display link to WP.org.
  */
 function thematic_shortcode_wp_link() {
-    return '<a class="wp-link" href="http://WordPress.org/" title="WordPress">WordPress</a>';
+    return '<a class="wp-link" href="http://WordPress.org/">WordPress</a>';
 }
 add_shortcode('wp-link', 'thematic_shortcode_wp_link');		  
 
@@ -27,7 +27,7 @@ add_shortcode('wp-link', 'thematic_shortcode_wp_link');
  * Display link to Thematic.
  */
 function thematic_shortcode_framework_link() {
-    $themelink = '<a class="theme-link" href="http://thematictheme.com" title="Thematic Theme" rel="home">Thematic Theme</a>';
+    $themelink = '<a class="theme-link" href="http://thematictheme.com" rel="home">Thematic Theme</a>';
     return apply_filters('thematic_theme_link',$themelink);
 }
 add_shortcode('theme-link', 'thematic_shortcode_framework_link');	
@@ -56,7 +56,7 @@ add_shortcode('blog-title', 'thematic_shortcode_blog_title');
  * Display the site title with a link to the site.
  */
 function thematic_shortcode_blog_link() {
-	return '<a href="' . site_url('/') . '" title="' . esc_attr( get_bloginfo('name', 'display') ) . '" >' . get_bloginfo('name', 'display') . "</a>";
+	return '<a href="' . site_url('/') . '">' . get_bloginfo('name', 'display') . "</a>";
 }
 add_shortcode('blog-link', 'thematic_shortcode_blog_link');
 
