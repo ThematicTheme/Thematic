@@ -1372,14 +1372,15 @@ if (function_exists('childtheme_override_postfooter'))  {
 		
 					/* translators: %s is custom post type singular name, wrapped in link tags */
 					$postfooter .= sprintf( __( 'Browse the %s archive.', 'thematic' ), 
-					/* translators: %s is custom post type singular name */
-					' <a href="' . $post_type_archive_link . '" title="' . sprintf( esc_attr__( 'Permalink to %s Archive', 'thematic' ), $post_type_obj->labels->singular_name )  . '">' . $post_type_obj->labels->singular_name . '</a>'
+					' <a href="' . $post_type_archive_link . '">' . $post_type_obj->labels->singular_name . '</a>'
 					);
 					$postfooter .= ' ';
 
 	        	}
 	        	$postfooter .= thematic_postfooter_posttax();
-	    		$postfooter .= sprintf( _x('Bookmark the %1$spermalink%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), sprintf('<a title="%s" href="%s">', sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ), apply_filters('the_permalink', get_permalink())) , '</a>') . ' ';
+	    		$postfooter .= sprintf( _x('Bookmark the %1$spermalink%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), 
+										sprintf('<a href="%s">', apply_filters('the_permalink', get_permalink())) , '</a>'
+								) . ' ';
 
 	    			if ( post_type_supports( $post_type, 'comments') ) {
 	            		$postfooter .= thematic_postfooter_postconnect();
