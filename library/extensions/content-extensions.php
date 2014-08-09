@@ -1616,15 +1616,13 @@ if (function_exists('childtheme_override_postfooter_postcomments'))  {
 	        $postcommentnumber = get_comments_number();
 
 	        if ($postcommentnumber > '0') {
-	        	$postcomments = sprintf('<span class="comments-link"><a href="%s" title="%s" rel="bookmark">%s</a></span>',
+	        	$postcomments = sprintf('<span class="comments-link"><a href="%s" rel="bookmark">%s</a></span>',
 	        						apply_filters('the_permalink', get_permalink()) . '#respond',
-	        						sprintf( esc_attr__('Comment on %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
 									/* translators: number of comments and trackbacks */
 	        						sprintf( _n('%s Response', '%s Responses', $postcommentnumber, 'thematic'), number_format_i18n( $postcommentnumber ) ) );
 			} else {
-	            $postcomments = sprintf('<span class="comments-link"><a href="%s" title="%s" rel="bookmark">%s</a></span>',
+	            $postcomments = sprintf('<span class="comments-link"><a href="%s" rel="bookmark">%s</a></span>',
 	        						apply_filters('the_permalink', get_permalink()) . '#respond',
-	        						sprintf( esc_attr__('Comment on %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
 	        						__('Leave a comment', 'thematic'));
 	        }
 	    } else {
@@ -1653,7 +1651,7 @@ if (function_exists('childtheme_override_postfooter_postconnect'))  {
     
 	    if ((comments_open()) && (pings_open())) { /* Comments are open */
 	        $postconnect = sprintf( _x('%1$sPost a comment%2$s or leave a trackback: %3$s', '1s and 2s are the a href link wrappers, do not reverse them. 3s is trackback url.', 'thematic'), 
-								sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'thematic')), 
+								'<a class="comment-link" href="#respond">', 
 								'</a>' ,
 								sprintf('<a class="trackback-link" href="%s" rel="trackback">%s</a>.', 
 									get_trackback_url(),
