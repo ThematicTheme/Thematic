@@ -1143,9 +1143,8 @@ if (function_exists('childtheme_override_content'))  {
 				$size = apply_filters( 'thematic_post_thumb_size' , array(100,100) );
 				$attr = apply_filters( 'thematic_post_thumb_attr', array('title'	=> sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ) ) );
 				if ( has_post_thumbnail() ) {
-					$post = sprintf('<a class="entry-thumb" href="%s" title="%s">%s</a>',
+					$post = sprintf('<a class="entry-thumb" href="%s">%s</a>',
 									get_permalink() ,
-									sprintf( esc_attr__('Permalink to %s', 'thematic'), the_title_attribute( 'echo=0' ) ),
 									get_the_post_thumbnail(get_the_ID(), $size, $attr)) . $post;
 					}
 			}
