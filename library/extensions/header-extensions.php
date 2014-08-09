@@ -826,7 +826,7 @@ if ( function_exists( 'childtheme_override_access' ) )  {
     
     <div id="access" role="navigation">
     	<h3 class="menu-toggle"><?php echo apply_filters( 'thematic_mobile_navigation_buttontext', _x( 'Menu', 'Mobile navigation button', 'thematic' ) ); ?></h3>
-    	<div class=""><a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip navigation to the content', 'thematic' ); ?>"><?php _e( 'Skip to content', 'thematic' ); ?></a></div><!-- .skip-link -->
+    	<div class=""><a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'thematic' ); ?></a></div><!-- .skip-link -->
     	
     	<?php 
     	if ( ( function_exists( 'has_nav_menu' ) ) && ( has_nav_menu( apply_filters( 'thematic_primary_menu_id', 'primary-menu' ) ) ) ) {
