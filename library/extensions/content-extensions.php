@@ -993,10 +993,8 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	    	$author_info .= '</span></span>';
 	    } else {
 	    	$author_info  = '<span class="author vcard">';
-	    	$author_info .= sprintf('<a class="url fn n" href="%s" title="%s">%s</a>',
+	    	$author_info .= sprintf('<a class="url fn n" href="%s">%s</a>',
 	    							get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
-									/* translators: author name */
-	    							sprintf( esc_attr__( 'View all posts by %s', 'thematic' ), get_the_author_meta( 'display_name' ) ),
 	    							get_the_author_meta( 'display_name' ));
 	    	$author_info .= '</span>';
 	    }
