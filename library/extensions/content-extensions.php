@@ -1664,7 +1664,7 @@ if (function_exists('childtheme_override_postfooter_postconnect'))  {
 								__('Trackback URL', 'thematic'))
 							);
 	    } elseif ((comments_open()) && !(pings_open())) { /* Only comments open */
-	        $postconnect = sprintf( _x('Trackbacks are closed, but you can %1$spost a comment%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), sprintf('<a class="comment-link" title="%s" href="#respond">', esc_attr__('Post a comment', 'thematic')), '</a>');
+	        $postconnect = sprintf( _x('Trackbacks are closed, but you can %1$spost a comment%2$s.', '1s and 2s are the a href link wrappers, do not reverse them', 'thematic'), '<a class="comment-link" href="#respond">', '</a>');
 	    } elseif (!(comments_open()) && !(pings_open())) { /* Comments and trackbacks closed */
 	        $postconnect = __('Both comments and trackbacks are currently closed.', 'thematic');
 	    }
