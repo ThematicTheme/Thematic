@@ -153,12 +153,12 @@ function thematic_is_legacy_xhtml() {
 		return true;
 	}
 
-	// New 2.0 installations haven't set the legacy mode
+	// New 2.0 installations do not use the legacy mode by default
 	if ( 0 == thematic_get_theme_opt( 'legacy_xhtml' ) ) {
 		return false;
 	}
 
-	return true;
+	return apply_filters( 'thematic_is_legacy_xhtml', true );
 }
 
 
