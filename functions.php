@@ -85,8 +85,6 @@ if ( function_exists('childtheme_override_theme_setup') ) {
  
 		add_theme_support( 'thematic_superfish' );
 		
-		add_theme_support( 'thematic_meta_viewport' );
-		
 		// Path constants
 		define( 'THEMATIC_LIB',  get_template_directory() .  '/library' );
 
@@ -104,8 +102,9 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 			require_once ( THEMATIC_LIB . '/legacy/legacy.php' );
 		}
 		
-		// Add the customizer layout section by default on html5 sites
+		// Add functionality only when not using old xhtml markup
 		if( !thematic_is_legacy_xhtml() ) {
+			add_theme_support( 'thematic_meta_viewport' );
 			add_theme_support('thematic_customizer_layout');
 		}
 
