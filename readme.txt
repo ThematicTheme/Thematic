@@ -3,7 +3,7 @@ Contributors: iandstewart, chrisgossmann, emhr, helgatheviking, middlesister
 Tags: white, three-columns, two-columns, responsive-layout, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, microformats, translation-ready, full-width-template
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.0.4
+Stable tag: 2.0.0
 
 The ultimate in SEO-ready themes, Thematic is a highly extensible, WordPress Theme Framework featuring 13 widget-ready areas, &amp; a whole lot more.
 
