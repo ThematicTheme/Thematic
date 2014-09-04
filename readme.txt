@@ -29,7 +29,7 @@ Features:
 
 == Changelog ==
 
-= 2.0-beta1 =
+= 2.0.0 =
 Changed: Switched primary markup to html5. Introduced a legacy mode for using the previous xhtml markup
 Changed: thematic_create_stylesheet() uses the active theme's name as handle and version as argument to wp_enqueue_style()
 Changed: thematic_head_scripts() uses wp_localize_script to send data to the main javascript file
