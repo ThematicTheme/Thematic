@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Thematic 2.0 package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-04-03 13:55:06+0000\n"
+"PO-Revision-Date: 2014-09-03 19:25:50+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,20 +13,20 @@ msgstr ""
 #: library/extensions/comments-extensions.php:252
 msgctxt "%$1s and %$2s are <abbr> tags"
 msgid "You may use these %1$sHTML%2$s tags and attributes:"
-msgstr ""
+msgstr "می‌توانید از این برچسب‌ها و ویژگی‌های %1$sHTML%2$s استفاده کنید."
 
 #: library/extensions/header-extensions.php:825
 msgctxt "Mobile navigation button"
 msgid "Menu"
-msgstr ""
+msgstr "منو"
 
 #: library/extensions/helpers.php:176
 msgid "Full width"
-msgstr ""
+msgstr "عرض کامل"
 
 #: library/extensions/theme-options.php:235
 msgid "The options below are enabled by the Thematic Theme and/or a child theme."
-msgstr ""
+msgstr "گزینه‌های زیر توسط تم Thematic و/یا یکی از تم‌های فرزند آن فعال شده‌اند."
 
 #: library/extensions/widgets.php:81
 msgid "Thematic Meta"

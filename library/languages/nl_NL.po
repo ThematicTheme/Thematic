@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Thematic 2.0 package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-04-03 13:54:59+0000\n"
+"PO-Revision-Date: 2014-09-03 19:25:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,24 +13,24 @@ msgstr ""
 #: library/extensions/comments-extensions.php:252
 msgctxt "%$1s and %$2s are <abbr> tags"
 msgid "You may use these %1$sHTML%2$s tags and attributes:"
-msgstr ""
+msgstr "U kunt de volgende %1$sHTML%2$s 'tags' en 'attributes' gebruiken:"
 
 #: library/extensions/header-extensions.php:825
 msgctxt "Mobile navigation button"
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: library/extensions/helpers.php:176
 msgid "Full width"
-msgstr ""
+msgstr "Volledige breedte"
 
 #: library/extensions/theme-options.php:235
 msgid "The options below are enabled by the Thematic Theme and/or a child theme."
-msgstr ""
+msgstr "De onderstaande opties zijn geactiveerd door Thematic Theme of een child theme."
 
 #: library/extensions/widgets.php:81
 msgid "Thematic Meta"
-msgstr ""
+msgstr "Thematic Meta"
 
 #: attachment.php:53 library/extensions/content-extensions.php:632
 #: library/extensions/content-extensions.php:691
@@ -69,7 +69,7 @@ msgstr "Hoofdmenu "
 #: library/extensions/back-compat.php:41 library/extensions/back-compat.php:53
 #: library/extensions/back-compat.php:68
 msgid "Thematic requires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
-msgstr ""
+msgstr "Thematic heeft minimaal WordPress versie 3.6 nodig. U draait versie %s. Gelieve uw versie te upgraden en het opnieuw te proberen,"
 
 #: library/extensions/comments-extensions.php:124
 msgctxt "One Comment, where %$1s and %$2s are <span> tags"
@@ -372,31 +372,31 @@ msgstr "Reacties en trackbacks zijn beide momenteel gesloten."
 
 #: library/extensions/customizer.php:54
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #: library/extensions/customizer.php:55
 msgid "Choose the main layout of your theme"
-msgstr ""
+msgstr "Kies de main layout van je thema"
 
 #: library/extensions/customizer.php:73
 msgid "Theme layout"
-msgstr ""
+msgstr "Thema layout"
 
 #: library/extensions/helpers.php:168
 msgid "Right Sidebar"
-msgstr ""
+msgstr "Rechter Zijbalk"
 
 #: library/extensions/helpers.php:164
 msgid "Left Sidebar"
-msgstr ""
+msgstr "Linker Zijbalk"
 
 #: library/extensions/helpers.php:172
 msgid "Three columns"
-msgstr ""
+msgstr "Drie kolommen "
 
 #: library/extensions/customizer.php:82
 msgid "Footer"
-msgstr ""
+msgstr "Voetbalk"
 
 #: library/extensions/customizer.php:83
 #: library/extensions/theme-options.php:325
@@ -406,7 +406,7 @@ msgstr "Je kunt HTML en ' shortcodes' in je footer tekst gebruiken. Shortcode vo
 
 #: library/extensions/customizer.php:97
 msgid "Footer text"
-msgstr ""
+msgstr "Voetbalk tekst"
 
 #: library/extensions/discussion-extensions.php:28
 #: library/legacy/legacy.php:172
@@ -486,7 +486,7 @@ msgstr "Tekst in de footer"
 
 #: library/extensions/theme-options.php:74
 msgid "Restore Legacy XHTML1.0 Doctype"
-msgstr ""
+msgstr "Herstel Oude XHTML1.0 Doctype"
 
 #: library/extensions/theme-options.php:79
 msgid "Remove Legacy Options"
@@ -532,11 +532,11 @@ msgstr "Laat een %1$smicrogeformatteerde  vCard%2$s  met de auteurs zijn avatar,
 
 #: library/extensions/theme-options.php:338
 msgid "Restore the legacy XHTML Doctype and xhtml compatible markup."
-msgstr ""
+msgstr "Herstel de oude XHTML Doctype en xhtml compatibele opmaak."
 
 #: library/extensions/theme-options.php:356
 msgid "%s Theme Options have been upgraded to an improved format. Remove the legacy options from the database."
-msgstr ""
+msgstr "%s Thema Opties zijn geüpgraded naar een beter formaat. Verwijder de verouderde opties uit de database."
 
 #: library/extensions/theme-options.php:384
 msgid "The index insert position value must be a number equal to or greater than zero. This setting has been reverted to the previous value."
