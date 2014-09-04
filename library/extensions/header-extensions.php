@@ -105,7 +105,7 @@ if ( function_exists( 'childtheme_override_meta_charset' ) ) {
  *
  */
 function thematic_meta_viewport() {
-	$viewport_content = apply_filters( 'thematic_meta_viewport_content', 'width=device-width' ); 
+	$viewport_content = apply_filters( 'thematic_meta_viewport_content', 'width=device-width,initial-scale=1' ); 
 	
 	if( current_theme_supports( 'thematic_meta_viewport' ) ) {
 ?>
