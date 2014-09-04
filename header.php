@@ -22,9 +22,7 @@
 	thematic_meta_charset();
 
 	// Create the meta viewport if theme supports it
-	if( current_theme_supports( 'thematic_meta_viewport' ) ) {
-		thematic_meta_viewport();
-	}
+	thematic_meta_viewport();
 
 	// Create the title tag
 	thematic_doctitle();
