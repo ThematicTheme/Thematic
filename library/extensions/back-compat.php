@@ -8,7 +8,7 @@
  *
  * @package ThematicCoreLibrary
  * @subpackage BackwardsCompatibility
- * @since Thematic 2.0
+ * @since Thematic 2.0.0
  */
 
 /**
@@ -16,7 +16,7 @@
  *
  * Switches to the default theme.
  *
- * @since 2.0
+ * @since 2.0.0
  *
  * @return void
  */
@@ -33,7 +33,7 @@ add_action( 'after_switch_theme', 'thematic_switch_theme' );
  * Prints an update nag after an unsuccessful attempt to switch to
  * Thematic on WordPress versions prior to 3.6.
  *
- * @since 2.0
+ * @since 2.0.0
  *
  * @return void
  */
@@ -45,7 +45,7 @@ function thematic_upgrade_notice() {
 /**
  * Prevent the Theme Customizer from being loaded on WordPress versions prior to 3.6.
  *
- * @since 2.0
+ * @since 2.0.0
  *
  * @return void
  */
@@ -59,7 +59,7 @@ add_action( 'load-customize.php', 'thematic_customize' );
 /**
  * Prevent the Theme Preview from being loaded on WordPress versions prior to 3.4.
  *
- * @since 2.0
+ * @since 2.0.0
  *
  * @return void
  */

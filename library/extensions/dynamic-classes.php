@@ -31,7 +31,7 @@ if ( function_exists( 'childtheme_override_body_class' ) )  {
 		 *
 		 * @see thematic_available_theme_layouts()
 		 *
-		 * @since 2.0
+		 * @since 2.0.0
 		 *
 		 * @param string $current_layout
 		 */
@@ -597,7 +597,7 @@ $thematic_post_alt = 1;
 /** 
  * Adds classes to commment li's using the WordPress comment_class filter
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function thematic_add_comment_class($classes) {
     global $comment, $post;

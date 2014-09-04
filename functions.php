@@ -18,7 +18,7 @@
 /**
  * Thematic only works in WordPress 3.6 or later.
  * 
- * @since Thematic 2.0
+ * @since Thematic 2.0.0
  */
 if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) ) {
 	require get_template_directory() . '/library/extensions/back-compat.php';
@@ -28,7 +28,7 @@ if ( version_compare( $GLOBALS['wp_version'], '3.6-alpha', '<' ) ) {
 /**
  * Registers action hook: thematic_init 
  * 
- * @since Thematic 1.0
+ * @since 1.0.0
  */
 function thematic_init() {
 	do_action('thematic_init');
@@ -40,7 +40,7 @@ function thematic_init() {
  *
  * Override: childtheme_override_theme_setup
  *
- * @since Thematic 1.0
+ * @since 1.0.0
  */
 if ( function_exists('childtheme_override_theme_setup') ) {
 	/**
@@ -54,7 +54,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 	 * thematic_theme_setup
 	 *
 	 * @todo review for impact of deprecations on child themes & fix comment blocks?
-	 * @since Thematic 1.0?
+	 * @since 1.0.0?
 	 */
 	function thematic_theme_setup() {
 		global $content_width;
@@ -65,7 +65,7 @@ if ( function_exists('childtheme_override_theme_setup') ) {
 		 * Used to set the width of images and content. Should be equal to the width the theme
 		 * is designed for, generally via the style.css stylesheet.
 		 *
-		 * @since Thematic 1.0
+		 * @since 1.0.0
 		 */
 		if ( !isset($content_width) ) {
 			$content_width = 600;
@@ -175,7 +175,7 @@ add_action('after_setup_theme', 'thematic_theme_setup', 10);
 /**
  * Registers action hook: thematic_child_init
  * 
- * @since Thematic 1.0
+ * @since 1.0.0
  */
 function thematic_child_init() {
 	do_action('thematic_child_init');

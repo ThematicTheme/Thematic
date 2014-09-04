@@ -106,7 +106,7 @@ if ( function_exists( 'childtheme_override_meta_charset' ) ) {
  */
 function thematic_meta_viewport() {
 	$viewport_content = apply_filters( 'thematic_meta_viewport_content', 'width=device-width,initial-scale=1' ); 
-	
+
 	if( current_theme_supports( 'thematic_meta_viewport' ) ) {
 ?>
 <meta name="viewport" content="<?php echo $viewport_content ?>"/>
@@ -420,7 +420,7 @@ function thematic_show_pingback() {
  * Filter: thematic_use_html5shiv
  * Filter: thematic_html5shiv_output
  * 
- * @since 2.0
+ * @since 2.0.0
  */
 function thematic_add_html5shiv() {
 	
@@ -439,7 +439,7 @@ function thematic_add_html5shiv() {
 	 * If a script with any of these handles is enqueued by a child theme or plugin, Thematic
 	 * will not add the html5 shiv.
 	 * 
-	 * @since 2.0
+	 * @since 2.0.0
 	 * 
 	 * @param  array  $possible_handles  Array of handle names
 	 */
@@ -458,7 +458,7 @@ function thematic_add_html5shiv() {
 	 * Provides a shortcut to switch off the shiv. Defaults to true,
 	 * unless modernizr is detected.
 	 * 
-	 * @since 2.0
+	 * @since 2.0.0
 	 * 
 	 * @param  boolean  $use_shiv
 	 */
@@ -473,7 +473,7 @@ function thematic_add_html5shiv() {
 		/**
 		 * Filter the output string of the html5shiv link
 		 * 
-		 * @since 2.0
+		 * @since 2.0.0
 		 * 
 		 * @param  string  $content  The complete string that gets output to wp_head
 		 */
@@ -540,7 +540,7 @@ if ( function_exists( 'childtheme_override_head_scripts' ) )  {
      *
      * For Reference: {@link http://users.tpg.com.au/j_birch/plugins/superfish/#getting-started Superfish Jquery Plugin}
      *
-     * @since 1.0
+     * @since 1.0.0
      */
     function thematic_head_scripts() {
 		$template = wp_get_theme( 'thematic' );
@@ -578,7 +578,7 @@ if ( function_exists( 'childtheme_override_head_scripts' ) )  {
 		/**
 		 * Filter the variables sent to wp_localize_script
 		 * 
-		 * @since 2.0
+		 * @since 2.0.0
 		 * 
 		 * @param array $thematic_javascript_options
 		 */

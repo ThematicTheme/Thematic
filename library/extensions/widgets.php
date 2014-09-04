@@ -49,7 +49,7 @@ function thematic_after_title() {
  * 
  * Replaces the functionality of deprecated widget Thematic_Widget_Search
  * 
- * @since 2.0
+ * @since 2.0.0
  * 
  * @param  string  $title    The current widget title
  * @param  object  $instance The current widget instance

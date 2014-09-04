@@ -165,7 +165,7 @@ function thematic_is_legacy_xhtml() {
 /**
  * Specifies the available layouts for the theme
  *
- * @since 2.0
+ * @since 2.0.0
  *
  * @return array $layouts
  */
@@ -196,7 +196,7 @@ function thematic_available_theme_layouts() {
 /**
  * Create a simple array of the available layout strings
  *
- * @since 2.0
+ * @since 2.0.0
  *
  * @return array $layouts
  */
@@ -214,7 +214,7 @@ function thematic_available_layout_slugs() {
 /**
  * Decide the default layout of the theme
  *
- * @since 2.0
+ * @since 2.0.0
  *
  * @return string $default_layout
  */
@@ -231,7 +231,7 @@ function thematic_default_theme_layout() {
 	 * Specifies the theme layout upon first setup. The returned string need to match 
 	 * one of the available layout slugs. Any invalid slug will be ignored.
 	 *
-	 * @since 2.0
+	 * @since 2.0.0
 	 *
 	 * @see thematic_available_layout_slugs()
 	 *
