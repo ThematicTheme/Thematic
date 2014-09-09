@@ -16,14 +16,12 @@ Features:
 * Perfect to use as-is or as a blank WordPress theme for development
 * Fully Search-Engine Optimized
 * Extra widget-ready areas (13 in total) and more possible in your Child Theme
-* Free and commercially supported Child Themes are available for upgrading the theme
 * Includes a sample WordPress Child Theme for rapid development
-* A wiki-editable guide to Thematic Customization
 * Ready for WordPress plugins like Subscribe to Comments and WP-PageNavi
 * Fully compatible with All-In-One SEO and WordPress SEO by Yoast
-* Multiple, easy to implement, bulletproof layout options for 2, or 3 column designs
-* Modular CSS with pre-packaged resets and basic typography
-* Dynamic post and body classes make it a hyper-canvas for CSS artists
+* Multilingual ready with WPML support
+* Responsive stylesheet makes the layout adapt to smaller screens
+* Several layout options available in the Customizer
 * Editable footer text to remove the theme credit without harming the theme
 * Options for multi-author blogs
 
@@ -530,6 +528,9 @@ Removed: Previous header image code from sample child theme. It was old did not 
 * Fixed: Fixed a bug in thematic_create_robots().
 
 == Upgrade Notice ==
+
+= 2.0.0 =
+New html5 markup and responsive stylesheet. This needs to be activated manually after updating. Visit http://docs.thematictheme.com for more details and how-to guides
 
 = 1.0.3 =
 Small bugfixes, Major localization optimization. Note: your language files might be out of date. Grab the latest from http://translate.thematictheme.com/projects/thematic-framework
