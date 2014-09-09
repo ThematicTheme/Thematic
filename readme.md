@@ -11,9 +11,7 @@ More information can be found at [thematictheme.com](http://thematictheme.com/).
 1. You can clone the GitHub repository: `https://github.com/ThematicTheme/Thematic.git`
 2. Or download it directly as a ZIP file: `https://github.com/ThematicTheme/Thematic/archive/master.zip`
 
-This will download the latest release of Thematic. 
-
-If you want to try out the development version, download the zip from the develop branch: `https://github.com/ThematicTheme/Thematic/archive/develop.zip` This is not recommended for production sites, but helpful if you want to help test beta versions before release.
+This will download the latest development version of Thematic.
 
 
 ## Bugs ##
