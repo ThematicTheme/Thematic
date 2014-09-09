@@ -30,51 +30,64 @@ Features:
 == Changelog ==
 
 = 2.0.0 =
-Changed: Switched primary markup to html5. Introduced a legacy mode for using the previous xhtml markup
-Changed: thematic_create_stylesheet() uses the active theme's name as handle and version as argument to wp_enqueue_style()
-Changed: thematic_head_scripts() uses wp_localize_script to send data to the main javascript file
-Changed: Consolidated all css styles to a single stylesheet.
+Updated: Bundled superfish script to 1.7.4 [Issue #73]
+Updated: Thematic now requires WordPress version 3.6 or later [Issue #93]
+Changed: Switched primary markup to html5. Introduced a legacy mode for using the previous xhtml markup [Issue #67,#59,#60]
+Changed: thematic_create_stylesheet() uses the active theme's name as handle and it's version as arguments to wp_enqueue_style()
+Changed: thematic_head_scripts() uses wp_localize_script() to send data to the main javascript file
+Changed: Consolidated all css styles to a single stylesheet. [Issue #61]
 Changed: The browser body classes are now turned off by default
 Changed: thematic_body_class() function to add layout body classes via body_class filter. Previous classes moved to thematic_legacy_body_class()
 Changed: Javascript files now live in /library/js/ directory and css files in /library/css
-Changed: Thematic no longer replaces the core Search widget but filters the widget title instead
-Changed: Thematic no longer replaces the core Meta widget and adds its own Thematic Meta widgets instead
+Changed: Thematic no longer replaces the core Search widget but filters the widget title instead [Issue #75,#79]
+Changed: Thematic no longer replaces the core Meta widget and adds its own Thematic Meta widgets instead [Issue #75,#79]
 Changed: Filters for opening and closing the .site-wrapper div now returns a string instead of boolean
-Fixed: Removed deprecated ereg. Props scottnix
-Fixed: Typo in docbloc. Props SeamlessThemes
-Fixed: Childtheme_override_thematic_validate_opt() is returning properly now. Thanks yitwail for reporting
-Fixed: Avoid undefined index error in thematic_browser_class_names(). Props ryanstockau
-Added: Unit tests in /library/tests/ directory.
+Changed: Default theme settings are not stored in the database until user saves them in theme options screen [Issue #110]
+Changed: thematic_list_comments_arg() now sends an array instead of string as arguments
+Changed: $content_width is now 600px, reflecting the new layout
+Changed: .current-menu-item in main navigation is now blue and italic for more visibility
+Changed: Sample child theme includes sample code to enqueue parent style sheet
+Fixed: Filter 'list_comments_arg' renamed to 'thematic_list_comments_arg', correcting a missing namespace
+Fixed: Removed deprecated ereg. Props scottnix [Issue #48]
+Fixed: Typo in docblocs and readme files. Props SeamlessThemes and polnoft
+Fixed: Typo in page.php. Props Martin Scott
+Fixed: Childtheme_override_thematic_validate_opt() is returning properly now. Thanks yitwail for reporting [Issue #88]
+Fixed: Avoid undefined index error in thematic_browser_class_names(). Props ryanstockau [Issue #105]
+Added: Unit tests in /library/tests/ directory. [Issue #62]
 Added: File CONTRIBUTING.md with instructions on how to contribute to the project
-Added: Function thematic_is_legacy_xhtml() for checking if legacy mode is active
-Added: Current_theme_supports checks for 'thematic_xhtml' for restoring the legacy xhtml doctype
-Added: Theme option checkbox to activate legacy xhtml mode
-Added: Function thematic_doctype() and childtheme_override_doctype()
-Added: Function thematic_html() and childtheme_override_html()
-Added: Function thematic_head() and childtheme_override_head()
+Added: Current_theme_supports checks for 'thematic_xhtml' for restoring the legacy xhtml doctype [Issue #111]
+Added: Optional theme option checkbox to activate legacy xhtml mode (hidden by default)
+Added: A html5shiv script for html5 support in older browsers [Issue #51]
+Added: New markup element h3.menu-toggle in #access div for menu button in the mobile menu
+Added: New semantic css classes to the structural layout elements [Issue #50]
+Added: New body css classes for the different site layouts [Issue #55]
+Added: New body css class for the xhtml mode
+Added: Support for Theme Customizer [Issue #56]
+Added: Css media queries for responsive mobile-friendly layout
+Added: Meta viewport tag to <head> for responsive sites. Not automatically included in xhtml mode 
+Added: Support for Language Packs
+Added: ARIA roles to main structural layout elements [Issue #81]
+Added: Bundled icon font Genericons
+Added: Slovenian, Croatian and Vietnamese language files
+Added: New widget Thematic Meta, showing only login/logout links
+Added: Function thematic_is_legacy_xhtml() for checking if legacy mode is active [Issue #49]
+Added: Function thematic_doctype() and childtheme_override_doctype() [Issue #67]
+Added: Function thematic_html() and childtheme_override_html() [Issue #67]
+Added: Function thematic_head() and childtheme_override_head() [Issue #67]
 Added: Function thematic_meta_description()
 Added: Function thematic_meta_robots()
 Added: Function thematic_meta_viewport() - adds virewport tag for responsive styling
-Added: Function thematic_available_theme_layouts() and thematic_available_layout_slugs()
-Added: Function thematic_default_theme_layout()
-Added: A html5shiv script for html5 support in older browsers
-Added: New semantic css classes to the structural layout elements
-Added: Support for Theme Customizer Preview
-Added: Css media queries for responsive mobile-friendly layout
-Added: Support for Language Packs
-Added: ARIA roles to main structural layout elements
-Added: Bundled icon font Genericons
-Added: Filters to the opening and closing tags of the main strucural div's. Props vanpop
+Added: Function thematic_available_theme_layouts() and thematic_available_layout_slugs() [Issue #97]
+Added: Function thematic_default_theme_layout() [Issue #97]
+Added: Function thematic_legacy_body_class for all the css classes previously added to the body
+Added: Filters to the opening and closing tags of the main strucural div's. Props vanpop [Issue #96]
 Added: Filter 'thematic_childtheme_style_dependencies' to control child stylesheet dependencies
 Added: Filter 'thematic_javascript_options' for sending varables to the javascript 
 Added: Filter 'thematic_mobile_navigation_buttontext' for the menu button on the mobile navigation
 Added: Filters 'thematic_modernizr_handles', 'thematic_use_html5shiv' and 'thematic_html5shiv_output' for controlling the html5shiv behaviour
-Added: Filter 'thematic_available_theme_layouts'
-Added: Filter 'thematic_default_theme_layout'
-Added: Filter 'thematic_current_theme_layout'
-Added: Slovenian, Croatian and Vietnamese language files
-Added: New widget Thematic Meta, showing only login/logout links
-Added: Thematic now requires WordPress version 3.6 or later
+Added: Filter 'thematic_available_theme_layouts' [Issue #97]
+Added: Filter 'thematic_default_theme_layout' [Issue #97]
+Added: Filter 'thematic_current_theme_layout' [Issue #97]
 Deprecated: thematic_create_doctype() in favor of thematic_doctype()
 Deprecated: thematic_create_html() in favor of thematic_html()
 Deprecated: thematic_create_head() in favor of thematic_head()
@@ -82,14 +95,15 @@ Deprecated: thematic_show_description() in favor of thematic_meta_description()
 Deprecated: thematic_create_description() in favor of thematic_meta_description()
 Deprecated: thematic_show_robots() in favor of thematic_meta_robots()
 Deprecated: thematic_create_robots() in favor of thematic_meta_robots()
-Removed: Previously deprecated files archives.php and template-page-blog.php
-Removed: Redundant robots "follow" meta tag
-Removed: File library/scripts/hoverIntent.js in favor of enqueuing core bundled version
-Removed: File library/scripts/jquery.bgiframe.min.js since it is not used
-Removed: File library/scripts/supersubs.js since it is depreacted by the developer and incorporated into main superfish script
+Removed: Previously deprecated files archives.php and template-page-blog.php [Issue #38]
+Removed: Redundant robots "follow" meta tag [Issue #43]
+Removed: File library/scripts/hoverIntent.js in favor of enqueuing core bundled version [Issue #73]
+Removed: File library/scripts/jquery.bgiframe.min.js since it is not used [Issue #73]
+Removed: File library/scripts/supersubs.js since it is depreacted by the developer and incorporated into main superfish script [Issue #73]
 Removed: File library/scripts/thematic-dropdowns.js in favor of new file library/js/thematic.js
 Removed: Filter 'thematic_dropdown_options' for the javascript path. Filter the array 'thematic_javascript_options' instead
-Removed: The title attribute on posttitle permalinks
+Removed: The title attribute on many links throughout the theme. [Issue #102]
+Removed: Previous header image code from sample child theme. It was old did not reflect best practices.
 
 
 = 1.0.4 =
