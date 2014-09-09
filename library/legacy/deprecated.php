@@ -414,6 +414,61 @@ function thematic_legacy_comment_form(){
 
 
 /**
+ * Legacy feed links handling
+ * 
+ * If you add theme support for thematic_legacy_feedlinks, thematic_show_rss() 
+ * and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
+ * 
+ * @deprecated 1.0.3
+ */
+if ( defined( 'THEMATIC_COMPATIBLE_FEEDLINKS' ) ) { add_theme_support( 'thematic_legacy_feedlinks' ); }
+
+
+/**
+ * Legacy comments handling for pages, archives and links
+ * 
+ * If you add_theme_support for thematic_legacy_comment_handling, Thematic 
+ * will only show comments on pages with a key/value of "comments"
+ * 
+ * @deprecated 1.0.3
+ */
+if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING' ) ) { add_theme_support( 'thematic_legacy_comment_handling' ); }
+
+
+/**
+ * Legacy body class handling
+ * 
+ * If you add theme support for `thematic_legacy_body_class`, Thematic 
+ * will add the classes in thematic_legacy_body_class() to the body classes
+ * 
+ * @deprecated 1.0.3
+ */
+if ( defined( 'THEMATIC_COMPATIBLE_BODY_CLASS' ) ) { add_theme_support( 'thematic_legacy_body_class' ); }
+
+
+/**
+ * Legacy post class handling
+ * 
+ * If you add theme support for `thematic_legacy_post_class`, Thematic 
+ * will add the classes in thematic_post_class() to the post classes
+ * 
+ * @deprecated 1.0.3
+ */
+if ( defined( 'THEMATIC_COMPATIBLE_POST_CLASS' ) ) { add_theme_support( 'thematic_legacy_post_class' ); }
+
+
+/**
+ * Legacy comment form handling
+ * 
+ * If you add theme support for thematic_legacy_comment_form, Thematic 
+ * will use the old comment form markup.
+ * 
+ * @deprecated 1.0.3
+ */
+if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_FORM' ) ) { add_theme_support( 'thematic_legacy_comment_form' ); }
+
+
+/**
  * Redundant function for opening body tag
  *
  * the contents of this function were moved to thematic_body()
@@ -429,6 +484,8 @@ function thematic_bodyopen() {
  * Added a settings section to display legacy help text and theme links WP 3.2 compatible
  *
  * @removed in favor of adding contextual help via get_current_screen()
+ * 
+ * @deprecated 1.0.4
  */
 function thematic_legacy_help() {
 		_deprecated_function( __FUNCTION__, '1.0.4', 'thematic_opt_page_help' );
@@ -439,6 +496,8 @@ function thematic_legacy_help() {
  * Rendered the legacy help text and theme links WP 3.2 compatible
  * 
  * @removed in favor of adding contextual help via get_current_screen()
+ * 
+ * @deprecated 1.0.4
  */
 function thematic_do_legacy_help_section() { 
 	_deprecated_function( __FUNCTION__, '1.0.4', 'thematic_opt_page_help' );
@@ -449,10 +508,12 @@ function thematic_do_legacy_help_section() {
  * Displays the HEAD profile
  * 
  * Filter: thematic_head_profile
+ * 
+ * @deprecated 2.0.0
  */
 function thematic_head_profile() {
 	if ( !current_theme_supports( 'thematic_legacy_quiet' ) ) {
-		_deprecated_function( __FUNCTION__, '2.0', 'childtheme_override_head' );
+		_deprecated_function( __FUNCTION__, '2.0.0', 'childtheme_override_head' );
 	}
     $content = "\n" . '<head profile="http://gmpg.org/xfn/11">' . "\n";
     echo apply_filters( 'thematic_head_profile', $content );
@@ -463,10 +524,12 @@ function thematic_head_profile() {
  * Displays the xhtml1.0 DOCTYPE
  * 
  * Filter: thematic_create_doctype
+ * 
+ * @deprecated 2.0.0
  */
 function thematic_create_doctype() {
 	if ( !current_theme_supports( 'thematic_legacy_quiet' ) ) {
-		_deprecated_function( __FUNCTION__, '2.0', 'childtheme_override_doctype' );
+		_deprecated_function( __FUNCTION__, '2.0.0', 'childtheme_override_doctype' );
 	}
    
    	$content = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' . "\n";
@@ -475,10 +538,16 @@ function thematic_create_doctype() {
 }
 
 
-// Display the meta content type
+/**
+ * Display the meta content type
+ * 
+ * Filter: thematic_create_contenttype
+ * 
+ * @deprecated 2.0.0
+ */
 function thematic_create_contenttype() {
 	if ( !current_theme_supports( 'thematic_legacy_quiet' ) ) {
-		_deprecated_function( __FUNCTION__, '2.0', 'childtheme_override_meta_charset' );
+		_deprecated_function( __FUNCTION__, '2.0.0', 'childtheme_override_meta_charset' );
 	}
     
     $content = '<meta http-equiv="Content-Type" content="' . get_bloginfo('html_type') . '; charset=' . get_bloginfo('charset') . '" />' . "\n";
@@ -491,29 +560,37 @@ function thematic_create_contenttype() {
  * Removed after thematic_show_description switch was merged with thematic_create_description into thematic_meta_description
  * 
  * Filter: thematic_show_description
+ * 
+ * @deprecated 2.0.0
  */
 function thematic_show_description() {
-	_deprecated_function( __FUNCTION__, '2.0', 'thematic_meta_description' );
+	_deprecated_function( __FUNCTION__, '2.0.0', 'thematic_meta_description' );
 	thematic_create_description();
 } // end thematic_show_description
 
 
 /**
  * Switch for creating the meta-tag description
+ * 
  * Removed after thematic_show_description switch was merged with thematic_create_description into thematic_meta_description
+ * 
+ * @deprecated 2.0.0
  */
 function thematic_create_description() {
-	_deprecated_function( __FUNCTION__, '2.0', 'thematic_meta_description' );
+	_deprecated_function( __FUNCTION__, '2.0.0', 'thematic_meta_description' );
 	thematic_meta_description();
 } // end thematic_show_description
+
 
 /**
  * Switch creating the robots meta-tag
  * 
  * Removed after thematic_show_robots switch was merged with thematic_create_robots into thematic_meta_robots
+ * 
+ * @deprecated 2.0.0
  */
 function thematic_show_robots() {
-	_deprecated_function( __FUNCTION__, '2.0', 'thematic_meta_robots' );
+	_deprecated_function( __FUNCTION__, '2.0.0', 'thematic_meta_robots' );
 	thematic_create_robots();
 } // end thematic_show_robots
 
@@ -522,9 +599,11 @@ function thematic_show_robots() {
  * Created the robots meta-tag
  * 
  * Removed after thematic_show_robots switch was merged with thematic_create_robots into thematic_meta_robots
+ * 
+ * @deprecated 2.0.0
  */
 function thematic_create_robots() {
-	_deprecated_function( __FUNCTION__, '2.0', 'thematic_meta_robots' );
+	_deprecated_function( __FUNCTION__, '2.0.0', 'thematic_meta_robots' );
 	thematic_meta_robots();
 } // end thematic_create_robots
 
@@ -536,7 +615,7 @@ function thematic_create_robots() {
  * Functionality is replaced with a filter in thematic_filter_search_widget()
  *
  * @since 0.9.6.3
- * @deprecated 2.0
+ * @deprecated 2.0.0
  */
 class Thematic_Widget_Search extends WP_Widget {
 
@@ -577,26 +656,6 @@ class Thematic_Widget_Search extends WP_Widget {
 
 }
 
-
-// Legacy feed links handling
-// If you add theme support for thematic_legacy_feedlinks, thematic_show_rss() and thematic_show_commentsrss() are used instead of add_theme_support( 'automatic-feed-links' )
-if ( defined( 'THEMATIC_COMPATIBLE_FEEDLINKS' ) ) { add_theme_support( 'thematic_legacy_feedlinks' ); }
-
-// Legacy comments handling for pages, archives and links
-// If you add_theme_support for thematic_legacy_comment_handling, Thematic will only show comments on pages with a key/value of "comments"
-if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_HANDLING' ) ) { add_theme_support( 'thematic_legacy_comment_handling' ); }
-
-// Legacy body class handling
-// If you add theme support for thematic_legacy_body_class, Thematic will use thematic_body_class instead of body_class()
-if ( defined( 'THEMATIC_COMPATIBLE_BODY_CLASS' ) ) { add_theme_support( 'thematic_legacy_body_class' ); }
-
-// Legacy post class handling
-// If you add theme support for thematic_legacy_post_class, Thematic will use thematic_body_class instead of post_class()
-if ( defined( 'THEMATIC_COMPATIBLE_POST_CLASS' ) ) { add_theme_support( 'thematic_legacy_post_class' ); }
-
-// Legacy post class handling
-// If you add theme support for thematic_legacy_post_class, Thematic will use it's legacy comment form
-if ( defined( 'THEMATIC_COMPATIBLE_COMMENT_FORM' ) ) { add_theme_support( 'thematic_legacy_comment_form' ); }
 
 
 ?>
