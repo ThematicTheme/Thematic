@@ -51,12 +51,14 @@ function thematic_after_title() {
  */
 class Thematic_Widget_Search extends WP_Widget {
 
-	function Thematic_Widget_Search() {
+	function __construct() {
 		$widget_ops = array('classname' => 'widget_search', 'description' => __( 'A search form for your blog', 'thematic') );
-		$this->WP_Widget('search', __('Search', 'thematic'), $widget_ops);
+		parent::__construct(
+			'search', __('Search', 'thematic'), $widget_ops
+		);
 	}
 
-	function widget( $args, $instance ) {
+	public function widget( $args, $instance ) {
 		extract($args);
 		$title = apply_filters('widget_title', empty($instance['title']) ? __('Search', 'thematic') : $instance['title']);
 
@@ -70,7 +72,7 @@ class Thematic_Widget_Search extends WP_Widget {
 		echo $after_widget;
 	}
 
-	function form( $instance ) {
+	public function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '') );
 		$title = $instance['title'];
 ?>
@@ -78,7 +80,7 @@ class Thematic_Widget_Search extends WP_Widget {
 <?php
 	}
 
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		$new_instance = wp_parse_args((array) $new_instance, array( 'title' => ''));
 		$instance['title'] = strip_tags($new_instance['title']);
@@ -96,9 +98,11 @@ class Thematic_Widget_Search extends WP_Widget {
  */
 class Thematic_Widget_Meta extends WP_Widget {
 
-	function Thematic_Widget_Meta() {
+	function __construct() {
 		$widget_ops = array('classname' => 'widget_meta', 'description' => __( "Log in/out and admin", 'thematic') );
-		$this->WP_Widget('meta', __('Meta', 'thematic'), $widget_ops);
+		parent::__construct(
+			'meta', __('Meta', 'thematic'), $widget_ops
+		);
 	}
 
 	function widget( $args, $instance ) {
@@ -118,14 +122,14 @@ class Thematic_Widget_Meta extends WP_Widget {
 		echo $after_widget;
 	}
 
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		$instance['title'] = strip_tags($new_instance['title']);
 
 		return $instance;
 	}
 
-	function form( $instance ) {
+	public function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
 		$title = strip_tags($instance['title']);
 ?>
@@ -141,12 +145,14 @@ class Thematic_Widget_Meta extends WP_Widget {
  */
 class Thematic_Widget_RSSlinks extends WP_Widget {
 
-	function Thematic_Widget_RSSlinks() {
+	function __construct() {
 		$widget_ops = array( 'description' => __('Links to your posts and comments feed', 'thematic') );
-		$this->WP_Widget( 'rss-links', __('RSS Links', 'thematic'), $widget_ops);
+		parent::__construct(
+			'rss-links', __('RSS Links', 'thematic'), $widget_ops
+		);
 	}
 
-	function widget($args, $instance) {
+	public function widget($args, $instance) {
 		extract($args);
 		$title = apply_filters('widget_title', empty($instance['title']) ? __('RSS Links', 'thematic') : $instance['title']);
 		echo $before_widget;
@@ -161,14 +167,14 @@ class Thematic_Widget_RSSlinks extends WP_Widget {
 		echo $after_widget;
 	}
 
-	function update( $new_instance, $old_instance ) {
+	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		$instance['title'] = strip_tags($new_instance['title']);
 
 		return $instance;
 	}
 
-	function form( $instance ) {
+	public function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
 		$title = strip_tags($instance['title']);
 ?>
