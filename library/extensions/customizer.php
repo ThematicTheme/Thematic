@@ -38,6 +38,72 @@ function thematic_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	
+	// Get the theme options array
+	$thematic_defaults = thematic_default_opt();
+
+	// Get the default index insert position value
+	$thematic_default_index_insert = $thematic_defaults['index_insert'];
+	
+	/**
+	 * Index Insert
+	 */
+	 
+	// Add section for thematic index insert position
+    $wp_customize->add_section( 'thematic_index_insert', array(
+		'title'			=> __( 'Index Insert Position', 'thematic'),
+		'description'	=> __('Choose the number of posts that appear before the Index Insert Widget Area', 'thematic'), 
+		'priority'		=> 125,
+	) );
+
+	// Add setting for index insert  
+    $wp_customize->add_setting( 'thematic_theme_opt[index_insert]', array(
+		'default'		=> $thematic_default_index_insert,
+		'type'			=> 'option',
+		'capability'	=> 'edit_theme_options',
+		'transport'		=> 'refresh'
+	) );
+ 
+	// Add control for index insert
+	$wp_customize->add_control( 'thematic_theme_opt[index_insert]', array(
+		'label'			=> __('Index Insert', 'thematic'),
+		'section'		=> 'thematic_index_insert',
+		'type'			=> 'number',
+		'settings'		=> 'thematic_theme_opt[index_insert]'
+	) );
+	
+	/**
+	 * Author Info vCard
+	 */
+
+    $wp_customize->add_section( 'thematic_author_info', array(
+		'title'			=> __( 'Info on Author Page', 'thematic'),
+		'description'	=> sprintf( _x('Display a %1$smicroformatted vCard%2$s with the author\'s avatar, bio and email on the author page.', '%1$s and %2$s are <a> tags', 'thematic' ) , '<a target="_blank" href="http://microformats.org/wiki/hcard">', '</a>' ), 
+		'priority'		=> 130,
+	) );
+
+	// Get the default author info value
+	$thematic_default_author_info = $thematic_defaults['author_info'];
+
+	// Add setting for author info  
+    $wp_customize->add_setting( 'thematic_theme_opt[author_info]', array(
+		'default'		=> $thematic_default_author_info,
+		'type'			=> 'option',
+		'capability'	=> 'edit_theme_options',
+		'transport'		=> 'refresh'
+	) );
+ 
+	// Add control for author info
+	$wp_customize->add_control( 'thematic_theme_opt[author_info]', array(
+		'label'			=> __('Info on Author Page', 'thematic'),
+		'section'		=> 'thematic_author_info',
+		'type'			=> 'checkbox',
+		'settings'		=> 'thematic_theme_opt[author_info]'
+	) );
+	
+	/**
+	 * Footer Text
+	 */
+	 
 	// Add section for thematic footer options 
     $wp_customize->add_section( 'thematic_footer_text', array(
 		'title'			=> __( 'Footer', 'thematic'),
@@ -45,8 +111,7 @@ function thematic_customize_register( $wp_customize ) {
 		'priority'		=> 135,
 	) );
 	
-	// Get the default thematic footer text 
-	$thematic_defaults = thematic_default_opt();
+	// Set the default thematic footer text 
 	$thematic_default_footertext = $thematic_defaults['footer_txt'];
 
 	// Add setting for footer text 
