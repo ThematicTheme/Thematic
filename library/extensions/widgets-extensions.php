@@ -269,7 +269,6 @@ function thematic_widgets_array() {
  * Registers Widget Areas(Sidebars) and pre-sets default widgets
  *
  * @uses thematic_presetwidgets
- * @todo consider deprecating the widgets directory search this seems to have never been used
  */
 function thematic_widgets_init() {
 
@@ -279,7 +278,6 @@ function thematic_widgets_init() {
 	}  
 	
 	// Remove WP default Widgets
-	// WP 2.8 function using $widget_class
     unregister_widget( 'WP_Widget_Meta' );
     unregister_widget( 'WP_Widget_Search' );
 
@@ -288,21 +286,29 @@ function thematic_widgets_init() {
 	register_widget( 'Thematic_Widget_Meta' );
 	register_widget( 'Thematic_Widget_RSSlinks' );
 
-	// Pre-set Widgets
-	$preset_widgets = array (
-		'primary-aside'  => array( 'search-2', 'pages-2', 'categories-2', 'archives-2' ),
-		'secondary-aside'  => array( 'links-2', 'rss-links-2', 'meta-2' )
-		);
-
-    if ( isset( $_GET['activated'] ) ) {
-    	thematic_presetwidgets();
-  		update_option( 'sidebars_widgets', apply_filters('thematic_preset_widgets',$preset_widgets ));
-  	}
-
 }
 
 add_action( 'widgets_init', 'thematic_widgets_init' );
 
+
+/**
+ * Presets sidebars widgets upon theme activation 
+ *
+ * Filter: thematic_preset_widgets
+ */
+function thematic_set_sidebars_widgets(){
+	$preset_widgets = array (
+		'wp_inactive_widgets'=> array(),
+		'primary-aside'  => array( 'search-2', 'pages-2', 'categories-2', 'archives-2' ),
+		'secondary-aside'  => array( 'links-2', 'rss-links-2', 'meta-2' )
+	);
+	thematic_presetwidgets();
+  	update_option( 'sidebars_widgets', apply_filters('thematic_preset_widgets', $preset_widgets));
+}
+
+add_action('after_switch_theme', 'thematic_set_sidebars_widgets');
+
+	
 /**
  * Registers action hook.
  *
@@ -380,7 +386,6 @@ add_filter('thematic_widgetized_areas', 'thematic_sort_widgetized_areas', 100);
  * @uses thematic_after_widget_area
  */
 function thematic_primary_aside() {	
-	global $wp_customize;
 	$args =	array(	
 			'before_title' 	=> thematic_before_title(),
 			'after_title' 	=> thematic_after_title()
@@ -389,14 +394,6 @@ function thematic_primary_aside() {
 	if ( is_active_sidebar( 'primary-aside' ) ) { 
 		echo thematic_before_widget_area( 'primary-aside' );
 		dynamic_sidebar( 'primary-aside' );
-		echo thematic_after_widget_area( 'primary-aside' );
-	// WordPress 3.4
-	} elseif ( method_exists ( $wp_customize,'is_preview' ) && $wp_customize->is_preview()  ){ 
-		echo thematic_before_widget_area( 'primary-aside' );
-		the_widget('Thematic_Widget_Search', null , $args);
-		the_widget('WP_Widget_Pages', null , $args);
-		the_widget('WP_Widget_Categories', null , $args);
-		the_widget('WP_Widget_Archives', null, $args);
 		echo thematic_after_widget_area( 'primary-aside' );
 	}
 }
@@ -408,7 +405,6 @@ function thematic_primary_aside() {
  * @uses thematic_after_widget_area
  */
 function thematic_secondary_aside() {
-	global $wp_customize;
 	$args =	array(	
 			'before_title' 	=> thematic_before_title(),
 			'after_title' 	=> thematic_after_title()
@@ -417,12 +413,6 @@ function thematic_secondary_aside() {
 	if ( is_active_sidebar( 'secondary-aside' ) ) {
 		echo thematic_before_widget_area( 'secondary-aside' );
 		dynamic_sidebar( 'secondary-aside' );
-		echo thematic_after_widget_area( 'secondary-aside' );
-	// WordPress 3.4
-	} elseif ( method_exists ( $wp_customize,'is_preview' ) && $wp_customize->is_preview()  ){ 
-		echo thematic_before_widget_area( 'secondary-aside' );
-		the_widget('Thematic_Widget_RSS', null, $args);
-		the_widget('Thematic_Widget_Meta', null, $args); 
 		echo thematic_after_widget_area( 'secondary-aside' );
 	}
 }

@@ -31,6 +31,8 @@ Features:
 = 1.1 =
 * Added: Theme Customizer Support with thematic_customize_register() & thematic_customize_preview_js()
 * Added: /library/js/customizer.js
+* Fixed: Replaced derected constructor method WP_Widget with __constructor in widgets.php
+* Fixed: Restored functionality to preset widgets by adding thematic_set_sidebars_widgets() loaded on action: after_switch_theme
 = 1.0.4 =
 * Removed: Backward compatibility for WP versions earlier than 3.4 specifically all calls to wp_get_theme() and get_theme_data()
 * Deprecated: thematic_legacy_help() & thematic_do_legacy_help_section()
