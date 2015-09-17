@@ -57,10 +57,11 @@ function thematic_customize_register( $wp_customize ) {
 
 	// Add setting for index insert  
     $wp_customize->add_setting( 'thematic_theme_opt[index_insert]', array(
-		'default'		=> $thematic_default_index_insert,
-		'type'			=> 'option',
-		'capability'	=> 'edit_theme_options',
-		'transport'		=> 'refresh'
+		'default'			=> $thematic_default_index_insert,
+		'type'				=> 'option',
+		'capability'		=> 'edit_theme_options',
+		'sanitize_callback'	=> 'absint'
+
 	) );
  
 	// Add control for index insert
@@ -68,7 +69,10 @@ function thematic_customize_register( $wp_customize ) {
 		'label'			=> __('Index Insert', 'thematic'),
 		'section'		=> 'thematic_index_insert',
 		'type'			=> 'number',
-		'settings'		=> 'thematic_theme_opt[index_insert]'
+		'settings'		=> 'thematic_theme_opt[index_insert]',
+		'input_attrs' 	=> array(
+        	'min'   => 1
+        ),
 	) );
 	
 	/**
@@ -86,10 +90,10 @@ function thematic_customize_register( $wp_customize ) {
 
 	// Add setting for author info  
     $wp_customize->add_setting( 'thematic_theme_opt[author_info]', array(
-		'default'		=> $thematic_default_author_info,
-		'type'			=> 'option',
-		'capability'	=> 'edit_theme_options',
-		'transport'		=> 'refresh'
+		'default'			=> $thematic_default_author_info,
+		'type'				=> 'option',
+		'capability'		=> 'edit_theme_options',
+		'sanitize_callback'	=> 'absint'
 	) );
  
 	// Add control for author info
@@ -116,10 +120,11 @@ function thematic_customize_register( $wp_customize ) {
 
 	// Add setting for footer text 
     $wp_customize->add_setting( 'thematic_theme_opt[footer_txt]', array(
-		'default'		=> $thematic_default_footertext,
-		'type'			=> 'option',
-		'capability'	=> 'edit_theme_options',
-		'transport'		=> 'postMessage'
+		'default'			=> $thematic_default_footertext,
+		'type'				=> 'option',
+		'capability'		=> 'edit_theme_options',
+		'transport'			=> 'postMessage',
+		'sanitize_callback'	=> 'wp_kses_post'
 	) );
  
 	// Add control for footer text 
