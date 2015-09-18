@@ -422,22 +422,112 @@ function thematic_bodyopen() {
 }
 
 /**
- * Added a settings section to display legacy help text and theme links WP 3.2 compatible
+ * Added a settings section to display help text 
  *
- * @removed in favor of adding contextual help via get_current_screen()
+ * @deprecated
  */
-function thematic_legacy_help() {
-		_deprecated_function( __FUNCTION__, '1.0.4', 'thematic_opt_page_help' );
+function thematic_opt_page_help() {
+		_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+}
+
+function childtheme_override_opt_page_help() {
+		_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+
+}
+
+/**
+ * Rendered help text and theme links
+ * 
+ * @deprecated
+ */
+function thematic_do_legacy_help_section() { 
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+}
+
+function childtheme_override_opt_init() {
+}
+	
+/**
+ * Added the theme option page as an admin menu item
+ *
+ * @deprecated
+ */
+ 
+function thematic_opt_add_page() {
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+}
+
+/**
+ * Rendered the them options page
+ *
+ * @deprecated
+ */
+function thematic_do_opt_page() { 
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
 }
 
 
 /**
- * Rendered the legacy help text and theme links WP 3.2 compatible
- * 
- * @removed in favor of adding contextual help via get_current_screen()
+ * Rendered the "Main" settings section
+ *
+ * @deprecated
  */
-function thematic_do_legacy_help_section() { 
-	_deprecated_function( __FUNCTION__, '1.0.4', 'thematic_opt_page_help' );
+function thematic_do_opt_section_main() {
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+}
+
+
+/**
+ * Renders Index Insert elements
+ *
+ * @deprecated
+ */
+function thematic_do_insert_opt() { 
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+}
+
+/**
+ * Rendered Author Info elements
+ *
+ * @deprecated
+ */
+function thematic_do_auth_opt() { 
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+}
+
+
+/**
+ * Rendered Footer Text elements
+ *
+ * @deprecated
+ */
+function thematic_do_footer_opt() { 
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+}
+
+
+/**
+ * Rendered Leagcy Options elements
+ *
+ * @deprecated
+ */
+function thematic_do_legacy_opt() {
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+}
+
+
+/**
+ * Validated theme options form post data.
+ * 
+ * @deprecated 
+ */
+function childtheme_override_validate_opt($input){
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
+}
+
+
+function thematic_validate_opt($input){
+	_deprecated_function( __FUNCTION__, '1.1', 'the customizer' );
 }
 
 

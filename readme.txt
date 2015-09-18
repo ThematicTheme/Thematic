@@ -29,6 +29,8 @@ Features:
 
 == Changelog ==
 = 1.1 =
+* Deprecated: functions that were removed from options.php which registered and rendered the theme options page
+* Added: .screen-reader-text to #access and default stylesheet
 * Added: Theme Customizer Support with thematic_customize_register() & thematic_customize_preview_js()
 * Added: /library/js/customizer.js
 * Fixed: Replaced deprecated constructor method WP_Widget with __constructor in widgets.php
